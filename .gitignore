@@ -1,0 +1,32 @@
+# Compilados de Java
+*.class
+
+# Directorios de build
+/target/
+/build/
+
+# Archivos de configuración de IDEs
+/.idea/
+/.vscode/
+/nbproject/private/
+/*.iml
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Credenciales y configuraciones locales
+*.log
+*.env
+*.properties
+db.config
+database.sql
+
+# Maven
+.mvn/
+!/.mvn/wrapper/maven-wrapper.jar
+
+# Archivos de ejecución
+*.jar
+*.war
+*.ear

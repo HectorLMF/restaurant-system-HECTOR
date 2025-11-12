@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- POM (Project Object Model) - Archivo de configuración de Maven. -->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <!-- ======================== METADATOS ========================= -->
+  <!-- Información básica del proyecto -->
+
+  <modelVersion>4.0.0</modelVersion>          <!-- Versión del modelo POM -->
+
+  <groupId>es.ull.esit.app</groupId>          <!-- Dominio institucional o paquete raíz -->
+  <artifactId>RestaurantSystem</artifactId>   <!-- Nombre del módulo, artefacto, proyecto -->
+  <version>1.0-SNAPSHOT</version>             <!-- Versión del proyecto -->
+  <packaging>jar</packaging>                  <!-- Tipo de empaquetado (jar/war) -->
+
+  <name>RestaurantSystem</name>               <!-- Nombre visible del proyecto -->
+  <url>http://localhost:9000/dashboard?id=RestaurantSystem</url>  <!-- URL dek proyecto (SonarQube) -->
+  <description>Sistema de gestión de restaurante</description>
+
+  <!-- ======================== PROPIEDADES ======================= -->
+  <!-- Configuración global del compilador y codificación -->
+  
+  <properties>
+    <!-- Codificación de archivos fuente -->
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+    <!-- Versión de Java para compilación -->
+    <maven.compiler.release>17</maven.compiler.release>               
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
+  </properties>
+
+  <!-- ====================== DEPENDENCIAS ======================== -->
+  <!-- Declaración de liberías externas -->
+  
+  <dependencyManagement>
+    <dependencies>
+      <!-- BOM (Bill of Materials) de JUnit 5 -->
+      <!-- Centraliza versiones de dependecias de JUnit -->
+      <dependency>
+        <groupId>org.junit</groupId>
+        <artifactId>junit-bom</artifactId>
+        <version>5.11.0</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <dependencies>
+
+    <!-- JUnit 5: Framework de testing para pruebas unitarias -->
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter</artifactId>
+      <scope>test</scope> <!-- Solo se usa en fase de test -->
+    </dependency>
+
+    <!-- Conector JDBC de MySQL: permite que la aplicación se conecte a una base de datos MySQL -->
+    <dependency>
+      <groupId>com.mysql</groupId>
+      <artifactId>mysql-connector-j</artifactId>
+      <version>8.4.0</version>
+    </dependency>
+
+
+    <!-- JaCoCo Agent: mide la cobertura de las pruebas (cuánto código se ejecuta al testear) -->
+    <dependency>
+      <groupId>org.jacoco</groupId>
+      <artifactId>org.jacoco.agent</artifactId>
+      <version>0.8.12</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <!-- ================== CONSTRUCCIÓN (BUILD) =================== -->
+  <!-- Define cómo se compila, testea y empaqueta el proyecto -->
+  <build>
+
+    <plugins>
+
+      <!-- Maven compiler plugin (Compilación) -->
+      <!--  Compila el código fuente Java con la versión configurada -->
+      <!-- Se ejecuta en la fase: compile -->
+      <plugin>
+
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.13.0</version>
+
+        <configuration>
+          <!-- Configura la versión de Java para compilación -->
+          <release>17</release>
+        </configuration>
+
+      </plugin>
+
+      <!-- Maven surefire plugin (Testeo) -->
+      <!-- Ejecuta automáticamente las pruebas unitarias con JUnit 5 -->
+      <!-- Fase: test -->
+      <plugin>
+
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.3.0</version>
+
+        <configuration>
+          <!-- Desactiva el uso del módulo path (necesario para algunos IDEs) -->
+          <useModulePath>false</useModulePath>
+        </configuration>
+
+      </plugin>
+
+      <!-- Maven jar plugin (Creación del ejecutable .jar) -->
+      <!-- Genera el archivo .jar empaquetado del proyecto -->
+      <!-- Fase: package -->
+      <plugin>
+        <artifactId>maven-jar-plugin</artifactId>
+
+        <version>3.4.2</version>
+        <configuration>
+
+          <archive>
+            <manifest>
+              <!-- Define la clase principal que contiene el método main() -->
+              <mainClass>es.ull.esit.app.JavaApplication2</mainClass>
+            </manifest>
+          </archive>
+          
+        </configuration>
+      </plugin>
+
+      <!-- Maven exec plugin (Ejecución de la aplicación) -->
+      <!-- Permite ejecutar la aplicación desde la línea de comandos con Maven -->
+      <!-- Fase: no automática (se ejecuta manualmente con 'mvn exec:java') -->
+      <plugin>
+
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>3.3.0</version>
+
+        <configuration>
+          <!-- Indica la clase con el método main() que se ejecutará -->
+          <mainClass>es.ull.esit.app.JavaApplication2</mainClass>
+        </configuration>
+
+      </plugin>
+
+      <!-- Maven Checkstyle plugin (Análisis de estilo del código) -->
+      <!-- Verifica estilo de código según reglas de estilo predeterminadas - Google Java Style -->
+      <plugin>
+
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-checkstyle-plugin</artifactId>
+        <version>3.6.0</version>
+
+        <configuration>
+          <!-- Especifica el archivo de configuración de reglas de estilo -->
+          <configLocation>google_checks.xml</configLocation>
+          <!-- Configura la codificación de archivos de código fuente -->
+          <encoding>UTF-8</encoding>
+          <!-- Muestra la salida en consola -->
+          <consoleOutput>true</consoleOutput>
+          <!-- No detiene el build si hay errores de estilo -->
+          <failsOnError>false</failsOnError>
+        </configuration>
+
+        <executions>
+          <execution>
+            <phase>verify</phase>   
+            <goals>
+              <goal>check</goal>    
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+
+
+      <!-- Maven PMD plugin -->
+      <!-- Analiza código en busca de patrones de error, malas prácticas y código duplicado -->
+      <!-- Fase: verify -->
+      <plugin>
+
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-pmd-plugin</artifactId>
+        <version>3.28.0</version>
+
+        <configuration>
+          <!-- No detiene el build si detecta problemas -->
+          <failOnViolation>false</failOnViolation>
+        </configuration>
+
+        <executions>
+          <execution>
+            <phase>verify</phase>
+            <goals>
+              <goal>check</goal>
+            </goals>
+          </execution>
+        </executions>
+
+      </plugin>
+
+      <!-- Dependecy Check plugin de OWASP -->
+      <!-- Escanea las dependencias del proyecto  en busca de vulnerabilidades conocidas (CVE) -->
+      <!-- Genera un ingorme HTML y XML en target/dependency-check-report -->
+      <!-- Fase: verify -->
+      <plugin>
+        <groupId>org.owasp</groupId>
+        <artifactId>dependency-check-maven</artifactId>
+        <version>12.1.8</version>
+        <executions>
+
+          <execution>
+            <phase>verify</phase>
+            <goals>
+              <goal>check</goal>
+            </goals>
+          </execution>
+        </executions>
+
+        <configuration>
+          <!-- Específica el directorio de salida del informe -->
+          <outputDirectory>${project.build.directory}</outputDirectory>
+          <!-- Especifica los formatos de informe a generar -->
+          <formats>
+            <format>HTML</format>
+            <format>XML</format>
+          </formats>
+
+           <!-- No falla la build a menos que haya vulnerabilidades críticas (CVSS >= 11) -->
+          <failBuildOnCVSS>11</failBuildOnCVSS> 
+          <failOnError>false</failOnError> 
+          
+        </configuration>
+      </plugin>
+
+      <!-- JaCoCo Maven plugin (Cobertura de código) -->
+      <!-- Genera informes de cobertura de pruebas (HTML y XML) -->
+      <!-- Muestra qué porcentaje del código se cubre con tests -->
+      <!-- Fases: test (inserta agente) y verify (genera reporte) -->
+      <plugin>
+
+        <groupId>org.jacoco</groupId>
+        <artifactId>jacoco-maven-plugin</artifactId>
+        <version>0.8.12</version>
+
+        <executions>
+          <!-- Inserta el agente antes de ejecutar los tests -->
+          <execution>
+            <goals>
+              <goal>prepare-agent</goal>
+            </goals>
+          </execution>
+          <!-- Genera informe después de ejecutar los tests -->
+          <execution>
+            <id>report</id>
+            <phase>verify</phase>
+            <goals>
+              <goal>report</goal>
+            </goals>
+          </execution>
+        </executions>
+
+      </plugin>
+
+      <!-- Maven Site plugin (Documentación del proyecto) -->
+      <!-- Genera sitio web HTML con toda la información del proyecto (documentación, reportes, etc.) -->
+      <!-- Fase: site -->
+      <plugin>
+        <artifactId>maven-site-plugin</artifactId>
+        <version>3.12.1</version>
+      </plugin>
+
+      <!-- Maven Project Info Reports Plugin (Generación de informes) -->
+      <!-- Genera informes automáticos: dependencias, cobertura, checkstyle, etc. -->
+      <!-- Se integra con el Maven Site Plugin -->
+      <plugin>
+        <artifactId>maven-project-info-reports-plugin</artifactId>
+        <version>3.6.1</version>
+      </plugin>
+
+    </plugins>
+
+    <!-- =================== PLUGIN MANAGEMENT =================== -->
+    <!-- Define versiones fijas para plugins base de Maven -->
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <artifactId>maven-clean-plugin</artifactId>
+          <version>3.4.0</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-resources-plugin</artifactId>
+          <version>3.3.1</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-install-plugin</artifactId>
+          <version>3.1.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>3.1.2</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+
+  </build>
+
+    <!-- ============================ REPORTES ============================= -->
+    <!-- Configura reportes adicionales, como el de JaCoCo para el sitio web -->
+    <reporting>
+      <plugins>
+        <plugin>
+          <groupId>org.jacoco</groupId>
+          <artifactId>jacoco-maven-plugin</artifactId>
+          <version>0.8.12</version>
+          <reportSets>
+            <reportSet>
+              <reports>
+                <report>report</report>
+              </reports>
+            </reportSet>
+          </reportSets>
+        </plugin>
+      </plugins>
+    </reporting>
+
+</project>
