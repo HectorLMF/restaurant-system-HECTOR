@@ -2,6 +2,7 @@
 
 <img width="468" alt="Picture2" src="https://github.com/user-attachments/assets/31e73cdd-dd44-498a-bb92-486e502745be">  
 
+[![Quality gate](http://localhost:9000/api/project_badges/quality_gate?project=RestaurantSystem&token=sqb_d4b8129844e80ce55ab6731a3a7e958499353208)](http://localhost:9000/dashboard?id=RestaurantSystem)
 
 <h2> About </h2> 
 

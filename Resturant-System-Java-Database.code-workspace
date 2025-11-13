@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../Resturant-System-Java-Database"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"java.configuration.updateBuildConfiguration": "interactive"
+	}
+}
