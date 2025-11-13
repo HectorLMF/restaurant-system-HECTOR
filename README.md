@@ -8,6 +8,9 @@
 
 The profession of managing a restaurant. It includes the principles of OOP and using Java function of planning, organizing, staffing, directing, developing an attitude in food and beverage control systems, and efficiently and effectively planning menus at profitable prices, taking into consideration constraints and others.
 
+<h2>More info on the wiki</h2>
+https://github.com/alu0101132617/restaurant-system/wiki
+
 <h2> Tools used: </h2>
 
 - Java Development Kit (JDK)
