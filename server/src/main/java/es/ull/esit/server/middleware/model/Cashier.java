@@ -1,6 +1,6 @@
 package es.ull.esit.server.middleware.model;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "Cashier")
