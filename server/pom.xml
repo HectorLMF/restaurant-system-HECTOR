@@ -16,6 +16,8 @@
 
     <properties>
         <java.version>11</java.version>
+        <!-- Ajuste de codificación para el plugin de recursos en Windows (evita MalformedInputException) -->
+        <project.build.sourceEncoding>Cp1252</project.build.sourceEncoding>
     </properties>
 
     <dependencies>
@@ -27,9 +29,26 @@
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
         </dependency>
+        <!-- JDBC + MySQL connector -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <scope>runtime</scope>
+        </dependency>
     </dependencies>
 
     <build>
+        <!-- Evitar filtrado de recursos (copy as-is) para prevenir errores de interpolación/codificación -->
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>false</filtering>
+            </resource>
+        </resources>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
