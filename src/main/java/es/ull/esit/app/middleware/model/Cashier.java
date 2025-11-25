@@ -1,24 +1,23 @@
 package es.ull.esit.app.middleware.model;
 
-import jakarta.persistence.*;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
-@Entity
-@Table(name = "Cashier")
 public class Cashier {
-    @Id
-    @Column(name = "Cashier_id")
+    @JsonProperty("id")
     private Long id;
 
-    @Column(name = "Cashier_name")
+    @JsonProperty("name")
     private String name;
 
-    @Column(name = "Cashier_salary")
+    @JsonProperty("salary")
     private Integer salary;
 
     public Cashier() {}
 
     public Cashier(Long id, String name, Integer salary) {
-        this.id = id; this.name = name; this.salary = salary;
+        this.id = id;
+        this.name = name;
+        this.salary = salary;
     }
 
     public Long getId() { return id; }
@@ -28,4 +27,3 @@ public class Cashier {
     public Integer getSalary() { return salary; }
     public void setSalary(Integer salary) { this.salary = salary; }
 }
-
