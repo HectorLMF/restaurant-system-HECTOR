@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="classes_1_1ull_1_1esit_1_1app_1_1JavaApplication2" kind="class" language="Java" prot="public">
+    <compoundname>es::ull::esit::app::JavaApplication2</compoundname>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1JavaApplication2_1a27758840adc17f5545003549b46c3421" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void es.ull.esit.app.JavaApplication2.main</definition>
+        <argsstring>(String[] args)</argsstring>
+        <name>main</name>
+        <qualifiedname>es.ull.esit.app.JavaApplication2.main</qualifiedname>
+        <param>
+          <type>String[]</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the command line arguments </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/JavaApplication2.java" line="17" column="24" bodyfile="src/main/java/es/ull/esit/app/JavaApplication2.java" bodystart="17" bodyend="19"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Behzad Qasim </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>es.ull.esit.app.JavaApplication2</label>
+        <link refid="classes_1_1ull_1_1esit_1_1app_1_1JavaApplication2"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/main/java/es/ull/esit/app/JavaApplication2.java" line="12" column="7" bodyfile="src/main/java/es/ull/esit/app/JavaApplication2.java" bodystart="12" bodyend="21"/>
+    <listofallmembers>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1JavaApplication2_1a27758840adc17f5545003549b46c3421" prot="public" virt="non-virtual"><scope>es::ull::esit::app::JavaApplication2</scope><name>main</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

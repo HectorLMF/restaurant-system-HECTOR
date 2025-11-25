@@ -1,0 +1,381 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="classes_1_1ull_1_1esit_1_1app_1_1Cashier" kind="class" language="Java" prot="public">
+    <compoundname>es::ull::esit::app::Cashier</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">javax.swing.JFrame</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1Cashier_1ad823ce6acc644105a52304f138a29598" prot="private" static="no" mutable="no">
+        <type><ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient" kindref="compound">es.ull.esit.app.middleware.ApiClient</ref></type>
+        <definition>es.ull.esit.app.middleware.ApiClient es.ull.esit.app.Cashier.api</definition>
+        <argsstring></argsstring>
+        <name>api</name>
+        <qualifiedname>es.ull.esit.app.Cashier.api</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/Cashier.java" line="23" column="45" bodyfile="src/main/java/es/ull/esit/app/Cashier.java" bodystart="23" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1Cashier_1a20576687af9a65798edc2d2e125f1600" compoundref="Cashier_8java" startline="176" endline="191">es.ull.esit.app.Cashier.jButton1ActionPerformed</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1Cashier_1a56ac54dca4e248c75be88f059f57d643" compoundref="Cashier_8java" startline="193" endline="211">es.ull.esit.app.Cashier.jButton2ActionPerformed</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1Cashier_1a943f0f54627d7938ac60f833fa31d4c8" compoundref="Cashier_8java" startline="218" endline="231">es.ull.esit.app.Cashier.jButton3ActionPerformed</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1Cashier_1a24ac6ef2b074857af6622263c4faba87" prot="private" static="no" mutable="no">
+        <type>javax.swing.JButton</type>
+        <definition>javax.swing.JButton es.ull.esit.app.Cashier.jButton1</definition>
+        <argsstring></argsstring>
+        <name>jButton1</name>
+        <qualifiedname>es.ull.esit.app.Cashier.jButton1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/Cashier.java" line="271" column="31" bodyfile="src/main/java/es/ull/esit/app/Cashier.java" bodystart="271" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1Cashier_1ad9f90ed03e1c9edf8616e2a15a19a7ca" compoundref="Cashier_8java" startline="63" endline="167">es.ull.esit.app.Cashier.initComponents</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1Cashier_1a890feaff459f24ea48992b2ae42cc2ae" prot="private" static="no" mutable="no">
+        <type>javax.swing.JButton</type>
+        <definition>javax.swing.JButton es.ull.esit.app.Cashier.jButton2</definition>
+        <argsstring></argsstring>
+        <name>jButton2</name>
+        <qualifiedname>es.ull.esit.app.Cashier.jButton2</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/Cashier.java" line="272" column="31" bodyfile="src/main/java/es/ull/esit/app/Cashier.java" bodystart="272" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1Cashier_1ad9f90ed03e1c9edf8616e2a15a19a7ca" compoundref="Cashier_8java" startline="63" endline="167">es.ull.esit.app.Cashier.initComponents</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1Cashier_1ab5d7f7180b4b72c875263705258342a6" prot="private" static="no" mutable="no">
+        <type>javax.swing.JButton</type>
+        <definition>javax.swing.JButton es.ull.esit.app.Cashier.jButton3</definition>
+        <argsstring></argsstring>
+        <name>jButton3</name>
+        <qualifiedname>es.ull.esit.app.Cashier.jButton3</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/Cashier.java" line="273" column="31" bodyfile="src/main/java/es/ull/esit/app/Cashier.java" bodystart="273" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1Cashier_1ad9f90ed03e1c9edf8616e2a15a19a7ca" compoundref="Cashier_8java" startline="63" endline="167">es.ull.esit.app.Cashier.initComponents</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1Cashier_1a2853f900377308cf09e81958e4a449f1" prot="private" static="no" mutable="no">
+        <type>javax.swing.JLabel</type>
+        <definition>javax.swing.JLabel es.ull.esit.app.Cashier.jLabel1</definition>
+        <argsstring></argsstring>
+        <name>jLabel1</name>
+        <qualifiedname>es.ull.esit.app.Cashier.jLabel1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/Cashier.java" line="274" column="30" bodyfile="src/main/java/es/ull/esit/app/Cashier.java" bodystart="274" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1Cashier_1ad9f90ed03e1c9edf8616e2a15a19a7ca" compoundref="Cashier_8java" startline="63" endline="167">es.ull.esit.app.Cashier.initComponents</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1Cashier_1ab0c37cc18ea5e1ccfbaef7c5867fa2ad" prot="private" static="no" mutable="no">
+        <type>javax.swing.JPanel</type>
+        <definition>javax.swing.JPanel es.ull.esit.app.Cashier.jPanel1</definition>
+        <argsstring></argsstring>
+        <name>jPanel1</name>
+        <qualifiedname>es.ull.esit.app.Cashier.jPanel1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/Cashier.java" line="275" column="30" bodyfile="src/main/java/es/ull/esit/app/Cashier.java" bodystart="275" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1Cashier_1ad9f90ed03e1c9edf8616e2a15a19a7ca" compoundref="Cashier_8java" startline="63" endline="167">es.ull.esit.app.Cashier.initComponents</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1Cashier_1add6eaf4d8735152ce5d8e64e744a578c" prot="private" static="no" mutable="no">
+        <type>javax.swing.JLabel</type>
+        <definition>javax.swing.JLabel es.ull.esit.app.Cashier.welcomeTxt</definition>
+        <argsstring></argsstring>
+        <name>welcomeTxt</name>
+        <qualifiedname>es.ull.esit.app.Cashier.welcomeTxt</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/Cashier.java" line="276" column="30" bodyfile="src/main/java/es/ull/esit/app/Cashier.java" bodystart="276" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1Cashier_1add843e6ad04c8b8e13fe4c1a3ff107e1" compoundref="Cashier_8java" startline="45" endline="54">es.ull.esit.app.Cashier.Cashier</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1Cashier_1ad9f90ed03e1c9edf8616e2a15a19a7ca" compoundref="Cashier_8java" startline="63" endline="167">es.ull.esit.app.Cashier.initComponents</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1Cashier_1ac82f1fded3a73e1d1a2e2baa218ec79d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>es.ull.esit.app.Cashier.Cashier</definition>
+        <argsstring>()</argsstring>
+        <name>Cashier</name>
+        <qualifiedname>es.ull.esit.app.Cashier.Cashier</qualifiedname>
+        <briefdescription>
+<para>Constructor por defecto. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Inicializa la interfaz. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/Cashier.java" line="28" column="12" bodyfile="src/main/java/es/ull/esit/app/Cashier.java" bodystart="28" bodyend="30"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1Cashier_1a4d17b65ffd340a59c14168d16360c11f" compoundref="Cashier_8java" startline="238" endline="268">es.ull.esit.app.Cashier.main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1Cashier_1a0bf289ed553d828d654eaf08af38fabc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>es.ull.esit.app.Cashier.Cashier</definition>
+        <argsstring>(String name)</argsstring>
+        <name>Cashier</name>
+        <qualifiedname>es.ull.esit.app.Cashier.Cashier</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Constructor con nombre del cajero. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Muestra un mensaje de bienvenida personalizado.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>nombre del cajero que inici f3 sesi f3n </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/Cashier.java" line="38" column="15" bodyfile="src/main/java/es/ull/esit/app/Cashier.java" bodystart="38" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1Cashier_1add843e6ad04c8b8e13fe4c1a3ff107e1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>es.ull.esit.app.Cashier.Cashier</definition>
+        <argsstring>(es.ull.esit.app.middleware.ApiClient apiClient, String... optionalName)</argsstring>
+        <name>Cashier</name>
+        <qualifiedname>es.ull.esit.app.Cashier.Cashier</qualifiedname>
+        <param>
+          <type><ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient" kindref="compound">es.ull.esit.app.middleware.ApiClient</ref></type>
+          <declname>apiClient</declname>
+        </param>
+        <param>
+          <type>String...</type>
+          <declname>optionalName</declname>
+        </param>
+        <briefdescription>
+<para>Constructor que recibe un <ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient" kindref="compound">ApiClient</ref> y opcionalmente el nombre del cajero. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/Cashier.java" line="45" column="15" bodyfile="src/main/java/es/ull/esit/app/Cashier.java" bodystart="45" bodyend="54"/>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1Cashier_1ad9f90ed03e1c9edf8616e2a15a19a7ca" compoundref="Cashier_8java" startline="63" endline="167">es.ull.esit.app.Cashier.initComponents</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1Cashier_1add6eaf4d8735152ce5d8e64e744a578c" compoundref="Cashier_8java" startline="276">es.ull.esit.app.Cashier.welcomeTxt</references>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1Cashier_1ad9f90ed03e1c9edf8616e2a15a19a7ca" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void es.ull.esit.app.Cashier.initComponents</definition>
+        <argsstring>()</argsstring>
+        <name>initComponents</name>
+        <qualifiedname>es.ull.esit.app.Cashier.initComponents</qualifiedname>
+        <briefdescription>
+<para>This method is called from within the constructor to initialize the form. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>WARNING: Do NOT modify this code. The content of this method is always regenerated by the Form Editor. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/Cashier.java" line="63" column="18" bodyfile="src/main/java/es/ull/esit/app/Cashier.java" bodystart="63" bodyend="167"/>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1Cashier_1ad9f90ed03e1c9edf8616e2a15a19a7ca" compoundref="Cashier_8java" startline="63" endline="167">es.ull.esit.app.Cashier.initComponents</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1Cashier_1a24ac6ef2b074857af6622263c4faba87" compoundref="Cashier_8java" startline="271">es.ull.esit.app.Cashier.jButton1</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1Cashier_1a890feaff459f24ea48992b2ae42cc2ae" compoundref="Cashier_8java" startline="272">es.ull.esit.app.Cashier.jButton2</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1Cashier_1ab5d7f7180b4b72c875263705258342a6" compoundref="Cashier_8java" startline="273">es.ull.esit.app.Cashier.jButton3</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1Cashier_1a2853f900377308cf09e81958e4a449f1" compoundref="Cashier_8java" startline="274">es.ull.esit.app.Cashier.jLabel1</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1Cashier_1ab0c37cc18ea5e1ccfbaef7c5867fa2ad" compoundref="Cashier_8java" startline="275">es.ull.esit.app.Cashier.jPanel1</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1Cashier_1add6eaf4d8735152ce5d8e64e744a578c" compoundref="Cashier_8java" startline="276">es.ull.esit.app.Cashier.welcomeTxt</references>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1Cashier_1add843e6ad04c8b8e13fe4c1a3ff107e1" compoundref="Cashier_8java" startline="45" endline="54">es.ull.esit.app.Cashier.Cashier</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1Cashier_1ad9f90ed03e1c9edf8616e2a15a19a7ca" compoundref="Cashier_8java" startline="63" endline="167">es.ull.esit.app.Cashier.initComponents</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1Cashier_1a20576687af9a65798edc2d2e125f1600" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void es.ull.esit.app.Cashier.jButton1ActionPerformed</definition>
+        <argsstring>(java.awt.event.ActionEvent evt)</argsstring>
+        <name>jButton1ActionPerformed</name>
+        <qualifiedname>es.ull.esit.app.Cashier.jButton1ActionPerformed</qualifiedname>
+        <param>
+          <type>java.awt.event.ActionEvent</type>
+          <declname>evt</declname>
+        </param>
+        <briefdescription>
+<para>Acción para abrir la ventana &quot;About us&quot;. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>evt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>evento de acción del botón </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/Cashier.java" line="176" column="18" bodyfile="src/main/java/es/ull/esit/app/Cashier.java" bodystart="176" bodyend="191"/>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1Cashier_1ad823ce6acc644105a52304f138a29598" compoundref="Cashier_8java" startline="23">es.ull.esit.app.Cashier.api</references>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1Cashier_1a56ac54dca4e248c75be88f059f57d643" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void es.ull.esit.app.Cashier.jButton2ActionPerformed</definition>
+        <argsstring>(java.awt.event.ActionEvent evt)</argsstring>
+        <name>jButton2ActionPerformed</name>
+        <qualifiedname>es.ull.esit.app.Cashier.jButton2ActionPerformed</qualifiedname>
+        <param>
+          <type>java.awt.event.ActionEvent</type>
+          <declname>evt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/Cashier.java" line="193" column="18" bodyfile="src/main/java/es/ull/esit/app/Cashier.java" bodystart="193" bodyend="211"/>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1Cashier_1ad823ce6acc644105a52304f138a29598" compoundref="Cashier_8java" startline="23">es.ull.esit.app.Cashier.api</references>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1Cashier_1a943f0f54627d7938ac60f833fa31d4c8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void es.ull.esit.app.Cashier.jButton3ActionPerformed</definition>
+        <argsstring>(java.awt.event.ActionEvent evt)</argsstring>
+        <name>jButton3ActionPerformed</name>
+        <qualifiedname>es.ull.esit.app.Cashier.jButton3ActionPerformed</qualifiedname>
+        <param>
+          <type>java.awt.event.ActionEvent</type>
+          <declname>evt</declname>
+        </param>
+        <briefdescription>
+<para>Acción para cerrar sesi f3n y volver al login. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>evt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>evento de acción del botón </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/Cashier.java" line="218" column="18" bodyfile="src/main/java/es/ull/esit/app/Cashier.java" bodystart="218" bodyend="231"/>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1Cashier_1ad823ce6acc644105a52304f138a29598" compoundref="Cashier_8java" startline="23">es.ull.esit.app.Cashier.api</references>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1Cashier_1a4d17b65ffd340a59c14168d16360c11f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void es.ull.esit.app.Cashier.main</definition>
+        <argsstring>(String args[])</argsstring>
+        <name>main</name>
+        <qualifiedname>es.ull.esit.app.Cashier.main</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>args</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+<para>Punto de entrada para ejecutar esta ventana de forma independiente. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>argumentos de línea de comandos (no se usan) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/Cashier.java" line="238" column="24" bodyfile="src/main/java/es/ull/esit/app/Cashier.java" bodystart="238" bodyend="268"/>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1Cashier_1ac82f1fded3a73e1d1a2e2baa218ec79d" compoundref="Cashier_8java" startline="28" endline="30">es.ull.esit.app.Cashier.Cashier</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>es.ull.esit.app.Cashier</label>
+        <link refid="classes_1_1ull_1_1esit_1_1app_1_1Cashier"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>javax.swing.JFrame</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>es.ull.esit.app.Cashier</label>
+        <link refid="classes_1_1ull_1_1esit_1_1app_1_1Cashier"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-api</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>es.ull.esit.app.middleware.ApiClient</label>
+        <link refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient"/>
+      </node>
+      <node id="2">
+        <label>javax.swing.JFrame</label>
+      </node>
+    </collaborationgraph>
+    <location file="src/main/java/es/ull/esit/app/Cashier.java" line="20" column="7" bodyfile="src/main/java/es/ull/esit/app/Cashier.java" bodystart="20" bodyend="278"/>
+    <listofallmembers>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1Cashier_1ad823ce6acc644105a52304f138a29598" prot="private" virt="non-virtual"><scope>es::ull::esit::app::Cashier</scope><name>api</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1Cashier_1ac82f1fded3a73e1d1a2e2baa218ec79d" prot="public" virt="non-virtual"><scope>es::ull::esit::app::Cashier</scope><name>Cashier</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1Cashier_1a0bf289ed553d828d654eaf08af38fabc" prot="public" virt="non-virtual"><scope>es::ull::esit::app::Cashier</scope><name>Cashier</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1Cashier_1add843e6ad04c8b8e13fe4c1a3ff107e1" prot="public" virt="non-virtual"><scope>es::ull::esit::app::Cashier</scope><name>Cashier</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1Cashier_1ad9f90ed03e1c9edf8616e2a15a19a7ca" prot="private" virt="non-virtual"><scope>es::ull::esit::app::Cashier</scope><name>initComponents</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1Cashier_1a24ac6ef2b074857af6622263c4faba87" prot="private" virt="non-virtual"><scope>es::ull::esit::app::Cashier</scope><name>jButton1</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1Cashier_1a20576687af9a65798edc2d2e125f1600" prot="private" virt="non-virtual"><scope>es::ull::esit::app::Cashier</scope><name>jButton1ActionPerformed</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1Cashier_1a890feaff459f24ea48992b2ae42cc2ae" prot="private" virt="non-virtual"><scope>es::ull::esit::app::Cashier</scope><name>jButton2</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1Cashier_1a56ac54dca4e248c75be88f059f57d643" prot="private" virt="non-virtual"><scope>es::ull::esit::app::Cashier</scope><name>jButton2ActionPerformed</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1Cashier_1ab5d7f7180b4b72c875263705258342a6" prot="private" virt="non-virtual"><scope>es::ull::esit::app::Cashier</scope><name>jButton3</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1Cashier_1a943f0f54627d7938ac60f833fa31d4c8" prot="private" virt="non-virtual"><scope>es::ull::esit::app::Cashier</scope><name>jButton3ActionPerformed</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1Cashier_1a2853f900377308cf09e81958e4a449f1" prot="private" virt="non-virtual"><scope>es::ull::esit::app::Cashier</scope><name>jLabel1</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1Cashier_1ab0c37cc18ea5e1ccfbaef7c5867fa2ad" prot="private" virt="non-virtual"><scope>es::ull::esit::app::Cashier</scope><name>jPanel1</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1Cashier_1a4d17b65ffd340a59c14168d16360c11f" prot="public" virt="non-virtual"><scope>es::ull::esit::app::Cashier</scope><name>main</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1Cashier_1add6eaf4d8735152ce5d8e64e744a578c" prot="private" virt="non-virtual"><scope>es::ull::esit::app::Cashier</scope><name>welcomeTxt</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
