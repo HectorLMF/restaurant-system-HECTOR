@@ -245,11 +245,7 @@ public class Cashier extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // Opcional: notificar al middleware del logout
         new Thread(() -> {
-            try {
-                api.login(""); // simple ping/logout placeholder
-            } catch (Exception ex) {
-                // ignora
-            }
+            // No client logout method available on ApiClient; skip remote logout.
             javax.swing.SwingUtilities.invokeLater(() -> {
                 new Login().setVisible(true);
                 dispose();
