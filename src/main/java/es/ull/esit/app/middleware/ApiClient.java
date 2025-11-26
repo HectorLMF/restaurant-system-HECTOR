@@ -202,4 +202,11 @@ public class ApiClient {
                 .build();
         http.send(req, HttpResponse.BodyHandlers.ofString());
     }
+
+    // Placeholder login/ping method
+    // Algunas clases del front llaman a `api.login(String)` como ping/logout.
+    // Implementamos un método vacío para mantener compatibilidad con la UI.
+    public void login(String ignored) throws Exception {
+        // No-op: si en el futuro se añade autenticación, aquí se puede implementar.
+    }
 }
