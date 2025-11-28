@@ -5,12 +5,15 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import java.net.http.*;
 import java.net.URI;
 import java.time.Duration;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import es.ull.esit.app.middleware.model.Appetizer;
 import es.ull.esit.app.middleware.model.Cashier;
 import es.ull.esit.app.middleware.model.Drink;
 import es.ull.esit.app.middleware.model.MainCourse;
+import es.ull.esit.app.middleware.model.User;
 
 /**
  * ApiClient is a middleware class that handles HTTP requests to a RESTful API.
@@ -318,4 +321,38 @@ public class ApiClient {
     public void login(String ignored) throws Exception {
         // No-op: si en el futuro se añade autenticación, aquí se puede implementar.
     }
+
+    /**
+     * Authenticate a user against the backend.
+     * @param username The username
+     * @param password The cleartext password
+     * @return The User object (containing role but NO password)
+     * @throws Exception if login fails
+     */
+    public User login(String username, String password) throws Exception {
+        
+        String jsonBody = mapper.writeValueAsString(Map.of(
+            "username", username, 
+            "password", password
+        ));
+
+        HttpRequest request = HttpRequest.newBuilder()
+        
+                .uri(URI.create(baseUrl + "/api/login"))
+                .header("Content-Type", "application/json")
+                .POST(HttpRequest.BodyPublishers.ofString(jsonBody))
+                .build();
+
+        
+        HttpResponse<String> response = http.send(request, HttpResponse.BodyHandlers.ofString());
+
+        if (response.statusCode() == 200) {
+        
+            return mapper.readValue(response.body(), User.class);
+        } else {
+            throw new RuntimeException("Login failed with status: " + response.statusCode());
+        }
+    }
+
+    
 }

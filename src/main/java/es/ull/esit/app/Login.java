@@ -1,6 +1,9 @@
 
 package es.ull.esit.app;
 
+import es.ull.esit.app.middleware.ApiClient;
+import es.ull.esit.app.middleware.model.User;
+
 /**
  * @file Login.java
  * @brief Graphical interface for user login.
@@ -174,14 +177,36 @@ public class Login extends javax.swing.JFrame {
      * @param evt Action event associated with the button.
      * @return void
      */
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        if(usernametxt.getText().equalsIgnoreCase("admin") && jPasswordField1.getText().equalsIgnoreCase("admin") && usertypecmbo.getSelectedItem().toString().equalsIgnoreCase("admin")){
-         
-        new AdminLogin().setVisible(true);
-        }        
-        else if(usertypecmbo.getSelectedItem().toString().equalsIgnoreCase("cashier")){
-      
-        new Cashier(usernametxt.getText()).setVisible(true);
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
+        String usernameInput = usernametxt.getText(); // Variablenname klarer gemacht
+        String passwordInput = new String(jPasswordField1.getPassword());
+        
+        try {
+            
+            ApiClient client = new ApiClient("http://localhost:8080"); 
+            
+            
+            User loggedInUser = client.login(usernameInput, passwordInput); 
+            
+            
+            
+            if ("ADMIN".equalsIgnoreCase(loggedInUser.getRole())) { 
+                 new AdminLogin().setVisible(true);
+            } else if ("CASHIER".equalsIgnoreCase(loggedInUser.getRole())) {
+            
+                 new Cashier(loggedInUser.getUsername()).setVisible(true); 
+            } else {
+                 throw new Exception("Unknown Role: " + loggedInUser.getRole());
+            }
+            
+            this.dispose();
+
+        } catch (Exception e) {
+            e.printStackTrace(); 
+            javax.swing.JOptionPane.showMessageDialog(this, 
+                "Login failed: " + e.getMessage(), 
+                "Login Error", 
+                javax.swing.JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
