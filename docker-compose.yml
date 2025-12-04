@@ -1,26 +1,53 @@
+# docker-compose.yml
+# Archivo de configuración de Docker Compose. 
+
 version: '3.8'
 
+# --- SERVICIOS DEFINIDOS ---
 services:
+
+  # -- Servicio de base de datos MySQL --
   mysql:
     image: mysql:8.0
+    # Nombre del contenedor.
     container_name: restaurant-mysql
+    # Mantener el contenedor activo a menos que se detenga manualmente.
     restart: unless-stopped
+
+    # Configuración inicial mediante variables de entorno:
     environment:
-      MYSQL_ROOT_PASSWORD: rootpass
-      MYSQL_USER: restaurant
-      MYSQL_PASSWORD: secret
-      # NOT setting MYSQL_DATABASE because the SQL creates `project3`
+      MYSQL_ROOT_PASSWORD: rootpass   # Contraseña del usuario root
+      MYSQL_USER: restaurant          # Usuario adicional
+      MYSQL_PASSWORD: secret          # Contraseña del usuario adicional
+
+    # Volúmenes montados:
     volumes:
-      - mysql_data:/var/lib/mysql
-      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+      - mysql_data_v1:/var/lib/mysql
+      - ./db/00-create-db.sql:/docker-entrypoint-initdb.d/00-create-db.sql:ro
+      - ./db/01-tables.sql:/docker-entrypoint-initdb.d/01-tables.sql:ro
+      - ./db/02-data.sql:/docker-entrypoint-initdb.d/02-data.sql:ro
+      - ./db/03-procedures.sql:/docker-entrypoint-initdb.d/03-procedures.sql:ro
+      - ./db/04-triggers.sql:/docker-entrypoint-initdb.d/04-triggers.sql:ro
+      - ./db/05-privileges.sql:/docker-entrypoint-initdb.d/05-privileges.sql:ro
+      - ./db/06-users.sql:/docker-entrypoint-initdb.d/06-users.sql:ro
+
+ 
+    # Mapear el puerto interno 3306 del contenedor al puerto 3306 de la
+    # máquina host, permitiendo:
+    #   - conexión desde Spring Boot.
+    #   - conexión desde tu sistema JavaFX.
+    #   - acceso con clientes MySQL (CLI, DBeaver, etc.)
     ports:
       - "3306:3306"
+
+    # Healthcheck (comprobación de salud) para asegurar que MySQL está listo.
     healthcheck:
       test: ["CMD-SHELL", "mysqladmin ping -h localhost -u root -prootpass"]
       interval: 5s
       timeout: 5s
       retries: 10
 
-volumes:
-  mysql_data: {}
 
+# --- VOLÚMENES DE SERVICIOS (persistentes entre reinicios) ---
+volumes:
+  mysql_data_v1: {}

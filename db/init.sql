@@ -1,336 +1,304 @@
--- Wrapper init script: desactivar comprobaciones FK, ejecutar el SQL del proyecto y volver a activarlas
-SET FOREIGN_KEY_CHECKS=0;
+/**
+ * init.sql
+ * Script de inicialización de la base de datos project3 para el contenedor Docker MySQL.
+ */
 
--- BEGIN Database.sql content
+-- Desactivar restricciones de claves foráneas.
+SET FOREIGN_KEY_CHECKS = 0;
 
-create database project3;
-use project3;
+-- Crear BD si no existe.
+CREATE DATABASE IF NOT EXISTS project3;
+USE project3;
 
-#1
-create table RestaurantManagement(
-Restaurant_id numeric (10) primary key,
-Restaurant_name varchar (30),
-Restaurant_address varchar (30),
-Manager_id numeric (10) references Manager (Manager_id)
+----- CREACIÓN DE TABLAS -----
+-- Tabla 1. RestaurantManagement.
+CREATE TABLE IF NOT EXISTS RestaurantManagement (
+    Restaurant_id      NUMERIC(10) PRIMARY KEY,
+    Restaurant_name    VARCHAR(30),
+    Restaurant_address VARCHAR(30),
+    Manager_id         NUMERIC(10)
+        REFERENCES Manager (Manager_id)
 );
 
-#2
-create table Manager(
-Manager_id numeric (10) primary key,
-Manager_Fname varchar (30),
-Manager_Mname varchar (30),
-Manager_Lname varchar (30),
-Manager_number numeric(10),
-Manager_salary numeric (5)
+-- Tabla 2. Manager.
+CREATE TABLE IF NOT EXISTS Manager (
+    Manager_id     NUMERIC(10) PRIMARY KEY,
+    Manager_Fname  VARCHAR(30),
+    Manager_Mname  VARCHAR(30),
+    Manager_Lname  VARCHAR(30),
+    Manager_number NUMERIC(10),
+    Manager_salary NUMERIC(5)
 );
 
-#3
-create table Item(
-Item_food varchar (30),
-food_price numeric(4),
-food_id numeric (5),#PK
-Item_appetizers varchar (30),
-appetizers_price numeric(4),
-appetizers_id numeric (5),#PK
-Item_drinks varchar (30),
-drinks_price numeric(4),
-drinks_id numeric (5),#PK
-Receipt_id numeric (10) references Receipt (Receipt_id),
-primary key (food_id, appetizers_id, drinks_id)
+-- Tabla 3. Item.
+CREATE TABLE IF NOT EXISTS Item (
+    Item_food         VARCHAR(30),
+    food_price        NUMERIC(4),
+    food_id           NUMERIC(5),
+    
+    Item_appetizers   VARCHAR(30),
+    appetizers_price  NUMERIC(4),
+    appetizers_id     NUMERIC(5),
+    
+    Item_drinks       VARCHAR(30),
+    drinks_price      NUMERIC(4),
+    drinks_id         NUMERIC(5),
+
+    Receipt_id NUMERIC(10) REFERENCES Receipt (Receipt_id),
+
+    PRIMARY KEY (food_id, appetizers_id, drinks_id)
 );
 
-#4
-create table Chef(
-Chef_id numeric (10) primary key,
-Chef_name varchar (30),
-Chef_manager varchar (30),
-Chef_salary numeric (5),
-Manager_id numeric (10) references Manager (Manager_id)
+-- Tabla 4. Chef.
+CREATE TABLE IF NOT EXISTS Chef (
+    Chef_id      NUMERIC(10) PRIMARY KEY,
+    Chef_name    VARCHAR(30),
+    Chef_manager VARCHAR(30),
+    Chef_salary  NUMERIC(5),
+    Manager_id   NUMERIC(10) REFERENCES Manager (Manager_id)
 );
 
-#5
-create table Cashier(
-Cashier_id numeric (10) primary key,
-Cashier_name varchar (30),
-Cashier_salary numeric (5)
+-- Tabla 5. Cashier.  
+CREATE TABLE IF NOT EXISTS Cashier (
+    Cashier_id     NUMERIC(10) PRIMARY KEY,
+    Cashier_name   VARCHAR(30),
+    Cashier_salary NUMERIC(5)
 );
 
-#6
-create table Receipt(
-Receipt_id numeric (10) primary key,
-Receipt_time time,
-Receipt_date date,
-Receipt_total numeric (10)
+-- Tabla 6. Receipt.
+CREATE TABLE IF NOT EXISTS Receipt (
+    Receipt_id    NUMERIC(10) PRIMARY KEY,
+    Receipt_time  TIME,
+    Receipt_date  DATE,
+    Receipt_total NUMERIC(10)
 );
 
-#7
-create table Dependent_Manager(
-Dependent_name varchar (30) primary key,
-Dependent_relation varchar (30),
-Dependent_sex enum ('M','F'),# specify M or F only
-Manager_id numeric (10) references Manager (Manager_id)
+-- Tabla 7. Dependent_Manager.
+CREATE TABLE IF NOT EXISTS Dependent_Manager (
+    Dependent_name     VARCHAR(30) PRIMARY KEY,
+    Dependent_relation VARCHAR(30),
+    Dependent_sex      ENUM('M','F'),
+    Manager_id         NUMERIC(10) REFERENCES Manager (Manager_id)
 );
 
-#8
-create table Dependent_chef(
-Dependent_name varchar (30) primary key,
-Dependent_relation varchar (30),
-Dependent_sex enum ('M','F'),# specify M or F only
-Chef_id  numeric (10) references Chef (Chef_id )
+-- Tabla 8. Dependent_chef.
+CREATE TABLE IF NOT EXISTS Dependent_chef (
+    Dependent_name     VARCHAR(30) PRIMARY KEY,
+    Dependent_relation VARCHAR(30),
+    Dependent_sex      ENUM('M','F'),
+    Chef_id            NUMERIC(10) REFERENCES Chef (Chef_id)
 );
 
-#9
-create table Dependent_Cashier(
-Dependent_name varchar (30) primary key,
-Dependent_relation varchar (30),
-Dependent_sex enum ('M','F'),# specify M or F only
-Cashier_id numeric (10) references Cashier (Cashier_id  )
+-- Tabla 9. Dependent_Cashier.
+CREATE TABLE IF NOT EXISTS Dependent_Cashier (
+    Dependent_name     VARCHAR(30) PRIMARY KEY,
+    Dependent_relation VARCHAR(30),
+    Dependent_sex      ENUM('M','F'),
+    Cashier_id         NUMERIC(10) REFERENCES Cashier (Cashier_id)
 );
 
-#10
-create table Restaurant_address(
-Restaurant_address varchar (30)primary key,
-Restaurant_id numeric (10) references Restaurant (Restaurant_id)
+-- Tabla 10. Restaurant_address.
+CREATE TABLE IF NOT EXISTS Restaurant_address (
+    Restaurant_address VARCHAR(30) PRIMARY KEY,
+    Restaurant_id      NUMERIC(10) REFERENCES RestaurantManagement (Restaurant_id)
 );
 
-#11
-create table Chef_Prepare_item(
-Chef_id numeric (10) references Chef (Chef_id),
-food_id numeric (5) references Item (food_id),
-sweet_id numeric (5) references Item (sweet_id),
-drinks_id numeric (5) references Item (drinks_id)
+-- Tabla 11. Chef_Prepare_item.
+CREATE TABLE IF NOT EXISTS Chef_Prepare_item (
+    Chef_id   NUMERIC(10) REFERENCES Chef (Chef_id),
+    food_id   NUMERIC(5) REFERENCES Item (food_id),
+    sweet_id  NUMERIC(5),
+    drinks_id NUMERIC(5)
 );
 
-#12
-create table Receipt_takenBy_Cashier(
-Receipt_id numeric (10) references Receipt (Receipt_id),
-Cashier_id numeric (10) references Cashier (Cashier_id)
+-- Tabla 12. Receipt_takenBy_Cashier.
+CREATE TABLE IF NOT EXISTS Receipt_takenBy_Cashier (
+    Receipt_id NUMERIC(10) REFERENCES Receipt (Receipt_id),
+    Cashier_id NUMERIC(10) REFERENCES Cashier (Cashier_id)
 );
 
-insert into RestaurantManagement (Restaurant_id ,Restaurant_name ,Restaurant_address,Manager_id)values(56471,'project_resturant','khobar',3214);
+----- INSERCIÓN DE DATOS -----
+-- Restaurant --
+INSERT INTO RestaurantManagement VALUES (56471,'project_resturant','khobar',3214);
 
-insert into Manager (Manager_id,Manager_Fname,Manager_Mname ,Manager_Lname ,Manager_number ,Manager_salary ) values (3214,'ahmed','khalid','alfahad',053276488,7000);
+-- Manager --
+INSERT INTO Manager VALUES
+(3214,'ahmed','khalid','alfahad',053276488,7000);
 
-#Chef1
-insert into Chef (Chef_id ,Chef_name ,Chef_manager ,Chef_salary ,Manager_id ) values(2561,'abduallah','ahmed',6000,3214);
+-- Chefs --
+INSERT INTO Chef VALUES
+(2561,'abduallah','ahmed',6000,3214),
+(2562,'saleh','ahmed',6000,3214),
+(2563,'mohammad','ahmed',6000,3214),
+(2564,'khalid','ahmed',6000,3214);
 
-#Chef2
-insert into Chef (Chef_id ,Chef_name ,Chef_manager ,Chef_salary ,Manager_id ) values(2562,'saleh','ahmed',6000,3214);
+-- Cashiers --
+INSERT INTO Cashier VALUES
+(4231,'abdualmajeed',7000),
+(4232,'abdualrahman',7000);
 
-#Chef3
-insert into Chef (Chef_id ,Chef_name ,Chef_manager ,Chef_salary ,Manager_id ) values(2563,'mohammad','ahmed',6000,3214);
+-- Receipts --
+INSERT INTO Receipt VALUES
+(1,'12:45:56','2022-01-23',300),
+(2,'12:44:32','2022-01-23',200),
+(3,'01:30:50','2022-01-24',300),
+(4,'03:30:55','2022-01-24',360),
+(5,'03:00:50','2022-01-25',400),
+(6,'02:00:00','2022-01-25',200),
+(7,'03:00:00','2022-01-26',150);
 
-#Chef4
-insert into Chef (Chef_id ,Chef_name ,Chef_manager ,Chef_salary ,Manager_id ) values(2564,'khalid','ahmed',6000,3214);
+-- Dependents (Manager) --
+INSERT INTO Dependent_Manager VALUES
+('maram','wife','F',3214),
+('marwa','child','F',3214);
 
+-- Dependents (Chef) --
+INSERT INTO Dependent_chef VALUES
+('saad','son','M',2562),
+('sara','wife','F',2563),
+('norah','wife','F',2561);
 
+-- Dependents (Cashier) --
+INSERT INTO Dependent_Cashier VALUES
+('sara','daughter','F',4231),
+('lama','daughter','F',4232);
 
-#Cashier1
-insert into Cashier (Cashier_id ,Cashier_name ,Cashier_salary )values (4231,'abdualmajeed',7000);
+-- Items --
+INSERT INTO Item VALUES
+('buratta pizza',56,1,'Dynamite shrimp',39,1,'cola',5,1,1),
+('pink pasta',37,2,'mac&cheese balls',45,2,'7up',5,2,2),
+('spaghetti',40,3,'tiramisu',42,3,'orang juice',15,3,3),
+('rosemary salmon',87,4,'molten chocolate',19,4,'mojito',25,4,4);
 
-#Cashier2
-insert into Cashier (Cashier_id ,Cashier_name ,Cashier_salary )values (4232,'abdualrahman',7000);
+-- Chef Prepare Item --
+INSERT INTO Chef_Prepare_item VALUES
+(2561,1,1,1),
+(2562,2,2,2),
+(2563,3,3,3),
+(2564,4,4,4);
 
-insert into Receipt (Receipt_id ,Receipt_time ,Receipt_date ,Receipt_total ) values (1,'12:45:56','2022-01-23',300);
+-- Receipt taken by cashier --
+INSERT INTO Receipt_takenBy_Cashier VALUES
+(1,1),(2,1),(3,1),(4,1),(5,2),(6,2),(7,2);
 
-insert into Receipt (Receipt_id ,Receipt_time ,Receipt_date ,Receipt_total ) values (2,'12:44:32','2022-01-23',200);
-
-insert into Receipt (Receipt_id ,Receipt_time ,Receipt_date ,Receipt_total ) values (3,'1:30:50','2022-01-24',300);
-insert into Receipt (Receipt_id ,Receipt_time ,Receipt_date ,Receipt_total ) values (4,'3:30:55','2022-01-24',360);
-insert into Receipt (Receipt_id ,Receipt_time ,Receipt_date ,Receipt_total ) values (5,'3:00:50','2022-01-25',400);
-insert into Receipt (Receipt_id ,Receipt_time ,Receipt_date ,Receipt_total ) values (6,'2:00:00','2022-01-25',200);
-insert into Receipt (Receipt_id ,Receipt_time ,Receipt_date ,Receipt_total ) values (7,'3:00:00','2022-01-26',150);
-
-insert into Dependent_Manager (Dependent_name ,Dependent_relation ,Dependent_sex ,Manager_id ) values ('maram','wife','f',3214);
-insert into Dependent_Manager (Dependent_name ,Dependent_relation ,Dependent_sex ,Manager_id ) values ('marwa','child','f',3214);
-
-
-insert into Dependent_chef (Dependent_name ,Dependent_relation ,Dependent_sex ,Chef_id  ) values ('saad','son','m',2562);
-insert into Dependent_chef (Dependent_name ,Dependent_relation ,Dependent_sex ,Chef_id  ) values ('sara','wife','f',2563);
-insert into Dependent_chef (Dependent_name ,Dependent_relation ,Dependent_sex ,Chef_id  ) values ('norah','wife','f',2561);
-
-
-insert into Dependent_Cashier (Dependent_name ,Dependent_relation ,Dependent_sex ,Cashier_id  ) values ('sara','daughter','f',4231);
-insert into Dependent_Cashier (Dependent_name ,Dependent_relation ,Dependent_sex ,Cashier_id  ) values ('lama','daughter','f',4232);
-
-
-
-insert into Item (Item_food ,food_price ,food_id ,Item_appetizers ,appetizers_price ,appetizers_id ,Item_drinks ,drinks_price ,drinks_id ,Receipt_id ) values ('buratta pizza',56.0,1,'Dynamite shrimp',39.0,1,'cola',5.0,1,1);
-insert into Item (Item_food ,food_price ,food_id ,Item_appetizers ,appetizers_price ,appetizers_id ,Item_drinks ,drinks_price ,drinks_id ,Receipt_id ) values ('pink pasta',37.0,2,'mac&cheese balls',45.0,2,'7up',5.0,2,2);
-insert into Item (Item_food ,food_price ,food_id ,Item_appetizers ,appetizers_price ,appetizers_id ,Item_drinks ,drinks_price ,drinks_id ,Receipt_id ) values ('spaghetti',40.0,3,'tiramisu',42.0,3,'orang juice',15.0,3,3);
-insert into Item (Item_food ,food_price ,food_id ,Item_appetizers ,appetizers_price ,appetizers_id ,Item_drinks ,drinks_price ,drinks_id ,Receipt_id ) values ('rosemary salmon',87.0,4,'molten chocolate',19.0,4,'mojito',25.0,4,4);
-
-
-
-insert into Chef_Prepare_item (Chef_id ,food_id ,sweet_id ,drinks_id ) values (2561,1,1,1);
-insert into Chef_Prepare_item (Chef_id ,food_id ,sweet_id ,drinks_id ) values (2562,2,2,2);
-insert into Chef_Prepare_item (Chef_id ,food_id ,sweet_id ,drinks_id ) values (2563,3,3,3);
-insert into Chef_Prepare_item (Chef_id ,food_id ,sweet_id ,drinks_id ) values (2564,4,4,4);
-
-
-insert into Receipt_takenBy_Cashier (Receipt_id ,Cashier_id )values(1,1);
-insert into Receipt_takenBy_Cashier (Receipt_id ,Cashier_id )values (2,1);
-insert into Receipt_takenBy_Cashier (Receipt_id ,Cashier_id )values (3,1);
-insert into Receipt_takenBy_Cashier (Receipt_id ,Cashier_id )values (4,1);
-insert into Receipt_takenBy_Cashier (Receipt_id ,Cashier_id )values (5,2);
-insert into Receipt_takenBy_Cashier (Receipt_id ,Cashier_id )values (6,2);
-insert into Receipt_takenBy_Cashier (Receipt_id ,Cashier_id )values (7,2);
-
-
-#Union
-select Cashier_name from Cashier union select Dependent_name from Dependent_Cashier;
-
-#Intersect error
-SELECT DISTINCT Manager_salary FROM Manager INNER JOIN Cashier USING (Cashier_salary);
-
-#DISTINCT
+-- CONSULTAS, PRUEBAS Y PROCEDIMIENTOS --
+-- SELECTs de prueba --
 SELECT DISTINCT Receipt_total FROM Receipt;
 
-#aggregate
-SELECT AVG(Receipt_total) average_Receipt_total_price FROM Receipt;
-SELECT max(Receipt_total) average_Receipt_total_price FROM Receipt;
-SELECT min(Receipt_total) average_Receipt_total_price FROM Receipt;
+SELECT AVG(Receipt_total) AS avg_total FROM Receipt;
+SELECT MAX(Receipt_total) AS max_total FROM Receipt;
+SELECT MIN(Receipt_total) AS min_total FROM Receipt;
 
-#not
 SELECT * FROM Chef WHERE NOT Chef_name='khalid';
-
-#like
 SELECT * FROM Chef WHERE Chef_name LIKE 'k%';
 
-#ORDER BY
 SELECT * FROM Item ORDER BY Item_food DESC;
 SELECT * FROM Item ORDER BY Item_food ASC;
 
+SELECT COUNT(Chef_id), Chef_name FROM Chef GROUP BY Chef_name HAVING COUNT(Chef_id) > 2561;
 
-#GROUP BY,HAVING,count null
-SELECT COUNT(Chef_id ),Chef_name FROM Chef GROUP BY Chef_name HAVING COUNT(Chef_id ) > 2561;
-
-#in
-SELECT * FROM Receipt WHERE Receipt_date IN ('2022-01-24', '2022-01-25');
-
-#BETWEEN
+SELECT * FROM Receipt WHERE Receipt_date IN ('2022-01-24','2022-01-25');
 SELECT * FROM Receipt WHERE Receipt_total BETWEEN 300 AND 400;
 
-#GROUP BY
-SELECT COUNT(Chef_id),Chef_name FROM Chef GROUP BY Chef_name;
+-- CASE example --
+INSERT INTO Receipt VALUES (10,'13:46:51','2022-02-23',650);
 
-#having
-SELECT COUNT(Receipt_id), Receipt_total FROM Receipt GROUP BY Receipt_total HAVING COUNT(Receipt_id) < 5;
+SELECT 
+    Receipt_id,
+    Receipt_time,
+    Receipt_date,
+    Receipt_total,
+    CASE 
+        WHEN Receipt_total BETWEEN 600 AND 700 THEN 'salary increasing'
+        ELSE 'normal'
+    END AS salary
+FROM Receipt;
 
-#case
-insert into Receipt (Receipt_id ,Receipt_time ,Receipt_date,Receipt_total ) values (10,'13:46:51','2022-02-23',650);
-select Receipt_id ,Receipt_time ,Receipt_date ,Receipt_total,case when Receipt_total between 600 and 700 then 'salary increasing' else 'normal'end as 'salary' from Receipt;
-
-
-#insert
-insert into Receipt (Receipt_id ,Receipt_time ,Receipt_date,Receipt_total ) values (8,'12:45:51','2022-01-23',300);
-
-create table Receipt_copy (
-Receipt_id numeric (10) primary key,
-Receipt_time time,
-Receipt_date date,
-Receipt_total numeric (10)
+-- Receipt copy table --
+CREATE TABLE IF NOT EXISTS Receipt_copy (
+    Receipt_id    NUMERIC(10) PRIMARY KEY,
+    Receipt_time  TIME,
+    Receipt_date  DATE,
+    Receipt_total NUMERIC(10)
 );
 
-insert into Receipt_copy (Receipt_id ,Receipt_time ,Receipt_date ,Receipt_total ) values (1,'12:45:51','2022-01-23',300);
+INSERT INTO Receipt_copy VALUES (1,'12:45:51','2022-01-23',300);
+DELETE FROM Receipt_copy WHERE Receipt_id = 1;
 
-DELETE FROM Receipt_copy WHERE Receipt_id=1;
+-- Index --
+CREATE INDEX Itemindex ON Item (Item_food);
 
-#index
-create index Itemindex on Item (Item_food);
+-- PROCEDURE: Chefname --
+DELIMITER $$
+CREATE PROCEDURE Chefname (IN Cheffname VARCHAR(10))
+BEGIN
+    SELECT * FROM Chef WHERE Chef_name = Cheffname;
+END $$
+DELIMITER ;
 
-#assertion
-create assertion salary_constraint check ( not exists ( select * from cashier ,Manager where Cashier_salary > Manager_salary));
+CALL Chefname('mohammad');
+CALL Chefname('abduallah');
 
-#procedure
- delimiter $$
- create procedure Chefname (in Cheffname varchar (10))
- begin
- select *
- from chef
- where Chef_name = Cheffname;
- end $$
- delimiter ;
+-- TRIGGER: uppercase names in Manager --
+CREATE TRIGGER uppercase BEFORE INSERT ON Manager
+FOR EACH ROW
+SET NEW.Manager_Fname = UPPER(NEW.Manager_Fname);
 
-call Chefname('mohammad');
-call Chefname('abduallah');
+INSERT INTO Manager VALUES (3217,'Yazeed','fahad','alahmad',053276488,7000);
 
-# trigger
-Create trigger uppercase before insert on manager
-for each row
-Set NEW.Manager_Fname = UPPER(NEW.Manager_Fname);
+SELECT * FROM Manager;
 
-insert into Manager (Manager_id,Manager_Fname,Manager_Mname ,Manager_Lname ,Manager_number ,Manager_salary ) values (3217,'Yazeed','fahad','alahmad',053276488,7000);
+-- CREACIÓN E INSERCIÓN DE DATOS EN TABLAS ADICIONALES --
+-- Tabla Appetizers --
+CREATE TABLE IF NOT EXISTS appetizers (
+  id    INT NOT NULL AUTO_INCREMENT,
+  name  VARCHAR(250) NOT NULL,
+  price INT NOT NULL,
+  PRIMARY KEY (id)
+);
 
-Select * from Manager ;
+INSERT INTO appetizers (id, name, price) VALUES
+(1,'Truffel Fries',23),
+(2,'Molten Chocolate',12),
+(3,'Mac&Cheese Balls',12),
+(4,'Dynamite Shrimp',32),
+(5,'Kheera',10);
 
+-- Tabla Drinks --
+CREATE TABLE IF NOT EXISTS drinks (
+  id    INT NOT NULL AUTO_INCREMENT,
+  name  VARCHAR(250) NOT NULL,
+  price INT NOT NULL,
+  PRIMARY KEY (id)
+);
 
-CREATE TABLE `appetizers` (
-  `id` int(11) NOT NULL,
-  `name` varchar(250) NOT NULL,
-  `price` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+INSERT INTO drinks (id, name, price) VALUES
+(1,'cola',6),
+(2,'7up',6),
+(3,'orange juice',10),
+(4,'mojito',14),
+(5,'Red Bull',8);
 
+-- Tabla MainCourse --
+CREATE TABLE IF NOT EXISTS maincourse (
+  id    INT NOT NULL AUTO_INCREMENT,
+  name  VARCHAR(250) NOT NULL,
+  price INT NOT NULL,
+  PRIMARY KEY (id)
+);
 
-INSERT INTO `appetizers` (`id`, `name`, `price`) VALUES
-(1, 'Truffel Fries', 23),
-(2, 'Molten Chocolate', 12),
-(3, 'Mac&Cheese Balls', 12),
-(4, 'Dynamite Shrimp', 32),
-(5, 'Kheera', 10);
+INSERT INTO maincourse (id, name, price) VALUES
+(1,'Buratta Pizza',54),
+(2,'Pink Pasta',12),
+(3,'Rosemary Salmon',30),
+(4,'Spaghetti',8),
+(5,'Crown Pizza',50);
 
-CREATE TABLE `drinks` (
-  `id` int(11) NOT NULL,
-  `name` varchar(250) NOT NULL,
-  `price` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
-
-INSERT INTO `drinks` (`id`, `name`, `price`) VALUES
-(1, 'cola', 6),
-(2, '7up', 6),
-(3, 'orange juice', 10),
-(4, 'mojito', 14),
-(5, 'Red Bull', 8);
-
-CREATE TABLE `maincourse` (
-  `id` int(11) NOT NULL,
-  `name` varchar(250) NOT NULL,
-  `price` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
-
-INSERT INTO `maincourse` (`id`, `name`, `price`) VALUES
-(1, 'Buratta Pizza', 54),
-(2, 'Pink Pasta', 12),
-(3, 'Rosemary Salmon', 30),
-(4, 'Spaghetti', 8),
-(5, 'Crown Pizza', 50);
-
-
-ALTER TABLE `appetizers`
-  ADD PRIMARY KEY (`id`);
-
-ALTER TABLE `drinks`
-  ADD PRIMARY KEY (`id`);
-
-ALTER TABLE `maincourse`
-  ADD PRIMARY KEY (`id`);
-
-
-ALTER TABLE `appetizers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
-
-ALTER TABLE `drinks`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
-
-ALTER TABLE `maincourse`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
--- END Database.sql content
+-- CONCESIÓN DE PRIVILEGIOS AL USUARIO RESTAURANT --
+GRANT ALL PRIVILEGES ON project3.* TO 'restaurant'@'%';
+FLUSH PRIVILEGES;
 
-SET FOREIGN_KEY_CHECKS=1;
-
+-- Reactivar restricciones de claves foráneas. --
+SET FOREIGN_KEY_CHECKS = 1;

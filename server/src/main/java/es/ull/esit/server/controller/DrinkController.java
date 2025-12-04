@@ -10,56 +10,97 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * @brief REST controller for managing drinks.
+ *
+ *        Provides CRUD operations for Drink entities using the path
+ *        "/api/drinks". These endpoints are used by the Swing client to load
+ *        and modify drink information.
+ */
 @RestController
 @RequestMapping("/api/drinks")
 public class DrinkController {
 
-    @Autowired
-    private DrinkRepository drinkRepository;
+  /** Repository used to access the "drinks" table. */
+  @Autowired
+  private DrinkRepository drinkRepository;
 
-    // GET todas las bebidas
-    @GetMapping
-    public ResponseEntity<List<Drink>> getAllDrinks() {
-        List<Drink> drinks = drinkRepository.findAll();
-        return ResponseEntity.ok(drinks);
-    }
+  /**
+   * @brief Returns the complete list of drinks.
+   *
+   *        HTTP GET /api/drinks
+   *
+   * @return [ResponseEntity<List<Drink>>] List of drinks with status 200.
+   */
+  @GetMapping
+  public ResponseEntity<List<Drink>> getAllDrinks() {
+    List<Drink> drinks = drinkRepository.findAll();
+    return ResponseEntity.ok(drinks);
+  }
 
-    // GET una bebida por ID
-    @GetMapping("/{id}")
-    public ResponseEntity<Drink> getDrinkById(@PathVariable Long id) {
-        Drink.DrinkId drinkId = new Drink.DrinkId(id);
-        Optional<Drink> drink = drinkRepository.findById(drinkId);
-        return drink.map(ResponseEntity::ok)
-                .orElseGet(() -> ResponseEntity.notFound().build());
-    }
+  /**
+   * @brief Returns a single drink by its id.
+   *
+   *        HTTP GET /api/drinks/{id}
+   *
+   * @param id [Long] Identifier of the drink.
+   * @return [ResponseEntity<Drink>] The drink if found or 404 otherwise.
+   */
+  @GetMapping("/{id}")
+  public ResponseEntity<Drink> getDrinkById(@PathVariable Long id) {
+    Optional<Drink> drink = drinkRepository.findById(id);
+    return drink.map(ResponseEntity::ok)
+        .orElseGet(() -> ResponseEntity.notFound().build());
+  }
 
-    // POST crear nueva bebida
-    @PostMapping
-    public ResponseEntity<Drink> createDrink(@RequestBody Drink drink) {
-        Drink saved = drinkRepository.save(drink);
-        return ResponseEntity.status(HttpStatus.CREATED).body(saved);
-    }
+  /**
+   * @brief Creates a new drink.
+   *
+   *        HTTP POST /api/drinks
+   *
+   * @param drink [Drink] Drink data sent in the request body.
+   * @return [ResponseEntity<Drink>] The created drink with status 201.
+   */
+  @PostMapping
+  public ResponseEntity<Drink> createDrink(@RequestBody Drink drink) {
+    Drink saved = drinkRepository.save(drink);
+    return ResponseEntity.status(HttpStatus.CREATED).body(saved);
+  }
 
-    // PUT actualizar bebida
-    @PutMapping("/{id}")
-    public ResponseEntity<Drink> updateDrink(@PathVariable Long id, @RequestBody Drink drink) {
-        Drink.DrinkId drinkId = new Drink.DrinkId(id);
-        if (!drinkRepository.existsById(drinkId)) {
-            return ResponseEntity.notFound().build();
-        }
-        drink.setDrinksId(id);
-        Drink updated = drinkRepository.save(drink);
-        return ResponseEntity.ok(updated);
+  /**
+   * @brief Updates an existing drink.
+   *
+   *        HTTP PUT /api/drinks/{id}
+   *
+   * @param id    [Long] Identifier of the drink to update.
+   * @param drink [Drink] New data for the drink.
+   * @return [ResponseEntity<Drink>] The updated drink or 404 if not found.
+   */
+  @PutMapping("/{id}")
+  public ResponseEntity<Drink> updateDrink(@PathVariable Long id,
+      @RequestBody Drink drink) {
+    if (!drinkRepository.existsById(id)) {
+      return ResponseEntity.notFound().build();
     }
+    drink.setDrinksId(id);
+    Drink updated = drinkRepository.save(drink);
+    return ResponseEntity.ok(updated);
+  }
 
-    // DELETE eliminar bebida
-    @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteDrink(@PathVariable Long id) {
-        Drink.DrinkId drinkId = new Drink.DrinkId(id);
-        if (!drinkRepository.existsById(drinkId)) {
-            return ResponseEntity.notFound().build();
-        }
-        drinkRepository.deleteById(drinkId);
-        return ResponseEntity.noContent().build();
+  /**
+   * @brief Deletes a drink by its id.
+   *
+   *        HTTP DELETE /api/drinks/{id}
+   *
+   * @param id [Long] Identifier of the drink to delete.
+   * @return [ResponseEntity<Void>] 204 if deleted or 404 if not found.
+   */
+  @DeleteMapping("/{id}")
+  public ResponseEntity<Void> deleteDrink(@PathVariable Long id) {
+    if (!drinkRepository.existsById(id)) {
+      return ResponseEntity.notFound().build();
     }
+    drinkRepository.deleteById(id);
+    return ResponseEntity.noContent().build();
+  }
 }
