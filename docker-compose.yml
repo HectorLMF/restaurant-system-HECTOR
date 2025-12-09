@@ -25,11 +25,10 @@ services:
       - mysql_data_v1:/var/lib/mysql
       - ./db/00-create-db.sql:/docker-entrypoint-initdb.d/00-create-db.sql:ro
       - ./db/01-tables.sql:/docker-entrypoint-initdb.d/01-tables.sql:ro
-      - ./db/02-data.sql:/docker-entrypoint-initdb.d/02-data.sql:ro
-      - ./db/03-procedures.sql:/docker-entrypoint-initdb.d/03-procedures.sql:ro
-      - ./db/04-triggers.sql:/docker-entrypoint-initdb.d/04-triggers.sql:ro
-      - ./db/05-privileges.sql:/docker-entrypoint-initdb.d/05-privileges.sql:ro
-      - ./db/06-users.sql:/docker-entrypoint-initdb.d/06-users.sql:ro
+      - ./db/02-procedures.sql:/docker-entrypoint-initdb.d/02-procedures.sql:ro
+      - ./db/03-triggers.sql:/docker-entrypoint-initdb.d/03-triggers.sql:ro
+      - ./db/04-privileges.sql:/docker-entrypoint-initdb.d/04-privileges.sql:ro
+      - ./db/05-data.sql:/docker-entrypoint-initdb.d/05-data.sql:ro
 
  
     # Mapear el puerto interno 3306 del contenedor al puerto 3306 de la

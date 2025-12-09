@@ -54,10 +54,15 @@ public class ApiClient {
   /**
    * @brief Generic GET helper that returns a single object.
    * 
+   *        It validates the HTTP status code before attempting to parse JSON.
+   *        - If status is 200–299 and body is non-empty: parse JSON.
+   *        - If status is 204 or body is empty: return null.
+   *        - For any other status: throw a RuntimeException with details.
+   * 
    * @param <T>          [T] Type of the response object.
    * @param path         [String] API endpoint path.
    * @param responseType [Class<T>] Class of the response type.
-   * @return [T] Object of type T.
+   * @return [T] Object of type T or null if 204 / cuerpo vacío.
    * @throws Exception If an error occurs during the request.
    */
   private <T> T get(String path, Class<T> responseType) throws Exception {
@@ -66,29 +71,24 @@ public class ApiClient {
         .GET()
         .header("Accept", "application/json")
         .build();
-    HttpResponse<String> res = http.send(req, HttpResponse.BodyHandlers.ofString());
-    return mapper.readValue(res.body(), responseType);
-  }
 
-  // /**
-  //  * @brief Generic GET helper that returns a list of objects.
-  //  * 
-  //  * @param <T>     [T] Type of the response objects.
-  //  * @param path    [String] API endpoint path.
-  //  * @param typeRef [TypeReference<List<T>>] Type reference for the list of
-  //  *                objects.
-  //  * @return [List<T>] List of objects of type T.
-  //  * @throws Exception If an error occurs during the request.
-  //  */
-  // private <T> List<T> getList(String path, TypeReference<List<T>> typeRef) throws Exception {
-  //   HttpRequest req = HttpRequest.newBuilder()
-  //       .uri(URI.create(baseUrl + path))
-  //       .GET()
-  //       .header("Accept", "application/json")
-  //       .build();
-  //   HttpResponse<String> res = http.send(req, HttpResponse.BodyHandlers.ofString());
-  //   return mapper.readValue(res.body(), typeRef);
-  // }
+    HttpResponse<String> res = http.send(req, HttpResponse.BodyHandlers.ofString());
+    int status = res.statusCode();
+    String body = res.body();
+
+    System.out.println("GET " + path + " -> HTTP " + status);
+    System.out.println("Response body: '" + body + "'");
+
+    if (status == 204 || body == null || body.trim().isEmpty()) {
+      return null;
+    }
+
+    if (status < 200 || status >= 300) {
+      throw new RuntimeException("GET " + path + " failed with HTTP " + status + " body: " + body);
+    }
+
+    return mapper.readValue(body, responseType);
+  }
 
   /**
    * Generic method for GET requests returning lists.
@@ -97,6 +97,12 @@ public class ApiClient {
    * - If status is 200–299 and body is non-empty: parse JSON.
    * - If status is 204 or body is empty: return an empty list.
    * - For any other status: throw a RuntimeException with details.
+   * 
+   * @param <T>     [T] Type of the list elements.
+   * @param path    [String] API endpoint path.
+   * @param typeRef [TypeReference<List<T>>] Type reference for deserialization
+   * @return [List<T>] List of objects of type T.
+   * @throws Exception If an error occurs during the request.
    */
   private <T> List<T> getList(String path, TypeReference<List<T>> typeRef) throws Exception {
     HttpRequest req = HttpRequest.newBuilder()
@@ -109,27 +115,27 @@ public class ApiClient {
     int status = res.statusCode();
     String body = res.body();
 
-    // Debug temporal: ver qué está pasando
     System.out.println("GET " + path + " -> HTTP " + status);
     System.out.println("Response body: '" + body + "'");
 
-    // 204 o cuerpo vacío: devolvemos lista vacía para evitar "no content to map..."
     if (status == 204 || body == null || body.trim().isEmpty()) {
       return java.util.Collections.emptyList();
     }
 
-    // Cualquier código que no sea 2xx lo tratamos como error
     if (status < 200 || status >= 300) {
       throw new RuntimeException("GET " + path + " failed with HTTP " + status + " body: " + body);
     }
 
-    // Caso normal: 2xx con cuerpo JSON
     return mapper.readValue(body, typeRef);
   }
 
   /**
    * @brief Generic POST helper that sends an object and returns a response
    *        object.
+   * 
+   *        It validates the HTTP status code before attempting to parse JSON.
+   *        - If status is 200–299: parse JSON.
+   *        - For any other status: throw a RuntimeException with details.
    * 
    * @param <T>          [T] Type of the request body.
    * @param <R>          [R] Type of the response body.
@@ -147,12 +153,24 @@ public class ApiClient {
         .header("Content-Type", "application/json")
         .build();
     HttpResponse<String> res = http.send(req, HttpResponse.BodyHandlers.ofString());
-    return mapper.readValue(res.body(), responseType);
+
+    int status = res.statusCode();
+    String responseBody = res.body();
+
+    System.out.println("POST " + path + " -> HTTP " + status);
+    System.out.println("Response body: '" + responseBody + "'");
+
+    if (status < 200 || status >= 300) {
+      throw new RuntimeException("POST " + path + " failed with HTTP " + status + " body: " + responseBody);
+    }
+
+    return mapper.readValue(responseBody, responseType);
   }
 
   // ------------- CRUD methods for Appetizers ----------------
   /**
    * @brief GET all appetizers.
+   * 
    *        Retrieves a list of all appetizers from the backend.
    * 
    * @return [List<Appetizer>] List of all appetizers.
@@ -164,8 +182,9 @@ public class ApiClient {
   }
 
   /**
-   * GET appetizer by ID.
-   * Retrieves an appetizer by its ID from the backend.
+   * @brief GET appetizer by ID.
+   * 
+   *        Retrieves an appetizer by its ID from the backend.
    * 
    * @param id [Long] ID of the appetizer.
    * @return [Appetizer] Appetizer object.
@@ -176,8 +195,8 @@ public class ApiClient {
   }
 
   /**
-   * POST create new appetizer.
-   * Creates a new appetizer in the backend.
+   * @brief POST create new appetizer.
+   *        Creates a new appetizer in the backend.
    * 
    * @param appetizer [Appetizer] Appetizer object to create.
    * @return [Appetizer] Created Appetizer object returned from the backend.
@@ -188,8 +207,8 @@ public class ApiClient {
   }
 
   /**
-   * PUT update appetizer.
-   * Updates an existing appetizer in the backend.
+   * @brief PUT update appetizer by ID.
+   *        Updates an existing appetizer in the backend.
    * 
    * @param id        [Long] ID of the appetizer to update.
    * @param appetizer [Appetizer] Appetizer object with updated data.
@@ -204,12 +223,20 @@ public class ApiClient {
         .header("Content-Type", "application/json")
         .build();
     HttpResponse<String> res = http.send(req, HttpResponse.BodyHandlers.ofString());
-    return mapper.readValue(res.body(), Appetizer.class);
+
+    int status = res.statusCode();
+    String body = res.body();
+
+    if (status < 200 || status >= 300) {
+      throw new RuntimeException("PUT /api/appetizers/" + id + " failed with HTTP " + status + " body: " + body);
+    }
+
+    return mapper.readValue(body, Appetizer.class);
   }
 
   /**
-   * DELETE appetizer.
-   * Deletes an existing appetizer in the backend.
+   * @brief DELETE appetizer by ID.
+   *        Deletes an existing appetizer in the backend.
    * 
    * @param id [Long] ID of the appetizer to delete.
    * @throws Exception If an error occurs during the request.
@@ -222,9 +249,11 @@ public class ApiClient {
     http.send(req, HttpResponse.BodyHandlers.ofString());
   }
 
-  // ------------- CRUD methods for Cashiers ----------------
+  // ------------- READ / UPDATE methods for Cashiers ----------------
+
   /**
    * GET all cashiers.
+   * 
    * Retrieves a list of all cashiers from the backend.
    * 
    * @return [List<Cashier>] List of all cashiers.
@@ -236,8 +265,8 @@ public class ApiClient {
   }
 
   /**
-   * GET cashier by ID
-   * Retrieves a cashier by its ID from the backend.
+   * @brief GET cashier by ID.
+   *        Retrieves a cashier by its ID from the backend.
    * 
    * @param id [Long] ID of the cashier.
    * @return [Cashier] Cashier object.
@@ -248,25 +277,26 @@ public class ApiClient {
   }
 
   /**
-   * POST create new cashier
-   * Creates a new cashier in the backend.
-   * 
-   * @param cashier [Cashier] Cashier object to create.
-   * @return [Cashier] Created Cashier object returned from the backend.
+   * @brief GET cashier by name.
+   *        Retrieves a cashier by its username from the backend.
+   *
+   * @param name [String] username of the cashier.
+   * @return [Cashier] Cashier object.
    * @throws Exception If an error occurs during the request.
    */
-  public Cashier createCashier(Cashier cashier) throws Exception {
-    return post("/api/cashiers", cashier, Cashier.class);
+  public Cashier getCashierByName(String name) throws Exception {
+    return get("/api/cashiers/name/" + name, Cashier.class);
   }
 
   /**
-   * PUT update cashier
-   * Updates an existing cashier in the backend.
+   * @brief PUT update cashier by ID.
+   * 
+   *        Updates an existing cashier in the backend (name and/or salary).
    *
    * @param id      [Long] ID of the cashier to update.
    * @param cashier [Cashier] Cashier object with updated data.
    * @return [Cashier] Updated Cashier object returned from the backend.
-   * @throws Exception if an error occurs during the request
+   * @throws Exception If an error occurs during the request.
    */
   public Cashier updateCashier(Long id, Cashier cashier) throws Exception {
     String json = mapper.writeValueAsString(cashier);
@@ -276,32 +306,25 @@ public class ApiClient {
         .header("Content-Type", "application/json")
         .build();
     HttpResponse<String> res = http.send(req, HttpResponse.BodyHandlers.ofString());
-    return mapper.readValue(res.body(), Cashier.class);
-  }
 
-  /**
-   * DELETE cashier
-   * Deletes an existing cashier in the backend.
-   *
-   * @param id [Long] ID of the cashier to delete.
-   * @throws Exception if an error occurs during the request
-   */
-  public void deleteCashier(Long id) throws Exception {
-    HttpRequest req = HttpRequest.newBuilder()
-        .uri(URI.create(baseUrl + "/api/cashiers/" + id))
-        .DELETE()
-        .build();
-    http.send(req, HttpResponse.BodyHandlers.ofString());
+    int status = res.statusCode();
+    String body = res.body();
+
+    if (status < 200 || status >= 300) {
+      throw new RuntimeException("PUT /api/cashiers/" + id + " failed with HTTP " + status + " body: " + body);
+    }
+
+    return mapper.readValue(body, Cashier.class);
   }
 
   // ------------- CRUD methods for Drinks ----------------
   /**
-   * GET all drinks.
+   * @brieef GET all drinks.
    * 
-   * Retrieves a list of all drinks from the backend.
+   *         Retrieves a list of all drinks from the backend.
    * 
    * @return [List<Drink>] List of all drinks.
-   * @throws Exception if an error occurs during the request.
+   * @throws Exception If an error occurs during the request.
    */
   public List<Drink> getAllDrinks() throws Exception {
     return getList("/api/drinks", new TypeReference<List<Drink>>() {
@@ -309,38 +332,40 @@ public class ApiClient {
   }
 
   /**
-   * GET drink by ID.
-   * Retrieves a drink by its ID from the backend.
+   * @brief GET drink by ID.
+   * 
+   *        Retrieves a drink by its ID from the backend.
    * 
    * @param id [Long] ID of the drink.
    * @return [Drink] Drink object.
-   * @throws Exception if an error occurs during the request.
+   * @throws Exception If an error occurs during the request.
    */
   public Drink getDrinkById(Long id) throws Exception {
     return get("/api/drinks/" + id, Drink.class);
   }
 
   /**
-   * POST create new drink.
-   * Creates a new drink in the backend.
+   * @brief POST create new drink.
+   * 
+   *        Creates a new drink in the backend.
    * 
    * @param drink [Drink] Drink object to create.
    * @return [Drink] Created Drink object returned from the backend.
-   * @throws Exception if an error occurs during the request.
+   * @throws Exception If an error occurs during the request.
    */
   public Drink createDrink(Drink drink) throws Exception {
     return post("/api/drinks", drink, Drink.class);
   }
 
   /**
-   * PUT update drink.
+   * @brief PUT update drink by ID.
    * 
-   * Updates an existing drink in the backend.
+   *        Updates an existing drink in the backend by its ID.
    * 
    * @param id    [Long] ID of the drink to update.
    * @param drink [Drink] Drink object with updated data.
    * @return [Drink] Updated Drink object returned from the backend.
-   * @throws Exception if an error occurs during the request
+   * @throws Exception If an error occurs during the request.
    */
   public Drink updateDrink(Long id, Drink drink) throws Exception {
     String json = mapper.writeValueAsString(drink);
@@ -350,15 +375,24 @@ public class ApiClient {
         .header("Content-Type", "application/json")
         .build();
     HttpResponse<String> res = http.send(req, HttpResponse.BodyHandlers.ofString());
-    return mapper.readValue(res.body(), Drink.class);
+
+    int status = res.statusCode();
+    String body = res.body();
+
+    if (status < 200 || status >= 300) {
+      throw new RuntimeException("PUT /api/drinks/" + id + " failed with HTTP " + status + " body: " + body);
+    }
+
+    return mapper.readValue(body, Drink.class);
   }
 
   /**
-   * DELETE drink.
-   * Deletes an existing drink in the backend.
+   * @brief DELETE drink by ID.
+   * 
+   *        Deletes an existing drink in the backend.
    * 
    * @param id [Long] ID of the drink to delete.
-   * @throws Exception if an error occurs during the request
+   * @throws Exception If an error occurs during the request
    */
   public void deleteDrink(Long id) throws Exception {
     HttpRequest req = HttpRequest.newBuilder()
@@ -370,10 +404,12 @@ public class ApiClient {
 
   // ------------- CRUD methods for MainCourses ----------------
   /**
-   * GET all maincourses
+   * @brief GET all maincourses.
    * 
-   * @return a list of MainCourse objects
-   * @throws Exception if an error occurs during the request
+   *        Retrieves a list of all maincourses from the backend.
+   * 
+   * @return [List<MainCourse>] List of all maincourses.
+   * @throws Exception If an error occurs during the request.
    */
   public List<MainCourse> getAllMainCourses() throws Exception {
     return getList("/api/maincourses", new TypeReference<List<MainCourse>>() {
@@ -381,38 +417,40 @@ public class ApiClient {
   }
 
   /**
-   * GET maincourse by ID
+   * @brief GET maincourse by ID.
+   * 
+   *        Retrieves a maincourse by its ID from the backend.
    * 
    * @param id [Long] ID of the maincourse.
    * @return [MainCourse] MainCourse object.
-   * @throws Exception if an error occurs during the request
+   * @throws Exception If an error occurs during the request.
    */
   public MainCourse getMainCourseById(Long id) throws Exception {
     return get("/api/maincourses/" + id, MainCourse.class);
   }
 
   /**
-   * POST create new maincourse.
+   * @brief POST create new maincourse.
    * 
-   * Creates a new maincourse in the backend.
+   *        Creates a new maincourse in the backend.
    * 
    * @param mainCourse [MainCourse] MainCourse object to create.
    * @return [MainCourse] Created MainCourse object returned from the backend.
-   * @throws Exception if an error occurs during the request
+   * @throws Exception If an error occurs during the request.
    */
   public MainCourse createMainCourse(MainCourse mainCourse) throws Exception {
     return post("/api/maincourses", mainCourse, MainCourse.class);
   }
 
   /**
-   * PUT update maincourse.
+   * @brief PUT update maincourse by ID.
    * 
-   * Updates an existing maincourse in the backend.
+   *        Updates an existing maincourse in the backend.
    * 
    * @param id         [Long] ID of the maincourse to update.
    * @param mainCourse [MainCourse] MainCourse object with updated data.
    * @return [MainCourse] Updated MainCourse object returned from the backend.
-   * @throws Exception if an error occurs during the request
+   * @throws Exception If an error occurs during the request.
    */
   public MainCourse updateMainCourse(Long id, MainCourse mainCourse) throws Exception {
     String json = mapper.writeValueAsString(mainCourse);
@@ -422,16 +460,24 @@ public class ApiClient {
         .header("Content-Type", "application/json")
         .build();
     HttpResponse<String> res = http.send(req, HttpResponse.BodyHandlers.ofString());
-    return mapper.readValue(res.body(), MainCourse.class);
+
+    int status = res.statusCode();
+    String body = res.body();
+
+    if (status < 200 || status >= 300) {
+      throw new RuntimeException("PUT /api/maincourses/" + id + " failed with HTTP " + status + " body: " + body);
+    }
+
+    return mapper.readValue(body, MainCourse.class);
   }
 
   /**
-   * DELETE maincourse.
+   * @brief DELETE maincourse by ID.
    * 
-   * Deletes an existing maincourse in the backend by its ID.
+   *        Deletes an existing maincourse in the backend by its ID.
    * 
    * @param id [Long] ID of the maincourse to delete.
-   * @throws Exception if an error occurs during the request
+   * @throws Exception If an error occurs during the request.
    */
   public void deleteMainCourse(Long id) throws Exception {
     HttpRequest req = HttpRequest.newBuilder()
@@ -482,8 +528,10 @@ public class ApiClient {
 
     HttpResponse<String> response = http.send(request, HttpResponse.BodyHandlers.ofString());
 
-    if (response.statusCode() == 200) {
+    System.out.println("POST /api/login -> HTTP " + response.statusCode());
+    System.out.println("Response body: '" + response.body() + "'");
 
+    if (response.statusCode() == 200) {
       return mapper.readValue(response.body(), User.class);
     } else {
       throw new RuntimeException("Login failed with status: " + response.statusCode());

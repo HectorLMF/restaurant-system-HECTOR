@@ -3,82 +3,122 @@ package es.ull.esit.app.middleware.model;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * Appetizer model class
+ * @brief Client-side model representing an appetizer received from the backend API.
+ *
+ *        It is used by the Swing application to deserialize JSON sent by
+ *        the REST server for the "/api/appetizers" endpoint.
  */
 public class Appetizer {
-    @JsonProperty("appetizersId")
-    private Long appetizersId;
-    
-    @JsonProperty("itemAppetizers")
-    private String itemAppetizers;
-    
-    @JsonProperty("appetizersPrice")
-    private Integer appetizersPrice;
-    
-    @JsonProperty("receiptId")
-    private Long receiptId;
 
-    public Appetizer() {}
+  /** Unique identifier of the appetizer (JSON property "appetizersId"). */
+  @JsonProperty("appetizersId")
+  private Long appetizersId;
 
-    /**
-     * Constructor with parameters
-     * @param appetizersId the appetizers ID
-     * @param itemAppetizers the appetizer item name
-     * @param appetizersPrice the appetizer price
-     * @param receiptId the receipt ID
-     */
-    public Appetizer(Long appetizersId, String itemAppetizers, Integer appetizersPrice, Long receiptId) {
-        this.appetizersId = appetizersId;
-        this.itemAppetizers = itemAppetizers;
-        this.appetizersPrice = appetizersPrice;
-        this.receiptId = receiptId;
-    }
+  /** Name of the appetizer item (JSON property "itemAppetizers"). */
+  @JsonProperty("itemAppetizers")
+  private String itemAppetizers;
 
-    /**
-     * Getters and Setters
-     * @return values of the attributes
-     */
-    public Long getAppetizersId() { return appetizersId; }
+  /** Price of the appetizer (JSON property "appetizersPrice"). */
+  @JsonProperty("appetizersPrice")
+  private Integer appetizersPrice;
 
-    /**
-     * Set appetizers ID
-     * @param appetizersId the appetizers ID
-     */
-    public void setAppetizersId(Long appetizersId) { this.appetizersId = appetizersId; }
+  /**
+   * Identifier of the receipt this appetizer belongs to (JSON property
+   * "receiptId"). Currently not populated by the backend.
+   */
+  @JsonProperty("receiptId")
+  private Long receiptId;
 
-    /**
-     * Get item appetizers
-     * @return the appetizer item name
-     */
-    public String getItemAppetizers() { return itemAppetizers; }
+  /**
+   * @brief Default constructor required for JSON deserialization.
+   */
+  public Appetizer() {
+  }
 
-    /**
-     * Set item appetizers
-     * @param itemAppetizers the appetizer item name
-     */
-    public void setItemAppetizers(String itemAppetizers) { this.itemAppetizers = itemAppetizers; }
+  /**
+   * @brief Constructs an appetizer with all fields.
+   *
+   * @param appetizersId    [Long] Unique identifier of the appetizer.
+   * @param itemAppetizers  [String] Name of the appetizer item.
+   * @param appetizersPrice [Integer] Price of the appetizer.
+   * @param receiptId       [Long] Identifier of the related receipt (optional).
+   */
+  public Appetizer(Long appetizersId, String itemAppetizers, Integer appetizersPrice, Long receiptId) {
+    this.appetizersId = appetizersId;
+    this.itemAppetizers = itemAppetizers;
+    this.appetizersPrice = appetizersPrice;
+    this.receiptId = receiptId;
+  }
 
-    /**
-     * Get appetizers price
-     * @return the appetizer price
-     */
-    public Integer getAppetizersPrice() { return appetizersPrice; }
+  /**
+   * @brief Gets the appetizer identifier.
+   *
+   * @return [Long] Unique identifier of the appetizer.
+   */
+  public Long getAppetizersId() {
+    return appetizersId;
+  }
 
-    /**
-     * Set appetizers price
-     * @param appetizersPrice the appetizer price
-     */
-    public void setAppetizersPrice(Integer appetizersPrice) { this.appetizersPrice = appetizersPrice; }
-    
-    /**
-     * Get receipt ID
-     * @return the receipt ID
-     */
-    public Long getReceiptId() { return receiptId; }
+  /**
+   * @brief Sets the appetizer identifier.
+   *
+   * @param appetizersId [Long] Unique identifier of the appetizer.
+   */
+  public void setAppetizersId(Long appetizersId) {
+    this.appetizersId = appetizersId;
+  }
 
-    /**
-     * Set receipt ID
-     * @param receiptId the receipt ID
-     */
-    public void setReceiptId(Long receiptId) { this.receiptId = receiptId; }
+  /**
+   * @brief Gets the appetizer item name.
+   *
+   * @return [String] Name of the appetizer item.
+   */
+  public String getItemAppetizers() {
+    return itemAppetizers;
+  }
+
+  /**
+   * @brief Sets the appetizer item name.
+   *
+   * @param itemAppetizers [String] Name of the appetizer item.
+   */
+  public void setItemAppetizers(String itemAppetizers) {
+    this.itemAppetizers = itemAppetizers;
+  }
+
+  /**
+   * @brief Gets the appetizer price.
+   *
+   * @return [Integer] Price of the appetizer.
+   */
+  public Integer getAppetizersPrice() {
+    return appetizersPrice;
+  }
+
+  /**
+   * @brief Sets the appetizer price.
+   *
+   * @param appetizersPrice [Integer] Price of the appetizer.
+   */
+  public void setAppetizersPrice(Integer appetizersPrice) {
+    this.appetizersPrice = appetizersPrice;
+  }
+
+  /**
+   * @brief Gets the identifier of the related receipt.
+   *
+   * @return [Long] Identifier of the receipt or null if not set.
+   */
+  public Long getReceiptId() {
+    return receiptId;
+  }
+
+  /**
+   * @brief Sets the identifier of the related receipt.
+   *
+   * @param receiptId [Long] Identifier of the receipt.
+   */
+  public void setReceiptId(Long receiptId) {
+    this.receiptId = receiptId;
+  }
 }

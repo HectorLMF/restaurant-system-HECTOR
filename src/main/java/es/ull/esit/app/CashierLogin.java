@@ -97,7 +97,7 @@ public class CashierLogin extends javax.swing.JFrame {
         System.err.println("Warning: Could not fetch cashier stats: " + ex.getMessage());
       }
       SwingUtilities.invokeLater(() -> {
-        new Info().setVisible(true);
+        new AboutUs().setVisible(true);
         dispose();
       });
     }).start();
@@ -131,7 +131,7 @@ public class CashierLogin extends javax.swing.JFrame {
       }
 
       SwingUtilities.invokeLater(() -> {
-        new Frame1().setVisible(true);
+        new Order().setVisible(true);
         dispose();
       });
     }).start();

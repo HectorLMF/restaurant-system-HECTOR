@@ -3,82 +3,122 @@ package es.ull.esit.app.middleware.model;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * Drink model class
+ * @brief Client-side model representing a drink returned by the backend API.
+ *
+ *        This class is used to deserialize and manipulate drink data obtained
+ *        from the "/api/drinks" endpoint.
  */
 public class Drink {
-    @JsonProperty("drinksId")
-    private Long drinksId;
-    
-    @JsonProperty("itemDrinks")
-    private String itemDrinks;
-    
-    @JsonProperty("drinksPrice")
-    private Integer drinksPrice;
-    
-    @JsonProperty("receiptId")
-    private Long receiptId;
 
-    public Drink() {}
+  /** Unique identifier of the drink (JSON property "drinksId"). */
+  @JsonProperty("drinksId")
+  private Long drinksId;
 
-    /**
-     * Constructor with parameters
-     * @param drinksId the drinks ID
-     * @param itemDrinks the drink item name
-     * @param drinksPrice the drink price
-     * @param receiptId the receipt ID
-     */
-    public Drink(Long drinksId, String itemDrinks, Integer drinksPrice, Long receiptId) {
-        this.drinksId = drinksId;
-        this.itemDrinks = itemDrinks;
-        this.drinksPrice = drinksPrice;
-        this.receiptId = receiptId;
-    }
+  /** Name of the drink item (JSON property "itemDrinks"). */
+  @JsonProperty("itemDrinks")
+  private String itemDrinks;
 
-    /**
-     * Getters and Setters
-     * @return values of the attributes
-     */
-    public Long getDrinksId() { return drinksId; }
+  /** Price of the drink (JSON property "drinksPrice"). */
+  @JsonProperty("drinksPrice")
+  private Integer drinksPrice;
 
-    /**
-     * Set drinks ID
-     * @param drinksId the drinks ID
-     */
-    public void setDrinksId(Long drinksId) { this.drinksId = drinksId; }
-    
-    /**
-     * Get item drinks
-     * @return the drink item name
-     */
-    public String getItemDrinks() { return itemDrinks; }
+  /**
+   * Identifier of the receipt this drink belongs to (JSON property "receiptId").
+   * Currently not provided by the backend.
+   */
+  @JsonProperty("receiptId")
+  private Long receiptId;
 
-    /**
-     * Set item drinks
-     * @param itemDrinks the drink item name
-     */
-    public void setItemDrinks(String itemDrinks) { this.itemDrinks = itemDrinks; }
+  /**
+   * @brief Default constructor required for JSON deserialization.
+   */
+  public Drink() {
+  }
 
-    /**
-     * Get drinks price
-     * @return the drink price
-     */
-    public Integer getDrinksPrice() { return drinksPrice; }
+  /**
+   * @brief Constructs a drink with all fields.
+   *
+   * @param drinksId    [Long] Unique identifier of the drink.
+   * @param itemDrinks  [String] Name of the drink item.
+   * @param drinksPrice [Integer] Price of the drink.
+   * @param receiptId   [Long] Identifier of the related receipt (optional).
+   */
+  public Drink(Long drinksId, String itemDrinks, Integer drinksPrice, Long receiptId) {
+    this.drinksId = drinksId;
+    this.itemDrinks = itemDrinks;
+    this.drinksPrice = drinksPrice;
+    this.receiptId = receiptId;
+  }
 
-    /**
-     * Set drinks price
-     * @param drinksPrice the drink price
-     */
-    public void setDrinksPrice(Integer drinksPrice) { this.drinksPrice = drinksPrice; }
+  /**
+   * @brief Gets the drink identifier.
+   *
+   * @return [Long] Unique identifier of the drink.
+   */
+  public Long getDrinksId() {
+    return drinksId;
+  }
 
-    /**
-     * Get receipt ID
-     * @return the receipt ID
-     */
-    public Long getReceiptId() { return receiptId; }
+  /**
+   * @brief Sets the drink identifier.
+   *
+   * @param drinksId [Long] Unique identifier of the drink.
+   */
+  public void setDrinksId(Long drinksId) {
+    this.drinksId = drinksId;
+  }
 
-    /**
-     * Set receipt ID
-     * @param receiptId the receipt ID
-     */
-    public void setReceiptId(Long receiptId) { this.receiptId = receiptId; }
+  /**
+   * @brief Gets the drink item name.
+   *
+   * @return [String] Name of the drink item.
+   */
+  public String getItemDrinks() {
+    return itemDrinks;
+  }
+
+  /**
+   * @brief Sets the drink item name.
+   *
+   * @param itemDrinks [String] Name of the drink item.
+   */
+  public void setItemDrinks(String itemDrinks) {
+    this.itemDrinks = itemDrinks;
+  }
+
+  /**
+   * @brief Gets the drink price.
+   *
+   * @return [Integer] Price of the drink.
+   */
+  public Integer getDrinksPrice() {
+    return drinksPrice;
+  }
+
+  /**
+   * @brief Sets the drink price.
+   *
+   * @param drinksPrice [Integer] Price of the drink.
+   */
+  public void setDrinksPrice(Integer drinksPrice) {
+    this.drinksPrice = drinksPrice;
+  }
+
+  /**
+   * @brief Gets the identifier of the related receipt.
+   *
+   * @return [Long] Identifier of the receipt or null if not set.
+   */
+  public Long getReceiptId() {
+    return receiptId;
+  }
+
+  /**
+   * @brief Sets the identifier of the related receipt.
+   *
+   * @param receiptId [Long] Identifier of the receipt.
+   */
+  public void setReceiptId(Long receiptId) {
+    this.receiptId = receiptId;
+  }
 }

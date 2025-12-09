@@ -7,6 +7,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Column;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
@@ -17,6 +18,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
  */
 @Entity
 @Table(name = "users")
+@JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
 public class User {
 
   /** Unique identifier for the user (primary key). */
@@ -29,7 +31,7 @@ public class User {
   private String username;
 
   /** BCrypt hashed password for the user. */
-  @Column(nullable = false)
+  @Column(name = "password_hash", nullable = false)
   @JsonIgnore
   private String passwordHash;
 

@@ -131,22 +131,6 @@
         </configuration>
       </plugin>
 
-      <!-- Maven jar plugin (Creación del ejecutable .jar) -->
-      <!-- Genera el archivo .jar empaquetado del proyecto -->
-      <!-- Fase: package -->
-      <plugin>
-        <artifactId>maven-jar-plugin</artifactId>
-        <version>3.4.2</version>
-        <configuration>
-          <archive>
-            <manifest>
-              <!-- Define la clase principal que contiene el método main() -->
-              <mainClass>es.ull.esit.app.JavaApplication2</mainClass>
-            </manifest>
-          </archive>
-        </configuration>
-      </plugin>
-
       <!-- Maven exec plugin (Ejecución de la aplicación) -->
       <!-- Permite ejecutar la aplicación desde la línea de comandos con Maven -->
       <!-- Fase: no automática (se ejecuta manualmente con 'mvn exec:java') -->
@@ -156,7 +140,7 @@
         <version>3.3.0</version>
         <configuration>
           <!-- Indica la clase con el método main() que se ejecutará -->
-          <mainClass>es.ull.esit.app.JavaApplication2</mainClass>
+          <mainClass>es.ull.esit.app.ApplicationLauncher</mainClass>
         </configuration>
       </plugin>
 

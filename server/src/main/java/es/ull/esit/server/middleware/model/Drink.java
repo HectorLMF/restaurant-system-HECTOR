@@ -1,15 +1,17 @@
 package es.ull.esit.server.middleware.model;
 
 import javax.persistence.*;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 /**
  * @brief JPA entity that represents a drink in the menu.
  *
- *        It is mapped to the "drinks" table used by the REST API. 
+ *        It is mapped to the "drinks" table used by the REST API.
  *        Each row contains an auto generated identifier, a name and a price.
  */
 @Entity
 @Table(name = "drinks")
+@JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
 public class Drink {
 
   /** Primary key of the drink (column "id"). */

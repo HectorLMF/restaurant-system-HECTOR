@@ -1,23 +1,41 @@
-# Doxyfile generated for restaurant-system - configured for Java
+# Doxyfile for restaurant-system - Java + server + db
+
+#-------------------------------------------------
 # Project info
+#-------------------------------------------------
 PROJECT_NAME           = "restaurant-system"
-OUTPUT_DIRECTORY       = doxy
+OUTPUT_DIRECTORY       = docs
 CREATE_SUBDIRS         = NO
 OUTPUT_LANGUAGE        = English
-INPUT                  = src/main/java
-RECURSIVE              = YES
-FILE_PATTERNS          = *.java
-EXCLUDE                = 
-EXCLUDE_PATTERNS       = 
 
+# Rutas de entrada: cliente, servidor, SQL y README
+INPUT                  = \
+  src/main/java \
+  server/src/main/java \
+  db \
+  README.md
+
+RECURSIVE              = YES
+
+# Tipos de fichero que queremos documentar
+FILE_PATTERNS          = *.java *.md *.sql
+
+# Excluir carpetas de build de Maven
+EXCLUDE                =
+EXCLUDE_PATTERNS       = */target/*
+
+#-------------------------------------------------
 # Build options
+#-------------------------------------------------
 EXTRACT_ALL            = YES
 EXTRACT_PRIVATE        = YES
 EXTRACT_STATIC         = YES
 EXTRACT_LOCAL_CLASSES  = YES
 JAVADOC_AUTOBRIEF      = YES
 
+#-------------------------------------------------
 # HTML output
+#-------------------------------------------------
 GENERATE_HTML          = YES
 HTML_OUTPUT            = html
 GENERATE_TREEVIEW      = YES
@@ -26,56 +44,68 @@ GENERATE_SEARCH        = YES
 FULL_PATH_NAMES        = NO
 STRIP_FROM_PATH        = .
 
+#-------------------------------------------------
 # Other formats
+#-------------------------------------------------
 GENERATE_LATEX         = YES
+LATEX_OUTPUT           = latex
+
 GENERATE_RTF           = NO
 GENERATE_MAN           = NO
 GENERATE_XML           = YES
+XML_OUTPUT             = xml
 
+#-------------------------------------------------
 # Source browser
+#-------------------------------------------------
 SOURCE_BROWSER         = YES
 INLINE_SOURCES         = YES
 REFERENCES_RELATION    = YES
 REFERENCED_BY_RELATION = YES
 
+#-------------------------------------------------
 # Misc
+#-------------------------------------------------
 QUIET                  = NO
 WARNINGS               = YES
+WARN_IF_UNDOCUMENTED   = YES
 INPUT_ENCODING         = UTF-8
 
+#-------------------------------------------------
 # Preprocessing
+#-------------------------------------------------
 ENABLE_PREPROCESSING   = YES
 MACRO_EXPANSION        = NO
 
+#-------------------------------------------------
 # Indexing / ordering
+#-------------------------------------------------
 ALPHABETICAL_INDEX     = YES
 
-# Maximum detail
+#-------------------------------------------------
+# Docsets / extras
+#-------------------------------------------------
 GENERATE_DOCSET        = NO
 
-# --- Configuración de Graphviz para diagramas ---
-HAVE_DOT = YES
-DOT_PATH  = /usr/bin
-DOTFILE_DIRS =
-DOT_GRAPH_MAX_NODES = 50
-MAX_DOT_GRAPH_DEPTH = 0
-DOT_TRANSPARENT = YES
+#-------------------------------------------------
+# Graphviz / diagramas
+#-------------------------------------------------
+HAVE_DOT               = YES
+DOT_PATH               = /usr/bin
+DOTFILE_DIRS           =
+DOT_GRAPH_MAX_NODES    = 50
+MAX_DOT_GRAPH_DEPTH    = 0
+DOT_TRANSPARENT        = YES
+DOT_IMAGE_FORMAT       = png
 
-# PDF generation settings
-LATEX_OUTPUT            = latex
-XML_OUTPUT             = xml
-PDF_HYPERLINKS          = YES
-USE_PDFLATEX            = YES
+UML_LOOK               = YES
+CALL_GRAPH             = YES
+CALLER_GRAPH           = YES
+
+#-------------------------------------------------
+# PDF / LaTeX extra
+#-------------------------------------------------
+PDF_HYPERLINKS         = YES
+USE_PDFLATEX           = YES
 LATEX_BATCHMODE        = YES
-LATEX_EXTRA_PACKAGES = {geometry}
-GENERATE_TREEVIEW	  = YES
-QUIET				  = NO
-WARNINGS				  = YES
-WARN_IF_UNDOCUMENTED  = YES
-## CLASS_DIAGRAMS is obsolete in recent Doxygen versions
-UML_LOOK              = YES
-CALL_GRAPH           = YES
-CALLER_GRAPH         = YES
-DOT_IMAGE_FORMAT     = png
-
-# End of Doxyfile
+LATEX_EXTRA_PACKAGES   = {geometry}

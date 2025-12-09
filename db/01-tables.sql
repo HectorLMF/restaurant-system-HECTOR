@@ -1,133 +1,174 @@
 -- 01-tables.sql
--- Define las tablas de la base de datos.
+-- Define todas las tablas de la base de datos.
 
 USE project3;
 
+-- ======================================
+-- USUARIOS DEL SISTEMA (para la API)
+-- ======================================
+CREATE TABLE IF NOT EXISTS users (
+    id            BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    username      VARCHAR(255) NOT NULL UNIQUE,
+    password_hash VARCHAR(255) NOT NULL,
+    role          VARCHAR(50)  NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- ======================================
 -- MANAGER
-CREATE TABLE IF NOT EXISTS Manager (
-    Manager_id     NUMERIC(10) PRIMARY KEY,
-    Manager_Fname  VARCHAR(30),
-    Manager_Mname  VARCHAR(30),
-    Manager_Lname  VARCHAR(30),
-    Manager_number NUMERIC(10),
-    Manager_salary NUMERIC(5)
-);
+-- ======================================
+CREATE TABLE IF NOT EXISTS manager (
+    manager_id     BIGINT UNSIGNED PRIMARY KEY,
+    manager_fname  VARCHAR(30),
+    manager_mname  VARCHAR(30),
+    manager_lname  VARCHAR(30),
+    manager_number BIGINT,
+    manager_salary INT
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- CASHIER
-CREATE TABLE IF NOT EXISTS Cashier (
-    Cashier_id     NUMERIC(10) PRIMARY KEY,
-    Cashier_name   VARCHAR(30),
-    Cashier_salary NUMERIC(5)
-);
+-- ======================================
+-- CASHIER (vinculado a users.id)
+-- ======================================
+CREATE TABLE IF NOT EXISTS cashier (
+    cashier_id     BIGINT UNSIGNED PRIMARY KEY,
+    cashier_name   VARCHAR(30),
+    cashier_salary INT,
+    CONSTRAINT fk_cashier_user
+      FOREIGN KEY (cashier_id) REFERENCES users(id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+-- ======================================
 -- CHEF
-CREATE TABLE IF NOT EXISTS Chef (
-    Chef_id      NUMERIC(10) PRIMARY KEY,
-    Chef_name    VARCHAR(30),
-    Chef_manager VARCHAR(30),
-    Chef_salary  NUMERIC(5),
-    Manager_id   NUMERIC(10),
+-- ======================================
+CREATE TABLE IF NOT EXISTS chef (
+    chef_id      BIGINT UNSIGNED PRIMARY KEY,
+    chef_name    VARCHAR(30),
+    chef_manager VARCHAR(30),
+    chef_salary  INT,
+    manager_id   BIGINT UNSIGNED,
     CONSTRAINT fk_chef_manager
-      FOREIGN KEY (Manager_id) REFERENCES Manager (Manager_id)
-);
+      FOREIGN KEY (manager_id) REFERENCES manager (manager_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+-- ======================================
 -- RECEIPT
-CREATE TABLE IF NOT EXISTS Receipt (
-    Receipt_id    NUMERIC(10) PRIMARY KEY,
-    Receipt_time  TIME,
-    Receipt_date  DATE,
-    Receipt_total NUMERIC(10)
-);
+-- ======================================
+CREATE TABLE IF NOT EXISTS receipt (
+    receipt_id    BIGINT UNSIGNED PRIMARY KEY,
+    receipt_time  TIME,
+    receipt_date  DATE,
+    receipt_total INT
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+-- ======================================
 -- RESTAURANT MANAGEMENT
-CREATE TABLE IF NOT EXISTS RestaurantManagement (
-    Restaurant_id      NUMERIC(10) PRIMARY KEY,
-    Restaurant_name    VARCHAR(30),
-    Restaurant_address VARCHAR(30),
-    Manager_id         NUMERIC(10),
+-- ======================================
+CREATE TABLE IF NOT EXISTS restaurant_management (
+    restaurant_id      BIGINT UNSIGNED PRIMARY KEY,
+    restaurant_name    VARCHAR(50),
+    restaurant_address VARCHAR(100),
+    manager_id         BIGINT UNSIGNED,
     CONSTRAINT fk_restaurant_manager
-      FOREIGN KEY (Manager_id) REFERENCES Manager (Manager_id)
-);
+      FOREIGN KEY (manager_id) REFERENCES manager (manager_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- DEPENDENTS
-CREATE TABLE IF NOT EXISTS Dependent_Manager (
-    Dependent_name     VARCHAR(30) PRIMARY KEY,
-    Dependent_relation VARCHAR(30),
-    Dependent_sex      ENUM('M','F'),
-    Manager_id         NUMERIC(10),
+-- ======================================
+-- DEPENDENTS (MANAGER)
+-- ======================================
+CREATE TABLE IF NOT EXISTS dependent_manager (
+    dependent_name     VARCHAR(30) PRIMARY KEY,
+    dependent_relation VARCHAR(30),
+    dependent_sex      ENUM('M','F'),
+    manager_id         BIGINT UNSIGNED,
     CONSTRAINT fk_dep_manager
-      FOREIGN KEY (Manager_id) REFERENCES Manager (Manager_id)
-);
+      FOREIGN KEY (manager_id) REFERENCES manager (manager_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-CREATE TABLE IF NOT EXISTS Dependent_chef (
-    Dependent_name     VARCHAR(30) PRIMARY KEY,
-    Dependent_relation VARCHAR(30),
-    Dependent_sex      ENUM('M','F'),
-    Chef_id            NUMERIC(10),
+-- ======================================
+-- DEPENDENTS (CHEF)
+-- ======================================
+CREATE TABLE IF NOT EXISTS dependent_chef (
+    dependent_name     VARCHAR(30) PRIMARY KEY,
+    dependent_relation VARCHAR(30),
+    dependent_sex      ENUM('M','F'),
+    chef_id            BIGINT UNSIGNED,
     CONSTRAINT fk_dep_chef
-      FOREIGN KEY (Chef_id) REFERENCES Chef (Chef_id)
-);
+      FOREIGN KEY (chef_id) REFERENCES chef (chef_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-CREATE TABLE IF NOT EXISTS Dependent_Cashier (
-    Dependent_name     VARCHAR(30) PRIMARY KEY,
-    Dependent_relation VARCHAR(30),
-    Dependent_sex      ENUM('M','F'),
-    Cashier_id         NUMERIC(10),
+-- ======================================
+-- DEPENDENTS (CASHIER)
+-- ======================================
+CREATE TABLE IF NOT EXISTS dependent_cashier (
+    dependent_name     VARCHAR(30) PRIMARY KEY,
+    dependent_relation VARCHAR(30),
+    dependent_sex      ENUM('M','F'),
+    cashier_id         BIGINT UNSIGNED,
     CONSTRAINT fk_dep_cashier
-      FOREIGN KEY (Cashier_id) REFERENCES Cashier (Cashier_id)
-);
+      FOREIGN KEY (cashier_id) REFERENCES cashier (cashier_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+-- ======================================
 -- ITEM (productos combinados en un ticket)
-CREATE TABLE IF NOT EXISTS Item (
-    Item_food         VARCHAR(30),
-    food_price        NUMERIC(4),
-    food_id           NUMERIC(5),
+-- ======================================
+CREATE TABLE IF NOT EXISTS item (
+    item_food         VARCHAR(30),
+    food_price        INT,
+    food_id           INT,
 
-    Item_appetizers   VARCHAR(30),
-    appetizers_price  NUMERIC(4),
-    appetizers_id     NUMERIC(5),
+    item_appetizers   VARCHAR(30),
+    appetizers_price  INT,
+    appetizers_id     INT,
 
-    Item_drinks       VARCHAR(30),
-    drinks_price      NUMERIC(4),
-    drinks_id         NUMERIC(5),
+    item_drinks       VARCHAR(30),
+    drinks_price      INT,
+    drinks_id         INT,
 
-    Receipt_id        NUMERIC(10),
+    receipt_id        BIGINT UNSIGNED,
 
     PRIMARY KEY (food_id, appetizers_id, drinks_id),
     CONSTRAINT fk_item_receipt
-      FOREIGN KEY (Receipt_id) REFERENCES Receipt (Receipt_id)
-);
+      FOREIGN KEY (receipt_id) REFERENCES receipt (receipt_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+CREATE INDEX item_index ON item (item_food);
+
+-- ======================================
 -- CHEF_PREPARE_ITEM
-CREATE TABLE IF NOT EXISTS Chef_Prepare_item (
-    Chef_id   NUMERIC(10),
-    food_id   NUMERIC(5),
-    sweet_id  NUMERIC(5),
-    drinks_id NUMERIC(5),
+-- ======================================
+CREATE TABLE IF NOT EXISTS chef_prepare_item (
+    chef_id   BIGINT UNSIGNED,
+    food_id   INT,
+    sweet_id  INT,
+    drinks_id INT,
     CONSTRAINT fk_cpi_chef
-      FOREIGN KEY (Chef_id) REFERENCES Chef (Chef_id)
-    -- NOTA: no hay columnas sweet_id/drinks_id en Item, por eso no ponemos FKs aquí
-);
+      FOREIGN KEY (chef_id) REFERENCES chef (chef_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- RECEIPT_TAKENBY_CASHIER
-CREATE TABLE IF NOT EXISTS Receipt_takenBy_Cashier (
-    Receipt_id NUMERIC(10),
-    Cashier_id NUMERIC(10),
+-- ======================================
+-- RECEIPT_TAKEN_BY_CASHIER
+-- ======================================
+CREATE TABLE IF NOT EXISTS receipt_taken_by_cashier (
+    receipt_id BIGINT UNSIGNED,
+    cashier_id BIGINT UNSIGNED,
     CONSTRAINT fk_rtc_receipt
-      FOREIGN KEY (Receipt_id) REFERENCES Receipt (Receipt_id),
+      FOREIGN KEY (receipt_id) REFERENCES receipt (receipt_id),
     CONSTRAINT fk_rtc_cashier
-      FOREIGN KEY (Cashier_id) REFERENCES Cashier (Cashier_id)
-);
+      FOREIGN KEY (cashier_id) REFERENCES cashier (cashier_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+-- ======================================
 -- RESTAURANT_ADDRESS
-CREATE TABLE IF NOT EXISTS Restaurant_address (
-    Restaurant_address VARCHAR(30) PRIMARY KEY,
-    Restaurant_id      NUMERIC(10),
+-- ======================================
+CREATE TABLE IF NOT EXISTS restaurant_address (
+    restaurant_address VARCHAR(100) PRIMARY KEY,
+    restaurant_id      BIGINT UNSIGNED,
     CONSTRAINT fk_restaurant_addr
-      FOREIGN KEY (Restaurant_id) REFERENCES RestaurantManagement (Restaurant_id)
-);
+      FOREIGN KEY (restaurant_id) REFERENCES restaurant_management (restaurant_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- TABLAS DE PRODUCTOS PARA LA API (Appetizers, Drinks, MainCourse)
+-- ======================================
+-- TABLAS DE PRODUCTOS PARA LA API
+-- ======================================
 CREATE TABLE IF NOT EXISTS appetizers (
   id    INT NOT NULL AUTO_INCREMENT,
   name  VARCHAR(250) NOT NULL,
@@ -149,5 +190,12 @@ CREATE TABLE IF NOT EXISTS maincourse (
   PRIMARY KEY (id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- Índices
-CREATE INDEX Itemindex ON Item (Item_food);
+-- ======================================
+-- TABLA DE PRUEBAS: receipt_copy
+-- ======================================
+CREATE TABLE IF NOT EXISTS receipt_copy (
+    receipt_id    BIGINT UNSIGNED PRIMARY KEY,
+    receipt_time  TIME,
+    receipt_date  DATE,
+    receipt_total INT
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

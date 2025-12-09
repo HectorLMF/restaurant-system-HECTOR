@@ -30,3 +30,7 @@ database.sql
 *.jar
 *.war
 *.ear
+
+# Documentación
+/doc/
+/doxy/
