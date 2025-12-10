@@ -1,9 +1,13 @@
 package es.ull.esit.app.middleware;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.core.type.TypeReference;
-import java.net.http.*;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import java.io.IOException;
 import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
 import java.time.Duration;
 import java.util.List;
 import java.util.Map;
@@ -14,19 +18,42 @@ import es.ull.esit.app.middleware.model.Drink;
 import es.ull.esit.app.middleware.model.MainCourse;
 import es.ull.esit.app.middleware.model.User;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 /**
  * @brief API client for interacting with the backend REST API.
- * 
- *        Wraps HTTPClient and provides methods to:
- *        - performs CRUD operations on Appetizers, Cashiers, Drinks,
- *        MainCourses.
- *        - sends login requests to the backend.
+ *
+ *        Wraps HttpClient and provides methods to:
+ *        - perform CRUD operations on Appetizers, Cashiers, Drinks, MainCourses.
+ *        - send login requests to the backend.
  */
 public class ApiClient {
-  /** Low-level HTTP client. to send requests. */
+
+  /** Constant for JSON content type. */
+  private static final String APPLICATION_JSON = "application/json";
+
+  /** Logger for logging events and errors. */
+  private static final Logger LOGGER = LoggerFactory.getLogger(ApiClient.class);
+
+  /** HTTP header for content type. */
+  private static final String CONTENT_TYPE = "Content-Type";
+
+  /** API endpoint for appetizers. */
+  private static final String API_APPETIZERS = "/api/appetizers/";
+
+  /** API endpoint for drinks. */
+  private static final String API_DRINKS = "/api/drinks/";
+
+  /** API endpoint for main courses. */
+  private static final String API_MAINCOURSES = "/api/maincourses/";
+
+  private static final String API_LOGIN = "/api/login";
+
+  /** Low-level HTTP client to send requests. */
   private final HttpClient http;
 
-  /** Base URL of the Rest API. */
+  /** Base URL of the REST API. */
   private final String baseUrl;
 
   /**
@@ -37,9 +64,10 @@ public class ApiClient {
 
   /**
    * @brief Constructs the ApiClient with the given base URL.
-   * 
+   *
    *        If the base URL ends with "/", the slash is removed to avoid double
    *        slashes.
+   *
    * @param baseUrl [String] Base URL of the REST API, such as
    *                "http://localhost:8080".
    */
@@ -51,43 +79,53 @@ public class ApiClient {
     this.mapper = new ObjectMapper();
   }
 
+  // ---------------------------------------------------------------------------
+  // Helpers genéricos
+  // ---------------------------------------------------------------------------
+
   /**
    * @brief Generic GET helper that returns a single object.
-   * 
+   *
    *        It validates the HTTP status code before attempting to parse JSON.
    *        - If status is 200–299 and body is non-empty: parse JSON.
    *        - If status is 204 or body is empty: return null.
-   *        - For any other status: throw a RuntimeException with details.
-   * 
+   *        - For any other status: throw ApiClientException with details.
+   *
    * @param <T>          [T] Type of the response object.
    * @param path         [String] API endpoint path.
    * @param responseType [Class<T>] Class of the response type.
-   * @return [T] Object of type T or null if 204 / cuerpo vacío.
-   * @throws Exception If an error occurs during the request.
+   * @return [T] Object of type T or null if 204 / empty body.
    */
-  private <T> T get(String path, Class<T> responseType) throws Exception {
-    HttpRequest req = HttpRequest.newBuilder()
-        .uri(URI.create(baseUrl + path))
-        .GET()
-        .header("Accept", "application/json")
-        .build();
+  private <T> T get(String path, Class<T> responseType) {
+    try {
+      HttpRequest req = HttpRequest.newBuilder()
+          .uri(URI.create(baseUrl + path))
+          .GET()
+          .header("Accept", APPLICATION_JSON)
+          .build();
 
-    HttpResponse<String> res = http.send(req, HttpResponse.BodyHandlers.ofString());
-    int status = res.statusCode();
-    String body = res.body();
+      HttpResponse<String> res = http.send(req, HttpResponse.BodyHandlers.ofString());
+      int status = res.statusCode();
+      String body = res.body();
 
-    System.out.println("GET " + path + " -> HTTP " + status);
-    System.out.println("Response body: '" + body + "'");
+      LOGGER.info("GET  {} -> HTTP {}", path, status);
+      LOGGER.info("Response body: '{}'", body);
 
-    if (status == 204 || body == null || body.trim().isEmpty()) {
-      return null;
+      if (status == 204 || body == null || body.trim().isEmpty()) {
+        return null;
+      }
+
+      if (status < 200 || status >= 300) {
+        throw new ApiClientException("GET " + path + " failed with HTTP " + status + " body: " + body);
+      }
+
+      return mapper.readValue(body, responseType);
+    } catch (InterruptedException e) {
+      Thread.currentThread().interrupt();
+      throw new ApiClientException("Thread interrupted during GET " + path, e);
+    } catch (IOException e) {
+      throw new ApiClientException("I/O error during GET " + path, e);
     }
-
-    if (status < 200 || status >= 300) {
-      throw new RuntimeException("GET " + path + " failed with HTTP " + status + " body: " + body);
-    }
-
-    return mapper.readValue(body, responseType);
   }
 
   /**
@@ -96,183 +134,223 @@ public class ApiClient {
    * It validates the HTTP status code before attempting to parse JSON.
    * - If status is 200–299 and body is non-empty: parse JSON.
    * - If status is 204 or body is empty: return an empty list.
-   * - For any other status: throw a RuntimeException with details.
-   * 
+   * - For any other status: throw ApiClientException with details.
+   *
    * @param <T>     [T] Type of the list elements.
    * @param path    [String] API endpoint path.
-   * @param typeRef [TypeReference<List<T>>] Type reference for deserialization
+   * @param typeRef [TypeReference<List<T>>] Type reference for deserialization.
    * @return [List<T>] List of objects of type T.
-   * @throws Exception If an error occurs during the request.
    */
-  private <T> List<T> getList(String path, TypeReference<List<T>> typeRef) throws Exception {
-    HttpRequest req = HttpRequest.newBuilder()
-        .uri(URI.create(baseUrl + path))
-        .GET()
-        .header("Accept", "application/json")
-        .build();
+  private <T> List<T> getList(String path, TypeReference<List<T>> typeRef) {
+    try {
+      HttpRequest req = HttpRequest.newBuilder()
+          .uri(URI.create(baseUrl + path))
+          .GET()
+          .header("Accept", APPLICATION_JSON)
+          .build();
 
-    HttpResponse<String> res = http.send(req, HttpResponse.BodyHandlers.ofString());
-    int status = res.statusCode();
-    String body = res.body();
+      HttpResponse<String> res = http.send(req, HttpResponse.BodyHandlers.ofString());
+      int status = res.statusCode();
+      String body = res.body();
 
-    System.out.println("GET " + path + " -> HTTP " + status);
-    System.out.println("Response body: '" + body + "'");
+      LOGGER.info("GET  {} -> HTTP {}", path, status);
+      LOGGER.info("Response body: '{}'", body);
 
-    if (status == 204 || body == null || body.trim().isEmpty()) {
-      return java.util.Collections.emptyList();
+      if (status == 204 || body == null || body.trim().isEmpty()) {
+        return java.util.Collections.emptyList();
+      }
+
+      if (status < 200 || status >= 300) {
+        throw new ApiClientException("GET " + path + " failed with HTTP " + status + " body: " + body);
+      }
+
+      return mapper.readValue(body, typeRef);
+    } catch (InterruptedException e) {
+      Thread.currentThread().interrupt();
+      throw new ApiClientException("Thread interrupted during GET " + path, e);
+    } catch (IOException e) {
+      throw new ApiClientException("I/O error during GET " + path, e);
     }
-
-    if (status < 200 || status >= 300) {
-      throw new RuntimeException("GET " + path + " failed with HTTP " + status + " body: " + body);
-    }
-
-    return mapper.readValue(body, typeRef);
   }
 
   /**
    * @brief Generic POST helper that sends an object and returns a response
    *        object.
-   * 
+   *
    *        It validates the HTTP status code before attempting to parse JSON.
    *        - If status is 200–299: parse JSON.
-   *        - For any other status: throw a RuntimeException with details.
-   * 
+   *        - For any other status: throw ApiClientException with details.
+   *
    * @param <T>          [T] Type of the request body.
    * @param <R>          [R] Type of the response body.
    * @param path         [String] API endpoint path.
    * @param body         [T] Request body object.
    * @param responseType [Class<R>] Class of the response type.
    * @return [R] Response object of type R.
-   * @throws Exception If an error occurs during the request.
    */
-  private <T, R> R post(String path, T body, Class<R> responseType) throws Exception {
-    String json = mapper.writeValueAsString(body);
-    HttpRequest req = HttpRequest.newBuilder()
-        .uri(URI.create(baseUrl + path))
-        .POST(HttpRequest.BodyPublishers.ofString(json))
-        .header("Content-Type", "application/json")
-        .build();
-    HttpResponse<String> res = http.send(req, HttpResponse.BodyHandlers.ofString());
+  private <T, R> R post(String path, T body, Class<R> responseType) {
+    try {
+      String json = mapper.writeValueAsString(body);
 
-    int status = res.statusCode();
-    String responseBody = res.body();
+      HttpRequest req = HttpRequest.newBuilder()
+          .uri(URI.create(baseUrl + path))
+          .POST(HttpRequest.BodyPublishers.ofString(json))
+          .header(CONTENT_TYPE, APPLICATION_JSON)
+          .build();
 
-    System.out.println("POST " + path + " -> HTTP " + status);
-    System.out.println("Response body: '" + responseBody + "'");
+      HttpResponse<String> res = http.send(req, HttpResponse.BodyHandlers.ofString());
 
-    if (status < 200 || status >= 300) {
-      throw new RuntimeException("POST " + path + " failed with HTTP " + status + " body: " + responseBody);
+      int status = res.statusCode();
+      String responseBody = res.body();
+
+      LOGGER.info("POST {} -> HTTP {}", path, status);
+      LOGGER.info("Response body: '{}'", responseBody);
+
+      if (status < 200 || status >= 300) {
+        throw new ApiClientException("POST " + path + " failed with HTTP " + status + " body: " + responseBody);
+      }
+
+      return mapper.readValue(responseBody, responseType);
+    } catch (InterruptedException e) {
+      Thread.currentThread().interrupt();
+      throw new ApiClientException("Thread interrupted during POST " + path, e);
+    } catch (IOException e) {
+      throw new ApiClientException("I/O error during POST " + path, e);
     }
-
-    return mapper.readValue(responseBody, responseType);
   }
 
-  // ------------- CRUD methods for Appetizers ----------------
+  // ---------------------------------------------------------------------------
+  // CRUD methods for Appetizers
+  // ---------------------------------------------------------------------------
+
   /**
    * @brief GET all appetizers.
-   * 
+   *
    *        Retrieves a list of all appetizers from the backend.
-   * 
+   *
    * @return [List<Appetizer>] List of all appetizers.
-   * @throws Exception If an error occurs during the request.
    */
-  public List<Appetizer> getAllAppetizers() throws Exception {
-    return getList("/api/appetizers", new TypeReference<List<Appetizer>>() {
-    });
+  public List<Appetizer> getAllAppetizers() {
+    return getList("/api/appetizers", new TypeReference<List<Appetizer>>() {});
   }
 
   /**
    * @brief GET appetizer by ID.
-   * 
+   *
    *        Retrieves an appetizer by its ID from the backend.
-   * 
+   *
    * @param id [Long] ID of the appetizer.
    * @return [Appetizer] Appetizer object.
-   * @throws Exception If an error occurs during the request.
    */
-  public Appetizer getAppetizerById(Long id) throws Exception {
-    return get("/api/appetizers/" + id, Appetizer.class);
+  public Appetizer getAppetizerById(Long id) {
+    return get(API_APPETIZERS + id, Appetizer.class);
   }
 
   /**
    * @brief POST create new appetizer.
    *        Creates a new appetizer in the backend.
-   * 
+   *
    * @param appetizer [Appetizer] Appetizer object to create.
    * @return [Appetizer] Created Appetizer object returned from the backend.
-   * @throws Exception If an error occurs during the request.
    */
-  public Appetizer createAppetizer(Appetizer appetizer) throws Exception {
+  public Appetizer createAppetizer(Appetizer appetizer) {
     return post("/api/appetizers", appetizer, Appetizer.class);
   }
 
   /**
    * @brief PUT update appetizer by ID.
    *        Updates an existing appetizer in the backend.
-   * 
+   *
    * @param id        [Long] ID of the appetizer to update.
    * @param appetizer [Appetizer] Appetizer object with updated data.
    * @return [Appetizer] Updated Appetizer object returned from the backend.
-   * @throws Exception If an error occurs during the request.
    */
-  public Appetizer updateAppetizer(Long id, Appetizer appetizer) throws Exception {
-    String json = mapper.writeValueAsString(appetizer);
-    HttpRequest req = HttpRequest.newBuilder()
-        .uri(URI.create(baseUrl + "/api/appetizers/" + id))
-        .PUT(HttpRequest.BodyPublishers.ofString(json))
-        .header("Content-Type", "application/json")
-        .build();
-    HttpResponse<String> res = http.send(req, HttpResponse.BodyHandlers.ofString());
+  public Appetizer updateAppetizer(Long id, Appetizer appetizer) {
+    try {
+      String json = mapper.writeValueAsString(appetizer);
+      String path = API_APPETIZERS + id;
 
-    int status = res.statusCode();
-    String body = res.body();
+      HttpRequest req = HttpRequest.newBuilder()
+          .uri(URI.create(baseUrl + path))
+          .PUT(HttpRequest.BodyPublishers.ofString(json))
+          .header(CONTENT_TYPE, APPLICATION_JSON)
+          .build();
 
-    if (status < 200 || status >= 300) {
-      throw new RuntimeException("PUT /api/appetizers/" + id + " failed with HTTP " + status + " body: " + body);
+      HttpResponse<String> res = http.send(req, HttpResponse.BodyHandlers.ofString());
+      int status = res.statusCode();
+      String body = res.body();
+
+      LOGGER.info("PUT  {} -> HTTP {}", path, status);
+      LOGGER.info("Response body: '{}'", body);
+
+      if (status < 200 || status >= 300) {
+        throw new ApiClientException("PUT " + path + " failed with HTTP " + status + " body: " + body);
+      }
+
+      return mapper.readValue(body, Appetizer.class);
+    } catch (InterruptedException e) {
+      Thread.currentThread().interrupt();
+      throw new ApiClientException("Thread interrupted during updateAppetizer id=" + id, e);
+    } catch (IOException e) {
+      throw new ApiClientException("I/O error during updateAppetizer id=" + id, e);
     }
-
-    return mapper.readValue(body, Appetizer.class);
   }
 
   /**
    * @brief DELETE appetizer by ID.
    *        Deletes an existing appetizer in the backend.
-   * 
+   *
    * @param id [Long] ID of the appetizer to delete.
-   * @throws Exception If an error occurs during the request.
    */
-  public void deleteAppetizer(Long id) throws Exception {
-    HttpRequest req = HttpRequest.newBuilder()
-        .uri(URI.create(baseUrl + "/api/appetizers/" + id))
-        .DELETE()
-        .build();
-    http.send(req, HttpResponse.BodyHandlers.ofString());
+  public void deleteAppetizer(Long id) {
+    String path = API_APPETIZERS + id;
+    try {
+      HttpRequest req = HttpRequest.newBuilder()
+          .uri(URI.create(baseUrl + path))
+          .DELETE()
+          .build();
+
+      HttpResponse<String> res = http.send(req, HttpResponse.BodyHandlers.ofString());
+      int status = res.statusCode();
+      String body = res.body();
+
+      LOGGER.info("DELETE {} -> HTTP {}", path, status);
+      LOGGER.info("Response body: '{}'", body);
+
+      if (status < 200 || status >= 300) {
+        throw new ApiClientException("DELETE " + path + " failed with HTTP " + status + " body: " + body);
+      }
+    } catch (InterruptedException e) {
+      Thread.currentThread().interrupt();
+      throw new ApiClientException("Thread interrupted during deleteAppetizer id=" + id, e);
+    } catch (IOException e) {
+      throw new ApiClientException("I/O error during deleteAppetizer id=" + id, e);
+    }
   }
 
-  // ------------- READ / UPDATE methods for Cashiers ----------------
+  // ---------------------------------------------------------------------------
+  // READ / UPDATE methods for Cashiers
+  // ---------------------------------------------------------------------------
 
   /**
    * GET all cashiers.
-   * 
+   *
    * Retrieves a list of all cashiers from the backend.
-   * 
+   *
    * @return [List<Cashier>] List of all cashiers.
-   * @throws Exception If an error occurs during the request.
    */
-  public List<Cashier> getAllCashiers() throws Exception {
-    return getList("/api/cashiers", new TypeReference<List<Cashier>>() {
-    });
+  public List<Cashier> getAllCashiers() {
+    return getList("/api/cashiers", new TypeReference<List<Cashier>>() {});
   }
 
   /**
    * @brief GET cashier by ID.
    *        Retrieves a cashier by its ID from the backend.
-   * 
+   *
    * @param id [Long] ID of the cashier.
    * @return [Cashier] Cashier object.
-   * @throws Exception If an error occurs during the request.
    */
-  public Cashier getCashierById(Long id) throws Exception {
+  public Cashier getCashierById(Long id) {
     return get("/api/cashiers/" + id, Cashier.class);
   }
 
@@ -282,260 +360,332 @@ public class ApiClient {
    *
    * @param name [String] username of the cashier.
    * @return [Cashier] Cashier object.
-   * @throws Exception If an error occurs during the request.
    */
-  public Cashier getCashierByName(String name) throws Exception {
+  public Cashier getCashierByName(String name) {
     return get("/api/cashiers/name/" + name, Cashier.class);
   }
 
   /**
    * @brief PUT update cashier by ID.
-   * 
+   *
    *        Updates an existing cashier in the backend (name and/or salary).
    *
    * @param id      [Long] ID of the cashier to update.
    * @param cashier [Cashier] Cashier object with updated data.
    * @return [Cashier] Updated Cashier object returned from the backend.
-   * @throws Exception If an error occurs during the request.
    */
-  public Cashier updateCashier(Long id, Cashier cashier) throws Exception {
-    String json = mapper.writeValueAsString(cashier);
-    HttpRequest req = HttpRequest.newBuilder()
-        .uri(URI.create(baseUrl + "/api/cashiers/" + id))
-        .PUT(HttpRequest.BodyPublishers.ofString(json))
-        .header("Content-Type", "application/json")
-        .build();
-    HttpResponse<String> res = http.send(req, HttpResponse.BodyHandlers.ofString());
+  public Cashier updateCashier(Long id, Cashier cashier) {
+    String path = "/api/cashiers/" + id;
+    try {
+      String json = mapper.writeValueAsString(cashier);
 
-    int status = res.statusCode();
-    String body = res.body();
+      HttpRequest req = HttpRequest.newBuilder()
+          .uri(URI.create(baseUrl + path))
+          .PUT(HttpRequest.BodyPublishers.ofString(json))
+          .header(CONTENT_TYPE, APPLICATION_JSON)
+          .build();
 
-    if (status < 200 || status >= 300) {
-      throw new RuntimeException("PUT /api/cashiers/" + id + " failed with HTTP " + status + " body: " + body);
+      HttpResponse<String> res = http.send(req, HttpResponse.BodyHandlers.ofString());
+      int status = res.statusCode();
+      String body = res.body();
+
+      LOGGER.info("PUT  {} -> HTTP {}", path, status);
+      LOGGER.info("Response body: '{}'", body);
+
+      if (status < 200 || status >= 300) {
+        throw new ApiClientException("PUT " + path + " failed with HTTP " + status + " body: " + body);
+      }
+
+      return mapper.readValue(body, Cashier.class);
+    } catch (InterruptedException e) {
+      Thread.currentThread().interrupt();
+      throw new ApiClientException("Thread interrupted during updateCashier id=" + id, e);
+    } catch (IOException e) {
+      throw new ApiClientException("I/O error during updateCashier id=" + id, e);
     }
-
-    return mapper.readValue(body, Cashier.class);
   }
 
-  // ------------- CRUD methods for Drinks ----------------
+  // ---------------------------------------------------------------------------
+  // CRUD methods for Drinks
+  // ---------------------------------------------------------------------------
+
   /**
-   * @brieef GET all drinks.
-   * 
+   * @brief GET all drinks.
+   *
    *         Retrieves a list of all drinks from the backend.
-   * 
+   *
    * @return [List<Drink>] List of all drinks.
-   * @throws Exception If an error occurs during the request.
    */
-  public List<Drink> getAllDrinks() throws Exception {
-    return getList("/api/drinks", new TypeReference<List<Drink>>() {
-    });
+  public List<Drink> getAllDrinks() {
+    return getList("/api/drinks", new TypeReference<List<Drink>>() {});
   }
 
   /**
    * @brief GET drink by ID.
-   * 
+   *
    *        Retrieves a drink by its ID from the backend.
-   * 
+   *
    * @param id [Long] ID of the drink.
    * @return [Drink] Drink object.
-   * @throws Exception If an error occurs during the request.
    */
-  public Drink getDrinkById(Long id) throws Exception {
-    return get("/api/drinks/" + id, Drink.class);
+  public Drink getDrinkById(Long id) {
+    return get(API_DRINKS + id, Drink.class);
   }
 
   /**
    * @brief POST create new drink.
-   * 
+   *
    *        Creates a new drink in the backend.
-   * 
+   *
    * @param drink [Drink] Drink object to create.
    * @return [Drink] Created Drink object returned from the backend.
-   * @throws Exception If an error occurs during the request.
    */
-  public Drink createDrink(Drink drink) throws Exception {
+  public Drink createDrink(Drink drink) {
     return post("/api/drinks", drink, Drink.class);
   }
 
   /**
    * @brief PUT update drink by ID.
-   * 
+   *
    *        Updates an existing drink in the backend by its ID.
-   * 
+   *
    * @param id    [Long] ID of the drink to update.
    * @param drink [Drink] Drink object with updated data.
    * @return [Drink] Updated Drink object returned from the backend.
-   * @throws Exception If an error occurs during the request.
    */
-  public Drink updateDrink(Long id, Drink drink) throws Exception {
-    String json = mapper.writeValueAsString(drink);
-    HttpRequest req = HttpRequest.newBuilder()
-        .uri(URI.create(baseUrl + "/api/drinks/" + id))
-        .PUT(HttpRequest.BodyPublishers.ofString(json))
-        .header("Content-Type", "application/json")
-        .build();
-    HttpResponse<String> res = http.send(req, HttpResponse.BodyHandlers.ofString());
+  public Drink updateDrink(Long id, Drink drink) {
+    String path = API_DRINKS + id;
+    try {
+      String json = mapper.writeValueAsString(drink);
 
-    int status = res.statusCode();
-    String body = res.body();
+      HttpRequest req = HttpRequest.newBuilder()
+          .uri(URI.create(baseUrl + path))
+          .PUT(HttpRequest.BodyPublishers.ofString(json))
+          .header(CONTENT_TYPE, APPLICATION_JSON)
+          .build();
 
-    if (status < 200 || status >= 300) {
-      throw new RuntimeException("PUT /api/drinks/" + id + " failed with HTTP " + status + " body: " + body);
+      HttpResponse<String> res = http.send(req, HttpResponse.BodyHandlers.ofString());
+      int status = res.statusCode();
+      String body = res.body();
+
+      LOGGER.info("PUT  {} -> HTTP {}", path, status);
+      LOGGER.info("Response body: '{}'", body);
+
+      if (status < 200 || status >= 300) {
+        throw new ApiClientException("PUT " + path + " failed with HTTP " + status + " body: " + body);
+      }
+
+      return mapper.readValue(body, Drink.class);
+    } catch (InterruptedException e) {
+      Thread.currentThread().interrupt();
+      throw new ApiClientException("Thread interrupted during updateDrink id=" + id, e);
+    } catch (IOException e) {
+      throw new ApiClientException("I/O error during updateDrink id=" + id, e);
     }
-
-    return mapper.readValue(body, Drink.class);
   }
 
   /**
    * @brief DELETE drink by ID.
-   * 
+   *
    *        Deletes an existing drink in the backend.
-   * 
+   *
    * @param id [Long] ID of the drink to delete.
-   * @throws Exception If an error occurs during the request
    */
-  public void deleteDrink(Long id) throws Exception {
-    HttpRequest req = HttpRequest.newBuilder()
-        .uri(URI.create(baseUrl + "/api/drinks/" + id))
-        .DELETE()
-        .build();
-    http.send(req, HttpResponse.BodyHandlers.ofString());
+  public void deleteDrink(Long id) {
+    String path = API_DRINKS + id;
+    try {
+      HttpRequest req = HttpRequest.newBuilder()
+          .uri(URI.create(baseUrl + path))
+          .DELETE()
+          .build();
+
+      HttpResponse<String> res = http.send(req, HttpResponse.BodyHandlers.ofString());
+      int status = res.statusCode();
+      String body = res.body();
+
+      LOGGER.info("DELETE {} -> HTTP {}", path, status);
+      LOGGER.info("Response body: '{}'", body);
+
+      if (status < 200 || status >= 300) {
+        throw new ApiClientException("DELETE " + path + " failed with HTTP " + status + " body: " + body);
+      }
+    } catch (InterruptedException e) {
+      Thread.currentThread().interrupt();
+      throw new ApiClientException("Thread interrupted during deleteDrink id=" + id, e);
+    } catch (IOException e) {
+      throw new ApiClientException("I/O error during deleteDrink id=" + id, e);
+    }
   }
 
-  // ------------- CRUD methods for MainCourses ----------------
+  // ---------------------------------------------------------------------------
+  // CRUD methods for MainCourses
+  // ---------------------------------------------------------------------------
+
   /**
    * @brief GET all maincourses.
-   * 
+   *
    *        Retrieves a list of all maincourses from the backend.
-   * 
+   *
    * @return [List<MainCourse>] List of all maincourses.
-   * @throws Exception If an error occurs during the request.
    */
-  public List<MainCourse> getAllMainCourses() throws Exception {
-    return getList("/api/maincourses", new TypeReference<List<MainCourse>>() {
-    });
+  public List<MainCourse> getAllMainCourses() {
+    return getList("/api/maincourses", new TypeReference<List<MainCourse>>() {});
   }
 
   /**
    * @brief GET maincourse by ID.
-   * 
+   *
    *        Retrieves a maincourse by its ID from the backend.
-   * 
+   *
    * @param id [Long] ID of the maincourse.
    * @return [MainCourse] MainCourse object.
-   * @throws Exception If an error occurs during the request.
    */
-  public MainCourse getMainCourseById(Long id) throws Exception {
-    return get("/api/maincourses/" + id, MainCourse.class);
+  public MainCourse getMainCourseById(Long id) {
+    return get(API_MAINCOURSES + id, MainCourse.class);
   }
 
   /**
    * @brief POST create new maincourse.
-   * 
+   *
    *        Creates a new maincourse in the backend.
-   * 
+   *
    * @param mainCourse [MainCourse] MainCourse object to create.
    * @return [MainCourse] Created MainCourse object returned from the backend.
-   * @throws Exception If an error occurs during the request.
    */
-  public MainCourse createMainCourse(MainCourse mainCourse) throws Exception {
+  public MainCourse createMainCourse(MainCourse mainCourse) {
     return post("/api/maincourses", mainCourse, MainCourse.class);
   }
 
   /**
    * @brief PUT update maincourse by ID.
-   * 
+   *
    *        Updates an existing maincourse in the backend.
-   * 
+   *
    * @param id         [Long] ID of the maincourse to update.
    * @param mainCourse [MainCourse] MainCourse object with updated data.
    * @return [MainCourse] Updated MainCourse object returned from the backend.
-   * @throws Exception If an error occurs during the request.
    */
-  public MainCourse updateMainCourse(Long id, MainCourse mainCourse) throws Exception {
-    String json = mapper.writeValueAsString(mainCourse);
-    HttpRequest req = HttpRequest.newBuilder()
-        .uri(URI.create(baseUrl + "/api/maincourses/" + id))
-        .PUT(HttpRequest.BodyPublishers.ofString(json))
-        .header("Content-Type", "application/json")
-        .build();
-    HttpResponse<String> res = http.send(req, HttpResponse.BodyHandlers.ofString());
+  public MainCourse updateMainCourse(Long id, MainCourse mainCourse) {
+    String path = API_MAINCOURSES + id;
+    try {
+      String json = mapper.writeValueAsString(mainCourse);
 
-    int status = res.statusCode();
-    String body = res.body();
+      HttpRequest req = HttpRequest.newBuilder()
+          .uri(URI.create(baseUrl + path))
+          .PUT(HttpRequest.BodyPublishers.ofString(json))
+          .header(CONTENT_TYPE, APPLICATION_JSON)
+          .build();
 
-    if (status < 200 || status >= 300) {
-      throw new RuntimeException("PUT /api/maincourses/" + id + " failed with HTTP " + status + " body: " + body);
+      HttpResponse<String> res = http.send(req, HttpResponse.BodyHandlers.ofString());
+      int status = res.statusCode();
+      String body = res.body();
+
+      LOGGER.info("PUT  {} -> HTTP {}", path, status);
+      LOGGER.info("Response body: '{}'", body);
+
+      if (status < 200 || status >= 300) {
+        throw new ApiClientException("PUT " + path + " failed with HTTP " + status + " body: " + body);
+      }
+
+      return mapper.readValue(body, MainCourse.class);
+    } catch (InterruptedException e) {
+      Thread.currentThread().interrupt();
+      throw new ApiClientException("Thread interrupted during updateMainCourse id=" + id, e);
+    } catch (IOException e) {
+      throw new ApiClientException("I/O error during updateMainCourse id=" + id, e);
     }
-
-    return mapper.readValue(body, MainCourse.class);
   }
 
   /**
    * @brief DELETE maincourse by ID.
-   * 
+   *
    *        Deletes an existing maincourse in the backend by its ID.
-   * 
+   *
    * @param id [Long] ID of the maincourse to delete.
-   * @throws Exception If an error occurs during the request.
    */
-  public void deleteMainCourse(Long id) throws Exception {
-    HttpRequest req = HttpRequest.newBuilder()
-        .uri(URI.create(baseUrl + "/api/maincourses/" + id))
-        .DELETE()
-        .build();
-    http.send(req, HttpResponse.BodyHandlers.ofString());
+  public void deleteMainCourse(Long id) {
+    String path = API_MAINCOURSES + id;
+    try {
+      HttpRequest req = HttpRequest.newBuilder()
+          .uri(URI.create(baseUrl + path))
+          .DELETE()
+          .build();
+
+      HttpResponse<String> res = http.send(req, HttpResponse.BodyHandlers.ofString());
+      int status = res.statusCode();
+      String body = res.body();
+
+      LOGGER.info("DELETE {} -> HTTP {}", path, status);
+      LOGGER.info("Response body: '{}'", body);
+
+      if (status < 200 || status >= 300) {
+        throw new ApiClientException("DELETE " + path + " failed with HTTP " + status + " body: " + body);
+      }
+    } catch (InterruptedException e) {
+      Thread.currentThread().interrupt();
+      throw new ApiClientException("Thread interrupted during deleteMainCourse id=" + id, e);
+    } catch (IOException e) {
+      throw new ApiClientException("I/O error during deleteMainCourse id=" + id, e);
+    }
   }
 
-  // ------------- Authentication methods ----------------
+  // ---------------------------------------------------------------------------
+  // Authentication methods
+  // ---------------------------------------------------------------------------
 
   /**
    * @brief Legacy login method kept for compatibility.
-   * 
+   *
    *        If authentication is added in the future, it can be implemented here.
-   * 
+   *
    * @param ignored [String] Ignored parameter.
-   * @throws Exception if login fails.
    */
-  public void login(String ignored) throws Exception {
+  public void login(String ignored) {
     // No-op: kept for compatibility.
   }
 
   /**
    * @brief Authenticates a user against the backend.
-   * 
+   *
    *        Sends a POST request to "/api/login" with username and password.
    *        If the response status is 200, it returns the User parsed from JSON.
-   *        For any other status code it throws a RuntimeException.
+   *        For any other status code it throws ApiClientException.
    *
    * @param username [String] Username entered by the user.
    * @param password [String] Password entered by the user.
    * @return [User] Authenticated User object.
-   * @throws Exception If the request or JSON parsing fails.
    */
-  public User login(String username, String password) throws Exception {
+  public User login(String username, String password) {
+    String path = API_LOGIN;
+    try {
+      String jsonBody = mapper.writeValueAsString(Map.of(
+          "username", username,
+          "password", password));
 
-    String jsonBody = mapper.writeValueAsString(Map.of(
-        "username", username,
-        "password", password));
+      HttpRequest request = HttpRequest.newBuilder()
+          .uri(URI.create(baseUrl + path))
+          .header(CONTENT_TYPE, APPLICATION_JSON)
+          .POST(HttpRequest.BodyPublishers.ofString(jsonBody))
+          .build();
 
-    HttpRequest request = HttpRequest.newBuilder()
+      HttpResponse<String> response = http.send(request, HttpResponse.BodyHandlers.ofString());
 
-        .uri(URI.create(baseUrl + "/api/login"))
-        .header("Content-Type", "application/json")
-        .POST(HttpRequest.BodyPublishers.ofString(jsonBody))
-        .build();
+      int status = response.statusCode();
+      String body = response.body();
 
-    HttpResponse<String> response = http.send(request, HttpResponse.BodyHandlers.ofString());
+      LOGGER.info("POST {} -> HTTP {}", path, status);
+      LOGGER.info("Response body: '{}'", body);
 
-    System.out.println("POST /api/login -> HTTP " + response.statusCode());
-    System.out.println("Response body: '" + response.body() + "'");
-
-    if (response.statusCode() == 200) {
-      return mapper.readValue(response.body(), User.class);
-    } else {
-      throw new RuntimeException("Login failed with status: " + response.statusCode());
+      if (status == 200) {
+        return mapper.readValue(body, User.class);
+      } else {
+        throw new ApiClientException("Login failed with status: " + status + " body: " + body);
+      }
+    } catch (InterruptedException e) {
+      Thread.currentThread().interrupt();
+      throw new ApiClientException("Thread interrupted during login for user=" + username, e);
+    } catch (IOException e) {
+      throw new ApiClientException("I/O error during login for user=" + username, e);
     }
   }
-
 }

@@ -39,9 +39,9 @@ public class OrderService {
    *
    * @param receiptNo [int] Numeric identifier of the receipt.
    * @param bill      [BillResult] Calculated bill result to print.
-   * @throws Exception If an error occurs while creating or writing the file.
+   * @throws java.io.FileNotFoundException If the receipt file cannot be created or opened.
    */
-  public void generateReceiptFile(int receiptNo, BillResult bill) throws Exception {
+  public void generateReceiptFile(int receiptNo, BillResult bill) throws java.io.FileNotFoundException {
     // Ensure the directory exists.
     new java.io.File("receipts").mkdirs();
 

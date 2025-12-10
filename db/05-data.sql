@@ -59,6 +59,7 @@ VALUES
 -- =====================================================================
 
 -- ADMIN (NO genera cashier)
+-- password: admin
 INSERT INTO users (id, username, password_hash, role)
 VALUES (1, 'admin', '$2b$10$TAxhf.ziwuv7ynXlSQYjMeftWo47ft8M4JfdXjLoBPdERwuo7zD06', 'ADMIN');
 

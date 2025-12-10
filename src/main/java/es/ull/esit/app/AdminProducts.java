@@ -9,6 +9,9 @@ import java.util.List;
 import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 import javax.swing.table.DefaultTableModel;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 
 /**
  * @brief Administrative window for managing products and prices.
@@ -24,7 +27,25 @@ import javax.swing.table.DefaultTableModel;
 public class AdminProducts extends javax.swing.JFrame {
 
   /** Service used to call the REST API and apply product-related logic. */
-  private final ProductService productService;
+  private final transient ProductService productService;
+
+  /** Logger for logging events and errors. */
+  private static final Logger LOGGER = LoggerFactory.getLogger(AdminProducts.class);
+
+  /** Primary font used throughout the GUI. */
+  private static final String PRIMARY_FONT = "Yu Gothic UI";
+  /** Secondary font used for buttons and smaller text. */
+  private static final String SECONDARY_FONT = "Thonburi";
+
+  /** Column header for the ID column in product tables. */
+  private static final String FIRST_COLUMN_HEADER = "ID";
+  /** Column header for the name column in product tables. */
+  private static final String SECOND_COLUMN_HEADER = "Item Name";
+  /** Column header for the price column in product tables. */
+  private static final String THIRD_COLUMN_HEADER = "Item Price";
+
+  /** String constant for the "Update" button label. */
+  private static final String UPDATE_STRING = "Update";
 
   /** Table model used to display drink items. */
   DefaultTableModel modelDrink;
@@ -34,7 +55,7 @@ public class AdminProducts extends javax.swing.JFrame {
   DefaultTableModel modelmaincourse;
 
   /** Column headers shared by all product tables (ID, name and price). */
-  String[] columnNames = { "ID", "Item Name", "Item Price" };
+  String[] columnNames = { FIRST_COLUMN_HEADER, SECOND_COLUMN_HEADER, THIRD_COLUMN_HEADER };
 
   /** ID of the currently selected drink (null if no selection). */
   Long selectedDrinkID;
@@ -222,32 +243,32 @@ public class AdminProducts extends javax.swing.JFrame {
     jPanel1.setBackground(new java.awt.Color(248, 244, 230));
 
     jLabel1.setBackground(new java.awt.Color(255, 153, 0));
-    jLabel1.setFont(new java.awt.Font("Yu Gothic UI", 1, 36)); // NOI18N
+    jLabel1.setFont(new java.awt.Font(PRIMARY_FONT, 1, 36)); // NOI18N
     jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
     jLabel1.setText("Items Prices Update Portal");
 
     jTabbedPane1.setBackground(new java.awt.Color(248, 244, 230));
     jTabbedPane1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
     jTabbedPane1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-    jTabbedPane1.setFont(new java.awt.Font("Yu Gothic UI", 1, 18)); // NOI18N
+    jTabbedPane1.setFont(new java.awt.Font(PRIMARY_FONT, 1, 18)); // NOI18N
 
     jPanel2.setBackground(new java.awt.Color(248, 244, 230));
 
-    itemname.setFont(new java.awt.Font("Yu Gothic UI", 0, 18)); // NOI18N
-    itemname.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+    itemname.setFont(new java.awt.Font(PRIMARY_FONT, 0, 18)); // NOI18N
+    itemname.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
     itemname.setBorder(javax.swing.BorderFactory.createTitledBorder(
-        new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true), "Item Name",
+        new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true), SECOND_COLUMN_HEADER,
         javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.TOP,
-        new java.awt.Font("Yu Gothic UI", 0, 18))); // NOI18N
+        new java.awt.Font(PRIMARY_FONT, 0, 18))); // NOI18N
 
-    itemprice.setFont(new java.awt.Font("Yu Gothic UI", 0, 18)); // NOI18N
-    itemprice.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+    itemprice.setFont(new java.awt.Font(PRIMARY_FONT, 0, 18)); // NOI18N
+    itemprice.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
     itemprice.setBorder(javax.swing.BorderFactory.createTitledBorder(
-        new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true), "Item Price",
+        new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true), THIRD_COLUMN_HEADER,
         javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.TOP,
-        new java.awt.Font("Yu Gothic UI", 0, 18))); // NOI18N
+        new java.awt.Font(PRIMARY_FONT, 0, 18))); // NOI18N
 
-    jTable1.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
+    jTable1.setFont(new java.awt.Font(PRIMARY_FONT, 0, 14)); // NOI18N
     jTable1.setModel(new javax.swing.table.DefaultTableModel(
         new Object[][] {
             {},
@@ -262,11 +283,13 @@ public class AdminProducts extends javax.swing.JFrame {
     jTable1.getTableHeader().setResizingAllowed(false);
     jTable1.getTableHeader().setReorderingAllowed(false);
     jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
+      @Override
       public void mouseClicked(java.awt.event.MouseEvent evt) {
         jTable1MouseClicked(evt);
       }
     });
     jTable1.addKeyListener(new java.awt.event.KeyAdapter() {
+      @Override
       public void keyPressed(java.awt.event.KeyEvent evt) {
         jTable1KeyPressed(evt);
       }
@@ -274,32 +297,24 @@ public class AdminProducts extends javax.swing.JFrame {
     jScrollPane1.setViewportView(jTable1);
 
     jButton1.setBackground(new java.awt.Color(255, 255, 255));
-    jButton1.setFont(new java.awt.Font("Thonburi", 0, 18)); // NOI18N
-    jButton1.setText("Update");
-    jButton1.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jButton1ActionPerformed(evt);
-      }
-    });
+    jButton1.setFont(new java.awt.Font(SECONDARY_FONT, 0, 18)); // NOI18N
+    jButton1.setText(UPDATE_STRING);
+    jButton1.addActionListener(this::jButton1ActionPerformed);
 
     jButton2.setBackground(new java.awt.Color(255, 255, 255));
-    jButton2.setFont(new java.awt.Font("Thonburi", 0, 18)); // NOI18N
+    jButton2.setFont(new java.awt.Font(SECONDARY_FONT, 0, 18)); // NOI18N
     jButton2.setText("Add");
-    jButton2.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jButton2ActionPerformed(evt);
-      }
-    });
+    jButton2.addActionListener(this::jButton2ActionPerformed);
 
     jLabel2.setBackground(new java.awt.Color(255, 153, 0));
-    jLabel2.setFont(new java.awt.Font("Yu Gothic UI", 1, 25)); // NOI18N
+    jLabel2.setFont(new java.awt.Font(PRIMARY_FONT, 1, 25)); // NOI18N
     jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
     jLabel2.setText("Available Drinks");
 
-    jLabel3.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
+    jLabel3.setFont(new java.awt.Font(PRIMARY_FONT, 0, 14)); // NOI18N
     jLabel3.setText("Enter new drink information carefully to add.");
 
-    jLabel4.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
+    jLabel4.setFont(new java.awt.Font(PRIMARY_FONT, 0, 14)); // NOI18N
     jLabel4.setText("Please select the drink to update the price.");
 
     javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -367,18 +382,18 @@ public class AdminProducts extends javax.swing.JFrame {
 
     jPanel3.setBackground(new java.awt.Color(248, 244, 230));
 
-    jLabel5.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
+    jLabel5.setFont(new java.awt.Font(PRIMARY_FONT, 0, 14)); // NOI18N
     jLabel5.setText("Enter new appetizer information carefully to add.");
 
     jLabel6.setBackground(new java.awt.Color(255, 153, 0));
-    jLabel6.setFont(new java.awt.Font("Yu Gothic UI", 1, 25)); // NOI18N
+    jLabel6.setFont(new java.awt.Font(PRIMARY_FONT, 1, 25)); // NOI18N
     jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
     jLabel6.setText("Available Appetizer");
 
-    jLabel7.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
+    jLabel7.setFont(new java.awt.Font(PRIMARY_FONT, 0, 14)); // NOI18N
     jLabel7.setText("Please select the appetizer to update the price.");
 
-    jTable2.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
+    jTable2.setFont(new java.awt.Font(PRIMARY_FONT, 0, 14)); // NOI18N
     jTable2.setModel(new javax.swing.table.DefaultTableModel(
         new Object[][] {
             {},
@@ -390,43 +405,36 @@ public class AdminProducts extends javax.swing.JFrame {
 
         }));
     jTable2.addMouseListener(new java.awt.event.MouseAdapter() {
+      @Override
       public void mouseClicked(java.awt.event.MouseEvent evt) {
         jTable2MouseClicked(evt);
       }
     });
     jScrollPane2.setViewportView(jTable2);
 
-    itemname1.setFont(new java.awt.Font("Yu Gothic UI", 0, 18)); // NOI18N
-    itemname1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+    itemname1.setFont(new java.awt.Font(PRIMARY_FONT, 0, 18)); // NOI18N
+    itemname1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
     itemname1.setBorder(javax.swing.BorderFactory.createTitledBorder(
-        new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true), "Item Name",
+        new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true), SECOND_COLUMN_HEADER,
         javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.TOP,
-        new java.awt.Font("Yu Gothic UI", 0, 18))); // NOI18N
+        new java.awt.Font(PRIMARY_FONT, 0, 18))); // NOI18N
 
-    itemprice1.setFont(new java.awt.Font("Yu Gothic UI", 0, 18)); // NOI18N
-    itemprice1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+    itemprice1.setFont(new java.awt.Font(PRIMARY_FONT, 0, 18)); // NOI18N
+    itemprice1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
     itemprice1.setBorder(javax.swing.BorderFactory.createTitledBorder(
-        new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true), "Item Price",
+        new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true), THIRD_COLUMN_HEADER,
         javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.TOP,
-        new java.awt.Font("Yu Gothic UI", 0, 18))); // NOI18N
+        new java.awt.Font(PRIMARY_FONT, 0, 18))); // NOI18N
 
     jButton4.setBackground(new java.awt.Color(255, 255, 255));
-    jButton4.setFont(new java.awt.Font("Thonburi", 0, 18)); // NOI18N
-    jButton4.setText("Update");
-    jButton4.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jButton4ActionPerformed(evt);
-      }
-    });
+    jButton4.setFont(new java.awt.Font(SECONDARY_FONT, 0, 18)); // NOI18N
+    jButton4.setText(UPDATE_STRING);
+    jButton4.addActionListener(this::jButton4ActionPerformed);
 
     jButton5.setBackground(new java.awt.Color(255, 255, 255));
-    jButton5.setFont(new java.awt.Font("Thonburi", 0, 18)); // NOI18N
+    jButton5.setFont(new java.awt.Font(SECONDARY_FONT, 0, 18)); // NOI18N
     jButton5.setText("Add");
-    jButton5.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jButton5ActionPerformed(evt);
-      }
-    });
+    jButton5.addActionListener(this::jButton5ActionPerformed);
 
     javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
     jPanel3.setLayout(jPanel3Layout);
@@ -492,21 +500,21 @@ public class AdminProducts extends javax.swing.JFrame {
     jTabbedPane1.addTab("Appetizers", jPanel3);
 
     jPanel4.setBackground(new java.awt.Color(248, 244, 230));
-    jPanel4.setFont(new java.awt.Font("Yu Gothic UI", 0, 18)); // NOI18N
+    jPanel4.setFont(new java.awt.Font(PRIMARY_FONT, 0, 18)); // NOI18N
 
     jLabel8.setBackground(new java.awt.Color(248, 244, 230));
-    jLabel8.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
+    jLabel8.setFont(new java.awt.Font(PRIMARY_FONT, 0, 14)); // NOI18N
     jLabel8.setText("Enter new item information carefully to add.");
 
     jLabel9.setBackground(new java.awt.Color(255, 153, 0));
-    jLabel9.setFont(new java.awt.Font("Yu Gothic UI", 1, 25)); // NOI18N
+    jLabel9.setFont(new java.awt.Font(PRIMARY_FONT, 1, 25)); // NOI18N
     jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
     jLabel9.setText("Avaliable MainCourse");
 
-    jLabel10.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
+    jLabel10.setFont(new java.awt.Font(PRIMARY_FONT, 0, 14)); // NOI18N
     jLabel10.setText("Please select the item to update the price.");
 
-    jTable3.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
+    jTable3.setFont(new java.awt.Font(PRIMARY_FONT, 0, 14)); // NOI18N
     jTable3.setModel(new javax.swing.table.DefaultTableModel(
         new Object[][] {
             {},
@@ -518,43 +526,36 @@ public class AdminProducts extends javax.swing.JFrame {
 
         }));
     jTable3.addMouseListener(new java.awt.event.MouseAdapter() {
+      @Override
       public void mouseClicked(java.awt.event.MouseEvent evt) {
         jTable3MouseClicked(evt);
       }
     });
     jScrollPane3.setViewportView(jTable3);
 
-    itemname2.setFont(new java.awt.Font("Yu Gothic UI", 0, 18)); // NOI18N
-    itemname2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+    itemname2.setFont(new java.awt.Font(PRIMARY_FONT, 0, 18)); // NOI18N
+    itemname2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
     itemname2.setBorder(javax.swing.BorderFactory.createTitledBorder(
-        new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true), "Item Name",
+        new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true), SECOND_COLUMN_HEADER,
         javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.TOP,
-        new java.awt.Font("Yu Gothic UI", 0, 18))); // NOI18N
+        new java.awt.Font(PRIMARY_FONT, 0, 18))); // NOI18N
 
-    itemprice2.setFont(new java.awt.Font("Yu Gothic UI", 0, 18)); // NOI18N
-    itemprice2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+    itemprice2.setFont(new java.awt.Font(PRIMARY_FONT, 0, 18)); // NOI18N
+    itemprice2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
     itemprice2.setBorder(javax.swing.BorderFactory.createTitledBorder(
-        new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true), "Item Price",
+        new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true), THIRD_COLUMN_HEADER,
         javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.TOP,
-        new java.awt.Font("Yu Gothic UI", 0, 18))); // NOI18N
+        new java.awt.Font(PRIMARY_FONT, 0, 18))); // NOI18N
 
     jButton6.setBackground(new java.awt.Color(255, 255, 255));
-    jButton6.setFont(new java.awt.Font("Thonburi", 0, 18)); // NOI18N
-    jButton6.setText("Update");
-    jButton6.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jButton6ActionPerformed(evt);
-      }
-    });
+    jButton6.setFont(new java.awt.Font(SECONDARY_FONT, 0, 18)); // NOI18N
+    jButton6.setText(UPDATE_STRING);
+    jButton6.addActionListener(this::jButton6ActionPerformed);
 
     jButton7.setBackground(new java.awt.Color(255, 255, 255));
-    jButton7.setFont(new java.awt.Font("Thonburi", 0, 18)); // NOI18N
+    jButton7.setFont(new java.awt.Font(SECONDARY_FONT, 0, 18)); // NOI18N
     jButton7.setText("Add");
-    jButton7.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jButton7ActionPerformed(evt);
-      }
-    });
+    jButton7.addActionListener(this::jButton7ActionPerformed);
 
     javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
     jPanel4.setLayout(jPanel4Layout);
@@ -620,14 +621,10 @@ public class AdminProducts extends javax.swing.JFrame {
     jTabbedPane1.addTab("MainCourse", jPanel4);
 
     jButton3.setBackground(new java.awt.Color(255, 255, 255));
-    jButton3.setFont(new java.awt.Font("Yu Gothic UI", 1, 18)); // NOI18N
+    jButton3.setFont(new java.awt.Font(PRIMARY_FONT, 1, 18)); // NOI18N
     jButton3.setText("Go Back");
     jButton3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-    jButton3.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jButton3ActionPerformed(evt);
-      }
-    });
+    jButton3.addActionListener(this::jButton3ActionPerformed);
 
     javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
     jPanel1.setLayout(jPanel1Layout);
@@ -807,7 +804,7 @@ public class AdminProducts extends javax.swing.JFrame {
 
     String idStr = jTable1.getValueAt(row, 0).toString();
     selectedDrinkID = Long.valueOf(idStr);
-    System.out.println("Selected Drink ID: " + selectedDrinkID);
+    LOGGER.info("Selected Drink ID: {}", selectedDrinkID);
 
     new Thread(() -> {
       try {
@@ -838,7 +835,7 @@ public class AdminProducts extends javax.swing.JFrame {
 
     String idStr = jTable2.getValueAt(row, 0).toString();
     selectedAppetizerID = Long.valueOf(idStr);
-    System.out.println("Selected Appetizer ID: " + selectedAppetizerID);
+    LOGGER.info("Selected Appetizer ID: {}", selectedAppetizerID);
 
     new Thread(() -> {
       try {
@@ -869,7 +866,7 @@ public class AdminProducts extends javax.swing.JFrame {
 
     String idStr = jTable3.getValueAt(row, 0).toString();
     selectedMainCourseID = Long.valueOf(idStr);
-    System.out.println("Selected Main Course ID: " + selectedMainCourseID);
+    LOGGER.info("Selected Main Course ID: {}", selectedMainCourseID);
 
     new Thread(() -> {
       try {
@@ -981,7 +978,7 @@ public class AdminProducts extends javax.swing.JFrame {
    *
    * @param args [String[]] Command line arguments (not used).
    */
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     try {
       for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
         if ("Nimbus".equals(info.getName())) {
@@ -989,26 +986,18 @@ public class AdminProducts extends javax.swing.JFrame {
           break;
         }
       }
-    } catch (ClassNotFoundException ex) {
+    } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
       java.util.logging.Logger.getLogger(AdminProducts.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-    } catch (InstantiationException ex) {
-      java.util.logging.Logger.getLogger(AdminProducts.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-    } catch (IllegalAccessException ex) {
-      java.util.logging.Logger.getLogger(AdminProducts.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-    } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-      java.util.logging.Logger.getLogger(AdminProducts.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-    }
+    } 
     // </editor-fold>
 
     /* Create and display the form */
-    java.awt.EventQueue.invokeLater(new Runnable() {
-      public void run() {
-        new AdminProducts().setVisible(true);
-      }
-    });
+    java.awt.EventQueue.invokeLater(() -> new AdminProducts().setVisible(true));
   }
 
   // Variables declaration - do not modify//GEN-BEGIN:variables
+  // Sonarqube rule java:S1450 must be ignored here as these variables are
+  // auto-generated by the Form Editor and need to remain as instance variables.
   /** Text field for the drink name (Drinks tab). */
   private javax.swing.JTextField itemname;
   /** Text field for the appetizer name (Appetizers tab). */

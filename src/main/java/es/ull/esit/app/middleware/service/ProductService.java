@@ -33,9 +33,8 @@ public class ProductService {
    * @brief Retrieves all drinks from the backend.
    *
    * @return [List<Drink>] List of all drinks available in the menu.
-   * @throws Exception If an error occurs during the request.
    */
-  public List<Drink> getAllDrinks() throws Exception {
+  public List<Drink> getAllDrinks() {
     return client.getAllDrinks();
   }
 
@@ -44,9 +43,8 @@ public class ProductService {
    *
    * @param id [Long] Unique identifier of the drink.
    * @return [Drink] Drink object corresponding to the given id.
-   * @throws Exception If an error occurs during the request.
    */
-  public Drink getDrinkById(Long id) throws Exception {
+  public Drink getDrinkById(Long id) {
     return client.getDrinkById(id);
   }
 
@@ -57,9 +55,8 @@ public class ProductService {
    *
    * @param name     [String] Name of the new drink.
    * @param priceStr [String] Price entered as a string.
-   * @throws Exception If validation fails or the backend returns an error.
    */
-  public void addDrink(String name, String priceStr) throws Exception {
+  public void addDrink(String name, String priceStr) {
     int price = validateAndParsePrice(priceStr);
     validateName(name);
 
@@ -73,10 +70,8 @@ public class ProductService {
    * @param id       [Long] Identifier of the drink to update.
    * @param name     [String] New name for the drink.
    * @param priceStr [String] New price entered as a string.
-   * @throws Exception If no drink is selected, validation fails, or the backend
-   *                   returns an error.
    */
-  public void updateDrink(Long id, String name, String priceStr) throws Exception {
+  public void updateDrink(Long id, String name, String priceStr) {
     if (id == null) {
       throw new IllegalArgumentException("No drink selected!");
     }
@@ -94,9 +89,8 @@ public class ProductService {
    * @brief Retrieves all appetizers from the backend.
    *
    * @return [List<Appetizer>] List of all appetizers in the menu.
-   * @throws Exception If an error occurs during the request.
    */
-  public List<Appetizer> getAllAppetizers() throws Exception {
+  public List<Appetizer> getAllAppetizers() {
     return client.getAllAppetizers();
   }
 
@@ -105,9 +99,8 @@ public class ProductService {
    *
    * @param id [Long] Unique identifier of the appetizer.
    * @return [Appetizer] Appetizer object corresponding to the given id.
-   * @throws Exception If an error occurs during the request.
    */
-  public Appetizer getAppetizerById(Long id) throws Exception {
+  public Appetizer getAppetizerById(Long id) {
     return client.getAppetizerById(id);
   }
 
@@ -118,9 +111,8 @@ public class ProductService {
    *
    * @param name     [String] Name of the new appetizer.
    * @param priceStr [String] Price entered as a string.
-   * @throws Exception If validation fails or the backend returns an error.
    */
-  public void addAppetizer(String name, String priceStr) throws Exception {
+  public void addAppetizer(String name, String priceStr) {
     int price = validateAndParsePrice(priceStr);
     validateName(name);
 
@@ -134,10 +126,8 @@ public class ProductService {
    * @param id       [Long] Identifier of the appetizer to update.
    * @param name     [String] New name for the appetizer.
    * @param priceStr [String] New price entered as a string.
-   * @throws Exception If no appetizer is selected, validation fails, or the backend
-   *                   returns an error.
    */
-  public void updateAppetizer(Long id, String name, String priceStr) throws Exception {
+  public void updateAppetizer(Long id, String name, String priceStr) {
     if (id == null) {
       throw new IllegalArgumentException("No appetizer selected!");
     }
@@ -155,9 +145,8 @@ public class ProductService {
    * @brief Retrieves all main courses from the backend.
    *
    * @return [List<MainCourse>] List of all main courses in the menu.
-   * @throws Exception If an error occurs during the request.
    */
-  public List<MainCourse> getAllMainCourses() throws Exception {
+  public List<MainCourse> getAllMainCourses() {
     return client.getAllMainCourses();
   }
 
@@ -166,9 +155,8 @@ public class ProductService {
    *
    * @param id [Long] Unique identifier of the main course.
    * @return [MainCourse] MainCourse object corresponding to the given id.
-   * @throws Exception If an error occurs during the request.
    */
-  public MainCourse getMainCourseById(Long id) throws Exception {
+  public MainCourse getMainCourseById(Long id) {
     return client.getMainCourseById(id);
   }
 
@@ -179,9 +167,8 @@ public class ProductService {
    *
    * @param name     [String] Name of the new main course.
    * @param priceStr [String] Price entered as a string.
-   * @throws Exception If validation fails or the backend returns an error.
    */
-  public void addMainCourse(String name, String priceStr) throws Exception {
+  public void addMainCourse(String name, String priceStr) {
     int price = validateAndParsePrice(priceStr);
     validateName(name);
 
@@ -195,10 +182,8 @@ public class ProductService {
    * @param id       [Long] Identifier of the main course to update.
    * @param name     [String] New name for the main course.
    * @param priceStr [String] New price entered as a string.
-   * @throws Exception If no main course is selected, validation fails, or the
-   *                   backend returns an error.
    */
-  public void updateMainCourse(Long id, String name, String priceStr) throws Exception {
+  public void updateMainCourse(Long id, String name, String priceStr) {
     if (id == null) {
       throw new IllegalArgumentException("No main course selected!");
     }

@@ -33,9 +33,8 @@ public class ReportService {
    *        Uses the "/api/cashiers" endpoint to obtain the list.
    *
    * @return [List<Cashier>] List of cashiers returned by the backend.
-   * @throws Exception If an error occurs while contacting the backend.
    */
-  public List<Cashier> getCashierInfo() throws Exception {
+  public List<Cashier> getCashierInfo() {
     return client.getAllCashiers();
   }
 
@@ -46,9 +45,8 @@ public class ReportService {
    *        and returns a textual summary of the available items.
    *
    * @return [String] Human-readable status message about the menu system.
-   * @throws Exception If any of the API calls fail.
    */
-  public String checkMenuStatus() throws Exception {
+  public String checkMenuStatus() {
     // Fetch lists to verify connectivity.
     List<Appetizer> appetizers = client.getAllAppetizers();
     List<Drink> drinks = client.getAllDrinks();

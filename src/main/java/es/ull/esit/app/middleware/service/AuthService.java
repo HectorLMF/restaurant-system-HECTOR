@@ -33,9 +33,8 @@ public class AuthService {
    * @param username [String] Username entered by the user.
    * @param password [String] Password entered by the user.
    * @return [User] Authenticated user object returned by the backend.
-   * @throws Exception If validation fails or the backend returns an error.
    */
-  public User authenticate(String username, String password) throws Exception {
+  public User authenticate(String username, String password) {
     // 1. Local Validation.
     if (username == null || username.trim().isEmpty()) {
       throw new IllegalArgumentException("Username cannot be empty.");

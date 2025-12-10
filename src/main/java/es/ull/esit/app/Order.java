@@ -27,11 +27,16 @@ import javax.swing.table.DefaultTableModel;
  */
 public class Order extends javax.swing.JFrame {
 
+  /** Primary font used in the GUI. */
+  private static final String PRIMARY_FONT = "Yu Gothic UI";
+
+  private static final String PRIMARY_FONT_LIGHT = "Yu Gothic UI Light";
+
   /** Service used to load products from the backend. */
-  private final ProductService productService;
+  private final transient ProductService productService;
 
   /** Service used to calculate bill totals and generate receipt files. */
-  private final OrderService orderService = new OrderService();
+  private final transient OrderService orderService = new OrderService();
 
   /** Table models for the three product categories. */
   private DefaultTableModel drinksModel;
@@ -39,7 +44,7 @@ public class Order extends javax.swing.JFrame {
   private DefaultTableModel mainsModel;
 
   /** Last calculated bill (after pressing Pay). */
-  private BillResult lastBill;
+  private transient BillResult lastBill;
 
   /** Subtotal of the order (sum of all line prices). */
   double subTotal;
@@ -55,7 +60,7 @@ public class Order extends javax.swing.JFrame {
    * Writer used to generate the text file for the receipt (kept for
    * compatibility).
    */
-  PrintWriter output;
+  transient PrintWriter output;
 
   /**
    * @brief Constructor.
@@ -298,13 +303,13 @@ public class Order extends javax.swing.JFrame {
   private void initComponents() {
 
     jPanel2 = new javax.swing.JPanel();
-    DrinksPnl = new javax.swing.JPanel();
+    drinksPnl = new javax.swing.JPanel();
     drinksScroll = new javax.swing.JScrollPane();
     drinksTable = new javax.swing.JTable();
-    AppetizerPnl = new javax.swing.JPanel();
+    appetizerPnl = new javax.swing.JPanel();
     appetizersScroll = new javax.swing.JScrollPane();
     appetizersTable = new javax.swing.JTable();
-    MainCoursePnl = new javax.swing.JPanel();
+    mainCoursePnl = new javax.swing.JPanel();
     mainsScroll = new javax.swing.JScrollPane();
     mainsTable = new javax.swing.JTable();
     jPanel1 = new javax.swing.JPanel();
@@ -326,14 +331,14 @@ public class Order extends javax.swing.JFrame {
 
     jPanel2.setBackground(new java.awt.Color(248, 244, 230));
 
-    DrinksPnl.setBackground(new java.awt.Color(248, 244, 230));
-    DrinksPnl.setBorder(javax.swing.BorderFactory.createTitledBorder(
+    drinksPnl.setBackground(new java.awt.Color(248, 244, 230));
+    drinksPnl.setBorder(javax.swing.BorderFactory.createTitledBorder(
         new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true), "Drinks",
         javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP,
-        new java.awt.Font("Yu Gothic UI", 0, 18))); // NOI18N
-    DrinksPnl.setPreferredSize(new java.awt.Dimension(260, 278));
+        new java.awt.Font(PRIMARY_FONT, 0, 18))); // NOI18N
+    drinksPnl.setPreferredSize(new java.awt.Dimension(260, 278));
 
-    drinksTable.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
+    drinksTable.setFont(new java.awt.Font(PRIMARY_FONT, 0, 14)); // NOI18N
     drinksTable.setModel(new javax.swing.table.DefaultTableModel(
         new Object[][] {
 
@@ -344,29 +349,29 @@ public class Order extends javax.swing.JFrame {
     drinksTable.getTableHeader().setReorderingAllowed(false);
     drinksScroll.setViewportView(drinksTable);
 
-    javax.swing.GroupLayout DrinksPnlLayout = new javax.swing.GroupLayout(DrinksPnl);
-    DrinksPnl.setLayout(DrinksPnlLayout);
-    DrinksPnlLayout.setHorizontalGroup(
-        DrinksPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(DrinksPnlLayout.createSequentialGroup()
+    javax.swing.GroupLayout drinksPnlLayout = new javax.swing.GroupLayout(drinksPnl);
+    drinksPnl.setLayout(drinksPnlLayout);
+    drinksPnlLayout.setHorizontalGroup(
+        drinksPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(drinksPnlLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(drinksScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 281, Short.MAX_VALUE)
                 .addContainerGap()));
-    DrinksPnlLayout.setVerticalGroup(
-        DrinksPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(DrinksPnlLayout.createSequentialGroup()
+    drinksPnlLayout.setVerticalGroup(
+        drinksPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(drinksPnlLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(drinksScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 186, Short.MAX_VALUE)
                 .addContainerGap()));
 
-    AppetizerPnl.setBackground(new java.awt.Color(248, 244, 230));
-    AppetizerPnl.setBorder(javax.swing.BorderFactory.createTitledBorder(
+    appetizerPnl.setBackground(new java.awt.Color(248, 244, 230));
+    appetizerPnl.setBorder(javax.swing.BorderFactory.createTitledBorder(
         new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true), "Appetizers",
         javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP,
-        new java.awt.Font("Yu Gothic UI", 0, 18))); // NOI18N
-    AppetizerPnl.setPreferredSize(new java.awt.Dimension(260, 278));
+        new java.awt.Font(PRIMARY_FONT, 0, 18))); // NOI18N
+    appetizerPnl.setPreferredSize(new java.awt.Dimension(260, 278));
 
-    appetizersTable.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
+    appetizersTable.setFont(new java.awt.Font(PRIMARY_FONT, 0, 14)); // NOI18N
     appetizersTable.setModel(new javax.swing.table.DefaultTableModel(
         new Object[][] {
 
@@ -377,29 +382,29 @@ public class Order extends javax.swing.JFrame {
     appetizersTable.getTableHeader().setReorderingAllowed(false);
     appetizersScroll.setViewportView(appetizersTable);
 
-    javax.swing.GroupLayout AppetizerPnlLayout = new javax.swing.GroupLayout(AppetizerPnl);
-    AppetizerPnl.setLayout(AppetizerPnlLayout);
-    AppetizerPnlLayout.setHorizontalGroup(
-        AppetizerPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(AppetizerPnlLayout.createSequentialGroup()
+    javax.swing.GroupLayout appetizerPnlLayout = new javax.swing.GroupLayout(appetizerPnl);
+    appetizerPnl.setLayout(appetizerPnlLayout);
+    appetizerPnlLayout.setHorizontalGroup(
+        appetizerPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(appetizerPnlLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(appetizersScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 368, Short.MAX_VALUE)
                 .addContainerGap()));
-    AppetizerPnlLayout.setVerticalGroup(
-        AppetizerPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(AppetizerPnlLayout.createSequentialGroup()
+    appetizerPnlLayout.setVerticalGroup(
+        appetizerPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(appetizerPnlLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(appetizersScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 186, Short.MAX_VALUE)
                 .addContainerGap()));
 
-    MainCoursePnl.setBackground(new java.awt.Color(248, 244, 230));
-    MainCoursePnl.setBorder(javax.swing.BorderFactory.createTitledBorder(
+    mainCoursePnl.setBackground(new java.awt.Color(248, 244, 230));
+    mainCoursePnl.setBorder(javax.swing.BorderFactory.createTitledBorder(
         new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true), "Main Course",
         javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP,
-        new java.awt.Font("Yu Gothic UI", 0, 18))); // NOI18N
-    MainCoursePnl.setPreferredSize(new java.awt.Dimension(260, 278));
+        new java.awt.Font(PRIMARY_FONT, 0, 18))); // NOI18N
+    mainCoursePnl.setPreferredSize(new java.awt.Dimension(260, 278));
 
-    mainsTable.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
+    mainsTable.setFont(new java.awt.Font(PRIMARY_FONT, 0, 14)); // NOI18N
     mainsTable.setModel(new javax.swing.table.DefaultTableModel(
         new Object[][] {
 
@@ -410,17 +415,17 @@ public class Order extends javax.swing.JFrame {
     mainsTable.getTableHeader().setReorderingAllowed(false);
     mainsScroll.setViewportView(mainsTable);
 
-    javax.swing.GroupLayout MainCoursePnlLayout = new javax.swing.GroupLayout(MainCoursePnl);
-    MainCoursePnl.setLayout(MainCoursePnlLayout);
-    MainCoursePnlLayout.setHorizontalGroup(
-        MainCoursePnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(MainCoursePnlLayout.createSequentialGroup()
+    javax.swing.GroupLayout mainCoursePnlLayout = new javax.swing.GroupLayout(mainCoursePnl);
+    mainCoursePnl.setLayout(mainCoursePnlLayout);
+    mainCoursePnlLayout.setHorizontalGroup(
+        mainCoursePnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(mainCoursePnlLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(mainsScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 427, Short.MAX_VALUE)
                 .addContainerGap()));
-    MainCoursePnlLayout.setVerticalGroup(
-        MainCoursePnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(MainCoursePnlLayout.createSequentialGroup()
+    mainCoursePnlLayout.setVerticalGroup(
+        mainCoursePnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(mainCoursePnlLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(mainsScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 186, Short.MAX_VALUE)
                 .addContainerGap()));
@@ -429,18 +434,18 @@ public class Order extends javax.swing.JFrame {
     jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(
         new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true), "Receipt",
         javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP,
-        new java.awt.Font("Yu Gothic UI", 0, 14))); // NOI18N
+        new java.awt.Font(PRIMARY_FONT, 0, 14))); // NOI18N
 
-    subTotalLbl.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
+    subTotalLbl.setFont(new java.awt.Font(PRIMARY_FONT_LIGHT, 0, 18)); // NOI18N
     subTotalLbl.setText("SubTotal: 0.0 SR");
 
-    vatLbl.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
+    vatLbl.setFont(new java.awt.Font(PRIMARY_FONT_LIGHT, 0, 18)); // NOI18N
     vatLbl.setText("VAT included: 0.0 SR");
 
-    totalLbl.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
+    totalLbl.setFont(new java.awt.Font(PRIMARY_FONT_LIGHT, 0, 18)); // NOI18N
     totalLbl.setText("Total: 0.0 SR");
 
-    receiptNoLbl.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 14)); // NOI18N
+    receiptNoLbl.setFont(new java.awt.Font(PRIMARY_FONT_LIGHT, 0, 14)); // NOI18N
     receiptNoLbl.setText("Receipt No. : 0");
 
     javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -469,40 +474,24 @@ public class Order extends javax.swing.JFrame {
 
     payBtn.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
     payBtn.setText("Pay");
-    payBtn.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        payBtnActionPerformed(evt);
-      }
-    });
+    payBtn.addActionListener(this::payBtnActionPerformed);
 
-    newReceiptBtn.setFont(new java.awt.Font("Yu Gothic UI", 1, 14)); // NOI18N
+    newReceiptBtn.setFont(new java.awt.Font(PRIMARY_FONT, 1, 14)); // NOI18N
     newReceiptBtn.setText("New Receipt");
-    newReceiptBtn.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        newReceiptBtnActionPerformed(evt);
-      }
-    });
+    newReceiptBtn.addActionListener(this::newReceiptBtnActionPerformed);
 
-    saveReceiptBtn.setFont(new java.awt.Font("Yu Gothic UI", 1, 14)); // NOI18N
+    saveReceiptBtn.setFont(new java.awt.Font(PRIMARY_FONT, 1, 14)); // NOI18N
     saveReceiptBtn.setText("Save Receipt");
-    saveReceiptBtn.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        saveReceiptBtnActionPerformed(evt);
-      }
-    });
+    saveReceiptBtn.addActionListener(this::saveReceiptBtnActionPerformed);
 
     jLabel1.setBackground(new java.awt.Color(255, 153, 0));
-    jLabel1.setFont(new java.awt.Font("Yu Gothic UI", 1, 36)); // NOI18N
+    jLabel1.setFont(new java.awt.Font(PRIMARY_FONT, 1, 36)); // NOI18N
     jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
     jLabel1.setText("BLACK PLATE MENU");
 
-    goBackMenueBtn.setFont(new java.awt.Font("Yu Gothic UI", 1, 14)); // NOI18N
+    goBackMenueBtn.setFont(new java.awt.Font(PRIMARY_FONT, 1, 14)); // NOI18N
     goBackMenueBtn.setText("Go Back");
-    goBackMenueBtn.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        goBackMenueBtnActionPerformed(evt);
-      }
-    });
+    goBackMenueBtn.addActionListener(this::goBackMenueBtnActionPerformed);
 
     jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/screenshot.png"))); // NOI18N
 
@@ -514,13 +503,13 @@ public class Order extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(40, 40, 40)
-                        .addComponent(DrinksPnl, javax.swing.GroupLayout.PREFERRED_SIZE, 305,
+                        .addComponent(drinksPnl, javax.swing.GroupLayout.PREFERRED_SIZE, 305,
                             javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(AppetizerPnl, javax.swing.GroupLayout.PREFERRED_SIZE, 392,
+                        .addComponent(appetizerPnl, javax.swing.GroupLayout.PREFERRED_SIZE, 392,
                             javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(MainCoursePnl, javax.swing.GroupLayout.PREFERRED_SIZE, 451,
+                        .addComponent(mainCoursePnl, javax.swing.GroupLayout.PREFERRED_SIZE, 451,
                             javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(251, 251, 251)
@@ -555,9 +544,9 @@ public class Order extends javax.swing.JFrame {
                         javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(40, 40, 40)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(AppetizerPnl, javax.swing.GroupLayout.DEFAULT_SIZE, 230, Short.MAX_VALUE)
-                    .addComponent(MainCoursePnl, javax.swing.GroupLayout.DEFAULT_SIZE, 230, Short.MAX_VALUE)
-                    .addComponent(DrinksPnl, javax.swing.GroupLayout.DEFAULT_SIZE, 230, Short.MAX_VALUE))
+                    .addComponent(appetizerPnl, javax.swing.GroupLayout.DEFAULT_SIZE, 230, Short.MAX_VALUE)
+                    .addComponent(mainCoursePnl, javax.swing.GroupLayout.DEFAULT_SIZE, 230, Short.MAX_VALUE)
+                    .addComponent(drinksPnl, javax.swing.GroupLayout.DEFAULT_SIZE, 230, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(goBackMenueBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 40,
@@ -735,7 +724,7 @@ public class Order extends javax.swing.JFrame {
    *
    * @param args [String[]] Command line arguments (not used).
    */
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     /* Set the Nimbus look and feel */
     // <editor-fold defaultstate="collapsed" desc=" Look and feel setting code
     // (optional) ">
@@ -752,32 +741,25 @@ public class Order extends javax.swing.JFrame {
           break;
         }
       }
-    } catch (ClassNotFoundException ex) {
+    } catch (ClassNotFoundException | javax.swing.UnsupportedLookAndFeelException |
+        InstantiationException | IllegalAccessException ex) {
       java.util.logging.Logger.getLogger(Order.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-    } catch (InstantiationException ex) {
-      java.util.logging.Logger.getLogger(Order.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-    } catch (IllegalAccessException ex) {
-      java.util.logging.Logger.getLogger(Order.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-    } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-      java.util.logging.Logger.getLogger(Order.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-    }
+    } 
     // </editor-fold>
 
     /* Create and display the form */
-    java.awt.EventQueue.invokeLater(new Runnable() {
-      public void run() {
-        new Order().setVisible(true);
-      }
-    });
+    java.awt.EventQueue.invokeLater(() -> new Order().setVisible(true));
   }
 
   // Variables declaration - do not modify//GEN-BEGIN:variables
+  // Sonarqube rule java:S1450 must be ignored here as these variables are
+  // auto-generated by the Form Editor and need to remain as instance variables.
   /** Panel that groups all appetizer items and controls. */
-  private javax.swing.JPanel AppetizerPnl;
+  private javax.swing.JPanel appetizerPnl;
   /** Panel that groups all drink items and controls. */
-  private javax.swing.JPanel DrinksPnl;
+  private javax.swing.JPanel drinksPnl;
   /** Panel that groups all main course items and controls. */
-  private javax.swing.JPanel MainCoursePnl;
+  private javax.swing.JPanel mainCoursePnl;
   /** Table for appetizers items. */
   private javax.swing.JTable appetizersTable;
   /** Scroll pane for appetizers table. */
