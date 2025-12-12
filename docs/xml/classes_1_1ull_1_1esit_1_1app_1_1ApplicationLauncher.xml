@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="classes_1_1ull_1_1esit_1_1app_1_1ApplicationLauncher" kind="class" language="Java" prot="public">
+    <compoundname>es::ull::esit::app::ApplicationLauncher</compoundname>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1ApplicationLauncher_1ac11bd2b1d30228fb403aaf2e3ea5cf41" prot="private" static="yes" mutable="no">
+        <type>java.util.function.Supplier&lt; <ref refid="classes_1_1ull_1_1esit_1_1app_1_1Login" kindref="compound">Login</ref> &gt;</type>
+        <definition>java.util.function.Supplier&lt;Login&gt; es.ull.esit.app.ApplicationLauncher.loginFactory</definition>
+        <argsstring></argsstring>
+        <name>loginFactory</name>
+        <qualifiedname>es.ull.esit.app.ApplicationLauncher.loginFactory</qualifiedname>
+        <initializer>= Login::new</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/ApplicationLauncher.java" line="30" column="43" bodyfile="src/main/java/es/ull/esit/app/ApplicationLauncher.java" bodystart="30" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1ApplicationLauncher_1a69f7fc1a952cb3626a8bea2dbb660e78" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void es.ull.esit.app.ApplicationLauncher.main</definition>
+        <argsstring>(String[] args)</argsstring>
+        <name>main</name>
+        <qualifiedname>es.ull.esit.app.ApplicationLauncher.main</qualifiedname>
+        <param>
+          <type>String[]</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+<para>Alternate entry point used to launch the <ref refid="classes_1_1ull_1_1esit_1_1app_1_1Login" kindref="compound">Login</ref> window. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>   Creates and displays the application&apos;s Login screen.
+</verbatim></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[String[]] Command-line arguments (unused). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/ApplicationLauncher.java" line="19" column="22" bodyfile="src/main/java/es/ull/esit/app/ApplicationLauncher.java" bodystart="19" bodyend="23"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="package-static-func">
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1ApplicationLauncher_1ae02d1f20eeea3c815d7dc5d3ddc1160f" prot="package" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void es.ull.esit.app.ApplicationLauncher.setLoginFactory</definition>
+        <argsstring>(java.util.function.Supplier&lt; Login &gt; factory)</argsstring>
+        <name>setLoginFactory</name>
+        <qualifiedname>es.ull.esit.app.ApplicationLauncher.setLoginFactory</qualifiedname>
+        <param>
+          <type>java.util.function.Supplier&lt; <ref refid="classes_1_1ull_1_1esit_1_1app_1_1Login" kindref="compound">Login</ref> &gt;</type>
+          <declname>factory</declname>
+        </param>
+        <briefdescription>
+<para>Package-visible to allow tests in the same package to override the factory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Keep it non-public to minimize API surface. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/ApplicationLauncher.java" line="36" column="15" bodyfile="src/main/java/es/ull/esit/app/ApplicationLauncher.java" bodystart="36" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1ApplicationLauncher_1a2973cce9db2faa095a1df12ac1b24a4e" prot="package" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>java.util.function.Supplier&lt; <ref refid="classes_1_1ull_1_1esit_1_1app_1_1Login" kindref="compound">Login</ref> &gt;</type>
+        <definition>static java.util.function.Supplier&lt; Login &gt; es.ull.esit.app.ApplicationLauncher.getLoginFactory</definition>
+        <argsstring>()</argsstring>
+        <name>getLoginFactory</name>
+        <qualifiedname>es.ull.esit.app.ApplicationLauncher.getLoginFactory</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/ApplicationLauncher.java" line="40" column="35" bodyfile="src/main/java/es/ull/esit/app/ApplicationLauncher.java" bodystart="40" bodyend="42"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Auxiliary entry point used to start the application&apos;s UI. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>   Serves as a simple launcher responsible for opening
+   the Login window when the program is executed directly.
+</verbatim> </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>es.ull.esit.app.ApplicationLauncher</label>
+        <link refid="classes_1_1ull_1_1esit_1_1app_1_1ApplicationLauncher"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/main/java/es/ull/esit/app/ApplicationLauncher.java" line="10" column="7" bodyfile="src/main/java/es/ull/esit/app/ApplicationLauncher.java" bodystart="10" bodyend="43"/>
+    <listofallmembers>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1ApplicationLauncher_1a2973cce9db2faa095a1df12ac1b24a4e" prot="package" virt="non-virtual"><scope>es::ull::esit::app::ApplicationLauncher</scope><name>getLoginFactory</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1ApplicationLauncher_1ac11bd2b1d30228fb403aaf2e3ea5cf41" prot="private" virt="non-virtual"><scope>es::ull::esit::app::ApplicationLauncher</scope><name>loginFactory</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1ApplicationLauncher_1a69f7fc1a952cb3626a8bea2dbb660e78" prot="public" virt="non-virtual"><scope>es::ull::esit::app::ApplicationLauncher</scope><name>main</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1ApplicationLauncher_1ae02d1f20eeea3c815d7dc5d3ddc1160f" prot="package" virt="non-virtual"><scope>es::ull::esit::app::ApplicationLauncher</scope><name>setLoginFactory</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

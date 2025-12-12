@@ -1,0 +1,7 @@
+<map id="es.ull.esit.server.controller.MainCourseController" name="es.ull.esit.server.controller.MainCourseController">
+<area shape="rect" id="Node000001" title="REST controller for managing main courses." alt="" coords="10,285,201,445"/>
+<area shape="rect" id="Node000002" href="$interfacees_1_1ull_1_1esit_1_1server_1_1repo_1_1MainCourseRepository.html" title="Repository interface for managing main courses in the database." alt="" coords="25,135,186,215"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="108,215,108,269,103,269,103,215"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,5,205,85"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="108,99,108,134,103,134,103,99"/>
+</map>

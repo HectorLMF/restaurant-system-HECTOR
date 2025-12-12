@@ -1,0 +1,64 @@
+\doxysection{Health\+Controller.\+java}
+\hypertarget{HealthController_8java_source}{}\label{HealthController_8java_source}\index{HealthController.java@{HealthController.java}}
+\mbox{\hyperlink{HealthController_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{HealthController_8java_source_l00001}00001\ \textcolor{keyword}{package\ }es.ull.esit.server.controller;}
+\DoxyCodeLine{\Hypertarget{HealthController_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{HealthController_8java_source_l00003}00003\ \textcolor{keyword}{import}\ org.springframework.beans.factory.annotation.Autowired;}
+\DoxyCodeLine{\Hypertarget{HealthController_8java_source_l00004}00004\ \textcolor{keyword}{import}\ org.springframework.http.HttpStatus;}
+\DoxyCodeLine{\Hypertarget{HealthController_8java_source_l00005}00005\ \textcolor{keyword}{import}\ org.springframework.http.ResponseEntity;}
+\DoxyCodeLine{\Hypertarget{HealthController_8java_source_l00006}00006\ \textcolor{keyword}{import}\ org.springframework.web.bind.annotation.GetMapping;}
+\DoxyCodeLine{\Hypertarget{HealthController_8java_source_l00007}00007\ \textcolor{keyword}{import}\ org.springframework.web.bind.annotation.RequestMapping;}
+\DoxyCodeLine{\Hypertarget{HealthController_8java_source_l00008}00008\ \textcolor{keyword}{import}\ org.springframework.web.bind.annotation.RestController;}
+\DoxyCodeLine{\Hypertarget{HealthController_8java_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{HealthController_8java_source_l00010}00010\ \textcolor{keyword}{import}\ javax.sql.DataSource;}
+\DoxyCodeLine{\Hypertarget{HealthController_8java_source_l00011}00011\ \textcolor{keyword}{import}\ java.sql.Connection;}
+\DoxyCodeLine{\Hypertarget{HealthController_8java_source_l00012}00012\ \textcolor{keyword}{import}\ java.util.HashMap;}
+\DoxyCodeLine{\Hypertarget{HealthController_8java_source_l00013}00013\ \textcolor{keyword}{import}\ java.util.Map;}
+\DoxyCodeLine{\Hypertarget{HealthController_8java_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{HealthController_8java_source_l00025}00025\ @RestController}
+\DoxyCodeLine{\Hypertarget{HealthController_8java_source_l00026}00026\ @RequestMapping(\textcolor{stringliteral}{"{}/api"{}})}
+\DoxyCodeLine{\Hypertarget{HealthController_8java_source_l00027}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1HealthController}{00027}}\ public\ class\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1HealthController}{HealthController}}\ \{}
+\DoxyCodeLine{\Hypertarget{HealthController_8java_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{HealthController_8java_source_l00030}00030\ \ \ @Autowired}
+\DoxyCodeLine{\Hypertarget{HealthController_8java_source_l00031}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1HealthController_a426cd7d61e7495000d723597a0efd638}{00031}}\ \ \ \textcolor{keyword}{private}\ DataSource\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1HealthController_a426cd7d61e7495000d723597a0efd638}{dataSource}};}
+\DoxyCodeLine{\Hypertarget{HealthController_8java_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{HealthController_8java_source_l00043}00043\ \ \ @GetMapping(\textcolor{stringliteral}{"{}/health"{}})}
+\DoxyCodeLine{\Hypertarget{HealthController_8java_source_l00044}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1HealthController_a8bccdc869b8f33c8016f91ab584812ca}{00044}}\ \ \ public\ ResponseEntity<Map<String,\ Object>>\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1HealthController_a8bccdc869b8f33c8016f91ab584812ca}{health}}()\ \{}
+\DoxyCodeLine{\Hypertarget{HealthController_8java_source_l00045}00045\ \ \ \ \ Map<String,\ Object>\ response\ =\ \textcolor{keyword}{new}\ HashMap<>();}
+\DoxyCodeLine{\Hypertarget{HealthController_8java_source_l00046}00046\ \ \ \ \ response.put(\textcolor{stringliteral}{"{}status"{}},\ \textcolor{stringliteral}{"{}UP"{}});}
+\DoxyCodeLine{\Hypertarget{HealthController_8java_source_l00047}00047\ \ \ \ \ response.put(\textcolor{stringliteral}{"{}timestamp"{}},\ System.currentTimeMillis());}
+\DoxyCodeLine{\Hypertarget{HealthController_8java_source_l00048}00048\ \ \ \ \ response.put(\textcolor{stringliteral}{"{}service"{}},\ \textcolor{stringliteral}{"{}Restaurant\ Server"{}});}
+\DoxyCodeLine{\Hypertarget{HealthController_8java_source_l00049}00049\ \ \ \ \ \textcolor{keywordflow}{return}\ ResponseEntity.ok(response);}
+\DoxyCodeLine{\Hypertarget{HealthController_8java_source_l00050}00050\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{HealthController_8java_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{HealthController_8java_source_l00072}00072\ \ \ @GetMapping(\textcolor{stringliteral}{"{}/db-\/check"{}})}
+\DoxyCodeLine{\Hypertarget{HealthController_8java_source_l00073}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1HealthController_a15e753c0428335d9206b9defc2efc20a}{00073}}\ \ \ public\ ResponseEntity<Map<String,\ Object>>\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1HealthController_a15e753c0428335d9206b9defc2efc20a}{checkDatabase}}()\ \{}
+\DoxyCodeLine{\Hypertarget{HealthController_8java_source_l00074}00074\ \ \ \ \ Map<String,\ Object>\ response\ =\ \textcolor{keyword}{new}\ HashMap<>();}
+\DoxyCodeLine{\Hypertarget{HealthController_8java_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{HealthController_8java_source_l00076}00076\ \ \ \ \ \textcolor{keywordflow}{try}\ (Connection\ conn\ =\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1HealthController_a426cd7d61e7495000d723597a0efd638}{dataSource}}.getConnection())\ \{}
+\DoxyCodeLine{\Hypertarget{HealthController_8java_source_l00077}00077\ \ \ \ \ \ \ \textcolor{keywordtype}{boolean}\ isValid\ =\ conn.isValid(2);}
+\DoxyCodeLine{\Hypertarget{HealthController_8java_source_l00078}00078\ }
+\DoxyCodeLine{\Hypertarget{HealthController_8java_source_l00079}00079\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (isValid)\ \{}
+\DoxyCodeLine{\Hypertarget{HealthController_8java_source_l00080}00080\ \ \ \ \ \ \ \ \ response.put(\textcolor{stringliteral}{"{}status"{}},\ \textcolor{stringliteral}{"{}UP"{}});}
+\DoxyCodeLine{\Hypertarget{HealthController_8java_source_l00081}00081\ \ \ \ \ \ \ \ \ response.put(\textcolor{stringliteral}{"{}database"{}},\ \textcolor{stringliteral}{"{}Connected"{}});}
+\DoxyCodeLine{\Hypertarget{HealthController_8java_source_l00082}00082\ \ \ \ \ \ \ \ \ response.put(\textcolor{stringliteral}{"{}catalog"{}},\ conn.getCatalog());}
+\DoxyCodeLine{\Hypertarget{HealthController_8java_source_l00083}00083\ \ \ \ \ \ \ \ \ response.put(\textcolor{stringliteral}{"{}url"{}},\ conn.getMetaData().getURL());}
+\DoxyCodeLine{\Hypertarget{HealthController_8java_source_l00084}00084\ \ \ \ \ \ \ \ \ response.put(\textcolor{stringliteral}{"{}timestamp"{}},\ System.currentTimeMillis());}
+\DoxyCodeLine{\Hypertarget{HealthController_8java_source_l00085}00085\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ResponseEntity.ok(response);}
+\DoxyCodeLine{\Hypertarget{HealthController_8java_source_l00086}00086\ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{HealthController_8java_source_l00087}00087\ \ \ \ \ \ \ \ \ response.put(\textcolor{stringliteral}{"{}status"{}},\ \textcolor{stringliteral}{"{}DOWN"{}});}
+\DoxyCodeLine{\Hypertarget{HealthController_8java_source_l00088}00088\ \ \ \ \ \ \ \ \ response.put(\textcolor{stringliteral}{"{}database"{}},\ \textcolor{stringliteral}{"{}Connection\ not\ valid"{}});}
+\DoxyCodeLine{\Hypertarget{HealthController_8java_source_l00089}00089\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ResponseEntity.status(HttpStatus.SERVICE\_UNAVAILABLE).body(response);}
+\DoxyCodeLine{\Hypertarget{HealthController_8java_source_l00090}00090\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{HealthController_8java_source_l00091}00091\ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (Exception\ e)\ \{}
+\DoxyCodeLine{\Hypertarget{HealthController_8java_source_l00092}00092\ \ \ \ \ \ \ response.put(\textcolor{stringliteral}{"{}status"{}},\ \textcolor{stringliteral}{"{}DOWN"{}});}
+\DoxyCodeLine{\Hypertarget{HealthController_8java_source_l00093}00093\ \ \ \ \ \ \ response.put(\textcolor{stringliteral}{"{}database"{}},\ \textcolor{stringliteral}{"{}Connection\ failed"{}});}
+\DoxyCodeLine{\Hypertarget{HealthController_8java_source_l00094}00094\ \ \ \ \ \ \ response.put(\textcolor{stringliteral}{"{}error"{}},\ e.getMessage());}
+\DoxyCodeLine{\Hypertarget{HealthController_8java_source_l00095}00095\ \ \ \ \ \ \ response.put(\textcolor{stringliteral}{"{}timestamp"{}},\ System.currentTimeMillis());}
+\DoxyCodeLine{\Hypertarget{HealthController_8java_source_l00096}00096\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ResponseEntity.status(HttpStatus.SERVICE\_UNAVAILABLE).body(response);}
+\DoxyCodeLine{\Hypertarget{HealthController_8java_source_l00097}00097\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{HealthController_8java_source_l00098}00098\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{HealthController_8java_source_l00099}00099\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1AuthService" kind="class" language="Java" prot="public">
+    <compoundname>es::ull::esit::app::middleware::service::AuthService</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1AuthService_1a5f8c4d7884ca1dad59c49fa01752dc1b" prot="private" static="no" mutable="no">
+        <type>final <ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient" kindref="compound">ApiClient</ref></type>
+        <definition>final ApiClient es.ull.esit.app.middleware.service.AuthService.client</definition>
+        <argsstring></argsstring>
+        <name>client</name>
+        <qualifiedname>es.ull.esit.app.middleware.service.AuthService.client</qualifiedname>
+        <briefdescription>
+<para>REST API client used to communicate with the backend login endpoint. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/middleware/service/AuthService.java" line="15" column="27" bodyfile="src/main/java/es/ull/esit/app/middleware/service/AuthService.java" bodystart="15" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1AuthService_1a209d7332f625de6f8bc885407f3498a1" compoundref="AuthService_8java" startline="37" endline="48">es.ull.esit.app.middleware.service.AuthService.authenticate</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1AuthService_1ad0929f3c7755847b8da6531c20cf683e" compoundref="AuthService_8java" startline="22" endline="24">es.ull.esit.app.middleware.service.AuthService.AuthService</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1AuthService_1ad0929f3c7755847b8da6531c20cf683e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>es.ull.esit.app.middleware.service.AuthService.AuthService</definition>
+        <argsstring>(ApiClient client)</argsstring>
+        <name>AuthService</name>
+        <qualifiedname>es.ull.esit.app.middleware.service.AuthService.AuthService</qualifiedname>
+        <param>
+          <type><ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient" kindref="compound">ApiClient</ref></type>
+          <declname>client</declname>
+        </param>
+        <briefdescription>
+<para>Constructs an <ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1AuthService" kindref="compound">AuthService</ref> with the given API client. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>client</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[<ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient" kindref="compound">ApiClient</ref>] Client used to perform HTTP requests to the backend. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/middleware/service/AuthService.java" line="22" column="10" bodyfile="src/main/java/es/ull/esit/app/middleware/service/AuthService.java" bodystart="22" bodyend="24"/>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1AuthService_1a5f8c4d7884ca1dad59c49fa01752dc1b" compoundref="AuthService_8java" startline="15">es.ull.esit.app.middleware.service.AuthService.client</references>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1AuthService_1a209d7332f625de6f8bc885407f3498a1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User" kindref="compound">User</ref></type>
+        <definition>User es.ull.esit.app.middleware.service.AuthService.authenticate</definition>
+        <argsstring>(String username, String password)</argsstring>
+        <name>authenticate</name>
+        <qualifiedname>es.ull.esit.app.middleware.service.AuthService.authenticate</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>username</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>password</declname>
+        </param>
+        <briefdescription>
+<para>Attempts to authenticate a user against the backend. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>   Validates username and password locally, then calls
+   ApiClient.login(username, password). If validation fails or the
+   server rejects the credentials, an exception is thrown.
+</verbatim></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>username</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[String] Username entered by the user. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>password</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[String] Password entered by the user. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>[<ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User" kindref="compound">User</ref>] Authenticated user object returned by the backend. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/middleware/service/AuthService.java" line="37" column="15" bodyfile="src/main/java/es/ull/esit/app/middleware/service/AuthService.java" bodystart="37" bodyend="48"/>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1AuthService_1a5f8c4d7884ca1dad59c49fa01752dc1b" compoundref="AuthService_8java" startline="15">es.ull.esit.app.middleware.service.AuthService.client</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Service responsible for handling authentication logic on the client side. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>   Performs local validation of credentials and delegates the actual login
+   process to the ApiClient.
+</verbatim> </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>es.ull.esit.app.middleware.service.AuthService</label>
+        <link refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1AuthService"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-client</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>es.ull.esit.app.middleware.ApiClient</label>
+        <link refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/main/java/es/ull/esit/app/middleware/service/AuthService.java" line="12" column="7" bodyfile="src/main/java/es/ull/esit/app/middleware/service/AuthService.java" bodystart="12" bodyend="49"/>
+    <listofallmembers>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1AuthService_1a209d7332f625de6f8bc885407f3498a1" prot="public" virt="non-virtual"><scope>es::ull::esit::app::middleware::service::AuthService</scope><name>authenticate</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1AuthService_1ad0929f3c7755847b8da6531c20cf683e" prot="public" virt="non-virtual"><scope>es::ull::esit::app::middleware::service::AuthService</scope><name>AuthService</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1AuthService_1a5f8c4d7884ca1dad59c49fa01752dc1b" prot="private" virt="non-virtual"><scope>es::ull::esit::app::middleware::service::AuthService</scope><name>client</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

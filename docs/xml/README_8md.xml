@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="README_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">&lt;h1&gt;<sp/>Black<sp/>Plate:<sp/>Restaurant<sp/>Management<sp/>System<sp/>using<sp/>Maven<sp/>Java<sp/>&lt;/h1&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;img<sp/>width=&quot;468&quot;<sp/>alt=&quot;Picture2&quot;<sp/>src=&quot;https://github.com/user-attachments/assets/31e73cdd-dd44-498a-bb92-486e502745be&quot;&gt;<sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[![Quality<sp/>gate](http://localhost:9000/api/project_badges/quality_gate?project=RestaurantSystem&amp;token=sqb_d4b8129844e80ce55ab6731a3a7e958499353208)](http://localhost:9000/dashboard?id=RestaurantSystem)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;h2&gt;<sp/>About<sp/>&lt;/h2&gt;<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>profession<sp/>of<sp/>managing<sp/>a<sp/>restaurant.<sp/>It<sp/>includes<sp/>the<sp/>principles<sp/>of<sp/>OOP<sp/>and<sp/>using<sp/>Java<sp/>function<sp/>of<sp/>planning,<sp/>organizing,<sp/>staffing,<sp/>directing,<sp/>developing<sp/>an<sp/>attitude<sp/>in<sp/>food<sp/>and<sp/>beverage<sp/>control<sp/>systems,<sp/>and<sp/>efficiently<sp/>and<sp/>effectively<sp/>planning<sp/>menus<sp/>at<sp/>profitable<sp/>prices,<sp/>taking<sp/>into<sp/>consideration<sp/>constraints<sp/>and<sp/>others.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;h2&gt;More<sp/>info<sp/>on<sp/>the<sp/>wiki&lt;/h2&gt;</highlight></codeline>
+<codeline><highlight class="normal">https://github.com/alu0101132617/restaurant-system/wiki</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;h2&gt;<sp/>Tools<sp/>used:<sp/>&lt;/h2&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Java<sp/>Development<sp/>Kit<sp/>(JDK)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Maven</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>JUnit<sp/>(for<sp/>testing)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;h2&gt;<sp/>Database:<sp/>&lt;/h2&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>MySql</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;h2&gt;<sp/><sp/>Functionality:<sp/>&lt;/h2&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Increases<sp/>operational<sp/>efficiency.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Helps<sp/>the<sp/>restaurant<sp/>manager<sp/>to<sp/>manage<sp/>the<sp/>restaurant<sp/>more<sp/>effectively<sp/>and<sp/>efficiently<sp/>by<sp/>computerizing<sp/>Meal<sp/>Ordering,<sp/>Cart,<sp/>and<sp/>Restaurant<sp/>Management<sp/>Accounting.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Avoids<sp/>paperwork.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Simple<sp/>to<sp/>learn<sp/>and<sp/>easy<sp/>to<sp/>use.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;h2&gt;<sp/>Clarification<sp/>of<sp/>important<sp/>information:<sp/>&lt;/h2&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>system<sp/>is<sp/>between<sp/>the<sp/>customer<sp/>and<sp/>waiter<sp/>in<sp/>the<sp/>restaurant<sp/>and<sp/>it&apos;s<sp/>not<sp/>a<sp/>virtual<sp/>system.<sp/>The<sp/>waiter<sp/>takes<sp/>customer<sp/>orders.<sp/>Our<sp/>system<sp/>will<sp/>facilitate<sp/>the<sp/>process<sp/>of<sp/>taking<sp/>orders.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;h2&gt;<sp/>Application&apos;s<sp/>GUI:<sp/>&lt;/h2&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;img<sp/>width=&quot;922&quot;<sp/>alt=&quot;Screen<sp/>Shot<sp/>2024-08-19<sp/>at<sp/>1<sp/>52<sp/>45<sp/>AM&quot;<sp/>src=&quot;https://github.com/user-attachments/assets/5710f1e5-2de4-4c66-83e5-042630acbe26&quot;&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;br&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;h3&gt;<sp/>1.<sp/>Logged<sp/>in<sp/>as<sp/>an<sp/>Admin:<sp/>(Username:<sp/>admin,<sp/>Password:<sp/>admin)<sp/>&lt;/h3&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;img<sp/>width=&quot;922&quot;<sp/>alt=&quot;Screen<sp/>Shot<sp/>2024-08-19<sp/>at<sp/>1<sp/>53<sp/>22<sp/>AM&quot;<sp/>src=&quot;https://github.com/user-attachments/assets/587ec9d4-050f-4687-86ab-3f217948c09f&quot;&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;br&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;h3&gt;<sp/>Update<sp/>Prices<sp/>choice:<sp/>&lt;/h3&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;img<sp/>width=&quot;1243&quot;<sp/>alt=&quot;Screen<sp/>Shot<sp/>2024-08-19<sp/>at<sp/>1<sp/>54<sp/>13<sp/>AM&quot;<sp/>src=&quot;https://github.com/user-attachments/assets/49bb9ba4-899c-4e66-afcc-a116a98d95d9&quot;&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;br&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;h3&gt;<sp/>Menu<sp/>choice<sp/>to<sp/>see<sp/>the<sp/>previous<sp/>updates:<sp/>&lt;/h3&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;img<sp/>width=&quot;1243&quot;<sp/>alt=&quot;Screen<sp/>Shot<sp/>2024-08-19<sp/>at<sp/>1<sp/>53<sp/>57<sp/>AM&quot;<sp/>src=&quot;https://github.com/user-attachments/assets/6671a0e2-da0e-4d92-9703-7d0925795261&quot;&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;br&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;h3&gt;<sp/>2.<sp/>Logged<sp/>in<sp/>as<sp/>a<sp/>Cashier:<sp/>(Any<sp/>username<sp/>&amp;<sp/>password)<sp/>&lt;/h3&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;img<sp/>width=&quot;925&quot;<sp/>alt=&quot;Screen<sp/>Shot<sp/>2024-08-19<sp/>at<sp/>3<sp/>10<sp/>27<sp/>AM&quot;<sp/>src=&quot;https://github.com/user-attachments/assets/6984412b-8897-488e-a898-0c0fbdbf01ef&quot;&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;br&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;h3&gt;<sp/>Menu<sp/>choice:<sp/>&lt;/h3&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;img<sp/>width=&quot;1243&quot;<sp/>alt=&quot;Screen<sp/>Shot<sp/>2024-08-19<sp/>at<sp/>1<sp/>53<sp/>57<sp/>AM&quot;<sp/>src=&quot;https://github.com/user-attachments/assets/6671a0e2-da0e-4d92-9703-7d0925795261&quot;&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;br&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;h3&gt;<sp/>Save<sp/>Receipt:<sp/>&lt;/h3&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;img<sp/>width=&quot;1235&quot;<sp/>alt=&quot;Screen<sp/>Shot<sp/>2024-08-19<sp/>at<sp/>1<sp/>56<sp/>06<sp/>AM&quot;<sp/>src=&quot;https://github.com/user-attachments/assets/8be21f86-1e68-4605-8606-c14e63853696&quot;&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;br&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;h3&gt;<sp/>All<sp/>Receipt<sp/>that<sp/>has<sp/>been<sp/>saved,<sp/>will<sp/>be<sp/>shown<sp/>in<sp/>the<sp/>JavaApplication2<sp/>UPDATED<sp/>file:<sp/>&lt;/h3&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;img<sp/>width=&quot;391&quot;<sp/>alt=&quot;Screen<sp/>Shot<sp/>2024-08-19<sp/>at<sp/>3<sp/>09<sp/>02<sp/>AM&quot;<sp/>src=&quot;https://github.com/user-attachments/assets/22b8a887-f432-4cc2-95df-cd15ceeb0767&quot;&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;br&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;h3&gt;<sp/>About<sp/>us<sp/>choice:<sp/>&lt;/h3&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;img<sp/>width=&quot;1235&quot;<sp/>alt=&quot;Screen<sp/>Shot<sp/>2024-08-19<sp/>at<sp/>1<sp/>55<sp/>38<sp/>AM&quot;<sp/>src=&quot;https://github.com/user-attachments/assets/bdf9d36f-739e-49d7-b9ce-5655d3943a0a&quot;&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;h2&gt;<sp/>Database<sp/>Schema:<sp/>&lt;/h2&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;img<sp/>width=&quot;468&quot;<sp/>alt=&quot;Picture2&quot;<sp/>src=&quot;https://github.com/user-attachments/assets/3d2ef6c9-9aed-42c0-8d1e-0f35134fe680&quot;&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;img<sp/>width=&quot;468&quot;<sp/>alt=&quot;Picture3&quot;<sp/>src=&quot;https://github.com/user-attachments/assets/9ebc7997-7673-42eb-9141-d3669a6790b2&quot;&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/>&lt;h2&gt;<sp/>Classes<sp/>UML:<sp/>&lt;/h2&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/>&lt;img<sp/>width=&quot;468&quot;<sp/>alt=&quot;Picture4&quot;<sp/>src=&quot;https://github.com/user-attachments/assets/829b58be-f702-4479-9cd4-cf9be6285803&quot;&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Configuración<sp/>de<sp/>la<sp/>BBDD<sp/>(MySQL<sp/>/<sp/>MariaDB)</highlight></codeline>
+<codeline><highlight class="normal">Antes<sp/>de<sp/>ejecutar<sp/>la<sp/>aplicación,<sp/>se<sp/>debe<sp/>tener<sp/>instalado<sp/>MySQL<sp/>ó<sp/>MariaDB<sp/>y<sp/>haber<sp/>creado<sp/>la<sp/>base<sp/>de<sp/>datos<sp/>correspondiente.</highlight></codeline>
+<codeline><highlight class="normal">0.<sp/>Asegurarse<sp/>de<sp/>que<sp/>el<sp/>gestor<sp/>de<sp/>base<sp/>de<sp/>datos<sp/>está<sp/>instalado<sp/>y<sp/>ejecutándose:</highlight></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">sudo<sp/>systemctl<sp/>status<sp/>mysql/mariadb</highlight></codeline>
+<codeline><highlight class="normal">sudo<sp/>systemctl<sp/>start<sp/>mysql/mariadb</highlight></codeline>
+<codeline><highlight class="normal">sudo<sp/>systemctl<sp/>enable<sp/>mysql/mariadb</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">1.<sp/>Iniciar<sp/>sesión<sp/>en<sp/>el<sp/>gestor<sp/>de<sp/>base<sp/>de<sp/>datos:</highlight></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">sudo<sp/>mysql<sp/>-u<sp/>root<sp/>-p</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">2.<sp/>Crear<sp/>la<sp/>base<sp/>de<sp/>datos<sp/>del<sp/>sistema:</highlight></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">CREATE<sp/>DATABASE<sp/>project3;</highlight></codeline>
+<codeline><highlight class="normal">USE<sp/>project3;</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">3.<sp/>Importar<sp/>el<sp/>script<sp/>de<sp/>creación<sp/>de<sp/>tablas<sp/>y<sp/>datos<sp/>iniciales<sp/>(archivo<sp/>database.sql<sp/>incluido<sp/>en<sp/>el<sp/>proyecto):</highlight></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">SOURCE<sp/>ruta/al/proyecto/database.sql;</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">4.<sp/>Verificar<sp/>que<sp/>las<sp/>tablas<sp/>se<sp/>hayan<sp/>creado<sp/>correctamente:</highlight></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">SHOW<sp/>TABLES;</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">5.<sp/>Ejecutar<sp/>el<sp/>proyecto:</highlight></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">mvn<sp/>exec:java<sp/></highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+    </programlisting>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

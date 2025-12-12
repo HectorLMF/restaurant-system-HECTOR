@@ -1,0 +1,5 @@
+<map id="es.ull.esit.app.middleware.service.ProductService" name="es.ull.esit.app.middleware.service.ProductService">
+<area shape="rect" id="Node000001" title="Service handling business logic for menu products." alt="" coords="5,656,247,1016"/>
+<area shape="rect" id="Node000002" href="$classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient.html" title="API client for interacting with the backend REST API." alt="" coords="31,5,221,585"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="129,585,129,640,123,640,123,585"/>
+</map>

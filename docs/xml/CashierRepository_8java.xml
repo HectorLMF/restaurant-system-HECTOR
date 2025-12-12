@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="CashierRepository_8java" kind="file" language="Java">
+    <compoundname>CashierRepository.java</compoundname>
+    <includes local="no">es.ull.esit.server.middleware.model.Cashier</includes>
+    <includes local="no">org.springframework.data.jpa.repository.JpaRepository</includes>
+    <includes local="no">java.util.Optional</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>CashierRepository.java</label>
+        <link refid="CashierRepository_8java"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>es.ull.esit.server.middleware.model.Cashier</label>
+      </node>
+      <node id="4">
+        <label>java.util.Optional</label>
+      </node>
+      <node id="3">
+        <label>org.springframework.data.jpa.repository.JpaRepository</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="interfacees_1_1ull_1_1esit_1_1server_1_1repo_1_1CashierRepository" prot="public">es::ull::esit::server::repo::CashierRepository</innerclass>
+    <innernamespace refid="namespacees_1_1ull_1_1esit_1_1server_1_1repo">es::ull::esit::server::repo</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">package<sp/></highlight><highlight class="normal">es.ull.esit.server.repo;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>es.ull.esit.server.middleware.model.Cashier;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>org.springframework.data.jpa.repository.JpaRepository;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>java.util.Optional;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="interfacees_1_1ull_1_1esit_1_1server_1_1repo_1_1CashierRepository" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">interface<sp/></highlight><highlight class="normal"><ref refid="interfacees_1_1ull_1_1esit_1_1server_1_1repo_1_1CashierRepository" kindref="compound">CashierRepository</ref><sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/>JpaRepository&lt;Cashier,<sp/>Long&gt;<sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="interfacees_1_1ull_1_1esit_1_1server_1_1repo_1_1CashierRepository_1a2c79609677b849928d1a5bf5b32e61b3" refkind="member"><highlight class="normal"><sp/><sp/>Optional&lt;Cashier&gt;<sp/><ref refid="interfacees_1_1ull_1_1esit_1_1server_1_1repo_1_1CashierRepository_1a2c79609677b849928d1a5bf5b32e61b3" kindref="member">findByName</ref>(String<sp/>name);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="server/src/main/java/es/ull/esit/server/repo/CashierRepository.java"/>
+  </compounddef>
+</doxygen>

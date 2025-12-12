@@ -1,0 +1,1252 @@
+\begin{theindex}
+
+  \item {00-\/create-\/db.sql}, \hyperpage{277}
+  \item {01-\/tables.sql}, \hyperpage{277}
+  \item {02-\/procedures.sql}, \hyperpage{280}
+  \item {03-\/triggers.sql}, \hyperpage{280}
+  \item {04-\/privileges.sql}, \hyperpage{281}
+  \item {05-\/data.sql}, \hyperpage{281}
+
+  \indexspace
+
+  \item {AboutUs}
+    \subitem {es.ull.esit.app.AboutUs}, \hyperpage{41}
+  \item {AboutUs.java}, \hyperpage{302}
+  \item {addAppetizer}
+    \subitem {es.ull.esit.app.middleware.service.ProductService}, 
+		\hyperpage{248}
+  \item {addDrink}
+    \subitem {es.ull.esit.app.middleware.service.ProductService}, 
+		\hyperpage{248}
+  \item {addMainCourse}
+    \subitem {es.ull.esit.app.middleware.service.ProductService}, 
+		\hyperpage{249}
+  \item {AdminLogin}
+    \subitem {es.ull.esit.app.AdminLogin}, \hyperpage{50}
+  \item {AdminLogin.java}, \hyperpage{304}
+  \item {AdminProducts}
+    \subitem {es.ull.esit.app.AdminProducts}, \hyperpage{60}
+  \item {AdminProducts.java}, \hyperpage{306, 307}
+  \item {API\_APPETIZERS}
+    \subitem {es.ull.esit.app.middleware.ApiClient}, \hyperpage{92}
+  \item {API\_DRINKS}
+    \subitem {es.ull.esit.app.middleware.ApiClient}, \hyperpage{92}
+  \item {API\_LOGIN}
+    \subitem {es.ull.esit.app.middleware.ApiClient}, \hyperpage{92}
+  \item {API\_MAINCOURSES}
+    \subitem {es.ull.esit.app.middleware.ApiClient}, \hyperpage{92}
+  \item {ApiClient}
+    \subitem {es.ull.esit.app.middleware.ApiClient}, \hyperpage{81}
+  \item {ApiClient.java}, \hyperpage{328, 329}
+  \item {ApiClientException}
+    \subitem {es.ull.esit.app.middleware.ApiClientException}, 
+		\hyperpage{95}
+  \item {ApiClientException.java}, \hyperpage{333}
+  \item {app Directory Reference}, \hyperpage{23}
+  \item {Appetizer}
+    \subitem {es.ull.esit.app.middleware.model.Appetizer}, 
+		\hyperpage{97, 98}
+    \subitem {es.ull.esit.server.middleware.model.Appetizer}, 
+		\hyperpage{104, 105}
+  \item {Appetizer.java}, \hyperpage{333--336}
+  \item {AppetizerController.java}, \hyperpage{288}
+  \item {appetizerPnl}
+    \subitem {es.ull.esit.app.Order}, \hyperpage{237}
+  \item {appetizerRepository}
+    \subitem {es.ull.esit.server.controller.AppetizerController}, 
+		\hyperpage{113}
+    \subitem {es.ull.esit.server.controller.MenuController}, 
+		\hyperpage{215}
+  \item {AppetizerRepository.java}, \hyperpage{297, 298}
+  \item {appetizersId}
+    \subitem {es.ull.esit.app.middleware.model.Appetizer}, 
+		\hyperpage{102}
+    \subitem {es.ull.esit.server.middleware.model.Appetizer}, 
+		\hyperpage{107}
+  \item {appetizersModel}
+    \subitem {es.ull.esit.app.Order}, \hyperpage{237}
+  \item {appetizersPrice}
+    \subitem {es.ull.esit.app.middleware.model.Appetizer}, 
+		\hyperpage{102}
+    \subitem {es.ull.esit.server.middleware.model.Appetizer}, 
+		\hyperpage{107}
+  \item {appetizersScroll}
+    \subitem {es.ull.esit.app.Order}, \hyperpage{237}
+  \item {appetizersTable}
+    \subitem {es.ull.esit.app.Order}, \hyperpage{237}
+  \item {APPLICATION\_JSON}
+    \subitem {es.ull.esit.app.middleware.ApiClient}, \hyperpage{92}
+  \item {ApplicationLauncher.java}, \hyperpage{319}
+  \item {AuthController.java}, \hyperpage{289, 290}
+  \item {authenticate}
+    \subitem {es.ull.esit.app.middleware.service.AuthService}, 
+		\hyperpage{122}
+  \item {AuthService}
+    \subitem {es.ull.esit.app.middleware.service.AuthService}, 
+		\hyperpage{122}
+  \item {authService}
+    \subitem {es.ull.esit.app.Login}, \hyperpage{190}
+  \item {AuthService.java}, \hyperpage{349}
+
+  \indexspace
+
+  \item {baseUrl}
+    \subitem {es.ull.esit.app.middleware.ApiClient}, \hyperpage{92}
+  \item {BillResult}
+    \subitem {es.ull.esit.app.middleware.model.BillResult}, 
+		\hyperpage{125}
+  \item {BillResult.java}, \hyperpage{336, 337}
+
+  \indexspace
+
+  \item {calculateBill}
+    \subitem {es.ull.esit.app.middleware.service.OrderService}, 
+		\hyperpage{243}
+  \item {call}
+    \subitem {es.ull.esit.app.middleware.ApiClient.IOCallable$<$ T $>$}, 
+		\hyperpage{181}
+  \item {Cashier}
+    \subitem {es.ull.esit.app.middleware.model.Cashier}, 
+		\hyperpage{128, 129}
+    \subitem {es.ull.esit.server.middleware.model.Cashier}, 
+		\hyperpage{133, 134}
+  \item {Cashier.java}, \hyperpage{337--339}
+  \item {CashierController.java}, \hyperpage{290, 291}
+  \item {CashierLogin}
+    \subitem {es.ull.esit.app.CashierLogin}, \hyperpage{147}
+  \item {CashierLogin.java}, \hyperpage{320}
+  \item {cashierRepository}
+    \subitem {es.ull.esit.server.controller.CashierController}, 
+		\hyperpage{143}
+  \item {CashierRepository.java}, \hyperpage{298}
+  \item {cashierSupplier}
+    \subitem {es.ull.esit.app.CashierLogin}, \hyperpage{154}
+  \item {checkDatabase}
+    \subitem {es.ull.esit.server.controller.HealthController}, 
+		\hyperpage{178}
+  \item {checkMenuStatus}
+    \subitem {es.ull.esit.app.middleware.service.ReportService}, 
+		\hyperpage{259}
+  \item {client}
+    \subitem {es.ull.esit.app.middleware.service.AuthService}, 
+		\hyperpage{123}
+    \subitem {es.ull.esit.app.middleware.service.ProductService}, 
+		\hyperpage{256}
+    \subitem {es.ull.esit.app.middleware.service.ReportService}, 
+		\hyperpage{260}
+  \item {config Directory Reference}, \hyperpage{24}
+  \item {CONTENT\_TYPE}
+    \subitem {es.ull.esit.app.middleware.ApiClient}, \hyperpage{93}
+  \item {controller Directory Reference}, \hyperpage{24}
+  \item {createAppetizer}
+    \subitem {es.ull.esit.app.middleware.ApiClient}, \hyperpage{82}
+    \subitem {es.ull.esit.server.controller.AppetizerController}, 
+		\hyperpage{109}
+  \item {createDrink}
+    \subitem {es.ull.esit.app.middleware.ApiClient}, \hyperpage{82}
+    \subitem {es.ull.esit.server.controller.DrinkController}, 
+		\hyperpage{171}
+  \item {createMainCourse}
+    \subitem {es.ull.esit.app.middleware.ApiClient}, \hyperpage{82}
+    \subitem {es.ull.esit.server.controller.MainCourseController}, 
+		\hyperpage{207}
+
+  \indexspace
+
+  \item {dataSource}
+    \subitem {es.ull.esit.server.controller.HealthController}, 
+		\hyperpage{180}
+  \item {db Directory Reference}, \hyperpage{25}
+  \item {deleteAppetizer}
+    \subitem {es.ull.esit.app.middleware.ApiClient}, \hyperpage{83}
+    \subitem {es.ull.esit.server.controller.AppetizerController}, 
+		\hyperpage{109}
+  \item {deleteDrink}
+    \subitem {es.ull.esit.app.middleware.ApiClient}, \hyperpage{83}
+    \subitem {es.ull.esit.server.controller.DrinkController}, 
+		\hyperpage{171}
+  \item {deleteMainCourse}
+    \subitem {es.ull.esit.app.middleware.ApiClient}, \hyperpage{84}
+    \subitem {es.ull.esit.server.controller.MainCourseController}, 
+		\hyperpage{207}
+  \item {Drink}
+    \subitem {es.ull.esit.app.middleware.model.Drink}, 
+		\hyperpage{159, 160}
+    \subitem {es.ull.esit.server.middleware.model.Drink}, 
+		\hyperpage{166, 167}
+  \item {Drink.java}, \hyperpage{340--342}
+  \item {DrinkController.java}, \hyperpage{292}
+  \item {drinkRepository}
+    \subitem {es.ull.esit.server.controller.DrinkController}, 
+		\hyperpage{175}
+    \subitem {es.ull.esit.server.controller.MenuController}, 
+		\hyperpage{215}
+  \item {DrinkRepository.java}, \hyperpage{299}
+  \item {drinksId}
+    \subitem {es.ull.esit.app.middleware.model.Drink}, \hyperpage{164}
+    \subitem {es.ull.esit.server.middleware.model.Drink}, 
+		\hyperpage{169}
+  \item {drinksModel}
+    \subitem {es.ull.esit.app.Order}, \hyperpage{237}
+  \item {drinksPnl}
+    \subitem {es.ull.esit.app.Order}, \hyperpage{237}
+  \item {drinksPrice}
+    \subitem {es.ull.esit.app.middleware.model.Drink}, \hyperpage{164}
+    \subitem {es.ull.esit.server.middleware.model.Drink}, 
+		\hyperpage{169}
+  \item {drinksScroll}
+    \subitem {es.ull.esit.app.Order}, \hyperpage{238}
+  \item {drinksTable}
+    \subitem {es.ull.esit.app.Order}, \hyperpage{238}
+
+  \indexspace
+
+  \item {es Directory Reference}, \hyperpage{25}
+  \item {es.ull.esit.app}, \hyperpage{35}
+  \item {es.ull.esit.app.AboutUs}, \hyperpage{39}
+    \subitem {AboutUs}, \hyperpage{41}
+    \subitem {initComponents}, \hyperpage{42}
+    \subitem {jButton3}, \hyperpage{45}
+    \subitem {jButton3ActionPerformed}, \hyperpage{44}
+    \subitem {jLabel1}, \hyperpage{45}
+    \subitem {jPanel1}, \hyperpage{45}
+    \subitem {jScrollPane1}, \hyperpage{45}
+    \subitem {main}, \hyperpage{44}
+    \subitem {ourStory}, \hyperpage{46}
+    \subitem {textBlock}, \hyperpage{46}
+  \item {es.ull.esit.app.AdminLogin}, \hyperpage{47}
+    \subitem {AdminLogin}, \hyperpage{50}
+    \subitem {initComponents}, \hyperpage{50}
+    \subitem {jButton1}, \hyperpage{55}
+    \subitem {jButton1ActionPerformed}, \hyperpage{52}
+    \subitem {jButton2}, \hyperpage{55}
+    \subitem {jButton2ActionPerformed}, \hyperpage{53}
+    \subitem {jButton3}, \hyperpage{55}
+    \subitem {jButton3ActionPerformed}, \hyperpage{53}
+    \subitem {jLabel1}, \hyperpage{55}
+    \subitem {jLabel3}, \hyperpage{55}
+    \subitem {jPanel1}, \hyperpage{55}
+    \subitem {LOGGER}, \hyperpage{56}
+    \subitem {main}, \hyperpage{54}
+    \subitem {PRIMARY\_FONT}, \hyperpage{56}
+  \item {es.ull.esit.app.AdminProducts}, \hyperpage{57}
+    \subitem {AdminProducts}, \hyperpage{60}
+    \subitem {FIRST\_COLUMN\_HEADER}, \hyperpage{76}
+    \subitem {initComponents}, \hyperpage{61}
+    \subitem {jButton1ActionPerformed}, \hyperpage{68}
+    \subitem {jButton2ActionPerformed}, \hyperpage{68}
+    \subitem {jButton3ActionPerformed}, \hyperpage{69}
+    \subitem {jButton4ActionPerformed}, \hyperpage{69}
+    \subitem {jButton5ActionPerformed}, \hyperpage{70}
+    \subitem {jButton6ActionPerformed}, \hyperpage{70}
+    \subitem {jButton7ActionPerformed}, \hyperpage{71}
+    \subitem {jTable1KeyPressed}, \hyperpage{72}
+    \subitem {jTable1MouseClicked}, \hyperpage{72}
+    \subitem {jTable2MouseClicked}, \hyperpage{73}
+    \subitem {jTable3MouseClicked}, \hyperpage{74}
+    \subitem {LOGGER}, \hyperpage{76}
+    \subitem {main}, \hyperpage{75}
+    \subitem {PRIMARY\_FONT}, \hyperpage{77}
+    \subitem {productService}, \hyperpage{77}
+    \subitem {refreshAllTables}, \hyperpage{76}
+    \subitem {SECOND\_COLUMN\_HEADER}, \hyperpage{77}
+    \subitem {SECONDARY\_FONT}, \hyperpage{77}
+    \subitem {THIRD\_COLUMN\_HEADER}, \hyperpage{77}
+    \subitem {UPDATE\_STRING}, \hyperpage{78}
+  \item {es.ull.esit.app.ApplicationLauncher}, \hyperpage{115}
+    \subitem {loginFactory}, \hyperpage{116}
+    \subitem {main}, \hyperpage{115}
+  \item {es.ull.esit.app.CashierLogin}, \hyperpage{143}
+    \subitem {CashierLogin}, \hyperpage{147}
+    \subitem {cashierSupplier}, \hyperpage{154}
+    \subitem {initComponents}, \hyperpage{148}
+    \subitem {jButton1}, \hyperpage{154}
+    \subitem {jButton1ActionPerformed}, \hyperpage{150}
+    \subitem {jButton2}, \hyperpage{154}
+    \subitem {jButton2ActionPerformed}, \hyperpage{151}
+    \subitem {jButton3}, \hyperpage{154}
+    \subitem {jButton3ActionPerformed}, \hyperpage{151}
+    \subitem {jLabel1}, \hyperpage{154}
+    \subitem {jPanel1}, \hyperpage{154}
+    \subitem {LOGGER}, \hyperpage{155}
+    \subitem {main}, \hyperpage{152}
+    \subitem {PRIMARY\_FONT}, \hyperpage{155}
+    \subitem {reportService}, \hyperpage{155}
+    \subitem {updateWelcomeMessage}, \hyperpage{153}
+    \subitem {welcomeTxt}, \hyperpage{155}
+  \item {es.ull.esit.app.Login}, \hyperpage{182}
+    \subitem {authService}, \hyperpage{190}
+    \subitem {initComponents}, \hyperpage{186}
+    \subitem {jButton1}, \hyperpage{190}
+    \subitem {jButton1ActionPerformed}, \hyperpage{188}
+    \subitem {jLabel1}, \hyperpage{190}
+    \subitem {jLabel3}, \hyperpage{191}
+    \subitem {jPanel1}, \hyperpage{191}
+    \subitem {jPasswordField1}, \hyperpage{191}
+    \subitem {Login}, \hyperpage{185}
+    \subitem {LOGIN\_STRING}, \hyperpage{191}
+    \subitem {loginFactory}, \hyperpage{191}
+    \subitem {main}, \hyperpage{189}
+    \subitem {PRIMARY\_FONT}, \hyperpage{192}
+    \subitem {usernametxt}, \hyperpage{192}
+    \subitem {usertypecmbo}, \hyperpage{192}
+    \subitem {usertypecmboActionPerformed}, \hyperpage{190}
+  \item {es.ull.esit.app.Login.MessageDialog}, \hyperpage{216}
+    \subitem {showMessage}, \hyperpage{216}
+  \item {es.ull.esit.app.middleware}, \hyperpage{35}
+  \item {es.ull.esit.app.middleware.ApiClient}, \hyperpage{78}
+    \subitem {API\_APPETIZERS}, \hyperpage{92}
+    \subitem {API\_DRINKS}, \hyperpage{92}
+    \subitem {API\_LOGIN}, \hyperpage{92}
+    \subitem {API\_MAINCOURSES}, \hyperpage{92}
+    \subitem {ApiClient}, \hyperpage{81}
+    \subitem {APPLICATION\_JSON}, \hyperpage{92}
+    \subitem {baseUrl}, \hyperpage{92}
+    \subitem {CONTENT\_TYPE}, \hyperpage{93}
+    \subitem {createAppetizer}, \hyperpage{82}
+    \subitem {createDrink}, \hyperpage{82}
+    \subitem {createMainCourse}, \hyperpage{82}
+    \subitem {deleteAppetizer}, \hyperpage{83}
+    \subitem {deleteDrink}, \hyperpage{83}
+    \subitem {deleteMainCourse}, \hyperpage{84}
+    \subitem {getAllAppetizers}, \hyperpage{84}
+    \subitem {getAllCashiers}, \hyperpage{84}
+    \subitem {getAllDrinks}, \hyperpage{85}
+    \subitem {getAllMainCourses}, \hyperpage{85}
+    \subitem {getAppetizerById}, \hyperpage{85}
+    \subitem {getCashierById}, \hyperpage{86}
+    \subitem {getCashierByName}, \hyperpage{86}
+    \subitem {getDrinkById}, \hyperpage{87}
+    \subitem {getMainCourseById}, \hyperpage{87}
+    \subitem {http}, \hyperpage{93}
+    \subitem {LOGGER}, \hyperpage{93}
+    \subitem {login}, \hyperpage{88}
+    \subitem {mapper}, \hyperpage{93}
+    \subitem {updateAppetizer}, \hyperpage{89}
+    \subitem {updateCashier}, \hyperpage{89}
+    \subitem {updateDrink}, \hyperpage{90}
+    \subitem {updateMainCourse}, \hyperpage{91}
+  \item {es.ull.esit.app.middleware.ApiClient.IOCallable$<$ T $>$}, 
+		\hyperpage{181}
+    \subitem {call}, \hyperpage{181}
+  \item {es.ull.esit.app.middleware.ApiClient.ResponseHandler$<$ R $>$}, 
+		\hyperpage{260}
+    \subitem {handle}, \hyperpage{261}
+  \item {es.ull.esit.app.middleware.ApiClientException}, \hyperpage{94}
+    \subitem {ApiClientException}, \hyperpage{95}
+  \item {es.ull.esit.app.middleware.model}, \hyperpage{36}
+  \item {es.ull.esit.app.middleware.model.Appetizer}, \hyperpage{96}
+    \subitem {Appetizer}, \hyperpage{97, 98}
+    \subitem {appetizersId}, \hyperpage{102}
+    \subitem {appetizersPrice}, \hyperpage{102}
+    \subitem {getAppetizersId}, \hyperpage{98}
+    \subitem {getAppetizersPrice}, \hyperpage{99}
+    \subitem {getItemAppetizers}, \hyperpage{99}
+    \subitem {getReceiptId}, \hyperpage{100}
+    \subitem {itemAppetizers}, \hyperpage{102}
+    \subitem {receiptId}, \hyperpage{102}
+    \subitem {setAppetizersId}, \hyperpage{100}
+    \subitem {setAppetizersPrice}, \hyperpage{100}
+    \subitem {setItemAppetizers}, \hyperpage{101}
+    \subitem {setReceiptId}, \hyperpage{101}
+  \item {es.ull.esit.app.middleware.model.BillResult}, \hyperpage{123}
+    \subitem {BillResult}, \hyperpage{125}
+    \subitem {getSubTotal}, \hyperpage{125}
+    \subitem {getTotal}, \hyperpage{125}
+    \subitem {getVat}, \hyperpage{125}
+    \subitem {subTotal}, \hyperpage{126}
+    \subitem {total}, \hyperpage{126}
+    \subitem {vat}, \hyperpage{126}
+  \item {es.ull.esit.app.middleware.model.Cashier}, \hyperpage{127}
+    \subitem {Cashier}, \hyperpage{128, 129}
+    \subitem {getId}, \hyperpage{129}
+    \subitem {getName}, \hyperpage{129}
+    \subitem {getSalary}, \hyperpage{130}
+    \subitem {id}, \hyperpage{131}
+    \subitem {name}, \hyperpage{131}
+    \subitem {salary}, \hyperpage{131}
+    \subitem {setId}, \hyperpage{130}
+    \subitem {setName}, \hyperpage{130}
+    \subitem {setSalary}, \hyperpage{131}
+  \item {es.ull.esit.app.middleware.model.Drink}, \hyperpage{157}
+    \subitem {Drink}, \hyperpage{159, 160}
+    \subitem {drinksId}, \hyperpage{164}
+    \subitem {drinksPrice}, \hyperpage{164}
+    \subitem {getDrinksId}, \hyperpage{160}
+    \subitem {getDrinksPrice}, \hyperpage{161}
+    \subitem {getItemDrinks}, \hyperpage{161}
+    \subitem {getReceiptId}, \hyperpage{162}
+    \subitem {itemDrinks}, \hyperpage{164}
+    \subitem {receiptId}, \hyperpage{164}
+    \subitem {setDrinksId}, \hyperpage{162}
+    \subitem {setDrinksPrice}, \hyperpage{162}
+    \subitem {setItemDrinks}, \hyperpage{163}
+    \subitem {setReceiptId}, \hyperpage{163}
+  \item {es.ull.esit.app.middleware.model.MainCourse}, \hyperpage{194}
+    \subitem {foodId}, \hyperpage{200}
+    \subitem {foodPrice}, \hyperpage{200}
+    \subitem {getFoodId}, \hyperpage{196}
+    \subitem {getFoodPrice}, \hyperpage{197}
+    \subitem {getItemFood}, \hyperpage{197}
+    \subitem {getReceiptId}, \hyperpage{198}
+    \subitem {itemFood}, \hyperpage{200}
+    \subitem {MainCourse}, \hyperpage{195, 196}
+    \subitem {receiptId}, \hyperpage{200}
+    \subitem {setFoodId}, \hyperpage{198}
+    \subitem {setFoodPrice}, \hyperpage{198}
+    \subitem {setItemFood}, \hyperpage{199}
+    \subitem {setReceiptId}, \hyperpage{199}
+  \item {es.ull.esit.app.middleware.model.User}, \hyperpage{264}
+    \subitem {getRole}, \hyperpage{267}
+    \subitem {getUsername}, \hyperpage{267}
+    \subitem {isAdmin}, \hyperpage{267}
+    \subitem {role}, \hyperpage{269}
+    \subitem {setRole}, \hyperpage{268}
+    \subitem {setUsername}, \hyperpage{268}
+    \subitem {User}, \hyperpage{265, 266}
+    \subitem {username}, \hyperpage{269}
+  \item {es.ull.esit.app.middleware.service}, \hyperpage{36}
+  \item {es.ull.esit.app.middleware.service.AuthService}, 
+		\hyperpage{121}
+    \subitem {authenticate}, \hyperpage{122}
+    \subitem {AuthService}, \hyperpage{122}
+    \subitem {client}, \hyperpage{123}
+  \item {es.ull.esit.app.middleware.service.OrderService}, 
+		\hyperpage{243}
+    \subitem {calculateBill}, \hyperpage{243}
+    \subitem {generateReceiptFile}, \hyperpage{244}
+    \subitem {VAT\_RATE}, \hyperpage{245}
+  \item {es.ull.esit.app.middleware.service.ProductService}, 
+		\hyperpage{245}
+    \subitem {addAppetizer}, \hyperpage{248}
+    \subitem {addDrink}, \hyperpage{248}
+    \subitem {addMainCourse}, \hyperpage{249}
+    \subitem {client}, \hyperpage{256}
+    \subitem {getAllAppetizers}, \hyperpage{250}
+    \subitem {getAllDrinks}, \hyperpage{250}
+    \subitem {getAllMainCourses}, \hyperpage{250}
+    \subitem {getAppetizerById}, \hyperpage{251}
+    \subitem {getDrinkById}, \hyperpage{251}
+    \subitem {getMainCourseById}, \hyperpage{251}
+    \subitem {ProductService}, \hyperpage{247}
+    \subitem {updateAppetizer}, \hyperpage{252}
+    \subitem {updateDrink}, \hyperpage{253}
+    \subitem {updateMainCourse}, \hyperpage{253}
+    \subitem {validateAndParsePrice}, \hyperpage{254}
+    \subitem {validateName}, \hyperpage{255}
+  \item {es.ull.esit.app.middleware.service.ReportService}, 
+		\hyperpage{257}
+    \subitem {checkMenuStatus}, \hyperpage{259}
+    \subitem {client}, \hyperpage{260}
+    \subitem {getCashierInfo}, \hyperpage{259}
+    \subitem {ReportService}, \hyperpage{258}
+  \item {es.ull.esit.app.Order}, \hyperpage{217}
+    \subitem {appetizerPnl}, \hyperpage{237}
+    \subitem {appetizersModel}, \hyperpage{237}
+    \subitem {appetizersScroll}, \hyperpage{237}
+    \subitem {appetizersTable}, \hyperpage{237}
+    \subitem {drinksModel}, \hyperpage{237}
+    \subitem {drinksPnl}, \hyperpage{237}
+    \subitem {drinksScroll}, \hyperpage{238}
+    \subitem {drinksTable}, \hyperpage{238}
+    \subitem {fillAppetizers}, \hyperpage{223}
+    \subitem {fillDrinks}, \hyperpage{223}
+    \subitem {fillMains}, \hyperpage{224}
+    \subitem {goBackMenueBtn}, \hyperpage{238}
+    \subitem {goBackMenueBtnActionPerformed}, \hyperpage{224}
+    \subitem {initComponents}, \hyperpage{225}
+    \subitem {jLabel1}, \hyperpage{238}
+    \subitem {jLabel2}, \hyperpage{238}
+    \subitem {jPanel1}, \hyperpage{239}
+    \subitem {jPanel2}, \hyperpage{239}
+    \subitem {lastBill}, \hyperpage{239}
+    \subitem {loadMenuFromDatabase}, \hyperpage{229}
+    \subitem {LOGGER}, \hyperpage{239}
+    \subitem {main}, \hyperpage{230}
+    \subitem {mainCoursePnl}, \hyperpage{239}
+    \subitem {mainsModel}, \hyperpage{240}
+    \subitem {mainsScroll}, \hyperpage{240}
+    \subitem {mainsTable}, \hyperpage{240}
+    \subitem {newReceiptBtn}, \hyperpage{240}
+    \subitem {newReceiptBtnActionPerformed}, \hyperpage{231}
+    \subitem {Order}, \hyperpage{222}
+    \subitem {orderService}, \hyperpage{240}
+    \subitem {payBtn}, \hyperpage{241}
+    \subitem {payBtnActionPerformed}, \hyperpage{232}
+    \subitem {PRIMARY\_FONT}, \hyperpage{241}
+    \subitem {PRIMARY\_FONT\_LIGHT}, \hyperpage{241}
+    \subitem {productService}, \hyperpage{241}
+    \subitem {receiptNoLbl}, \hyperpage{241}
+    \subitem {resetQtyColumn}, \hyperpage{233}
+    \subitem {saveReceiptBtn}, \hyperpage{242}
+    \subitem {saveReceiptBtnActionPerformed}, \hyperpage{233}
+    \subitem {setupTables}, \hyperpage{234}
+    \subitem {subTotalLbl}, \hyperpage{242}
+    \subitem {sumFromModel}, \hyperpage{235}
+    \subitem {totalLbl}, \hyperpage{242}
+    \subitem {vatLbl}, \hyperpage{242}
+  \item {es.ull.esit.server}, \hyperpage{36}
+  \item {es.ull.esit.server.config}, \hyperpage{37}
+  \item {es.ull.esit.server.config.SecurityConfig}, \hyperpage{262}
+    \subitem {filterChain}, \hyperpage{263}
+    \subitem {passwordEncoder}, \hyperpage{263}
+  \item {es.ull.esit.server.controller}, \hyperpage{37}
+  \item {es.ull.esit.server.controller.AppetizerController}, 
+		\hyperpage{108}
+    \subitem {appetizerRepository}, \hyperpage{113}
+    \subitem {createAppetizer}, \hyperpage{109}
+    \subitem {deleteAppetizer}, \hyperpage{109}
+    \subitem {getAllAppetizers}, \hyperpage{110}
+    \subitem {getAppetizerById}, \hyperpage{111}
+    \subitem {updateAppetizer}, \hyperpage{112}
+  \item {es.ull.esit.server.controller.AuthController}, \hyperpage{116}
+    \subitem {LOG}, \hyperpage{120}
+    \subitem {login}, \hyperpage{118}
+    \subitem {passwordEncoder}, \hyperpage{120}
+    \subitem {userRepository}, \hyperpage{120}
+  \item {es.ull.esit.server.controller.AuthController.LoginRequest}, 
+		\hyperpage{193}
+    \subitem {password}, \hyperpage{193}
+    \subitem {username}, \hyperpage{193}
+  \item {es.ull.esit.server.controller.CashierController}, 
+		\hyperpage{138}
+    \subitem {cashierRepository}, \hyperpage{143}
+    \subitem {getAllCashiers}, \hyperpage{139}
+    \subitem {getCashierById}, \hyperpage{139}
+    \subitem {getCashierByName}, \hyperpage{140}
+    \subitem {updateCashier}, \hyperpage{141}
+  \item {es.ull.esit.server.controller.DrinkController}, 
+		\hyperpage{170}
+    \subitem {createDrink}, \hyperpage{171}
+    \subitem {deleteDrink}, \hyperpage{171}
+    \subitem {drinkRepository}, \hyperpage{175}
+    \subitem {getAllDrinks}, \hyperpage{172}
+    \subitem {getDrinkById}, \hyperpage{173}
+    \subitem {updateDrink}, \hyperpage{174}
+  \item {es.ull.esit.server.controller.HealthController}, 
+		\hyperpage{177}
+    \subitem {checkDatabase}, \hyperpage{178}
+    \subitem {dataSource}, \hyperpage{180}
+    \subitem {health}, \hyperpage{179}
+  \item {es.ull.esit.server.controller.MainCourseController}, 
+		\hyperpage{206}
+    \subitem {createMainCourse}, \hyperpage{207}
+    \subitem {deleteMainCourse}, \hyperpage{207}
+    \subitem {getAllMainCourses}, \hyperpage{208}
+    \subitem {getMainCourseById}, \hyperpage{209}
+    \subitem {mainCourseRepository}, \hyperpage{211}
+    \subitem {updateMainCourse}, \hyperpage{210}
+  \item {es.ull.esit.server.controller.MenuController}, \hyperpage{213}
+    \subitem {appetizerRepository}, \hyperpage{215}
+    \subitem {drinkRepository}, \hyperpage{215}
+    \subitem {getFullMenu}, \hyperpage{215}
+    \subitem {mainCourseRepository}, \hyperpage{215}
+  \item {es.ull.esit.server.middleware.model}, \hyperpage{37}
+  \item {es.ull.esit.server.middleware.model.Appetizer}, 
+		\hyperpage{103}
+    \subitem {Appetizer}, \hyperpage{104, 105}
+    \subitem {appetizersId}, \hyperpage{107}
+    \subitem {appetizersPrice}, \hyperpage{107}
+    \subitem {getAppetizersId}, \hyperpage{105}
+    \subitem {getAppetizersPrice}, \hyperpage{105}
+    \subitem {getItemAppetizers}, \hyperpage{106}
+    \subitem {itemAppetizers}, \hyperpage{107}
+    \subitem {setAppetizersId}, \hyperpage{106}
+    \subitem {setAppetizersPrice}, \hyperpage{106}
+    \subitem {setItemAppetizers}, \hyperpage{107}
+  \item {es.ull.esit.server.middleware.model.Cashier}, \hyperpage{132}
+    \subitem {Cashier}, \hyperpage{133, 134}
+    \subitem {getId}, \hyperpage{135}
+    \subitem {getName}, \hyperpage{135}
+    \subitem {getSalary}, \hyperpage{135}
+    \subitem {id}, \hyperpage{137}
+    \subitem {name}, \hyperpage{137}
+    \subitem {salary}, \hyperpage{137}
+    \subitem {setId}, \hyperpage{135}
+    \subitem {setName}, \hyperpage{136}
+    \subitem {setSalary}, \hyperpage{136}
+  \item {es.ull.esit.server.middleware.model.Drink}, \hyperpage{165}
+    \subitem {Drink}, \hyperpage{166, 167}
+    \subitem {drinksId}, \hyperpage{169}
+    \subitem {drinksPrice}, \hyperpage{169}
+    \subitem {getDrinksId}, \hyperpage{167}
+    \subitem {getDrinksPrice}, \hyperpage{167}
+    \subitem {getItemDrinks}, \hyperpage{168}
+    \subitem {itemDrinks}, \hyperpage{169}
+    \subitem {setDrinksId}, \hyperpage{168}
+    \subitem {setDrinksPrice}, \hyperpage{168}
+    \subitem {setItemDrinks}, \hyperpage{169}
+  \item {es.ull.esit.server.middleware.model.MainCourse}, 
+		\hyperpage{201}
+    \subitem {foodId}, \hyperpage{205}
+    \subitem {foodPrice}, \hyperpage{205}
+    \subitem {getFoodId}, \hyperpage{203}
+    \subitem {getFoodPrice}, \hyperpage{203}
+    \subitem {getItemFood}, \hyperpage{204}
+    \subitem {itemFood}, \hyperpage{205}
+    \subitem {MainCourse}, \hyperpage{202, 203}
+    \subitem {setFoodId}, \hyperpage{204}
+    \subitem {setFoodPrice}, \hyperpage{204}
+    \subitem {setItemFood}, \hyperpage{205}
+  \item {es.ull.esit.server.middleware.model.User}, \hyperpage{269}
+    \subitem {getId}, \hyperpage{271}
+    \subitem {getPasswordHash}, \hyperpage{271}
+    \subitem {getRole}, \hyperpage{272}
+    \subitem {getUsername}, \hyperpage{272}
+    \subitem {id}, \hyperpage{274}
+    \subitem {passwordHash}, \hyperpage{274}
+    \subitem {role}, \hyperpage{274}
+    \subitem {setId}, \hyperpage{272}
+    \subitem {setPasswordHash}, \hyperpage{273}
+    \subitem {setRole}, \hyperpage{273}
+    \subitem {setUsername}, \hyperpage{273}
+    \subitem {username}, \hyperpage{274}
+  \item {es.ull.esit.server.repo}, \hyperpage{38}
+  \item {es.ull.esit.server.repo.AppetizerRepository}, \hyperpage{114}
+  \item {es.ull.esit.server.repo.CashierRepository}, \hyperpage{156}
+    \subitem {findByName}, \hyperpage{157}
+  \item {es.ull.esit.server.repo.DrinkRepository}, \hyperpage{176}
+  \item {es.ull.esit.server.repo.MainCourseRepository}, \hyperpage{212}
+  \item {es.ull.esit.server.repo.UserRepository}, \hyperpage{275}
+    \subitem {findByUsername}, \hyperpage{276}
+  \item {es.ull.esit.server.RestaurantApplication}, \hyperpage{261}
+    \subitem {main}, \hyperpage{262}
+  \item {esit Directory Reference}, \hyperpage{26}
+
+  \indexspace
+
+  \item {fillAppetizers}
+    \subitem {es.ull.esit.app.Order}, \hyperpage{223}
+  \item {fillDrinks}
+    \subitem {es.ull.esit.app.Order}, \hyperpage{223}
+  \item {fillMains}
+    \subitem {es.ull.esit.app.Order}, \hyperpage{224}
+  \item {filterChain}
+    \subitem {es.ull.esit.server.config.SecurityConfig}, 
+		\hyperpage{263}
+  \item {findByName}
+    \subitem {es.ull.esit.server.repo.CashierRepository}, 
+		\hyperpage{157}
+  \item {findByUsername}
+    \subitem {es.ull.esit.server.repo.UserRepository}, \hyperpage{276}
+  \item {FIRST\_COLUMN\_HEADER}
+    \subitem {es.ull.esit.app.AdminProducts}, \hyperpage{76}
+  \item {foodId}
+    \subitem {es.ull.esit.app.middleware.model.MainCourse}, 
+		\hyperpage{200}
+    \subitem {es.ull.esit.server.middleware.model.MainCourse}, 
+		\hyperpage{205}
+  \item {foodPrice}
+    \subitem {es.ull.esit.app.middleware.model.MainCourse}, 
+		\hyperpage{200}
+    \subitem {es.ull.esit.server.middleware.model.MainCourse}, 
+		\hyperpage{205}
+
+  \indexspace
+
+  \item {generateReceiptFile}
+    \subitem {es.ull.esit.app.middleware.service.OrderService}, 
+		\hyperpage{244}
+  \item {getAllAppetizers}
+    \subitem {es.ull.esit.app.middleware.ApiClient}, \hyperpage{84}
+    \subitem {es.ull.esit.app.middleware.service.ProductService}, 
+		\hyperpage{250}
+    \subitem {es.ull.esit.server.controller.AppetizerController}, 
+		\hyperpage{110}
+  \item {getAllCashiers}
+    \subitem {es.ull.esit.app.middleware.ApiClient}, \hyperpage{84}
+    \subitem {es.ull.esit.server.controller.CashierController}, 
+		\hyperpage{139}
+  \item {getAllDrinks}
+    \subitem {es.ull.esit.app.middleware.ApiClient}, \hyperpage{85}
+    \subitem {es.ull.esit.app.middleware.service.ProductService}, 
+		\hyperpage{250}
+    \subitem {es.ull.esit.server.controller.DrinkController}, 
+		\hyperpage{172}
+  \item {getAllMainCourses}
+    \subitem {es.ull.esit.app.middleware.ApiClient}, \hyperpage{85}
+    \subitem {es.ull.esit.app.middleware.service.ProductService}, 
+		\hyperpage{250}
+    \subitem {es.ull.esit.server.controller.MainCourseController}, 
+		\hyperpage{208}
+  \item {getAppetizerById}
+    \subitem {es.ull.esit.app.middleware.ApiClient}, \hyperpage{85}
+    \subitem {es.ull.esit.app.middleware.service.ProductService}, 
+		\hyperpage{251}
+    \subitem {es.ull.esit.server.controller.AppetizerController}, 
+		\hyperpage{111}
+  \item {getAppetizersId}
+    \subitem {es.ull.esit.app.middleware.model.Appetizer}, 
+		\hyperpage{98}
+    \subitem {es.ull.esit.server.middleware.model.Appetizer}, 
+		\hyperpage{105}
+  \item {getAppetizersPrice}
+    \subitem {es.ull.esit.app.middleware.model.Appetizer}, 
+		\hyperpage{99}
+    \subitem {es.ull.esit.server.middleware.model.Appetizer}, 
+		\hyperpage{105}
+  \item {getCashierById}
+    \subitem {es.ull.esit.app.middleware.ApiClient}, \hyperpage{86}
+    \subitem {es.ull.esit.server.controller.CashierController}, 
+		\hyperpage{139}
+  \item {getCashierByName}
+    \subitem {es.ull.esit.app.middleware.ApiClient}, \hyperpage{86}
+    \subitem {es.ull.esit.server.controller.CashierController}, 
+		\hyperpage{140}
+  \item {getCashierInfo}
+    \subitem {es.ull.esit.app.middleware.service.ReportService}, 
+		\hyperpage{259}
+  \item {getDrinkById}
+    \subitem {es.ull.esit.app.middleware.ApiClient}, \hyperpage{87}
+    \subitem {es.ull.esit.app.middleware.service.ProductService}, 
+		\hyperpage{251}
+    \subitem {es.ull.esit.server.controller.DrinkController}, 
+		\hyperpage{173}
+  \item {getDrinksId}
+    \subitem {es.ull.esit.app.middleware.model.Drink}, \hyperpage{160}
+    \subitem {es.ull.esit.server.middleware.model.Drink}, 
+		\hyperpage{167}
+  \item {getDrinksPrice}
+    \subitem {es.ull.esit.app.middleware.model.Drink}, \hyperpage{161}
+    \subitem {es.ull.esit.server.middleware.model.Drink}, 
+		\hyperpage{167}
+  \item {getFoodId}
+    \subitem {es.ull.esit.app.middleware.model.MainCourse}, 
+		\hyperpage{196}
+    \subitem {es.ull.esit.server.middleware.model.MainCourse}, 
+		\hyperpage{203}
+  \item {getFoodPrice}
+    \subitem {es.ull.esit.app.middleware.model.MainCourse}, 
+		\hyperpage{197}
+    \subitem {es.ull.esit.server.middleware.model.MainCourse}, 
+		\hyperpage{203}
+  \item {getFullMenu}
+    \subitem {es.ull.esit.server.controller.MenuController}, 
+		\hyperpage{215}
+  \item {getId}
+    \subitem {es.ull.esit.app.middleware.model.Cashier}, 
+		\hyperpage{129}
+    \subitem {es.ull.esit.server.middleware.model.Cashier}, 
+		\hyperpage{135}
+    \subitem {es.ull.esit.server.middleware.model.User}, 
+		\hyperpage{271}
+  \item {getItemAppetizers}
+    \subitem {es.ull.esit.app.middleware.model.Appetizer}, 
+		\hyperpage{99}
+    \subitem {es.ull.esit.server.middleware.model.Appetizer}, 
+		\hyperpage{106}
+  \item {getItemDrinks}
+    \subitem {es.ull.esit.app.middleware.model.Drink}, \hyperpage{161}
+    \subitem {es.ull.esit.server.middleware.model.Drink}, 
+		\hyperpage{168}
+  \item {getItemFood}
+    \subitem {es.ull.esit.app.middleware.model.MainCourse}, 
+		\hyperpage{197}
+    \subitem {es.ull.esit.server.middleware.model.MainCourse}, 
+		\hyperpage{204}
+  \item {getMainCourseById}
+    \subitem {es.ull.esit.app.middleware.ApiClient}, \hyperpage{87}
+    \subitem {es.ull.esit.app.middleware.service.ProductService}, 
+		\hyperpage{251}
+    \subitem {es.ull.esit.server.controller.MainCourseController}, 
+		\hyperpage{209}
+  \item {getName}
+    \subitem {es.ull.esit.app.middleware.model.Cashier}, 
+		\hyperpage{129}
+    \subitem {es.ull.esit.server.middleware.model.Cashier}, 
+		\hyperpage{135}
+  \item {getPasswordHash}
+    \subitem {es.ull.esit.server.middleware.model.User}, 
+		\hyperpage{271}
+  \item {getReceiptId}
+    \subitem {es.ull.esit.app.middleware.model.Appetizer}, 
+		\hyperpage{100}
+    \subitem {es.ull.esit.app.middleware.model.Drink}, \hyperpage{162}
+    \subitem {es.ull.esit.app.middleware.model.MainCourse}, 
+		\hyperpage{198}
+  \item {getRole}
+    \subitem {es.ull.esit.app.middleware.model.User}, \hyperpage{267}
+    \subitem {es.ull.esit.server.middleware.model.User}, 
+		\hyperpage{272}
+  \item {getSalary}
+    \subitem {es.ull.esit.app.middleware.model.Cashier}, 
+		\hyperpage{130}
+    \subitem {es.ull.esit.server.middleware.model.Cashier}, 
+		\hyperpage{135}
+  \item {getSubTotal}
+    \subitem {es.ull.esit.app.middleware.model.BillResult}, 
+		\hyperpage{125}
+  \item {getTotal}
+    \subitem {es.ull.esit.app.middleware.model.BillResult}, 
+		\hyperpage{125}
+  \item {getUsername}
+    \subitem {es.ull.esit.app.middleware.model.User}, \hyperpage{267}
+    \subitem {es.ull.esit.server.middleware.model.User}, 
+		\hyperpage{272}
+  \item {getVat}
+    \subitem {es.ull.esit.app.middleware.model.BillResult}, 
+		\hyperpage{125}
+  \item {goBackMenueBtn}
+    \subitem {es.ull.esit.app.Order}, \hyperpage{238}
+  \item {goBackMenueBtnActionPerformed}
+    \subitem {es.ull.esit.app.Order}, \hyperpage{224}
+
+  \indexspace
+
+  \item {handle}
+    \subitem {es.ull.esit.app.middleware.ApiClient.ResponseHandler$<$ R $>$}, 
+		\hyperpage{261}
+  \item {health}
+    \subitem {es.ull.esit.server.controller.HealthController}, 
+		\hyperpage{179}
+  \item {HealthController.java}, \hyperpage{293, 294}
+  \item {http}
+    \subitem {es.ull.esit.app.middleware.ApiClient}, \hyperpage{93}
+
+  \indexspace
+
+  \item {id}
+    \subitem {es.ull.esit.app.middleware.model.Cashier}, 
+		\hyperpage{131}
+    \subitem {es.ull.esit.server.middleware.model.Cashier}, 
+		\hyperpage{137}
+    \subitem {es.ull.esit.server.middleware.model.User}, 
+		\hyperpage{274}
+  \item {init.sql}, \hyperpage{283}
+  \item {initComponents}
+    \subitem {es.ull.esit.app.AboutUs}, \hyperpage{42}
+    \subitem {es.ull.esit.app.AdminLogin}, \hyperpage{50}
+    \subitem {es.ull.esit.app.AdminProducts}, \hyperpage{61}
+    \subitem {es.ull.esit.app.CashierLogin}, \hyperpage{148}
+    \subitem {es.ull.esit.app.Login}, \hyperpage{186}
+    \subitem {es.ull.esit.app.Order}, \hyperpage{225}
+  \item {isAdmin}
+    \subitem {es.ull.esit.app.middleware.model.User}, \hyperpage{267}
+  \item {itemAppetizers}
+    \subitem {es.ull.esit.app.middleware.model.Appetizer}, 
+		\hyperpage{102}
+    \subitem {es.ull.esit.server.middleware.model.Appetizer}, 
+		\hyperpage{107}
+  \item {itemDrinks}
+    \subitem {es.ull.esit.app.middleware.model.Drink}, \hyperpage{164}
+    \subitem {es.ull.esit.server.middleware.model.Drink}, 
+		\hyperpage{169}
+  \item {itemFood}
+    \subitem {es.ull.esit.app.middleware.model.MainCourse}, 
+		\hyperpage{200}
+    \subitem {es.ull.esit.server.middleware.model.MainCourse}, 
+		\hyperpage{205}
+
+  \indexspace
+
+  \item {java Directory Reference}, \hyperpage{27}
+  \item {jButton1}
+    \subitem {es.ull.esit.app.AdminLogin}, \hyperpage{55}
+    \subitem {es.ull.esit.app.CashierLogin}, \hyperpage{154}
+    \subitem {es.ull.esit.app.Login}, \hyperpage{190}
+  \item {jButton1ActionPerformed}
+    \subitem {es.ull.esit.app.AdminLogin}, \hyperpage{52}
+    \subitem {es.ull.esit.app.AdminProducts}, \hyperpage{68}
+    \subitem {es.ull.esit.app.CashierLogin}, \hyperpage{150}
+    \subitem {es.ull.esit.app.Login}, \hyperpage{188}
+  \item {jButton2}
+    \subitem {es.ull.esit.app.AdminLogin}, \hyperpage{55}
+    \subitem {es.ull.esit.app.CashierLogin}, \hyperpage{154}
+  \item {jButton2ActionPerformed}
+    \subitem {es.ull.esit.app.AdminLogin}, \hyperpage{53}
+    \subitem {es.ull.esit.app.AdminProducts}, \hyperpage{68}
+    \subitem {es.ull.esit.app.CashierLogin}, \hyperpage{151}
+  \item {jButton3}
+    \subitem {es.ull.esit.app.AboutUs}, \hyperpage{45}
+    \subitem {es.ull.esit.app.AdminLogin}, \hyperpage{55}
+    \subitem {es.ull.esit.app.CashierLogin}, \hyperpage{154}
+  \item {jButton3ActionPerformed}
+    \subitem {es.ull.esit.app.AboutUs}, \hyperpage{44}
+    \subitem {es.ull.esit.app.AdminLogin}, \hyperpage{53}
+    \subitem {es.ull.esit.app.AdminProducts}, \hyperpage{69}
+    \subitem {es.ull.esit.app.CashierLogin}, \hyperpage{151}
+  \item {jButton4ActionPerformed}
+    \subitem {es.ull.esit.app.AdminProducts}, \hyperpage{69}
+  \item {jButton5ActionPerformed}
+    \subitem {es.ull.esit.app.AdminProducts}, \hyperpage{70}
+  \item {jButton6ActionPerformed}
+    \subitem {es.ull.esit.app.AdminProducts}, \hyperpage{70}
+  \item {jButton7ActionPerformed}
+    \subitem {es.ull.esit.app.AdminProducts}, \hyperpage{71}
+  \item {jLabel1}
+    \subitem {es.ull.esit.app.AboutUs}, \hyperpage{45}
+    \subitem {es.ull.esit.app.AdminLogin}, \hyperpage{55}
+    \subitem {es.ull.esit.app.CashierLogin}, \hyperpage{154}
+    \subitem {es.ull.esit.app.Login}, \hyperpage{190}
+    \subitem {es.ull.esit.app.Order}, \hyperpage{238}
+  \item {jLabel2}
+    \subitem {es.ull.esit.app.Order}, \hyperpage{238}
+  \item {jLabel3}
+    \subitem {es.ull.esit.app.AdminLogin}, \hyperpage{55}
+    \subitem {es.ull.esit.app.Login}, \hyperpage{191}
+  \item {jPanel1}
+    \subitem {es.ull.esit.app.AboutUs}, \hyperpage{45}
+    \subitem {es.ull.esit.app.AdminLogin}, \hyperpage{55}
+    \subitem {es.ull.esit.app.CashierLogin}, \hyperpage{154}
+    \subitem {es.ull.esit.app.Login}, \hyperpage{191}
+    \subitem {es.ull.esit.app.Order}, \hyperpage{239}
+  \item {jPanel2}
+    \subitem {es.ull.esit.app.Order}, \hyperpage{239}
+  \item {jPasswordField1}
+    \subitem {es.ull.esit.app.Login}, \hyperpage{191}
+  \item {jScrollPane1}
+    \subitem {es.ull.esit.app.AboutUs}, \hyperpage{45}
+  \item {jTable1KeyPressed}
+    \subitem {es.ull.esit.app.AdminProducts}, \hyperpage{72}
+  \item {jTable1MouseClicked}
+    \subitem {es.ull.esit.app.AdminProducts}, \hyperpage{72}
+  \item {jTable2MouseClicked}
+    \subitem {es.ull.esit.app.AdminProducts}, \hyperpage{73}
+  \item {jTable3MouseClicked}
+    \subitem {es.ull.esit.app.AdminProducts}, \hyperpage{74}
+
+  \indexspace
+
+  \item {lastBill}
+    \subitem {es.ull.esit.app.Order}, \hyperpage{239}
+  \item {loadMenuFromDatabase}
+    \subitem {es.ull.esit.app.Order}, \hyperpage{229}
+  \item {LOG}
+    \subitem {es.ull.esit.server.controller.AuthController}, 
+		\hyperpage{120}
+  \item {LOGGER}
+    \subitem {es.ull.esit.app.AdminLogin}, \hyperpage{56}
+    \subitem {es.ull.esit.app.AdminProducts}, \hyperpage{76}
+    \subitem {es.ull.esit.app.CashierLogin}, \hyperpage{155}
+    \subitem {es.ull.esit.app.middleware.ApiClient}, \hyperpage{93}
+    \subitem {es.ull.esit.app.Order}, \hyperpage{239}
+  \item {Login}
+    \subitem {es.ull.esit.app.Login}, \hyperpage{185}
+  \item {login}
+    \subitem {es.ull.esit.app.middleware.ApiClient}, \hyperpage{88}
+    \subitem {es.ull.esit.server.controller.AuthController}, 
+		\hyperpage{118}
+  \item {Login.java}, \hyperpage{324, 325}
+  \item {LOGIN\_STRING}
+    \subitem {es.ull.esit.app.Login}, \hyperpage{191}
+  \item {loginFactory}
+    \subitem {es.ull.esit.app.ApplicationLauncher}, \hyperpage{116}
+    \subitem {es.ull.esit.app.Login}, \hyperpage{191}
+
+  \indexspace
+
+  \item {main}
+    \subitem {es.ull.esit.app.AboutUs}, \hyperpage{44}
+    \subitem {es.ull.esit.app.AdminLogin}, \hyperpage{54}
+    \subitem {es.ull.esit.app.AdminProducts}, \hyperpage{75}
+    \subitem {es.ull.esit.app.ApplicationLauncher}, \hyperpage{115}
+    \subitem {es.ull.esit.app.CashierLogin}, \hyperpage{152}
+    \subitem {es.ull.esit.app.Login}, \hyperpage{189}
+    \subitem {es.ull.esit.app.Order}, \hyperpage{230}
+    \subitem {es.ull.esit.server.RestaurantApplication}, 
+		\hyperpage{262}
+  \item {main Directory Reference}, \hyperpage{28}
+  \item {MainCourse}
+    \subitem {es.ull.esit.app.middleware.model.MainCourse}, 
+		\hyperpage{195, 196}
+    \subitem {es.ull.esit.server.middleware.model.MainCourse}, 
+		\hyperpage{202, 203}
+  \item {MainCourse.java}, \hyperpage{343--345}
+  \item {MainCourseController.java}, \hyperpage{294, 295}
+  \item {mainCoursePnl}
+    \subitem {es.ull.esit.app.Order}, \hyperpage{239}
+  \item {mainCourseRepository}
+    \subitem {es.ull.esit.server.controller.MainCourseController}, 
+		\hyperpage{211}
+    \subitem {es.ull.esit.server.controller.MenuController}, 
+		\hyperpage{215}
+  \item {MainCourseRepository.java}, \hyperpage{299, 300}
+  \item {mainsModel}
+    \subitem {es.ull.esit.app.Order}, \hyperpage{240}
+  \item {mainsScroll}
+    \subitem {es.ull.esit.app.Order}, \hyperpage{240}
+  \item {mainsTable}
+    \subitem {es.ull.esit.app.Order}, \hyperpage{240}
+  \item {mapper}
+    \subitem {es.ull.esit.app.middleware.ApiClient}, \hyperpage{93}
+  \item {MenuController.java}, \hyperpage{296}
+  \item {middleware Directory Reference}, \hyperpage{29}
+  \item {model Directory Reference}, \hyperpage{30}
+
+  \indexspace
+
+  \item {name}
+    \subitem {es.ull.esit.app.middleware.model.Cashier}, 
+		\hyperpage{131}
+    \subitem {es.ull.esit.server.middleware.model.Cashier}, 
+		\hyperpage{137}
+  \item {newReceiptBtn}
+    \subitem {es.ull.esit.app.Order}, \hyperpage{240}
+  \item {newReceiptBtnActionPerformed}
+    \subitem {es.ull.esit.app.Order}, \hyperpage{231}
+
+  \indexspace
+
+  \item {Order}
+    \subitem {es.ull.esit.app.Order}, \hyperpage{222}
+  \item {Order.java}, \hyperpage{354}
+  \item {orderService}
+    \subitem {es.ull.esit.app.Order}, \hyperpage{240}
+  \item {OrderService.java}, \hyperpage{350}
+  \item {ourStory}
+    \subitem {es.ull.esit.app.AboutUs}, \hyperpage{46}
+
+  \indexspace
+
+  \item {password}
+    \subitem {es.ull.esit.server.controller.AuthController.LoginRequest}, 
+		\hyperpage{193}
+  \item {passwordEncoder}
+    \subitem {es.ull.esit.server.config.SecurityConfig}, 
+		\hyperpage{263}
+    \subitem {es.ull.esit.server.controller.AuthController}, 
+		\hyperpage{120}
+  \item {passwordHash}
+    \subitem {es.ull.esit.server.middleware.model.User}, 
+		\hyperpage{274}
+  \item {payBtn}
+    \subitem {es.ull.esit.app.Order}, \hyperpage{241}
+  \item {payBtnActionPerformed}
+    \subitem {es.ull.esit.app.Order}, \hyperpage{232}
+  \item {PRIMARY\_FONT}
+    \subitem {es.ull.esit.app.AdminLogin}, \hyperpage{56}
+    \subitem {es.ull.esit.app.AdminProducts}, \hyperpage{77}
+    \subitem {es.ull.esit.app.CashierLogin}, \hyperpage{155}
+    \subitem {es.ull.esit.app.Login}, \hyperpage{192}
+    \subitem {es.ull.esit.app.Order}, \hyperpage{241}
+  \item {PRIMARY\_FONT\_LIGHT}
+    \subitem {es.ull.esit.app.Order}, \hyperpage{241}
+  \item {ProductService}
+    \subitem {es.ull.esit.app.middleware.service.ProductService}, 
+		\hyperpage{247}
+  \item {productService}
+    \subitem {es.ull.esit.app.AdminProducts}, \hyperpage{77}
+    \subitem {es.ull.esit.app.Order}, \hyperpage{241}
+  \item {ProductService.java}, \hyperpage{351}
+
+  \indexspace
+
+  \item {README}, \hyperpage{1}
+  \item {README.md}, \hyperpage{286}
+  \item {receiptId}
+    \subitem {es.ull.esit.app.middleware.model.Appetizer}, 
+		\hyperpage{102}
+    \subitem {es.ull.esit.app.middleware.model.Drink}, \hyperpage{164}
+    \subitem {es.ull.esit.app.middleware.model.MainCourse}, 
+		\hyperpage{200}
+  \item {receiptNoLbl}
+    \subitem {es.ull.esit.app.Order}, \hyperpage{241}
+  \item {refreshAllTables}
+    \subitem {es.ull.esit.app.AdminProducts}, \hyperpage{76}
+  \item {repo Directory Reference}, \hyperpage{31}
+  \item {ReportService}
+    \subitem {es.ull.esit.app.middleware.service.ReportService}, 
+		\hyperpage{258}
+  \item {reportService}
+    \subitem {es.ull.esit.app.CashierLogin}, \hyperpage{155}
+  \item {ReportService.java}, \hyperpage{353}
+  \item {resetQtyColumn}
+    \subitem {es.ull.esit.app.Order}, \hyperpage{233}
+  \item {RestaurantApplication.java}, \hyperpage{301}
+  \item {role}
+    \subitem {es.ull.esit.app.middleware.model.User}, \hyperpage{269}
+    \subitem {es.ull.esit.server.middleware.model.User}, 
+		\hyperpage{274}
+
+  \indexspace
+
+  \item {salary}
+    \subitem {es.ull.esit.app.middleware.model.Cashier}, 
+		\hyperpage{131}
+    \subitem {es.ull.esit.server.middleware.model.Cashier}, 
+		\hyperpage{137}
+  \item {saveReceiptBtn}
+    \subitem {es.ull.esit.app.Order}, \hyperpage{242}
+  \item {saveReceiptBtnActionPerformed}
+    \subitem {es.ull.esit.app.Order}, \hyperpage{233}
+  \item {SECOND\_COLUMN\_HEADER}
+    \subitem {es.ull.esit.app.AdminProducts}, \hyperpage{77}
+  \item {SECONDARY\_FONT}
+    \subitem {es.ull.esit.app.AdminProducts}, \hyperpage{77}
+  \item {SecurityConfig.java}, \hyperpage{286, 287}
+  \item {server Directory Reference}, \hyperpage{31}
+  \item {service Directory Reference}, \hyperpage{32}
+  \item {setAppetizersId}
+    \subitem {es.ull.esit.app.middleware.model.Appetizer}, 
+		\hyperpage{100}
+    \subitem {es.ull.esit.server.middleware.model.Appetizer}, 
+		\hyperpage{106}
+  \item {setAppetizersPrice}
+    \subitem {es.ull.esit.app.middleware.model.Appetizer}, 
+		\hyperpage{100}
+    \subitem {es.ull.esit.server.middleware.model.Appetizer}, 
+		\hyperpage{106}
+  \item {setDrinksId}
+    \subitem {es.ull.esit.app.middleware.model.Drink}, \hyperpage{162}
+    \subitem {es.ull.esit.server.middleware.model.Drink}, 
+		\hyperpage{168}
+  \item {setDrinksPrice}
+    \subitem {es.ull.esit.app.middleware.model.Drink}, \hyperpage{162}
+    \subitem {es.ull.esit.server.middleware.model.Drink}, 
+		\hyperpage{168}
+  \item {setFoodId}
+    \subitem {es.ull.esit.app.middleware.model.MainCourse}, 
+		\hyperpage{198}
+    \subitem {es.ull.esit.server.middleware.model.MainCourse}, 
+		\hyperpage{204}
+  \item {setFoodPrice}
+    \subitem {es.ull.esit.app.middleware.model.MainCourse}, 
+		\hyperpage{198}
+    \subitem {es.ull.esit.server.middleware.model.MainCourse}, 
+		\hyperpage{204}
+  \item {setId}
+    \subitem {es.ull.esit.app.middleware.model.Cashier}, 
+		\hyperpage{130}
+    \subitem {es.ull.esit.server.middleware.model.Cashier}, 
+		\hyperpage{135}
+    \subitem {es.ull.esit.server.middleware.model.User}, 
+		\hyperpage{272}
+  \item {setItemAppetizers}
+    \subitem {es.ull.esit.app.middleware.model.Appetizer}, 
+		\hyperpage{101}
+    \subitem {es.ull.esit.server.middleware.model.Appetizer}, 
+		\hyperpage{107}
+  \item {setItemDrinks}
+    \subitem {es.ull.esit.app.middleware.model.Drink}, \hyperpage{163}
+    \subitem {es.ull.esit.server.middleware.model.Drink}, 
+		\hyperpage{169}
+  \item {setItemFood}
+    \subitem {es.ull.esit.app.middleware.model.MainCourse}, 
+		\hyperpage{199}
+    \subitem {es.ull.esit.server.middleware.model.MainCourse}, 
+		\hyperpage{205}
+  \item {setName}
+    \subitem {es.ull.esit.app.middleware.model.Cashier}, 
+		\hyperpage{130}
+    \subitem {es.ull.esit.server.middleware.model.Cashier}, 
+		\hyperpage{136}
+  \item {setPasswordHash}
+    \subitem {es.ull.esit.server.middleware.model.User}, 
+		\hyperpage{273}
+  \item {setReceiptId}
+    \subitem {es.ull.esit.app.middleware.model.Appetizer}, 
+		\hyperpage{101}
+    \subitem {es.ull.esit.app.middleware.model.Drink}, \hyperpage{163}
+    \subitem {es.ull.esit.app.middleware.model.MainCourse}, 
+		\hyperpage{199}
+  \item {setRole}
+    \subitem {es.ull.esit.app.middleware.model.User}, \hyperpage{268}
+    \subitem {es.ull.esit.server.middleware.model.User}, 
+		\hyperpage{273}
+  \item {setSalary}
+    \subitem {es.ull.esit.app.middleware.model.Cashier}, 
+		\hyperpage{131}
+    \subitem {es.ull.esit.server.middleware.model.Cashier}, 
+		\hyperpage{136}
+  \item {setupTables}
+    \subitem {es.ull.esit.app.Order}, \hyperpage{234}
+  \item {setUsername}
+    \subitem {es.ull.esit.app.middleware.model.User}, \hyperpage{268}
+    \subitem {es.ull.esit.server.middleware.model.User}, 
+		\hyperpage{273}
+  \item {showMessage}
+    \subitem {es.ull.esit.app.Login.MessageDialog}, \hyperpage{216}
+  \item {src Directory Reference}, \hyperpage{32, 33}
+  \item {subTotal}
+    \subitem {es.ull.esit.app.middleware.model.BillResult}, 
+		\hyperpage{126}
+  \item {subTotalLbl}
+    \subitem {es.ull.esit.app.Order}, \hyperpage{242}
+  \item {sumFromModel}
+    \subitem {es.ull.esit.app.Order}, \hyperpage{235}
+
+  \indexspace
+
+  \item {textBlock}
+    \subitem {es.ull.esit.app.AboutUs}, \hyperpage{46}
+  \item {THIRD\_COLUMN\_HEADER}
+    \subitem {es.ull.esit.app.AdminProducts}, \hyperpage{77}
+  \item {total}
+    \subitem {es.ull.esit.app.middleware.model.BillResult}, 
+		\hyperpage{126}
+  \item {totalLbl}
+    \subitem {es.ull.esit.app.Order}, \hyperpage{242}
+
+  \indexspace
+
+  \item {ull Directory Reference}, \hyperpage{33}
+  \item {UPDATE\_STRING}
+    \subitem {es.ull.esit.app.AdminProducts}, \hyperpage{78}
+  \item {updateAppetizer}
+    \subitem {es.ull.esit.app.middleware.ApiClient}, \hyperpage{89}
+    \subitem {es.ull.esit.app.middleware.service.ProductService}, 
+		\hyperpage{252}
+    \subitem {es.ull.esit.server.controller.AppetizerController}, 
+		\hyperpage{112}
+  \item {updateCashier}
+    \subitem {es.ull.esit.app.middleware.ApiClient}, \hyperpage{89}
+    \subitem {es.ull.esit.server.controller.CashierController}, 
+		\hyperpage{141}
+  \item {updateDrink}
+    \subitem {es.ull.esit.app.middleware.ApiClient}, \hyperpage{90}
+    \subitem {es.ull.esit.app.middleware.service.ProductService}, 
+		\hyperpage{253}
+    \subitem {es.ull.esit.server.controller.DrinkController}, 
+		\hyperpage{174}
+  \item {updateMainCourse}
+    \subitem {es.ull.esit.app.middleware.ApiClient}, \hyperpage{91}
+    \subitem {es.ull.esit.app.middleware.service.ProductService}, 
+		\hyperpage{253}
+    \subitem {es.ull.esit.server.controller.MainCourseController}, 
+		\hyperpage{210}
+  \item {updateWelcomeMessage}
+    \subitem {es.ull.esit.app.CashierLogin}, \hyperpage{153}
+  \item {User}
+    \subitem {es.ull.esit.app.middleware.model.User}, 
+		\hyperpage{265, 266}
+  \item {User.java}, \hyperpage{346--348}
+  \item {username}
+    \subitem {es.ull.esit.app.middleware.model.User}, \hyperpage{269}
+    \subitem {es.ull.esit.server.controller.AuthController.LoginRequest}, 
+		\hyperpage{193}
+    \subitem {es.ull.esit.server.middleware.model.User}, 
+		\hyperpage{274}
+  \item {usernametxt}
+    \subitem {es.ull.esit.app.Login}, \hyperpage{192}
+  \item {userRepository}
+    \subitem {es.ull.esit.server.controller.AuthController}, 
+		\hyperpage{120}
+  \item {UserRepository.java}, \hyperpage{300, 301}
+  \item {usertypecmbo}
+    \subitem {es.ull.esit.app.Login}, \hyperpage{192}
+  \item {usertypecmboActionPerformed}
+    \subitem {es.ull.esit.app.Login}, \hyperpage{190}
+
+  \indexspace
+
+  \item {validateAndParsePrice}
+    \subitem {es.ull.esit.app.middleware.service.ProductService}, 
+		\hyperpage{254}
+  \item {validateName}
+    \subitem {es.ull.esit.app.middleware.service.ProductService}, 
+		\hyperpage{255}
+  \item {vat}
+    \subitem {es.ull.esit.app.middleware.model.BillResult}, 
+		\hyperpage{126}
+  \item {VAT\_RATE}
+    \subitem {es.ull.esit.app.middleware.service.OrderService}, 
+		\hyperpage{245}
+  \item {vatLbl}
+    \subitem {es.ull.esit.app.Order}, \hyperpage{242}
+
+  \indexspace
+
+  \item {welcomeTxt}
+    \subitem {es.ull.esit.app.CashierLogin}, \hyperpage{155}
+
+\end{theindex}

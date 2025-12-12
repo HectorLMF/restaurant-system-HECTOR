@@ -1,0 +1,64 @@
+\doxysection{Appetizer\+Controller.\+java}
+\hypertarget{AppetizerController_8java_source}{}\label{AppetizerController_8java_source}\index{AppetizerController.java@{AppetizerController.java}}
+\mbox{\hyperlink{AppetizerController_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{AppetizerController_8java_source_l00001}\mbox{\hyperlink{namespacees_1_1ull_1_1esit_1_1server_1_1controller}{00001}}\ \textcolor{keyword}{package\ }es.ull.esit.server.controller;}
+\DoxyCodeLine{\Hypertarget{AppetizerController_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{AppetizerController_8java_source_l00003}00003\ \textcolor{keyword}{import}\ es.ull.esit.server.middleware.model.Appetizer;}
+\DoxyCodeLine{\Hypertarget{AppetizerController_8java_source_l00004}00004\ \textcolor{keyword}{import}\ es.ull.esit.server.repo.AppetizerRepository;}
+\DoxyCodeLine{\Hypertarget{AppetizerController_8java_source_l00005}00005\ \textcolor{keyword}{import}\ org.springframework.beans.factory.annotation.Autowired;}
+\DoxyCodeLine{\Hypertarget{AppetizerController_8java_source_l00006}00006\ \textcolor{keyword}{import}\ org.springframework.http.*;}
+\DoxyCodeLine{\Hypertarget{AppetizerController_8java_source_l00007}00007\ \textcolor{keyword}{import}\ org.springframework.web.bind.annotation.*;}
+\DoxyCodeLine{\Hypertarget{AppetizerController_8java_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{AppetizerController_8java_source_l00009}00009\ \textcolor{keyword}{import}\ java.util.List;}
+\DoxyCodeLine{\Hypertarget{AppetizerController_8java_source_l00010}00010\ \textcolor{keyword}{import}\ java.util.Optional;}
+\DoxyCodeLine{\Hypertarget{AppetizerController_8java_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{AppetizerController_8java_source_l00019}00019\ @RestController}
+\DoxyCodeLine{\Hypertarget{AppetizerController_8java_source_l00020}00020\ @RequestMapping(\textcolor{stringliteral}{"{}/api/appetizers"{}})}
+\DoxyCodeLine{\Hypertarget{AppetizerController_8java_source_l00021}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController}{00021}}\ public\ class\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController}{AppetizerController}}\ \{}
+\DoxyCodeLine{\Hypertarget{AppetizerController_8java_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{AppetizerController_8java_source_l00024}00024\ \ \ @Autowired}
+\DoxyCodeLine{\Hypertarget{AppetizerController_8java_source_l00025}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_a9c135b625cb475a18f381e7822636382}{00025}}\ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{interfacees_1_1ull_1_1esit_1_1server_1_1repo_1_1AppetizerRepository}{AppetizerRepository}}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_a9c135b625cb475a18f381e7822636382}{appetizerRepository}};}
+\DoxyCodeLine{\Hypertarget{AppetizerController_8java_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{AppetizerController_8java_source_l00034}00034\ \ \ @GetMapping}
+\DoxyCodeLine{\Hypertarget{AppetizerController_8java_source_l00035}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_a2e88771342595fe571334958d6366868}{00035}}\ \ \ \textcolor{keyword}{public}\ ResponseEntity<List<Appetizer>>\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_a2e88771342595fe571334958d6366868}{getAllAppetizers}}()\ \{}
+\DoxyCodeLine{\Hypertarget{AppetizerController_8java_source_l00036}00036\ \ \ \ \ List<Appetizer>\ appetizers\ =\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_a9c135b625cb475a18f381e7822636382}{appetizerRepository}}.findAll();}
+\DoxyCodeLine{\Hypertarget{AppetizerController_8java_source_l00037}00037\ \ \ \ \ \textcolor{keywordflow}{return}\ ResponseEntity.ok(appetizers);}
+\DoxyCodeLine{\Hypertarget{AppetizerController_8java_source_l00038}00038\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AppetizerController_8java_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{AppetizerController_8java_source_l00048}00048\ \ \ @GetMapping(\textcolor{stringliteral}{"{}/\{id\}"{}})}
+\DoxyCodeLine{\Hypertarget{AppetizerController_8java_source_l00049}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_a7f897f113a1b92ae64836bf69351afb5}{00049}}\ \ \ public\ ResponseEntity<\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer}{Appetizer}}>\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_a7f897f113a1b92ae64836bf69351afb5}{getAppetizerById}}(@PathVariable\ Long\ \textcolor{keywordtype}{id})\ \{}
+\DoxyCodeLine{\Hypertarget{AppetizerController_8java_source_l00050}00050\ \ \ \ \ Optional<Appetizer>\ appetizer\ =\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_a9c135b625cb475a18f381e7822636382}{appetizerRepository}}.findById(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{AppetizerController_8java_source_l00051}00051\ \ \ \ \ \textcolor{keywordflow}{return}\ appetizer}
+\DoxyCodeLine{\Hypertarget{AppetizerController_8java_source_l00052}00052\ \ \ \ \ \ \ \ \ .map(ResponseEntity::ok)}
+\DoxyCodeLine{\Hypertarget{AppetizerController_8java_source_l00053}00053\ \ \ \ \ \ \ \ \ .orElseGet(()\ -\/>\ ResponseEntity.notFound().build());}
+\DoxyCodeLine{\Hypertarget{AppetizerController_8java_source_l00054}00054\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AppetizerController_8java_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{AppetizerController_8java_source_l00064}00064\ \ \ @PostMapping}
+\DoxyCodeLine{\Hypertarget{AppetizerController_8java_source_l00065}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_a21b90d00b077d84499bef439aef79eee}{00065}}\ \ \ \textcolor{keyword}{public}\ ResponseEntity<Appetizer>\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_a21b90d00b077d84499bef439aef79eee}{createAppetizer}}(@RequestBody\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer}{Appetizer}}\ appetizer)\ \{}
+\DoxyCodeLine{\Hypertarget{AppetizerController_8java_source_l00066}00066\ \ \ \ \ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer}{Appetizer}}\ saved\ =\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_a9c135b625cb475a18f381e7822636382}{appetizerRepository}}.save(appetizer);}
+\DoxyCodeLine{\Hypertarget{AppetizerController_8java_source_l00067}00067\ \ \ \ \ \textcolor{keywordflow}{return}\ ResponseEntity.status(HttpStatus.CREATED).body(saved);}
+\DoxyCodeLine{\Hypertarget{AppetizerController_8java_source_l00068}00068\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AppetizerController_8java_source_l00069}00069\ }
+\DoxyCodeLine{\Hypertarget{AppetizerController_8java_source_l00079}00079\ \ \ @PutMapping(\textcolor{stringliteral}{"{}/\{id\}"{}})}
+\DoxyCodeLine{\Hypertarget{AppetizerController_8java_source_l00080}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_a4fda9154efccb8e38dfc22dcaa8b1aa0}{00080}}\ \ \ public\ ResponseEntity<\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer}{Appetizer}}>\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_a4fda9154efccb8e38dfc22dcaa8b1aa0}{updateAppetizer}}(@PathVariable\ Long\ \textcolor{keywordtype}{id},}
+\DoxyCodeLine{\Hypertarget{AppetizerController_8java_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ @RequestBody\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer}{Appetizer}}\ appetizer)\ \{}
+\DoxyCodeLine{\Hypertarget{AppetizerController_8java_source_l00082}00082\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_a9c135b625cb475a18f381e7822636382}{appetizerRepository}}.existsById(\textcolor{keywordtype}{id}))\ \{}
+\DoxyCodeLine{\Hypertarget{AppetizerController_8java_source_l00083}00083\ \ \ \ \ \ \ return\ ResponseEntity.notFound().build();}
+\DoxyCodeLine{\Hypertarget{AppetizerController_8java_source_l00084}00084\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AppetizerController_8java_source_l00085}00085\ \ \ \ \ appetizer.setAppetizersId(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{AppetizerController_8java_source_l00086}00086\ \ \ \ \ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer}{Appetizer}}\ updated\ =\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_a9c135b625cb475a18f381e7822636382}{appetizerRepository}}.save(appetizer);}
+\DoxyCodeLine{\Hypertarget{AppetizerController_8java_source_l00087}00087\ \ \ \ \ \textcolor{keywordflow}{return}\ ResponseEntity.ok(updated);}
+\DoxyCodeLine{\Hypertarget{AppetizerController_8java_source_l00088}00088\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AppetizerController_8java_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{AppetizerController_8java_source_l00098}00098\ \ \ @DeleteMapping(\textcolor{stringliteral}{"{}/\{id\}"{}})}
+\DoxyCodeLine{\Hypertarget{AppetizerController_8java_source_l00099}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_a35376156c81c1244c8241750356c303b}{00099}}\ \ \ public\ ResponseEntity<Void>\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_a35376156c81c1244c8241750356c303b}{deleteAppetizer}}(@PathVariable\ Long\ \textcolor{keywordtype}{id})\ \{}
+\DoxyCodeLine{\Hypertarget{AppetizerController_8java_source_l00100}00100\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_a9c135b625cb475a18f381e7822636382}{appetizerRepository}}.existsById(\textcolor{keywordtype}{id}))\ \{}
+\DoxyCodeLine{\Hypertarget{AppetizerController_8java_source_l00101}00101\ \ \ \ \ \ \ return\ ResponseEntity.notFound().build();}
+\DoxyCodeLine{\Hypertarget{AppetizerController_8java_source_l00102}00102\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AppetizerController_8java_source_l00103}00103\ \ \ \ \ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_a9c135b625cb475a18f381e7822636382}{appetizerRepository}}.deleteById(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{AppetizerController_8java_source_l00104}00104\ \ \ \ \ \textcolor{keywordflow}{return}\ ResponseEntity.noContent().build();}
+\DoxyCodeLine{\Hypertarget{AppetizerController_8java_source_l00105}00105\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AppetizerController_8java_source_l00106}00106\ \}}
+
+\end{DoxyCode}

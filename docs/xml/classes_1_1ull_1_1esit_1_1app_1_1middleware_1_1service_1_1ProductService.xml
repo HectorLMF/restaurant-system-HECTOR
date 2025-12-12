@@ -1,0 +1,662 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService" kind="class" language="Java" prot="public">
+    <compoundname>es::ull::esit::app::middleware::service::ProductService</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1a902133811640b9e88c78b3c4b1db5755" prot="private" static="no" mutable="no">
+        <type>final <ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient" kindref="compound">ApiClient</ref></type>
+        <definition>final ApiClient es.ull.esit.app.middleware.service.ProductService.client</definition>
+        <argsstring></argsstring>
+        <name>client</name>
+        <qualifiedname>es.ull.esit.app.middleware.service.ProductService.client</qualifiedname>
+        <briefdescription>
+<para>REST API client used to communicate with the backend menu endpoints. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/middleware/service/ProductService.java" line="19" column="27" bodyfile="src/main/java/es/ull/esit/app/middleware/service/ProductService.java" bodystart="19" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1a769d8d8b0e85877ec511a13b018a8593" compoundref="ProductService_8java" startline="115" endline="121">es.ull.esit.app.middleware.service.ProductService.addAppetizer</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1aab5e0b223a118755115db5a323e81cf9" compoundref="ProductService_8java" startline="59" endline="65">es.ull.esit.app.middleware.service.ProductService.addDrink</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1abc6fe1902bddc349b31d598d215df191" compoundref="ProductService_8java" startline="171" endline="177">es.ull.esit.app.middleware.service.ProductService.addMainCourse</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1ac6067334ab34d2022a1ab62425b0f4f3" compoundref="ProductService_8java" startline="93" endline="95">es.ull.esit.app.middleware.service.ProductService.getAllAppetizers</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1a7cc7c2ab846d1ab4bb1d2c3fc6f56ed5" compoundref="ProductService_8java" startline="37" endline="39">es.ull.esit.app.middleware.service.ProductService.getAllDrinks</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1ae12c25da7c8c88c342e4a1da974d7b23" compoundref="ProductService_8java" startline="149" endline="151">es.ull.esit.app.middleware.service.ProductService.getAllMainCourses</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1a89264f953e4c7e70c5b6fe7694a656f2" compoundref="ProductService_8java" startline="103" endline="105">es.ull.esit.app.middleware.service.ProductService.getAppetizerById</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1aabb1d8b8a3efe343308284315fb09863" compoundref="ProductService_8java" startline="47" endline="49">es.ull.esit.app.middleware.service.ProductService.getDrinkById</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1ade866c533b86133a0f6c059affd1e464" compoundref="ProductService_8java" startline="159" endline="161">es.ull.esit.app.middleware.service.ProductService.getMainCourseById</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1a857c31c3227fc7b76967afaa1836f0b3" compoundref="ProductService_8java" startline="26" endline="28">es.ull.esit.app.middleware.service.ProductService.ProductService</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1a7f8f0ea8d86f4118224cc981b27ac9d7" compoundref="ProductService_8java" startline="130" endline="140">es.ull.esit.app.middleware.service.ProductService.updateAppetizer</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1a333c00a5e9b092646dc29efe5400aa71" compoundref="ProductService_8java" startline="74" endline="84">es.ull.esit.app.middleware.service.ProductService.updateDrink</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1ad96209da593f98e5c8f2205686e02c8f" compoundref="ProductService_8java" startline="186" endline="196">es.ull.esit.app.middleware.service.ProductService.updateMainCourse</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1a857c31c3227fc7b76967afaa1836f0b3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>es.ull.esit.app.middleware.service.ProductService.ProductService</definition>
+        <argsstring>(ApiClient client)</argsstring>
+        <name>ProductService</name>
+        <qualifiedname>es.ull.esit.app.middleware.service.ProductService.ProductService</qualifiedname>
+        <param>
+          <type><ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient" kindref="compound">ApiClient</ref></type>
+          <declname>client</declname>
+        </param>
+        <briefdescription>
+<para>Constructs a <ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService" kindref="compound">ProductService</ref> with the given API client. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>client</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[<ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient" kindref="compound">ApiClient</ref>] REST client used to perform HTTP requests. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/middleware/service/ProductService.java" line="26" column="10" bodyfile="src/main/java/es/ull/esit/app/middleware/service/ProductService.java" bodystart="26" bodyend="28"/>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1a902133811640b9e88c78b3c4b1db5755" compoundref="ProductService_8java" startline="19">es.ull.esit.app.middleware.service.ProductService.client</references>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1a7cc7c2ab846d1ab4bb1d2c3fc6f56ed5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink" kindref="compound">Drink</ref> &gt;</type>
+        <definition>List&lt; Drink &gt; es.ull.esit.app.middleware.service.ProductService.getAllDrinks</definition>
+        <argsstring>()</argsstring>
+        <name>getAllDrinks</name>
+        <qualifiedname>es.ull.esit.app.middleware.service.ProductService.getAllDrinks</qualifiedname>
+        <briefdescription>
+<para>Retrieves all drinks from the backend. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>[List&lt;Drink&gt;] List of all drinks available in the menu. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/middleware/service/ProductService.java" line="37" column="15" bodyfile="src/main/java/es/ull/esit/app/middleware/service/ProductService.java" bodystart="37" bodyend="39"/>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1a902133811640b9e88c78b3c4b1db5755" compoundref="ProductService_8java" startline="19">es.ull.esit.app.middleware.service.ProductService.client</references>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1aabb1d8b8a3efe343308284315fb09863" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink" kindref="compound">Drink</ref></type>
+        <definition>Drink es.ull.esit.app.middleware.service.ProductService.getDrinkById</definition>
+        <argsstring>(Long id)</argsstring>
+        <name>getDrinkById</name>
+        <qualifiedname>es.ull.esit.app.middleware.service.ProductService.getDrinkById</qualifiedname>
+        <param>
+          <type>Long</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Retrieves a single drink by its identifier. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[Long] Unique identifier of the drink. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>[<ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink" kindref="compound">Drink</ref>] <ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink" kindref="compound">Drink</ref> object corresponding to the given id. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/middleware/service/ProductService.java" line="47" column="16" bodyfile="src/main/java/es/ull/esit/app/middleware/service/ProductService.java" bodystart="47" bodyend="49"/>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1a902133811640b9e88c78b3c4b1db5755" compoundref="ProductService_8java" startline="19">es.ull.esit.app.middleware.service.ProductService.client</references>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1aab5e0b223a118755115db5a323e81cf9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void es.ull.esit.app.middleware.service.ProductService.addDrink</definition>
+        <argsstring>(String name, String priceStr)</argsstring>
+        <name>addDrink</name>
+        <qualifiedname>es.ull.esit.app.middleware.service.ProductService.addDrink</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>priceStr</declname>
+        </param>
+        <briefdescription>
+<para>Adds a new drink to the backend menu. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>   Validates the user input and sends a POST request using the ApiClient.
+</verbatim></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[String] Name of the new drink. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>priceStr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[String] Price entered as a string. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/middleware/service/ProductService.java" line="59" column="15" bodyfile="src/main/java/es/ull/esit/app/middleware/service/ProductService.java" bodystart="59" bodyend="65"/>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1a902133811640b9e88c78b3c4b1db5755" compoundref="ProductService_8java" startline="19">es.ull.esit.app.middleware.service.ProductService.client</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1a1de5f344755fa2d4857ff831c0e7f251" compoundref="ProductService_8java" startline="221" endline="234">es.ull.esit.app.middleware.service.ProductService.validateAndParsePrice</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1a37e994d91713930101c873838145f607" compoundref="ProductService_8java" startline="206" endline="210">es.ull.esit.app.middleware.service.ProductService.validateName</references>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1a333c00a5e9b092646dc29efe5400aa71" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void es.ull.esit.app.middleware.service.ProductService.updateDrink</definition>
+        <argsstring>(Long id, String name, String priceStr)</argsstring>
+        <name>updateDrink</name>
+        <qualifiedname>es.ull.esit.app.middleware.service.ProductService.updateDrink</qualifiedname>
+        <param>
+          <type>Long</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>priceStr</declname>
+        </param>
+        <briefdescription>
+<para>Updates an existing drink in the backend menu. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[Long] Identifier of the drink to update. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[String] New name for the drink. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>priceStr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[String] New price entered as a string. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/middleware/service/ProductService.java" line="74" column="15" bodyfile="src/main/java/es/ull/esit/app/middleware/service/ProductService.java" bodystart="74" bodyend="84"/>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1a902133811640b9e88c78b3c4b1db5755" compoundref="ProductService_8java" startline="19">es.ull.esit.app.middleware.service.ProductService.client</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1a1de5f344755fa2d4857ff831c0e7f251" compoundref="ProductService_8java" startline="221" endline="234">es.ull.esit.app.middleware.service.ProductService.validateAndParsePrice</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1a37e994d91713930101c873838145f607" compoundref="ProductService_8java" startline="206" endline="210">es.ull.esit.app.middleware.service.ProductService.validateName</references>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1ac6067334ab34d2022a1ab62425b0f4f3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Appetizer" kindref="compound">Appetizer</ref> &gt;</type>
+        <definition>List&lt; Appetizer &gt; es.ull.esit.app.middleware.service.ProductService.getAllAppetizers</definition>
+        <argsstring>()</argsstring>
+        <name>getAllAppetizers</name>
+        <qualifiedname>es.ull.esit.app.middleware.service.ProductService.getAllAppetizers</qualifiedname>
+        <briefdescription>
+<para>Retrieves all appetizers from the backend. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>[List&lt;Appetizer&gt;] List of all appetizers in the menu. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/middleware/service/ProductService.java" line="93" column="15" bodyfile="src/main/java/es/ull/esit/app/middleware/service/ProductService.java" bodystart="93" bodyend="95"/>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1a902133811640b9e88c78b3c4b1db5755" compoundref="ProductService_8java" startline="19">es.ull.esit.app.middleware.service.ProductService.client</references>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1a89264f953e4c7e70c5b6fe7694a656f2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Appetizer" kindref="compound">Appetizer</ref></type>
+        <definition>Appetizer es.ull.esit.app.middleware.service.ProductService.getAppetizerById</definition>
+        <argsstring>(Long id)</argsstring>
+        <name>getAppetizerById</name>
+        <qualifiedname>es.ull.esit.app.middleware.service.ProductService.getAppetizerById</qualifiedname>
+        <param>
+          <type>Long</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Retrieves a single appetizer by its identifier. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[Long] Unique identifier of the appetizer. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>[<ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Appetizer" kindref="compound">Appetizer</ref>] <ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Appetizer" kindref="compound">Appetizer</ref> object corresponding to the given id. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/middleware/service/ProductService.java" line="103" column="20" bodyfile="src/main/java/es/ull/esit/app/middleware/service/ProductService.java" bodystart="103" bodyend="105"/>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1a902133811640b9e88c78b3c4b1db5755" compoundref="ProductService_8java" startline="19">es.ull.esit.app.middleware.service.ProductService.client</references>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1a769d8d8b0e85877ec511a13b018a8593" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void es.ull.esit.app.middleware.service.ProductService.addAppetizer</definition>
+        <argsstring>(String name, String priceStr)</argsstring>
+        <name>addAppetizer</name>
+        <qualifiedname>es.ull.esit.app.middleware.service.ProductService.addAppetizer</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>priceStr</declname>
+        </param>
+        <briefdescription>
+<para>Adds a new appetizer to the backend menu. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>   Validates user input and sends a POST request using the ApiClient.
+</verbatim></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[String] Name of the new appetizer. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>priceStr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[String] Price entered as a string. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/middleware/service/ProductService.java" line="115" column="15" bodyfile="src/main/java/es/ull/esit/app/middleware/service/ProductService.java" bodystart="115" bodyend="121"/>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1a902133811640b9e88c78b3c4b1db5755" compoundref="ProductService_8java" startline="19">es.ull.esit.app.middleware.service.ProductService.client</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1a1de5f344755fa2d4857ff831c0e7f251" compoundref="ProductService_8java" startline="221" endline="234">es.ull.esit.app.middleware.service.ProductService.validateAndParsePrice</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1a37e994d91713930101c873838145f607" compoundref="ProductService_8java" startline="206" endline="210">es.ull.esit.app.middleware.service.ProductService.validateName</references>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1a7f8f0ea8d86f4118224cc981b27ac9d7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void es.ull.esit.app.middleware.service.ProductService.updateAppetizer</definition>
+        <argsstring>(Long id, String name, String priceStr)</argsstring>
+        <name>updateAppetizer</name>
+        <qualifiedname>es.ull.esit.app.middleware.service.ProductService.updateAppetizer</qualifiedname>
+        <param>
+          <type>Long</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>priceStr</declname>
+        </param>
+        <briefdescription>
+<para>Updates an existing appetizer in the backend menu. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[Long] Identifier of the appetizer to update. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[String] New name for the appetizer. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>priceStr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[String] New price entered as a string. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/middleware/service/ProductService.java" line="130" column="15" bodyfile="src/main/java/es/ull/esit/app/middleware/service/ProductService.java" bodystart="130" bodyend="140"/>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1a902133811640b9e88c78b3c4b1db5755" compoundref="ProductService_8java" startline="19">es.ull.esit.app.middleware.service.ProductService.client</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1a1de5f344755fa2d4857ff831c0e7f251" compoundref="ProductService_8java" startline="221" endline="234">es.ull.esit.app.middleware.service.ProductService.validateAndParsePrice</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1a37e994d91713930101c873838145f607" compoundref="ProductService_8java" startline="206" endline="210">es.ull.esit.app.middleware.service.ProductService.validateName</references>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1ae12c25da7c8c88c342e4a1da974d7b23" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1MainCourse" kindref="compound">MainCourse</ref> &gt;</type>
+        <definition>List&lt; MainCourse &gt; es.ull.esit.app.middleware.service.ProductService.getAllMainCourses</definition>
+        <argsstring>()</argsstring>
+        <name>getAllMainCourses</name>
+        <qualifiedname>es.ull.esit.app.middleware.service.ProductService.getAllMainCourses</qualifiedname>
+        <briefdescription>
+<para>Retrieves all main courses from the backend. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>[List&lt;MainCourse&gt;] List of all main courses in the menu. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/middleware/service/ProductService.java" line="149" column="15" bodyfile="src/main/java/es/ull/esit/app/middleware/service/ProductService.java" bodystart="149" bodyend="151"/>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1a902133811640b9e88c78b3c4b1db5755" compoundref="ProductService_8java" startline="19">es.ull.esit.app.middleware.service.ProductService.client</references>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1ade866c533b86133a0f6c059affd1e464" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1MainCourse" kindref="compound">MainCourse</ref></type>
+        <definition>MainCourse es.ull.esit.app.middleware.service.ProductService.getMainCourseById</definition>
+        <argsstring>(Long id)</argsstring>
+        <name>getMainCourseById</name>
+        <qualifiedname>es.ull.esit.app.middleware.service.ProductService.getMainCourseById</qualifiedname>
+        <param>
+          <type>Long</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Retrieves a single main course by its identifier. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[Long] Unique identifier of the main course. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>[<ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1MainCourse" kindref="compound">MainCourse</ref>] <ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1MainCourse" kindref="compound">MainCourse</ref> object corresponding to the given id. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/middleware/service/ProductService.java" line="159" column="21" bodyfile="src/main/java/es/ull/esit/app/middleware/service/ProductService.java" bodystart="159" bodyend="161"/>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1a902133811640b9e88c78b3c4b1db5755" compoundref="ProductService_8java" startline="19">es.ull.esit.app.middleware.service.ProductService.client</references>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1abc6fe1902bddc349b31d598d215df191" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void es.ull.esit.app.middleware.service.ProductService.addMainCourse</definition>
+        <argsstring>(String name, String priceStr)</argsstring>
+        <name>addMainCourse</name>
+        <qualifiedname>es.ull.esit.app.middleware.service.ProductService.addMainCourse</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>priceStr</declname>
+        </param>
+        <briefdescription>
+<para>Adds a new main course to the backend menu. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>   Validates user input and sends a POST request using the ApiClient.
+</verbatim></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[String] Name of the new main course. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>priceStr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[String] Price entered as a string. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/middleware/service/ProductService.java" line="171" column="15" bodyfile="src/main/java/es/ull/esit/app/middleware/service/ProductService.java" bodystart="171" bodyend="177"/>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1a902133811640b9e88c78b3c4b1db5755" compoundref="ProductService_8java" startline="19">es.ull.esit.app.middleware.service.ProductService.client</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1a1de5f344755fa2d4857ff831c0e7f251" compoundref="ProductService_8java" startline="221" endline="234">es.ull.esit.app.middleware.service.ProductService.validateAndParsePrice</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1a37e994d91713930101c873838145f607" compoundref="ProductService_8java" startline="206" endline="210">es.ull.esit.app.middleware.service.ProductService.validateName</references>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1ad96209da593f98e5c8f2205686e02c8f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void es.ull.esit.app.middleware.service.ProductService.updateMainCourse</definition>
+        <argsstring>(Long id, String name, String priceStr)</argsstring>
+        <name>updateMainCourse</name>
+        <qualifiedname>es.ull.esit.app.middleware.service.ProductService.updateMainCourse</qualifiedname>
+        <param>
+          <type>Long</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>priceStr</declname>
+        </param>
+        <briefdescription>
+<para>Updates an existing main course in the backend menu. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[Long] Identifier of the main course to update. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[String] New name for the main course. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>priceStr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[String] New price entered as a string. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/middleware/service/ProductService.java" line="186" column="15" bodyfile="src/main/java/es/ull/esit/app/middleware/service/ProductService.java" bodystart="186" bodyend="196"/>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1a902133811640b9e88c78b3c4b1db5755" compoundref="ProductService_8java" startline="19">es.ull.esit.app.middleware.service.ProductService.client</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1a1de5f344755fa2d4857ff831c0e7f251" compoundref="ProductService_8java" startline="221" endline="234">es.ull.esit.app.middleware.service.ProductService.validateAndParsePrice</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1a37e994d91713930101c873838145f607" compoundref="ProductService_8java" startline="206" endline="210">es.ull.esit.app.middleware.service.ProductService.validateName</references>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1a37e994d91713930101c873838145f607" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void es.ull.esit.app.middleware.service.ProductService.validateName</definition>
+        <argsstring>(String name)</argsstring>
+        <name>validateName</name>
+        <qualifiedname>es.ull.esit.app.middleware.service.ProductService.validateName</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Validates that the item name is not null or empty. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[String] Name of the item to validate. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>IllegalArgumentException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If the name is null or empty. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/middleware/service/ProductService.java" line="206" column="16" bodyfile="src/main/java/es/ull/esit/app/middleware/service/ProductService.java" bodystart="206" bodyend="210"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1a769d8d8b0e85877ec511a13b018a8593" compoundref="ProductService_8java" startline="115" endline="121">es.ull.esit.app.middleware.service.ProductService.addAppetizer</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1aab5e0b223a118755115db5a323e81cf9" compoundref="ProductService_8java" startline="59" endline="65">es.ull.esit.app.middleware.service.ProductService.addDrink</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1abc6fe1902bddc349b31d598d215df191" compoundref="ProductService_8java" startline="171" endline="177">es.ull.esit.app.middleware.service.ProductService.addMainCourse</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1a7f8f0ea8d86f4118224cc981b27ac9d7" compoundref="ProductService_8java" startline="130" endline="140">es.ull.esit.app.middleware.service.ProductService.updateAppetizer</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1a333c00a5e9b092646dc29efe5400aa71" compoundref="ProductService_8java" startline="74" endline="84">es.ull.esit.app.middleware.service.ProductService.updateDrink</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1ad96209da593f98e5c8f2205686e02c8f" compoundref="ProductService_8java" startline="186" endline="196">es.ull.esit.app.middleware.service.ProductService.updateMainCourse</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1a1de5f344755fa2d4857ff831c0e7f251" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int es.ull.esit.app.middleware.service.ProductService.validateAndParsePrice</definition>
+        <argsstring>(String priceStr)</argsstring>
+        <name>validateAndParsePrice</name>
+        <qualifiedname>es.ull.esit.app.middleware.service.ProductService.validateAndParsePrice</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>priceStr</declname>
+        </param>
+        <briefdescription>
+<para>Validates and parses the price from string to integer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>   Ensures the price is a non-negative integer value.
+</verbatim></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>priceStr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[String] Price entered as a string. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>[int] Parsed price value. </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>IllegalArgumentException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If the price is empty, negative or not a valid number. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/middleware/service/ProductService.java" line="221" column="15" bodyfile="src/main/java/es/ull/esit/app/middleware/service/ProductService.java" bodystart="221" bodyend="234"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1a769d8d8b0e85877ec511a13b018a8593" compoundref="ProductService_8java" startline="115" endline="121">es.ull.esit.app.middleware.service.ProductService.addAppetizer</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1aab5e0b223a118755115db5a323e81cf9" compoundref="ProductService_8java" startline="59" endline="65">es.ull.esit.app.middleware.service.ProductService.addDrink</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1abc6fe1902bddc349b31d598d215df191" compoundref="ProductService_8java" startline="171" endline="177">es.ull.esit.app.middleware.service.ProductService.addMainCourse</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1a7f8f0ea8d86f4118224cc981b27ac9d7" compoundref="ProductService_8java" startline="130" endline="140">es.ull.esit.app.middleware.service.ProductService.updateAppetizer</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1a333c00a5e9b092646dc29efe5400aa71" compoundref="ProductService_8java" startline="74" endline="84">es.ull.esit.app.middleware.service.ProductService.updateDrink</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1ad96209da593f98e5c8f2205686e02c8f" compoundref="ProductService_8java" startline="186" endline="196">es.ull.esit.app.middleware.service.ProductService.updateMainCourse</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Service handling business logic for menu products. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>   Decouples Swing UI components from direct REST API calls. It centralizes
+   validation and orchestrates requests for drinks, appetizers and main
+   courses.
+</verbatim> </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>es.ull.esit.app.middleware.service.ProductService</label>
+        <link refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-client</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>es.ull.esit.app.middleware.ApiClient</label>
+        <link refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/main/java/es/ull/esit/app/middleware/service/ProductService.java" line="16" column="7" bodyfile="src/main/java/es/ull/esit/app/middleware/service/ProductService.java" bodystart="16" bodyend="235"/>
+    <listofallmembers>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1a769d8d8b0e85877ec511a13b018a8593" prot="public" virt="non-virtual"><scope>es::ull::esit::app::middleware::service::ProductService</scope><name>addAppetizer</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1aab5e0b223a118755115db5a323e81cf9" prot="public" virt="non-virtual"><scope>es::ull::esit::app::middleware::service::ProductService</scope><name>addDrink</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1abc6fe1902bddc349b31d598d215df191" prot="public" virt="non-virtual"><scope>es::ull::esit::app::middleware::service::ProductService</scope><name>addMainCourse</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1a902133811640b9e88c78b3c4b1db5755" prot="private" virt="non-virtual"><scope>es::ull::esit::app::middleware::service::ProductService</scope><name>client</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1ac6067334ab34d2022a1ab62425b0f4f3" prot="public" virt="non-virtual"><scope>es::ull::esit::app::middleware::service::ProductService</scope><name>getAllAppetizers</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1a7cc7c2ab846d1ab4bb1d2c3fc6f56ed5" prot="public" virt="non-virtual"><scope>es::ull::esit::app::middleware::service::ProductService</scope><name>getAllDrinks</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1ae12c25da7c8c88c342e4a1da974d7b23" prot="public" virt="non-virtual"><scope>es::ull::esit::app::middleware::service::ProductService</scope><name>getAllMainCourses</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1a89264f953e4c7e70c5b6fe7694a656f2" prot="public" virt="non-virtual"><scope>es::ull::esit::app::middleware::service::ProductService</scope><name>getAppetizerById</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1aabb1d8b8a3efe343308284315fb09863" prot="public" virt="non-virtual"><scope>es::ull::esit::app::middleware::service::ProductService</scope><name>getDrinkById</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1ade866c533b86133a0f6c059affd1e464" prot="public" virt="non-virtual"><scope>es::ull::esit::app::middleware::service::ProductService</scope><name>getMainCourseById</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1a857c31c3227fc7b76967afaa1836f0b3" prot="public" virt="non-virtual"><scope>es::ull::esit::app::middleware::service::ProductService</scope><name>ProductService</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1a7f8f0ea8d86f4118224cc981b27ac9d7" prot="public" virt="non-virtual"><scope>es::ull::esit::app::middleware::service::ProductService</scope><name>updateAppetizer</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1a333c00a5e9b092646dc29efe5400aa71" prot="public" virt="non-virtual"><scope>es::ull::esit::app::middleware::service::ProductService</scope><name>updateDrink</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1ad96209da593f98e5c8f2205686e02c8f" prot="public" virt="non-virtual"><scope>es::ull::esit::app::middleware::service::ProductService</scope><name>updateMainCourse</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1a1de5f344755fa2d4857ff831c0e7f251" prot="private" virt="non-virtual"><scope>es::ull::esit::app::middleware::service::ProductService</scope><name>validateAndParsePrice</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1a37e994d91713930101c873838145f607" prot="private" virt="non-virtual"><scope>es::ull::esit::app::middleware::service::ProductService</scope><name>validateName</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,9 @@
+<map id="es.ull.esit.app.AdminProducts" name="es.ull.esit.app.AdminProducts">
+<area shape="rect" id="Node000001" title="Administrative window for managing products and prices." alt="" coords="5,1087,236,1972"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="29,803,170,869"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="103,882,110,1087,104,1087,98,883"/>
+<area shape="rect" id="Node000003" href="$classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService.html" title="Service handling business logic for menu products." alt="" coords="195,656,436,1016"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="268,1017,243,1104,238,1102,262,1015"/>
+<area shape="rect" id="Node000004" href="$classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient.html" title="API client for interacting with the backend REST API." alt="" coords="220,5,411,585"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="318,585,318,640,313,640,313,585"/>
+</map>

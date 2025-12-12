@@ -1,0 +1,340 @@
+\doxysection{Api\+Client.\+java}
+\hypertarget{ApiClient_8java_source}{}\label{ApiClient_8java_source}\index{ApiClient.java@{ApiClient.java}}
+\mbox{\hyperlink{ApiClient_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00001}\mbox{\hyperlink{namespacees_1_1ull_1_1esit_1_1app_1_1middleware}{00001}}\ \textcolor{keyword}{package\ }es.ull.esit.app.middleware;}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00003}00003\ \textcolor{keyword}{import}\ com.fasterxml.jackson.core.type.TypeReference;}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00004}00004\ \textcolor{keyword}{import}\ com.fasterxml.jackson.databind.ObjectMapper;}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00006}00006\ \textcolor{keyword}{import}\ java.io.IOException;}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00007}00007\ \textcolor{keyword}{import}\ java.net.URI;}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00008}00008\ \textcolor{keyword}{import}\ java.net.http.HttpClient;}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00009}00009\ \textcolor{keyword}{import}\ java.net.http.HttpRequest;}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00010}00010\ \textcolor{keyword}{import}\ java.net.http.HttpResponse;}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00011}00011\ \textcolor{keyword}{import}\ java.time.Duration;}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00012}00012\ \textcolor{keyword}{import}\ java.util.List;}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00013}00013\ \textcolor{keyword}{import}\ java.util.Map;}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00015}00015\ \textcolor{keyword}{import}\ es.ull.esit.app.middleware.model.Appetizer;}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00016}00016\ \textcolor{keyword}{import}\ es.ull.esit.app.middleware.model.Cashier;}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00017}00017\ \textcolor{keyword}{import}\ es.ull.esit.app.middleware.model.Drink;}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00018}00018\ \textcolor{keyword}{import}\ es.ull.esit.app.middleware.model.MainCourse;}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00019}00019\ \textcolor{keyword}{import}\ es.ull.esit.app.middleware.model.User;}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00021}00021\ \textcolor{keyword}{import}\ org.slf4j.Logger;}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00022}00022\ \textcolor{keyword}{import}\ org.slf4j.LoggerFactory;}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00031}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient}{00031}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_aa91db363d76c66888bae50b0d65d11fa}{ApiClient}}\ \{}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00034}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a1ad2fd15081bf7b6d1cf4d91c70f965f}{00034}}\ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keyword}{final}\ String\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a1ad2fd15081bf7b6d1cf4d91c70f965f}{APPLICATION\_JSON}}\ =\ \textcolor{stringliteral}{"{}application/json"{}};}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00037}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a9cdb8cc4a8ce12e1cf3fd78ee8406c5b}{00037}}\ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keyword}{final}\ Logger\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a9cdb8cc4a8ce12e1cf3fd78ee8406c5b}{LOGGER}}\ =\ LoggerFactory.getLogger(\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_aa91db363d76c66888bae50b0d65d11fa}{ApiClient}}.class);}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00040}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a43674470f1df0d205cb796be39ebffb7}{00040}}\ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keyword}{final}\ String\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a43674470f1df0d205cb796be39ebffb7}{CONTENT\_TYPE}}\ =\ \textcolor{stringliteral}{"{}Content-\/Type"{}};}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00043}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a883662e38a8a6355c1005fc7f34931e6}{00043}}\ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keyword}{final}\ String\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a883662e38a8a6355c1005fc7f34931e6}{API\_APPETIZERS}}\ =\ \textcolor{stringliteral}{"{}/api/appetizers/"{}};}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00046}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a0d37367d5d26ba74e76b75eea37a2ed4}{00046}}\ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keyword}{final}\ String\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a0d37367d5d26ba74e76b75eea37a2ed4}{API\_DRINKS}}\ =\ \textcolor{stringliteral}{"{}/api/drinks/"{}};}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00049}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a6e90bcbf8293b94f083c4fa3d0798008}{00049}}\ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keyword}{final}\ String\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a6e90bcbf8293b94f083c4fa3d0798008}{API\_MAINCOURSES}}\ =\ \textcolor{stringliteral}{"{}/api/maincourses/"{}};}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00051}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a60325ca64e77c7dab7be91b4d4696b2f}{00051}}\ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keyword}{final}\ String\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a60325ca64e77c7dab7be91b4d4696b2f}{API\_LOGIN}}\ =\ \textcolor{stringliteral}{"{}/api/login"{}};}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00054}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_aa5ba7fcb6c259fcc2338727f03ecd837}{00054}}\ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{final}\ HttpClient\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_aa5ba7fcb6c259fcc2338727f03ecd837}{http}};}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00057}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a34e7093782fed02590b8144b2587bfb8}{00057}}\ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{final}\ String\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a34e7093782fed02590b8144b2587bfb8}{baseUrl}};}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00063}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_adfd26bea00a33e2f7e3fc969c723f154}{00063}}\ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{final}\ ObjectMapper\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_adfd26bea00a33e2f7e3fc969c723f154}{mapper}};}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00074}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_aa91db363d76c66888bae50b0d65d11fa}{00074}}\ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_aa91db363d76c66888bae50b0d65d11fa}{ApiClient}}(String\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a34e7093782fed02590b8144b2587bfb8}{baseUrl}})\ \{}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00075}00075\ \ \ \ \ this.baseUrl\ =\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a34e7093782fed02590b8144b2587bfb8}{baseUrl}}.endsWith(\textcolor{stringliteral}{"{}/"{}})\ ?\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a34e7093782fed02590b8144b2587bfb8}{baseUrl}}.substring(0,\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a34e7093782fed02590b8144b2587bfb8}{baseUrl}}.length()\ -\/\ 1)\ :\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a34e7093782fed02590b8144b2587bfb8}{baseUrl}};}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00076}00076\ \ \ \ \ this.http\ =\ HttpClient.newBuilder()}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00077}00077\ \ \ \ \ \ \ \ \ .connectTimeout(Duration.ofSeconds(5))}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00078}00078\ \ \ \ \ \ \ \ \ .build();}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00079}00079\ \ \ \ \ this.mapper\ =\ \textcolor{keyword}{new}\ ObjectMapper();}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00080}00080\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00086}00086\ \ \ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_aa91db363d76c66888bae50b0d65d11fa}{ApiClient}}(String\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a34e7093782fed02590b8144b2587bfb8}{baseUrl}},\ HttpClient\ http,\ ObjectMapper\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_adfd26bea00a33e2f7e3fc969c723f154}{mapper}})\ \{}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00087}00087\ \ \ \ \ this.baseUrl\ =\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a34e7093782fed02590b8144b2587bfb8}{baseUrl}}.endsWith(\textcolor{stringliteral}{"{}/"{}})\ ?\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a34e7093782fed02590b8144b2587bfb8}{baseUrl}}.substring(0,\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a34e7093782fed02590b8144b2587bfb8}{baseUrl}}.length()\ -\/\ 1)\ :\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a34e7093782fed02590b8144b2587bfb8}{baseUrl}};}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00088}00088\ \ \ \ \ this.http\ =\ http;}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00089}00089\ \ \ \ \ this.mapper\ =\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_adfd26bea00a33e2f7e3fc969c723f154}{mapper}}\ ==\ \textcolor{keyword}{null}\ ?\ \textcolor{keyword}{new}\ ObjectMapper()\ :\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_adfd26bea00a33e2f7e3fc969c723f154}{mapper}};}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00090}00090\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00091}00091\ }
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00095}00095\ \ \ @FunctionalInterface}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00096}\mbox{\hyperlink{interfacees_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_1_1IOCallable}{00096}}\ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{interface\ }\mbox{\hyperlink{interfacees_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_1_1IOCallable}{IOCallable}}<T>\ \{}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00097}\mbox{\hyperlink{interfacees_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_1_1IOCallable_af53c5031d3410d0412cbf022f140da5c}{00097}}\ \ \ \ \ T\ \mbox{\hyperlink{interfacees_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_1_1IOCallable_af53c5031d3410d0412cbf022f140da5c}{call}}()\ throws\ InterruptedException,\ IOException;}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00098}00098\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00099}00099\ }
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00109}00109\ \ \ private\ <T>\ T\ execute(String\ action,\ \mbox{\hyperlink{interfacees_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_1_1IOCallable}{IOCallable}}<T>\ callable)\ \{}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00110}00110\ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00111}00111\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ callable.call();}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00112}00112\ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (InterruptedException\ e)\ \{}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00113}00113\ \ \ \ \ \ \ Thread.currentThread().interrupt();}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00114}00114\ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClientException}{ApiClientException}}(\textcolor{stringliteral}{"{}Thread\ interrupted\ during\ "{}}\ +\ action,\ e);}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00115}00115\ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (IOException\ e)\ \{}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00116}00116\ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClientException}{ApiClientException}}(\textcolor{stringliteral}{"{}I/O\ error\ during\ "{}}\ +\ action,\ e);}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00117}00117\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00118}00118\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00119}00119\ }
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00124}00124\ \ \ @FunctionalInterface}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00125}\mbox{\hyperlink{interfacees_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_1_1ResponseHandler}{00125}}\ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{interface\ }\mbox{\hyperlink{interfacees_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_1_1ResponseHandler}{ResponseHandler}}<R>\ \{}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00126}\mbox{\hyperlink{interfacees_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_1_1ResponseHandler_a878768786979003858d2c5a3f99ad37f}{00126}}\ \ \ \ \ R\ \mbox{\hyperlink{interfacees_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_1_1ResponseHandler_a878768786979003858d2c5a3f99ad37f}{handle}}(\textcolor{keywordtype}{int}\ status,\ String\ body)\ \textcolor{keywordflow}{throws}\ IOException;}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00127}00127\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00128}00128\ }
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00134}00134\ \ \ private\ <R>\ R\ sendAndHandle(String\ action,\ HttpRequest\ request,\ \mbox{\hyperlink{interfacees_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_1_1ResponseHandler}{ResponseHandler<R>}}\ handler)}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00135}00135\ \ \ \ \ \ \ \textcolor{keywordflow}{throws}\ InterruptedException,\ IOException\ \{}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00136}00136\ \ \ \ \ HttpResponse<String>\ res\ =\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_aa5ba7fcb6c259fcc2338727f03ecd837}{http}}.send(request,\ HttpResponse.BodyHandlers.ofString());}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00137}00137\ \ \ \ \ \textcolor{keywordtype}{int}\ status\ =\ res.statusCode();}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00138}00138\ \ \ \ \ String\ body\ =\ res.body();}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00139}00139\ }
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00140}00140\ \ \ \ \ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a9cdb8cc4a8ce12e1cf3fd78ee8406c5b}{LOGGER}}.info(\textcolor{stringliteral}{"{}\{\}\ -\/>\ HTTP\ \{\}"{}},\ action,\ status);}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00141}00141\ \ \ \ \ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a9cdb8cc4a8ce12e1cf3fd78ee8406c5b}{LOGGER}}.info(\textcolor{stringliteral}{"{}Response\ body:\ '\{\}'"{}},\ body);}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00142}00142\ }
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00143}00143\ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00144}00144\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ handler.handle(status,\ body);}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00145}00145\ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (IOException\ e)\ \{}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00146}00146\ \ \ \ \ \ \ \textcolor{comment}{//\ Wrap\ parsing\ IO\ exceptions\ with\ more\ context\ (status\ +\ body)\ so\ the\ UI}}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00147}00147\ \ \ \ \ \ \ \textcolor{comment}{//\ receives\ a\ helpful\ message\ instead\ of\ a\ generic\ one.}}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00148}00148\ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClientException}{ApiClientException}}(\textcolor{stringliteral}{"{}I/O\ error\ during\ "{}}\ +\ action\ +\ \textcolor{stringliteral}{"{}\ status:\ "{}}\ +\ status\ +\ \textcolor{stringliteral}{"{}\ body:\ "{}}\ +\ body,\ e);}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00149}00149\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00150}00150\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00151}00151\ }
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00152}00152\ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00153}00153\ \ \ \textcolor{comment}{//\ Helpers\ genéricos}}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00154}00154\ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00155}00155\ }
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00169}00169\ \ \ private\ <T>\ T\ \textcolor{keyword}{get}(String\ path,\ Class<T>\ responseType)\ \{}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00170}00170\ \ \ \ \ \textcolor{keywordflow}{return}\ execute(\textcolor{stringliteral}{"{}GET\ "{}}\ +\ path,\ ()\ -\/>\ sendAndHandle(\textcolor{stringliteral}{"{}GET\ "{}}\ +\ path,}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00171}00171\ \ \ \ \ \ \ \ \ HttpRequest.newBuilder().uri(URI.create(\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a34e7093782fed02590b8144b2587bfb8}{baseUrl}}\ +\ path)).GET().header(\textcolor{stringliteral}{"{}Accept"{}},\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a1ad2fd15081bf7b6d1cf4d91c70f965f}{APPLICATION\_JSON}}).build(),}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00172}00172\ \ \ \ \ \ \ \ \ (status,\ body)\ -\/>\ \{}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00173}00173\ \ \ \ \ \ \ \ \ \ \ if\ (status\ ==\ 204\ ||\ body\ ==\ null\ ||\ body.trim().isEmpty())\ \{}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00174}00174\ \ \ \ \ \ \ \ \ \ \ \ \ return\ null;}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00175}00175\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00176}00176\ \ \ \ \ \ \ \ \ \ \ if\ (status\ <\ 200\ ||\ status\ >=\ 300)\ \{}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00177}00177\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ ApiClientException(\textcolor{stringliteral}{"{}GET\ "{}}\ +\ path\ +\ \textcolor{stringliteral}{"{}\ failed\ with\ HTTP\ "{}}\ +\ status\ +\ \textcolor{stringliteral}{"{}\ body:\ "{}}\ +\ body);}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00178}00178\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00179}00179\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_adfd26bea00a33e2f7e3fc969c723f154}{mapper}}.readValue(body,\ responseType);}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00180}00180\ \ \ \ \ \ \ \ \ \}));}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00181}00181\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00182}00182\ }
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00196}00196\ \ \ private\ <T>\ List<T>\ getList(String\ path,\ TypeReference<List<T>>\ typeRef)\ \{}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00197}00197\ \ \ \ \ \textcolor{keywordflow}{return}\ execute(\textcolor{stringliteral}{"{}GET\ "{}}\ +\ path,\ ()\ -\/>\ sendAndHandle(\textcolor{stringliteral}{"{}GET\ "{}}\ +\ path,}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00198}00198\ \ \ \ \ \ \ \ \ HttpRequest.newBuilder().uri(URI.create(\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a34e7093782fed02590b8144b2587bfb8}{baseUrl}}\ +\ path)).GET().header(\textcolor{stringliteral}{"{}Accept"{}},\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a1ad2fd15081bf7b6d1cf4d91c70f965f}{APPLICATION\_JSON}}).build(),}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00199}00199\ \ \ \ \ \ \ \ \ (status,\ body)\ -\/>\ \{}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00200}00200\ \ \ \ \ \ \ \ \ \ \ if\ (status\ ==\ 204\ ||\ body\ ==\ null\ ||\ body.trim().isEmpty())\ \{}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00201}00201\ \ \ \ \ \ \ \ \ \ \ \ \ return\ java.util.Collections.emptyList();}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00202}00202\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00203}00203\ \ \ \ \ \ \ \ \ \ \ if\ (status\ <\ 200\ ||\ status\ >=\ 300)\ \{}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00204}00204\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ ApiClientException(\textcolor{stringliteral}{"{}GET\ "{}}\ +\ path\ +\ \textcolor{stringliteral}{"{}\ failed\ with\ HTTP\ "{}}\ +\ status\ +\ \textcolor{stringliteral}{"{}\ body:\ "{}}\ +\ body);}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00205}00205\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00206}00206\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_adfd26bea00a33e2f7e3fc969c723f154}{mapper}}.readValue(body,\ typeRef);}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00207}00207\ \ \ \ \ \ \ \ \ \}));}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00208}00208\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00209}00209\ }
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00225}00225\ \ \ private\ <T,\ R>\ R\ post(String\ path,\ T\ body,\ Class<R>\ responseType)\ \{}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00226}00226\ \ \ \ \ \textcolor{keywordflow}{return}\ execute(\textcolor{stringliteral}{"{}POST\ "{}}\ +\ path,\ ()\ -\/>\ \{}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00227}00227\ \ \ \ \ \ \ String\ json\ =\ mapper.writeValueAsString(body);}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00228}00228\ \ \ \ \ \ \ HttpRequest\ req\ =\ HttpRequest.newBuilder().uri(URI.create(baseUrl\ +\ path))}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00229}00229\ \ \ \ \ \ \ \ \ \ \ .POST(HttpRequest.BodyPublishers.ofString(json)).header(CONTENT\_TYPE,\ APPLICATION\_JSON).build();}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00230}00230\ }
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00231}00231\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ sendAndHandle(\textcolor{stringliteral}{"{}POST\ "{}}\ +\ path,\ req,\ (status,\ responseBody)\ -\/>\ \{}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00232}00232\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (status\ <\ 200\ ||\ status\ >=\ 300)\ \{}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00233}00233\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClientException}{ApiClientException}}(\textcolor{stringliteral}{"{}POST\ "{}}\ +\ path\ +\ \textcolor{stringliteral}{"{}\ failed\ with\ HTTP\ "{}}\ +\ status\ +\ \textcolor{stringliteral}{"{}\ body:\ "{}}\ +\ responseBody);}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00234}00234\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00235}00235\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ mapper.readValue(responseBody,\ responseType);}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00236}00236\ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00237}00237\ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00238}00238\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00239}00239\ }
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00240}00240\ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00241}00241\ \ \ \textcolor{comment}{//\ CRUD\ methods\ for\ Appetizers}}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00242}00242\ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00243}00243\ }
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00251}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a51281f54fefeb800184db1c61938b8f0}{00251}}\ \ \ \textcolor{keyword}{public}\ List<Appetizer>\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a51281f54fefeb800184db1c61938b8f0}{getAllAppetizers}}()\ \{}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00252}00252\ \ \ \ \ \textcolor{keywordflow}{return}\ getList(\textcolor{stringliteral}{"{}/api/appetizers"{}},\ \textcolor{keyword}{new}\ TypeReference<List<Appetizer>>()\ \{\});}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00253}00253\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00254}00254\ }
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00263}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_af922406f62cf7437798dfd48fc080bf6}{00263}}\ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Appetizer}{Appetizer}}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_af922406f62cf7437798dfd48fc080bf6}{getAppetizerById}}(Long\ \textcolor{keywordtype}{id})\ \{}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00264}00264\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{get}(\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a883662e38a8a6355c1005fc7f34931e6}{API\_APPETIZERS}}\ +\ id,\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Appetizer}{Appetizer}}.class);}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00265}00265\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00266}00266\ }
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00274}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a011f83f03ca4fadc10aec98779c409c8}{00274}}\ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Appetizer}{Appetizer}}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a011f83f03ca4fadc10aec98779c409c8}{createAppetizer}}(\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Appetizer}{Appetizer}}\ appetizer)\ \{}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00275}00275\ \ \ \ \ \textcolor{keywordflow}{return}\ post(\textcolor{stringliteral}{"{}/api/appetizers"{}},\ appetizer,\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Appetizer}{Appetizer}}.class);}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00276}00276\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00277}00277\ }
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00286}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a56dbbc11355ae6cbeacd65f39d424187}{00286}}\ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Appetizer}{Appetizer}}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a56dbbc11355ae6cbeacd65f39d424187}{updateAppetizer}}(Long\ \textcolor{keywordtype}{id},\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Appetizer}{Appetizer}}\ appetizer)\ \{}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00287}00287\ \ \ \ \ String\ path\ =\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a883662e38a8a6355c1005fc7f34931e6}{API\_APPETIZERS}}\ +\ id;}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00288}00288\ \ \ \ \ \textcolor{keywordflow}{return}\ execute(\textcolor{stringliteral}{"{}updateAppetizer\ id="{}}\ +\ \textcolor{keywordtype}{id},\ ()\ -\/>\ \{}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00289}00289\ \ \ \ \ \ \ String\ json\ =\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_adfd26bea00a33e2f7e3fc969c723f154}{mapper}}.writeValueAsString(appetizer);}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00290}00290\ \ \ \ \ \ \ HttpRequest\ req\ =\ HttpRequest.newBuilder().uri(URI.create(\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a34e7093782fed02590b8144b2587bfb8}{baseUrl}}\ +\ path))}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00291}00291\ \ \ \ \ \ \ \ \ \ \ .PUT(HttpRequest.BodyPublishers.ofString(json)).header(\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a43674470f1df0d205cb796be39ebffb7}{CONTENT\_TYPE}},\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a1ad2fd15081bf7b6d1cf4d91c70f965f}{APPLICATION\_JSON}}).build();}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00292}00292\ }
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00293}00293\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ sendAndHandle(\textcolor{stringliteral}{"{}PUT\ "{}}\ +\ path,\ req,\ (status,\ body)\ -\/>\ \{}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00294}00294\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (status\ <\ 200\ ||\ status\ >=\ 300)\ \{}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00295}00295\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClientException}{ApiClientException}}(\textcolor{stringliteral}{"{}PUT\ "{}}\ +\ path\ +\ \textcolor{stringliteral}{"{}\ failed\ with\ HTTP\ "{}}\ +\ status\ +\ \textcolor{stringliteral}{"{}\ body:\ "{}}\ +\ body);}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00296}00296\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00297}00297\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_adfd26bea00a33e2f7e3fc969c723f154}{mapper}}.readValue(body,\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Appetizer}{Appetizer}}.class);}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00298}00298\ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00299}00299\ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00300}00300\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00301}00301\ }
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00308}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a7ca75a1a565560e364cea86fd390619e}{00308}}\ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a7ca75a1a565560e364cea86fd390619e}{deleteAppetizer}}(Long\ \textcolor{keywordtype}{id})\ \{}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00309}00309\ \ \ \ \ String\ path\ =\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a883662e38a8a6355c1005fc7f34931e6}{API\_APPETIZERS}}\ +\ id;}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00310}00310\ \ \ \ \ execute(\textcolor{stringliteral}{"{}deleteAppetizer\ id="{}}\ +\ \textcolor{keywordtype}{id},\ ()\ -\/>\ sendAndHandle(\textcolor{stringliteral}{"{}DELETE\ "{}}\ +\ path,}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00311}00311\ \ \ \ \ \ \ \ \ HttpRequest.newBuilder().uri(URI.create(\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a34e7093782fed02590b8144b2587bfb8}{baseUrl}}\ +\ path)).DELETE().build(),\ (status,\ body)\ -\/>\ \{}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00312}00312\ \ \ \ \ \ \ \ \ \ \ if\ (status\ <\ 200\ ||\ status\ >=\ 300)\ \{}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00313}00313\ \ \ \ \ \ \ \ \ \ \ \ \ throw\ new\ ApiClientException(\textcolor{stringliteral}{"{}DELETE\ "{}}\ +\ path\ +\ \textcolor{stringliteral}{"{}\ failed\ with\ HTTP\ "{}}\ +\ status\ +\ \textcolor{stringliteral}{"{}\ body:\ "{}}\ +\ body);}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00314}00314\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00315}00315\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00316}00316\ \ \ \ \ \ \ \ \ \}));}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00317}00317\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00318}00318\ }
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00319}00319\ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00320}00320\ \ \ \textcolor{comment}{//\ READ\ /\ UPDATE\ methods\ for\ Cashiers}}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00321}00321\ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00322}00322\ }
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00330}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a36db088ab0a20bbb898b53d20063fd33}{00330}}\ \ \ \textcolor{keyword}{public}\ List<Cashier>\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a36db088ab0a20bbb898b53d20063fd33}{getAllCashiers}}()\ \{}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00331}00331\ \ \ \ \ \textcolor{keywordflow}{return}\ getList(\textcolor{stringliteral}{"{}/api/cashiers"{}},\ \textcolor{keyword}{new}\ TypeReference<List<Cashier>>()\ \{\});}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00332}00332\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00333}00333\ }
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00341}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_aa82c8ff95a2f62fc0f2ce2f09c642feb}{00341}}\ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Cashier}{Cashier}}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_aa82c8ff95a2f62fc0f2ce2f09c642feb}{getCashierById}}(Long\ \textcolor{keywordtype}{id})\ \{}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00342}00342\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{get}(\textcolor{stringliteral}{"{}/api/cashiers/"{}}\ +\ id,\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Cashier}{Cashier}}.class);}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00343}00343\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00344}00344\ }
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00352}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_af3eae943ad671742fe64e62ee9203c69}{00352}}\ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Cashier}{Cashier}}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_af3eae943ad671742fe64e62ee9203c69}{getCashierByName}}(String\ name)\ \{}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00353}00353\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{get}(\textcolor{stringliteral}{"{}/api/cashiers/name/"{}}\ +\ name,\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Cashier}{Cashier}}.class);}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00354}00354\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00355}00355\ }
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00365}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a5ccde9cb38cb1741c364f1a65cad283d}{00365}}\ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Cashier}{Cashier}}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a5ccde9cb38cb1741c364f1a65cad283d}{updateCashier}}(Long\ \textcolor{keywordtype}{id},\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Cashier}{Cashier}}\ cashier)\ \{}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00366}00366\ \ \ \ \ String\ path\ =\ \textcolor{stringliteral}{"{}/api/cashiers/"{}}\ +\ id;}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00367}00367\ \ \ \ \ \textcolor{keywordflow}{return}\ execute(\textcolor{stringliteral}{"{}updateCashier\ id="{}}\ +\ \textcolor{keywordtype}{id},\ ()\ -\/>\ \{}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00368}00368\ \ \ \ \ \ \ String\ json\ =\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_adfd26bea00a33e2f7e3fc969c723f154}{mapper}}.writeValueAsString(cashier);}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00369}00369\ \ \ \ \ \ \ HttpRequest\ req\ =\ HttpRequest.newBuilder().uri(URI.create(\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a34e7093782fed02590b8144b2587bfb8}{baseUrl}}\ +\ path))}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00370}00370\ \ \ \ \ \ \ \ \ \ \ .PUT(HttpRequest.BodyPublishers.ofString(json)).header(\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a43674470f1df0d205cb796be39ebffb7}{CONTENT\_TYPE}},\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a1ad2fd15081bf7b6d1cf4d91c70f965f}{APPLICATION\_JSON}}).build();}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00371}00371\ }
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00372}00372\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ sendAndHandle(\textcolor{stringliteral}{"{}PUT\ "{}}\ +\ path,\ req,\ (status,\ body)\ -\/>\ \{}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00373}00373\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (status\ <\ 200\ ||\ status\ >=\ 300)\ \{}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00374}00374\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClientException}{ApiClientException}}(\textcolor{stringliteral}{"{}PUT\ "{}}\ +\ path\ +\ \textcolor{stringliteral}{"{}\ failed\ with\ HTTP\ "{}}\ +\ status\ +\ \textcolor{stringliteral}{"{}\ body:\ "{}}\ +\ body);}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00375}00375\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00376}00376\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_adfd26bea00a33e2f7e3fc969c723f154}{mapper}}.readValue(body,\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Cashier}{Cashier}}.class);}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00377}00377\ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00378}00378\ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00379}00379\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00380}00380\ }
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00381}00381\ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00382}00382\ \ \ \textcolor{comment}{//\ CRUD\ methods\ for\ Drinks}}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00383}00383\ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00384}00384\ }
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00392}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_ac0671dc5765cc1f7f7a9d0b5d690041f}{00392}}\ \ \ \textcolor{keyword}{public}\ List<Drink>\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_ac0671dc5765cc1f7f7a9d0b5d690041f}{getAllDrinks}}()\ \{}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00393}00393\ \ \ \ \ \textcolor{keywordflow}{return}\ getList(\textcolor{stringliteral}{"{}/api/drinks"{}},\ \textcolor{keyword}{new}\ TypeReference<List<Drink>>()\ \{\});}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00394}00394\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00395}00395\ }
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00404}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_ac4825df93e005622f3f71ce0d7674608}{00404}}\ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink}{Drink}}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_ac4825df93e005622f3f71ce0d7674608}{getDrinkById}}(Long\ \textcolor{keywordtype}{id})\ \{}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00405}00405\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{get}(\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a0d37367d5d26ba74e76b75eea37a2ed4}{API\_DRINKS}}\ +\ id,\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink}{Drink}}.class);}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00406}00406\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00407}00407\ }
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00416}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a42cce76ccfae7975a92454d7a8313556}{00416}}\ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink}{Drink}}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a42cce76ccfae7975a92454d7a8313556}{createDrink}}(\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink}{Drink}}\ drink)\ \{}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00417}00417\ \ \ \ \ \textcolor{keywordflow}{return}\ post(\textcolor{stringliteral}{"{}/api/drinks"{}},\ drink,\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink}{Drink}}.class);}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00418}00418\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00419}00419\ }
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00429}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a782dd911607bce7a0c6426e8ace50862}{00429}}\ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink}{Drink}}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a782dd911607bce7a0c6426e8ace50862}{updateDrink}}(Long\ \textcolor{keywordtype}{id},\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink}{Drink}}\ drink)\ \{}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00430}00430\ \ \ \ \ String\ path\ =\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a0d37367d5d26ba74e76b75eea37a2ed4}{API\_DRINKS}}\ +\ id;}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00431}00431\ \ \ \ \ \textcolor{keywordflow}{return}\ execute(\textcolor{stringliteral}{"{}updateDrink\ id="{}}\ +\ \textcolor{keywordtype}{id},\ ()\ -\/>\ \{}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00432}00432\ \ \ \ \ \ \ String\ json\ =\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_adfd26bea00a33e2f7e3fc969c723f154}{mapper}}.writeValueAsString(drink);}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00433}00433\ \ \ \ \ \ \ HttpRequest\ req\ =\ HttpRequest.newBuilder().uri(URI.create(\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a34e7093782fed02590b8144b2587bfb8}{baseUrl}}\ +\ path))}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00434}00434\ \ \ \ \ \ \ \ \ \ \ .PUT(HttpRequest.BodyPublishers.ofString(json)).header(\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a43674470f1df0d205cb796be39ebffb7}{CONTENT\_TYPE}},\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a1ad2fd15081bf7b6d1cf4d91c70f965f}{APPLICATION\_JSON}}).build();}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00435}00435\ }
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00436}00436\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ sendAndHandle(\textcolor{stringliteral}{"{}PUT\ "{}}\ +\ path,\ req,\ (status,\ body)\ -\/>\ \{}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00437}00437\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (status\ <\ 200\ ||\ status\ >=\ 300)\ \{}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00438}00438\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClientException}{ApiClientException}}(\textcolor{stringliteral}{"{}PUT\ "{}}\ +\ path\ +\ \textcolor{stringliteral}{"{}\ failed\ with\ HTTP\ "{}}\ +\ status\ +\ \textcolor{stringliteral}{"{}\ body:\ "{}}\ +\ body);}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00439}00439\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00440}00440\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_adfd26bea00a33e2f7e3fc969c723f154}{mapper}}.readValue(body,\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink}{Drink}}.class);}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00441}00441\ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00442}00442\ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00443}00443\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00444}00444\ }
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00452}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_ae27f2dc01eb0ef2452b4ad3ab939d1bf}{00452}}\ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_ae27f2dc01eb0ef2452b4ad3ab939d1bf}{deleteDrink}}(Long\ \textcolor{keywordtype}{id})\ \{}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00453}00453\ \ \ \ \ String\ path\ =\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a0d37367d5d26ba74e76b75eea37a2ed4}{API\_DRINKS}}\ +\ id;}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00454}00454\ \ \ \ \ execute(\textcolor{stringliteral}{"{}deleteDrink\ id="{}}\ +\ \textcolor{keywordtype}{id},\ ()\ -\/>\ sendAndHandle(\textcolor{stringliteral}{"{}DELETE\ "{}}\ +\ path,}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00455}00455\ \ \ \ \ \ \ \ \ HttpRequest.newBuilder().uri(URI.create(\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a34e7093782fed02590b8144b2587bfb8}{baseUrl}}\ +\ path)).DELETE().build(),\ (status,\ body)\ -\/>\ \{}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00456}00456\ \ \ \ \ \ \ \ \ \ \ if\ (status\ <\ 200\ ||\ status\ >=\ 300)\ \{}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00457}00457\ \ \ \ \ \ \ \ \ \ \ \ \ throw\ new\ ApiClientException(\textcolor{stringliteral}{"{}DELETE\ "{}}\ +\ path\ +\ \textcolor{stringliteral}{"{}\ failed\ with\ HTTP\ "{}}\ +\ status\ +\ \textcolor{stringliteral}{"{}\ body:\ "{}}\ +\ body);}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00458}00458\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00459}00459\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00460}00460\ \ \ \ \ \ \ \ \ \}));}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00461}00461\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00462}00462\ }
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00463}00463\ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00464}00464\ \ \ \textcolor{comment}{//\ CRUD\ methods\ for\ MainCourses}}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00465}00465\ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00466}00466\ }
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00474}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_ac6ad4ae81f09381c7c4ec35f699e90c4}{00474}}\ \ \ \textcolor{keyword}{public}\ List<MainCourse>\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_ac6ad4ae81f09381c7c4ec35f699e90c4}{getAllMainCourses}}()\ \{}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00475}00475\ \ \ \ \ \textcolor{keywordflow}{return}\ getList(\textcolor{stringliteral}{"{}/api/maincourses"{}},\ \textcolor{keyword}{new}\ TypeReference<List<MainCourse>>()\ \{\});}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00476}00476\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00477}00477\ }
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00486}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a195ead247d29f2a07fb56b267a39c201}{00486}}\ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1MainCourse}{MainCourse}}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a195ead247d29f2a07fb56b267a39c201}{getMainCourseById}}(Long\ \textcolor{keywordtype}{id})\ \{}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00487}00487\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{get}(\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a6e90bcbf8293b94f083c4fa3d0798008}{API\_MAINCOURSES}}\ +\ id,\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1MainCourse}{MainCourse}}.class);}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00488}00488\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00489}00489\ }
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00498}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a67104be05b59c4804776c17211e9614f}{00498}}\ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1MainCourse}{MainCourse}}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a67104be05b59c4804776c17211e9614f}{createMainCourse}}(\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1MainCourse}{MainCourse}}\ mainCourse)\ \{}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00499}00499\ \ \ \ \ \textcolor{keywordflow}{return}\ post(\textcolor{stringliteral}{"{}/api/maincourses"{}},\ mainCourse,\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1MainCourse}{MainCourse}}.class);}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00500}00500\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00501}00501\ }
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00511}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_aefac6b70b8d5e0ca2792e31aa4cf40e8}{00511}}\ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1MainCourse}{MainCourse}}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_aefac6b70b8d5e0ca2792e31aa4cf40e8}{updateMainCourse}}(Long\ \textcolor{keywordtype}{id},\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1MainCourse}{MainCourse}}\ mainCourse)\ \{}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00512}00512\ \ \ \ \ String\ path\ =\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a6e90bcbf8293b94f083c4fa3d0798008}{API\_MAINCOURSES}}\ +\ id;}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00513}00513\ \ \ \ \ \textcolor{keywordflow}{return}\ execute(\textcolor{stringliteral}{"{}updateMainCourse\ id="{}}\ +\ \textcolor{keywordtype}{id},\ ()\ -\/>\ \{}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00514}00514\ \ \ \ \ \ \ String\ json\ =\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_adfd26bea00a33e2f7e3fc969c723f154}{mapper}}.writeValueAsString(mainCourse);}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00515}00515\ \ \ \ \ \ \ HttpRequest\ req\ =\ HttpRequest.newBuilder().uri(URI.create(\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a34e7093782fed02590b8144b2587bfb8}{baseUrl}}\ +\ path))}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00516}00516\ \ \ \ \ \ \ \ \ \ \ .PUT(HttpRequest.BodyPublishers.ofString(json)).header(\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a43674470f1df0d205cb796be39ebffb7}{CONTENT\_TYPE}},\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a1ad2fd15081bf7b6d1cf4d91c70f965f}{APPLICATION\_JSON}}).build();}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00517}00517\ }
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00518}00518\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ sendAndHandle(\textcolor{stringliteral}{"{}PUT\ "{}}\ +\ path,\ req,\ (status,\ body)\ -\/>\ \{}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00519}00519\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (status\ <\ 200\ ||\ status\ >=\ 300)\ \{}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00520}00520\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClientException}{ApiClientException}}(\textcolor{stringliteral}{"{}PUT\ "{}}\ +\ path\ +\ \textcolor{stringliteral}{"{}\ failed\ with\ HTTP\ "{}}\ +\ status\ +\ \textcolor{stringliteral}{"{}\ body:\ "{}}\ +\ body);}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00521}00521\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00522}00522\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_adfd26bea00a33e2f7e3fc969c723f154}{mapper}}.readValue(body,\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1MainCourse}{MainCourse}}.class);}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00523}00523\ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00524}00524\ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00525}00525\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00526}00526\ }
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00534}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a054c898546778fd8ae02ebb0bd84ecef}{00534}}\ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a054c898546778fd8ae02ebb0bd84ecef}{deleteMainCourse}}(Long\ \textcolor{keywordtype}{id})\ \{}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00535}00535\ \ \ \ \ String\ path\ =\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a6e90bcbf8293b94f083c4fa3d0798008}{API\_MAINCOURSES}}\ +\ id;}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00536}00536\ \ \ \ \ execute(\textcolor{stringliteral}{"{}deleteMainCourse\ id="{}}\ +\ \textcolor{keywordtype}{id},\ ()\ -\/>\ sendAndHandle(\textcolor{stringliteral}{"{}DELETE\ "{}}\ +\ path,}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00537}00537\ \ \ \ \ \ \ \ \ HttpRequest.newBuilder().uri(URI.create(\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a34e7093782fed02590b8144b2587bfb8}{baseUrl}}\ +\ path)).DELETE().build(),\ (status,\ body)\ -\/>\ \{}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00538}00538\ \ \ \ \ \ \ \ \ \ \ if\ (status\ <\ 200\ ||\ status\ >=\ 300)\ \{}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00539}00539\ \ \ \ \ \ \ \ \ \ \ \ \ throw\ new\ ApiClientException(\textcolor{stringliteral}{"{}DELETE\ "{}}\ +\ path\ +\ \textcolor{stringliteral}{"{}\ failed\ with\ HTTP\ "{}}\ +\ status\ +\ \textcolor{stringliteral}{"{}\ body:\ "{}}\ +\ body);}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00540}00540\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00541}00541\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00542}00542\ \ \ \ \ \ \ \ \ \}));}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00543}00543\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00544}00544\ }
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00545}00545\ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00546}00546\ \ \ \textcolor{comment}{//\ Authentication\ methods}}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00547}00547\ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00548}00548\ }
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00556}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a6ac45ef905c3995dd98ef8e571353873}{00556}}\ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a6ac45ef905c3995dd98ef8e571353873}{login}}(String\ ignored)\ \{}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00557}00557\ \ \ \ \ \textcolor{comment}{//\ No-\/op:\ kept\ for\ compatibility.}}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00558}00558\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00559}00559\ }
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00571}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_af83061bc53104044af867b1f7040c955}{00571}}\ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User}{User}}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_af83061bc53104044af867b1f7040c955}{login}}(String\ username,\ String\ password)\ \{}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00572}00572\ \ \ \ \ String\ path\ =\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a60325ca64e77c7dab7be91b4d4696b2f}{API\_LOGIN}};}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00573}00573\ \ \ \ \ \textcolor{keywordflow}{return}\ execute(\textcolor{stringliteral}{"{}login\ for\ user="{}}\ +\ username,\ ()\ -\/>\ \{}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00574}00574\ \ \ \ \ \ \ String\ jsonBody\ =\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_adfd26bea00a33e2f7e3fc969c723f154}{mapper}}.writeValueAsString(Map.of(}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00575}00575\ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}username"{}},\ username,}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00576}00576\ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}password"{}},\ password));}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00577}00577\ }
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00578}00578\ \ \ \ \ \ \ HttpRequest\ request\ =\ HttpRequest.newBuilder().uri(URI.create(\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a34e7093782fed02590b8144b2587bfb8}{baseUrl}}\ +\ path))}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00579}00579\ \ \ \ \ \ \ \ \ \ \ .header(\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a43674470f1df0d205cb796be39ebffb7}{CONTENT\_TYPE}},\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a1ad2fd15081bf7b6d1cf4d91c70f965f}{APPLICATION\_JSON}}).POST(HttpRequest.BodyPublishers.ofString(jsonBody)).build();}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00580}00580\ }
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00581}00581\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ sendAndHandle(\textcolor{stringliteral}{"{}POST\ "{}}\ +\ path,\ request,\ (status,\ body)\ -\/>\ \{}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00582}00582\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (status\ ==\ 200)\ \{}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00583}00583\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_adfd26bea00a33e2f7e3fc969c723f154}{mapper}}.readValue(body,\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User}{User}}.class);}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00584}00584\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00585}00585\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClientException}{ApiClientException}}(\textcolor{stringliteral}{"{}Login\ failed\ with\ status:\ "{}}\ +\ status\ +\ \textcolor{stringliteral}{"{}\ body:\ "{}}\ +\ body);}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00586}00586\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00587}00587\ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00588}00588\ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00589}00589\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ApiClient_8java_source_l00590}00590\ \}}
+
+\end{DoxyCode}

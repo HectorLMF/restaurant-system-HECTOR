@@ -1,0 +1,82 @@
+\doxysection{es.\+ull.\+esit.\+server.\+Restaurant\+Application Class Reference}
+\hypertarget{classes_1_1ull_1_1esit_1_1server_1_1RestaurantApplication}{}\label{classes_1_1ull_1_1esit_1_1server_1_1RestaurantApplication}\index{es.ull.esit.server.RestaurantApplication@{es.ull.esit.server.RestaurantApplication}}
+
+
+Main Spring Boot application class for the restaurant backend.  
+
+
+
+
+Collaboration diagram for es.\+ull.\+esit.\+server.\+Restaurant\+Application\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{classes_1_1ull_1_1esit_1_1server_1_1RestaurantApplication__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1RestaurantApplication_a9223a1f3736e80dbb4f8dd3cbd795866}{main}} (String\mbox{[}$\,$\mbox{]} args)
+\begin{DoxyCompactList}\small\item\em Main entry point for the Spring Boot backend. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Main Spring Boot application class for the restaurant backend. 
+
+\begin{DoxyVerb}   Bootstraps the Spring Boot application.
+   Enables component scanning, auto-configuration and starts the embedded
+   web server that
+   exposes the REST controllers defined in the project.
+
+   The Swing frontend communicates with this backend via the HTTP
+   endpoints
+   provided by the controllers (Drinks, Appetizers, MainCourse, Menu,
+   etc.).
+\end{DoxyVerb}
+ 
+
+Definition at line \mbox{\hyperlink{RestaurantApplication_8java_source_l00020}{20}} of file \mbox{\hyperlink{RestaurantApplication_8java_source}{Restaurant\+Application.\+java}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{classes_1_1ull_1_1esit_1_1server_1_1RestaurantApplication_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classes_1_1ull_1_1esit_1_1server_1_1RestaurantApplication_a9223a1f3736e80dbb4f8dd3cbd795866}\index{es.ull.esit.server.RestaurantApplication@{es.ull.esit.server.RestaurantApplication}!main@{main}}
+\index{main@{main}!es.ull.esit.server.RestaurantApplication@{es.ull.esit.server.RestaurantApplication}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1server_1_1RestaurantApplication_a9223a1f3736e80dbb4f8dd3cbd795866} 
+void es.\+ull.\+esit.\+server.\+Restaurant\+Application.\+main (\begin{DoxyParamCaption}\item[{String\mbox{[}$\,$\mbox{]}}]{args}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Main entry point for the Spring Boot backend. 
+
+\begin{DoxyVerb}   Delegates to SpringApplication.run(), which starts the application
+   context, configures the environment and launches the embedded server.
+\end{DoxyVerb}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & \mbox{[}String\mbox{[}\mbox{]}\mbox{]} Command-\/line arguments (not used). \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{RestaurantApplication_8java_source_l00030}{30}} of file \mbox{\hyperlink{RestaurantApplication_8java_source}{Restaurant\+Application.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00031\ \ \ \ \ SpringApplication.run(RestaurantApplication.class,\ args);}
+\DoxyCodeLine{00032\ \ \ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{RestaurantApplication_8java}{Restaurant\+Application.\+java}}\end{DoxyCompactItemize}

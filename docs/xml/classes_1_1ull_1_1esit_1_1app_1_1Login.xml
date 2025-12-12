@@ -1,0 +1,586 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="classes_1_1ull_1_1esit_1_1app_1_1Login" kind="class" language="Java" prot="public">
+    <compoundname>es::ull::esit::app::Login</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">javax.swing.JFrame</basecompoundref>
+    <innerclass refid="interfacees_1_1ull_1_1esit_1_1app_1_1Login_1_1MessageDialog" prot="public">es::ull::esit::app::Login::MessageDialog</innerclass>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1Login_1afc6207f5ad5979a829642c9f410856aa" prot="private" static="no" mutable="no">
+        <type>final transient <ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1AuthService" kindref="compound">AuthService</ref></type>
+        <definition>final transient AuthService es.ull.esit.app.Login.authService</definition>
+        <argsstring></argsstring>
+        <name>authService</name>
+        <qualifiedname>es.ull.esit.app.Login.authService</qualifiedname>
+        <briefdescription>
+<para>Service to handle authentication logic. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/Login.java" line="26" column="39" bodyfile="src/main/java/es/ull/esit/app/Login.java" bodystart="26" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a4466f2f88c125b3f609314a421381778" compoundref="Login_8java" startline="214" endline="254">es.ull.esit.app.Login.jButton1ActionPerformed</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1Login_1a7b0063f113a10a332dc9961392fd0628" prot="private" static="no" mutable="no">
+        <type>javax.swing.JButton</type>
+        <definition>javax.swing.JButton es.ull.esit.app.Login.jButton1</definition>
+        <argsstring></argsstring>
+        <name>jButton1</name>
+        <qualifiedname>es.ull.esit.app.Login.jButton1</qualifiedname>
+        <briefdescription>
+<para>Button to perform login (&quot;Log In&quot;). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/Login.java" line="304" column="29" bodyfile="src/main/java/es/ull/esit/app/Login.java" bodystart="304" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1ae61fa95fab1880d2e48d4b52948f51f6" compoundref="Login_8java" startline="92" endline="199">es.ull.esit.app.Login.initComponents</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a4466f2f88c125b3f609314a421381778" compoundref="Login_8java" startline="214" endline="254">es.ull.esit.app.Login.jButton1ActionPerformed</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1Login_1a822fa6426790c6c44c7fad789bddfcfa" prot="private" static="no" mutable="no">
+        <type>javax.swing.JLabel</type>
+        <definition>javax.swing.JLabel es.ull.esit.app.Login.jLabel1</definition>
+        <argsstring></argsstring>
+        <name>jLabel1</name>
+        <qualifiedname>es.ull.esit.app.Login.jLabel1</qualifiedname>
+        <briefdescription>
+<para>Label for the image/logo. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/Login.java" line="306" column="28" bodyfile="src/main/java/es/ull/esit/app/Login.java" bodystart="306" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1ae61fa95fab1880d2e48d4b52948f51f6" compoundref="Login_8java" startline="92" endline="199">es.ull.esit.app.Login.initComponents</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1Login_1a9225931135e2f0f0c6488d3fc204ad4c" prot="private" static="no" mutable="no">
+        <type>javax.swing.JLabel</type>
+        <definition>javax.swing.JLabel es.ull.esit.app.Login.jLabel3</definition>
+        <argsstring></argsstring>
+        <name>jLabel3</name>
+        <qualifiedname>es.ull.esit.app.Login.jLabel3</qualifiedname>
+        <briefdescription>
+<para>Label for the title (&quot;User Login&quot;). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/Login.java" line="308" column="28" bodyfile="src/main/java/es/ull/esit/app/Login.java" bodystart="308" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1ae61fa95fab1880d2e48d4b52948f51f6" compoundref="Login_8java" startline="92" endline="199">es.ull.esit.app.Login.initComponents</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1Login_1a30279203310c1bc8fcc9e6d15edeac13" prot="private" static="no" mutable="no">
+        <type>javax.swing.JPanel</type>
+        <definition>javax.swing.JPanel es.ull.esit.app.Login.jPanel1</definition>
+        <argsstring></argsstring>
+        <name>jPanel1</name>
+        <qualifiedname>es.ull.esit.app.Login.jPanel1</qualifiedname>
+        <briefdescription>
+<para>Main panel container. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/Login.java" line="310" column="28" bodyfile="src/main/java/es/ull/esit/app/Login.java" bodystart="310" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1ae61fa95fab1880d2e48d4b52948f51f6" compoundref="Login_8java" startline="92" endline="199">es.ull.esit.app.Login.initComponents</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1Login_1a6709769133ef85f8201d86e6e436338a" prot="private" static="no" mutable="no">
+        <type>javax.swing.JPasswordField</type>
+        <definition>javax.swing.JPasswordField es.ull.esit.app.Login.jPasswordField1</definition>
+        <argsstring></argsstring>
+        <name>jPasswordField1</name>
+        <qualifiedname>es.ull.esit.app.Login.jPasswordField1</qualifiedname>
+        <briefdescription>
+<para>Input field for the password. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/Login.java" line="312" column="36" bodyfile="src/main/java/es/ull/esit/app/Login.java" bodystart="312" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1ae61fa95fab1880d2e48d4b52948f51f6" compoundref="Login_8java" startline="92" endline="199">es.ull.esit.app.Login.initComponents</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a4466f2f88c125b3f609314a421381778" compoundref="Login_8java" startline="214" endline="254">es.ull.esit.app.Login.jButton1ActionPerformed</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1Login_1a36e0d5c6df8e50615b96fbb67f855c8c" prot="private" static="no" mutable="no">
+        <type>javax.swing.JTextField</type>
+        <definition>javax.swing.JTextField es.ull.esit.app.Login.usernametxt</definition>
+        <argsstring></argsstring>
+        <name>usernametxt</name>
+        <qualifiedname>es.ull.esit.app.Login.usernametxt</qualifiedname>
+        <briefdescription>
+<para>Input field for the username. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/Login.java" line="314" column="32" bodyfile="src/main/java/es/ull/esit/app/Login.java" bodystart="314" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1ae61fa95fab1880d2e48d4b52948f51f6" compoundref="Login_8java" startline="92" endline="199">es.ull.esit.app.Login.initComponents</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a4466f2f88c125b3f609314a421381778" compoundref="Login_8java" startline="214" endline="254">es.ull.esit.app.Login.jButton1ActionPerformed</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1Login_1a981cc276ccd95ea19d12d7ad8c2d57cc" prot="private" static="no" mutable="no">
+        <type>javax.swing.JComboBox&lt; String &gt;</type>
+        <definition>javax.swing.JComboBox&lt;String&gt; es.ull.esit.app.Login.usertypecmbo</definition>
+        <argsstring></argsstring>
+        <name>usertypecmbo</name>
+        <qualifiedname>es.ull.esit.app.Login.usertypecmbo</qualifiedname>
+        <briefdescription>
+<para>Combo box for user type (admin/cashier). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Currently not trusted for security decisions. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/Login.java" line="319" column="31" bodyfile="src/main/java/es/ull/esit/app/Login.java" bodystart="319" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1ae61fa95fab1880d2e48d4b52948f51f6" compoundref="Login_8java" startline="92" endline="199">es.ull.esit.app.Login.initComponents</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="package-attrib">
+      <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1Login_1aa902062bf7b14e07606276585d3742c8" prot="package" static="no" mutable="no">
+        <type>java.util.function.Supplier&lt;? extends javax.swing.JFrame &gt;</type>
+        <definition>java.util.function.Supplier&lt;? extends javax.swing.JFrame&gt; es.ull.esit.app.Login.adminSupplier</definition>
+        <argsstring></argsstring>
+        <name>adminSupplier</name>
+        <qualifiedname>es.ull.esit.app.Login.adminSupplier</qualifiedname>
+        <initializer>= () -&gt; new <ref refid="classes_1_1ull_1_1esit_1_1app_1_1AdminLogin" kindref="compound">AdminLogin</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/Login.java" line="30" column="28" bodyfile="src/main/java/es/ull/esit/app/Login.java" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1Login_1af0207b720b0d6c93e758e34bbac45751" prot="package" static="no" mutable="no">
+        <type>java.util.function.Function&lt; String, ? extends javax.swing.JFrame &gt;</type>
+        <definition>java.util.function.Function&lt;String, ? extends javax.swing.JFrame&gt; es.ull.esit.app.Login.cashierFactory</definition>
+        <argsstring></argsstring>
+        <name>cashierFactory</name>
+        <qualifiedname>es.ull.esit.app.Login.cashierFactory</qualifiedname>
+        <initializer>= CashierLogin::new</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/Login.java" line="31" column="28" bodyfile="src/main/java/es/ull/esit/app/Login.java" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1Login_1a48a591b039a3cf032484d78dd6f8fe45" prot="package" static="no" mutable="no">
+        <type><ref refid="interfacees_1_1ull_1_1esit_1_1app_1_1Login_1_1MessageDialog" kindref="compound">MessageDialog</ref></type>
+        <definition>MessageDialog es.ull.esit.app.Login.messageDialog</definition>
+        <argsstring></argsstring>
+        <name>messageDialog</name>
+        <qualifiedname>es.ull.esit.app.Login.messageDialog</qualifiedname>
+        <initializer>= new <ref refid="interfacees_1_1ull_1_1esit_1_1app_1_1Login_1_1MessageDialog" kindref="compound">MessageDialog</ref>() {
+    @Override
+    public void showMessage(java.awt.Component parent, Object message) {
+      JOptionPane.showMessageDialog(parent, message);
+    }
+
+    @Override
+    public void showMessage(java.awt.Component parent, Object message, String title, int messageType) {
+      JOptionPane.showMessageDialog(parent, message, title, messageType);
+    }
+  }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/Login.java" line="39" column="17" bodyfile="src/main/java/es/ull/esit/app/Login.java" bodystart="39" bodyend="49"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1Login_1aeea494ca67f42033f3d3b287c2f297bf" prot="private" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String es.ull.esit.app.Login.PRIMARY_FONT</definition>
+        <argsstring></argsstring>
+        <name>PRIMARY_FONT</name>
+        <qualifiedname>es.ull.esit.app.Login.PRIMARY_FONT</qualifiedname>
+        <initializer>= &quot;Yu Gothic UI&quot;</initializer>
+        <briefdescription>
+<para>Primary font used in the GUI. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/Login.java" line="64" column="31" bodyfile="src/main/java/es/ull/esit/app/Login.java" bodystart="64" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1ae61fa95fab1880d2e48d4b52948f51f6" compoundref="Login_8java" startline="92" endline="199">es.ull.esit.app.Login.initComponents</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1Login_1afb300864f2c33b902ab656d46fd71575" prot="private" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String es.ull.esit.app.Login.LOGIN_STRING</definition>
+        <argsstring></argsstring>
+        <name>LOGIN_STRING</name>
+        <qualifiedname>es.ull.esit.app.Login.LOGIN_STRING</qualifiedname>
+        <initializer>= &quot;Log in&quot;</initializer>
+        <briefdescription>
+<para>String constant for &quot;Log in&quot; button text. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/Login.java" line="67" column="31" bodyfile="src/main/java/es/ull/esit/app/Login.java" bodystart="67" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1ae61fa95fab1880d2e48d4b52948f51f6" compoundref="Login_8java" startline="92" endline="199">es.ull.esit.app.Login.initComponents</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a4466f2f88c125b3f609314a421381778" compoundref="Login_8java" startline="214" endline="254">es.ull.esit.app.Login.jButton1ActionPerformed</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1Login_1af2da55421ea492860e61bf95c2711cd5" prot="private" static="yes" mutable="no">
+        <type>java.util.function.Supplier&lt; <ref refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a4991bf057499a53e77492291ee9ec66a" kindref="member">Login</ref> &gt;</type>
+        <definition>java.util.function.Supplier&lt;Login&gt; es.ull.esit.app.Login.loginFactory</definition>
+        <argsstring></argsstring>
+        <name>loginFactory</name>
+        <qualifiedname>es.ull.esit.app.Login.loginFactory</qualifiedname>
+        <initializer>= Login::new</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/Login.java" line="290" column="43" bodyfile="src/main/java/es/ull/esit/app/Login.java" bodystart="290" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="package-func">
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1Login_1a0656beb5b74e693e8cfa5c3def3351b9" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void es.ull.esit.app.Login.setAdminSupplier</definition>
+        <argsstring>(java.util.function.Supplier&lt;? extends javax.swing.JFrame &gt; s)</argsstring>
+        <name>setAdminSupplier</name>
+        <qualifiedname>es.ull.esit.app.Login.setAdminSupplier</qualifiedname>
+        <param>
+          <type>java.util.function.Supplier&lt;? extends javax.swing.JFrame &gt;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/Login.java" line="51" column="8" bodyfile="src/main/java/es/ull/esit/app/Login.java" bodystart="51" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1Login_1a60d56454893e87fe0b73823981929292" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void es.ull.esit.app.Login.setCashierFactory</definition>
+        <argsstring>(java.util.function.Function&lt; String, ? extends javax.swing.JFrame &gt; f)</argsstring>
+        <name>setCashierFactory</name>
+        <qualifiedname>es.ull.esit.app.Login.setCashierFactory</qualifiedname>
+        <param>
+          <type>java.util.function.Function&lt; String, ? extends javax.swing.JFrame &gt;</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/Login.java" line="55" column="8" bodyfile="src/main/java/es/ull/esit/app/Login.java" bodystart="55" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1Login_1a4c0a449dab6e1c63b3ebdb3584aa7b8e" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void es.ull.esit.app.Login.setMessageDialog</definition>
+        <argsstring>(MessageDialog md)</argsstring>
+        <name>setMessageDialog</name>
+        <qualifiedname>es.ull.esit.app.Login.setMessageDialog</qualifiedname>
+        <param>
+          <type><ref refid="interfacees_1_1ull_1_1esit_1_1app_1_1Login_1_1MessageDialog" kindref="compound">MessageDialog</ref></type>
+          <declname>md</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/Login.java" line="59" column="8" bodyfile="src/main/java/es/ull/esit/app/Login.java" bodystart="59" bodyend="61"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1Login_1a4991bf057499a53e77492291ee9ec66a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>es.ull.esit.app.Login.Login</definition>
+        <argsstring>()</argsstring>
+        <name>Login</name>
+        <qualifiedname>es.ull.esit.app.Login.Login</qualifiedname>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates the login window, initializes the <ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1AuthService" kindref="compound">AuthService</ref> and GUI components.</para>
+<para>The <ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient" kindref="compound">ApiClient</ref> is configured to connect to the backend at &quot;http://localhost:8080&quot;, which must match the URL of the Spring Boot backend server. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/Login.java" line="78" column="10" bodyfile="src/main/java/es/ull/esit/app/Login.java" bodystart="78" bodyend="82"/>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1ae61fa95fab1880d2e48d4b52948f51f6" compoundref="Login_8java" startline="92" endline="199">es.ull.esit.app.Login.initComponents</references>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a93bb7387e558ed643d7f04a09d1d53d2" compoundref="Login_8java" startline="273" endline="287">es.ull.esit.app.Login.main</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1Login_1ae61fa95fab1880d2e48d4b52948f51f6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void es.ull.esit.app.Login.initComponents</definition>
+        <argsstring>()</argsstring>
+        <name>initComponents</name>
+        <qualifiedname>es.ull.esit.app.Login.initComponents</qualifiedname>
+        <briefdescription>
+<para>Initializes GUI components. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>   Generated by the Form Editor: do not modify.
+   Sets up logo image, main label, input fields for username and password, combo box for user type, and button for &quot;Log In&quot;, along with the layout and configuration of the window.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/Login.java" line="92" column="16" bodyfile="src/main/java/es/ull/esit/app/Login.java" bodystart="92" bodyend="199"/>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1ae61fa95fab1880d2e48d4b52948f51f6" compoundref="Login_8java" startline="92" endline="199">es.ull.esit.app.Login.initComponents</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a7b0063f113a10a332dc9961392fd0628" compoundref="Login_8java" startline="304">es.ull.esit.app.Login.jButton1</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a822fa6426790c6c44c7fad789bddfcfa" compoundref="Login_8java" startline="306">es.ull.esit.app.Login.jLabel1</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a9225931135e2f0f0c6488d3fc204ad4c" compoundref="Login_8java" startline="308">es.ull.esit.app.Login.jLabel3</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a30279203310c1bc8fcc9e6d15edeac13" compoundref="Login_8java" startline="310">es.ull.esit.app.Login.jPanel1</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a6709769133ef85f8201d86e6e436338a" compoundref="Login_8java" startline="312">es.ull.esit.app.Login.jPasswordField1</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1afb300864f2c33b902ab656d46fd71575" compoundref="Login_8java" startline="67">es.ull.esit.app.Login.LOGIN_STRING</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1aeea494ca67f42033f3d3b287c2f297bf" compoundref="Login_8java" startline="64">es.ull.esit.app.Login.PRIMARY_FONT</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a36e0d5c6df8e50615b96fbb67f855c8c" compoundref="Login_8java" startline="314">es.ull.esit.app.Login.usernametxt</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a981cc276ccd95ea19d12d7ad8c2d57cc" compoundref="Login_8java" startline="319">es.ull.esit.app.Login.usertypecmbo</references>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1ae61fa95fab1880d2e48d4b52948f51f6" compoundref="Login_8java" startline="92" endline="199">es.ull.esit.app.Login.initComponents</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a4991bf057499a53e77492291ee9ec66a" compoundref="Login_8java" startline="78" endline="82">es.ull.esit.app.Login.Login</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1Login_1a4466f2f88c125b3f609314a421381778" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void es.ull.esit.app.Login.jButton1ActionPerformed</definition>
+        <argsstring>(java.awt.event.ActionEvent evt)</argsstring>
+        <name>jButton1ActionPerformed</name>
+        <qualifiedname>es.ull.esit.app.Login.jButton1ActionPerformed</qualifiedname>
+        <param>
+          <type>java.awt.event.ActionEvent</type>
+          <declname>evt</declname>
+        </param>
+        <briefdescription>
+<para>Action handler for the &quot;Log In&quot; button. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>   Action steps:
+   1. Read username and password from the fields.
+   2. Disable the button and show &quot;Loading...&quot; to avoid double clicks.
+   3. Run authentication in a background thread.
+   4. On success, open the admin or cashier window depending on the role.
+   5. On error, show a dialog and re-enable the button.
+</verbatim></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>evt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[java.awt.event.ActionEvent] Action event triggered by button click. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/Login.java" line="214" column="16" bodyfile="src/main/java/es/ull/esit/app/Login.java" bodystart="214" bodyend="254"/>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1afc6207f5ad5979a829642c9f410856aa" compoundref="Login_8java" startline="26">es.ull.esit.app.Login.authService</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_1a3993d820e89ba713a594980a06a97fde" compoundref="src_2main_2java_2es_2ull_2esit_2app_2middleware_2model_2User_8java" startline="63" endline="65">es.ull.esit.app.middleware.model.User.getRole</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_1a03d8ef6d8d413254f340dbd38ba07511" compoundref="src_2main_2java_2es_2ull_2esit_2app_2middleware_2model_2User_8java" startline="45" endline="47">es.ull.esit.app.middleware.model.User.getUsername</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a7b0063f113a10a332dc9961392fd0628" compoundref="Login_8java" startline="304">es.ull.esit.app.Login.jButton1</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a6709769133ef85f8201d86e6e436338a" compoundref="Login_8java" startline="312">es.ull.esit.app.Login.jPasswordField1</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1afb300864f2c33b902ab656d46fd71575" compoundref="Login_8java" startline="67">es.ull.esit.app.Login.LOGIN_STRING</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a36e0d5c6df8e50615b96fbb67f855c8c" compoundref="Login_8java" startline="314">es.ull.esit.app.Login.usernametxt</references>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1Login_1aca803b0cc42ac57cac851a869f6b129c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void es.ull.esit.app.Login.usertypecmboActionPerformed</definition>
+        <argsstring>(java.awt.event.ActionEvent evt)</argsstring>
+        <name>usertypecmboActionPerformed</name>
+        <qualifiedname>es.ull.esit.app.Login.usertypecmboActionPerformed</qualifiedname>
+        <param>
+          <type>java.awt.event.ActionEvent</type>
+          <declname>evt</declname>
+        </param>
+        <briefdescription>
+<para>Action handler for the user type combo box. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>   The selection is not used in this implementation, as the role is
+   determined by the server.
+</verbatim> <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>evt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[java.awt.event.ActionEvent] Action event triggered by combo box selection. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/Login.java" line="264" column="16" bodyfile="src/main/java/es/ull/esit/app/Login.java" bodystart="264" bodyend="266"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1Login_1a93bb7387e558ed643d7f04a09d1d53d2" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void es.ull.esit.app.Login.main</definition>
+        <argsstring>(String[] args)</argsstring>
+        <name>main</name>
+        <qualifiedname>es.ull.esit.app.Login.main</qualifiedname>
+        <param>
+          <type>String[]</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+<para>Main entry point to start the login window application. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[String[]] Command line arguments (not used). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/Login.java" line="273" column="22" bodyfile="src/main/java/es/ull/esit/app/Login.java" bodystart="273" bodyend="287"/>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a4991bf057499a53e77492291ee9ec66a" compoundref="Login_8java" startline="78" endline="82">es.ull.esit.app.Login.Login</references>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="package-static-func">
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1Login_1a5bbab813903d950b0c366c35ccf362ce" prot="package" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void es.ull.esit.app.Login.setLoginFactory</definition>
+        <argsstring>(java.util.function.Supplier&lt; Login &gt; f)</argsstring>
+        <name>setLoginFactory</name>
+        <qualifiedname>es.ull.esit.app.Login.setLoginFactory</qualifiedname>
+        <param>
+          <type>java.util.function.Supplier&lt; <ref refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a4991bf057499a53e77492291ee9ec66a" kindref="member">Login</ref> &gt;</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/Login.java" line="292" column="15" bodyfile="src/main/java/es/ull/esit/app/Login.java" bodystart="292" bodyend="294"/>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1Login_1a2f3f8914f205fb9a98cac920877cfe60" prot="package" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>java.util.function.Supplier&lt; <ref refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a4991bf057499a53e77492291ee9ec66a" kindref="member">Login</ref> &gt;</type>
+        <definition>static java.util.function.Supplier&lt; Login &gt; es.ull.esit.app.Login.getLoginFactory</definition>
+        <argsstring>()</argsstring>
+        <name>getLoginFactory</name>
+        <qualifiedname>es.ull.esit.app.Login.getLoginFactory</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/Login.java" line="296" column="35" bodyfile="src/main/java/es/ull/esit/app/Login.java" bodystart="296" bodyend="298"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="classes_1_1ull_1_1esit_1_1app_1_1Login" kindref="compound">Login</ref> window for the Restaurant System. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>   Shows a Swing form that lets the user:
+   - enter his/her/their username.
+   - enter his/her/their password.
+   - select user type (admin or cashier) from a combo box.
+   - click the &quot;Log In&quot; button to authenticate.
+
+   The credentials are sent to the backend through AuthService and
+   ApiClient.
+   According to the role returned by the server (ADMIN or CASHIER), the
+   application opens the corresponding window: AdminLogin or Cashier.
+</verbatim> </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>es.ull.esit.app.Login</label>
+        <link refid="classes_1_1ull_1_1esit_1_1app_1_1Login"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>javax.swing.JFrame</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>es.ull.esit.app.Login</label>
+        <link refid="classes_1_1ull_1_1esit_1_1app_1_1Login"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-authService</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>~messageDialog</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>es.ull.esit.app.Login.MessageDialog</label>
+        <link refid="interfacees_1_1ull_1_1esit_1_1app_1_1Login_1_1MessageDialog"/>
+      </node>
+      <node id="4">
+        <label>es.ull.esit.app.middleware.ApiClient</label>
+        <link refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient"/>
+      </node>
+      <node id="3">
+        <label>es.ull.esit.app.middleware.service.AuthService</label>
+        <link refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1AuthService"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-client</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>javax.swing.JFrame</label>
+      </node>
+    </collaborationgraph>
+    <location file="src/main/java/es/ull/esit/app/Login.java" line="23" column="7" bodyfile="src/main/java/es/ull/esit/app/Login.java" bodystart="23" bodyend="321"/>
+    <listofallmembers>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1aa902062bf7b14e07606276585d3742c8" prot="package" virt="non-virtual"><scope>es::ull::esit::app::Login</scope><name>adminSupplier</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1afc6207f5ad5979a829642c9f410856aa" prot="private" virt="non-virtual"><scope>es::ull::esit::app::Login</scope><name>authService</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1af0207b720b0d6c93e758e34bbac45751" prot="package" virt="non-virtual"><scope>es::ull::esit::app::Login</scope><name>cashierFactory</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a2f3f8914f205fb9a98cac920877cfe60" prot="package" virt="non-virtual"><scope>es::ull::esit::app::Login</scope><name>getLoginFactory</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1ae61fa95fab1880d2e48d4b52948f51f6" prot="private" virt="non-virtual"><scope>es::ull::esit::app::Login</scope><name>initComponents</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a7b0063f113a10a332dc9961392fd0628" prot="private" virt="non-virtual"><scope>es::ull::esit::app::Login</scope><name>jButton1</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a4466f2f88c125b3f609314a421381778" prot="private" virt="non-virtual"><scope>es::ull::esit::app::Login</scope><name>jButton1ActionPerformed</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a822fa6426790c6c44c7fad789bddfcfa" prot="private" virt="non-virtual"><scope>es::ull::esit::app::Login</scope><name>jLabel1</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a9225931135e2f0f0c6488d3fc204ad4c" prot="private" virt="non-virtual"><scope>es::ull::esit::app::Login</scope><name>jLabel3</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a30279203310c1bc8fcc9e6d15edeac13" prot="private" virt="non-virtual"><scope>es::ull::esit::app::Login</scope><name>jPanel1</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a6709769133ef85f8201d86e6e436338a" prot="private" virt="non-virtual"><scope>es::ull::esit::app::Login</scope><name>jPasswordField1</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a4991bf057499a53e77492291ee9ec66a" prot="public" virt="non-virtual"><scope>es::ull::esit::app::Login</scope><name>Login</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1afb300864f2c33b902ab656d46fd71575" prot="private" virt="non-virtual"><scope>es::ull::esit::app::Login</scope><name>LOGIN_STRING</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1af2da55421ea492860e61bf95c2711cd5" prot="private" virt="non-virtual"><scope>es::ull::esit::app::Login</scope><name>loginFactory</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a93bb7387e558ed643d7f04a09d1d53d2" prot="public" virt="non-virtual"><scope>es::ull::esit::app::Login</scope><name>main</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a48a591b039a3cf032484d78dd6f8fe45" prot="package" virt="non-virtual"><scope>es::ull::esit::app::Login</scope><name>messageDialog</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1aeea494ca67f42033f3d3b287c2f297bf" prot="private" virt="non-virtual"><scope>es::ull::esit::app::Login</scope><name>PRIMARY_FONT</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a0656beb5b74e693e8cfa5c3def3351b9" prot="package" virt="non-virtual"><scope>es::ull::esit::app::Login</scope><name>setAdminSupplier</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a60d56454893e87fe0b73823981929292" prot="package" virt="non-virtual"><scope>es::ull::esit::app::Login</scope><name>setCashierFactory</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a5bbab813903d950b0c366c35ccf362ce" prot="package" virt="non-virtual"><scope>es::ull::esit::app::Login</scope><name>setLoginFactory</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a4c0a449dab6e1c63b3ebdb3584aa7b8e" prot="package" virt="non-virtual"><scope>es::ull::esit::app::Login</scope><name>setMessageDialog</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a36e0d5c6df8e50615b96fbb67f855c8c" prot="private" virt="non-virtual"><scope>es::ull::esit::app::Login</scope><name>usernametxt</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a981cc276ccd95ea19d12d7ad8c2d57cc" prot="private" virt="non-virtual"><scope>es::ull::esit::app::Login</scope><name>usertypecmbo</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1aca803b0cc42ac57cac851a869f6b129c" prot="private" virt="non-virtual"><scope>es::ull::esit::app::Login</scope><name>usertypecmboActionPerformed</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

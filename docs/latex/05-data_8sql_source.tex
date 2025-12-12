@@ -1,0 +1,156 @@
+\doxysection{05-\/data.\+sql}
+\hypertarget{05-data_8sql_source}{}\label{05-data_8sql_source}\index{05-\/data.sql@{05-\/data.sql}}
+\mbox{\hyperlink{05-data_8sql}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00001}00001\ \textcolor{comment}{-\/-\/\ 05-\/data.sql}}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00002}00002\ \textcolor{comment}{-\/-\/\ Inserción\ de\ datos\ realistas\ para\ el\ restaurante\ "{}Black\ Plate"{}}}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00004}00004\ USE\ project3;}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00006}00006\ \textcolor{comment}{-\/-\/\ =====================================================================}}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00007}00007\ \textcolor{comment}{-\/-\/\ MANAGER}}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00008}00008\ \textcolor{comment}{-\/-\/\ =====================================================================}}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00009}00009\ \textcolor{keyword}{INSERT}\ \textcolor{keyword}{INTO}\ manager\ (manager\_id,\ manager\_fname,\ manager\_mname,\ manager\_lname,\ manager\_number,\ manager\_salary)}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00010}00010\ \textcolor{keyword}{VALUES}}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00011}00011\ (\textcolor{stringliteral}{1001},\ \textcolor{stringliteral}{'marta'},\ \textcolor{stringliteral}{'elena'},\ \textcolor{stringliteral}{'rodriguez'},\ \textcolor{stringliteral}{659123456},\ \textcolor{stringliteral}{3200});}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00013}00013\ \textcolor{comment}{-\/-\/\ =====================================================================}}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00014}00014\ \textcolor{comment}{-\/-\/\ RESTAURANT}}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00015}00015\ \textcolor{comment}{-\/-\/\ =====================================================================}}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00016}00016\ \textcolor{keyword}{INSERT}\ \textcolor{keyword}{INTO}\ restaurant\_management\ (restaurant\_id,\ restaurant\_name,\ restaurant\_address,\ manager\_id)}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00017}00017\ \textcolor{keyword}{VALUES}}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00018}00018\ (\textcolor{stringliteral}{2001},\ \textcolor{stringliteral}{'black\ plate'},\ \textcolor{stringliteral}{'Calle\ Luna\ 45,\ Madrid'},\ \textcolor{stringliteral}{1001});}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00020}00020\ \textcolor{comment}{-\/-\/\ =====================================================================}}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00021}00021\ \textcolor{comment}{-\/-\/\ CHEFS\ DE\ BLACK\ PLATE}}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00022}00022\ \textcolor{comment}{-\/-\/\ =====================================================================}}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00023}00023\ \textcolor{keyword}{INSERT}\ \textcolor{keyword}{INTO}\ chef\ (chef\_id,\ chef\_name,\ chef\_manager,\ chef\_salary,\ manager\_id)}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00024}00024\ \textcolor{keyword}{VALUES}}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00025}00025\ (\textcolor{stringliteral}{3001},\ \textcolor{stringliteral}{'Luis\ Gómez'},\ \textcolor{stringliteral}{'Marta'},\ \textcolor{stringliteral}{1800},\ \textcolor{stringliteral}{1001}),}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00026}00026\ (\textcolor{stringliteral}{3002},\ \textcolor{stringliteral}{'Carmen\ Ruiz'},\ \textcolor{stringliteral}{'Marta'},\ \textcolor{stringliteral}{1750},\ \textcolor{stringliteral}{1001}),}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00027}00027\ (\textcolor{stringliteral}{3003},\ \textcolor{stringliteral}{'Javier\ Soto'},\ \textcolor{stringliteral}{'Marta'},\ \textcolor{stringliteral}{1700},\ \textcolor{stringliteral}{1001});}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00029}00029\ \textcolor{comment}{-\/-\/\ =====================================================================}}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00030}00030\ \textcolor{comment}{-\/-\/\ RECEIPTS\ (Tickets\ reales)}}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00031}00031\ \textcolor{comment}{-\/-\/\ =====================================================================}}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00032}00032\ \textcolor{keyword}{INSERT}\ \textcolor{keyword}{INTO}\ receipt\ (receipt\_id,\ receipt\_time,\ receipt\_date,\ receipt\_total)}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00033}00033\ \textcolor{keyword}{VALUES}}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00034}00034\ (\textcolor{stringliteral}{1},\ \textcolor{stringliteral}{'13:15:20'},\ \textcolor{stringliteral}{'2024-\/10-\/01'},\ \textcolor{stringliteral}{42}),}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00035}00035\ (\textcolor{stringliteral}{2},\ \textcolor{stringliteral}{'14:22:10'},\ \textcolor{stringliteral}{'2024-\/10-\/01'},\ \textcolor{stringliteral}{27}),}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00036}00036\ (\textcolor{stringliteral}{3},\ \textcolor{stringliteral}{'20:45:50'},\ \textcolor{stringliteral}{'2024-\/10-\/02'},\ \textcolor{stringliteral}{58}),}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00037}00037\ (\textcolor{stringliteral}{4},\ \textcolor{stringliteral}{'21:10:35'},\ \textcolor{stringliteral}{'2024-\/10-\/03'},\ \textcolor{stringliteral}{73}),}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00038}00038\ (\textcolor{stringliteral}{5},\ \textcolor{stringliteral}{'12:30:10'},\ \textcolor{stringliteral}{'2024-\/10-\/04'},\ \textcolor{stringliteral}{19});}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00040}00040\ \textcolor{comment}{-\/-\/\ =====================================================================}}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00041}00041\ \textcolor{comment}{-\/-\/\ DEPENDENTS\ DEL\ MANAGER}}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00042}00042\ \textcolor{comment}{-\/-\/\ =====================================================================}}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00043}00043\ \textcolor{keyword}{INSERT}\ \textcolor{keyword}{INTO}\ dependent\_manager\ (dependent\_name,\ dependent\_relation,\ dependent\_sex,\ manager\_id)}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00044}00044\ \textcolor{keyword}{VALUES}}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00045}00045\ (\textcolor{stringliteral}{'lucia'},\ \textcolor{stringliteral}{'daughter'},\ \textcolor{stringliteral}{'F'},\ \textcolor{stringliteral}{1001}),}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00046}00046\ (\textcolor{stringliteral}{'pablo'},\ \textcolor{stringliteral}{'son'},\ \ \ \ \ \ \textcolor{stringliteral}{'M'},\ \textcolor{stringliteral}{1001});}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00048}00048\ \textcolor{comment}{-\/-\/\ =====================================================================}}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00049}00049\ \textcolor{comment}{-\/-\/\ DEPENDENTS\ DE\ CHEF}}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00050}00050\ \textcolor{comment}{-\/-\/\ =====================================================================}}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00051}00051\ \textcolor{keyword}{INSERT}\ \textcolor{keyword}{INTO}\ dependent\_chef\ (dependent\_name,\ dependent\_relation,\ dependent\_sex,\ chef\_id)}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00052}00052\ \textcolor{keyword}{VALUES}}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00053}00053\ (\textcolor{stringliteral}{'marcos'},\ \textcolor{stringliteral}{'son'},\ \ \textcolor{stringliteral}{'M'},\ \textcolor{stringliteral}{3001}),}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00054}00054\ (\textcolor{stringliteral}{'irene'},\ \ \textcolor{stringliteral}{'wife'},\ \textcolor{stringliteral}{'F'},\ \textcolor{stringliteral}{3002});}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00056}00056\ \textcolor{comment}{-\/-\/\ =====================================================================}}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00057}00057\ \textcolor{comment}{-\/-\/\ USUARIOS\ DEL\ SISTEMA}}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00058}00058\ \textcolor{comment}{-\/-\/\ El\ trigger\ creará\ automáticamente\ los\ CASHIERS\ en\ la\ tabla\ cashier}}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00059}00059\ \textcolor{comment}{-\/-\/\ =====================================================================}}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00061}00061\ \textcolor{comment}{-\/-\/\ ADMIN\ (NO\ genera\ cashier)}}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00062}00062\ \textcolor{comment}{-\/-\/\ password:\ admin}}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00063}00063\ \textcolor{keyword}{INSERT}\ \textcolor{keyword}{INTO}\ users\ (id,\ username,\ password\_hash,\ role)}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00064}00064\ \textcolor{keyword}{VALUES}\ (\textcolor{stringliteral}{1},\ \textcolor{stringliteral}{'admin'},\ \textcolor{stringliteral}{'\$2b\$10\$TAxhf.ziwuv7ynXlSQYjMeftWo47ft8M4JfdXjLoBPdERwuo7zD06'},\ \textcolor{stringliteral}{'ADMIN'});}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00066}00066\ \textcolor{comment}{-\/-\/\ CAJEROS\ (generan\ automáticamente\ filas\ en\ cashier\ gracias\ al\ trigger)}}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00067}00067\ \textcolor{comment}{-\/-\/\ password:\ cashier123\ (hash\ reutilizado)}}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00068}00068\ \textcolor{keyword}{INSERT}\ \textcolor{keyword}{INTO}\ users\ (id,\ username,\ password\_hash,\ role)}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00069}00069\ \textcolor{keyword}{VALUES}}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00070}00070\ (\textcolor{stringliteral}{2},\ \textcolor{stringliteral}{'laura.mendez'},\ \textcolor{stringliteral}{'\$2b\$10\$HLeNcr00JL6qpGJUd.klqud4PfSRci2qvuKr7fnklGjtMOO6OhwLC'},\ \textcolor{stringliteral}{'CASHIER'}),}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00071}00071\ (\textcolor{stringliteral}{3},\ \textcolor{stringliteral}{'diego.santos'},\ \textcolor{stringliteral}{'\$2b\$10\$HLeNcr00JL6qpGJUd.klqud4PfSRci2qvuKr7fnklGjtMOO6OhwLC'},\ \textcolor{stringliteral}{'CASHIER'});}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00073}00073\ \textcolor{comment}{-\/-\/\ En\ este\ punto,\ gracias\ al\ trigger:}}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00074}00074\ \textcolor{comment}{-\/-\/\ \ \ cashier\ tendrá:}}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00075}00075\ \textcolor{comment}{-\/-\/\ \ \ (2,\ 'laura.mendez',\ 1500)\ y\ (3,\ 'diego.santos',\ 1500)}}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00077}00077\ \textcolor{comment}{-\/-\/\ =====================================================================}}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00078}00078\ \textcolor{comment}{-\/-\/\ DEPENDENTS\ DE\ LOS\ CASHIERS}}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00079}00079\ \textcolor{comment}{-\/-\/\ =====================================================================}}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00080}00080\ \textcolor{keyword}{INSERT}\ \textcolor{keyword}{INTO}\ dependent\_cashier\ (dependent\_name,\ dependent\_relation,\ dependent\_sex,\ cashier\_id)}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00081}00081\ \textcolor{keyword}{VALUES}}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00082}00082\ (\textcolor{stringliteral}{'emma'},\ \textcolor{stringliteral}{'daughter'},\ \textcolor{stringliteral}{'F'},\ \textcolor{stringliteral}{2}),}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00083}00083\ (\textcolor{stringliteral}{'alex'},\ \textcolor{stringliteral}{'son'},\ \ \ \ \ \ \textcolor{stringliteral}{'M'},\ \textcolor{stringliteral}{3});}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00084}00084\ }
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00085}00085\ \textcolor{comment}{-\/-\/\ =====================================================================}}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00086}00086\ \textcolor{comment}{-\/-\/\ ITEMS\ DEL\ TICKET\ (combinaciones\ reales\ del\ menú\ Black\ Plate)}}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00087}00087\ \textcolor{comment}{-\/-\/\ =====================================================================}}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00088}00088\ \textcolor{keyword}{INSERT}\ \textcolor{keyword}{INTO}\ item\ (item\_food,\ food\_price,\ food\_id,}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ item\_appetizers,\ appetizers\_price,\ appetizers\_id,}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ item\_drinks,\ drinks\_price,\ drinks\_id,}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ receipt\_id)}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00092}00092\ \textcolor{keyword}{VALUES}}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00093}00093\ (\textcolor{stringliteral}{'Grilled\ Salmon'},\ \ \ \ \ \ \textcolor{stringliteral}{18},\ \textcolor{stringliteral}{1},\ \textcolor{stringliteral}{'Truffle\ Fries'},\ \ \ \ \ \ \textcolor{stringliteral}{6},\ \textcolor{stringliteral}{1},\ \textcolor{stringliteral}{'Coca\ Cola'},\ \ \ \ \ \ \ \textcolor{stringliteral}{2},\ \textcolor{stringliteral}{1},\ \textcolor{stringliteral}{1}),}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00094}00094\ (\textcolor{stringliteral}{'Black\ Angus\ Burger'},\ \ \textcolor{stringliteral}{16},\ \textcolor{stringliteral}{2},\ \textcolor{stringliteral}{'Garlic\ Bread'},\ \ \ \ \ \ \ \textcolor{stringliteral}{4},\ \textcolor{stringliteral}{2},\ \textcolor{stringliteral}{'Sparkling\ Water'},\ \textcolor{stringliteral}{2},\ \textcolor{stringliteral}{2},\ \textcolor{stringliteral}{2}),}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00095}00095\ (\textcolor{stringliteral}{'Chicken\ Teriyaki'},\ \ \ \ \textcolor{stringliteral}{14},\ \textcolor{stringliteral}{3},\ \textcolor{stringliteral}{'Hummus\ Bowl'},\ \ \ \ \ \ \ \ \textcolor{stringliteral}{5},\ \textcolor{stringliteral}{3},\ \textcolor{stringliteral}{'Iced\ Tea'},\ \ \ \ \ \ \ \ \textcolor{stringliteral}{3},\ \textcolor{stringliteral}{3},\ \textcolor{stringliteral}{3}),}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00096}00096\ (\textcolor{stringliteral}{'Vegan\ Buddha\ Bowl'},\ \ \ \textcolor{stringliteral}{13},\ \textcolor{stringliteral}{4},\ \textcolor{stringliteral}{'Sweet\ Potato\ Chips'},\ \textcolor{stringliteral}{4},\ \textcolor{stringliteral}{4},\ \textcolor{stringliteral}{'Lemonade'},\ \ \ \ \ \ \ \ \textcolor{stringliteral}{3},\ \textcolor{stringliteral}{4},\ \textcolor{stringliteral}{4}),}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00097}00097\ (\textcolor{stringliteral}{'Pasta\ Alfredo'},\ \ \ \ \ \ \ \textcolor{stringliteral}{11},\ \textcolor{stringliteral}{5},\ \textcolor{stringliteral}{'Bruschetta'},\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{4},\ \textcolor{stringliteral}{5},\ \textcolor{stringliteral}{'Coca\ Cola'},\ \ \ \ \ \ \ \textcolor{stringliteral}{2},\ \textcolor{stringliteral}{1},\ \textcolor{stringliteral}{5});}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00098}00098\ }
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00099}00099\ \textcolor{comment}{-\/-\/\ =====================================================================}}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00100}00100\ \textcolor{comment}{-\/-\/\ CHEF\ PREPARA\ PLATOS}}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00101}00101\ \textcolor{comment}{-\/-\/\ =====================================================================}}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00102}00102\ \textcolor{keyword}{INSERT}\ \textcolor{keyword}{INTO}\ chef\_prepare\_item\ (chef\_id,\ food\_id,\ sweet\_id,\ drinks\_id)}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00103}00103\ \textcolor{keyword}{VALUES}}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00104}00104\ (\textcolor{stringliteral}{3001},\ \textcolor{stringliteral}{1},\ \textcolor{stringliteral}{1},\ \textcolor{stringliteral}{1}),}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00105}00105\ (\textcolor{stringliteral}{3002},\ \textcolor{stringliteral}{2},\ \textcolor{stringliteral}{2},\ \textcolor{stringliteral}{2}),}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00106}00106\ (\textcolor{stringliteral}{3003},\ \textcolor{stringliteral}{3},\ \textcolor{stringliteral}{3},\ \textcolor{stringliteral}{3});}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00107}00107\ }
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00108}00108\ \textcolor{comment}{-\/-\/\ =====================================================================}}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00109}00109\ \textcolor{comment}{-\/-\/\ RECEIPTS\ TOMADOS\ POR\ CASHIERS\ (usa\ IDs\ 2\ y\ 3)}}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00110}00110\ \textcolor{comment}{-\/-\/\ =====================================================================}}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00111}00111\ \textcolor{keyword}{INSERT}\ \textcolor{keyword}{INTO}\ receipt\_taken\_by\_cashier\ (receipt\_id,\ cashier\_id)}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00112}00112\ \textcolor{keyword}{VALUES}}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00113}00113\ (\textcolor{stringliteral}{1},\ \textcolor{stringliteral}{2}),}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00114}00114\ (\textcolor{stringliteral}{2},\ \textcolor{stringliteral}{2}),}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00115}00115\ (\textcolor{stringliteral}{3},\ \textcolor{stringliteral}{3}),}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00116}00116\ (\textcolor{stringliteral}{4},\ \textcolor{stringliteral}{3}),}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00117}00117\ (\textcolor{stringliteral}{5},\ \textcolor{stringliteral}{2});}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00118}00118\ }
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00119}00119\ \textcolor{comment}{-\/-\/\ =====================================================================}}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00120}00120\ \textcolor{comment}{-\/-\/\ Tabla\ receipt\_copy\ (pruebas)}}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00121}00121\ \textcolor{comment}{-\/-\/\ =====================================================================}}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00122}00122\ \textcolor{keyword}{INSERT}\ \textcolor{keyword}{INTO}\ receipt\_copy\ (receipt\_id,\ receipt\_time,\ receipt\_date,\ receipt\_total)}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00123}00123\ \textcolor{keyword}{VALUES}}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00124}00124\ (\textcolor{stringliteral}{1},\ \textcolor{stringliteral}{'12:45:51'},\ \textcolor{stringliteral}{'2024-\/10-\/01'},\ \textcolor{stringliteral}{42});}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00125}00125\ }
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00126}00126\ \textcolor{keyword}{DELETE}\ \textcolor{keyword}{FROM}\ receipt\_copy\ \textcolor{keyword}{WHERE}\ receipt\_id\ =\ \textcolor{stringliteral}{1};}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00127}00127\ }
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00128}00128\ \textcolor{comment}{-\/-\/\ =====================================================================}}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00129}00129\ \textcolor{comment}{-\/-\/\ Productos\ para\ la\ API\ (Black\ Plate)}}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00130}00130\ \textcolor{comment}{-\/-\/\ =====================================================================}}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00131}00131\ \textcolor{keyword}{INSERT}\ \textcolor{keyword}{INTO}\ appetizers\ (name,\ price)\ \textcolor{keyword}{VALUES}}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00132}00132\ (\textcolor{stringliteral}{'Truffle\ Fries'},\ \ \ \ \ \ \textcolor{stringliteral}{6}),}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00133}00133\ (\textcolor{stringliteral}{'Garlic\ Bread'},\ \ \ \ \ \ \ \textcolor{stringliteral}{4}),}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00134}00134\ (\textcolor{stringliteral}{'Hummus\ Bowl'},\ \ \ \ \ \ \ \ \textcolor{stringliteral}{5}),}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00135}00135\ (\textcolor{stringliteral}{'Sweet\ Potato\ Chips'},\ \textcolor{stringliteral}{4}),}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00136}00136\ (\textcolor{stringliteral}{'Bruschetta'},\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{4});}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00137}00137\ }
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00138}00138\ \textcolor{keyword}{INSERT}\ \textcolor{keyword}{INTO}\ drinks\ (name,\ price)\ \textcolor{keyword}{VALUES}}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00139}00139\ (\textcolor{stringliteral}{'Coca\ Cola'},\ \ \ \ \ \ \ \textcolor{stringliteral}{2}),}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00140}00140\ (\textcolor{stringliteral}{'Sparkling\ Water'},\ \textcolor{stringliteral}{2}),}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00141}00141\ (\textcolor{stringliteral}{'Iced\ Tea'},\ \ \ \ \ \ \ \ \textcolor{stringliteral}{3}),}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00142}00142\ (\textcolor{stringliteral}{'Lemonade'},\ \ \ \ \ \ \ \ \textcolor{stringliteral}{3}),}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00143}00143\ (\textcolor{stringliteral}{'Red\ Fruit\ Juice'},\ \textcolor{stringliteral}{4});}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00144}00144\ }
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00145}00145\ \textcolor{keyword}{INSERT}\ \textcolor{keyword}{INTO}\ maincourse\ (name,\ price)\ \textcolor{keyword}{VALUES}}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00146}00146\ (\textcolor{stringliteral}{'Grilled\ Salmon'},\ \ \ \ \ \ \ \ \textcolor{stringliteral}{18}),}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00147}00147\ (\textcolor{stringliteral}{'Black\ Angus\ Burger'},\ \ \ \ \textcolor{stringliteral}{16}),}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00148}00148\ (\textcolor{stringliteral}{'Chicken\ Teriyaki'},\ \ \ \ \ \ \textcolor{stringliteral}{14}),}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00149}00149\ (\textcolor{stringliteral}{'Vegan\ Buddha\ Bowl'},\ \ \ \ \ \textcolor{stringliteral}{13}),}
+\DoxyCodeLine{\Hypertarget{05-data_8sql_source_l00150}00150\ (\textcolor{stringliteral}{'Pasta\ Alfredo'},\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{11});}
+
+\end{DoxyCode}

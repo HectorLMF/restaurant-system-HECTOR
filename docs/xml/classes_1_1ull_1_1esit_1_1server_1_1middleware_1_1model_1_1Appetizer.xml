@@ -1,0 +1,313 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer" kind="class" language="Java" prot="public">
+    <compoundname>es::ull::esit::server::middleware::model::Appetizer</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer_1a247927287b973be6c1aea9ad622cb661" prot="private" static="no" mutable="no">
+        <type>Long</type>
+        <definition>Long es.ull.esit.server.middleware.model.Appetizer.appetizersId</definition>
+        <argsstring></argsstring>
+        <name>appetizersId</name>
+        <qualifiedname>es.ull.esit.server.middleware.model.Appetizer.appetizersId</qualifiedname>
+        <briefdescription>
+<para>Primary key of the appetizer (column &quot;id&quot;). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="server/src/main/java/es/ull/esit/server/middleware/model/Appetizer.java" line="21" column="16" bodyfile="server/src/main/java/es/ull/esit/server/middleware/model/Appetizer.java" bodystart="21" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer_1a40376183a076e6c193da4e9ee9f48897" compoundref="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2Appetizer_8java" startline="44" endline="48">es.ull.esit.server.middleware.model.Appetizer.Appetizer</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer_1a069419776b58bc0d963759c8ed63fcf8" compoundref="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2Appetizer_8java" startline="55" endline="57">es.ull.esit.server.middleware.model.Appetizer.getAppetizersId</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer_1a09a921f166adf24973ea65977f09caa0" compoundref="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2Appetizer_8java" startline="65" endline="67">es.ull.esit.server.middleware.model.Appetizer.setAppetizersId</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer_1aa2445ef712475d4a1d5d44c6dc4edc50" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String es.ull.esit.server.middleware.model.Appetizer.itemAppetizers</definition>
+        <argsstring></argsstring>
+        <name>itemAppetizers</name>
+        <qualifiedname>es.ull.esit.server.middleware.model.Appetizer.itemAppetizers</qualifiedname>
+        <briefdescription>
+<para>Name of the appetizer (column &quot;name&quot;). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="server/src/main/java/es/ull/esit/server/middleware/model/Appetizer.java" line="25" column="18" bodyfile="server/src/main/java/es/ull/esit/server/middleware/model/Appetizer.java" bodystart="25" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer_1a40376183a076e6c193da4e9ee9f48897" compoundref="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2Appetizer_8java" startline="44" endline="48">es.ull.esit.server.middleware.model.Appetizer.Appetizer</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer_1a7b7890f912e57fd355d5b4b528d9b7e3" compoundref="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2Appetizer_8java" startline="74" endline="76">es.ull.esit.server.middleware.model.Appetizer.getItemAppetizers</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer_1a45496ec469138ba2f56aae84d9bae0ba" compoundref="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2Appetizer_8java" startline="83" endline="85">es.ull.esit.server.middleware.model.Appetizer.setItemAppetizers</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer_1a8e236739426ceaa449b12d4b95d9dd87" prot="private" static="no" mutable="no">
+        <type>Integer</type>
+        <definition>Integer es.ull.esit.server.middleware.model.Appetizer.appetizersPrice</definition>
+        <argsstring></argsstring>
+        <name>appetizersPrice</name>
+        <qualifiedname>es.ull.esit.server.middleware.model.Appetizer.appetizersPrice</qualifiedname>
+        <briefdescription>
+<para>Price of the appetizer (column &quot;price&quot;). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="server/src/main/java/es/ull/esit/server/middleware/model/Appetizer.java" line="29" column="19" bodyfile="server/src/main/java/es/ull/esit/server/middleware/model/Appetizer.java" bodystart="29" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer_1a40376183a076e6c193da4e9ee9f48897" compoundref="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2Appetizer_8java" startline="44" endline="48">es.ull.esit.server.middleware.model.Appetizer.Appetizer</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer_1a2e843d2b9a3027db973169353e716e28" compoundref="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2Appetizer_8java" startline="92" endline="94">es.ull.esit.server.middleware.model.Appetizer.getAppetizersPrice</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer_1aed443c3e16288942e115a5d5545ea5c6" compoundref="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2Appetizer_8java" startline="101" endline="103">es.ull.esit.server.middleware.model.Appetizer.setAppetizersPrice</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer_1aa5ec125d6bbd18339c6476e7e0d38087" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>es.ull.esit.server.middleware.model.Appetizer.Appetizer</definition>
+        <argsstring>()</argsstring>
+        <name>Appetizer</name>
+        <qualifiedname>es.ull.esit.server.middleware.model.Appetizer.Appetizer</qualifiedname>
+        <briefdescription>
+<para>Default constructor required by JPA. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="server/src/main/java/es/ull/esit/server/middleware/model/Appetizer.java" line="34" column="10" bodyfile="server/src/main/java/es/ull/esit/server/middleware/model/Appetizer.java" bodystart="34" bodyend="35"/>
+        <references refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer_1aa5ec125d6bbd18339c6476e7e0d38087" compoundref="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2Appetizer_8java" startline="34" endline="35">es.ull.esit.server.middleware.model.Appetizer.Appetizer</references>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer_1aa5ec125d6bbd18339c6476e7e0d38087" compoundref="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2Appetizer_8java" startline="34" endline="35">es.ull.esit.server.middleware.model.Appetizer.Appetizer</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer_1a40376183a076e6c193da4e9ee9f48897" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>es.ull.esit.server.middleware.model.Appetizer.Appetizer</definition>
+        <argsstring>(Long appetizersId, String itemAppetizers, Integer appetizersPrice)</argsstring>
+        <name>Appetizer</name>
+        <qualifiedname>es.ull.esit.server.middleware.model.Appetizer.Appetizer</qualifiedname>
+        <param>
+          <type>Long</type>
+          <declname>appetizersId</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>itemAppetizers</declname>
+        </param>
+        <param>
+          <type>Integer</type>
+          <declname>appetizersPrice</declname>
+        </param>
+        <briefdescription>
+<para>Full constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>appetizersId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[Long] Identifier of the appetizer. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>itemAppetizers</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[String] Name of the appetizer. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>appetizersPrice</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[Integer] Price of the appetizer. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="server/src/main/java/es/ull/esit/server/middleware/model/Appetizer.java" line="44" column="10" bodyfile="server/src/main/java/es/ull/esit/server/middleware/model/Appetizer.java" bodystart="44" bodyend="48"/>
+        <references refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer_1a247927287b973be6c1aea9ad622cb661" compoundref="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2Appetizer_8java" startline="21">es.ull.esit.server.middleware.model.Appetizer.appetizersId</references>
+        <references refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer_1a8e236739426ceaa449b12d4b95d9dd87" compoundref="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2Appetizer_8java" startline="29">es.ull.esit.server.middleware.model.Appetizer.appetizersPrice</references>
+        <references refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer_1aa2445ef712475d4a1d5d44c6dc4edc50" compoundref="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2Appetizer_8java" startline="25">es.ull.esit.server.middleware.model.Appetizer.itemAppetizers</references>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer_1a069419776b58bc0d963759c8ed63fcf8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Long</type>
+        <definition>Long es.ull.esit.server.middleware.model.Appetizer.getAppetizersId</definition>
+        <argsstring>()</argsstring>
+        <name>getAppetizersId</name>
+        <qualifiedname>es.ull.esit.server.middleware.model.Appetizer.getAppetizersId</qualifiedname>
+        <briefdescription>
+<para>Gets the appetizer ID. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>[Long] <ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer" kindref="compound">Appetizer</ref> id. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="server/src/main/java/es/ull/esit/server/middleware/model/Appetizer.java" line="55" column="15" bodyfile="server/src/main/java/es/ull/esit/server/middleware/model/Appetizer.java" bodystart="55" bodyend="57"/>
+        <references refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer_1a247927287b973be6c1aea9ad622cb661" compoundref="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2Appetizer_8java" startline="21">es.ull.esit.server.middleware.model.Appetizer.appetizersId</references>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer_1a09a921f166adf24973ea65977f09caa0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void es.ull.esit.server.middleware.model.Appetizer.setAppetizersId</definition>
+        <argsstring>(Long appetizersId)</argsstring>
+        <name>setAppetizersId</name>
+        <qualifiedname>es.ull.esit.server.middleware.model.Appetizer.setAppetizersId</qualifiedname>
+        <param>
+          <type>Long</type>
+          <declname>appetizersId</declname>
+        </param>
+        <briefdescription>
+<para>Sets the appetizer ID. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>   Generated by the database.
+</verbatim> <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>appetizersId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[Long] <ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer" kindref="compound">Appetizer</ref> id. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="server/src/main/java/es/ull/esit/server/middleware/model/Appetizer.java" line="65" column="15" bodyfile="server/src/main/java/es/ull/esit/server/middleware/model/Appetizer.java" bodystart="65" bodyend="67"/>
+        <references refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer_1a247927287b973be6c1aea9ad622cb661" compoundref="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2Appetizer_8java" startline="21">es.ull.esit.server.middleware.model.Appetizer.appetizersId</references>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer_1a7b7890f912e57fd355d5b4b528d9b7e3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String es.ull.esit.server.middleware.model.Appetizer.getItemAppetizers</definition>
+        <argsstring>()</argsstring>
+        <name>getItemAppetizers</name>
+        <qualifiedname>es.ull.esit.server.middleware.model.Appetizer.getItemAppetizers</qualifiedname>
+        <briefdescription>
+<para>Gets the appetizer name. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>[String] <ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer" kindref="compound">Appetizer</ref> name. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="server/src/main/java/es/ull/esit/server/middleware/model/Appetizer.java" line="74" column="17" bodyfile="server/src/main/java/es/ull/esit/server/middleware/model/Appetizer.java" bodystart="74" bodyend="76"/>
+        <references refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer_1aa2445ef712475d4a1d5d44c6dc4edc50" compoundref="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2Appetizer_8java" startline="25">es.ull.esit.server.middleware.model.Appetizer.itemAppetizers</references>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer_1a45496ec469138ba2f56aae84d9bae0ba" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void es.ull.esit.server.middleware.model.Appetizer.setItemAppetizers</definition>
+        <argsstring>(String itemAppetizers)</argsstring>
+        <name>setItemAppetizers</name>
+        <qualifiedname>es.ull.esit.server.middleware.model.Appetizer.setItemAppetizers</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>itemAppetizers</declname>
+        </param>
+        <briefdescription>
+<para>Sets the appetizer name. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>itemAppetizers</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[String] <ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer" kindref="compound">Appetizer</ref> name. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="server/src/main/java/es/ull/esit/server/middleware/model/Appetizer.java" line="83" column="15" bodyfile="server/src/main/java/es/ull/esit/server/middleware/model/Appetizer.java" bodystart="83" bodyend="85"/>
+        <references refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer_1aa2445ef712475d4a1d5d44c6dc4edc50" compoundref="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2Appetizer_8java" startline="25">es.ull.esit.server.middleware.model.Appetizer.itemAppetizers</references>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer_1a2e843d2b9a3027db973169353e716e28" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Integer</type>
+        <definition>Integer es.ull.esit.server.middleware.model.Appetizer.getAppetizersPrice</definition>
+        <argsstring>()</argsstring>
+        <name>getAppetizersPrice</name>
+        <qualifiedname>es.ull.esit.server.middleware.model.Appetizer.getAppetizersPrice</qualifiedname>
+        <briefdescription>
+<para>Gets the appetizer price. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>[Integer] <ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer" kindref="compound">Appetizer</ref> price. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="server/src/main/java/es/ull/esit/server/middleware/model/Appetizer.java" line="92" column="18" bodyfile="server/src/main/java/es/ull/esit/server/middleware/model/Appetizer.java" bodystart="92" bodyend="94"/>
+        <references refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer_1a8e236739426ceaa449b12d4b95d9dd87" compoundref="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2Appetizer_8java" startline="29">es.ull.esit.server.middleware.model.Appetizer.appetizersPrice</references>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer_1aed443c3e16288942e115a5d5545ea5c6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void es.ull.esit.server.middleware.model.Appetizer.setAppetizersPrice</definition>
+        <argsstring>(Integer appetizersPrice)</argsstring>
+        <name>setAppetizersPrice</name>
+        <qualifiedname>es.ull.esit.server.middleware.model.Appetizer.setAppetizersPrice</qualifiedname>
+        <param>
+          <type>Integer</type>
+          <declname>appetizersPrice</declname>
+        </param>
+        <briefdescription>
+<para>Sets the appetizer price. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>appetizersPrice</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[Integer] <ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer" kindref="compound">Appetizer</ref> price. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="server/src/main/java/es/ull/esit/server/middleware/model/Appetizer.java" line="101" column="15" bodyfile="server/src/main/java/es/ull/esit/server/middleware/model/Appetizer.java" bodystart="101" bodyend="103"/>
+        <references refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer_1a8e236739426ceaa449b12d4b95d9dd87" compoundref="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2Appetizer_8java" startline="29">es.ull.esit.server.middleware.model.Appetizer.appetizersPrice</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>JPA entity that represents an appetizer in the menu. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>   It is mapped to the &quot;appetizers&quot; table used by the REST API.
+   Each record has an auto-increment ID, a name and a price.
+</verbatim> </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>es.ull.esit.server.middleware.model.Appetizer</label>
+        <link refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer"/>
+      </node>
+    </collaborationgraph>
+    <location file="server/src/main/java/es/ull/esit/server/middleware/model/Appetizer.java" line="15" column="7" bodyfile="server/src/main/java/es/ull/esit/server/middleware/model/Appetizer.java" bodystart="15" bodyend="104"/>
+    <listofallmembers>
+      <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer_1aa5ec125d6bbd18339c6476e7e0d38087" prot="public" virt="non-virtual"><scope>es::ull::esit::server::middleware::model::Appetizer</scope><name>Appetizer</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer_1a40376183a076e6c193da4e9ee9f48897" prot="public" virt="non-virtual"><scope>es::ull::esit::server::middleware::model::Appetizer</scope><name>Appetizer</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer_1a247927287b973be6c1aea9ad622cb661" prot="private" virt="non-virtual"><scope>es::ull::esit::server::middleware::model::Appetizer</scope><name>appetizersId</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer_1a8e236739426ceaa449b12d4b95d9dd87" prot="private" virt="non-virtual"><scope>es::ull::esit::server::middleware::model::Appetizer</scope><name>appetizersPrice</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer_1a069419776b58bc0d963759c8ed63fcf8" prot="public" virt="non-virtual"><scope>es::ull::esit::server::middleware::model::Appetizer</scope><name>getAppetizersId</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer_1a2e843d2b9a3027db973169353e716e28" prot="public" virt="non-virtual"><scope>es::ull::esit::server::middleware::model::Appetizer</scope><name>getAppetizersPrice</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer_1a7b7890f912e57fd355d5b4b528d9b7e3" prot="public" virt="non-virtual"><scope>es::ull::esit::server::middleware::model::Appetizer</scope><name>getItemAppetizers</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer_1aa2445ef712475d4a1d5d44c6dc4edc50" prot="private" virt="non-virtual"><scope>es::ull::esit::server::middleware::model::Appetizer</scope><name>itemAppetizers</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer_1a09a921f166adf24973ea65977f09caa0" prot="public" virt="non-virtual"><scope>es::ull::esit::server::middleware::model::Appetizer</scope><name>setAppetizersId</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer_1aed443c3e16288942e115a5d5545ea5c6" prot="public" virt="non-virtual"><scope>es::ull::esit::server::middleware::model::Appetizer</scope><name>setAppetizersPrice</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer_1a45496ec469138ba2f56aae84d9bae0ba" prot="public" virt="non-virtual"><scope>es::ull::esit::server::middleware::model::Appetizer</scope><name>setItemAppetizers</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

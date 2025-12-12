@@ -1,0 +1,5 @@
+<map id="es.ull.esit.app.Order.payBtnActionPerformed" name="es.ull.esit.app.Order.payBtnActionPerformed">
+<area shape="rect" id="Node000001" title="Calculates subtotal, VAT and total and shows a confirmation dialog." alt="" coords="5,5,185,45"/>
+<area shape="rect" id="Node000002" href="$classes_1_1ull_1_1esit_1_1app_1_1Order.html#addd04356fb04df3bc68fd2e60541c164" title="Sums the total price for a given table model." alt="" coords="233,5,417,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="186,23,220,23,220,28,186,28"/>
+</map>

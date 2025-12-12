@@ -1,0 +1,17 @@
+<map id="CashierLogin.java" name="CashierLogin.java">
+<area shape="rect" id="Node000001" title=" " alt="" coords="654,5,793,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,204,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="654,29,462,50,218,81,217,76,461,45,653,24"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="228,79,477,119"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="670,33,455,78,454,73,669,28"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="501,86,604,111"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="700,33,591,83,589,78,697,28"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="629,86,818,111"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="726,31,726,72,721,72,721,31"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="842,86,1037,111"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="756,28,896,79,894,84,754,33"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="1061,86,1183,111"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="793,28,1049,76,1067,80,1066,85,1048,81,792,33"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="1207,86,1378,111"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="793,24,975,45,1196,76,1224,81,1223,86,1195,81,975,51,792,29"/>
+</map>

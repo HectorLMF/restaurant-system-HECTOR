@@ -1,0 +1,719 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.15.0" xml:lang="en-US">
+  <compound refid="classes_1_1ull_1_1esit_1_1app_1_1AboutUs" kind="class"><name>es::ull::esit::app::AboutUs</name>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AboutUs_1a8fe26646888dfffb7d41194a0181b2b3" kind="variable"><name>textBlock</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AboutUs_1a89ebf2737768e60595087efa9db15c48" kind="variable"><name>jButton3</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AboutUs_1ad191ec11d0e44987bb26bb5e925c0b31" kind="variable"><name>jLabel1</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AboutUs_1ab8e5418c09a339db27f02c6abb8b3ff8" kind="variable"><name>jPanel1</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AboutUs_1a862d4a3aba3f0b4bc772544a088622d8" kind="variable"><name>jScrollPane1</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AboutUs_1addce41ba7b99e0d01cc8d9f293cf2825" kind="variable"><name>ourStory</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AboutUs_1adbc784d4e02b9787d4f1ab13b910a433" kind="function"><name>AboutUs</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AboutUs_1a8476b8c278d38350158ed22a4a91695a" kind="function"><name>initComponents</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AboutUs_1a0ab0a89c74a5a277e2af52fe8ef53d48" kind="function"><name>jButton3ActionPerformed</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AboutUs_1a87bffb4fe440c0a56ce71f8d9edbb5db" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="classes_1_1ull_1_1esit_1_1app_1_1AdminLogin" kind="class"><name>es::ull::esit::app::AdminLogin</name>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminLogin_1a6a351a08a7159424c0e6e6e142c9302a" kind="variable"><name>PRIMARY_FONT</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminLogin_1a38c5b4691e965e5f0573a0c35b3af9fa" kind="variable"><name>LOGGER</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminLogin_1a6e1019144e1bb88305d767bdfe3180ba" kind="variable"><name>adminProductsSupplier</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminLogin_1aabf19f7d18c25a0170006f35ac038679" kind="variable"><name>orderSupplier</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminLogin_1adc18aa7ea75b95dc88a960477036a791" kind="variable"><name>loginSupplier</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminLogin_1a1fd1b9bda001daa4cb53ebe2d056388a" kind="variable"><name>jButton1</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminLogin_1a3ab6e656066fff4431f930c4524a96d3" kind="variable"><name>jButton2</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminLogin_1a6dd5d63e88121aed92f87a9c88a595f6" kind="variable"><name>jButton3</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminLogin_1a3be6b0e2d8fe205a93e9de5e55e4cdc3" kind="variable"><name>jLabel1</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminLogin_1a7dbe3860da5b19ac66ef3d5141889c9b" kind="variable"><name>jLabel3</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminLogin_1adfd6dd18df9e2c6646afe4c668eed71b" kind="variable"><name>jPanel1</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminLogin_1a04d4cf7c783e2a555360abfcd60484e8" kind="function"><name>AdminLogin</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminLogin_1ad0adf02c285046ac1f7593fa25edf289" kind="function"><name>initComponents</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminLogin_1a71d55a0641291c96791f29a62a6faf06" kind="function"><name>jButton2ActionPerformed</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminLogin_1ae34fccb6624928acaf61464fc7239f22" kind="function"><name>jButton1ActionPerformed</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminLogin_1adbe42fbdb4e39f21afebcfbd99360206" kind="function"><name>jButton3ActionPerformed</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminLogin_1a3c5d1e9ebe8517cc34ddd67a7ab05270" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts" kind="class"><name>es::ull::esit::app::AdminProducts</name>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1a605a82899816a74a4ee169cfb1b8c988" kind="variable"><name>productService</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1a7261ed54e1d31fe3272b40e0afa30fa4" kind="variable"><name>LOGGER</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1ac6de78660a986f73a5475ef4c7a5c215" kind="variable"><name>PRIMARY_FONT</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1a46d824de48b952055656a2f81ca42382" kind="variable"><name>SECONDARY_FONT</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1a937c965502b74f109c296c698d430350" kind="variable"><name>FIRST_COLUMN_HEADER</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1a477e718d52d7619a520a44eb18089511" kind="variable"><name>SECOND_COLUMN_HEADER</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1a9168191d47ca787dea1d11d86b2cf110" kind="variable"><name>THIRD_COLUMN_HEADER</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1af807bdb343f10e7223fd75bdb6fcf89b" kind="variable"><name>UPDATE_STRING</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1a0e595f6163d0be0f3d12d696c1526133" kind="variable"><name>modelDrink</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1aee8d5499af8834e157db218c084beb50" kind="variable"><name>modelappetizers</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1a24c1b3990212272109c3cd53b62c57cc" kind="variable"><name>modelmaincourse</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1a64e2e96bf337683c6262c60ddd1efe79" kind="variable"><name>columnNames</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1a7f2829c54bb0b3efe0fee865f1c36f5c" kind="variable"><name>selectedDrinkID</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1aa4d6fcc0164959da5a9ef0c6da2eff05" kind="variable"><name>selectedAppetizerID</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1afea3ee2278cacb750ab3e692a3e348b4" kind="variable"><name>selectedMainCourseID</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1acbac20c47646a51450c8e03be701b85f" kind="variable"><name>itemname</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1a708cfd583f68aa033f649049097a5030" kind="variable"><name>itemname1</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1a294daf570551f3d2a5f9cadb4f1bd0cb" kind="variable"><name>itemname2</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1a7b9d5bfd18b8f54f3a6fca8e64e33dbd" kind="variable"><name>itemprice</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1a62207bbb9c17dadd0d7f0de26f4a3b17" kind="variable"><name>itemprice1</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1a67d2ab9559a52fb43eadf86f467c062d" kind="variable"><name>itemprice2</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1a8c9e64ff83b6ac3a498983897607646b" kind="variable"><name>jButton1</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1a568981106cd1e4210728f308884a5bb5" kind="variable"><name>jButton2</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1a938dd4be0038b1762b3b09517474200f" kind="variable"><name>jButton3</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1aaf30d639c3fef6a90441c0c120115a3f" kind="variable"><name>jButton4</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1a02ee97fd1527ef22e9d7dfddde319b6a" kind="variable"><name>jButton5</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1ad869969ac996d345aa889db85f143b9f" kind="variable"><name>jButton6</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1aed740bc0406ff11db4c58e174d9df1fa" kind="variable"><name>jButton7</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1a127faae661b09960628f2260b94e840f" kind="variable"><name>jLabel1</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1a92856ff201379b86bdf561a527c89ef5" kind="variable"><name>jLabel10</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1ade29d153ec924500249e6961ebe1750a" kind="variable"><name>jLabel2</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1a80b92940a6a29bb79a6f2df2cbf27da7" kind="variable"><name>jLabel3</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1af09cfda6f2fdcf124a59d613e89179a5" kind="variable"><name>jLabel4</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1a511738a12fd339a29edeb7cd6a0b6658" kind="variable"><name>jLabel5</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1a66d6692d93089290bb32cfc4db216779" kind="variable"><name>jLabel6</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1a31dfbbb5d2157e49797371b98134c2c2" kind="variable"><name>jLabel7</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1af50da51fd98140bc5af670406d0f5331" kind="variable"><name>jLabel8</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1aa82fe063b821e57b81eb4371b9a7dc71" kind="variable"><name>jLabel9</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1ad97df307093d2ea27c8fae7a2780a8ea" kind="variable"><name>jPanel1</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1aa03d4afbe8b4fd7a8e5887b8b71a3f7c" kind="variable"><name>jPanel2</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1a8c1a9b247fd85c0e771a776128993e08" kind="variable"><name>jPanel3</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1ace37a1ff39f030be15d22248a00a2a63" kind="variable"><name>jPanel4</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1a8da50f2d32e00a1e558239de12fbf696" kind="variable"><name>jScrollPane1</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1a11b66a1d386883587bc08c332d8d538a" kind="variable"><name>jScrollPane2</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1a60e2d4190f80b8f2b188a5e5481a8f2c" kind="variable"><name>jScrollPane3</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1ad1754137e324eedc3a1583f5d4775dde" kind="variable"><name>jTabbedPane1</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1af04fdf3b73779ead53e1d6acde5cba8d" kind="variable"><name>jTable1</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1a3cbfdc52e14e7c34f373202e0db25fff" kind="variable"><name>jTable2</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1a9afac30febd9d3d068d0291c33656092" kind="variable"><name>jTable3</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1a236c28ae4213e3367f3ba502954ba099" kind="function"><name>AdminProducts</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1a59709c6e3a6a4007879121b72592c225" kind="function"><name>AdminProducts</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1ac9a7a3218a7f3cb89fc99d8fa23d5e89" kind="function"><name>loadDrinks</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1aa76ae3d5a1947c95ca400687e161ca29" kind="function"><name>loadDrinksSync</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1ac8d1108141179b289b43d2ab4c1772df" kind="function"><name>loadAppetizer</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1adec79a4807e445adc4c7c9dda1a45e68" kind="function"><name>loadAppetizerSync</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1a2c6b836ca4475003bda647e25b9a55cd" kind="function"><name>loadmainCourse</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1adfe1fb71181a8e2e178a7b83122b068b" kind="function"><name>loadmainCourseSync</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1a175733235633e5b05a8005f3ae3e3cf1" kind="function"><name>selectDrinkByRowSync</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1ae2c98629ea33898dd0071503c796b7bf" kind="function"><name>selectAppetizerByRowSync</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1a247a3a1040d7cb5c81dc9cb7670c1c38" kind="function"><name>selectMainCourseByRowSync</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1a9d27ac08d975d1db8f5e95766b63d35f" kind="function"><name>refreshAllTables</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1a42cfd8c45898f2f53bcb93355c15d083" kind="function"><name>initComponents</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1aaaff462f73e17f9003c1035ee1571b56" kind="function"><name>jButton2ActionPerformed</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1a8e4f07efe89db1fb9d5d53660f6012f0" kind="function"><name>jButton3ActionPerformed</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1afce882924644f9080a68d865d3049cf4" kind="function"><name>jButton5ActionPerformed</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1a90c009ee33c5b66b04b0c58552453bdc" kind="function"><name>jButton7ActionPerformed</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1ad474210dc64927e1da7d17d84cf05cf8" kind="function"><name>jTable1KeyPressed</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1a417aa92d93ebf3929b9081183195efb5" kind="function"><name>jTable1MouseClicked</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1aea94844a25902da6ad0dbd9da6ab63f1" kind="function"><name>jTable2MouseClicked</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1a41499d45752b5aad1830b6b89443fffb" kind="function"><name>jTable3MouseClicked</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1a68e483cb7d355b0344c00160a4da7a14" kind="function"><name>jButton1ActionPerformed</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1a7b0ae76cbe5030f75561eee0ae5997e8" kind="function"><name>jButton4ActionPerformed</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1a095277d20d7760147cfacccbe2e1a438" kind="function"><name>jButton6ActionPerformed</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminProducts_1a1d56e0a0dc0d4e92baa25f9e63ea79f5" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient" kind="class"><name>es::ull::esit::app::middleware::ApiClient</name>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_1a1ad2fd15081bf7b6d1cf4d91c70f965f" kind="variable"><name>APPLICATION_JSON</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_1a9cdb8cc4a8ce12e1cf3fd78ee8406c5b" kind="variable"><name>LOGGER</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_1a43674470f1df0d205cb796be39ebffb7" kind="variable"><name>CONTENT_TYPE</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_1a883662e38a8a6355c1005fc7f34931e6" kind="variable"><name>API_APPETIZERS</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_1a0d37367d5d26ba74e76b75eea37a2ed4" kind="variable"><name>API_DRINKS</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_1a6e90bcbf8293b94f083c4fa3d0798008" kind="variable"><name>API_MAINCOURSES</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_1a60325ca64e77c7dab7be91b4d4696b2f" kind="variable"><name>API_LOGIN</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_1aa5ba7fcb6c259fcc2338727f03ecd837" kind="variable"><name>http</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_1a34e7093782fed02590b8144b2587bfb8" kind="variable"><name>baseUrl</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_1adfd26bea00a33e2f7e3fc969c723f154" kind="variable"><name>mapper</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_1aa91db363d76c66888bae50b0d65d11fa" kind="function"><name>ApiClient</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_1a51281f54fefeb800184db1c61938b8f0" kind="function"><name>getAllAppetizers</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_1af922406f62cf7437798dfd48fc080bf6" kind="function"><name>getAppetizerById</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_1a011f83f03ca4fadc10aec98779c409c8" kind="function"><name>createAppetizer</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_1a56dbbc11355ae6cbeacd65f39d424187" kind="function"><name>updateAppetizer</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_1a7ca75a1a565560e364cea86fd390619e" kind="function"><name>deleteAppetizer</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_1a36db088ab0a20bbb898b53d20063fd33" kind="function"><name>getAllCashiers</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_1aa82c8ff95a2f62fc0f2ce2f09c642feb" kind="function"><name>getCashierById</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_1af3eae943ad671742fe64e62ee9203c69" kind="function"><name>getCashierByName</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_1a5ccde9cb38cb1741c364f1a65cad283d" kind="function"><name>updateCashier</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_1ac0671dc5765cc1f7f7a9d0b5d690041f" kind="function"><name>getAllDrinks</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_1ac4825df93e005622f3f71ce0d7674608" kind="function"><name>getDrinkById</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_1a42cce76ccfae7975a92454d7a8313556" kind="function"><name>createDrink</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_1a782dd911607bce7a0c6426e8ace50862" kind="function"><name>updateDrink</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_1ae27f2dc01eb0ef2452b4ad3ab939d1bf" kind="function"><name>deleteDrink</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_1ac6ad4ae81f09381c7c4ec35f699e90c4" kind="function"><name>getAllMainCourses</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_1a195ead247d29f2a07fb56b267a39c201" kind="function"><name>getMainCourseById</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_1a67104be05b59c4804776c17211e9614f" kind="function"><name>createMainCourse</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_1aefac6b70b8d5e0ca2792e31aa4cf40e8" kind="function"><name>updateMainCourse</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_1a054c898546778fd8ae02ebb0bd84ecef" kind="function"><name>deleteMainCourse</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_1a6ac45ef905c3995dd98ef8e571353873" kind="function"><name>login</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_1af83061bc53104044af867b1f7040c955" kind="function"><name>login</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_1a52b7143e725aabf972a87ce4bc6de3a8" kind="function"><name>ApiClient</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_1ac3ea0073038eaed2eed3d96bb7775e20" kind="function"><name>execute</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_1a6c1207fb862077dad19630b7e3e6e275" kind="function"><name>sendAndHandle</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_1ae587e5f1123feba661bdb1269aae581e" kind="function"><name>get</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_1ae05d1f9215825e16e69df937ccf2d0f7" kind="function"><name>getList</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_1af10e7b57708be9a5305aac10d96354bb" kind="function"><name>post</name></member>
+  </compound>
+  <compound refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClientException" kind="class"><name>es::ull::esit::app::middleware::ApiClientException</name>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClientException_1ac45b204afa4f0882c2518988f4583293" kind="function"><name>ApiClientException</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClientException_1a80b3591890716a1420e380fe648a0d68" kind="function"><name>ApiClientException</name></member>
+  </compound>
+  <compound refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Appetizer" kind="class"><name>es::ull::esit::app::middleware::model::Appetizer</name>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Appetizer_1ad3ac05027c5e15b11c58ad61c943f6eb" kind="variable"><name>appetizersId</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Appetizer_1a305dfbe3a562e025454fb9dedc0714b7" kind="variable"><name>itemAppetizers</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Appetizer_1aafcb60b29aee1d0fcd902b711e37be1c" kind="variable"><name>appetizersPrice</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Appetizer_1a049941940304e52f90e748c01e7bf8b9" kind="variable"><name>receiptId</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Appetizer_1a1c3342580630e9b91cd9b7cadb9396e2" kind="function"><name>Appetizer</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Appetizer_1afbf01eece3f98c8d1f589bfa92529cc8" kind="function"><name>Appetizer</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Appetizer_1a7aa4a2869b98ec7ce77faf3a342524ea" kind="function"><name>getAppetizersId</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Appetizer_1a69f8402e0f7db34cd4d8ca0984fcdf4a" kind="function"><name>setAppetizersId</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Appetizer_1aabc9da4c704778f439bd2d0f45d2732e" kind="function"><name>getItemAppetizers</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Appetizer_1af8e8eb9b90034f39ba4813b3ff782029" kind="function"><name>setItemAppetizers</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Appetizer_1a8dc18f49db8ccce1e4d6aaa02a29df60" kind="function"><name>getAppetizersPrice</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Appetizer_1a6c19f79aa76b7c24351161b33b82c5db" kind="function"><name>setAppetizersPrice</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Appetizer_1afb9d3b9754f0213332663cbc56a395b6" kind="function"><name>getReceiptId</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Appetizer_1a88eae4a9bd235c22d1ed6094442d1476" kind="function"><name>setReceiptId</name></member>
+  </compound>
+  <compound refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer" kind="class"><name>es::ull::esit::server::middleware::model::Appetizer</name>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer_1a247927287b973be6c1aea9ad622cb661" kind="variable"><name>appetizersId</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer_1aa2445ef712475d4a1d5d44c6dc4edc50" kind="variable"><name>itemAppetizers</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer_1a8e236739426ceaa449b12d4b95d9dd87" kind="variable"><name>appetizersPrice</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer_1aa5ec125d6bbd18339c6476e7e0d38087" kind="function"><name>Appetizer</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer_1a40376183a076e6c193da4e9ee9f48897" kind="function"><name>Appetizer</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer_1a069419776b58bc0d963759c8ed63fcf8" kind="function"><name>getAppetizersId</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer_1a09a921f166adf24973ea65977f09caa0" kind="function"><name>setAppetizersId</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer_1a7b7890f912e57fd355d5b4b528d9b7e3" kind="function"><name>getItemAppetizers</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer_1a45496ec469138ba2f56aae84d9bae0ba" kind="function"><name>setItemAppetizers</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer_1a2e843d2b9a3027db973169353e716e28" kind="function"><name>getAppetizersPrice</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer_1aed443c3e16288942e115a5d5545ea5c6" kind="function"><name>setAppetizersPrice</name></member>
+  </compound>
+  <compound refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController" kind="class"><name>es::ull::esit::server::controller::AppetizerController</name>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_1a9c135b625cb475a18f381e7822636382" kind="variable"><name>appetizerRepository</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_1a2e88771342595fe571334958d6366868" kind="function"><name>getAllAppetizers</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_1a7f897f113a1b92ae64836bf69351afb5" kind="function"><name>getAppetizerById</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_1a21b90d00b077d84499bef439aef79eee" kind="function"><name>createAppetizer</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_1a4fda9154efccb8e38dfc22dcaa8b1aa0" kind="function"><name>updateAppetizer</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_1a35376156c81c1244c8241750356c303b" kind="function"><name>deleteAppetizer</name></member>
+  </compound>
+  <compound refid="interfacees_1_1ull_1_1esit_1_1server_1_1repo_1_1AppetizerRepository" kind="interface"><name>es::ull::esit::server::repo::AppetizerRepository</name>
+  </compound>
+  <compound refid="classes_1_1ull_1_1esit_1_1app_1_1ApplicationLauncher" kind="class"><name>es::ull::esit::app::ApplicationLauncher</name>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1ApplicationLauncher_1ac11bd2b1d30228fb403aaf2e3ea5cf41" kind="variable"><name>loginFactory</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1ApplicationLauncher_1a69f7fc1a952cb3626a8bea2dbb660e78" kind="function"><name>main</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1ApplicationLauncher_1ae02d1f20eeea3c815d7dc5d3ddc1160f" kind="function"><name>setLoginFactory</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1ApplicationLauncher_1a2973cce9db2faa095a1df12ac1b24a4e" kind="function"><name>getLoginFactory</name></member>
+  </compound>
+  <compound refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController" kind="class"><name>es::ull::esit::server::controller::AuthController</name>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController_1a32c81663938eea468a456780b9163b0a" kind="variable"><name>LOG</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController_1a5c6a5097e0a0f7b4e6c7a8207958181c" kind="variable"><name>userRepository</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController_1aa0f66d158454fa38f4ef0384a719d61f" kind="variable"><name>passwordEncoder</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController_1a919ce10a0f6571fb57721cb881642acb" kind="function"><name>login</name></member>
+  </compound>
+  <compound refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1AuthService" kind="class"><name>es::ull::esit::app::middleware::service::AuthService</name>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1AuthService_1a5f8c4d7884ca1dad59c49fa01752dc1b" kind="variable"><name>client</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1AuthService_1ad0929f3c7755847b8da6531c20cf683e" kind="function"><name>AuthService</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1AuthService_1a209d7332f625de6f8bc885407f3498a1" kind="function"><name>authenticate</name></member>
+  </compound>
+  <compound refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1BillResult" kind="class"><name>es::ull::esit::app::middleware::model::BillResult</name>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1BillResult_1a53f0e4cc6a86d66acd9c79207072f095" kind="variable"><name>subTotal</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1BillResult_1a57d046ab769085a281d59e0fa9342d64" kind="variable"><name>vat</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1BillResult_1a8b441ceca015429437b59c5a5ff48746" kind="variable"><name>total</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1BillResult_1a0a56b6058ab76e08024f5e782f478393" kind="function"><name>BillResult</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1BillResult_1a5078da82bf06f4b563e889fe1d83677e" kind="function"><name>getSubTotal</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1BillResult_1a80bcccdb19bd60a1f800225cb6f429f7" kind="function"><name>getVat</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1BillResult_1aeb40b3c61c9afd165e7abbc05aa521f7" kind="function"><name>getTotal</name></member>
+  </compound>
+  <compound refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Cashier" kind="class"><name>es::ull::esit::app::middleware::model::Cashier</name>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Cashier_1a7c12fc29df4b630d4c33a89eda027aa8" kind="variable"><name>id</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Cashier_1aefe1fae2f2bc6c1ee7cf0a50fd53df7d" kind="variable"><name>name</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Cashier_1a6ce803ade383656e647e6904642fb292" kind="variable"><name>salary</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Cashier_1af45caf546685a77d7ce9c74ca520666e" kind="function"><name>Cashier</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Cashier_1ae146c1df3b337d6e843ef8ed61888dad" kind="function"><name>Cashier</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Cashier_1ae036acca3adeddf2b23d70608a037043" kind="function"><name>getId</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Cashier_1ae23f1f04d8f1d86c8b2988ae5bfa00d7" kind="function"><name>setId</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Cashier_1ab783bdc620fa1f2cd6bb642397892368" kind="function"><name>getName</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Cashier_1a6a5734b5102d1aee647c593987a3310a" kind="function"><name>setName</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Cashier_1a91b642c5da2dfa7c19d2a08d9367214a" kind="function"><name>getSalary</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Cashier_1ae0e28f3fd8c52e665d084eda6992cf42" kind="function"><name>setSalary</name></member>
+  </compound>
+  <compound refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier" kind="class"><name>es::ull::esit::server::middleware::model::Cashier</name>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier_1aced59d25bd8a1d66ae8063ee7b77ce42" kind="variable"><name>id</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier_1aef214257060c170cd78033ce0cca89f1" kind="variable"><name>name</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier_1af41cd69714054c2e286192dfca7cfa07" kind="variable"><name>salary</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier_1acdd8e7255200c772867cc8b0e4863ca9" kind="function"><name>Cashier</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier_1ae2bececc5b0f96a09085e2ac49853f76" kind="function"><name>Cashier</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier_1ad5a6e1bdd9c920ee479013716855bbb0" kind="function"><name>getId</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier_1a7f47c247e0fef13a4ee415294eb253b5" kind="function"><name>setId</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier_1a8566a66d2640325d819c18e9173af32c" kind="function"><name>getName</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier_1ab83aab1e779908032b21099c409d449f" kind="function"><name>setName</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier_1af20a3f1edf22e2e484bc6f61a38c30c7" kind="function"><name>getSalary</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier_1afe9a53a365d048c34e399d93531acff5" kind="function"><name>setSalary</name></member>
+  </compound>
+  <compound refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1CashierController" kind="class"><name>es::ull::esit::server::controller::CashierController</name>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1CashierController_1a4e24e687959591b8d26323d5f0b27de7" kind="variable"><name>cashierRepository</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1CashierController_1afac839f447fa6c259d0314c775fc7057" kind="function"><name>getAllCashiers</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1CashierController_1afcc0672b6896503836e0340ba95a80c6" kind="function"><name>getCashierById</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1CashierController_1ac811ef1ea914eceeb7f8d34ccca0808f" kind="function"><name>getCashierByName</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1CashierController_1aff895cd279d7ddb64f87e997a92c5329" kind="function"><name>updateCashier</name></member>
+  </compound>
+  <compound refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin" kind="class"><name>es::ull::esit::app::CashierLogin</name>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1ace25578efcde1a57e627c545ded014ac" kind="variable"><name>reportService</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a369eac151392663e312f31a59c1ad9ba" kind="variable"><name>jButton1</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a7acdcb030b3535089722286c182dfd1e" kind="variable"><name>jButton2</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a80c23789d6733f8dcb5f8dae9e03ccf1" kind="variable"><name>jButton3</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a2aa67142f28eff4dd6c0c0c9d67e3933" kind="variable"><name>jLabel1</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1ad6bd4fd7b3ec3e502573dd69eb630160" kind="variable"><name>jPanel1</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a14fffb65f1e5115c8892ab25ed7b0728" kind="variable"><name>welcomeTxt</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a862449f716a5f89d68717b147336832d" kind="variable"><name>PRIMARY_FONT</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a83ef971fbc5b211556bc10abb5af5c72" kind="variable"><name>LOGGER</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a40ba5c1ff3213b7d84af518ab78c3cc5" kind="variable"><name>cashierSupplier</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a4589ac022e8ba1f86f89e0165172059c" kind="variable"><name>aboutUsSupplier</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a6d30ac3ec703f72c6fb10d7fa3b651a3" kind="variable"><name>orderSupplier</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a2b16a7c6da026927ea77c2d978991124" kind="variable"><name>loginSupplier</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a62b3b3100ad4597112efbce5fba1dd55" kind="function"><name>CashierLogin</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1ad04748dc9ea2238c7177eca6339c99cd" kind="function"><name>CashierLogin</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a14701d8b0d4aff2035eeb5331a9a2c3f" kind="function"><name>CashierLogin</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a83766909dfb664601ee633e98556a989" kind="function"><name>setAboutUsSupplier</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a9d6c53305646f7188a5115afb7c18bed" kind="function"><name>setOrderSupplier</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1aab5f5c08eac23c0d8199e54992696200" kind="function"><name>setLoginSupplier</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a3883dde837fb2753f033251b2b995550" kind="function"><name>aboutUsActionRun</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a88e4e4b44affec13d7ddd6ff7b385e35" kind="function"><name>menuActionRun</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a61449dda924581c9419dbe388db37b3c" kind="function"><name>logoutActionRun</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1ae4ca2745e24c51f4f492da462152f1d9" kind="function"><name>testOnlyCoverageHelper</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a4defbf8fc5858a39d00a526234f28b08" kind="function"><name>aboutUsActionSync</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a5dfa19da9cc1cd1859f7271cf015034b" kind="function"><name>menuActionSync</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a397361e2bf8ca8d5280840e5b25c1be8" kind="function"><name>logoutActionSync</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a6869762a56f288a46d1c1bcdf241067d" kind="function"><name>getWelcomeText</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a47f4a5809be89e268d7973b7f6b1045d" kind="function"><name>setCashierSupplier</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1aa85bda8ed1b7c7238107f4f3d3164f9e" kind="function"><name>getCashierSupplier</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1afe5b0c7e3607f464f16fddfa6ad4e3cc" kind="function"><name>updateWelcomeMessage</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1adea5eba5f62bdb764b53ef64b5290b83" kind="function"><name>jButton1ActionPerformed</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a6f20e99a5643d106cbcbc1ce5eb88305" kind="function"><name>jButton2ActionPerformed</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1acfe03f20ce390b32a22166f6a2c7e44a" kind="function"><name>jButton3ActionPerformed</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a767a95a563bcc206253c30327ad64a3a" kind="function"><name>initComponents</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a5578e12e05cc3e33d16e2b7aec5e3f5b" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="interfacees_1_1ull_1_1esit_1_1server_1_1repo_1_1CashierRepository" kind="interface"><name>es::ull::esit::server::repo::CashierRepository</name>
+    <member refid="interfacees_1_1ull_1_1esit_1_1server_1_1repo_1_1CashierRepository_1a2c79609677b849928d1a5bf5b32e61b3" kind="function"><name>findByName</name></member>
+  </compound>
+  <compound refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink" kind="class"><name>es::ull::esit::app::middleware::model::Drink</name>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1ab8e341db770b09ad79832bb421f3ccaa" kind="variable"><name>drinksId</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1abf940ddfde1cd63a3b83b5e036f6db41" kind="variable"><name>itemDrinks</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1a0f75121a14a3d10636b9b35ff306f07e" kind="variable"><name>drinksPrice</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1af398c70728e9819f7fb6da1a8ce237ac" kind="variable"><name>receiptId</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1a9b430a67018577794e46f24c91d85c29" kind="function"><name>Drink</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1a451a60229feb24cd7cf05083691f28ff" kind="function"><name>Drink</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1a0082ccc8d7b14bb4a6ce30176c3f1f00" kind="function"><name>getDrinksId</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1a938c53857a00a7f139c3ab1f8b599ee5" kind="function"><name>setDrinksId</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1af39848104f2a8088bf1c0675fa7506ed" kind="function"><name>getItemDrinks</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1ae9cf0c1ac5f0bcbae851c62b3110cf14" kind="function"><name>setItemDrinks</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1a2e72a0fa3bebec58109f6ea6dbfeaf3e" kind="function"><name>getDrinksPrice</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1a5ba0ebf173b5dbc86ceba5c103a4c1f6" kind="function"><name>setDrinksPrice</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1ac49b7c12d539d32c96c1ad01fa197273" kind="function"><name>getReceiptId</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1a03b5159a94438b926e9141483aea65b9" kind="function"><name>setReceiptId</name></member>
+  </compound>
+  <compound refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Drink" kind="class"><name>es::ull::esit::server::middleware::model::Drink</name>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Drink_1ae6cf13edb1b653a1e77d59c67f8cb098" kind="variable"><name>drinksId</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Drink_1a3bb8e334ecd3b86e22b47575aadff2ee" kind="variable"><name>itemDrinks</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Drink_1a06b645f1f8cf762eb1ada5f17155f281" kind="variable"><name>drinksPrice</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Drink_1a277a4508b490a409c6fef895d7279539" kind="function"><name>Drink</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Drink_1af2fa5b23b4a77789ba23eec3b3d55194" kind="function"><name>Drink</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Drink_1a5212667f39afd71b4c403c10048ad2e6" kind="function"><name>getDrinksId</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Drink_1a8c60b8313e5c0b52880c868fe0dd2a17" kind="function"><name>setDrinksId</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Drink_1aae2688c552ff33fd362d0425293acbf2" kind="function"><name>getItemDrinks</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Drink_1aec7845bcd41e350202b4d1e5c14a1f30" kind="function"><name>setItemDrinks</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Drink_1a985ed59b35395474f1d38aa385487ce3" kind="function"><name>getDrinksPrice</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Drink_1af1b38c06a04ca80efbe53429a2e9354f" kind="function"><name>setDrinksPrice</name></member>
+  </compound>
+  <compound refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1DrinkController" kind="class"><name>es::ull::esit::server::controller::DrinkController</name>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1DrinkController_1a99720b1a438eb2dbfb14f9985b9d6656" kind="variable"><name>drinkRepository</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1DrinkController_1a163d964df92668c21712682c56fce6bf" kind="function"><name>getAllDrinks</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1DrinkController_1a51ace2e1627db0a1965b549658f0e744" kind="function"><name>getDrinkById</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1DrinkController_1af3871c2a5906f3edf02eb1675f7e17a6" kind="function"><name>createDrink</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1DrinkController_1a50a972db8b1d32321234e864854b1d89" kind="function"><name>updateDrink</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1DrinkController_1a68eb2b152ed142a05c97d2de13af78ea" kind="function"><name>deleteDrink</name></member>
+  </compound>
+  <compound refid="interfacees_1_1ull_1_1esit_1_1server_1_1repo_1_1DrinkRepository" kind="interface"><name>es::ull::esit::server::repo::DrinkRepository</name>
+  </compound>
+  <compound refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1HealthController" kind="class"><name>es::ull::esit::server::controller::HealthController</name>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1HealthController_1a426cd7d61e7495000d723597a0efd638" kind="variable"><name>dataSource</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1HealthController_1a8bccdc869b8f33c8016f91ab584812ca" kind="function"><name>health</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1HealthController_1a15e753c0428335d9206b9defc2efc20a" kind="function"><name>checkDatabase</name></member>
+  </compound>
+  <compound refid="interfacees_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_1_1IOCallable" kind="interface"><name>es::ull::esit::app::middleware::ApiClient::IOCallable</name>
+    <member refid="interfacees_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_1_1IOCallable_1af53c5031d3410d0412cbf022f140da5c" kind="function"><name>call</name></member>
+  </compound>
+  <compound refid="classes_1_1ull_1_1esit_1_1app_1_1Login" kind="class"><name>es::ull::esit::app::Login</name>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1afc6207f5ad5979a829642c9f410856aa" kind="variable"><name>authService</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a7b0063f113a10a332dc9961392fd0628" kind="variable"><name>jButton1</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a822fa6426790c6c44c7fad789bddfcfa" kind="variable"><name>jLabel1</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a9225931135e2f0f0c6488d3fc204ad4c" kind="variable"><name>jLabel3</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a30279203310c1bc8fcc9e6d15edeac13" kind="variable"><name>jPanel1</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a6709769133ef85f8201d86e6e436338a" kind="variable"><name>jPasswordField1</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a36e0d5c6df8e50615b96fbb67f855c8c" kind="variable"><name>usernametxt</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a981cc276ccd95ea19d12d7ad8c2d57cc" kind="variable"><name>usertypecmbo</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1aa902062bf7b14e07606276585d3742c8" kind="variable"><name>adminSupplier</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1af0207b720b0d6c93e758e34bbac45751" kind="variable"><name>cashierFactory</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a48a591b039a3cf032484d78dd6f8fe45" kind="variable"><name>messageDialog</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1aeea494ca67f42033f3d3b287c2f297bf" kind="variable"><name>PRIMARY_FONT</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1afb300864f2c33b902ab656d46fd71575" kind="variable"><name>LOGIN_STRING</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1af2da55421ea492860e61bf95c2711cd5" kind="variable"><name>loginFactory</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a0656beb5b74e693e8cfa5c3def3351b9" kind="function"><name>setAdminSupplier</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a60d56454893e87fe0b73823981929292" kind="function"><name>setCashierFactory</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a4c0a449dab6e1c63b3ebdb3584aa7b8e" kind="function"><name>setMessageDialog</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a4991bf057499a53e77492291ee9ec66a" kind="function"><name>Login</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1ae61fa95fab1880d2e48d4b52948f51f6" kind="function"><name>initComponents</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a4466f2f88c125b3f609314a421381778" kind="function"><name>jButton1ActionPerformed</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1aca803b0cc42ac57cac851a869f6b129c" kind="function"><name>usertypecmboActionPerformed</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a93bb7387e558ed643d7f04a09d1d53d2" kind="function"><name>main</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a5bbab813903d950b0c366c35ccf362ce" kind="function"><name>setLoginFactory</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a2f3f8914f205fb9a98cac920877cfe60" kind="function"><name>getLoginFactory</name></member>
+  </compound>
+  <compound refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController_1_1LoginRequest" kind="class"><name>es::ull::esit::server::controller::AuthController::LoginRequest</name>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController_1_1LoginRequest_1a9b977eac088023134bfba3fcb99a6833" kind="variable"><name>username</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController_1_1LoginRequest_1a924ba9369f135308fe7334f448c6890c" kind="variable"><name>password</name></member>
+  </compound>
+  <compound refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1MainCourse" kind="class"><name>es::ull::esit::app::middleware::model::MainCourse</name>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1MainCourse_1a87edc11005647ba4f57cfdc3ee68a3c4" kind="variable"><name>foodId</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1MainCourse_1ab6b3b0d4b2cd6198c3afae709bbddc80" kind="variable"><name>itemFood</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1MainCourse_1aaa2b6328bb64f6564d9f4ac1e26cbd75" kind="variable"><name>foodPrice</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1MainCourse_1a02a8abd5c59829d1e73a819a9ded2c47" kind="variable"><name>receiptId</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1MainCourse_1a324b9955af8cff25ff78262a6c1a4362" kind="function"><name>MainCourse</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1MainCourse_1a8a89556a8c5e1f81b3209025c987483b" kind="function"><name>MainCourse</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1MainCourse_1a2f30182ebdea6ba151fd58d4d62e221b" kind="function"><name>getFoodId</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1MainCourse_1ae7cdfb72b030bee88ea3cb395894a44f" kind="function"><name>setFoodId</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1MainCourse_1a573bef819713f1ee79ca53ccb1634836" kind="function"><name>getItemFood</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1MainCourse_1a62c0e15954d27ca446d00c724a1067f0" kind="function"><name>setItemFood</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1MainCourse_1ac0eace190bde7bb6db0bb152cd0b856f" kind="function"><name>getFoodPrice</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1MainCourse_1a4533a530378d815306c2bbd48ce74db7" kind="function"><name>setFoodPrice</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1MainCourse_1acd1e537f78ff562bfe807e14b7e7b7eb" kind="function"><name>getReceiptId</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1MainCourse_1a05430baffeacf3777be273736440b982" kind="function"><name>setReceiptId</name></member>
+  </compound>
+  <compound refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse" kind="class"><name>es::ull::esit::server::middleware::model::MainCourse</name>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1a66a45a781526226f4244f35f7a48f49c" kind="variable"><name>foodId</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1ae55c46c9a2c4d71ad11eec397c0affab" kind="variable"><name>itemFood</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1a6f3f51836fd4a618f7beca4766c1fd4a" kind="variable"><name>foodPrice</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1a1230c3d5f6ab71169ba3eda9389c3d3f" kind="function"><name>MainCourse</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1a6ccf9f6275cb929225e1222e0a817106" kind="function"><name>MainCourse</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1a4e0c21da0e3baa05c401bad95f439197" kind="function"><name>getFoodId</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1ad4e2c0c7c6069e306aa838928a9d85c3" kind="function"><name>setFoodId</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1a097ad464e15a192bf94e5fd1d3d999e4" kind="function"><name>getItemFood</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1adda126d191139416358ea4eec76a216f" kind="function"><name>setItemFood</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1abc5f7f66d161cb636a82153f596a3bfc" kind="function"><name>getFoodPrice</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1aed64442d866a7615a883b83aa72f2cd5" kind="function"><name>setFoodPrice</name></member>
+  </compound>
+  <compound refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1MainCourseController" kind="class"><name>es::ull::esit::server::controller::MainCourseController</name>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1MainCourseController_1ac710e09935bf732aa0dcf0f0f4535048" kind="variable"><name>mainCourseRepository</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1MainCourseController_1acdb47c370d68311e9b20e57d523624ff" kind="function"><name>getAllMainCourses</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1MainCourseController_1aa79d15a93202eb3cf504679db2b331c6" kind="function"><name>getMainCourseById</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1MainCourseController_1a9f4b3ade86d9fe114c10fb620b837c0e" kind="function"><name>createMainCourse</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1MainCourseController_1aa717af571c4a268b6b9dea7ee8ce7271" kind="function"><name>updateMainCourse</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1MainCourseController_1a8b7bb34d4c04bd5184456636b82c3d1e" kind="function"><name>deleteMainCourse</name></member>
+  </compound>
+  <compound refid="interfacees_1_1ull_1_1esit_1_1server_1_1repo_1_1MainCourseRepository" kind="interface"><name>es::ull::esit::server::repo::MainCourseRepository</name>
+  </compound>
+  <compound refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1MenuController" kind="class"><name>es::ull::esit::server::controller::MenuController</name>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1MenuController_1ab6216ef429010e6ce51c31b8b4150670" kind="variable"><name>mainCourseRepository</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1MenuController_1a0a9c4980d79a8111fe0ea40824cc76e4" kind="variable"><name>appetizerRepository</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1MenuController_1a4943479075138b52c26456e5511128bb" kind="variable"><name>drinkRepository</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1MenuController_1a2b800d0259fb36426f06a873558ba680" kind="function"><name>getFullMenu</name></member>
+  </compound>
+  <compound refid="interfacees_1_1ull_1_1esit_1_1app_1_1Login_1_1MessageDialog" kind="interface"><name>es::ull::esit::app::Login::MessageDialog</name>
+    <member refid="interfacees_1_1ull_1_1esit_1_1app_1_1Login_1_1MessageDialog_1af4a2c52e41df62157ede78a8bf5956fc" kind="function"><name>showMessage</name></member>
+    <member refid="interfacees_1_1ull_1_1esit_1_1app_1_1Login_1_1MessageDialog_1a88ccc8459395792f1a8a514cc957b537" kind="function"><name>showMessage</name></member>
+  </compound>
+  <compound refid="classes_1_1ull_1_1esit_1_1app_1_1Order" kind="class"><name>es::ull::esit::app::Order</name>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Order_1aa875b11fb85ed24d1ba4f1fe873cabfb" kind="variable"><name>PRIMARY_FONT</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Order_1a707ec43370a5a11d2843c9c5a5f42654" kind="variable"><name>PRIMARY_FONT_LIGHT</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Order_1a040f5d08d4ee30fbe796c518752d0102" kind="variable"><name>LOGGER</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Order_1acccac8f3621a8249639b137a5dd7f38a" kind="variable"><name>productService</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Order_1ade7b2d5065af2820ba0b0ed02f8b9374" kind="variable"><name>orderService</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Order_1a3ff14eefad1013bc906cc48a60469fde" kind="variable"><name>drinksModel</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Order_1a1d2d8f89006a442d47ede081e8fd021f" kind="variable"><name>appetizersModel</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Order_1ad6623ecfac2b32daf972cd6c5c03e2a8" kind="variable"><name>mainsModel</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Order_1ab2f043d565527b254f3cb65fa523bdfb" kind="variable"><name>lastBill</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Order_1a78525a8bdb7be630773b8f67119beece" kind="variable"><name>appetizerPnl</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Order_1aa71c23f4820d99a1631bedb9ea38835a" kind="variable"><name>drinksPnl</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Order_1ad474ca261c9a3be721206fc272702a36" kind="variable"><name>mainCoursePnl</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Order_1a0eea5ad4f51786aab77b4ba501c36dd4" kind="variable"><name>appetizersTable</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Order_1abaf56612e7b8129fecb6127068074143" kind="variable"><name>appetizersScroll</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Order_1ad901ae9f55a5d6066d2a99221dd27678" kind="variable"><name>drinksTable</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Order_1a3b03c0b9c09e92944b11ab1784402448" kind="variable"><name>drinksScroll</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Order_1a5d4ead57914d04f7b6b2a9d4c3aa4410" kind="variable"><name>goBackMenueBtn</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Order_1a2b115753f1515b398652fc5c7cf806f8" kind="variable"><name>jLabel1</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Order_1a1b002cf1f57256cb097f5d14e9758cce" kind="variable"><name>jLabel2</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Order_1a415d8a7edc331e5f205054e91d7dd537" kind="variable"><name>jPanel1</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Order_1ab48787c541aa80d98f538e98c5892845" kind="variable"><name>jPanel2</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Order_1ab202b03a8edd1239adce9ef3f4ad963e" kind="variable"><name>mainsTable</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Order_1addbe274cc3a8a2f079ce6cae8d382c84" kind="variable"><name>mainsScroll</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Order_1a54e8f7b18629bda43a8d19e87f19ee30" kind="variable"><name>newReceiptBtn</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Order_1aee6c11c54854d975184f60de92aa0f82" kind="variable"><name>payBtn</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Order_1a4c33d963060832e0ff0e5c3dc5053db4" kind="variable"><name>receiptNoLbl</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Order_1afdc76cdcb45013b7a6dbd7fa7aba289d" kind="variable"><name>saveReceiptBtn</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Order_1a6bd2e2ae4d5f6ae4b41217bea4aa81f7" kind="variable"><name>subTotalLbl</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Order_1a0ae362fc39c77eadb46846e3b9e57e74" kind="variable"><name>totalLbl</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Order_1a79ba6ce28f8e8cebb17068cdd5069f4f" kind="variable"><name>vatLbl</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Order_1a3cac06258c16f2efdc8c51e53907888a" kind="variable"><name>subTotal</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Order_1a97f2abe7571dbcee20b6a90cd0728d56" kind="variable"><name>vat</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Order_1a4e175649ea08ade34a23e33cf06f43fa" kind="variable"><name>total</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Order_1a80df70a1c3e4b73e1ca138a2eb989919" kind="variable"><name>receiptNo</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Order_1a8e48ba70e69d765eb22130328c620975" kind="variable"><name>output</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Order_1a5d15e3c212a05a3aef8b70c8897d450c" kind="function"><name>Order</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Order_1a82ff000c134946c83ee7f7da171f0ff0" kind="function"><name>Order</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Order_1a856e2d34278781acb4df8b12f7b31293" kind="function"><name>Order</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Order_1a1ac94f004b9b2efce6cbf284c2f7306e" kind="function"><name>loadPrice</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Order_1aeb315ef4ce91decf490c41b50ccf8abb" kind="function"><name>setupTables</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Order_1a0d38304f01bcbaaed9d78c79a95208be" kind="function"><name>loadMenuFromDatabase</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Order_1a805b1d4302daee8a489334a04102ed80" kind="function"><name>fillDrinks</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Order_1a11ff5cc29833a1aca07313674af0ae81" kind="function"><name>fillAppetizers</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Order_1a2bad57aa736eed5a2d560b89a1432f3a" kind="function"><name>fillMains</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Order_1addd04356fb04df3bc68fd2e60541c164" kind="function"><name>sumFromModel</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Order_1a01641723d5925207bed6852cfd682ac6" kind="function"><name>resetQtyColumn</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Order_1aaf71aeca492daeae200fbc3f3ba63b47" kind="function"><name>initComponents</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Order_1a88a6de2cd433addd439a931f39921084" kind="function"><name>payBtnActionPerformed</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Order_1ad72126186b906a84728cbd581512cd0c" kind="function"><name>saveReceiptBtnActionPerformed</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Order_1a463169f68e4d61ca9b5ba4e273a35ae1" kind="function"><name>newReceiptBtnActionPerformed</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Order_1ad3a33afef494216839f65cf69ec1dc52" kind="function"><name>goBackMenueBtnActionPerformed</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1Order_1a32f3c48a536049afa72c92d96d30ac5a" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1OrderService" kind="class"><name>es::ull::esit::app::middleware::service::OrderService</name>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1OrderService_1ad6edbdceb8de31aeb21202eee74affb2" kind="variable"><name>VAT_RATE</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1OrderService_1a21992142e03ec7cbd2c84f7e0514f972" kind="function"><name>calculateBill</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1OrderService_1a08f32f261e78d873fa11c7ffda77dafa" kind="function"><name>generateReceiptFile</name></member>
+  </compound>
+  <compound refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService" kind="class"><name>es::ull::esit::app::middleware::service::ProductService</name>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1a902133811640b9e88c78b3c4b1db5755" kind="variable"><name>client</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1a857c31c3227fc7b76967afaa1836f0b3" kind="function"><name>ProductService</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1a7cc7c2ab846d1ab4bb1d2c3fc6f56ed5" kind="function"><name>getAllDrinks</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1aabb1d8b8a3efe343308284315fb09863" kind="function"><name>getDrinkById</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1aab5e0b223a118755115db5a323e81cf9" kind="function"><name>addDrink</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1a333c00a5e9b092646dc29efe5400aa71" kind="function"><name>updateDrink</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1ac6067334ab34d2022a1ab62425b0f4f3" kind="function"><name>getAllAppetizers</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1a89264f953e4c7e70c5b6fe7694a656f2" kind="function"><name>getAppetizerById</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1a769d8d8b0e85877ec511a13b018a8593" kind="function"><name>addAppetizer</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1a7f8f0ea8d86f4118224cc981b27ac9d7" kind="function"><name>updateAppetizer</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1ae12c25da7c8c88c342e4a1da974d7b23" kind="function"><name>getAllMainCourses</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1ade866c533b86133a0f6c059affd1e464" kind="function"><name>getMainCourseById</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1abc6fe1902bddc349b31d598d215df191" kind="function"><name>addMainCourse</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1ad96209da593f98e5c8f2205686e02c8f" kind="function"><name>updateMainCourse</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1a37e994d91713930101c873838145f607" kind="function"><name>validateName</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_1a1de5f344755fa2d4857ff831c0e7f251" kind="function"><name>validateAndParsePrice</name></member>
+  </compound>
+  <compound refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ReportService" kind="class"><name>es::ull::esit::app::middleware::service::ReportService</name>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ReportService_1ad5ba1496e984fa2db224764cf4f21747" kind="variable"><name>client</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ReportService_1a1c8e6ee876d9c50702ee10a6fe4beb92" kind="function"><name>ReportService</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ReportService_1aca3b9e34ecdb98209f034cdabf5722aa" kind="function"><name>getCashierInfo</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ReportService_1a2314b27508949bbc494f3b6209fb866a" kind="function"><name>checkMenuStatus</name></member>
+  </compound>
+  <compound refid="interfacees_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_1_1ResponseHandler" kind="interface"><name>es::ull::esit::app::middleware::ApiClient::ResponseHandler</name>
+    <member refid="interfacees_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_1_1ResponseHandler_1a878768786979003858d2c5a3f99ad37f" kind="function"><name>handle</name></member>
+  </compound>
+  <compound refid="classes_1_1ull_1_1esit_1_1server_1_1RestaurantApplication" kind="class"><name>es::ull::esit::server::RestaurantApplication</name>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1RestaurantApplication_1a9223a1f3736e80dbb4f8dd3cbd795866" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="classes_1_1ull_1_1esit_1_1server_1_1config_1_1SecurityConfig" kind="class"><name>es::ull::esit::server::config::SecurityConfig</name>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1config_1_1SecurityConfig_1abcf9b5bf545d58b3d16662c8013f2e4d" kind="function"><name>passwordEncoder</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1config_1_1SecurityConfig_1ac8225a2140cd0c437b221a12bf06ef0b" kind="function"><name>filterChain</name></member>
+  </compound>
+  <compound refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User" kind="class"><name>es::ull::esit::app::middleware::model::User</name>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_1a8455499295fb3e1af2b30f64368c5fdd" kind="variable"><name>username</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_1a08dbf1a0e8830e994a8d9a9a4261de6d" kind="variable"><name>role</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_1a9aac576243c1bf70e1c9e53ff2ed8cca" kind="function"><name>User</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_1aa1afd39c936cfd6ebcb045cfb47d3da2" kind="function"><name>User</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_1a03d8ef6d8d413254f340dbd38ba07511" kind="function"><name>getUsername</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_1a6621261cbc2a9ce672fd5f135bd79e5b" kind="function"><name>setUsername</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_1a3993d820e89ba713a594980a06a97fde" kind="function"><name>getRole</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_1a89f926a000e02f1f7cbdecd04979a778" kind="function"><name>setRole</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_1a4f1c85f290f8a053b755f55c25d98f49" kind="function"><name>isAdmin</name></member>
+  </compound>
+  <compound refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User" kind="class"><name>es::ull::esit::server::middleware::model::User</name>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_1aa7361b7bfd86f5528f02dcdcb0b88be1" kind="variable"><name>id</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_1afd5c2f6462448a471fe7a52edde3cf05" kind="variable"><name>username</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_1a80e2f0beb27886da83fd1b91cad262e7" kind="variable"><name>passwordHash</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_1ac4ef0766126b302cd226caa24f22be55" kind="variable"><name>role</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_1a165e07b1e414532af4b5c792954c716b" kind="function"><name>getId</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_1a4b08406ec0f7ff574b3ce5be1fe3d710" kind="function"><name>setId</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_1ae41a4e87d686097f9296035f6086fc29" kind="function"><name>getUsername</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_1a73f5c6db524d273a4cada8eb09404bcf" kind="function"><name>setUsername</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_1aadcf4f78bfe6d35ac2c5813714923cd2" kind="function"><name>getPasswordHash</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_1a59850783b933c5d878f25bdbb8f241fd" kind="function"><name>setPasswordHash</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_1a9469eeb791e8d25c7e7f7fa7b2f33720" kind="function"><name>getRole</name></member>
+    <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_1a4cba805e4b0eac401f1a997244d4f507" kind="function"><name>setRole</name></member>
+  </compound>
+  <compound refid="interfacees_1_1ull_1_1esit_1_1server_1_1repo_1_1UserRepository" kind="interface"><name>es::ull::esit::server::repo::UserRepository</name>
+    <member refid="interfacees_1_1ull_1_1esit_1_1server_1_1repo_1_1UserRepository_1a26b4f2d46c2dce8ea51eab2c459a5d69" kind="function"><name>findByUsername</name></member>
+  </compound>
+  <compound refid="namespacees" kind="namespace"><name>es</name>
+  </compound>
+  <compound refid="namespacees_1_1ull" kind="namespace"><name>es::ull</name>
+  </compound>
+  <compound refid="namespacees_1_1ull_1_1esit" kind="namespace"><name>es::ull::esit</name>
+  </compound>
+  <compound refid="namespacees_1_1ull_1_1esit_1_1app" kind="namespace"><name>es::ull::esit::app</name>
+  </compound>
+  <compound refid="namespacees_1_1ull_1_1esit_1_1app_1_1middleware" kind="namespace"><name>es::ull::esit::app::middleware</name>
+  </compound>
+  <compound refid="namespacees_1_1ull_1_1esit_1_1app_1_1middleware_1_1model" kind="namespace"><name>es::ull::esit::app::middleware::model</name>
+  </compound>
+  <compound refid="namespacees_1_1ull_1_1esit_1_1app_1_1middleware_1_1service" kind="namespace"><name>es::ull::esit::app::middleware::service</name>
+  </compound>
+  <compound refid="namespacees_1_1ull_1_1esit_1_1server" kind="namespace"><name>es::ull::esit::server</name>
+  </compound>
+  <compound refid="namespacees_1_1ull_1_1esit_1_1server_1_1config" kind="namespace"><name>es::ull::esit::server::config</name>
+  </compound>
+  <compound refid="namespacees_1_1ull_1_1esit_1_1server_1_1controller" kind="namespace"><name>es::ull::esit::server::controller</name>
+  </compound>
+  <compound refid="namespacees_1_1ull_1_1esit_1_1server_1_1middleware" kind="namespace"><name>es::ull::esit::server::middleware</name>
+  </compound>
+  <compound refid="namespacees_1_1ull_1_1esit_1_1server_1_1middleware_1_1model" kind="namespace"><name>es::ull::esit::server::middleware::model</name>
+  </compound>
+  <compound refid="namespacees_1_1ull_1_1esit_1_1server_1_1repo" kind="namespace"><name>es::ull::esit::server::repo</name>
+  </compound>
+  <compound refid="namespacejava_1_1lang" kind="namespace"><name>java::lang</name>
+  </compound>
+  <compound refid="namespacejavax" kind="namespace"><name>javax</name>
+  </compound>
+  <compound refid="namespacejavax_1_1persistence" kind="namespace"><name>javax::persistence</name>
+  </compound>
+  <compound refid="namespacejavax_1_1swing" kind="namespace"><name>javax::swing</name>
+  </compound>
+  <compound refid="namespaceorg_1_1springframework_1_1http" kind="namespace"><name>org::springframework::http</name>
+  </compound>
+  <compound refid="namespaceorg_1_1springframework_1_1web_1_1bind_1_1annotation" kind="namespace"><name>org::springframework::web::bind::annotation</name>
+  </compound>
+  <compound refid="00-create-db_8sql" kind="file"><name>00-create-db.sql</name>
+  </compound>
+  <compound refid="01-tables_8sql" kind="file"><name>01-tables.sql</name>
+  </compound>
+  <compound refid="02-procedures_8sql" kind="file"><name>02-procedures.sql</name>
+  </compound>
+  <compound refid="03-triggers_8sql" kind="file"><name>03-triggers.sql</name>
+  </compound>
+  <compound refid="04-privileges_8sql" kind="file"><name>04-privileges.sql</name>
+  </compound>
+  <compound refid="05-data_8sql" kind="file"><name>05-data.sql</name>
+  </compound>
+  <compound refid="init_8sql" kind="file"><name>init.sql</name>
+  </compound>
+  <compound refid="README_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="SecurityConfig_8java" kind="file"><name>SecurityConfig.java</name>
+  </compound>
+  <compound refid="AppetizerController_8java" kind="file"><name>AppetizerController.java</name>
+  </compound>
+  <compound refid="AuthController_8java" kind="file"><name>AuthController.java</name>
+  </compound>
+  <compound refid="CashierController_8java" kind="file"><name>CashierController.java</name>
+  </compound>
+  <compound refid="DrinkController_8java" kind="file"><name>DrinkController.java</name>
+  </compound>
+  <compound refid="HealthController_8java" kind="file"><name>HealthController.java</name>
+  </compound>
+  <compound refid="MainCourseController_8java" kind="file"><name>MainCourseController.java</name>
+  </compound>
+  <compound refid="MenuController_8java" kind="file"><name>MenuController.java</name>
+  </compound>
+  <compound refid="AppetizerRepository_8java" kind="file"><name>AppetizerRepository.java</name>
+  </compound>
+  <compound refid="CashierRepository_8java" kind="file"><name>CashierRepository.java</name>
+  </compound>
+  <compound refid="DrinkRepository_8java" kind="file"><name>DrinkRepository.java</name>
+  </compound>
+  <compound refid="MainCourseRepository_8java" kind="file"><name>MainCourseRepository.java</name>
+  </compound>
+  <compound refid="UserRepository_8java" kind="file"><name>UserRepository.java</name>
+  </compound>
+  <compound refid="RestaurantApplication_8java" kind="file"><name>RestaurantApplication.java</name>
+  </compound>
+  <compound refid="AboutUs_8java" kind="file"><name>AboutUs.java</name>
+  </compound>
+  <compound refid="AdminLogin_8java" kind="file"><name>AdminLogin.java</name>
+  </compound>
+  <compound refid="AdminProducts_8java" kind="file"><name>AdminProducts.java</name>
+  </compound>
+  <compound refid="ApplicationLauncher_8java" kind="file"><name>ApplicationLauncher.java</name>
+  </compound>
+  <compound refid="CashierLogin_8java" kind="file"><name>CashierLogin.java</name>
+  </compound>
+  <compound refid="Login_8java" kind="file"><name>Login.java</name>
+  </compound>
+  <compound refid="ApiClient_8java" kind="file"><name>ApiClient.java</name>
+  </compound>
+  <compound refid="ApiClientException_8java" kind="file"><name>ApiClientException.java</name>
+  </compound>
+  <compound refid="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2Appetizer_8java" kind="file"><name>server/src/main/java/es/ull/esit/server/middleware/model/Appetizer.java</name>
+  </compound>
+  <compound refid="src_2main_2java_2es_2ull_2esit_2app_2middleware_2model_2Appetizer_8java" kind="file"><name>src/main/java/es/ull/esit/app/middleware/model/Appetizer.java</name>
+  </compound>
+  <compound refid="BillResult_8java" kind="file"><name>BillResult.java</name>
+  </compound>
+  <compound refid="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2Cashier_8java" kind="file"><name>server/src/main/java/es/ull/esit/server/middleware/model/Cashier.java</name>
+  </compound>
+  <compound refid="src_2main_2java_2es_2ull_2esit_2app_2middleware_2model_2Cashier_8java" kind="file"><name>src/main/java/es/ull/esit/app/middleware/model/Cashier.java</name>
+  </compound>
+  <compound refid="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2Drink_8java" kind="file"><name>server/src/main/java/es/ull/esit/server/middleware/model/Drink.java</name>
+  </compound>
+  <compound refid="src_2main_2java_2es_2ull_2esit_2app_2middleware_2model_2Drink_8java" kind="file"><name>src/main/java/es/ull/esit/app/middleware/model/Drink.java</name>
+  </compound>
+  <compound refid="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2MainCourse_8java" kind="file"><name>server/src/main/java/es/ull/esit/server/middleware/model/MainCourse.java</name>
+  </compound>
+  <compound refid="src_2main_2java_2es_2ull_2esit_2app_2middleware_2model_2MainCourse_8java" kind="file"><name>src/main/java/es/ull/esit/app/middleware/model/MainCourse.java</name>
+  </compound>
+  <compound refid="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2User_8java" kind="file"><name>server/src/main/java/es/ull/esit/server/middleware/model/User.java</name>
+  </compound>
+  <compound refid="src_2main_2java_2es_2ull_2esit_2app_2middleware_2model_2User_8java" kind="file"><name>src/main/java/es/ull/esit/app/middleware/model/User.java</name>
+  </compound>
+  <compound refid="AuthService_8java" kind="file"><name>AuthService.java</name>
+  </compound>
+  <compound refid="OrderService_8java" kind="file"><name>OrderService.java</name>
+  </compound>
+  <compound refid="ProductService_8java" kind="file"><name>ProductService.java</name>
+  </compound>
+  <compound refid="ReportService_8java" kind="file"><name>ReportService.java</name>
+  </compound>
+  <compound refid="Order_8java" kind="file"><name>Order.java</name>
+  </compound>
+  <compound refid="md_README" kind="page"><name>md_README</name>
+  </compound>
+  <compound refid="dir_eed9f2a893b90e833814e498a1a1ecc2" kind="dir"><name>app</name>
+  </compound>
+  <compound refid="dir_0137fd9483a5bda7b651087b281bef16" kind="dir"><name>config</name>
+  </compound>
+  <compound refid="dir_a281e808171aef840cd68c2f7cd7372a" kind="dir"><name>controller</name>
+  </compound>
+  <compound refid="dir_ce5981f09099a3fa6071b9eb8fe67a2c" kind="dir"><name>db</name>
+  </compound>
+  <compound refid="dir_855fa66cf6800926506f6cbf52e410ec" kind="dir"><name>es</name>
+  </compound>
+  <compound refid="dir_f9b1e2a59d62d001356ff527358589e3" kind="dir"><name>es</name>
+  </compound>
+  <compound refid="dir_e961b8ab4b4fa1d30bcb350b812fa918" kind="dir"><name>esit</name>
+  </compound>
+  <compound refid="dir_ff138097d92aca141cd969d7c10ce4fe" kind="dir"><name>esit</name>
+  </compound>
+  <compound refid="dir_74337cc04aadcfbdd497cbc655ab04a0" kind="dir"><name>java</name>
+  </compound>
+  <compound refid="dir_fd3f6763802dee1ad875f6c80eac0bda" kind="dir"><name>java</name>
+  </compound>
+  <compound refid="dir_91e543ac8e4fcedafd5c94340625243f" kind="dir"><name>main</name>
+  </compound>
+  <compound refid="dir_5eb159725f84c66aafd839904a4acdd0" kind="dir"><name>main</name>
+  </compound>
+  <compound refid="dir_0ed9041311d0c031e00ac52fd5c0c707" kind="dir"><name>middleware</name>
+  </compound>
+  <compound refid="dir_468bec3702a3b7276ffb7748809f0296" kind="dir"><name>middleware</name>
+  </compound>
+  <compound refid="dir_8ab97afbee286a856ff953ea9fa3a0bd" kind="dir"><name>model</name>
+  </compound>
+  <compound refid="dir_982fa1aeff95508620db9660cf6cdadc" kind="dir"><name>model</name>
+  </compound>
+  <compound refid="dir_863d4d887ca2de5db74bd1238b7a96b4" kind="dir"><name>repo</name>
+  </compound>
+  <compound refid="dir_41e1742e44e2de38b3bc91f993fed282" kind="dir"><name>server</name>
+  </compound>
+  <compound refid="dir_d285b4168156ba944cbee52b32703c54" kind="dir"><name>server</name>
+  </compound>
+  <compound refid="dir_704b3c4fc92659981438188a1176bc23" kind="dir"><name>service</name>
+  </compound>
+  <compound refid="dir_a063914ab482288b7b0e1b2fca86158c" kind="dir"><name>src</name>
+  </compound>
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
+  </compound>
+  <compound refid="dir_124df9f0a74517f52575cce4838c892a" kind="dir"><name>ull</name>
+  </compound>
+  <compound refid="dir_5e4a5b0330a43e454ff3ad9bcb612958" kind="dir"><name>ull</name>
+  </compound>
+</doxygenindex>

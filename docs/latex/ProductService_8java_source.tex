@@ -1,0 +1,135 @@
+\doxysection{Product\+Service.\+java}
+\hypertarget{ProductService_8java_source}{}\label{ProductService_8java_source}\index{ProductService.java@{ProductService.java}}
+\mbox{\hyperlink{ProductService_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00001}00001\ \textcolor{keyword}{package\ }es.ull.esit.app.middleware.service;}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00003}00003\ \textcolor{keyword}{import}\ es.ull.esit.app.middleware.ApiClient;}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00004}00004\ \textcolor{keyword}{import}\ es.ull.esit.app.middleware.model.Appetizer;}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00005}00005\ \textcolor{keyword}{import}\ es.ull.esit.app.middleware.model.Drink;}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00006}00006\ \textcolor{keyword}{import}\ es.ull.esit.app.middleware.model.MainCourse;}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00007}00007\ \textcolor{keyword}{import}\ java.util.List;}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00016}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService}{00016}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_a857c31c3227fc7b76967afaa1836f0b3}{ProductService}}\ \{}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00019}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_a902133811640b9e88c78b3c4b1db5755}{00019}}\ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{final}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient}{ApiClient}}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_a902133811640b9e88c78b3c4b1db5755}{client}};}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00026}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_a857c31c3227fc7b76967afaa1836f0b3}{00026}}\ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_a857c31c3227fc7b76967afaa1836f0b3}{ProductService}}(\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient}{ApiClient}}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_a902133811640b9e88c78b3c4b1db5755}{client}})\ \{}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00027}00027\ \ \ \ \ this.client\ =\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_a902133811640b9e88c78b3c4b1db5755}{client}};}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00028}00028\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00030}00030\ \ \ \textcolor{comment}{//\ ====================\ DRINKS\ LOGIC\ ====================}}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00037}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_a7cc7c2ab846d1ab4bb1d2c3fc6f56ed5}{00037}}\ \ \ \textcolor{keyword}{public}\ List<Drink>\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_a7cc7c2ab846d1ab4bb1d2c3fc6f56ed5}{getAllDrinks}}()\ \{}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00038}00038\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_a902133811640b9e88c78b3c4b1db5755}{client}}.getAllDrinks();}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00039}00039\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00047}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_aabb1d8b8a3efe343308284315fb09863}{00047}}\ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink}{Drink}}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_aabb1d8b8a3efe343308284315fb09863}{getDrinkById}}(Long\ \textcolor{keywordtype}{id})\ \{}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00048}00048\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_a902133811640b9e88c78b3c4b1db5755}{client}}.getDrinkById(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00049}00049\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00059}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_aab5e0b223a118755115db5a323e81cf9}{00059}}\ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_aab5e0b223a118755115db5a323e81cf9}{addDrink}}(String\ name,\ String\ priceStr)\ \{}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00060}00060\ \ \ \ \ \textcolor{keywordtype}{int}\ price\ =\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_a1de5f344755fa2d4857ff831c0e7f251}{validateAndParsePrice}}(priceStr);}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00061}00061\ \ \ \ \ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_a37e994d91713930101c873838145f607}{validateName}}(name);}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00063}00063\ \ \ \ \ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink}{Drink}}\ newDrink\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink}{Drink}}(\textcolor{keyword}{null},\ name,\ price,\ \textcolor{keyword}{null});}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00064}00064\ \ \ \ \ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_a902133811640b9e88c78b3c4b1db5755}{client}}.createDrink(newDrink);}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00065}00065\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00074}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_a333c00a5e9b092646dc29efe5400aa71}{00074}}\ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_a333c00a5e9b092646dc29efe5400aa71}{updateDrink}}(Long\ \textcolor{keywordtype}{id},\ String\ name,\ String\ priceStr)\ \{}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00075}00075\ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keywordtype}{id}\ ==\ \textcolor{keyword}{null})\ \{}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00076}00076\ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ IllegalArgumentException(\textcolor{stringliteral}{"{}No\ drink\ selected!"{}});}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00077}00077\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00078}00078\ }
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00079}00079\ \ \ \ \ \textcolor{keywordtype}{int}\ price\ =\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_a1de5f344755fa2d4857ff831c0e7f251}{validateAndParsePrice}}(priceStr);}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00080}00080\ \ \ \ \ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_a37e994d91713930101c873838145f607}{validateName}}(name);}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00082}00082\ \ \ \ \ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink}{Drink}}\ updatedDrink\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink}{Drink}}(\textcolor{keywordtype}{id},\ name,\ price,\ \textcolor{keyword}{null});}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00083}00083\ \ \ \ \ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_a902133811640b9e88c78b3c4b1db5755}{client}}.updateDrink(\textcolor{keywordtype}{id},\ updatedDrink);}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00084}00084\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00086}00086\ \ \ \textcolor{comment}{//\ ====================\ APPETIZERS\ LOGIC\ ====================}}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00093}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_ac6067334ab34d2022a1ab62425b0f4f3}{00093}}\ \ \ \textcolor{keyword}{public}\ List<Appetizer>\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_ac6067334ab34d2022a1ab62425b0f4f3}{getAllAppetizers}}()\ \{}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00094}00094\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_a902133811640b9e88c78b3c4b1db5755}{client}}.getAllAppetizers();}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00095}00095\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00096}00096\ }
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00103}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_a89264f953e4c7e70c5b6fe7694a656f2}{00103}}\ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Appetizer}{Appetizer}}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_a89264f953e4c7e70c5b6fe7694a656f2}{getAppetizerById}}(Long\ \textcolor{keywordtype}{id})\ \{}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00104}00104\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_a902133811640b9e88c78b3c4b1db5755}{client}}.getAppetizerById(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00105}00105\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00106}00106\ }
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00115}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_a769d8d8b0e85877ec511a13b018a8593}{00115}}\ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_a769d8d8b0e85877ec511a13b018a8593}{addAppetizer}}(String\ name,\ String\ priceStr)\ \{}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00116}00116\ \ \ \ \ \textcolor{keywordtype}{int}\ price\ =\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_a1de5f344755fa2d4857ff831c0e7f251}{validateAndParsePrice}}(priceStr);}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00117}00117\ \ \ \ \ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_a37e994d91713930101c873838145f607}{validateName}}(name);}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00118}00118\ }
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00119}00119\ \ \ \ \ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Appetizer}{Appetizer}}\ newAppetizer\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Appetizer}{Appetizer}}(\textcolor{keyword}{null},\ name,\ price,\ \textcolor{keyword}{null});}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00120}00120\ \ \ \ \ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_a902133811640b9e88c78b3c4b1db5755}{client}}.createAppetizer(newAppetizer);}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00121}00121\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00122}00122\ }
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00130}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_a7f8f0ea8d86f4118224cc981b27ac9d7}{00130}}\ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_a7f8f0ea8d86f4118224cc981b27ac9d7}{updateAppetizer}}(Long\ \textcolor{keywordtype}{id},\ String\ name,\ String\ priceStr)\ \{}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00131}00131\ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keywordtype}{id}\ ==\ \textcolor{keyword}{null})\ \{}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00132}00132\ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ IllegalArgumentException(\textcolor{stringliteral}{"{}No\ appetizer\ selected!"{}});}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00133}00133\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00134}00134\ }
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00135}00135\ \ \ \ \ \textcolor{keywordtype}{int}\ price\ =\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_a1de5f344755fa2d4857ff831c0e7f251}{validateAndParsePrice}}(priceStr);}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00136}00136\ \ \ \ \ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_a37e994d91713930101c873838145f607}{validateName}}(name);}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00137}00137\ }
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00138}00138\ \ \ \ \ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Appetizer}{Appetizer}}\ updatedAppetizer\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Appetizer}{Appetizer}}(\textcolor{keywordtype}{id},\ name,\ price,\ \textcolor{keyword}{null});}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00139}00139\ \ \ \ \ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_a902133811640b9e88c78b3c4b1db5755}{client}}.updateAppetizer(\textcolor{keywordtype}{id},\ updatedAppetizer);}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00140}00140\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00141}00141\ }
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00142}00142\ \ \ \textcolor{comment}{//\ ====================\ MAIN\ COURSE\ LOGIC\ ====================}}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00143}00143\ }
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00149}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_ae12c25da7c8c88c342e4a1da974d7b23}{00149}}\ \ \ \textcolor{keyword}{public}\ List<MainCourse>\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_ae12c25da7c8c88c342e4a1da974d7b23}{getAllMainCourses}}()\ \{}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00150}00150\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_a902133811640b9e88c78b3c4b1db5755}{client}}.getAllMainCourses();}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00151}00151\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00152}00152\ }
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00159}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_ade866c533b86133a0f6c059affd1e464}{00159}}\ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1MainCourse}{MainCourse}}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_ade866c533b86133a0f6c059affd1e464}{getMainCourseById}}(Long\ \textcolor{keywordtype}{id})\ \{}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00160}00160\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_a902133811640b9e88c78b3c4b1db5755}{client}}.getMainCourseById(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00161}00161\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00162}00162\ }
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00171}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_abc6fe1902bddc349b31d598d215df191}{00171}}\ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_abc6fe1902bddc349b31d598d215df191}{addMainCourse}}(String\ name,\ String\ priceStr)\ \{}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00172}00172\ \ \ \ \ \textcolor{keywordtype}{int}\ price\ =\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_a1de5f344755fa2d4857ff831c0e7f251}{validateAndParsePrice}}(priceStr);}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00173}00173\ \ \ \ \ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_a37e994d91713930101c873838145f607}{validateName}}(name);}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00174}00174\ }
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00175}00175\ \ \ \ \ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1MainCourse}{MainCourse}}\ newMainCourse\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1MainCourse}{MainCourse}}(\textcolor{keyword}{null},\ name,\ price,\ \textcolor{keyword}{null});}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00176}00176\ \ \ \ \ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_a902133811640b9e88c78b3c4b1db5755}{client}}.createMainCourse(newMainCourse);}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00177}00177\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00178}00178\ }
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00186}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_ad96209da593f98e5c8f2205686e02c8f}{00186}}\ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_ad96209da593f98e5c8f2205686e02c8f}{updateMainCourse}}(Long\ \textcolor{keywordtype}{id},\ String\ name,\ String\ priceStr)\ \{}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00187}00187\ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keywordtype}{id}\ ==\ \textcolor{keyword}{null})\ \{}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00188}00188\ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ IllegalArgumentException(\textcolor{stringliteral}{"{}No\ main\ course\ selected!"{}});}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00189}00189\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00190}00190\ }
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00191}00191\ \ \ \ \ \textcolor{keywordtype}{int}\ price\ =\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_a1de5f344755fa2d4857ff831c0e7f251}{validateAndParsePrice}}(priceStr);}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00192}00192\ \ \ \ \ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_a37e994d91713930101c873838145f607}{validateName}}(name);}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00193}00193\ }
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00194}00194\ \ \ \ \ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1MainCourse}{MainCourse}}\ updatedMainCourse\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1MainCourse}{MainCourse}}(\textcolor{keywordtype}{id},\ name,\ price,\ \textcolor{keyword}{null});}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00195}00195\ \ \ \ \ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_a902133811640b9e88c78b3c4b1db5755}{client}}.updateMainCourse(\textcolor{keywordtype}{id},\ updatedMainCourse);}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00196}00196\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00197}00197\ }
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00198}00198\ \ \ \textcolor{comment}{//\ ====================\ VALIDATION\ HELPERS\ ====================}}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00199}00199\ }
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00206}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_a37e994d91713930101c873838145f607}{00206}}\ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_a37e994d91713930101c873838145f607}{validateName}}(String\ name)\ \{}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00207}00207\ \ \ \ \ \textcolor{keywordflow}{if}\ (name\ ==\ \textcolor{keyword}{null}\ ||\ name.trim().isEmpty())\ \{}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00208}00208\ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ IllegalArgumentException(\textcolor{stringliteral}{"{}Item\ name\ cannot\ be\ empty."{}});}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00209}00209\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00210}00210\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00211}00211\ }
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00221}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_a1de5f344755fa2d4857ff831c0e7f251}{00221}}\ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService_a1de5f344755fa2d4857ff831c0e7f251}{validateAndParsePrice}}(String\ priceStr)\ \{}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00222}00222\ \ \ \ \ \textcolor{keywordflow}{if}\ (priceStr\ ==\ \textcolor{keyword}{null}\ ||\ priceStr.trim().isEmpty())\ \{}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00223}00223\ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ IllegalArgumentException(\textcolor{stringliteral}{"{}Price\ cannot\ be\ empty."{}});}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00224}00224\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00225}00225\ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00226}00226\ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ price\ =\ Integer.parseInt(priceStr.trim());}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00227}00227\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (price\ <\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00228}00228\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ IllegalArgumentException(\textcolor{stringliteral}{"{}Price\ cannot\ be\ negative."{}});}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00229}00229\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00230}00230\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ price;}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00231}00231\ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (NumberFormatException\ e)\ \{}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00232}00232\ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ IllegalArgumentException(\textcolor{stringliteral}{"{}Price\ must\ be\ a\ valid\ whole\ number."{}});}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00233}00233\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00234}00234\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProductService_8java_source_l00235}00235\ \}}
+
+\end{DoxyCode}

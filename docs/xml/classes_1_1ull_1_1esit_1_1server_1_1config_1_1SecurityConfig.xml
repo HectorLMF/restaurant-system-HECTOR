@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="classes_1_1ull_1_1esit_1_1server_1_1config_1_1SecurityConfig" kind="class" language="Java" prot="public">
+    <compoundname>es::ull::esit::server::config::SecurityConfig</compoundname>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1server_1_1config_1_1SecurityConfig_1abcf9b5bf545d58b3d16662c8013f2e4d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>PasswordEncoder</type>
+        <definition>PasswordEncoder es.ull.esit.server.config.SecurityConfig.passwordEncoder</definition>
+        <argsstring>()</argsstring>
+        <name>passwordEncoder</name>
+        <qualifiedname>es.ull.esit.server.config.SecurityConfig.passwordEncoder</qualifiedname>
+        <briefdescription>
+<para>Creates a password encoder using BCrypt hashing algorithm. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>[PasswordEncoder] The BCrypt-based password encoder. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="server/src/main/java/es/ull/esit/server/config/SecurityConfig.java" line="28" column="26" bodyfile="server/src/main/java/es/ull/esit/server/config/SecurityConfig.java" bodystart="28" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1server_1_1config_1_1SecurityConfig_1ac8225a2140cd0c437b221a12bf06ef0b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>SecurityFilterChain</type>
+        <definition>SecurityFilterChain es.ull.esit.server.config.SecurityConfig.filterChain</definition>
+        <argsstring>(HttpSecurity http)</argsstring>
+        <name>filterChain</name>
+        <qualifiedname>es.ull.esit.server.config.SecurityConfig.filterChain</qualifiedname>
+        <param>
+          <type>HttpSecurity</type>
+          <declname>http</declname>
+        </param>
+        <exceptions> throws Exception </exceptions>
+        <briefdescription>
+<para>Configures the HTTP security settings: </para>
+        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>Disables CSRF protection.</para>
+</listitem><listitem><para>Permits unauthenticated access to specified endpoints (currently all).</para>
+</listitem><listitem><para>Enables HTTP Basic auth (username and password in headers).</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>http</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[HttpSecurity] The HttpSecurity builder to define security policies. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>[SecurityFilterChain] The configured security filter chain. </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>Exception</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If an error occurs during configuration. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="server/src/main/java/es/ull/esit/server/config/SecurityConfig.java" line="45" column="30" bodyfile="server/src/main/java/es/ull/esit/server/config/SecurityConfig.java" bodystart="45" bodyend="58"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Spring Security configuration for the backend. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Defines:<itemizedlist>
+<listitem><para>Password encoder used for hashing passwords.</para>
+</listitem><listitem><para>HTTP endpoint security policies: all endpoints are currently open (no authentication required).</para>
+</listitem></itemizedlist>
+</para>
+<para>The login logic is handled manually in the AuthController. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>es.ull.esit.server.config.SecurityConfig</label>
+        <link refid="classes_1_1ull_1_1esit_1_1server_1_1config_1_1SecurityConfig"/>
+      </node>
+    </collaborationgraph>
+    <location file="server/src/main/java/es/ull/esit/server/config/SecurityConfig.java" line="20" column="7" bodyfile="server/src/main/java/es/ull/esit/server/config/SecurityConfig.java" bodystart="20" bodyend="59"/>
+    <listofallmembers>
+      <member refid="classes_1_1ull_1_1esit_1_1server_1_1config_1_1SecurityConfig_1ac8225a2140cd0c437b221a12bf06ef0b" prot="public" virt="non-virtual"><scope>es::ull::esit::server::config::SecurityConfig</scope><name>filterChain</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1server_1_1config_1_1SecurityConfig_1abcf9b5bf545d58b3d16662c8013f2e4d" prot="public" virt="non-virtual"><scope>es::ull::esit::server::config::SecurityConfig</scope><name>passwordEncoder</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="ApiClientException_8java" kind="file" language="Java">
+    <compoundname>ApiClientException.java</compoundname>
+    <innerclass refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClientException" prot="public">es::ull::esit::app::middleware::ApiClientException</innerclass>
+    <innernamespace refid="namespacees_1_1ull_1_1esit_1_1app_1_1middleware">es::ull::esit::app::middleware</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">package<sp/></highlight><highlight class="normal">es.ull.esit.app.middleware;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClientException" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClientException_1ac45b204afa4f0882c2518988f4583293" kindref="member">ApiClientException</ref><sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/>RuntimeException<sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClientException_1ac45b204afa4f0882c2518988f4583293" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClientException_1ac45b204afa4f0882c2518988f4583293" kindref="member">ApiClientException</ref>(String<sp/>message)<sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>super(message);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClientException_1a80b3591890716a1420e380fe648a0d68" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClientException_1a80b3591890716a1420e380fe648a0d68" kindref="member">ApiClientException</ref>(String<sp/>message,<sp/>Throwable<sp/>cause)<sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>super(message,<sp/>cause);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/main/java/es/ull/esit/app/middleware/ApiClientException.java"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,857 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin" kind="class" language="Java" prot="public">
+    <compoundname>es::ull::esit::app::CashierLogin</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">javax.swing.JFrame</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1ace25578efcde1a57e627c545ded014ac" prot="private" static="no" mutable="no">
+        <type>final transient <ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ReportService" kindref="compound">ReportService</ref></type>
+        <definition>final transient ReportService es.ull.esit.app.CashierLogin.reportService</definition>
+        <argsstring></argsstring>
+        <name>reportService</name>
+        <qualifiedname>es.ull.esit.app.CashierLogin.reportService</qualifiedname>
+        <briefdescription>
+<para>Service used to retrieve reports and basic status from the backend. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/CashierLogin.java" line="30" column="41" bodyfile="src/main/java/es/ull/esit/app/CashierLogin.java" bodystart="30" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1adea5eba5f62bdb764b53ef64b5290b83" compoundref="CashierLogin_8java" startline="225" endline="239">es.ull.esit.app.CashierLogin.jButton1ActionPerformed</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a6f20e99a5643d106cbcbc1ce5eb88305" compoundref="CashierLogin_8java" startline="272" endline="287">es.ull.esit.app.CashierLogin.jButton2ActionPerformed</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a369eac151392663e312f31a59c1ad9ba" prot="private" static="no" mutable="no">
+        <type>javax.swing.JButton</type>
+        <definition>javax.swing.JButton es.ull.esit.app.CashierLogin.jButton1</definition>
+        <argsstring></argsstring>
+        <name>jButton1</name>
+        <qualifiedname>es.ull.esit.app.CashierLogin.jButton1</qualifiedname>
+        <briefdescription>
+<para>Button that opens the &quot;About us&quot; information window. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/CashierLogin.java" line="476" column="29" bodyfile="src/main/java/es/ull/esit/app/CashierLogin.java" bodystart="476" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a767a95a563bcc206253c30327ad64a3a" compoundref="CashierLogin_8java" startline="372" endline="470">es.ull.esit.app.CashierLogin.initComponents</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a7acdcb030b3535089722286c182dfd1e" prot="private" static="no" mutable="no">
+        <type>javax.swing.JButton</type>
+        <definition>javax.swing.JButton es.ull.esit.app.CashierLogin.jButton2</definition>
+        <argsstring></argsstring>
+        <name>jButton2</name>
+        <qualifiedname>es.ull.esit.app.CashierLogin.jButton2</qualifiedname>
+        <briefdescription>
+<para>Button that opens the general menu window (Frame1). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/CashierLogin.java" line="478" column="29" bodyfile="src/main/java/es/ull/esit/app/CashierLogin.java" bodystart="478" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a767a95a563bcc206253c30327ad64a3a" compoundref="CashierLogin_8java" startline="372" endline="470">es.ull.esit.app.CashierLogin.initComponents</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a80c23789d6733f8dcb5f8dae9e03ccf1" prot="private" static="no" mutable="no">
+        <type>javax.swing.JButton</type>
+        <definition>javax.swing.JButton es.ull.esit.app.CashierLogin.jButton3</definition>
+        <argsstring></argsstring>
+        <name>jButton3</name>
+        <qualifiedname>es.ull.esit.app.CashierLogin.jButton3</qualifiedname>
+        <briefdescription>
+<para>Button used to log out and return to the login screen. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/CashierLogin.java" line="480" column="29" bodyfile="src/main/java/es/ull/esit/app/CashierLogin.java" bodystart="480" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a767a95a563bcc206253c30327ad64a3a" compoundref="CashierLogin_8java" startline="372" endline="470">es.ull.esit.app.CashierLogin.initComponents</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a2aa67142f28eff4dd6c0c0c9d67e3933" prot="private" static="no" mutable="no">
+        <type>javax.swing.JLabel</type>
+        <definition>javax.swing.JLabel es.ull.esit.app.CashierLogin.jLabel1</definition>
+        <argsstring></argsstring>
+        <name>jLabel1</name>
+        <qualifiedname>es.ull.esit.app.CashierLogin.jLabel1</qualifiedname>
+        <briefdescription>
+<para>Label that displays the logo or application image. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/CashierLogin.java" line="482" column="28" bodyfile="src/main/java/es/ull/esit/app/CashierLogin.java" bodystart="482" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a767a95a563bcc206253c30327ad64a3a" compoundref="CashierLogin_8java" startline="372" endline="470">es.ull.esit.app.CashierLogin.initComponents</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1ad6bd4fd7b3ec3e502573dd69eb630160" prot="private" static="no" mutable="no">
+        <type>javax.swing.JPanel</type>
+        <definition>javax.swing.JPanel es.ull.esit.app.CashierLogin.jPanel1</definition>
+        <argsstring></argsstring>
+        <name>jPanel1</name>
+        <qualifiedname>es.ull.esit.app.CashierLogin.jPanel1</qualifiedname>
+        <briefdescription>
+<para>Main container panel for all UI elements. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/CashierLogin.java" line="484" column="28" bodyfile="src/main/java/es/ull/esit/app/CashierLogin.java" bodystart="484" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a767a95a563bcc206253c30327ad64a3a" compoundref="CashierLogin_8java" startline="372" endline="470">es.ull.esit.app.CashierLogin.initComponents</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a14fffb65f1e5115c8892ab25ed7b0728" prot="private" static="no" mutable="no">
+        <type>javax.swing.JLabel</type>
+        <definition>javax.swing.JLabel es.ull.esit.app.CashierLogin.welcomeTxt</definition>
+        <argsstring></argsstring>
+        <name>welcomeTxt</name>
+        <qualifiedname>es.ull.esit.app.CashierLogin.welcomeTxt</qualifiedname>
+        <briefdescription>
+<para>Label that displays the welcome message for the cashier. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/CashierLogin.java" line="486" column="28" bodyfile="src/main/java/es/ull/esit/app/CashierLogin.java" bodystart="486" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a767a95a563bcc206253c30327ad64a3a" compoundref="CashierLogin_8java" startline="372" endline="470">es.ull.esit.app.CashierLogin.initComponents</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1afe5b0c7e3607f464f16fddfa6ad4e3cc" compoundref="CashierLogin_8java" startline="201" endline="207">es.ull.esit.app.CashierLogin.updateWelcomeMessage</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a862449f716a5f89d68717b147336832d" prot="private" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String es.ull.esit.app.CashierLogin.PRIMARY_FONT</definition>
+        <argsstring></argsstring>
+        <name>PRIMARY_FONT</name>
+        <qualifiedname>es.ull.esit.app.CashierLogin.PRIMARY_FONT</qualifiedname>
+        <initializer>= &quot;Yu Gothic UI&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/CashierLogin.java" line="32" column="31" bodyfile="src/main/java/es/ull/esit/app/CashierLogin.java" bodystart="32" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a767a95a563bcc206253c30327ad64a3a" compoundref="CashierLogin_8java" startline="372" endline="470">es.ull.esit.app.CashierLogin.initComponents</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a83ef971fbc5b211556bc10abb5af5c72" prot="private" static="yes" mutable="no">
+        <type>final Logger</type>
+        <definition>final Logger es.ull.esit.app.CashierLogin.LOGGER</definition>
+        <argsstring></argsstring>
+        <name>LOGGER</name>
+        <qualifiedname>es.ull.esit.app.CashierLogin.LOGGER</qualifiedname>
+        <initializer>= LoggerFactory.getLogger(CashierLogin.class)</initializer>
+        <briefdescription>
+<para>Logger instance for logging events and errors. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/CashierLogin.java" line="35" column="31" bodyfile="src/main/java/es/ull/esit/app/CashierLogin.java" bodystart="35" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1adea5eba5f62bdb764b53ef64b5290b83" compoundref="CashierLogin_8java" startline="225" endline="239">es.ull.esit.app.CashierLogin.jButton1ActionPerformed</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a6f20e99a5643d106cbcbc1ce5eb88305" compoundref="CashierLogin_8java" startline="272" endline="287">es.ull.esit.app.CashierLogin.jButton2ActionPerformed</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a40ba5c1ff3213b7d84af518ab78c3cc5" prot="private" static="yes" mutable="no">
+        <type>Supplier&lt;? extends javax.swing.JFrame &gt;</type>
+        <definition>Supplier&lt;? extends javax.swing.JFrame&gt; es.ull.esit.app.CashierLogin.cashierSupplier</definition>
+        <argsstring></argsstring>
+        <name>cashierSupplier</name>
+        <qualifiedname>es.ull.esit.app.CashierLogin.cashierSupplier</qualifiedname>
+        <initializer>= () -&gt; new <ref refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a62b3b3100ad4597112efbce5fba1dd55" kindref="member">CashierLogin</ref>()</initializer>
+        <briefdescription>
+<para>Supplier for the top-level cashier window used by <ref refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a5578e12e05cc3e33d16e2b7aec5e3f5b" kindref="member">main()</ref>; tests can override it. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/CashierLogin.java" line="97" column="27" bodyfile="src/main/java/es/ull/esit/app/CashierLogin.java" bodystart="97" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="package-attrib">
+      <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a4589ac022e8ba1f86f89e0165172059c" prot="package" static="no" mutable="no">
+        <type>Supplier&lt;? extends javax.swing.JFrame &gt;</type>
+        <definition>Supplier&lt;? extends javax.swing.JFrame&gt; es.ull.esit.app.CashierLogin.aboutUsSupplier</definition>
+        <argsstring></argsstring>
+        <name>aboutUsSupplier</name>
+        <qualifiedname>es.ull.esit.app.CashierLogin.aboutUsSupplier</qualifiedname>
+        <initializer>= () -&gt; new <ref refid="classes_1_1ull_1_1esit_1_1app_1_1AboutUs" kindref="compound">AboutUs</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/CashierLogin.java" line="92" column="12" bodyfile="src/main/java/es/ull/esit/app/CashierLogin.java" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a6d30ac3ec703f72c6fb10d7fa3b651a3" prot="package" static="no" mutable="no">
+        <type>Supplier&lt;? extends javax.swing.JFrame &gt;</type>
+        <definition>Supplier&lt;? extends javax.swing.JFrame&gt; es.ull.esit.app.CashierLogin.orderSupplier</definition>
+        <argsstring></argsstring>
+        <name>orderSupplier</name>
+        <qualifiedname>es.ull.esit.app.CashierLogin.orderSupplier</qualifiedname>
+        <initializer>= () -&gt; new <ref refid="classes_1_1ull_1_1esit_1_1app_1_1Order" kindref="compound">Order</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/CashierLogin.java" line="93" column="12" bodyfile="src/main/java/es/ull/esit/app/CashierLogin.java" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a2b16a7c6da026927ea77c2d978991124" prot="package" static="no" mutable="no">
+        <type>Supplier&lt;? extends javax.swing.JFrame &gt;</type>
+        <definition>Supplier&lt;? extends javax.swing.JFrame&gt; es.ull.esit.app.CashierLogin.loginSupplier</definition>
+        <argsstring></argsstring>
+        <name>loginSupplier</name>
+        <qualifiedname>es.ull.esit.app.CashierLogin.loginSupplier</qualifiedname>
+        <initializer>= () -&gt; new <ref refid="classes_1_1ull_1_1esit_1_1app_1_1Login" kindref="compound">Login</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/CashierLogin.java" line="94" column="12" bodyfile="src/main/java/es/ull/esit/app/CashierLogin.java" bodystart="94" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a62b3b3100ad4597112efbce5fba1dd55" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>es.ull.esit.app.CashierLogin.CashierLogin</definition>
+        <argsstring>()</argsstring>
+        <name>CashierLogin</name>
+        <qualifiedname>es.ull.esit.app.CashierLogin.CashierLogin</qualifiedname>
+        <briefdescription>
+<para>Default constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>   Creates a cashier window without a specific name in the welcome
+   message.
+   Internally delegates to the constructor that accepts a name.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/CashierLogin.java" line="44" column="10" bodyfile="src/main/java/es/ull/esit/app/CashierLogin.java" bodystart="44" bodyend="46"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a5578e12e05cc3e33d16e2b7aec5e3f5b" compoundref="CashierLogin_8java" startline="345" endline="359">es.ull.esit.app.CashierLogin.main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1ad04748dc9ea2238c7177eca6339c99cd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>es.ull.esit.app.CashierLogin.CashierLogin</definition>
+        <argsstring>(String name)</argsstring>
+        <name>CashierLogin</name>
+        <qualifiedname>es.ull.esit.app.CashierLogin.CashierLogin</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Constructor with cashier name. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>   Creates the cashier window, initializes the GUI, builds an
+   ApiClient pointing to the backend, creates a ReportService and
+   updates the welcome message using the cashier name.
+</verbatim></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[String] Name of the cashier returned by the backend (or null for a generic welcome message). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/CashierLogin.java" line="58" column="10" bodyfile="src/main/java/es/ull/esit/app/CashierLogin.java" bodystart="58" bodyend="65"/>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a767a95a563bcc206253c30327ad64a3a" compoundref="CashierLogin_8java" startline="372" endline="470">es.ull.esit.app.CashierLogin.initComponents</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1afe5b0c7e3607f464f16fddfa6ad4e3cc" compoundref="CashierLogin_8java" startline="201" endline="207">es.ull.esit.app.CashierLogin.updateWelcomeMessage</references>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="package-func">
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a14701d8b0d4aff2035eeb5331a9a2c3f" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>es.ull.esit.app.CashierLogin.CashierLogin</definition>
+        <argsstring>(ReportService reportService, String name, boolean startBackground)</argsstring>
+        <name>CashierLogin</name>
+        <qualifiedname>es.ull.esit.app.CashierLogin.CashierLogin</qualifiedname>
+        <param>
+          <type><ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ReportService" kindref="compound">ReportService</ref></type>
+          <declname>reportService</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>boolean</type>
+          <declname>startBackground</declname>
+        </param>
+        <briefdescription>
+<para>Package-private constructor used in tests to inject a stubbed <ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ReportService" kindref="compound">ReportService</ref> and optionally avoid starting background threads. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reportService</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>injected <ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ReportService" kindref="compound">ReportService</ref> (stub) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>cashier name to show in the welcome label </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>startBackground</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if true, behaviour mirrors default constructor </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/CashierLogin.java" line="75" column="3" bodyfile="src/main/java/es/ull/esit/app/CashierLogin.java" bodystart="75" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a83766909dfb664601ee633e98556a989" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void es.ull.esit.app.CashierLogin.setAboutUsSupplier</definition>
+        <argsstring>(Supplier&lt;? extends javax.swing.JFrame &gt; s)</argsstring>
+        <name>setAboutUsSupplier</name>
+        <qualifiedname>es.ull.esit.app.CashierLogin.setAboutUsSupplier</qualifiedname>
+        <param>
+          <type>Supplier&lt;? extends javax.swing.JFrame &gt;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Package-private setters used by tests to inject stub frames. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/CashierLogin.java" line="108" column="8" bodyfile="src/main/java/es/ull/esit/app/CashierLogin.java" bodystart="108" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a9d6c53305646f7188a5115afb7c18bed" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void es.ull.esit.app.CashierLogin.setOrderSupplier</definition>
+        <argsstring>(Supplier&lt;? extends javax.swing.JFrame &gt; s)</argsstring>
+        <name>setOrderSupplier</name>
+        <qualifiedname>es.ull.esit.app.CashierLogin.setOrderSupplier</qualifiedname>
+        <param>
+          <type>Supplier&lt;? extends javax.swing.JFrame &gt;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/CashierLogin.java" line="112" column="8" bodyfile="src/main/java/es/ull/esit/app/CashierLogin.java" bodystart="112" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1aab5f5c08eac23c0d8199e54992696200" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void es.ull.esit.app.CashierLogin.setLoginSupplier</definition>
+        <argsstring>(Supplier&lt;? extends javax.swing.JFrame &gt; s)</argsstring>
+        <name>setLoginSupplier</name>
+        <qualifiedname>es.ull.esit.app.CashierLogin.setLoginSupplier</qualifiedname>
+        <param>
+          <type>Supplier&lt;? extends javax.swing.JFrame &gt;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/CashierLogin.java" line="116" column="8" bodyfile="src/main/java/es/ull/esit/app/CashierLogin.java" bodystart="116" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a3883dde837fb2753f033251b2b995550" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void es.ull.esit.app.CashierLogin.aboutUsActionRun</definition>
+        <argsstring>()</argsstring>
+        <name>aboutUsActionRun</name>
+        <qualifiedname>es.ull.esit.app.CashierLogin.aboutUsActionRun</qualifiedname>
+        <briefdescription>
+<para>Synchronous variant used by tests that performs the same operations as the background runnable in jButton1ActionPerformed but executes in the current thread and uses the injected supplier for the <ref refid="classes_1_1ull_1_1esit_1_1app_1_1AboutUs" kindref="compound">AboutUs</ref> frame. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/CashierLogin.java" line="125" column="8" bodyfile="src/main/java/es/ull/esit/app/CashierLogin.java" bodystart="125" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a88e4e4b44affec13d7ddd6ff7b385e35" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void es.ull.esit.app.CashierLogin.menuActionRun</definition>
+        <argsstring>()</argsstring>
+        <name>menuActionRun</name>
+        <qualifiedname>es.ull.esit.app.CashierLogin.menuActionRun</qualifiedname>
+        <briefdescription>
+<para>Synchronous variant used by tests that mirrors the background runnable in jButton2ActionPerformed and uses the injected supplier for the <ref refid="classes_1_1ull_1_1esit_1_1app_1_1Order" kindref="compound">Order</ref> frame. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/CashierLogin.java" line="142" column="8" bodyfile="src/main/java/es/ull/esit/app/CashierLogin.java" bodystart="142" bodyend="152"/>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a61449dda924581c9419dbe388db37b3c" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void es.ull.esit.app.CashierLogin.logoutActionRun</definition>
+        <argsstring>()</argsstring>
+        <name>logoutActionRun</name>
+        <qualifiedname>es.ull.esit.app.CashierLogin.logoutActionRun</qualifiedname>
+        <briefdescription>
+<para>Synchronous variant used by tests that mirrors jButton3ActionPerformed and uses the injected supplier for the <ref refid="classes_1_1ull_1_1esit_1_1app_1_1Login" kindref="compound">Login</ref> frame. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/CashierLogin.java" line="158" column="8" bodyfile="src/main/java/es/ull/esit/app/CashierLogin.java" bodystart="158" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1ae4ca2745e24c51f4f492da462152f1d9" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void es.ull.esit.app.CashierLogin.testOnlyCoverageHelper</definition>
+        <argsstring>()</argsstring>
+        <name>testOnlyCoverageHelper</name>
+        <qualifiedname>es.ull.esit.app.CashierLogin.testOnlyCoverageHelper</qualifiedname>
+        <briefdescription>
+<para>Small helper method that exercises a few simple branches and statements. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is intentionally package-private and kept minimal; it exists to help unit tests cover trivial lines in this class (no production logic is changed). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/CashierLogin.java" line="170" column="8" bodyfile="src/main/java/es/ull/esit/app/CashierLogin.java" bodystart="170" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a4defbf8fc5858a39d00a526234f28b08" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int es.ull.esit.app.CashierLogin.aboutUsActionSync</definition>
+        <argsstring>()</argsstring>
+        <name>aboutUsActionSync</name>
+        <qualifiedname>es.ull.esit.app.CashierLogin.aboutUsActionSync</qualifiedname>
+        <briefdescription>
+<para>Synchronous variant used by tests: calls <ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ReportService_1aca3b9e34ecdb98209f034cdabf5722aa" kindref="member">ReportService.getCashierInfo()</ref> and returns the number of cashiers, or -1 if an exception occurs. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/CashierLogin.java" line="245" column="7" bodyfile="src/main/java/es/ull/esit/app/CashierLogin.java" bodystart="245" bodyend="253"/>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a5dfa19da9cc1cd1859f7271cf015034b" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String es.ull.esit.app.CashierLogin.menuActionSync</definition>
+        <argsstring>()</argsstring>
+        <name>menuActionSync</name>
+        <qualifiedname>es.ull.esit.app.CashierLogin.menuActionSync</qualifiedname>
+        <briefdescription>
+<para>Synchronous variant used by tests: calls <ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ReportService_1a2314b27508949bbc494f3b6209fb866a" kindref="member">ReportService.checkMenuStatus()</ref> and returns the status string, or null if an exception occurs. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/CashierLogin.java" line="293" column="10" bodyfile="src/main/java/es/ull/esit/app/CashierLogin.java" bodystart="293" bodyend="300"/>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a397361e2bf8ca8d5280840e5b25c1be8" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean es.ull.esit.app.CashierLogin.logoutActionSync</definition>
+        <argsstring>()</argsstring>
+        <name>logoutActionSync</name>
+        <qualifiedname>es.ull.esit.app.CashierLogin.logoutActionSync</qualifiedname>
+        <briefdescription>
+<para>Synchronous logout action for tests. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Does not open windows; returns true to indicate the logout flow would proceed. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/CashierLogin.java" line="324" column="11" bodyfile="src/main/java/es/ull/esit/app/CashierLogin.java" bodystart="324" bodyend="328"/>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a6869762a56f288a46d1c1bcdf241067d" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String es.ull.esit.app.CashierLogin.getWelcomeText</definition>
+        <argsstring>()</argsstring>
+        <name>getWelcomeText</name>
+        <qualifiedname>es.ull.esit.app.CashierLogin.getWelcomeText</qualifiedname>
+        <briefdescription>
+<para>Package-private getter for tests to read the welcome label text. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/CashierLogin.java" line="331" column="10" bodyfile="src/main/java/es/ull/esit/app/CashierLogin.java" bodystart="331" bodyend="333"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="package-static-func">
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a47f4a5809be89e268d7973b7f6b1045d" prot="package" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void es.ull.esit.app.CashierLogin.setCashierSupplier</definition>
+        <argsstring>(Supplier&lt;? extends javax.swing.JFrame &gt; s)</argsstring>
+        <name>setCashierSupplier</name>
+        <qualifiedname>es.ull.esit.app.CashierLogin.setCashierSupplier</qualifiedname>
+        <param>
+          <type>Supplier&lt;? extends javax.swing.JFrame &gt;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/CashierLogin.java" line="99" column="15" bodyfile="src/main/java/es/ull/esit/app/CashierLogin.java" bodystart="99" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1aa85bda8ed1b7c7238107f4f3d3164f9e" prot="package" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Supplier&lt;? extends javax.swing.JFrame &gt;</type>
+        <definition>static Supplier&lt;? extends javax.swing.JFrame &gt; es.ull.esit.app.CashierLogin.getCashierSupplier</definition>
+        <argsstring>()</argsstring>
+        <name>getCashierSupplier</name>
+        <qualifiedname>es.ull.esit.app.CashierLogin.getCashierSupplier</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/CashierLogin.java" line="103" column="19" bodyfile="src/main/java/es/ull/esit/app/CashierLogin.java" bodystart="103" bodyend="105"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1afe5b0c7e3607f464f16fddfa6ad4e3cc" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void es.ull.esit.app.CashierLogin.updateWelcomeMessage</definition>
+        <argsstring>(String name)</argsstring>
+        <name>updateWelcomeMessage</name>
+        <qualifiedname>es.ull.esit.app.CashierLogin.updateWelcomeMessage</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Updates the welcome message label. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>   If the name is null or empty, the label shows &quot;Welcome Cashier&quot;.
+   Otherwise the label shows &quot;Welcome &quot; followed by the given name.
+</verbatim></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[String] Cashier name or null. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/CashierLogin.java" line="201" column="16" bodyfile="src/main/java/es/ull/esit/app/CashierLogin.java" bodystart="201" bodyend="207"/>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a14fffb65f1e5115c8892ab25ed7b0728" compoundref="CashierLogin_8java" startline="486">es.ull.esit.app.CashierLogin.welcomeTxt</references>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1ad04748dc9ea2238c7177eca6339c99cd" compoundref="CashierLogin_8java" startline="58" endline="65">es.ull.esit.app.CashierLogin.CashierLogin</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1adea5eba5f62bdb764b53ef64b5290b83" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void es.ull.esit.app.CashierLogin.jButton1ActionPerformed</definition>
+        <argsstring>(java.awt.event.ActionEvent evt)</argsstring>
+        <name>jButton1ActionPerformed</name>
+        <qualifiedname>es.ull.esit.app.CashierLogin.jButton1ActionPerformed</qualifiedname>
+        <param>
+          <type>java.awt.event.ActionEvent</type>
+          <declname>evt</declname>
+        </param>
+        <briefdescription>
+<para>Action handler for the &quot;About us&quot; button. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>   Action steps:
+   - Starts a background thread.
+   - Uses ReportService.getCashierInfo() to retrieve cashier data from
+   the backend and logs the number of cashiers found.
+   - Opens the Info window in the Event Dispatch Thread.
+   - Closes the current Cashier window.
+
+   Any error retrieving data is logged to the standard error stream
+   but does not prevent opening the Info window.
+</verbatim></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>evt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[java.awt.event.ActionEvent] Action event triggered by button click. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/CashierLogin.java" line="225" column="16" bodyfile="src/main/java/es/ull/esit/app/CashierLogin.java" bodystart="225" bodyend="239"/>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a83ef971fbc5b211556bc10abb5af5c72" compoundref="CashierLogin_8java" startline="35">es.ull.esit.app.CashierLogin.LOGGER</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1ace25578efcde1a57e627c545ded014ac" compoundref="CashierLogin_8java" startline="30">es.ull.esit.app.CashierLogin.reportService</references>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a6f20e99a5643d106cbcbc1ce5eb88305" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void es.ull.esit.app.CashierLogin.jButton2ActionPerformed</definition>
+        <argsstring>(java.awt.event.ActionEvent evt)</argsstring>
+        <name>jButton2ActionPerformed</name>
+        <qualifiedname>es.ull.esit.app.CashierLogin.jButton2ActionPerformed</qualifiedname>
+        <param>
+          <type>java.awt.event.ActionEvent</type>
+          <declname>evt</declname>
+        </param>
+        <briefdescription>
+<para>Action handler for the &quot;Menu&quot; button. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>   Action steps:
+   - Starts a background thread.
+   - Uses ReportService.checkMenuStatus() to verify communication
+   with the backend and logs the returned status.
+   - Opens the general menu window (Frame1) in the Event Dispatch
+   Thread.
+   - Closes the current Cashier window.
+
+   Any error while checking the status is logged to the standard
+   error stream but does not prevent opening the menu window.
+</verbatim></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>evt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[java.awt.event.ActionEvent] Action event triggered by button click. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/CashierLogin.java" line="272" column="16" bodyfile="src/main/java/es/ull/esit/app/CashierLogin.java" bodystart="272" bodyend="287"/>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a83ef971fbc5b211556bc10abb5af5c72" compoundref="CashierLogin_8java" startline="35">es.ull.esit.app.CashierLogin.LOGGER</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1ace25578efcde1a57e627c545ded014ac" compoundref="CashierLogin_8java" startline="30">es.ull.esit.app.CashierLogin.reportService</references>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1acfe03f20ce390b32a22166f6a2c7e44a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void es.ull.esit.app.CashierLogin.jButton3ActionPerformed</definition>
+        <argsstring>(java.awt.event.ActionEvent evt)</argsstring>
+        <name>jButton3ActionPerformed</name>
+        <qualifiedname>es.ull.esit.app.CashierLogin.jButton3ActionPerformed</qualifiedname>
+        <param>
+          <type>java.awt.event.ActionEvent</type>
+          <declname>evt</declname>
+        </param>
+        <briefdescription>
+<para>Action handler for the &quot;LogOut&quot; button. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>   Action steps:
+   - Opens the Login window.
+   - Closes the current Cashier window.
+
+   Any server-side logout or token invalidation, if needed, should be
+   handled outside this class.
+</verbatim></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>evt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[java.awt.event.ActionEvent] Action event triggered by button click. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/CashierLogin.java" line="315" column="16" bodyfile="src/main/java/es/ull/esit/app/CashierLogin.java" bodystart="315" bodyend="318"/>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a767a95a563bcc206253c30327ad64a3a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void es.ull.esit.app.CashierLogin.initComponents</definition>
+        <argsstring>()</argsstring>
+        <name>initComponents</name>
+        <qualifiedname>es.ull.esit.app.CashierLogin.initComponents</qualifiedname>
+        <briefdescription>
+<para>Initializes GUI components. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>   Generated by the Form Editor: do not modify.
+   Sets up the welcome label, logo image, buttons for &quot;About us&quot;, &quot;Menu&quot;,
+   &quot;LogOut&quot;,
+   and the layout and configuration of the window.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/CashierLogin.java" line="372" column="16" bodyfile="src/main/java/es/ull/esit/app/CashierLogin.java" bodystart="372" bodyend="470"/>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a767a95a563bcc206253c30327ad64a3a" compoundref="CashierLogin_8java" startline="372" endline="470">es.ull.esit.app.CashierLogin.initComponents</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a369eac151392663e312f31a59c1ad9ba" compoundref="CashierLogin_8java" startline="476">es.ull.esit.app.CashierLogin.jButton1</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a7acdcb030b3535089722286c182dfd1e" compoundref="CashierLogin_8java" startline="478">es.ull.esit.app.CashierLogin.jButton2</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a80c23789d6733f8dcb5f8dae9e03ccf1" compoundref="CashierLogin_8java" startline="480">es.ull.esit.app.CashierLogin.jButton3</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a2aa67142f28eff4dd6c0c0c9d67e3933" compoundref="CashierLogin_8java" startline="482">es.ull.esit.app.CashierLogin.jLabel1</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1ad6bd4fd7b3ec3e502573dd69eb630160" compoundref="CashierLogin_8java" startline="484">es.ull.esit.app.CashierLogin.jPanel1</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a862449f716a5f89d68717b147336832d" compoundref="CashierLogin_8java" startline="32">es.ull.esit.app.CashierLogin.PRIMARY_FONT</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a14fffb65f1e5115c8892ab25ed7b0728" compoundref="CashierLogin_8java" startline="486">es.ull.esit.app.CashierLogin.welcomeTxt</references>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1ad04748dc9ea2238c7177eca6339c99cd" compoundref="CashierLogin_8java" startline="58" endline="65">es.ull.esit.app.CashierLogin.CashierLogin</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a767a95a563bcc206253c30327ad64a3a" compoundref="CashierLogin_8java" startline="372" endline="470">es.ull.esit.app.CashierLogin.initComponents</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a5578e12e05cc3e33d16e2b7aec5e3f5b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void es.ull.esit.app.CashierLogin.main</definition>
+        <argsstring>(String[] args)</argsstring>
+        <name>main</name>
+        <qualifiedname>es.ull.esit.app.CashierLogin.main</qualifiedname>
+        <param>
+          <type>String[]</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+<para>Standalone entry point for testing the Cashier window. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>   Sets the Nimbus look and feel if available and shows an instance
+   of Cashier without a specific cashier name. In the normal
+   application flow this window is started from the Login class after
+   a successful cashier login.
+</verbatim></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[String[]] Command line arguments (not used). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/CashierLogin.java" line="345" column="22" bodyfile="src/main/java/es/ull/esit/app/CashierLogin.java" bodystart="345" bodyend="359"/>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a62b3b3100ad4597112efbce5fba1dd55" compoundref="CashierLogin_8java" startline="44" endline="46">es.ull.esit.app.CashierLogin.CashierLogin</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="classes_1_1ull_1_1esit_1_1app_1_1Login" kindref="compound">Login</ref> window for authenticating cashiers. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>   It is displayed after a successful login with role CASHIER.
+   Shows a Swing form that lets cashiers:
+   - access to the general menu window used to register orders.
+   - access to the &quot;About us&quot; information window.
+   - log out and return to the login window.
+
+   Additionally, some actions perform background calls to the backend
+   using ReportService to:
+   - retrieve cashier information.
+   - check the menu or system status.
+</verbatim> </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>es.ull.esit.app.CashierLogin</label>
+        <link refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>javax.swing.JFrame</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>es.ull.esit.app.CashierLogin</label>
+        <link refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-reportService</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>es.ull.esit.app.middleware.ApiClient</label>
+        <link refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient"/>
+      </node>
+      <node id="3">
+        <label>es.ull.esit.app.middleware.service.ReportService</label>
+        <link refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ReportService"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-client</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>javax.swing.JFrame</label>
+      </node>
+    </collaborationgraph>
+    <location file="src/main/java/es/ull/esit/app/CashierLogin.java" line="27" column="7" bodyfile="src/main/java/es/ull/esit/app/CashierLogin.java" bodystart="27" bodyend="488"/>
+    <listofallmembers>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a3883dde837fb2753f033251b2b995550" prot="package" virt="non-virtual"><scope>es::ull::esit::app::CashierLogin</scope><name>aboutUsActionRun</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a4defbf8fc5858a39d00a526234f28b08" prot="package" virt="non-virtual"><scope>es::ull::esit::app::CashierLogin</scope><name>aboutUsActionSync</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a4589ac022e8ba1f86f89e0165172059c" prot="package" virt="non-virtual"><scope>es::ull::esit::app::CashierLogin</scope><name>aboutUsSupplier</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a62b3b3100ad4597112efbce5fba1dd55" prot="public" virt="non-virtual"><scope>es::ull::esit::app::CashierLogin</scope><name>CashierLogin</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1ad04748dc9ea2238c7177eca6339c99cd" prot="public" virt="non-virtual"><scope>es::ull::esit::app::CashierLogin</scope><name>CashierLogin</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a14701d8b0d4aff2035eeb5331a9a2c3f" prot="package" virt="non-virtual"><scope>es::ull::esit::app::CashierLogin</scope><name>CashierLogin</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a40ba5c1ff3213b7d84af518ab78c3cc5" prot="private" virt="non-virtual"><scope>es::ull::esit::app::CashierLogin</scope><name>cashierSupplier</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1aa85bda8ed1b7c7238107f4f3d3164f9e" prot="package" virt="non-virtual"><scope>es::ull::esit::app::CashierLogin</scope><name>getCashierSupplier</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a6869762a56f288a46d1c1bcdf241067d" prot="package" virt="non-virtual"><scope>es::ull::esit::app::CashierLogin</scope><name>getWelcomeText</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a767a95a563bcc206253c30327ad64a3a" prot="private" virt="non-virtual"><scope>es::ull::esit::app::CashierLogin</scope><name>initComponents</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a369eac151392663e312f31a59c1ad9ba" prot="private" virt="non-virtual"><scope>es::ull::esit::app::CashierLogin</scope><name>jButton1</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1adea5eba5f62bdb764b53ef64b5290b83" prot="private" virt="non-virtual"><scope>es::ull::esit::app::CashierLogin</scope><name>jButton1ActionPerformed</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a7acdcb030b3535089722286c182dfd1e" prot="private" virt="non-virtual"><scope>es::ull::esit::app::CashierLogin</scope><name>jButton2</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a6f20e99a5643d106cbcbc1ce5eb88305" prot="private" virt="non-virtual"><scope>es::ull::esit::app::CashierLogin</scope><name>jButton2ActionPerformed</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a80c23789d6733f8dcb5f8dae9e03ccf1" prot="private" virt="non-virtual"><scope>es::ull::esit::app::CashierLogin</scope><name>jButton3</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1acfe03f20ce390b32a22166f6a2c7e44a" prot="private" virt="non-virtual"><scope>es::ull::esit::app::CashierLogin</scope><name>jButton3ActionPerformed</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a2aa67142f28eff4dd6c0c0c9d67e3933" prot="private" virt="non-virtual"><scope>es::ull::esit::app::CashierLogin</scope><name>jLabel1</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1ad6bd4fd7b3ec3e502573dd69eb630160" prot="private" virt="non-virtual"><scope>es::ull::esit::app::CashierLogin</scope><name>jPanel1</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a83ef971fbc5b211556bc10abb5af5c72" prot="private" virt="non-virtual"><scope>es::ull::esit::app::CashierLogin</scope><name>LOGGER</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a2b16a7c6da026927ea77c2d978991124" prot="package" virt="non-virtual"><scope>es::ull::esit::app::CashierLogin</scope><name>loginSupplier</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a61449dda924581c9419dbe388db37b3c" prot="package" virt="non-virtual"><scope>es::ull::esit::app::CashierLogin</scope><name>logoutActionRun</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a397361e2bf8ca8d5280840e5b25c1be8" prot="package" virt="non-virtual"><scope>es::ull::esit::app::CashierLogin</scope><name>logoutActionSync</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a5578e12e05cc3e33d16e2b7aec5e3f5b" prot="public" virt="non-virtual"><scope>es::ull::esit::app::CashierLogin</scope><name>main</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a88e4e4b44affec13d7ddd6ff7b385e35" prot="package" virt="non-virtual"><scope>es::ull::esit::app::CashierLogin</scope><name>menuActionRun</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a5dfa19da9cc1cd1859f7271cf015034b" prot="package" virt="non-virtual"><scope>es::ull::esit::app::CashierLogin</scope><name>menuActionSync</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a6d30ac3ec703f72c6fb10d7fa3b651a3" prot="package" virt="non-virtual"><scope>es::ull::esit::app::CashierLogin</scope><name>orderSupplier</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a862449f716a5f89d68717b147336832d" prot="private" virt="non-virtual"><scope>es::ull::esit::app::CashierLogin</scope><name>PRIMARY_FONT</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1ace25578efcde1a57e627c545ded014ac" prot="private" virt="non-virtual"><scope>es::ull::esit::app::CashierLogin</scope><name>reportService</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a83766909dfb664601ee633e98556a989" prot="package" virt="non-virtual"><scope>es::ull::esit::app::CashierLogin</scope><name>setAboutUsSupplier</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a47f4a5809be89e268d7973b7f6b1045d" prot="package" virt="non-virtual"><scope>es::ull::esit::app::CashierLogin</scope><name>setCashierSupplier</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1aab5f5c08eac23c0d8199e54992696200" prot="package" virt="non-virtual"><scope>es::ull::esit::app::CashierLogin</scope><name>setLoginSupplier</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a9d6c53305646f7188a5115afb7c18bed" prot="package" virt="non-virtual"><scope>es::ull::esit::app::CashierLogin</scope><name>setOrderSupplier</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1ae4ca2745e24c51f4f492da462152f1d9" prot="package" virt="non-virtual"><scope>es::ull::esit::app::CashierLogin</scope><name>testOnlyCoverageHelper</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1afe5b0c7e3607f464f16fddfa6ad4e3cc" prot="private" virt="non-virtual"><scope>es::ull::esit::app::CashierLogin</scope><name>updateWelcomeMessage</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1CashierLogin_1a14fffb65f1e5115c8892ab25ed7b0728" prot="private" virt="non-virtual"><scope>es::ull::esit::app::CashierLogin</scope><name>welcomeTxt</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

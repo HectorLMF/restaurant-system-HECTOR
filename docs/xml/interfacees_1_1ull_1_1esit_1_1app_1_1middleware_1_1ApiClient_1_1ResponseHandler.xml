@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="interfacees_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_1_1ResponseHandler" kind="interface" language="Java" prot="public">
+    <compoundname>es::ull::esit::app::middleware::ApiClient::ResponseHandler</compoundname>
+    <templateparamlist>
+      <param>
+        <type>R</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="interfacees_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_1_1ResponseHandler_1a878768786979003858d2c5a3f99ad37f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>R</type>
+        <definition>R es.ull.esit.app.middleware.ApiClient.ResponseHandler&lt; R &gt;.handle</definition>
+        <argsstring>(int status, String body)</argsstring>
+        <name>handle</name>
+        <qualifiedname>es.ull.esit.app.middleware.ApiClient.ResponseHandler.handle</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>status</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>body</declname>
+        </param>
+        <exceptions> throws IOException</exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/middleware/ApiClient.java" line="126" column="7"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Functional interface for processing HTTP responses and possibly throwing IOException from JSON parsing. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>es.ull.esit.app.middleware.ApiClient.ResponseHandler&lt; R &gt;</label>
+        <link refid="interfacees_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_1_1ResponseHandler"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/main/java/es/ull/esit/app/middleware/ApiClient.java" line="125" column="21" bodyfile="src/main/java/es/ull/esit/app/middleware/ApiClient.java" bodystart="125" bodyend="127"/>
+    <listofallmembers>
+      <member refid="interfacees_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_1_1ResponseHandler_1a878768786979003858d2c5a3f99ad37f" prot="public" virt="non-virtual"><scope>es::ull::esit::app::middleware::ApiClient::ResponseHandler</scope><name>handle</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

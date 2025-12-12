@@ -1,0 +1,241 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1DrinkController" kind="class" language="Java" prot="public">
+    <compoundname>es::ull::esit::server::controller::DrinkController</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1DrinkController_1a99720b1a438eb2dbfb14f9985b9d6656" prot="private" static="no" mutable="no">
+        <type><ref refid="interfacees_1_1ull_1_1esit_1_1server_1_1repo_1_1DrinkRepository" kindref="compound">DrinkRepository</ref></type>
+        <definition>DrinkRepository es.ull.esit.server.controller.DrinkController.drinkRepository</definition>
+        <argsstring></argsstring>
+        <name>drinkRepository</name>
+        <qualifiedname>es.ull.esit.server.controller.DrinkController.drinkRepository</qualifiedname>
+        <briefdescription>
+<para>Repository used to access the &quot;drinks&quot; table. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="server/src/main/java/es/ull/esit/server/controller/DrinkController.java" line="26" column="27" bodyfile="server/src/main/java/es/ull/esit/server/controller/DrinkController.java" bodystart="26" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1DrinkController_1af3871c2a5906f3edf02eb1675f7e17a6" compoundref="DrinkController_8java" startline="65" endline="68">es.ull.esit.server.controller.DrinkController.createDrink</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1DrinkController_1a68eb2b152ed142a05c97d2de13af78ea" compoundref="DrinkController_8java" startline="99" endline="105">es.ull.esit.server.controller.DrinkController.deleteDrink</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1DrinkController_1a163d964df92668c21712682c56fce6bf" compoundref="DrinkController_8java" startline="36" endline="39">es.ull.esit.server.controller.DrinkController.getAllDrinks</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1DrinkController_1a51ace2e1627db0a1965b549658f0e744" compoundref="DrinkController_8java" startline="50" endline="54">es.ull.esit.server.controller.DrinkController.getDrinkById</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1DrinkController_1a50a972db8b1d32321234e864854b1d89" compoundref="DrinkController_8java" startline="80" endline="88">es.ull.esit.server.controller.DrinkController.updateDrink</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1DrinkController_1a163d964df92668c21712682c56fce6bf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ResponseEntity&lt; List&lt; <ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Drink" kindref="compound">Drink</ref> &gt; &gt;</type>
+        <definition>ResponseEntity&lt; List&lt; Drink &gt; &gt; es.ull.esit.server.controller.DrinkController.getAllDrinks</definition>
+        <argsstring>()</argsstring>
+        <name>getAllDrinks</name>
+        <qualifiedname>es.ull.esit.server.controller.DrinkController.getAllDrinks</qualifiedname>
+        <briefdescription>
+<para>Returns the complete list of drinks. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>   HTTP GET /api/drinks
+</verbatim></para>
+<para><simplesect kind="return"><para>[ResponseEntity&lt;List&lt;Drink&gt;&gt;] List of drinks with status 200. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="server/src/main/java/es/ull/esit/server/controller/DrinkController.java" line="36" column="25" bodyfile="server/src/main/java/es/ull/esit/server/controller/DrinkController.java" bodystart="36" bodyend="39"/>
+        <references refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1DrinkController_1a99720b1a438eb2dbfb14f9985b9d6656" compoundref="DrinkController_8java" startline="26">es.ull.esit.server.controller.DrinkController.drinkRepository</references>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1DrinkController_1a51ace2e1627db0a1965b549658f0e744" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ResponseEntity&lt; <ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Drink" kindref="compound">Drink</ref> &gt;</type>
+        <definition>ResponseEntity&lt; Drink &gt; es.ull.esit.server.controller.DrinkController.getDrinkById</definition>
+        <argsstring>(@PathVariable Long id)</argsstring>
+        <name>getDrinkById</name>
+        <qualifiedname>es.ull.esit.server.controller.DrinkController.getDrinkById</qualifiedname>
+        <param>
+          <type>@PathVariable Long</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Returns a single drink by its id. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>   HTTP GET /api/drinks/{id}
+</verbatim></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[Long] Identifier of the drink. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>[ResponseEntity&lt;Drink&gt;] The drink if found or 404 otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="server/src/main/java/es/ull/esit/server/controller/DrinkController.java" line="50" column="25" bodyfile="server/src/main/java/es/ull/esit/server/controller/DrinkController.java" bodystart="50" bodyend="54"/>
+        <references refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1DrinkController_1a99720b1a438eb2dbfb14f9985b9d6656" compoundref="DrinkController_8java" startline="26">es.ull.esit.server.controller.DrinkController.drinkRepository</references>
+        <references refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1DrinkController_1a51ace2e1627db0a1965b549658f0e744" compoundref="DrinkController_8java" startline="50" endline="54">es.ull.esit.server.controller.DrinkController.getDrinkById</references>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1DrinkController_1a51ace2e1627db0a1965b549658f0e744" compoundref="DrinkController_8java" startline="50" endline="54">es.ull.esit.server.controller.DrinkController.getDrinkById</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1DrinkController_1af3871c2a5906f3edf02eb1675f7e17a6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ResponseEntity&lt; <ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Drink" kindref="compound">Drink</ref> &gt;</type>
+        <definition>ResponseEntity&lt; Drink &gt; es.ull.esit.server.controller.DrinkController.createDrink</definition>
+        <argsstring>(@RequestBody Drink drink)</argsstring>
+        <name>createDrink</name>
+        <qualifiedname>es.ull.esit.server.controller.DrinkController.createDrink</qualifiedname>
+        <param>
+          <type>@RequestBody <ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Drink" kindref="compound">Drink</ref></type>
+          <declname>drink</declname>
+        </param>
+        <briefdescription>
+<para>Creates a new drink. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>   HTTP POST /api/drinks
+</verbatim></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>drink</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[<ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Drink" kindref="compound">Drink</ref>] <ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Drink" kindref="compound">Drink</ref> data sent in the request body. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>[ResponseEntity&lt;Drink&gt;] The created drink with status 201. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="server/src/main/java/es/ull/esit/server/controller/DrinkController.java" line="65" column="25" bodyfile="server/src/main/java/es/ull/esit/server/controller/DrinkController.java" bodystart="65" bodyend="68"/>
+        <references refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1DrinkController_1a99720b1a438eb2dbfb14f9985b9d6656" compoundref="DrinkController_8java" startline="26">es.ull.esit.server.controller.DrinkController.drinkRepository</references>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1DrinkController_1a50a972db8b1d32321234e864854b1d89" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ResponseEntity&lt; <ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Drink" kindref="compound">Drink</ref> &gt;</type>
+        <definition>ResponseEntity&lt; Drink &gt; es.ull.esit.server.controller.DrinkController.updateDrink</definition>
+        <argsstring>(@PathVariable Long id, @RequestBody Drink drink)</argsstring>
+        <name>updateDrink</name>
+        <qualifiedname>es.ull.esit.server.controller.DrinkController.updateDrink</qualifiedname>
+        <param>
+          <type>@PathVariable Long</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>@RequestBody <ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Drink" kindref="compound">Drink</ref></type>
+          <declname>drink</declname>
+        </param>
+        <briefdescription>
+<para>Updates an existing drink. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>   HTTP PUT /api/drinks/{id}
+</verbatim></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[Long] Identifier of the drink to update. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>drink</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[<ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Drink" kindref="compound">Drink</ref>] New data for the drink. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>[ResponseEntity&lt;Drink&gt;] The updated drink or 404 if not found. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="server/src/main/java/es/ull/esit/server/controller/DrinkController.java" line="80" column="25" bodyfile="server/src/main/java/es/ull/esit/server/controller/DrinkController.java" bodystart="80" bodyend="88"/>
+        <references refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1DrinkController_1a99720b1a438eb2dbfb14f9985b9d6656" compoundref="DrinkController_8java" startline="26">es.ull.esit.server.controller.DrinkController.drinkRepository</references>
+        <references refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1DrinkController_1a50a972db8b1d32321234e864854b1d89" compoundref="DrinkController_8java" startline="80" endline="88">es.ull.esit.server.controller.DrinkController.updateDrink</references>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1DrinkController_1a50a972db8b1d32321234e864854b1d89" compoundref="DrinkController_8java" startline="80" endline="88">es.ull.esit.server.controller.DrinkController.updateDrink</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1DrinkController_1a68eb2b152ed142a05c97d2de13af78ea" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ResponseEntity&lt; Void &gt;</type>
+        <definition>ResponseEntity&lt; Void &gt; es.ull.esit.server.controller.DrinkController.deleteDrink</definition>
+        <argsstring>(@PathVariable Long id)</argsstring>
+        <name>deleteDrink</name>
+        <qualifiedname>es.ull.esit.server.controller.DrinkController.deleteDrink</qualifiedname>
+        <param>
+          <type>@PathVariable Long</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Deletes a drink by its id. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>   HTTP DELETE /api/drinks/{id}
+</verbatim></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[Long] Identifier of the drink to delete. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>[ResponseEntity&lt;Void&gt;] 204 if deleted or 404 if not found. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="server/src/main/java/es/ull/esit/server/controller/DrinkController.java" line="99" column="25" bodyfile="server/src/main/java/es/ull/esit/server/controller/DrinkController.java" bodystart="99" bodyend="105"/>
+        <references refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1DrinkController_1a68eb2b152ed142a05c97d2de13af78ea" compoundref="DrinkController_8java" startline="99" endline="105">es.ull.esit.server.controller.DrinkController.deleteDrink</references>
+        <references refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1DrinkController_1a99720b1a438eb2dbfb14f9985b9d6656" compoundref="DrinkController_8java" startline="26">es.ull.esit.server.controller.DrinkController.drinkRepository</references>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1DrinkController_1a68eb2b152ed142a05c97d2de13af78ea" compoundref="DrinkController_8java" startline="99" endline="105">es.ull.esit.server.controller.DrinkController.deleteDrink</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>REST controller for managing drinks. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>   Provides CRUD operations for Drink entities using the path
+   &quot;/api/drinks&quot;. These endpoints are used by the Swing client to load
+   and modify drink information.
+</verbatim> </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>JpaRepository&lt; Drink, Long &gt;</label>
+      </node>
+      <node id="1">
+        <label>es.ull.esit.server.controller.DrinkController</label>
+        <link refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1DrinkController"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-drinkRepository</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>es.ull.esit.server.repo.DrinkRepository</label>
+        <link refid="interfacees_1_1ull_1_1esit_1_1server_1_1repo_1_1DrinkRepository"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="server/src/main/java/es/ull/esit/server/controller/DrinkController.java" line="22" column="7" bodyfile="server/src/main/java/es/ull/esit/server/controller/DrinkController.java" bodystart="22" bodyend="106"/>
+    <listofallmembers>
+      <member refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1DrinkController_1af3871c2a5906f3edf02eb1675f7e17a6" prot="public" virt="non-virtual"><scope>es::ull::esit::server::controller::DrinkController</scope><name>createDrink</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1DrinkController_1a68eb2b152ed142a05c97d2de13af78ea" prot="public" virt="non-virtual"><scope>es::ull::esit::server::controller::DrinkController</scope><name>deleteDrink</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1DrinkController_1a99720b1a438eb2dbfb14f9985b9d6656" prot="private" virt="non-virtual"><scope>es::ull::esit::server::controller::DrinkController</scope><name>drinkRepository</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1DrinkController_1a163d964df92668c21712682c56fce6bf" prot="public" virt="non-virtual"><scope>es::ull::esit::server::controller::DrinkController</scope><name>getAllDrinks</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1DrinkController_1a51ace2e1627db0a1965b549658f0e744" prot="public" virt="non-virtual"><scope>es::ull::esit::server::controller::DrinkController</scope><name>getDrinkById</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1DrinkController_1a50a972db8b1d32321234e864854b1d89" prot="public" virt="non-virtual"><scope>es::ull::esit::server::controller::DrinkController</scope><name>updateDrink</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

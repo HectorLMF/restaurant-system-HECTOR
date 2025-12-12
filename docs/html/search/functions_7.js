@@ -1,0 +1,5 @@
+var searchData=
+[
+  ['initcomponents_0',['initComponents',['../classes_1_1ull_1_1esit_1_1app_1_1AboutUs.html#a8476b8c278d38350158ed22a4a91695a',1,'es.ull.esit.app.AboutUs.initComponents()'],['../classes_1_1ull_1_1esit_1_1app_1_1AdminLogin.html#ad0adf02c285046ac1f7593fa25edf289',1,'es.ull.esit.app.AdminLogin.initComponents()'],['../classes_1_1ull_1_1esit_1_1app_1_1AdminProducts.html#a42cfd8c45898f2f53bcb93355c15d083',1,'es.ull.esit.app.AdminProducts.initComponents()'],['../classes_1_1ull_1_1esit_1_1app_1_1CashierLogin.html#a767a95a563bcc206253c30327ad64a3a',1,'es.ull.esit.app.CashierLogin.initComponents()'],['../classes_1_1ull_1_1esit_1_1app_1_1Login.html#ae61fa95fab1880d2e48d4b52948f51f6',1,'es.ull.esit.app.Login.initComponents()'],['../classes_1_1ull_1_1esit_1_1app_1_1Order.html#aaf71aeca492daeae200fbc3f3ba63b47',1,'es.ull.esit.app.Order.initComponents()']]],
+  ['isadmin_1',['isAdmin',['../classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User.html#a4f1c85f290f8a053b755f55c25d98f49',1,'es::ull::esit::app::middleware::model::User']]]
+];

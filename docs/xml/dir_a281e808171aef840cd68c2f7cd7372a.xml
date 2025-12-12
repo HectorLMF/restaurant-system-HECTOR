@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="dir_a281e808171aef840cd68c2f7cd7372a" kind="dir">
+    <compoundname>controller</compoundname>
+    <innerfile refid="AppetizerController_8java">AppetizerController.java</innerfile>
+    <innerfile refid="AuthController_8java">AuthController.java</innerfile>
+    <innerfile refid="CashierController_8java">CashierController.java</innerfile>
+    <innerfile refid="DrinkController_8java">DrinkController.java</innerfile>
+    <innerfile refid="HealthController_8java">HealthController.java</innerfile>
+    <innerfile refid="MainCourseController_8java">MainCourseController.java</innerfile>
+    <innerfile refid="MenuController_8java">MenuController.java</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="server/src/main/java/es/ull/esit/server/controller/"/>
+  </compounddef>
+</doxygen>

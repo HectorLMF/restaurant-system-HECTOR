@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="interfacees_1_1ull_1_1esit_1_1server_1_1repo_1_1DrinkRepository" kind="interface" language="Java" prot="public">
+    <compoundname>es::ull::esit::server::repo::DrinkRepository</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">JpaRepository&lt; Drink, Long &gt;</basecompoundref>
+    <briefdescription>
+<para>Repository interface for managing drinks in the database. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>   Extends JpaRepository to provide basic CRUD operations on the &quot;drinks&quot;
+   table, such as findAll, findById, save and delete.
+</verbatim> </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>JpaRepository&lt; Drink, Long &gt;</label>
+      </node>
+      <node id="1">
+        <label>es.ull.esit.server.repo.DrinkRepository</label>
+        <link refid="interfacees_1_1ull_1_1esit_1_1server_1_1repo_1_1DrinkRepository"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>JpaRepository&lt; Drink, Long &gt;</label>
+      </node>
+      <node id="1">
+        <label>es.ull.esit.server.repo.DrinkRepository</label>
+        <link refid="interfacees_1_1ull_1_1esit_1_1server_1_1repo_1_1DrinkRepository"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="server/src/main/java/es/ull/esit/server/repo/DrinkRepository.java" line="12" column="18" bodyfile="server/src/main/java/es/ull/esit/server/repo/DrinkRepository.java" bodystart="12" bodyend="15"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

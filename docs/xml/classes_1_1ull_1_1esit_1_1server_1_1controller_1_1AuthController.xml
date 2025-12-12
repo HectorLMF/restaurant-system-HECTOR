@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController" kind="class" language="Java" prot="public">
+    <compoundname>es::ull::esit::server::controller::AuthController</compoundname>
+    <innerclass refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController_1_1LoginRequest" prot="public">es::ull::esit::server::controller::AuthController::LoginRequest</innerclass>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController_1a32c81663938eea468a456780b9163b0a" prot="private" static="yes" mutable="no">
+        <type>final Logger</type>
+        <definition>final Logger es.ull.esit.server.controller.AuthController.LOG</definition>
+        <argsstring></argsstring>
+        <name>LOG</name>
+        <qualifiedname>es.ull.esit.server.controller.AuthController.LOG</qualifiedname>
+        <initializer>= LoggerFactory.getLogger(AuthController.class)</initializer>
+        <briefdescription>
+<para>Logger for logging authentication events. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="server/src/main/java/es/ull/esit/server/controller/AuthController.java" line="26" column="31" bodyfile="server/src/main/java/es/ull/esit/server/controller/AuthController.java" bodystart="26" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController_1a919ce10a0f6571fb57721cb881642acb" compoundref="AuthController_8java" startline="61" endline="84">es.ull.esit.server.controller.AuthController.login</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController_1a5c6a5097e0a0f7b4e6c7a8207958181c" prot="private" static="no" mutable="no">
+        <type><ref refid="interfacees_1_1ull_1_1esit_1_1server_1_1repo_1_1UserRepository" kindref="compound">UserRepository</ref></type>
+        <definition>UserRepository es.ull.esit.server.controller.AuthController.userRepository</definition>
+        <argsstring></argsstring>
+        <name>userRepository</name>
+        <qualifiedname>es.ull.esit.server.controller.AuthController.userRepository</qualifiedname>
+        <briefdescription>
+<para>Repository for accessing user data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="server/src/main/java/es/ull/esit/server/controller/AuthController.java" line="30" column="26" bodyfile="server/src/main/java/es/ull/esit/server/controller/AuthController.java" bodystart="30" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController_1a919ce10a0f6571fb57721cb881642acb" compoundref="AuthController_8java" startline="61" endline="84">es.ull.esit.server.controller.AuthController.login</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController_1aa0f66d158454fa38f4ef0384a719d61f" prot="private" static="no" mutable="no">
+        <type>PasswordEncoder</type>
+        <definition>PasswordEncoder es.ull.esit.server.controller.AuthController.passwordEncoder</definition>
+        <argsstring></argsstring>
+        <name>passwordEncoder</name>
+        <qualifiedname>es.ull.esit.server.controller.AuthController.passwordEncoder</qualifiedname>
+        <briefdescription>
+<para>Component used to verify raw passwords against stored hashes. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="server/src/main/java/es/ull/esit/server/controller/AuthController.java" line="34" column="27" bodyfile="server/src/main/java/es/ull/esit/server/controller/AuthController.java" bodystart="34" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController_1a919ce10a0f6571fb57721cb881642acb" compoundref="AuthController_8java" startline="61" endline="84">es.ull.esit.server.controller.AuthController.login</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController_1a919ce10a0f6571fb57721cb881642acb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ResponseEntity&lt;?&gt;</type>
+        <definition>ResponseEntity&lt;?&gt; es.ull.esit.server.controller.AuthController.login</definition>
+        <argsstring>(@RequestBody LoginRequest request)</argsstring>
+        <name>login</name>
+        <qualifiedname>es.ull.esit.server.controller.AuthController.login</qualifiedname>
+        <param>
+          <type>@RequestBody <ref refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController_1_1LoginRequest" kindref="compound">LoginRequest</ref></type>
+          <declname>request</declname>
+        </param>
+        <briefdescription>
+<para>Endpoint for handling user login requests: </para>
+        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>receives a username and password in the request body.</para>
+</listitem><listitem><para>searches for the user in the database.</para>
+</listitem><listitem><para>compares the provided password with the stored password hash.</para>
+</listitem><listitem><para>return 200 OK with user data if credentials are valid.</para>
+</listitem><listitem><para>return 401 Unauthorized if credentials are invalid.</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>request</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[<ref refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController_1_1LoginRequest" kindref="compound">LoginRequest</ref>] Login request payload containing username and password. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>[ResponseEntity] HTTP response indicating success or failure of authentication. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="server/src/main/java/es/ull/esit/server/controller/AuthController.java" line="61" column="25" bodyfile="server/src/main/java/es/ull/esit/server/controller/AuthController.java" bodystart="61" bodyend="84"/>
+        <references refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController_1a32c81663938eea468a456780b9163b0a" compoundref="AuthController_8java" startline="26">es.ull.esit.server.controller.AuthController.LOG</references>
+        <references refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController_1a919ce10a0f6571fb57721cb881642acb" compoundref="AuthController_8java" startline="61" endline="84">es.ull.esit.server.controller.AuthController.login</references>
+        <references refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController_1aa0f66d158454fa38f4ef0384a719d61f" compoundref="AuthController_8java" startline="34">es.ull.esit.server.controller.AuthController.passwordEncoder</references>
+        <references refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController_1a5c6a5097e0a0f7b4e6c7a8207958181c" compoundref="AuthController_8java" startline="30">es.ull.esit.server.controller.AuthController.userRepository</references>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController_1a919ce10a0f6571fb57721cb881642acb" compoundref="AuthController_8java" startline="61" endline="84">es.ull.esit.server.controller.AuthController.login</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Rest controller for handling authentication-related requests. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>   Exposes an HTTP endpoint that allows clients to log in by sending
+   a username and password. The credentials are validated against the
+   users stored in the database.
+</verbatim> </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>JpaRepository&lt; User, Long &gt;</label>
+      </node>
+      <node id="1">
+        <label>es.ull.esit.server.controller.AuthController</label>
+        <link refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-userRepository</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>es.ull.esit.server.repo.UserRepository</label>
+        <link refid="interfacees_1_1ull_1_1esit_1_1server_1_1repo_1_1UserRepository"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="server/src/main/java/es/ull/esit/server/controller/AuthController.java" line="23" column="7" bodyfile="server/src/main/java/es/ull/esit/server/controller/AuthController.java" bodystart="23" bodyend="86"/>
+    <listofallmembers>
+      <member refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController_1a32c81663938eea468a456780b9163b0a" prot="private" virt="non-virtual"><scope>es::ull::esit::server::controller::AuthController</scope><name>LOG</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController_1a919ce10a0f6571fb57721cb881642acb" prot="public" virt="non-virtual"><scope>es::ull::esit::server::controller::AuthController</scope><name>login</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController_1aa0f66d158454fa38f4ef0384a719d61f" prot="private" virt="non-virtual"><scope>es::ull::esit::server::controller::AuthController</scope><name>passwordEncoder</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController_1a5c6a5097e0a0f7b4e6c7a8207958181c" prot="private" virt="non-virtual"><scope>es::ull::esit::server::controller::AuthController</scope><name>userRepository</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,208 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1CashierController" kind="class" language="Java" prot="public">
+    <compoundname>es::ull::esit::server::controller::CashierController</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1CashierController_1a4e24e687959591b8d26323d5f0b27de7" prot="private" static="no" mutable="no">
+        <type><ref refid="interfacees_1_1ull_1_1esit_1_1server_1_1repo_1_1CashierRepository" kindref="compound">CashierRepository</ref></type>
+        <definition>CashierRepository es.ull.esit.server.controller.CashierController.cashierRepository</definition>
+        <argsstring></argsstring>
+        <name>cashierRepository</name>
+        <qualifiedname>es.ull.esit.server.controller.CashierController.cashierRepository</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="server/src/main/java/es/ull/esit/server/controller/CashierController.java" line="29" column="29" bodyfile="server/src/main/java/es/ull/esit/server/controller/CashierController.java" bodystart="29" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1CashierController_1afac839f447fa6c259d0314c775fc7057" compoundref="CashierController_8java" startline="40" endline="43">es.ull.esit.server.controller.CashierController.getAllCashiers</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1CashierController_1afcc0672b6896503836e0340ba95a80c6" compoundref="CashierController_8java" startline="55" endline="60">es.ull.esit.server.controller.CashierController.getCashierById</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1CashierController_1ac811ef1ea914eceeb7f8d34ccca0808f" compoundref="CashierController_8java" startline="72" endline="77">es.ull.esit.server.controller.CashierController.getCashierByName</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1CashierController_1aff895cd279d7ddb64f87e997a92c5329" compoundref="CashierController_8java" startline="90" endline="103">es.ull.esit.server.controller.CashierController.updateCashier</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1CashierController_1afac839f447fa6c259d0314c775fc7057" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ResponseEntity&lt; List&lt; <ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier" kindref="compound">Cashier</ref> &gt; &gt;</type>
+        <definition>ResponseEntity&lt; List&lt; Cashier &gt; &gt; es.ull.esit.server.controller.CashierController.getAllCashiers</definition>
+        <argsstring>()</argsstring>
+        <name>getAllCashiers</name>
+        <qualifiedname>es.ull.esit.server.controller.CashierController.getAllCashiers</qualifiedname>
+        <briefdescription>
+<para>Returns all cashiers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>   HTTP GET /api/cashiers
+</verbatim></para>
+<para><simplesect kind="return"><para>[ResponseEntity&lt;List&lt;Cashier&gt;&gt;] List of cashiers with HTTP 200 status. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="server/src/main/java/es/ull/esit/server/controller/CashierController.java" line="40" column="25" bodyfile="server/src/main/java/es/ull/esit/server/controller/CashierController.java" bodystart="40" bodyend="43"/>
+        <references refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1CashierController_1a4e24e687959591b8d26323d5f0b27de7" compoundref="CashierController_8java" startline="29">es.ull.esit.server.controller.CashierController.cashierRepository</references>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1CashierController_1afcc0672b6896503836e0340ba95a80c6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ResponseEntity&lt; <ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier" kindref="compound">Cashier</ref> &gt;</type>
+        <definition>ResponseEntity&lt; Cashier &gt; es.ull.esit.server.controller.CashierController.getCashierById</definition>
+        <argsstring>(@PathVariable Long id)</argsstring>
+        <name>getCashierById</name>
+        <qualifiedname>es.ull.esit.server.controller.CashierController.getCashierById</qualifiedname>
+        <param>
+          <type>@PathVariable Long</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Returns a single cashier by ID. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>   HTTP GET /api/cashiers/{id}
+</verbatim></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[Long] Identifier of the cashier. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>[ResponseEntity&lt;Cashier&gt;] The cashier if found with HTTP 200 status, or HTTP 404 if not found. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="server/src/main/java/es/ull/esit/server/controller/CashierController.java" line="55" column="25" bodyfile="server/src/main/java/es/ull/esit/server/controller/CashierController.java" bodystart="55" bodyend="60"/>
+        <references refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1CashierController_1a4e24e687959591b8d26323d5f0b27de7" compoundref="CashierController_8java" startline="29">es.ull.esit.server.controller.CashierController.cashierRepository</references>
+        <references refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1CashierController_1afcc0672b6896503836e0340ba95a80c6" compoundref="CashierController_8java" startline="55" endline="60">es.ull.esit.server.controller.CashierController.getCashierById</references>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1CashierController_1afcc0672b6896503836e0340ba95a80c6" compoundref="CashierController_8java" startline="55" endline="60">es.ull.esit.server.controller.CashierController.getCashierById</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1CashierController_1ac811ef1ea914eceeb7f8d34ccca0808f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ResponseEntity&lt; <ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier" kindref="compound">Cashier</ref> &gt;</type>
+        <definition>ResponseEntity&lt; Cashier &gt; es.ull.esit.server.controller.CashierController.getCashierByName</definition>
+        <argsstring>(@PathVariable String name)</argsstring>
+        <name>getCashierByName</name>
+        <qualifiedname>es.ull.esit.server.controller.CashierController.getCashierByName</qualifiedname>
+        <param>
+          <type>@PathVariable String</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Returns a single cashier by name (username). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>   HTTP GET /api/cashiers/name/{name}
+</verbatim></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[String] Name of the cashier. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>[ResponseEntity&lt;Cashier&gt;] The cashier if found with HTTP 200 status, or HTTP 404 if not found. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="server/src/main/java/es/ull/esit/server/controller/CashierController.java" line="72" column="25" bodyfile="server/src/main/java/es/ull/esit/server/controller/CashierController.java" bodystart="72" bodyend="77"/>
+        <references refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1CashierController_1a4e24e687959591b8d26323d5f0b27de7" compoundref="CashierController_8java" startline="29">es.ull.esit.server.controller.CashierController.cashierRepository</references>
+        <references refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1CashierController_1ac811ef1ea914eceeb7f8d34ccca0808f" compoundref="CashierController_8java" startline="72" endline="77">es.ull.esit.server.controller.CashierController.getCashierByName</references>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1CashierController_1ac811ef1ea914eceeb7f8d34ccca0808f" compoundref="CashierController_8java" startline="72" endline="77">es.ull.esit.server.controller.CashierController.getCashierByName</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1CashierController_1aff895cd279d7ddb64f87e997a92c5329" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ResponseEntity&lt; <ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier" kindref="compound">Cashier</ref> &gt;</type>
+        <definition>ResponseEntity&lt; Cashier &gt; es.ull.esit.server.controller.CashierController.updateCashier</definition>
+        <argsstring>(@PathVariable Long id, @RequestBody Cashier cashier)</argsstring>
+        <name>updateCashier</name>
+        <qualifiedname>es.ull.esit.server.controller.CashierController.updateCashier</qualifiedname>
+        <param>
+          <type>@PathVariable Long</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>@RequestBody <ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier" kindref="compound">Cashier</ref></type>
+          <declname>cashier</declname>
+        </param>
+        <briefdescription>
+<para>Updates an existing cashier, but only the name and salary fields. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>   HTTP PUT /api/cashiers/{id}
+</verbatim></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[Long] Identifier of the cashier to update. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cashier</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[<ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier" kindref="compound">Cashier</ref>] New data for the cashier. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>[ResponseEntity&lt;Cashier&gt;] The updated cashier with HTTP 200 status, or HTTP 404 if not found. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="server/src/main/java/es/ull/esit/server/controller/CashierController.java" line="90" column="25" bodyfile="server/src/main/java/es/ull/esit/server/controller/CashierController.java" bodystart="90" bodyend="103"/>
+        <references refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1CashierController_1a4e24e687959591b8d26323d5f0b27de7" compoundref="CashierController_8java" startline="29">es.ull.esit.server.controller.CashierController.cashierRepository</references>
+        <references refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier_1ab83aab1e779908032b21099c409d449f" compoundref="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2Cashier_8java" startline="82" endline="84">es.ull.esit.server.middleware.model.Cashier.setName</references>
+        <references refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1CashierController_1aff895cd279d7ddb64f87e997a92c5329" compoundref="CashierController_8java" startline="90" endline="103">es.ull.esit.server.controller.CashierController.updateCashier</references>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1CashierController_1aff895cd279d7ddb64f87e997a92c5329" compoundref="CashierController_8java" startline="90" endline="103">es.ull.esit.server.controller.CashierController.updateCashier</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>REST controller for managing cashiers. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>   Provides CRUD operations for Cashier entities using the path
+   &quot;/api/cashiers&quot;.
+
+   Cashiers are created automatically when users with &apos;CASHIER&apos; role are
+   added to the table &apos;users&apos;.
+   This controller is mainly READ-ONLY and allows updating salary/name.
+</verbatim> </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>JpaRepository&lt; Cashier, Long &gt;</label>
+      </node>
+      <node id="1">
+        <label>es.ull.esit.server.controller.CashierController</label>
+        <link refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1CashierController"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-cashierRepository</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>es.ull.esit.server.repo.CashierRepository</label>
+        <link refid="interfacees_1_1ull_1_1esit_1_1server_1_1repo_1_1CashierRepository"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="server/src/main/java/es/ull/esit/server/controller/CashierController.java" line="25" column="7" bodyfile="server/src/main/java/es/ull/esit/server/controller/CashierController.java" bodystart="25" bodyend="105"/>
+    <listofallmembers>
+      <member refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1CashierController_1a4e24e687959591b8d26323d5f0b27de7" prot="private" virt="non-virtual"><scope>es::ull::esit::server::controller::CashierController</scope><name>cashierRepository</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1CashierController_1afac839f447fa6c259d0314c775fc7057" prot="public" virt="non-virtual"><scope>es::ull::esit::server::controller::CashierController</scope><name>getAllCashiers</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1CashierController_1afcc0672b6896503836e0340ba95a80c6" prot="public" virt="non-virtual"><scope>es::ull::esit::server::controller::CashierController</scope><name>getCashierById</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1CashierController_1ac811ef1ea914eceeb7f8d34ccca0808f" prot="public" virt="non-virtual"><scope>es::ull::esit::server::controller::CashierController</scope><name>getCashierByName</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1CashierController_1aff895cd279d7ddb64f87e997a92c5329" prot="public" virt="non-virtual"><scope>es::ull::esit::server::controller::CashierController</scope><name>updateCashier</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

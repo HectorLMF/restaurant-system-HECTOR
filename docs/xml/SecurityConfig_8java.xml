@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="SecurityConfig_8java" kind="file" language="Java">
+    <compoundname>SecurityConfig.java</compoundname>
+    <includes local="no">org.springframework.context.annotation.Bean</includes>
+    <includes local="no">org.springframework.context.annotation.Configuration</includes>
+    <includes local="no">org.springframework.security.config.annotation.web.builders.HttpSecurity</includes>
+    <includes local="no">org.springframework.security.web.SecurityFilterChain</includes>
+    <includes local="no">org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder</includes>
+    <includes local="no">org.springframework.security.crypto.password.PasswordEncoder</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>SecurityConfig.java</label>
+        <link refid="SecurityConfig_8java"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>org.springframework.context.annotation.Bean</label>
+      </node>
+      <node id="3">
+        <label>org.springframework.context.annotation.Configuration</label>
+      </node>
+      <node id="4">
+        <label>org.springframework.security.config.annotation.web.builders.HttpSecurity</label>
+      </node>
+      <node id="6">
+        <label>org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder</label>
+      </node>
+      <node id="7">
+        <label>org.springframework.security.crypto.password.PasswordEncoder</label>
+      </node>
+      <node id="5">
+        <label>org.springframework.security.web.SecurityFilterChain</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classes_1_1ull_1_1esit_1_1server_1_1config_1_1SecurityConfig" prot="public">es::ull::esit::server::config::SecurityConfig</innerclass>
+    <innernamespace refid="namespacees_1_1ull_1_1esit_1_1server_1_1config">es::ull::esit::server::config</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="namespacees_1_1ull_1_1esit_1_1server_1_1config" refkind="compound"><highlight class="keyword">package<sp/></highlight><highlight class="normal">es.ull.esit.server.config;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>org.springframework.context.annotation.Bean;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>org.springframework.context.annotation.Configuration;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>org.springframework.security.config.annotation.web.builders.HttpSecurity;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>org.springframework.security.web.SecurityFilterChain;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>org.springframework.security.crypto.password.PasswordEncoder;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal">@Configuration</highlight></codeline>
+<codeline lineno="20" refid="classes_1_1ull_1_1esit_1_1server_1_1config_1_1SecurityConfig" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classes_1_1ull_1_1esit_1_1server_1_1config_1_1SecurityConfig" kindref="compound">SecurityConfig</ref><sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/>@Bean</highlight></codeline>
+<codeline lineno="28" refid="classes_1_1ull_1_1esit_1_1server_1_1config_1_1SecurityConfig_1abcf9b5bf545d58b3d16662c8013f2e4d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>PasswordEncoder<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1config_1_1SecurityConfig_1abcf9b5bf545d58b3d16662c8013f2e4d" kindref="member">passwordEncoder</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>BCryptPasswordEncoder();</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/>@Bean</highlight></codeline>
+<codeline lineno="45" refid="classes_1_1ull_1_1esit_1_1server_1_1config_1_1SecurityConfig_1ac8225a2140cd0c437b221a12bf06ef0b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>SecurityFilterChain<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1config_1_1SecurityConfig_1ac8225a2140cd0c437b221a12bf06ef0b" kindref="member">filterChain</ref>(HttpSecurity<sp/>http)<sp/></highlight><highlight class="keywordflow">throws</highlight><highlight class="normal"><sp/>Exception<sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>http</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.csrf().disable();</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>http</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.authorizeRequests()</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.anyRequest().permitAll();</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>http</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.httpBasic().disable()</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.formLogin().disable();</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>http.build();</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="server/src/main/java/es/ull/esit/server/config/SecurityConfig.java"/>
+  </compounddef>
+</doxygen>

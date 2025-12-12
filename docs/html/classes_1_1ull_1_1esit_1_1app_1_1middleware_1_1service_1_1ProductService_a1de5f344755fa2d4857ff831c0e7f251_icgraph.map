@@ -1,0 +1,15 @@
+<map id="es.ull.esit.app.middleware.service.ProductService.validateAndParsePrice" name="es.ull.esit.app.middleware.service.ProductService.validateAndParsePrice">
+<area shape="rect" id="Node000001" title="Validates and parses the price from string to integer." alt="" coords="303,165,571,205"/>
+<area shape="rect" id="Node000002" href="$classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService.html#a769d8d8b0e85877ec511a13b018a8593" title="Adds a new appetizer to the backend menu." alt="" coords="5,5,255,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="400,158,335,108,295,82,254,60,223,48,225,43,256,55,298,77,338,103,404,154"/>
+<area shape="rect" id="Node000003" href="$classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService.html#aab5e0b223a118755115db5a323e81cf9" title="Adds a new drink to the backend menu." alt="" coords="5,69,255,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="369,163,254,124,212,112,213,107,255,119,371,158"/>
+<area shape="rect" id="Node000004" href="$classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService.html#abc6fe1902bddc349b31d598d215df191" title="Adds a new main course to the backend menu." alt="" coords="5,133,255,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="289,173,255,169,255,164,289,167"/>
+<area shape="rect" id="Node000005" href="$classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService.html#a7f8f0ea8d86f4118224cc981b27ac9d7" title="Updates an existing appetizer in the backend menu." alt="" coords="5,197,255,237"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="289,203,255,207,255,202,289,198"/>
+<area shape="rect" id="Node000006" href="$classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService.html#a333c00a5e9b092646dc29efe5400aa71" title="Updates an existing drink in the backend menu." alt="" coords="5,261,255,301"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="371,213,255,252,213,264,212,259,254,247,369,208"/>
+<area shape="rect" id="Node000007" href="$classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService.html#ad96209da593f98e5c8f2205686e02c8f" title="Updates an existing main course in the backend menu." alt="" coords="5,325,255,365"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="404,217,338,267,298,293,256,316,225,328,223,323,254,311,295,289,335,263,400,212"/>
+</map>

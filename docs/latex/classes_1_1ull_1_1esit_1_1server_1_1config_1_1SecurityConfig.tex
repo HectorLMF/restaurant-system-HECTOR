@@ -1,0 +1,125 @@
+\doxysection{es.\+ull.\+esit.\+server.\+config.\+Security\+Config Class Reference}
+\hypertarget{classes_1_1ull_1_1esit_1_1server_1_1config_1_1SecurityConfig}{}\label{classes_1_1ull_1_1esit_1_1server_1_1config_1_1SecurityConfig}\index{es.ull.esit.server.config.SecurityConfig@{es.ull.esit.server.config.SecurityConfig}}
+
+
+Spring Security configuration for the backend.  
+
+
+
+
+Collaboration diagram for es.\+ull.\+esit.\+server.\+config.\+Security\+Config\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{classes_1_1ull_1_1esit_1_1server_1_1config_1_1SecurityConfig__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Password\+Encoder \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1config_1_1SecurityConfig_abcf9b5bf545d58b3d16662c8013f2e4d}{password\+Encoder}} ()
+\begin{DoxyCompactList}\small\item\em Creates a password encoder using BCrypt hashing algorithm. \end{DoxyCompactList}\item 
+Security\+Filter\+Chain \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1config_1_1SecurityConfig_ac8225a2140cd0c437b221a12bf06ef0b}{filter\+Chain}} (Http\+Security http)  throws Exception 
+\begin{DoxyCompactList}\small\item\em Configures the HTTP security settings\+: \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Spring Security configuration for the backend. 
+
+Defines\+:
+\begin{DoxyItemize}
+\item Password encoder used for hashing passwords.
+\item HTTP endpoint security policies\+: all endpoints are currently open (no authentication required).
+\end{DoxyItemize}
+
+The login logic is handled manually in the Auth\+Controller. 
+
+Definition at line \mbox{\hyperlink{SecurityConfig_8java_source_l00020}{20}} of file \mbox{\hyperlink{SecurityConfig_8java_source}{Security\+Config.\+java}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{classes_1_1ull_1_1esit_1_1server_1_1config_1_1SecurityConfig_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classes_1_1ull_1_1esit_1_1server_1_1config_1_1SecurityConfig_ac8225a2140cd0c437b221a12bf06ef0b}\index{es.ull.esit.server.config.SecurityConfig@{es.ull.esit.server.config.SecurityConfig}!filterChain@{filterChain}}
+\index{filterChain@{filterChain}!es.ull.esit.server.config.SecurityConfig@{es.ull.esit.server.config.SecurityConfig}}
+\doxysubsubsection{\texorpdfstring{filterChain()}{filterChain()}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1server_1_1config_1_1SecurityConfig_ac8225a2140cd0c437b221a12bf06ef0b} 
+Security\+Filter\+Chain es.\+ull.\+esit.\+server.\+config.\+Security\+Config.\+filter\+Chain (\begin{DoxyParamCaption}\item[{Http\+Security}]{http}{}\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Configures the HTTP security settings\+: 
+
+
+\begin{DoxyItemize}
+\item Disables CSRF protection.
+\item Permits unauthenticated access to specified endpoints (currently all).
+\item Enables HTTP Basic auth (username and password in headers).
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em http} & \mbox{[}Http\+Security\mbox{]} The Http\+Security builder to define security policies. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{[}Security\+Filter\+Chain\mbox{]} The configured security filter chain. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & If an error occurs during configuration. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line \mbox{\hyperlink{SecurityConfig_8java_source_l00045}{45}} of file \mbox{\hyperlink{SecurityConfig_8java_source}{Security\+Config.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00046\ \ \ \ \ http}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ .csrf().disable();}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ http}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ .authorizeRequests()}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ .anyRequest().permitAll();}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ http}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ .httpBasic().disable()}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ .formLogin().disable();}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordflow}{return}\ http.build();}
+\DoxyCodeLine{00058\ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classes_1_1ull_1_1esit_1_1server_1_1config_1_1SecurityConfig_abcf9b5bf545d58b3d16662c8013f2e4d}\index{es.ull.esit.server.config.SecurityConfig@{es.ull.esit.server.config.SecurityConfig}!passwordEncoder@{passwordEncoder}}
+\index{passwordEncoder@{passwordEncoder}!es.ull.esit.server.config.SecurityConfig@{es.ull.esit.server.config.SecurityConfig}}
+\doxysubsubsection{\texorpdfstring{passwordEncoder()}{passwordEncoder()}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1server_1_1config_1_1SecurityConfig_abcf9b5bf545d58b3d16662c8013f2e4d} 
+Password\+Encoder es.\+ull.\+esit.\+server.\+config.\+Security\+Config.\+password\+Encoder (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates a password encoder using BCrypt hashing algorithm. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{[}Password\+Encoder\mbox{]} The BCrypt-\/based password encoder. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{SecurityConfig_8java_source_l00028}{28}} of file \mbox{\hyperlink{SecurityConfig_8java_source}{Security\+Config.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ BCryptPasswordEncoder();}
+\DoxyCodeLine{00030\ \ \ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{SecurityConfig_8java}{Security\+Config.\+java}}\end{DoxyCompactItemize}

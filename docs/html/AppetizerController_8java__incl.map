@@ -1,0 +1,17 @@
+<map id="AppetizerController.java" name="AppetizerController.java">
+<area shape="rect" id="Node000001" title=" " alt="" coords="839,5,1017,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,264,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="839,29,590,50,278,81,278,76,590,45,838,24"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="287,79,454,119"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="839,32,671,52,468,81,467,76,670,47,838,26"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="478,79,805,119"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="887,33,724,78,722,73,886,28"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="829,86,1027,111"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="931,31,931,72,925,72,925,31"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="1051,86,1357,111"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="969,28,1152,80,1150,85,967,33"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="1382,86,1485,111"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="1018,25,1182,44,1370,76,1385,80,1384,85,1369,81,1181,49,1017,30"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="1509,86,1643,111"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="1018,22,1237,42,1368,57,1498,76,1520,80,1519,86,1497,81,1367,62,1236,47,1017,28"/>
+</map>

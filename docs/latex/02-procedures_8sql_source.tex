@@ -1,0 +1,24 @@
+\doxysection{02-\/procedures.\+sql}
+\hypertarget{02-procedures_8sql_source}{}\label{02-procedures_8sql_source}\index{02-\/procedures.sql@{02-\/procedures.sql}}
+\mbox{\hyperlink{02-procedures_8sql}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{02-procedures_8sql_source_l00001}00001\ \textcolor{comment}{-\/-\/\ 02-\/procedures.sql}}
+\DoxyCodeLine{\Hypertarget{02-procedures_8sql_source_l00002}00002\ \textcolor{comment}{-\/-\/\ Define\ procedimientos\ almacenados\ de\ la\ base\ de\ datos.}}
+\DoxyCodeLine{\Hypertarget{02-procedures_8sql_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{02-procedures_8sql_source_l00004}00004\ USE\ project3;}
+\DoxyCodeLine{\Hypertarget{02-procedures_8sql_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{02-procedures_8sql_source_l00006}00006\ \textcolor{keyword}{DROP}\ \textcolor{keyword}{PROCEDURE}\ \textcolor{keywordflow}{IF}\ \textcolor{keyword}{EXISTS}\ chefname;}
+\DoxyCodeLine{\Hypertarget{02-procedures_8sql_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{02-procedures_8sql_source_l00008}00008\ DELIMITER\ \$\$}
+\DoxyCodeLine{\Hypertarget{02-procedures_8sql_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{02-procedures_8sql_source_l00010}00010\ \textcolor{keyword}{CREATE}\ \textcolor{keyword}{PROCEDURE}\ chefname\ (\textcolor{keyword}{IN}\ chef\_name\_param\ \textcolor{keywordtype}{VARCHAR}(\textcolor{stringliteral}{10}))}
+\DoxyCodeLine{\Hypertarget{02-procedures_8sql_source_l00011}00011\ \textcolor{keywordflow}{BEGIN}}
+\DoxyCodeLine{\Hypertarget{02-procedures_8sql_source_l00012}00012\ \ \ \ \ \textcolor{keyword}{SELECT}\ *}
+\DoxyCodeLine{\Hypertarget{02-procedures_8sql_source_l00013}00013\ \ \ \ \ \textcolor{keyword}{FROM}\ chef}
+\DoxyCodeLine{\Hypertarget{02-procedures_8sql_source_l00014}00014\ \ \ \ \ \textcolor{keyword}{WHERE}\ chef\_name\ =\ chef\_name\_param;}
+\DoxyCodeLine{\Hypertarget{02-procedures_8sql_source_l00015}00015\ \textcolor{keywordflow}{END}\ \$\$}
+\DoxyCodeLine{\Hypertarget{02-procedures_8sql_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{02-procedures_8sql_source_l00017}00017\ DELIMITER\ ;}
+\DoxyCodeLine{\Hypertarget{02-procedures_8sql_source_l00018}00018\ }
+
+\end{DoxyCode}

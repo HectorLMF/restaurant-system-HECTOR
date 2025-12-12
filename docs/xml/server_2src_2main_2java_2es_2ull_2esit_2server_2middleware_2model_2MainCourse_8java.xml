@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2MainCourse_8java" kind="file" language="Java">
+    <compoundname>server/src/main/java/es/ull/esit/server/middleware/model/MainCourse.java</compoundname>
+    <includes local="no">javax.persistence.*</includes>
+    <includes local="no">com.fasterxml.jackson.annotation.JsonIgnoreProperties</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>MainCourse.java</label>
+        <link refid="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2MainCourse_8java"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>com.fasterxml.jackson.annotation.JsonIgnoreProperties</label>
+      </node>
+      <node id="2">
+        <label>javax.persistence.*</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse" prot="public">es::ull::esit::server::middleware::model::MainCourse</innerclass>
+    <innernamespace refid="namespacees_1_1ull_1_1esit_1_1server_1_1middleware_1_1model">es::ull::esit::server::middleware::model</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">package<sp/></highlight><highlight class="normal">es.ull.esit.server.middleware.model;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>javax.persistence.*;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>com.fasterxml.jackson.annotation.JsonIgnoreProperties;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal">@Entity</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">@Table(name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;maincourse&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">@JsonIgnoreProperties({<sp/></highlight><highlight class="stringliteral">&quot;hibernateLazyInitializer&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;handler&quot;</highlight><highlight class="normal"><sp/>})</highlight></codeline>
+<codeline lineno="15" refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1a1230c3d5f6ab71169ba3eda9389c3d3f" kindref="member">MainCourse</ref><sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/>@Id</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/>@GeneratedValue(strategy<sp/>=<sp/>GenerationType.IDENTITY)</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/>@Column(name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;id&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="21" refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1a66a45a781526226f4244f35f7a48f49c" refkind="member"><highlight class="normal"><sp/><sp/>private<sp/>Long<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1a66a45a781526226f4244f35f7a48f49c" kindref="member">foodId</ref>;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/>@Column(name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;name&quot;</highlight><highlight class="normal">,<sp/>nullable<sp/>=<sp/>false)</highlight></codeline>
+<codeline lineno="25" refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1ae55c46c9a2c4d71ad11eec397c0affab" refkind="member"><highlight class="normal"><sp/><sp/>private<sp/>String<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1ae55c46c9a2c4d71ad11eec397c0affab" kindref="member">itemFood</ref>;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/>@Column(name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;price&quot;</highlight><highlight class="normal">,<sp/>nullable<sp/>=<sp/>false)</highlight></codeline>
+<codeline lineno="29" refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1a6f3f51836fd4a618f7beca4766c1fd4a" refkind="member"><highlight class="normal"><sp/><sp/>private<sp/>Integer<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1a6f3f51836fd4a618f7beca4766c1fd4a" kindref="member">foodPrice</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1a1230c3d5f6ab71169ba3eda9389c3d3f" refkind="member"><highlight class="normal"><sp/><sp/>public<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1a1230c3d5f6ab71169ba3eda9389c3d3f" kindref="member">MainCourse</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1a6ccf9f6275cb929225e1222e0a817106" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1a6ccf9f6275cb929225e1222e0a817106" kindref="member">MainCourse</ref>(Long<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1a66a45a781526226f4244f35f7a48f49c" kindref="member">foodId</ref>,<sp/>String<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1ae55c46c9a2c4d71ad11eec397c0affab" kindref="member">itemFood</ref>,<sp/>Integer<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1a6f3f51836fd4a618f7beca4766c1fd4a" kindref="member">foodPrice</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>this.foodId<sp/>=<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1a66a45a781526226f4244f35f7a48f49c" kindref="member">foodId</ref>;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>this.itemFood<sp/>=<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1ae55c46c9a2c4d71ad11eec397c0affab" kindref="member">itemFood</ref>;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>this.foodPrice<sp/>=<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1a6f3f51836fd4a618f7beca4766c1fd4a" kindref="member">foodPrice</ref>;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1a4e0c21da0e3baa05c401bad95f439197" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>Long<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1a4e0c21da0e3baa05c401bad95f439197" kindref="member">getFoodId</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1a66a45a781526226f4244f35f7a48f49c" kindref="member">foodId</ref>;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1ad4e2c0c7c6069e306aa838928a9d85c3" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1ad4e2c0c7c6069e306aa838928a9d85c3" kindref="member">setFoodId</ref>(Long<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1a66a45a781526226f4244f35f7a48f49c" kindref="member">foodId</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>this.foodId<sp/>=<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1a66a45a781526226f4244f35f7a48f49c" kindref="member">foodId</ref>;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1a097ad464e15a192bf94e5fd1d3d999e4" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>String<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1a097ad464e15a192bf94e5fd1d3d999e4" kindref="member">getItemFood</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1ae55c46c9a2c4d71ad11eec397c0affab" kindref="member">itemFood</ref>;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1adda126d191139416358ea4eec76a216f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1adda126d191139416358ea4eec76a216f" kindref="member">setItemFood</ref>(String<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1ae55c46c9a2c4d71ad11eec397c0affab" kindref="member">itemFood</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>this.itemFood<sp/>=<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1ae55c46c9a2c4d71ad11eec397c0affab" kindref="member">itemFood</ref>;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1abc5f7f66d161cb636a82153f596a3bfc" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>Integer<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1abc5f7f66d161cb636a82153f596a3bfc" kindref="member">getFoodPrice</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1a6f3f51836fd4a618f7beca4766c1fd4a" kindref="member">foodPrice</ref>;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1aed64442d866a7615a883b83aa72f2cd5" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1aed64442d866a7615a883b83aa72f2cd5" kindref="member">setFoodPrice</ref>(Integer<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1a6f3f51836fd4a618f7beca4766c1fd4a" kindref="member">foodPrice</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>this.foodPrice<sp/>=<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1a6f3f51836fd4a618f7beca4766c1fd4a" kindref="member">foodPrice</ref>;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="server/src/main/java/es/ull/esit/server/middleware/model/MainCourse.java"/>
+  </compounddef>
+</doxygen>

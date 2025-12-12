@@ -1,0 +1,9 @@
+<map id="es.ull.esit.app.Order.fillDrinks" name="es.ull.esit.app.Order.fillDrinks">
+<area shape="rect" id="Node000001" title="Fills the drinks table model with data from the backend." alt="" coords="715,5,887,45"/>
+<area shape="rect" id="Node000002" href="$classes_1_1ull_1_1esit_1_1app_1_1Order.html#a0d38304f01bcbaaed9d78c79a95208be" title="Loads menu data (drinks, appetizers, main courses) from the backend in a background thread." alt="" coords="483,5,667,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="701,28,667,28,667,23,701,23"/>
+<area shape="rect" id="Node000003" href="$classes_1_1ull_1_1esit_1_1app_1_1Order.html#a5d15e3c212a05a3aef8b70c8897d450c" title="Constructor." alt="" coords="243,13,435,38"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="469,28,435,28,435,23,469,23"/>
+<area shape="rect" id="Node000004" href="$classes_1_1ull_1_1esit_1_1app_1_1Order.html#a32f3c48a536049afa72c92d96d30ac5a" title="Standalone entry point for testing the Order window." alt="" coords="5,13,195,38"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="229,28,195,28,195,23,229,23"/>
+</map>

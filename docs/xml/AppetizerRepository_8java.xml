@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="AppetizerRepository_8java" kind="file" language="Java">
+    <compoundname>AppetizerRepository.java</compoundname>
+    <includes local="no">es.ull.esit.server.middleware.model.Appetizer</includes>
+    <includes local="no">org.springframework.data.jpa.repository.JpaRepository</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>AppetizerRepository.java</label>
+        <link refid="AppetizerRepository_8java"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>es.ull.esit.server.middleware.model.Appetizer</label>
+      </node>
+      <node id="3">
+        <label>org.springframework.data.jpa.repository.JpaRepository</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="interfacees_1_1ull_1_1esit_1_1server_1_1repo_1_1AppetizerRepository" prot="public">es::ull::esit::server::repo::AppetizerRepository</innerclass>
+    <innernamespace refid="namespacees_1_1ull_1_1esit_1_1server_1_1repo">es::ull::esit::server::repo</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="namespacees_1_1ull_1_1esit_1_1server_1_1repo" refkind="compound"><highlight class="keyword">package<sp/></highlight><highlight class="normal">es.ull.esit.server.repo;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>es.ull.esit.server.middleware.model.Appetizer;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>org.springframework.data.jpa.repository.JpaRepository;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="interfacees_1_1ull_1_1esit_1_1server_1_1repo_1_1AppetizerRepository" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">interface<sp/></highlight><highlight class="normal"><ref refid="interfacees_1_1ull_1_1esit_1_1server_1_1repo_1_1AppetizerRepository" kindref="compound">AppetizerRepository</ref><sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/>JpaRepository&lt;Appetizer,<sp/>Long&gt;<sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>No<sp/>extra<sp/>methods<sp/>are<sp/>added<sp/>for<sp/>now,<sp/>but<sp/>custom<sp/>queries<sp/>can<sp/>be<sp/>defined<sp/>here<sp/>if</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>needed<sp/>in<sp/>the<sp/>future.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="server/src/main/java/es/ull/esit/server/repo/AppetizerRepository.java"/>
+  </compounddef>
+</doxygen>

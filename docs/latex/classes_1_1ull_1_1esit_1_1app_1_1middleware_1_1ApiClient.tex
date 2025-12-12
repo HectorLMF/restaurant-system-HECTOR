@@ -1,0 +1,1127 @@
+\doxysection{es.\+ull.\+esit.\+app.\+middleware.\+Api\+Client Class Reference}
+\hypertarget{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient}{}\label{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient}\index{es.ull.esit.app.middleware.ApiClient@{es.ull.esit.app.middleware.ApiClient}}
+
+
+API client for interacting with the backend REST API.  
+
+
+
+
+Collaboration diagram for es.\+ull.\+esit.\+app.\+middleware.\+Api\+Client\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+interface \mbox{\hyperlink{interfacees_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_1_1IOCallable}{IOCallable}}
+\begin{DoxyCompactList}\small\item\em Functional interface for lambdas that may throw Interrupted\+Exception or IOException. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interfacees_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_1_1ResponseHandler}{Response\+Handler}}
+\begin{DoxyCompactList}\small\item\em Functional interface for processing HTTP responses and possibly throwing IOException from JSON parsing. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_aa91db363d76c66888bae50b0d65d11fa}{Api\+Client}} (String \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a34e7093782fed02590b8144b2587bfb8}{base\+Url}})
+\begin{DoxyCompactList}\small\item\em Constructs the \doxylink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient}{Api\+Client} with the given base URL. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Appetizer}{Appetizer}} $>$ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a51281f54fefeb800184db1c61938b8f0}{get\+All\+Appetizers}} ()
+\begin{DoxyCompactList}\small\item\em GET all appetizers. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Appetizer}{Appetizer}} \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_af922406f62cf7437798dfd48fc080bf6}{get\+Appetizer\+By\+Id}} (Long id)
+\begin{DoxyCompactList}\small\item\em GET appetizer by ID. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Appetizer}{Appetizer}} \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a011f83f03ca4fadc10aec98779c409c8}{create\+Appetizer}} (\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Appetizer}{Appetizer}} appetizer)
+\begin{DoxyCompactList}\small\item\em POST create new appetizer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Appetizer}{Appetizer}} \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a56dbbc11355ae6cbeacd65f39d424187}{update\+Appetizer}} (Long id, \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Appetizer}{Appetizer}} appetizer)
+\begin{DoxyCompactList}\small\item\em PUT update appetizer by ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a7ca75a1a565560e364cea86fd390619e}{delete\+Appetizer}} (Long id)
+\begin{DoxyCompactList}\small\item\em DELETE appetizer by ID. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Cashier}{Cashier}} $>$ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a36db088ab0a20bbb898b53d20063fd33}{get\+All\+Cashiers}} ()
+\begin{DoxyCompactList}\small\item\em GET all cashiers. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Cashier}{Cashier}} \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_aa82c8ff95a2f62fc0f2ce2f09c642feb}{get\+Cashier\+By\+Id}} (Long id)
+\begin{DoxyCompactList}\small\item\em GET cashier by ID. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Cashier}{Cashier}} \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_af3eae943ad671742fe64e62ee9203c69}{get\+Cashier\+By\+Name}} (String name)
+\begin{DoxyCompactList}\small\item\em GET cashier by name. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Cashier}{Cashier}} \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a5ccde9cb38cb1741c364f1a65cad283d}{update\+Cashier}} (Long id, \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Cashier}{Cashier}} cashier)
+\begin{DoxyCompactList}\small\item\em PUT update cashier by ID. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink}{Drink}} $>$ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_ac0671dc5765cc1f7f7a9d0b5d690041f}{get\+All\+Drinks}} ()
+\begin{DoxyCompactList}\small\item\em GET all drinks. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink}{Drink}} \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_ac4825df93e005622f3f71ce0d7674608}{get\+Drink\+By\+Id}} (Long id)
+\begin{DoxyCompactList}\small\item\em GET drink by ID. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink}{Drink}} \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a42cce76ccfae7975a92454d7a8313556}{create\+Drink}} (\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink}{Drink}} drink)
+\begin{DoxyCompactList}\small\item\em POST create new drink. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink}{Drink}} \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a782dd911607bce7a0c6426e8ace50862}{update\+Drink}} (Long id, \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink}{Drink}} drink)
+\begin{DoxyCompactList}\small\item\em PUT update drink by ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_ae27f2dc01eb0ef2452b4ad3ab939d1bf}{delete\+Drink}} (Long id)
+\begin{DoxyCompactList}\small\item\em DELETE drink by ID. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1MainCourse}{Main\+Course}} $>$ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_ac6ad4ae81f09381c7c4ec35f699e90c4}{get\+All\+Main\+Courses}} ()
+\begin{DoxyCompactList}\small\item\em GET all maincourses. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1MainCourse}{Main\+Course}} \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a195ead247d29f2a07fb56b267a39c201}{get\+Main\+Course\+By\+Id}} (Long id)
+\begin{DoxyCompactList}\small\item\em GET maincourse by ID. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1MainCourse}{Main\+Course}} \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a67104be05b59c4804776c17211e9614f}{create\+Main\+Course}} (\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1MainCourse}{Main\+Course}} main\+Course)
+\begin{DoxyCompactList}\small\item\em POST create new maincourse. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1MainCourse}{Main\+Course}} \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_aefac6b70b8d5e0ca2792e31aa4cf40e8}{update\+Main\+Course}} (Long id, \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1MainCourse}{Main\+Course}} main\+Course)
+\begin{DoxyCompactList}\small\item\em PUT update maincourse by ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a054c898546778fd8ae02ebb0bd84ecef}{delete\+Main\+Course}} (Long id)
+\begin{DoxyCompactList}\small\item\em DELETE maincourse by ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a6ac45ef905c3995dd98ef8e571353873}{login}} (String ignored)
+\begin{DoxyCompactList}\small\item\em Legacy login method kept for compatibility. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User}{User}} \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_af83061bc53104044af867b1f7040c955}{login}} (String username, String password)
+\begin{DoxyCompactList}\small\item\em Authenticates a user against the backend. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+final Http\+Client \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_aa5ba7fcb6c259fcc2338727f03ecd837}{http}}
+\begin{DoxyCompactList}\small\item\em Low-\/level HTTP client to send requests. \end{DoxyCompactList}\item 
+final String \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a34e7093782fed02590b8144b2587bfb8}{base\+Url}}
+\begin{DoxyCompactList}\small\item\em Base URL of the REST API. \end{DoxyCompactList}\item 
+final Object\+Mapper \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_adfd26bea00a33e2f7e3fc969c723f154}{mapper}}
+\begin{DoxyCompactList}\small\item\em JSON object mapper for serialization/deserialization\+: converts between JSON and Java objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a1ad2fd15081bf7b6d1cf4d91c70f965f}{APPLICATION\+\_\+\+JSON}} = "{}application/json"{}
+\begin{DoxyCompactList}\small\item\em Constant for JSON content type. \end{DoxyCompactList}\item 
+static final Logger \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a9cdb8cc4a8ce12e1cf3fd78ee8406c5b}{LOGGER}} = Logger\+Factory.\+get\+Logger(Api\+Client.\+class)
+\begin{DoxyCompactList}\small\item\em Logger for logging events and errors. \end{DoxyCompactList}\item 
+static final String \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a43674470f1df0d205cb796be39ebffb7}{CONTENT\+\_\+\+TYPE}} = "{}Content-\/Type"{}
+\begin{DoxyCompactList}\small\item\em HTTP header for content type. \end{DoxyCompactList}\item 
+static final String \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a883662e38a8a6355c1005fc7f34931e6}{API\+\_\+\+APPETIZERS}} = "{}/api/appetizers/"{}
+\begin{DoxyCompactList}\small\item\em API endpoint for appetizers. \end{DoxyCompactList}\item 
+static final String \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a0d37367d5d26ba74e76b75eea37a2ed4}{API\+\_\+\+DRINKS}} = "{}/api/drinks/"{}
+\begin{DoxyCompactList}\small\item\em API endpoint for drinks. \end{DoxyCompactList}\item 
+static final String \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a6e90bcbf8293b94f083c4fa3d0798008}{API\+\_\+\+MAINCOURSES}} = "{}/api/maincourses/"{}
+\begin{DoxyCompactList}\small\item\em API endpoint for main courses. \end{DoxyCompactList}\item 
+static final String \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a60325ca64e77c7dab7be91b4d4696b2f}{API\+\_\+\+LOGIN}} = "{}/api/login"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+API client for interacting with the backend REST API. 
+
+\begin{DoxyVerb}   Wraps HttpClient and provides methods to:
+   - perform CRUD operations on Appetizers, Cashiers, Drinks, MainCourses.
+   - send login requests to the backend.
+\end{DoxyVerb}
+ 
+
+Definition at line \mbox{\hyperlink{ApiClient_8java_source_l00031}{31}} of file \mbox{\hyperlink{ApiClient_8java_source}{Api\+Client.\+java}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_aa91db363d76c66888bae50b0d65d11fa}\index{es.ull.esit.app.middleware.ApiClient@{es.ull.esit.app.middleware.ApiClient}!ApiClient@{ApiClient}}
+\index{ApiClient@{ApiClient}!es.ull.esit.app.middleware.ApiClient@{es.ull.esit.app.middleware.ApiClient}}
+\doxysubsubsection{\texorpdfstring{ApiClient()}{ApiClient()}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_aa91db363d76c66888bae50b0d65d11fa} 
+es.\+ull.\+esit.\+app.\+middleware.\+Api\+Client.\+Api\+Client (\begin{DoxyParamCaption}\item[{String}]{base\+Url}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs the \doxylink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient}{Api\+Client} with the given base URL. 
+
+\begin{DoxyVerb}   If the base URL ends with "/", the slash is removed to avoid double
+   slashes.
+\end{DoxyVerb}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Url} & \mbox{[}String\mbox{]} Base URL of the REST API, such as "{}http\+://localhost\+:8080"{}. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{ApiClient_8java_source_l00074}{74}} of file \mbox{\hyperlink{ApiClient_8java_source}{Api\+Client.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00075\ \ \ \ \ this.baseUrl\ =\ baseUrl.endsWith(\textcolor{stringliteral}{"{}/"{}})\ ?\ baseUrl.substring(0,\ baseUrl.length()\ -\/\ 1)\ :\ baseUrl;}
+\DoxyCodeLine{00076\ \ \ \ \ this.http\ =\ HttpClient.newBuilder()}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ .connectTimeout(Duration.ofSeconds(5))}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ .build();}
+\DoxyCodeLine{00079\ \ \ \ \ this.mapper\ =\ \textcolor{keyword}{new}\ ObjectMapper();}
+\DoxyCodeLine{00080\ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{ApiClient_8java_source_l00057}{base\+Url}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a011f83f03ca4fadc10aec98779c409c8}\index{es.ull.esit.app.middleware.ApiClient@{es.ull.esit.app.middleware.ApiClient}!createAppetizer@{createAppetizer}}
+\index{createAppetizer@{createAppetizer}!es.ull.esit.app.middleware.ApiClient@{es.ull.esit.app.middleware.ApiClient}}
+\doxysubsubsection{\texorpdfstring{createAppetizer()}{createAppetizer()}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a011f83f03ca4fadc10aec98779c409c8} 
+\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Appetizer}{Appetizer}} es.\+ull.\+esit.\+app.\+middleware.\+Api\+Client.\+create\+Appetizer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Appetizer}{Appetizer}}}]{appetizer}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+POST create new appetizer. 
+
+Creates a new appetizer in the backend.
+
+
+\begin{DoxyParams}{Parameters}
+{\em appetizer} & \mbox{[}\doxylink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Appetizer}{Appetizer}\mbox{]} \doxylink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Appetizer}{Appetizer} object to create. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{[}\doxylink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Appetizer}{Appetizer}\mbox{]} Created \doxylink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Appetizer}{Appetizer} object returned from the backend. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{ApiClient_8java_source_l00274}{274}} of file \mbox{\hyperlink{ApiClient_8java_source}{Api\+Client.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00275\ \ \ \ \ \textcolor{keywordflow}{return}\ post(\textcolor{stringliteral}{"{}/api/appetizers"{}},\ appetizer,\ Appetizer.class);}
+\DoxyCodeLine{00276\ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a42cce76ccfae7975a92454d7a8313556}\index{es.ull.esit.app.middleware.ApiClient@{es.ull.esit.app.middleware.ApiClient}!createDrink@{createDrink}}
+\index{createDrink@{createDrink}!es.ull.esit.app.middleware.ApiClient@{es.ull.esit.app.middleware.ApiClient}}
+\doxysubsubsection{\texorpdfstring{createDrink()}{createDrink()}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a42cce76ccfae7975a92454d7a8313556} 
+\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink}{Drink}} es.\+ull.\+esit.\+app.\+middleware.\+Api\+Client.\+create\+Drink (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink}{Drink}}}]{drink}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+POST create new drink. 
+
+\begin{DoxyVerb}   Creates a new drink in the backend.
+\end{DoxyVerb}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em drink} & \mbox{[}\doxylink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink}{Drink}\mbox{]} \doxylink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink}{Drink} object to create. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{[}\doxylink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink}{Drink}\mbox{]} Created \doxylink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink}{Drink} object returned from the backend. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{ApiClient_8java_source_l00416}{416}} of file \mbox{\hyperlink{ApiClient_8java_source}{Api\+Client.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00416\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00417\ \ \ \ \ \textcolor{keywordflow}{return}\ post(\textcolor{stringliteral}{"{}/api/drinks"{}},\ drink,\ Drink.class);}
+\DoxyCodeLine{00418\ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a67104be05b59c4804776c17211e9614f}\index{es.ull.esit.app.middleware.ApiClient@{es.ull.esit.app.middleware.ApiClient}!createMainCourse@{createMainCourse}}
+\index{createMainCourse@{createMainCourse}!es.ull.esit.app.middleware.ApiClient@{es.ull.esit.app.middleware.ApiClient}}
+\doxysubsubsection{\texorpdfstring{createMainCourse()}{createMainCourse()}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a67104be05b59c4804776c17211e9614f} 
+\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1MainCourse}{Main\+Course}} es.\+ull.\+esit.\+app.\+middleware.\+Api\+Client.\+create\+Main\+Course (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1MainCourse}{Main\+Course}}}]{main\+Course}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+POST create new maincourse. 
+
+\begin{DoxyVerb}   Creates a new maincourse in the backend.
+\end{DoxyVerb}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em main\+Course} & \mbox{[}\doxylink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1MainCourse}{Main\+Course}\mbox{]} \doxylink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1MainCourse}{Main\+Course} object to create. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{[}\doxylink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1MainCourse}{Main\+Course}\mbox{]} Created \doxylink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1MainCourse}{Main\+Course} object returned from the backend. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{ApiClient_8java_source_l00498}{498}} of file \mbox{\hyperlink{ApiClient_8java_source}{Api\+Client.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00498\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00499\ \ \ \ \ \textcolor{keywordflow}{return}\ post(\textcolor{stringliteral}{"{}/api/maincourses"{}},\ mainCourse,\ MainCourse.class);}
+\DoxyCodeLine{00500\ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a7ca75a1a565560e364cea86fd390619e}\index{es.ull.esit.app.middleware.ApiClient@{es.ull.esit.app.middleware.ApiClient}!deleteAppetizer@{deleteAppetizer}}
+\index{deleteAppetizer@{deleteAppetizer}!es.ull.esit.app.middleware.ApiClient@{es.ull.esit.app.middleware.ApiClient}}
+\doxysubsubsection{\texorpdfstring{deleteAppetizer()}{deleteAppetizer()}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a7ca75a1a565560e364cea86fd390619e} 
+void es.\+ull.\+esit.\+app.\+middleware.\+Api\+Client.\+delete\+Appetizer (\begin{DoxyParamCaption}\item[{Long}]{id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+DELETE appetizer by ID. 
+
+Deletes an existing appetizer in the backend.
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \mbox{[}Long\mbox{]} ID of the appetizer to delete. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{ApiClient_8java_source_l00308}{308}} of file \mbox{\hyperlink{ApiClient_8java_source}{Api\+Client.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00308\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00309\ \ \ \ \ String\ path\ =\ API\_APPETIZERS\ +\ id;}
+\DoxyCodeLine{00310\ \ \ \ \ execute(\textcolor{stringliteral}{"{}deleteAppetizer\ id="{}}\ +\ \textcolor{keywordtype}{id},\ ()\ -\/>\ sendAndHandle(\textcolor{stringliteral}{"{}DELETE\ "{}}\ +\ path,}
+\DoxyCodeLine{00311\ \ \ \ \ \ \ \ \ HttpRequest.newBuilder().uri(URI.create(baseUrl\ +\ path)).DELETE().build(),\ (status,\ body)\ -\/>\ \{}
+\DoxyCodeLine{00312\ \ \ \ \ \ \ \ \ \ \ if\ (status\ <\ 200\ ||\ status\ >=\ 300)\ \{}
+\DoxyCodeLine{00313\ \ \ \ \ \ \ \ \ \ \ \ \ throw\ new\ ApiClientException(\textcolor{stringliteral}{"{}DELETE\ "{}}\ +\ path\ +\ \textcolor{stringliteral}{"{}\ failed\ with\ HTTP\ "{}}\ +\ status\ +\ \textcolor{stringliteral}{"{}\ body:\ "{}}\ +\ body);}
+\DoxyCodeLine{00314\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00315\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00316\ \ \ \ \ \ \ \ \ \}));}
+\DoxyCodeLine{00317\ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{ApiClient_8java_source_l00043}{API\+\_\+\+APPETIZERS}}, and \mbox{\hyperlink{ApiClient_8java_source_l00057}{base\+Url}}.
+
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_ae27f2dc01eb0ef2452b4ad3ab939d1bf}\index{es.ull.esit.app.middleware.ApiClient@{es.ull.esit.app.middleware.ApiClient}!deleteDrink@{deleteDrink}}
+\index{deleteDrink@{deleteDrink}!es.ull.esit.app.middleware.ApiClient@{es.ull.esit.app.middleware.ApiClient}}
+\doxysubsubsection{\texorpdfstring{deleteDrink()}{deleteDrink()}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_ae27f2dc01eb0ef2452b4ad3ab939d1bf} 
+void es.\+ull.\+esit.\+app.\+middleware.\+Api\+Client.\+delete\+Drink (\begin{DoxyParamCaption}\item[{Long}]{id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+DELETE drink by ID. 
+
+\begin{DoxyVerb}   Deletes an existing drink in the backend.
+\end{DoxyVerb}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \mbox{[}Long\mbox{]} ID of the drink to delete. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{ApiClient_8java_source_l00452}{452}} of file \mbox{\hyperlink{ApiClient_8java_source}{Api\+Client.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00452\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00453\ \ \ \ \ String\ path\ =\ API\_DRINKS\ +\ id;}
+\DoxyCodeLine{00454\ \ \ \ \ execute(\textcolor{stringliteral}{"{}deleteDrink\ id="{}}\ +\ \textcolor{keywordtype}{id},\ ()\ -\/>\ sendAndHandle(\textcolor{stringliteral}{"{}DELETE\ "{}}\ +\ path,}
+\DoxyCodeLine{00455\ \ \ \ \ \ \ \ \ HttpRequest.newBuilder().uri(URI.create(baseUrl\ +\ path)).DELETE().build(),\ (status,\ body)\ -\/>\ \{}
+\DoxyCodeLine{00456\ \ \ \ \ \ \ \ \ \ \ if\ (status\ <\ 200\ ||\ status\ >=\ 300)\ \{}
+\DoxyCodeLine{00457\ \ \ \ \ \ \ \ \ \ \ \ \ throw\ new\ ApiClientException(\textcolor{stringliteral}{"{}DELETE\ "{}}\ +\ path\ +\ \textcolor{stringliteral}{"{}\ failed\ with\ HTTP\ "{}}\ +\ status\ +\ \textcolor{stringliteral}{"{}\ body:\ "{}}\ +\ body);}
+\DoxyCodeLine{00458\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00459\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00460\ \ \ \ \ \ \ \ \ \}));}
+\DoxyCodeLine{00461\ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{ApiClient_8java_source_l00046}{API\+\_\+\+DRINKS}}, and \mbox{\hyperlink{ApiClient_8java_source_l00057}{base\+Url}}.
+
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a054c898546778fd8ae02ebb0bd84ecef}\index{es.ull.esit.app.middleware.ApiClient@{es.ull.esit.app.middleware.ApiClient}!deleteMainCourse@{deleteMainCourse}}
+\index{deleteMainCourse@{deleteMainCourse}!es.ull.esit.app.middleware.ApiClient@{es.ull.esit.app.middleware.ApiClient}}
+\doxysubsubsection{\texorpdfstring{deleteMainCourse()}{deleteMainCourse()}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a054c898546778fd8ae02ebb0bd84ecef} 
+void es.\+ull.\+esit.\+app.\+middleware.\+Api\+Client.\+delete\+Main\+Course (\begin{DoxyParamCaption}\item[{Long}]{id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+DELETE maincourse by ID. 
+
+\begin{DoxyVerb}   Deletes an existing maincourse in the backend by its ID.
+\end{DoxyVerb}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \mbox{[}Long\mbox{]} ID of the maincourse to delete. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{ApiClient_8java_source_l00534}{534}} of file \mbox{\hyperlink{ApiClient_8java_source}{Api\+Client.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00534\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00535\ \ \ \ \ String\ path\ =\ API\_MAINCOURSES\ +\ id;}
+\DoxyCodeLine{00536\ \ \ \ \ execute(\textcolor{stringliteral}{"{}deleteMainCourse\ id="{}}\ +\ \textcolor{keywordtype}{id},\ ()\ -\/>\ sendAndHandle(\textcolor{stringliteral}{"{}DELETE\ "{}}\ +\ path,}
+\DoxyCodeLine{00537\ \ \ \ \ \ \ \ \ HttpRequest.newBuilder().uri(URI.create(baseUrl\ +\ path)).DELETE().build(),\ (status,\ body)\ -\/>\ \{}
+\DoxyCodeLine{00538\ \ \ \ \ \ \ \ \ \ \ if\ (status\ <\ 200\ ||\ status\ >=\ 300)\ \{}
+\DoxyCodeLine{00539\ \ \ \ \ \ \ \ \ \ \ \ \ throw\ new\ ApiClientException(\textcolor{stringliteral}{"{}DELETE\ "{}}\ +\ path\ +\ \textcolor{stringliteral}{"{}\ failed\ with\ HTTP\ "{}}\ +\ status\ +\ \textcolor{stringliteral}{"{}\ body:\ "{}}\ +\ body);}
+\DoxyCodeLine{00540\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00541\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00542\ \ \ \ \ \ \ \ \ \}));}
+\DoxyCodeLine{00543\ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{ApiClient_8java_source_l00049}{API\+\_\+\+MAINCOURSES}}, and \mbox{\hyperlink{ApiClient_8java_source_l00057}{base\+Url}}.
+
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a51281f54fefeb800184db1c61938b8f0}\index{es.ull.esit.app.middleware.ApiClient@{es.ull.esit.app.middleware.ApiClient}!getAllAppetizers@{getAllAppetizers}}
+\index{getAllAppetizers@{getAllAppetizers}!es.ull.esit.app.middleware.ApiClient@{es.ull.esit.app.middleware.ApiClient}}
+\doxysubsubsection{\texorpdfstring{getAllAppetizers()}{getAllAppetizers()}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a51281f54fefeb800184db1c61938b8f0} 
+List$<$ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Appetizer}{Appetizer}} $>$ es.\+ull.\+esit.\+app.\+middleware.\+Api\+Client.\+get\+All\+Appetizers (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+GET all appetizers. 
+
+\begin{DoxyVerb}   Retrieves a list of all appetizers from the backend.
+\end{DoxyVerb}
+
+
+\begin{DoxyReturn}{Returns}
+\mbox{[}List$<$\+Appetizer$>$\mbox{]} List of all appetizers. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{ApiClient_8java_source_l00251}{251}} of file \mbox{\hyperlink{ApiClient_8java_source}{Api\+Client.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00252\ \ \ \ \ \textcolor{keywordflow}{return}\ getList(\textcolor{stringliteral}{"{}/api/appetizers"{}},\ \textcolor{keyword}{new}\ TypeReference<List<Appetizer>>()\ \{\});}
+\DoxyCodeLine{00253\ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a36db088ab0a20bbb898b53d20063fd33}\index{es.ull.esit.app.middleware.ApiClient@{es.ull.esit.app.middleware.ApiClient}!getAllCashiers@{getAllCashiers}}
+\index{getAllCashiers@{getAllCashiers}!es.ull.esit.app.middleware.ApiClient@{es.ull.esit.app.middleware.ApiClient}}
+\doxysubsubsection{\texorpdfstring{getAllCashiers()}{getAllCashiers()}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a36db088ab0a20bbb898b53d20063fd33} 
+List$<$ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Cashier}{Cashier}} $>$ es.\+ull.\+esit.\+app.\+middleware.\+Api\+Client.\+get\+All\+Cashiers (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+GET all cashiers. 
+
+Retrieves a list of all cashiers from the backend.
+
+\begin{DoxyReturn}{Returns}
+\mbox{[}List$<$\+Cashier$>$\mbox{]} List of all cashiers. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{ApiClient_8java_source_l00330}{330}} of file \mbox{\hyperlink{ApiClient_8java_source}{Api\+Client.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00330\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00331\ \ \ \ \ \textcolor{keywordflow}{return}\ getList(\textcolor{stringliteral}{"{}/api/cashiers"{}},\ \textcolor{keyword}{new}\ TypeReference<List<Cashier>>()\ \{\});}
+\DoxyCodeLine{00332\ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_ac0671dc5765cc1f7f7a9d0b5d690041f}\index{es.ull.esit.app.middleware.ApiClient@{es.ull.esit.app.middleware.ApiClient}!getAllDrinks@{getAllDrinks}}
+\index{getAllDrinks@{getAllDrinks}!es.ull.esit.app.middleware.ApiClient@{es.ull.esit.app.middleware.ApiClient}}
+\doxysubsubsection{\texorpdfstring{getAllDrinks()}{getAllDrinks()}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_ac0671dc5765cc1f7f7a9d0b5d690041f} 
+List$<$ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink}{Drink}} $>$ es.\+ull.\+esit.\+app.\+middleware.\+Api\+Client.\+get\+All\+Drinks (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+GET all drinks. 
+
+\begin{DoxyVerb}    Retrieves a list of all drinks from the backend.
+\end{DoxyVerb}
+
+
+\begin{DoxyReturn}{Returns}
+\mbox{[}List$<$\+Drink$>$\mbox{]} List of all drinks. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{ApiClient_8java_source_l00392}{392}} of file \mbox{\hyperlink{ApiClient_8java_source}{Api\+Client.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00392\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00393\ \ \ \ \ \textcolor{keywordflow}{return}\ getList(\textcolor{stringliteral}{"{}/api/drinks"{}},\ \textcolor{keyword}{new}\ TypeReference<List<Drink>>()\ \{\});}
+\DoxyCodeLine{00394\ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_ac6ad4ae81f09381c7c4ec35f699e90c4}\index{es.ull.esit.app.middleware.ApiClient@{es.ull.esit.app.middleware.ApiClient}!getAllMainCourses@{getAllMainCourses}}
+\index{getAllMainCourses@{getAllMainCourses}!es.ull.esit.app.middleware.ApiClient@{es.ull.esit.app.middleware.ApiClient}}
+\doxysubsubsection{\texorpdfstring{getAllMainCourses()}{getAllMainCourses()}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_ac6ad4ae81f09381c7c4ec35f699e90c4} 
+List$<$ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1MainCourse}{Main\+Course}} $>$ es.\+ull.\+esit.\+app.\+middleware.\+Api\+Client.\+get\+All\+Main\+Courses (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+GET all maincourses. 
+
+\begin{DoxyVerb}   Retrieves a list of all maincourses from the backend.
+\end{DoxyVerb}
+
+
+\begin{DoxyReturn}{Returns}
+\mbox{[}List$<$\+Main\+Course$>$\mbox{]} List of all maincourses. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{ApiClient_8java_source_l00474}{474}} of file \mbox{\hyperlink{ApiClient_8java_source}{Api\+Client.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00474\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00475\ \ \ \ \ \textcolor{keywordflow}{return}\ getList(\textcolor{stringliteral}{"{}/api/maincourses"{}},\ \textcolor{keyword}{new}\ TypeReference<List<MainCourse>>()\ \{\});}
+\DoxyCodeLine{00476\ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_af922406f62cf7437798dfd48fc080bf6}\index{es.ull.esit.app.middleware.ApiClient@{es.ull.esit.app.middleware.ApiClient}!getAppetizerById@{getAppetizerById}}
+\index{getAppetizerById@{getAppetizerById}!es.ull.esit.app.middleware.ApiClient@{es.ull.esit.app.middleware.ApiClient}}
+\doxysubsubsection{\texorpdfstring{getAppetizerById()}{getAppetizerById()}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_af922406f62cf7437798dfd48fc080bf6} 
+\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Appetizer}{Appetizer}} es.\+ull.\+esit.\+app.\+middleware.\+Api\+Client.\+get\+Appetizer\+By\+Id (\begin{DoxyParamCaption}\item[{Long}]{id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+GET appetizer by ID. 
+
+\begin{DoxyVerb}   Retrieves an appetizer by its ID from the backend.
+\end{DoxyVerb}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \mbox{[}Long\mbox{]} ID of the appetizer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{[}\doxylink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Appetizer}{Appetizer}\mbox{]} \doxylink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Appetizer}{Appetizer} object. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{ApiClient_8java_source_l00263}{263}} of file \mbox{\hyperlink{ApiClient_8java_source}{Api\+Client.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00264\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{get}(API\_APPETIZERS\ +\ id,\ Appetizer.class);}
+\DoxyCodeLine{00265\ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{ApiClient_8java_source_l00043}{API\+\_\+\+APPETIZERS}}.
+
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_aa82c8ff95a2f62fc0f2ce2f09c642feb}\index{es.ull.esit.app.middleware.ApiClient@{es.ull.esit.app.middleware.ApiClient}!getCashierById@{getCashierById}}
+\index{getCashierById@{getCashierById}!es.ull.esit.app.middleware.ApiClient@{es.ull.esit.app.middleware.ApiClient}}
+\doxysubsubsection{\texorpdfstring{getCashierById()}{getCashierById()}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_aa82c8ff95a2f62fc0f2ce2f09c642feb} 
+\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Cashier}{Cashier}} es.\+ull.\+esit.\+app.\+middleware.\+Api\+Client.\+get\+Cashier\+By\+Id (\begin{DoxyParamCaption}\item[{Long}]{id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+GET cashier by ID. 
+
+Retrieves a cashier by its ID from the backend.
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \mbox{[}Long\mbox{]} ID of the cashier. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{[}\doxylink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Cashier}{Cashier}\mbox{]} \doxylink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Cashier}{Cashier} object. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{ApiClient_8java_source_l00341}{341}} of file \mbox{\hyperlink{ApiClient_8java_source}{Api\+Client.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00341\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00342\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{get}(\textcolor{stringliteral}{"{}/api/cashiers/"{}}\ +\ id,\ Cashier.class);}
+\DoxyCodeLine{00343\ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_af3eae943ad671742fe64e62ee9203c69}\index{es.ull.esit.app.middleware.ApiClient@{es.ull.esit.app.middleware.ApiClient}!getCashierByName@{getCashierByName}}
+\index{getCashierByName@{getCashierByName}!es.ull.esit.app.middleware.ApiClient@{es.ull.esit.app.middleware.ApiClient}}
+\doxysubsubsection{\texorpdfstring{getCashierByName()}{getCashierByName()}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_af3eae943ad671742fe64e62ee9203c69} 
+\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Cashier}{Cashier}} es.\+ull.\+esit.\+app.\+middleware.\+Api\+Client.\+get\+Cashier\+By\+Name (\begin{DoxyParamCaption}\item[{String}]{name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+GET cashier by name. 
+
+Retrieves a cashier by its username from the backend.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \mbox{[}String\mbox{]} username of the cashier. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{[}\doxylink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Cashier}{Cashier}\mbox{]} \doxylink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Cashier}{Cashier} object. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{ApiClient_8java_source_l00352}{352}} of file \mbox{\hyperlink{ApiClient_8java_source}{Api\+Client.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00352\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00353\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{get}(\textcolor{stringliteral}{"{}/api/cashiers/name/"{}}\ +\ name,\ Cashier.class);}
+\DoxyCodeLine{00354\ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_ac4825df93e005622f3f71ce0d7674608}\index{es.ull.esit.app.middleware.ApiClient@{es.ull.esit.app.middleware.ApiClient}!getDrinkById@{getDrinkById}}
+\index{getDrinkById@{getDrinkById}!es.ull.esit.app.middleware.ApiClient@{es.ull.esit.app.middleware.ApiClient}}
+\doxysubsubsection{\texorpdfstring{getDrinkById()}{getDrinkById()}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_ac4825df93e005622f3f71ce0d7674608} 
+\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink}{Drink}} es.\+ull.\+esit.\+app.\+middleware.\+Api\+Client.\+get\+Drink\+By\+Id (\begin{DoxyParamCaption}\item[{Long}]{id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+GET drink by ID. 
+
+\begin{DoxyVerb}   Retrieves a drink by its ID from the backend.
+\end{DoxyVerb}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \mbox{[}Long\mbox{]} ID of the drink. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{[}\doxylink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink}{Drink}\mbox{]} \doxylink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink}{Drink} object. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{ApiClient_8java_source_l00404}{404}} of file \mbox{\hyperlink{ApiClient_8java_source}{Api\+Client.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00404\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00405\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{get}(API\_DRINKS\ +\ id,\ Drink.class);}
+\DoxyCodeLine{00406\ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{ApiClient_8java_source_l00046}{API\+\_\+\+DRINKS}}.
+
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a195ead247d29f2a07fb56b267a39c201}\index{es.ull.esit.app.middleware.ApiClient@{es.ull.esit.app.middleware.ApiClient}!getMainCourseById@{getMainCourseById}}
+\index{getMainCourseById@{getMainCourseById}!es.ull.esit.app.middleware.ApiClient@{es.ull.esit.app.middleware.ApiClient}}
+\doxysubsubsection{\texorpdfstring{getMainCourseById()}{getMainCourseById()}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a195ead247d29f2a07fb56b267a39c201} 
+\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1MainCourse}{Main\+Course}} es.\+ull.\+esit.\+app.\+middleware.\+Api\+Client.\+get\+Main\+Course\+By\+Id (\begin{DoxyParamCaption}\item[{Long}]{id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+GET maincourse by ID. 
+
+\begin{DoxyVerb}   Retrieves a maincourse by its ID from the backend.
+\end{DoxyVerb}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \mbox{[}Long\mbox{]} ID of the maincourse. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{[}\doxylink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1MainCourse}{Main\+Course}\mbox{]} \doxylink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1MainCourse}{Main\+Course} object. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{ApiClient_8java_source_l00486}{486}} of file \mbox{\hyperlink{ApiClient_8java_source}{Api\+Client.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00486\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00487\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{get}(API\_MAINCOURSES\ +\ id,\ MainCourse.class);}
+\DoxyCodeLine{00488\ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{ApiClient_8java_source_l00049}{API\+\_\+\+MAINCOURSES}}.
+
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a6ac45ef905c3995dd98ef8e571353873}\index{es.ull.esit.app.middleware.ApiClient@{es.ull.esit.app.middleware.ApiClient}!login@{login}}
+\index{login@{login}!es.ull.esit.app.middleware.ApiClient@{es.ull.esit.app.middleware.ApiClient}}
+\doxysubsubsection{\texorpdfstring{login()}{login()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a6ac45ef905c3995dd98ef8e571353873} 
+void es.\+ull.\+esit.\+app.\+middleware.\+Api\+Client.\+login (\begin{DoxyParamCaption}\item[{String}]{ignored}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Legacy login method kept for compatibility. 
+
+\begin{DoxyVerb}   If authentication is added in the future, it can be implemented here.
+\end{DoxyVerb}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em ignored} & \mbox{[}String\mbox{]} Ignored parameter. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{ApiClient_8java_source_l00556}{556}} of file \mbox{\hyperlink{ApiClient_8java_source}{Api\+Client.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00556\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00557\ \ \ \ \ \textcolor{comment}{//\ No-\/op:\ kept\ for\ compatibility.}}
+\DoxyCodeLine{00558\ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_af83061bc53104044af867b1f7040c955}\index{es.ull.esit.app.middleware.ApiClient@{es.ull.esit.app.middleware.ApiClient}!login@{login}}
+\index{login@{login}!es.ull.esit.app.middleware.ApiClient@{es.ull.esit.app.middleware.ApiClient}}
+\doxysubsubsection{\texorpdfstring{login()}{login()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_af83061bc53104044af867b1f7040c955} 
+\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User}{User}} es.\+ull.\+esit.\+app.\+middleware.\+Api\+Client.\+login (\begin{DoxyParamCaption}\item[{String}]{username}{, }\item[{String}]{password}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Authenticates a user against the backend. 
+
+\begin{DoxyVerb}   Sends a POST request to "/api/login" with username and password.
+   If the response status is 200, it returns the User parsed from JSON.
+   For any other status code it throws ApiClientException.
+\end{DoxyVerb}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & \mbox{[}String\mbox{]} Username entered by the user. \\
+\hline
+{\em password} & \mbox{[}String\mbox{]} Password entered by the user. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{[}\doxylink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User}{User}\mbox{]} Authenticated \doxylink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User}{User} object. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{ApiClient_8java_source_l00571}{571}} of file \mbox{\hyperlink{ApiClient_8java_source}{Api\+Client.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00571\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00572\ \ \ \ \ String\ path\ =\ API\_LOGIN;}
+\DoxyCodeLine{00573\ \ \ \ \ \textcolor{keywordflow}{return}\ execute(\textcolor{stringliteral}{"{}login\ for\ user="{}}\ +\ username,\ ()\ -\/>\ \{}
+\DoxyCodeLine{00574\ \ \ \ \ \ \ String\ jsonBody\ =\ mapper.writeValueAsString(Map.of(}
+\DoxyCodeLine{00575\ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}username"{}},\ username,}
+\DoxyCodeLine{00576\ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}password"{}},\ password));}
+\DoxyCodeLine{00577\ }
+\DoxyCodeLine{00578\ \ \ \ \ \ \ HttpRequest\ request\ =\ HttpRequest.newBuilder().uri(URI.create(baseUrl\ +\ path))}
+\DoxyCodeLine{00579\ \ \ \ \ \ \ \ \ \ \ .header(CONTENT\_TYPE,\ APPLICATION\_JSON).POST(HttpRequest.BodyPublishers.ofString(jsonBody)).build();}
+\DoxyCodeLine{00580\ }
+\DoxyCodeLine{00581\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ sendAndHandle(\textcolor{stringliteral}{"{}POST\ "{}}\ +\ path,\ request,\ (status,\ body)\ -\/>\ \{}
+\DoxyCodeLine{00582\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (status\ ==\ 200)\ \{}
+\DoxyCodeLine{00583\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ mapper.readValue(body,\ User.class);}
+\DoxyCodeLine{00584\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00585\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ ApiClientException(\textcolor{stringliteral}{"{}Login\ failed\ with\ status:\ "{}}\ +\ status\ +\ \textcolor{stringliteral}{"{}\ body:\ "{}}\ +\ body);}
+\DoxyCodeLine{00586\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00587\ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00588\ \ \ \ \ \});}
+\DoxyCodeLine{00589\ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{ApiClient_8java_source_l00051}{API\+\_\+\+LOGIN}}, \mbox{\hyperlink{ApiClient_8java_source_l00034}{APPLICATION\+\_\+\+JSON}}, \mbox{\hyperlink{ApiClient_8java_source_l00057}{base\+Url}}, \mbox{\hyperlink{ApiClient_8java_source_l00040}{CONTENT\+\_\+\+TYPE}}, and \mbox{\hyperlink{ApiClient_8java_source_l00063}{mapper}}.
+
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a56dbbc11355ae6cbeacd65f39d424187}\index{es.ull.esit.app.middleware.ApiClient@{es.ull.esit.app.middleware.ApiClient}!updateAppetizer@{updateAppetizer}}
+\index{updateAppetizer@{updateAppetizer}!es.ull.esit.app.middleware.ApiClient@{es.ull.esit.app.middleware.ApiClient}}
+\doxysubsubsection{\texorpdfstring{updateAppetizer()}{updateAppetizer()}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a56dbbc11355ae6cbeacd65f39d424187} 
+\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Appetizer}{Appetizer}} es.\+ull.\+esit.\+app.\+middleware.\+Api\+Client.\+update\+Appetizer (\begin{DoxyParamCaption}\item[{Long}]{id}{, }\item[{\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Appetizer}{Appetizer}}}]{appetizer}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+PUT update appetizer by ID. 
+
+Updates an existing appetizer in the backend.
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \mbox{[}Long\mbox{]} ID of the appetizer to update. \\
+\hline
+{\em appetizer} & \mbox{[}\doxylink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Appetizer}{Appetizer}\mbox{]} \doxylink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Appetizer}{Appetizer} object with updated data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{[}\doxylink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Appetizer}{Appetizer}\mbox{]} Updated \doxylink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Appetizer}{Appetizer} object returned from the backend. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{ApiClient_8java_source_l00286}{286}} of file \mbox{\hyperlink{ApiClient_8java_source}{Api\+Client.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00287\ \ \ \ \ String\ path\ =\ API\_APPETIZERS\ +\ id;}
+\DoxyCodeLine{00288\ \ \ \ \ \textcolor{keywordflow}{return}\ execute(\textcolor{stringliteral}{"{}updateAppetizer\ id="{}}\ +\ \textcolor{keywordtype}{id},\ ()\ -\/>\ \{}
+\DoxyCodeLine{00289\ \ \ \ \ \ \ String\ json\ =\ mapper.writeValueAsString(appetizer);}
+\DoxyCodeLine{00290\ \ \ \ \ \ \ HttpRequest\ req\ =\ HttpRequest.newBuilder().uri(URI.create(baseUrl\ +\ path))}
+\DoxyCodeLine{00291\ \ \ \ \ \ \ \ \ \ \ .PUT(HttpRequest.BodyPublishers.ofString(json)).header(CONTENT\_TYPE,\ APPLICATION\_JSON).build();}
+\DoxyCodeLine{00292\ }
+\DoxyCodeLine{00293\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ sendAndHandle(\textcolor{stringliteral}{"{}PUT\ "{}}\ +\ path,\ req,\ (status,\ body)\ -\/>\ \{}
+\DoxyCodeLine{00294\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (status\ <\ 200\ ||\ status\ >=\ 300)\ \{}
+\DoxyCodeLine{00295\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ ApiClientException(\textcolor{stringliteral}{"{}PUT\ "{}}\ +\ path\ +\ \textcolor{stringliteral}{"{}\ failed\ with\ HTTP\ "{}}\ +\ status\ +\ \textcolor{stringliteral}{"{}\ body:\ "{}}\ +\ body);}
+\DoxyCodeLine{00296\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00297\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ mapper.readValue(body,\ Appetizer.class);}
+\DoxyCodeLine{00298\ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00299\ \ \ \ \ \});}
+\DoxyCodeLine{00300\ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{ApiClient_8java_source_l00043}{API\+\_\+\+APPETIZERS}}, \mbox{\hyperlink{ApiClient_8java_source_l00034}{APPLICATION\+\_\+\+JSON}}, \mbox{\hyperlink{ApiClient_8java_source_l00057}{base\+Url}}, \mbox{\hyperlink{ApiClient_8java_source_l00040}{CONTENT\+\_\+\+TYPE}}, and \mbox{\hyperlink{ApiClient_8java_source_l00063}{mapper}}.
+
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a5ccde9cb38cb1741c364f1a65cad283d}\index{es.ull.esit.app.middleware.ApiClient@{es.ull.esit.app.middleware.ApiClient}!updateCashier@{updateCashier}}
+\index{updateCashier@{updateCashier}!es.ull.esit.app.middleware.ApiClient@{es.ull.esit.app.middleware.ApiClient}}
+\doxysubsubsection{\texorpdfstring{updateCashier()}{updateCashier()}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a5ccde9cb38cb1741c364f1a65cad283d} 
+\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Cashier}{Cashier}} es.\+ull.\+esit.\+app.\+middleware.\+Api\+Client.\+update\+Cashier (\begin{DoxyParamCaption}\item[{Long}]{id}{, }\item[{\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Cashier}{Cashier}}}]{cashier}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+PUT update cashier by ID. 
+
+\begin{DoxyVerb}   Updates an existing cashier in the backend (name and/or salary).
+\end{DoxyVerb}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \mbox{[}Long\mbox{]} ID of the cashier to update. \\
+\hline
+{\em cashier} & \mbox{[}\doxylink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Cashier}{Cashier}\mbox{]} \doxylink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Cashier}{Cashier} object with updated data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{[}\doxylink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Cashier}{Cashier}\mbox{]} Updated \doxylink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Cashier}{Cashier} object returned from the backend. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{ApiClient_8java_source_l00365}{365}} of file \mbox{\hyperlink{ApiClient_8java_source}{Api\+Client.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00365\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00366\ \ \ \ \ String\ path\ =\ \textcolor{stringliteral}{"{}/api/cashiers/"{}}\ +\ id;}
+\DoxyCodeLine{00367\ \ \ \ \ \textcolor{keywordflow}{return}\ execute(\textcolor{stringliteral}{"{}updateCashier\ id="{}}\ +\ \textcolor{keywordtype}{id},\ ()\ -\/>\ \{}
+\DoxyCodeLine{00368\ \ \ \ \ \ \ String\ json\ =\ mapper.writeValueAsString(cashier);}
+\DoxyCodeLine{00369\ \ \ \ \ \ \ HttpRequest\ req\ =\ HttpRequest.newBuilder().uri(URI.create(baseUrl\ +\ path))}
+\DoxyCodeLine{00370\ \ \ \ \ \ \ \ \ \ \ .PUT(HttpRequest.BodyPublishers.ofString(json)).header(CONTENT\_TYPE,\ APPLICATION\_JSON).build();}
+\DoxyCodeLine{00371\ }
+\DoxyCodeLine{00372\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ sendAndHandle(\textcolor{stringliteral}{"{}PUT\ "{}}\ +\ path,\ req,\ (status,\ body)\ -\/>\ \{}
+\DoxyCodeLine{00373\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (status\ <\ 200\ ||\ status\ >=\ 300)\ \{}
+\DoxyCodeLine{00374\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ ApiClientException(\textcolor{stringliteral}{"{}PUT\ "{}}\ +\ path\ +\ \textcolor{stringliteral}{"{}\ failed\ with\ HTTP\ "{}}\ +\ status\ +\ \textcolor{stringliteral}{"{}\ body:\ "{}}\ +\ body);}
+\DoxyCodeLine{00375\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00376\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ mapper.readValue(body,\ Cashier.class);}
+\DoxyCodeLine{00377\ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00378\ \ \ \ \ \});}
+\DoxyCodeLine{00379\ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{ApiClient_8java_source_l00034}{APPLICATION\+\_\+\+JSON}}, \mbox{\hyperlink{ApiClient_8java_source_l00057}{base\+Url}}, \mbox{\hyperlink{ApiClient_8java_source_l00040}{CONTENT\+\_\+\+TYPE}}, and \mbox{\hyperlink{ApiClient_8java_source_l00063}{mapper}}.
+
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a782dd911607bce7a0c6426e8ace50862}\index{es.ull.esit.app.middleware.ApiClient@{es.ull.esit.app.middleware.ApiClient}!updateDrink@{updateDrink}}
+\index{updateDrink@{updateDrink}!es.ull.esit.app.middleware.ApiClient@{es.ull.esit.app.middleware.ApiClient}}
+\doxysubsubsection{\texorpdfstring{updateDrink()}{updateDrink()}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a782dd911607bce7a0c6426e8ace50862} 
+\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink}{Drink}} es.\+ull.\+esit.\+app.\+middleware.\+Api\+Client.\+update\+Drink (\begin{DoxyParamCaption}\item[{Long}]{id}{, }\item[{\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink}{Drink}}}]{drink}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+PUT update drink by ID. 
+
+\begin{DoxyVerb}   Updates an existing drink in the backend by its ID.
+\end{DoxyVerb}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \mbox{[}Long\mbox{]} ID of the drink to update. \\
+\hline
+{\em drink} & \mbox{[}\doxylink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink}{Drink}\mbox{]} \doxylink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink}{Drink} object with updated data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{[}\doxylink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink}{Drink}\mbox{]} Updated \doxylink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink}{Drink} object returned from the backend. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{ApiClient_8java_source_l00429}{429}} of file \mbox{\hyperlink{ApiClient_8java_source}{Api\+Client.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00429\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00430\ \ \ \ \ String\ path\ =\ API\_DRINKS\ +\ id;}
+\DoxyCodeLine{00431\ \ \ \ \ \textcolor{keywordflow}{return}\ execute(\textcolor{stringliteral}{"{}updateDrink\ id="{}}\ +\ \textcolor{keywordtype}{id},\ ()\ -\/>\ \{}
+\DoxyCodeLine{00432\ \ \ \ \ \ \ String\ json\ =\ mapper.writeValueAsString(drink);}
+\DoxyCodeLine{00433\ \ \ \ \ \ \ HttpRequest\ req\ =\ HttpRequest.newBuilder().uri(URI.create(baseUrl\ +\ path))}
+\DoxyCodeLine{00434\ \ \ \ \ \ \ \ \ \ \ .PUT(HttpRequest.BodyPublishers.ofString(json)).header(CONTENT\_TYPE,\ APPLICATION\_JSON).build();}
+\DoxyCodeLine{00435\ }
+\DoxyCodeLine{00436\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ sendAndHandle(\textcolor{stringliteral}{"{}PUT\ "{}}\ +\ path,\ req,\ (status,\ body)\ -\/>\ \{}
+\DoxyCodeLine{00437\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (status\ <\ 200\ ||\ status\ >=\ 300)\ \{}
+\DoxyCodeLine{00438\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ ApiClientException(\textcolor{stringliteral}{"{}PUT\ "{}}\ +\ path\ +\ \textcolor{stringliteral}{"{}\ failed\ with\ HTTP\ "{}}\ +\ status\ +\ \textcolor{stringliteral}{"{}\ body:\ "{}}\ +\ body);}
+\DoxyCodeLine{00439\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00440\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ mapper.readValue(body,\ Drink.class);}
+\DoxyCodeLine{00441\ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00442\ \ \ \ \ \});}
+\DoxyCodeLine{00443\ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{ApiClient_8java_source_l00046}{API\+\_\+\+DRINKS}}, \mbox{\hyperlink{ApiClient_8java_source_l00034}{APPLICATION\+\_\+\+JSON}}, \mbox{\hyperlink{ApiClient_8java_source_l00057}{base\+Url}}, \mbox{\hyperlink{ApiClient_8java_source_l00040}{CONTENT\+\_\+\+TYPE}}, and \mbox{\hyperlink{ApiClient_8java_source_l00063}{mapper}}.
+
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_aefac6b70b8d5e0ca2792e31aa4cf40e8}\index{es.ull.esit.app.middleware.ApiClient@{es.ull.esit.app.middleware.ApiClient}!updateMainCourse@{updateMainCourse}}
+\index{updateMainCourse@{updateMainCourse}!es.ull.esit.app.middleware.ApiClient@{es.ull.esit.app.middleware.ApiClient}}
+\doxysubsubsection{\texorpdfstring{updateMainCourse()}{updateMainCourse()}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_aefac6b70b8d5e0ca2792e31aa4cf40e8} 
+\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1MainCourse}{Main\+Course}} es.\+ull.\+esit.\+app.\+middleware.\+Api\+Client.\+update\+Main\+Course (\begin{DoxyParamCaption}\item[{Long}]{id}{, }\item[{\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1MainCourse}{Main\+Course}}}]{main\+Course}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+PUT update maincourse by ID. 
+
+\begin{DoxyVerb}   Updates an existing maincourse in the backend.
+\end{DoxyVerb}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \mbox{[}Long\mbox{]} ID of the maincourse to update. \\
+\hline
+{\em main\+Course} & \mbox{[}\doxylink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1MainCourse}{Main\+Course}\mbox{]} \doxylink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1MainCourse}{Main\+Course} object with updated data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{[}\doxylink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1MainCourse}{Main\+Course}\mbox{]} Updated \doxylink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1MainCourse}{Main\+Course} object returned from the backend. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{ApiClient_8java_source_l00511}{511}} of file \mbox{\hyperlink{ApiClient_8java_source}{Api\+Client.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00511\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00512\ \ \ \ \ String\ path\ =\ API\_MAINCOURSES\ +\ id;}
+\DoxyCodeLine{00513\ \ \ \ \ \textcolor{keywordflow}{return}\ execute(\textcolor{stringliteral}{"{}updateMainCourse\ id="{}}\ +\ \textcolor{keywordtype}{id},\ ()\ -\/>\ \{}
+\DoxyCodeLine{00514\ \ \ \ \ \ \ String\ json\ =\ mapper.writeValueAsString(mainCourse);}
+\DoxyCodeLine{00515\ \ \ \ \ \ \ HttpRequest\ req\ =\ HttpRequest.newBuilder().uri(URI.create(baseUrl\ +\ path))}
+\DoxyCodeLine{00516\ \ \ \ \ \ \ \ \ \ \ .PUT(HttpRequest.BodyPublishers.ofString(json)).header(CONTENT\_TYPE,\ APPLICATION\_JSON).build();}
+\DoxyCodeLine{00517\ }
+\DoxyCodeLine{00518\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ sendAndHandle(\textcolor{stringliteral}{"{}PUT\ "{}}\ +\ path,\ req,\ (status,\ body)\ -\/>\ \{}
+\DoxyCodeLine{00519\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (status\ <\ 200\ ||\ status\ >=\ 300)\ \{}
+\DoxyCodeLine{00520\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ ApiClientException(\textcolor{stringliteral}{"{}PUT\ "{}}\ +\ path\ +\ \textcolor{stringliteral}{"{}\ failed\ with\ HTTP\ "{}}\ +\ status\ +\ \textcolor{stringliteral}{"{}\ body:\ "{}}\ +\ body);}
+\DoxyCodeLine{00521\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00522\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ mapper.readValue(body,\ MainCourse.class);}
+\DoxyCodeLine{00523\ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00524\ \ \ \ \ \});}
+\DoxyCodeLine{00525\ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{ApiClient_8java_source_l00049}{API\+\_\+\+MAINCOURSES}}, \mbox{\hyperlink{ApiClient_8java_source_l00034}{APPLICATION\+\_\+\+JSON}}, \mbox{\hyperlink{ApiClient_8java_source_l00057}{base\+Url}}, \mbox{\hyperlink{ApiClient_8java_source_l00040}{CONTENT\+\_\+\+TYPE}}, and \mbox{\hyperlink{ApiClient_8java_source_l00063}{mapper}}.
+
+
+
+\label{doc-variable-members}
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a883662e38a8a6355c1005fc7f34931e6}\index{es.ull.esit.app.middleware.ApiClient@{es.ull.esit.app.middleware.ApiClient}!API\_APPETIZERS@{API\_APPETIZERS}}
+\index{API\_APPETIZERS@{API\_APPETIZERS}!es.ull.esit.app.middleware.ApiClient@{es.ull.esit.app.middleware.ApiClient}}
+\doxysubsubsection{\texorpdfstring{API\_APPETIZERS}{API\_APPETIZERS}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a883662e38a8a6355c1005fc7f34931e6} 
+final String es.\+ull.\+esit.\+app.\+middleware.\+Api\+Client.\+API\+\_\+\+APPETIZERS = "{}/api/appetizers/"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+API endpoint for appetizers. 
+
+
+
+Definition at line \mbox{\hyperlink{ApiClient_8java_source_l00043}{43}} of file \mbox{\hyperlink{ApiClient_8java_source}{Api\+Client.\+java}}.
+
+
+
+Referenced by \mbox{\hyperlink{ApiClient_8java_source_l00308}{delete\+Appetizer()}}, \mbox{\hyperlink{ApiClient_8java_source_l00263}{get\+Appetizer\+By\+Id()}}, and \mbox{\hyperlink{ApiClient_8java_source_l00286}{update\+Appetizer()}}.
+
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a0d37367d5d26ba74e76b75eea37a2ed4}\index{es.ull.esit.app.middleware.ApiClient@{es.ull.esit.app.middleware.ApiClient}!API\_DRINKS@{API\_DRINKS}}
+\index{API\_DRINKS@{API\_DRINKS}!es.ull.esit.app.middleware.ApiClient@{es.ull.esit.app.middleware.ApiClient}}
+\doxysubsubsection{\texorpdfstring{API\_DRINKS}{API\_DRINKS}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a0d37367d5d26ba74e76b75eea37a2ed4} 
+final String es.\+ull.\+esit.\+app.\+middleware.\+Api\+Client.\+API\+\_\+\+DRINKS = "{}/api/drinks/"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+API endpoint for drinks. 
+
+
+
+Definition at line \mbox{\hyperlink{ApiClient_8java_source_l00046}{46}} of file \mbox{\hyperlink{ApiClient_8java_source}{Api\+Client.\+java}}.
+
+
+
+Referenced by \mbox{\hyperlink{ApiClient_8java_source_l00452}{delete\+Drink()}}, \mbox{\hyperlink{ApiClient_8java_source_l00404}{get\+Drink\+By\+Id()}}, and \mbox{\hyperlink{ApiClient_8java_source_l00429}{update\+Drink()}}.
+
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a60325ca64e77c7dab7be91b4d4696b2f}\index{es.ull.esit.app.middleware.ApiClient@{es.ull.esit.app.middleware.ApiClient}!API\_LOGIN@{API\_LOGIN}}
+\index{API\_LOGIN@{API\_LOGIN}!es.ull.esit.app.middleware.ApiClient@{es.ull.esit.app.middleware.ApiClient}}
+\doxysubsubsection{\texorpdfstring{API\_LOGIN}{API\_LOGIN}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a60325ca64e77c7dab7be91b4d4696b2f} 
+final String es.\+ull.\+esit.\+app.\+middleware.\+Api\+Client.\+API\+\_\+\+LOGIN = "{}/api/login"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{ApiClient_8java_source_l00051}{51}} of file \mbox{\hyperlink{ApiClient_8java_source}{Api\+Client.\+java}}.
+
+
+
+Referenced by \mbox{\hyperlink{ApiClient_8java_source_l00571}{login()}}.
+
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a6e90bcbf8293b94f083c4fa3d0798008}\index{es.ull.esit.app.middleware.ApiClient@{es.ull.esit.app.middleware.ApiClient}!API\_MAINCOURSES@{API\_MAINCOURSES}}
+\index{API\_MAINCOURSES@{API\_MAINCOURSES}!es.ull.esit.app.middleware.ApiClient@{es.ull.esit.app.middleware.ApiClient}}
+\doxysubsubsection{\texorpdfstring{API\_MAINCOURSES}{API\_MAINCOURSES}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a6e90bcbf8293b94f083c4fa3d0798008} 
+final String es.\+ull.\+esit.\+app.\+middleware.\+Api\+Client.\+API\+\_\+\+MAINCOURSES = "{}/api/maincourses/"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+API endpoint for main courses. 
+
+
+
+Definition at line \mbox{\hyperlink{ApiClient_8java_source_l00049}{49}} of file \mbox{\hyperlink{ApiClient_8java_source}{Api\+Client.\+java}}.
+
+
+
+Referenced by \mbox{\hyperlink{ApiClient_8java_source_l00534}{delete\+Main\+Course()}}, \mbox{\hyperlink{ApiClient_8java_source_l00486}{get\+Main\+Course\+By\+Id()}}, and \mbox{\hyperlink{ApiClient_8java_source_l00511}{update\+Main\+Course()}}.
+
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a1ad2fd15081bf7b6d1cf4d91c70f965f}\index{es.ull.esit.app.middleware.ApiClient@{es.ull.esit.app.middleware.ApiClient}!APPLICATION\_JSON@{APPLICATION\_JSON}}
+\index{APPLICATION\_JSON@{APPLICATION\_JSON}!es.ull.esit.app.middleware.ApiClient@{es.ull.esit.app.middleware.ApiClient}}
+\doxysubsubsection{\texorpdfstring{APPLICATION\_JSON}{APPLICATION\_JSON}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a1ad2fd15081bf7b6d1cf4d91c70f965f} 
+final String es.\+ull.\+esit.\+app.\+middleware.\+Api\+Client.\+APPLICATION\+\_\+\+JSON = "{}application/json"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Constant for JSON content type. 
+
+
+
+Definition at line \mbox{\hyperlink{ApiClient_8java_source_l00034}{34}} of file \mbox{\hyperlink{ApiClient_8java_source}{Api\+Client.\+java}}.
+
+
+
+Referenced by \mbox{\hyperlink{ApiClient_8java_source_l00571}{login()}}, \mbox{\hyperlink{ApiClient_8java_source_l00286}{update\+Appetizer()}}, \mbox{\hyperlink{ApiClient_8java_source_l00365}{update\+Cashier()}}, \mbox{\hyperlink{ApiClient_8java_source_l00429}{update\+Drink()}}, and \mbox{\hyperlink{ApiClient_8java_source_l00511}{update\+Main\+Course()}}.
+
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a34e7093782fed02590b8144b2587bfb8}\index{es.ull.esit.app.middleware.ApiClient@{es.ull.esit.app.middleware.ApiClient}!baseUrl@{baseUrl}}
+\index{baseUrl@{baseUrl}!es.ull.esit.app.middleware.ApiClient@{es.ull.esit.app.middleware.ApiClient}}
+\doxysubsubsection{\texorpdfstring{baseUrl}{baseUrl}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a34e7093782fed02590b8144b2587bfb8} 
+final String es.\+ull.\+esit.\+app.\+middleware.\+Api\+Client.\+base\+Url\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Base URL of the REST API. 
+
+
+
+Definition at line \mbox{\hyperlink{ApiClient_8java_source_l00057}{57}} of file \mbox{\hyperlink{ApiClient_8java_source}{Api\+Client.\+java}}.
+
+
+
+Referenced by \mbox{\hyperlink{ApiClient_8java_source_l00074}{Api\+Client()}}, \mbox{\hyperlink{ApiClient_8java_source_l00308}{delete\+Appetizer()}}, \mbox{\hyperlink{ApiClient_8java_source_l00452}{delete\+Drink()}}, \mbox{\hyperlink{ApiClient_8java_source_l00534}{delete\+Main\+Course()}}, \mbox{\hyperlink{ApiClient_8java_source_l00571}{login()}}, \mbox{\hyperlink{ApiClient_8java_source_l00286}{update\+Appetizer()}}, \mbox{\hyperlink{ApiClient_8java_source_l00365}{update\+Cashier()}}, \mbox{\hyperlink{ApiClient_8java_source_l00429}{update\+Drink()}}, and \mbox{\hyperlink{ApiClient_8java_source_l00511}{update\+Main\+Course()}}.
+
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a43674470f1df0d205cb796be39ebffb7}\index{es.ull.esit.app.middleware.ApiClient@{es.ull.esit.app.middleware.ApiClient}!CONTENT\_TYPE@{CONTENT\_TYPE}}
+\index{CONTENT\_TYPE@{CONTENT\_TYPE}!es.ull.esit.app.middleware.ApiClient@{es.ull.esit.app.middleware.ApiClient}}
+\doxysubsubsection{\texorpdfstring{CONTENT\_TYPE}{CONTENT\_TYPE}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a43674470f1df0d205cb796be39ebffb7} 
+final String es.\+ull.\+esit.\+app.\+middleware.\+Api\+Client.\+CONTENT\+\_\+\+TYPE = "{}Content-\/Type"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+HTTP header for content type. 
+
+
+
+Definition at line \mbox{\hyperlink{ApiClient_8java_source_l00040}{40}} of file \mbox{\hyperlink{ApiClient_8java_source}{Api\+Client.\+java}}.
+
+
+
+Referenced by \mbox{\hyperlink{ApiClient_8java_source_l00571}{login()}}, \mbox{\hyperlink{ApiClient_8java_source_l00286}{update\+Appetizer()}}, \mbox{\hyperlink{ApiClient_8java_source_l00365}{update\+Cashier()}}, \mbox{\hyperlink{ApiClient_8java_source_l00429}{update\+Drink()}}, and \mbox{\hyperlink{ApiClient_8java_source_l00511}{update\+Main\+Course()}}.
+
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_aa5ba7fcb6c259fcc2338727f03ecd837}\index{es.ull.esit.app.middleware.ApiClient@{es.ull.esit.app.middleware.ApiClient}!http@{http}}
+\index{http@{http}!es.ull.esit.app.middleware.ApiClient@{es.ull.esit.app.middleware.ApiClient}}
+\doxysubsubsection{\texorpdfstring{http}{http}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_aa5ba7fcb6c259fcc2338727f03ecd837} 
+final Http\+Client es.\+ull.\+esit.\+app.\+middleware.\+Api\+Client.\+http\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Low-\/level HTTP client to send requests. 
+
+
+
+Definition at line \mbox{\hyperlink{ApiClient_8java_source_l00054}{54}} of file \mbox{\hyperlink{ApiClient_8java_source}{Api\+Client.\+java}}.
+
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a9cdb8cc4a8ce12e1cf3fd78ee8406c5b}\index{es.ull.esit.app.middleware.ApiClient@{es.ull.esit.app.middleware.ApiClient}!LOGGER@{LOGGER}}
+\index{LOGGER@{LOGGER}!es.ull.esit.app.middleware.ApiClient@{es.ull.esit.app.middleware.ApiClient}}
+\doxysubsubsection{\texorpdfstring{LOGGER}{LOGGER}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_a9cdb8cc4a8ce12e1cf3fd78ee8406c5b} 
+final Logger es.\+ull.\+esit.\+app.\+middleware.\+Api\+Client.\+LOGGER = Logger\+Factory.\+get\+Logger(Api\+Client.\+class)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Logger for logging events and errors. 
+
+
+
+Definition at line \mbox{\hyperlink{ApiClient_8java_source_l00037}{37}} of file \mbox{\hyperlink{ApiClient_8java_source}{Api\+Client.\+java}}.
+
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_adfd26bea00a33e2f7e3fc969c723f154}\index{es.ull.esit.app.middleware.ApiClient@{es.ull.esit.app.middleware.ApiClient}!mapper@{mapper}}
+\index{mapper@{mapper}!es.ull.esit.app.middleware.ApiClient@{es.ull.esit.app.middleware.ApiClient}}
+\doxysubsubsection{\texorpdfstring{mapper}{mapper}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient_adfd26bea00a33e2f7e3fc969c723f154} 
+final Object\+Mapper es.\+ull.\+esit.\+app.\+middleware.\+Api\+Client.\+mapper\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+JSON object mapper for serialization/deserialization\+: converts between JSON and Java objects. 
+
+
+
+Definition at line \mbox{\hyperlink{ApiClient_8java_source_l00063}{63}} of file \mbox{\hyperlink{ApiClient_8java_source}{Api\+Client.\+java}}.
+
+
+
+Referenced by \mbox{\hyperlink{ApiClient_8java_source_l00571}{login()}}, \mbox{\hyperlink{ApiClient_8java_source_l00286}{update\+Appetizer()}}, \mbox{\hyperlink{ApiClient_8java_source_l00365}{update\+Cashier()}}, \mbox{\hyperlink{ApiClient_8java_source_l00429}{update\+Drink()}}, and \mbox{\hyperlink{ApiClient_8java_source_l00511}{update\+Main\+Course()}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{ApiClient_8java}{Api\+Client.\+java}}\end{DoxyCompactItemize}

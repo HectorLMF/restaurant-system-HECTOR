@@ -1,0 +1,63 @@
+\doxysection{Auth\+Controller.\+java}
+\hypertarget{AuthController_8java_source}{}\label{AuthController_8java_source}\index{AuthController.java@{AuthController.java}}
+\mbox{\hyperlink{AuthController_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{AuthController_8java_source_l00001}00001\ \textcolor{keyword}{package\ }es.ull.esit.server.controller;}
+\DoxyCodeLine{\Hypertarget{AuthController_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{AuthController_8java_source_l00003}00003\ \textcolor{keyword}{import}\ es.ull.esit.server.middleware.model.User;}
+\DoxyCodeLine{\Hypertarget{AuthController_8java_source_l00004}00004\ \textcolor{keyword}{import}\ es.ull.esit.server.repo.UserRepository;}
+\DoxyCodeLine{\Hypertarget{AuthController_8java_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{AuthController_8java_source_l00006}00006\ \textcolor{keyword}{import}\ org.springframework.beans.factory.annotation.Autowired;}
+\DoxyCodeLine{\Hypertarget{AuthController_8java_source_l00007}00007\ \textcolor{keyword}{import}\ org.springframework.http.ResponseEntity;}
+\DoxyCodeLine{\Hypertarget{AuthController_8java_source_l00008}00008\ \textcolor{keyword}{import}\ org.springframework.security.crypto.password.PasswordEncoder;}
+\DoxyCodeLine{\Hypertarget{AuthController_8java_source_l00009}00009\ \textcolor{keyword}{import}\ org.springframework.web.bind.annotation.*;}
+\DoxyCodeLine{\Hypertarget{AuthController_8java_source_l00010}00010\ \textcolor{keyword}{import}\ java.util.Optional;}
+\DoxyCodeLine{\Hypertarget{AuthController_8java_source_l00011}00011\ \textcolor{keyword}{import}\ org.slf4j.Logger;}
+\DoxyCodeLine{\Hypertarget{AuthController_8java_source_l00012}00012\ \textcolor{keyword}{import}\ org.slf4j.LoggerFactory;}
+\DoxyCodeLine{\Hypertarget{AuthController_8java_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{AuthController_8java_source_l00021}00021\ @RestController}
+\DoxyCodeLine{\Hypertarget{AuthController_8java_source_l00022}00022\ @RequestMapping(\textcolor{stringliteral}{"{}/api"{}})}
+\DoxyCodeLine{\Hypertarget{AuthController_8java_source_l00023}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController}{00023}}\ public\ class\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController}{AuthController}}\ \{}
+\DoxyCodeLine{\Hypertarget{AuthController_8java_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{AuthController_8java_source_l00026}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController_a32c81663938eea468a456780b9163b0a}{00026}}\ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keyword}{final}\ Logger\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController_a32c81663938eea468a456780b9163b0a}{LOG}}\ =\ LoggerFactory.getLogger(\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController}{AuthController}}.class);}
+\DoxyCodeLine{\Hypertarget{AuthController_8java_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{AuthController_8java_source_l00029}00029\ \ \ @Autowired}
+\DoxyCodeLine{\Hypertarget{AuthController_8java_source_l00030}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController_a5c6a5097e0a0f7b4e6c7a8207958181c}{00030}}\ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{interfacees_1_1ull_1_1esit_1_1server_1_1repo_1_1UserRepository}{UserRepository}}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController_a5c6a5097e0a0f7b4e6c7a8207958181c}{userRepository}};}
+\DoxyCodeLine{\Hypertarget{AuthController_8java_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{AuthController_8java_source_l00033}00033\ \ \ @Autowired}
+\DoxyCodeLine{\Hypertarget{AuthController_8java_source_l00034}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController_aa0f66d158454fa38f4ef0384a719d61f}{00034}}\ \ \ \textcolor{keyword}{private}\ PasswordEncoder\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController_aa0f66d158454fa38f4ef0384a719d61f}{passwordEncoder}};}
+\DoxyCodeLine{\Hypertarget{AuthController_8java_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{AuthController_8java_source_l00042}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController_1_1LoginRequest}{00042}}\ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController_1_1LoginRequest}{LoginRequest}}\ \{}
+\DoxyCodeLine{\Hypertarget{AuthController_8java_source_l00043}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController_1_1LoginRequest_a9b977eac088023134bfba3fcb99a6833}{00043}}\ \ \ \ \ \textcolor{keyword}{public}\ String\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController_1_1LoginRequest_a9b977eac088023134bfba3fcb99a6833}{username}};}
+\DoxyCodeLine{\Hypertarget{AuthController_8java_source_l00044}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController_1_1LoginRequest_a924ba9369f135308fe7334f448c6890c}{00044}}\ \ \ \ \ \textcolor{keyword}{public}\ String\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController_1_1LoginRequest_a924ba9369f135308fe7334f448c6890c}{password}};}
+\DoxyCodeLine{\Hypertarget{AuthController_8java_source_l00045}00045\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AuthController_8java_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{AuthController_8java_source_l00060}00060\ \ \ @PostMapping(\textcolor{stringliteral}{"{}/login"{}})}
+\DoxyCodeLine{\Hypertarget{AuthController_8java_source_l00061}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController_a919ce10a0f6571fb57721cb881642acb}{00061}}\ \ \ public\ ResponseEntity<?>\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController_a919ce10a0f6571fb57721cb881642acb}{login}}(@RequestBody\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController_1_1LoginRequest}{LoginRequest}}\ request)\ \{}
+\DoxyCodeLine{\Hypertarget{AuthController_8java_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{AuthController_8java_source_l00063}00063\ \ \ \ \ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController_a32c81663938eea468a456780b9163b0a}{LOG}}.info(\textcolor{stringliteral}{"{}Login\ attempt\ for\ user:\ \{\}"{}},\ request.username);}
+\DoxyCodeLine{\Hypertarget{AuthController_8java_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{AuthController_8java_source_l00065}00065\ \ \ \ \ Optional<User>\ userOpt\ =\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController_a5c6a5097e0a0f7b4e6c7a8207958181c}{userRepository}}.findByUsername(request.username);}
+\DoxyCodeLine{\Hypertarget{AuthController_8java_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{AuthController_8java_source_l00067}00067\ \ \ \ \ if\ (!userOpt.isPresent())\ \{}
+\DoxyCodeLine{\Hypertarget{AuthController_8java_source_l00068}00068\ \ \ \ \ \ \ LOG.warn(\textcolor{stringliteral}{"{}User\ not\ found\ in\ DB:\ \{\}"{}},\ request.username);}
+\DoxyCodeLine{\Hypertarget{AuthController_8java_source_l00069}00069\ \ \ \ \ \ \ return\ ResponseEntity.status(401).body(\textcolor{stringliteral}{"{}Invalid\ credentials"{}});}
+\DoxyCodeLine{\Hypertarget{AuthController_8java_source_l00070}00070\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AuthController_8java_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{AuthController_8java_source_l00072}00072\ \ \ \ \ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User}{User}}\ user\ =\ userOpt.get();}
+\DoxyCodeLine{\Hypertarget{AuthController_8java_source_l00073}00073\ \ \ \ \ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController_a32c81663938eea468a456780b9163b0a}{LOG}}.debug(\textcolor{stringliteral}{"{}User\ found.\ Stored\ hash\ =\ \{\}"{}},\ user.getPasswordHash());\ \textcolor{comment}{//\ Mejor\ debug,\ no\ info}}
+\DoxyCodeLine{\Hypertarget{AuthController_8java_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{AuthController_8java_source_l00075}00075\ \ \ \ \ if\ (!\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController_aa0f66d158454fa38f4ef0384a719d61f}{passwordEncoder}}.matches(request.password,\ user.getPasswordHash()))\ \{}
+\DoxyCodeLine{\Hypertarget{AuthController_8java_source_l00076}00076\ \ \ \ \ \ \ LOG.warn(\textcolor{stringliteral}{"{}Password\ mismatch\ for\ user:\ \{\}"{}},\ request.username);}
+\DoxyCodeLine{\Hypertarget{AuthController_8java_source_l00077}00077\ \ \ \ \ \ \ return\ ResponseEntity.status(401).body(\textcolor{stringliteral}{"{}Invalid\ credentials"{}});}
+\DoxyCodeLine{\Hypertarget{AuthController_8java_source_l00078}00078\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AuthController_8java_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{AuthController_8java_source_l00080}00080\ \ \ \ \ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController_a32c81663938eea468a456780b9163b0a}{LOG}}.info(\textcolor{stringliteral}{"{}Login\ OK\ for\ user:\ \{\}"{}},\ request.username);}
+\DoxyCodeLine{\Hypertarget{AuthController_8java_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{AuthController_8java_source_l00082}00082\ \ \ \ \ \textcolor{keywordflow}{return}\ ResponseEntity.ok(user);}
+\DoxyCodeLine{\Hypertarget{AuthController_8java_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{AuthController_8java_source_l00084}00084\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AuthController_8java_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{AuthController_8java_source_l00086}00086\ \}}
+
+\end{DoxyCode}

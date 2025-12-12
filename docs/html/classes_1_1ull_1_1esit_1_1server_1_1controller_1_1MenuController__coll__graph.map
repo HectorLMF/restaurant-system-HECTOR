@@ -1,0 +1,15 @@
+<map id="es.ull.esit.server.controller.MenuController" name="es.ull.esit.server.controller.MenuController">
+<area shape="rect" id="Node000001" title="REST controller that exposes a consolidated restaurant menu." alt="" coords="227,285,418,365"/>
+<area shape="rect" id="Node000002" href="$interfacees_1_1ull_1_1esit_1_1server_1_1repo_1_1MainCourseRepository.html" title="Repository interface for managing main courses in the database." alt="" coords="37,135,198,215"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="130,214,141,238,158,259,184,279,214,294,211,299,181,284,154,263,137,241,125,216"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,5,205,85"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="113,99,116,134,111,135,108,99"/>
+<area shape="rect" id="Node000004" href="$interfacees_1_1ull_1_1esit_1_1server_1_1repo_1_1AppetizerRepository.html" title="Repository interface for managing appetizers in the database." alt="" coords="243,135,402,215"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="325,215,325,268,320,268,320,215"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="230,5,415,85"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="325,99,325,134,320,134,320,99"/>
+<area shape="rect" id="Node000006" href="$interfacees_1_1ull_1_1esit_1_1server_1_1repo_1_1DrinkRepository.html" title="Repository interface for managing drinks in the database." alt="" coords="433,135,591,215"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="504,216,492,241,475,263,434,292,431,288,471,259,488,238,499,214"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="439,5,598,85"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="519,99,517,135,511,134,513,99"/>
+</map>

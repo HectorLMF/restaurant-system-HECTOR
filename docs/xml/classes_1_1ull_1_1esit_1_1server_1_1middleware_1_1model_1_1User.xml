@@ -1,0 +1,305 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User" kind="class" language="Java" prot="public">
+    <compoundname>es::ull::esit::server::middleware::model::User</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_1aa7361b7bfd86f5528f02dcdcb0b88be1" prot="private" static="no" mutable="no">
+        <type>Long</type>
+        <definition>Long es.ull.esit.server.middleware.model.User.id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <qualifiedname>es.ull.esit.server.middleware.model.User.id</qualifiedname>
+        <briefdescription>
+<para>Unique identifier for the user (primary key). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="server/src/main/java/es/ull/esit/server/middleware/model/User.java" line="27" column="16" bodyfile="server/src/main/java/es/ull/esit/server/middleware/model/User.java" bodystart="27" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_1a165e07b1e414532af4b5c792954c716b" compoundref="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2User_8java" startline="46" endline="48">es.ull.esit.server.middleware.model.User.getId</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_1a4b08406ec0f7ff574b3ce5be1fe3d710" compoundref="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2User_8java" startline="55" endline="57">es.ull.esit.server.middleware.model.User.setId</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_1afd5c2f6462448a471fe7a52edde3cf05" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String es.ull.esit.server.middleware.model.User.username</definition>
+        <argsstring></argsstring>
+        <name>username</name>
+        <qualifiedname>es.ull.esit.server.middleware.model.User.username</qualifiedname>
+        <briefdescription>
+<para>Unique username for the user. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="server/src/main/java/es/ull/esit/server/middleware/model/User.java" line="31" column="18" bodyfile="server/src/main/java/es/ull/esit/server/middleware/model/User.java" bodystart="31" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_1ae41a4e87d686097f9296035f6086fc29" compoundref="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2User_8java" startline="64" endline="66">es.ull.esit.server.middleware.model.User.getUsername</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_1a73f5c6db524d273a4cada8eb09404bcf" compoundref="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2User_8java" startline="73" endline="75">es.ull.esit.server.middleware.model.User.setUsername</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_1a80e2f0beb27886da83fd1b91cad262e7" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String es.ull.esit.server.middleware.model.User.passwordHash</definition>
+        <argsstring></argsstring>
+        <name>passwordHash</name>
+        <qualifiedname>es.ull.esit.server.middleware.model.User.passwordHash</qualifiedname>
+        <briefdescription>
+<para>BCrypt hashed password for the user. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="server/src/main/java/es/ull/esit/server/middleware/model/User.java" line="36" column="18" bodyfile="server/src/main/java/es/ull/esit/server/middleware/model/User.java" bodystart="36" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_1aadcf4f78bfe6d35ac2c5813714923cd2" compoundref="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2User_8java" startline="82" endline="84">es.ull.esit.server.middleware.model.User.getPasswordHash</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_1a59850783b933c5d878f25bdbb8f241fd" compoundref="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2User_8java" startline="91" endline="93">es.ull.esit.server.middleware.model.User.setPasswordHash</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_1ac4ef0766126b302cd226caa24f22be55" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String es.ull.esit.server.middleware.model.User.role</definition>
+        <argsstring></argsstring>
+        <name>role</name>
+        <qualifiedname>es.ull.esit.server.middleware.model.User.role</qualifiedname>
+        <briefdescription>
+<para>Role of the user: ADMIN or CASHIER. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="server/src/main/java/es/ull/esit/server/middleware/model/User.java" line="39" column="18" bodyfile="server/src/main/java/es/ull/esit/server/middleware/model/User.java" bodystart="39" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_1a9469eeb791e8d25c7e7f7fa7b2f33720" compoundref="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2User_8java" startline="100" endline="102">es.ull.esit.server.middleware.model.User.getRole</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_1a4cba805e4b0eac401f1a997244d4f507" compoundref="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2User_8java" startline="109" endline="111">es.ull.esit.server.middleware.model.User.setRole</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_1a165e07b1e414532af4b5c792954c716b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Long</type>
+        <definition>Long es.ull.esit.server.middleware.model.User.getId</definition>
+        <argsstring>()</argsstring>
+        <name>getId</name>
+        <qualifiedname>es.ull.esit.server.middleware.model.User.getId</qualifiedname>
+        <briefdescription>
+<para>Gets the database identifier of the user. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>[Long] The user&apos;s ID. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="server/src/main/java/es/ull/esit/server/middleware/model/User.java" line="46" column="15" bodyfile="server/src/main/java/es/ull/esit/server/middleware/model/User.java" bodystart="46" bodyend="48"/>
+        <references refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_1a165e07b1e414532af4b5c792954c716b" compoundref="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2User_8java" startline="46" endline="48">es.ull.esit.server.middleware.model.User.getId</references>
+        <references refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_1aa7361b7bfd86f5528f02dcdcb0b88be1" compoundref="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2User_8java" startline="27">es.ull.esit.server.middleware.model.User.id</references>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_1a165e07b1e414532af4b5c792954c716b" compoundref="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2User_8java" startline="46" endline="48">es.ull.esit.server.middleware.model.User.getId</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_1a4b08406ec0f7ff574b3ce5be1fe3d710" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void es.ull.esit.server.middleware.model.User.setId</definition>
+        <argsstring>(Long id)</argsstring>
+        <name>setId</name>
+        <qualifiedname>es.ull.esit.server.middleware.model.User.setId</qualifiedname>
+        <param>
+          <type>Long</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Sets the database identifier of the user. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[Long] The user&apos;s ID. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="server/src/main/java/es/ull/esit/server/middleware/model/User.java" line="55" column="15" bodyfile="server/src/main/java/es/ull/esit/server/middleware/model/User.java" bodystart="55" bodyend="57"/>
+        <references refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_1aa7361b7bfd86f5528f02dcdcb0b88be1" compoundref="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2User_8java" startline="27">es.ull.esit.server.middleware.model.User.id</references>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_1ae41a4e87d686097f9296035f6086fc29" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String es.ull.esit.server.middleware.model.User.getUsername</definition>
+        <argsstring>()</argsstring>
+        <name>getUsername</name>
+        <qualifiedname>es.ull.esit.server.middleware.model.User.getUsername</qualifiedname>
+        <briefdescription>
+<para>Gets the user&apos;s username. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>[String] The user&apos;s username. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="server/src/main/java/es/ull/esit/server/middleware/model/User.java" line="64" column="17" bodyfile="server/src/main/java/es/ull/esit/server/middleware/model/User.java" bodystart="64" bodyend="66"/>
+        <references refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_1afd5c2f6462448a471fe7a52edde3cf05" compoundref="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2User_8java" startline="31">es.ull.esit.server.middleware.model.User.username</references>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_1a73f5c6db524d273a4cada8eb09404bcf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void es.ull.esit.server.middleware.model.User.setUsername</definition>
+        <argsstring>(String username)</argsstring>
+        <name>setUsername</name>
+        <qualifiedname>es.ull.esit.server.middleware.model.User.setUsername</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>username</declname>
+        </param>
+        <briefdescription>
+<para>Sets the user&apos;s username. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>username</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[String] The user&apos;s username. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="server/src/main/java/es/ull/esit/server/middleware/model/User.java" line="73" column="15" bodyfile="server/src/main/java/es/ull/esit/server/middleware/model/User.java" bodystart="73" bodyend="75"/>
+        <references refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_1afd5c2f6462448a471fe7a52edde3cf05" compoundref="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2User_8java" startline="31">es.ull.esit.server.middleware.model.User.username</references>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_1aadcf4f78bfe6d35ac2c5813714923cd2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String es.ull.esit.server.middleware.model.User.getPasswordHash</definition>
+        <argsstring>()</argsstring>
+        <name>getPasswordHash</name>
+        <qualifiedname>es.ull.esit.server.middleware.model.User.getPasswordHash</qualifiedname>
+        <briefdescription>
+<para>Gets the BCrypt hashed password of the user. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>[String] The user&apos;s BCrypt hashed password. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="server/src/main/java/es/ull/esit/server/middleware/model/User.java" line="82" column="17" bodyfile="server/src/main/java/es/ull/esit/server/middleware/model/User.java" bodystart="82" bodyend="84"/>
+        <references refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_1a80e2f0beb27886da83fd1b91cad262e7" compoundref="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2User_8java" startline="36">es.ull.esit.server.middleware.model.User.passwordHash</references>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_1a59850783b933c5d878f25bdbb8f241fd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void es.ull.esit.server.middleware.model.User.setPasswordHash</definition>
+        <argsstring>(String passwordHash)</argsstring>
+        <name>setPasswordHash</name>
+        <qualifiedname>es.ull.esit.server.middleware.model.User.setPasswordHash</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>passwordHash</declname>
+        </param>
+        <briefdescription>
+<para>Sets the BCrypt hashed password of the user. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>passwordHash</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[String] The user&apos;s BCrypt hashed password. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="server/src/main/java/es/ull/esit/server/middleware/model/User.java" line="91" column="15" bodyfile="server/src/main/java/es/ull/esit/server/middleware/model/User.java" bodystart="91" bodyend="93"/>
+        <references refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_1a80e2f0beb27886da83fd1b91cad262e7" compoundref="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2User_8java" startline="36">es.ull.esit.server.middleware.model.User.passwordHash</references>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_1a9469eeb791e8d25c7e7f7fa7b2f33720" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String es.ull.esit.server.middleware.model.User.getRole</definition>
+        <argsstring>()</argsstring>
+        <name>getRole</name>
+        <qualifiedname>es.ull.esit.server.middleware.model.User.getRole</qualifiedname>
+        <briefdescription>
+<para>Gets the role of the user. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>[String] The user&apos;s role. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="server/src/main/java/es/ull/esit/server/middleware/model/User.java" line="100" column="17" bodyfile="server/src/main/java/es/ull/esit/server/middleware/model/User.java" bodystart="100" bodyend="102"/>
+        <references refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_1ac4ef0766126b302cd226caa24f22be55" compoundref="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2User_8java" startline="39">es.ull.esit.server.middleware.model.User.role</references>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_1a4cba805e4b0eac401f1a997244d4f507" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void es.ull.esit.server.middleware.model.User.setRole</definition>
+        <argsstring>(String role)</argsstring>
+        <name>setRole</name>
+        <qualifiedname>es.ull.esit.server.middleware.model.User.setRole</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>role</declname>
+        </param>
+        <briefdescription>
+<para>Sets the role of the user. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>role</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[String] The user&apos;s role. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="server/src/main/java/es/ull/esit/server/middleware/model/User.java" line="109" column="15" bodyfile="server/src/main/java/es/ull/esit/server/middleware/model/User.java" bodystart="109" bodyend="111"/>
+        <references refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_1ac4ef0766126b302cd226caa24f22be55" compoundref="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2User_8java" startline="39">es.ull.esit.server.middleware.model.User.role</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>JPA entity that represents a user in the system. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>   It is mapped to the &quot;users&quot; table in the database.
+   Stores user information such as username, password hash, and role.
+</verbatim> </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>es.ull.esit.server.middleware.model.User</label>
+        <link refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User"/>
+      </node>
+    </collaborationgraph>
+    <location file="server/src/main/java/es/ull/esit/server/middleware/model/User.java" line="22" column="7" bodyfile="server/src/main/java/es/ull/esit/server/middleware/model/User.java" bodystart="22" bodyend="112"/>
+    <listofallmembers>
+      <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_1a165e07b1e414532af4b5c792954c716b" prot="public" virt="non-virtual"><scope>es::ull::esit::server::middleware::model::User</scope><name>getId</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_1aadcf4f78bfe6d35ac2c5813714923cd2" prot="public" virt="non-virtual"><scope>es::ull::esit::server::middleware::model::User</scope><name>getPasswordHash</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_1a9469eeb791e8d25c7e7f7fa7b2f33720" prot="public" virt="non-virtual"><scope>es::ull::esit::server::middleware::model::User</scope><name>getRole</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_1ae41a4e87d686097f9296035f6086fc29" prot="public" virt="non-virtual"><scope>es::ull::esit::server::middleware::model::User</scope><name>getUsername</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_1aa7361b7bfd86f5528f02dcdcb0b88be1" prot="private" virt="non-virtual"><scope>es::ull::esit::server::middleware::model::User</scope><name>id</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_1a80e2f0beb27886da83fd1b91cad262e7" prot="private" virt="non-virtual"><scope>es::ull::esit::server::middleware::model::User</scope><name>passwordHash</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_1ac4ef0766126b302cd226caa24f22be55" prot="private" virt="non-virtual"><scope>es::ull::esit::server::middleware::model::User</scope><name>role</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_1a4b08406ec0f7ff574b3ce5be1fe3d710" prot="public" virt="non-virtual"><scope>es::ull::esit::server::middleware::model::User</scope><name>setId</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_1a59850783b933c5d878f25bdbb8f241fd" prot="public" virt="non-virtual"><scope>es::ull::esit::server::middleware::model::User</scope><name>setPasswordHash</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_1a4cba805e4b0eac401f1a997244d4f507" prot="public" virt="non-virtual"><scope>es::ull::esit::server::middleware::model::User</scope><name>setRole</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_1a73f5c6db524d273a4cada8eb09404bcf" prot="public" virt="non-virtual"><scope>es::ull::esit::server::middleware::model::User</scope><name>setUsername</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_1afd5c2f6462448a471fe7a52edde3cf05" prot="private" virt="non-virtual"><scope>es::ull::esit::server::middleware::model::User</scope><name>username</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

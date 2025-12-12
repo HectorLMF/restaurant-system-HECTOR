@@ -1,0 +1,252 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User" kind="class" language="Java" prot="public">
+    <compoundname>es::ull::esit::app::middleware::model::User</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_1a8455499295fb3e1af2b30f64368c5fdd" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String es.ull.esit.app.middleware.model.User.username</definition>
+        <argsstring></argsstring>
+        <name>username</name>
+        <qualifiedname>es.ull.esit.app.middleware.model.User.username</qualifiedname>
+        <briefdescription>
+<para>Username of the authenticated user (JSON property &quot;username&quot;). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/middleware/model/User.java" line="17" column="18" bodyfile="src/main/java/es/ull/esit/app/middleware/model/User.java" bodystart="17" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_1a03d8ef6d8d413254f340dbd38ba07511" compoundref="src_2main_2java_2es_2ull_2esit_2app_2middleware_2model_2User_8java" startline="45" endline="47">es.ull.esit.app.middleware.model.User.getUsername</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_1a6621261cbc2a9ce672fd5f135bd79e5b" compoundref="src_2main_2java_2es_2ull_2esit_2app_2middleware_2model_2User_8java" startline="54" endline="56">es.ull.esit.app.middleware.model.User.setUsername</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_1aa1afd39c936cfd6ebcb045cfb47d3da2" compoundref="src_2main_2java_2es_2ull_2esit_2app_2middleware_2model_2User_8java" startline="35" endline="38">es.ull.esit.app.middleware.model.User.User</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_1a08dbf1a0e8830e994a8d9a9a4261de6d" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String es.ull.esit.app.middleware.model.User.role</definition>
+        <argsstring></argsstring>
+        <name>role</name>
+        <qualifiedname>es.ull.esit.app.middleware.model.User.role</qualifiedname>
+        <briefdescription>
+<para>Role of the user (JSON property &quot;role&quot;), e.g., ADMIN or CASHIER. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/middleware/model/User.java" line="21" column="18" bodyfile="src/main/java/es/ull/esit/app/middleware/model/User.java" bodystart="21" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_1a3993d820e89ba713a594980a06a97fde" compoundref="src_2main_2java_2es_2ull_2esit_2app_2middleware_2model_2User_8java" startline="63" endline="65">es.ull.esit.app.middleware.model.User.getRole</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_1a4f1c85f290f8a053b755f55c25d98f49" compoundref="src_2main_2java_2es_2ull_2esit_2app_2middleware_2model_2User_8java" startline="81" endline="83">es.ull.esit.app.middleware.model.User.isAdmin</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_1a89f926a000e02f1f7cbdecd04979a778" compoundref="src_2main_2java_2es_2ull_2esit_2app_2middleware_2model_2User_8java" startline="72" endline="74">es.ull.esit.app.middleware.model.User.setRole</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_1aa1afd39c936cfd6ebcb045cfb47d3da2" compoundref="src_2main_2java_2es_2ull_2esit_2app_2middleware_2model_2User_8java" startline="35" endline="38">es.ull.esit.app.middleware.model.User.User</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_1a9aac576243c1bf70e1c9e53ff2ed8cca" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>es.ull.esit.app.middleware.model.User.User</definition>
+        <argsstring>()</argsstring>
+        <name>User</name>
+        <qualifiedname>es.ull.esit.app.middleware.model.User.User</qualifiedname>
+        <briefdescription>
+<para>Default constructor required for JSON deserialization. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/middleware/model/User.java" line="26" column="10" bodyfile="src/main/java/es/ull/esit/app/middleware/model/User.java" bodystart="26" bodyend="27"/>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_1a9aac576243c1bf70e1c9e53ff2ed8cca" compoundref="src_2main_2java_2es_2ull_2esit_2app_2middleware_2model_2User_8java" startline="26" endline="27">es.ull.esit.app.middleware.model.User.User</references>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_1a9aac576243c1bf70e1c9e53ff2ed8cca" compoundref="src_2main_2java_2es_2ull_2esit_2app_2middleware_2model_2User_8java" startline="26" endline="27">es.ull.esit.app.middleware.model.User.User</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_1aa1afd39c936cfd6ebcb045cfb47d3da2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>es.ull.esit.app.middleware.model.User.User</definition>
+        <argsstring>(String username, String role)</argsstring>
+        <name>User</name>
+        <qualifiedname>es.ull.esit.app.middleware.model.User.User</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>username</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>role</declname>
+        </param>
+        <briefdescription>
+<para>Constructs a user with the given username and role. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>username</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[String] Username of the user. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>role</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[String] Role of the user. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/middleware/model/User.java" line="35" column="10" bodyfile="src/main/java/es/ull/esit/app/middleware/model/User.java" bodystart="35" bodyend="38"/>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_1a08dbf1a0e8830e994a8d9a9a4261de6d" compoundref="src_2main_2java_2es_2ull_2esit_2app_2middleware_2model_2User_8java" startline="21">es.ull.esit.app.middleware.model.User.role</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_1a8455499295fb3e1af2b30f64368c5fdd" compoundref="src_2main_2java_2es_2ull_2esit_2app_2middleware_2model_2User_8java" startline="17">es.ull.esit.app.middleware.model.User.username</references>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_1a03d8ef6d8d413254f340dbd38ba07511" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String es.ull.esit.app.middleware.model.User.getUsername</definition>
+        <argsstring>()</argsstring>
+        <name>getUsername</name>
+        <qualifiedname>es.ull.esit.app.middleware.model.User.getUsername</qualifiedname>
+        <briefdescription>
+<para>Gets the username. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>[String] Username of the user. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/middleware/model/User.java" line="45" column="17" bodyfile="src/main/java/es/ull/esit/app/middleware/model/User.java" bodystart="45" bodyend="47"/>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_1a8455499295fb3e1af2b30f64368c5fdd" compoundref="src_2main_2java_2es_2ull_2esit_2app_2middleware_2model_2User_8java" startline="17">es.ull.esit.app.middleware.model.User.username</references>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a4466f2f88c125b3f609314a421381778" compoundref="Login_8java" startline="214" endline="254">es.ull.esit.app.Login.jButton1ActionPerformed</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_1a6621261cbc2a9ce672fd5f135bd79e5b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void es.ull.esit.app.middleware.model.User.setUsername</definition>
+        <argsstring>(String username)</argsstring>
+        <name>setUsername</name>
+        <qualifiedname>es.ull.esit.app.middleware.model.User.setUsername</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>username</declname>
+        </param>
+        <briefdescription>
+<para>Sets the username. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>username</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[String] Username of the user. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/middleware/model/User.java" line="54" column="15" bodyfile="src/main/java/es/ull/esit/app/middleware/model/User.java" bodystart="54" bodyend="56"/>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_1a8455499295fb3e1af2b30f64368c5fdd" compoundref="src_2main_2java_2es_2ull_2esit_2app_2middleware_2model_2User_8java" startline="17">es.ull.esit.app.middleware.model.User.username</references>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_1a3993d820e89ba713a594980a06a97fde" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String es.ull.esit.app.middleware.model.User.getRole</definition>
+        <argsstring>()</argsstring>
+        <name>getRole</name>
+        <qualifiedname>es.ull.esit.app.middleware.model.User.getRole</qualifiedname>
+        <briefdescription>
+<para>Gets the user role. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>[String] Role of the user. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/middleware/model/User.java" line="63" column="17" bodyfile="src/main/java/es/ull/esit/app/middleware/model/User.java" bodystart="63" bodyend="65"/>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_1a08dbf1a0e8830e994a8d9a9a4261de6d" compoundref="src_2main_2java_2es_2ull_2esit_2app_2middleware_2model_2User_8java" startline="21">es.ull.esit.app.middleware.model.User.role</references>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a4466f2f88c125b3f609314a421381778" compoundref="Login_8java" startline="214" endline="254">es.ull.esit.app.Login.jButton1ActionPerformed</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_1a89f926a000e02f1f7cbdecd04979a778" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void es.ull.esit.app.middleware.model.User.setRole</definition>
+        <argsstring>(String role)</argsstring>
+        <name>setRole</name>
+        <qualifiedname>es.ull.esit.app.middleware.model.User.setRole</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>role</declname>
+        </param>
+        <briefdescription>
+<para>Sets the user role. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>role</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[String] Role of the user. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/middleware/model/User.java" line="72" column="15" bodyfile="src/main/java/es/ull/esit/app/middleware/model/User.java" bodystart="72" bodyend="74"/>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_1a08dbf1a0e8830e994a8d9a9a4261de6d" compoundref="src_2main_2java_2es_2ull_2esit_2app_2middleware_2model_2User_8java" startline="21">es.ull.esit.app.middleware.model.User.role</references>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_1a4f1c85f290f8a053b755f55c25d98f49" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean es.ull.esit.app.middleware.model.User.isAdmin</definition>
+        <argsstring>()</argsstring>
+        <name>isAdmin</name>
+        <qualifiedname>es.ull.esit.app.middleware.model.User.isAdmin</qualifiedname>
+        <briefdescription>
+<para>Checks if the user has the ADMIN role. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>[boolean] True if the user role is ADMIN (case-insensitive), false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/middleware/model/User.java" line="81" column="18" bodyfile="src/main/java/es/ull/esit/app/middleware/model/User.java" bodystart="81" bodyend="83"/>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_1a08dbf1a0e8830e994a8d9a9a4261de6d" compoundref="src_2main_2java_2es_2ull_2esit_2app_2middleware_2model_2User_8java" startline="21">es.ull.esit.app.middleware.model.User.role</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Client-side model representing an authenticated user. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>   It maps the JSON returned by the &quot;/api/login&quot; endpoint and contains
+   only the fields needed by the Swing application: username and role.
+</verbatim> </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>es.ull.esit.app.middleware.model.User</label>
+        <link refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/main/java/es/ull/esit/app/middleware/model/User.java" line="13" column="7" bodyfile="src/main/java/es/ull/esit/app/middleware/model/User.java" bodystart="13" bodyend="84"/>
+    <listofallmembers>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_1a3993d820e89ba713a594980a06a97fde" prot="public" virt="non-virtual"><scope>es::ull::esit::app::middleware::model::User</scope><name>getRole</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_1a03d8ef6d8d413254f340dbd38ba07511" prot="public" virt="non-virtual"><scope>es::ull::esit::app::middleware::model::User</scope><name>getUsername</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_1a4f1c85f290f8a053b755f55c25d98f49" prot="public" virt="non-virtual"><scope>es::ull::esit::app::middleware::model::User</scope><name>isAdmin</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_1a08dbf1a0e8830e994a8d9a9a4261de6d" prot="private" virt="non-virtual"><scope>es::ull::esit::app::middleware::model::User</scope><name>role</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_1a89f926a000e02f1f7cbdecd04979a778" prot="public" virt="non-virtual"><scope>es::ull::esit::app::middleware::model::User</scope><name>setRole</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_1a6621261cbc2a9ce672fd5f135bd79e5b" prot="public" virt="non-virtual"><scope>es::ull::esit::app::middleware::model::User</scope><name>setUsername</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_1a9aac576243c1bf70e1c9e53ff2ed8cca" prot="public" virt="non-virtual"><scope>es::ull::esit::app::middleware::model::User</scope><name>User</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_1aa1afd39c936cfd6ebcb045cfb47d3da2" prot="public" virt="non-virtual"><scope>es::ull::esit::app::middleware::model::User</scope><name>User</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_1a8455499295fb3e1af2b30f64368c5fdd" prot="private" virt="non-virtual"><scope>es::ull::esit::app::middleware::model::User</scope><name>username</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

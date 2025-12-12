@@ -1,0 +1,8 @@
+<map id="es.ull.esit.app.AdminProducts.AdminProducts" name="es.ull.esit.app.AdminProducts.AdminProducts">
+<area shape="rect" id="Node000001" title="Constructor." alt="" coords="5,61,224,101"/>
+<area shape="rect" id="Node000002" href="$classes_1_1ull_1_1esit_1_1app_1_1AdminProducts.html#a42cfd8c45898f2f53bcb93355c15d083" title="Initializes GUI components." alt="" coords="285,29,525,69"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="224,67,271,61,271,67,225,72"/>
+<area shape="rect" id="Node000003" href="$classes_1_1ull_1_1esit_1_1app_1_1AdminProducts.html#a9d27ac08d975d1db8f5e95766b63d35f" title="Reloads all product tables." alt="" coords="272,93,537,133"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="225,91,259,95,258,100,224,96"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="352,30,348,20,357,10,376,5,405,3,438,5,456,13,454,18,437,11,405,8,377,10,360,15,353,21,357,28"/>
+</map>

@@ -1,0 +1,31 @@
+\doxysection{Application\+Launcher.\+java}
+\hypertarget{ApplicationLauncher_8java_source}{}\label{ApplicationLauncher_8java_source}\index{ApplicationLauncher.java@{ApplicationLauncher.java}}
+\mbox{\hyperlink{ApplicationLauncher_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{ApplicationLauncher_8java_source_l00001}00001\ \textcolor{keyword}{package\ }es.ull.esit.app;}
+\DoxyCodeLine{\Hypertarget{ApplicationLauncher_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{ApplicationLauncher_8java_source_l00010}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1ApplicationLauncher}{00010}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1ApplicationLauncher}{ApplicationLauncher}}\ \{}
+\DoxyCodeLine{\Hypertarget{ApplicationLauncher_8java_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{ApplicationLauncher_8java_source_l00019}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1ApplicationLauncher_a69f7fc1a952cb3626a8bea2dbb660e78}{00019}}\ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1ApplicationLauncher_a69f7fc1a952cb3626a8bea2dbb660e78}{main}}(String[]\ args)\ \{}
+\DoxyCodeLine{\Hypertarget{ApplicationLauncher_8java_source_l00020}00020\ \ \ \ \ \textcolor{comment}{//\ Use\ a\ factory\ so\ tests\ can\ inject\ a\ mock\ Login\ instance\ and\ avoid}}
+\DoxyCodeLine{\Hypertarget{ApplicationLauncher_8java_source_l00021}00021\ \ \ \ \ \textcolor{comment}{//\ creating\ real\ GUI\ components\ (which\ can\ fail\ in\ headless\ CI).}}
+\DoxyCodeLine{\Hypertarget{ApplicationLauncher_8java_source_l00022}00022\ \ \ \ \ java.awt.EventQueue.invokeLater(()\ -\/>\ getLoginFactory().\textcolor{keyword}{get}().setVisible(\textcolor{keyword}{true}));}
+\DoxyCodeLine{\Hypertarget{ApplicationLauncher_8java_source_l00023}00023\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ApplicationLauncher_8java_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{ApplicationLauncher_8java_source_l00025}00025\ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{ApplicationLauncher_8java_source_l00026}00026\ \ \ \textcolor{comment}{//\ Test\ seam:\ a\ supplier\ that\ creates\ the\ Login\ instance.\ By\ default\ it}}
+\DoxyCodeLine{\Hypertarget{ApplicationLauncher_8java_source_l00027}00027\ \ \ \textcolor{comment}{//\ constructs\ a\ real\ Login,\ but\ tests\ can\ replace\ it\ with\ a\ supplier\ that}}
+\DoxyCodeLine{\Hypertarget{ApplicationLauncher_8java_source_l00028}00028\ \ \ \textcolor{comment}{//\ returns\ a\ mock\ to\ avoid\ UI\ creation.}}
+\DoxyCodeLine{\Hypertarget{ApplicationLauncher_8java_source_l00029}00029\ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{ApplicationLauncher_8java_source_l00030}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1ApplicationLauncher_ac11bd2b1d30228fb403aaf2e3ea5cf41}{00030}}\ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ java.util.function.Supplier<\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1Login}{Login}}>\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1ApplicationLauncher_ac11bd2b1d30228fb403aaf2e3ea5cf41}{loginFactory}}\ =\ Login::new;}
+\DoxyCodeLine{\Hypertarget{ApplicationLauncher_8java_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{ApplicationLauncher_8java_source_l00036}00036\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ setLoginFactory(java.util.function.Supplier<\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1Login}{Login}}>\ factory)\ \{}
+\DoxyCodeLine{\Hypertarget{ApplicationLauncher_8java_source_l00037}00037\ \ \ \ \ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1ApplicationLauncher_ac11bd2b1d30228fb403aaf2e3ea5cf41}{loginFactory}}\ =\ factory;}
+\DoxyCodeLine{\Hypertarget{ApplicationLauncher_8java_source_l00038}00038\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ApplicationLauncher_8java_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{ApplicationLauncher_8java_source_l00040}00040\ \ \ \textcolor{keyword}{static}\ java.util.function.Supplier<\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1Login}{Login}}>\ getLoginFactory()\ \{}
+\DoxyCodeLine{\Hypertarget{ApplicationLauncher_8java_source_l00041}00041\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1ApplicationLauncher_ac11bd2b1d30228fb403aaf2e3ea5cf41}{loginFactory}};}
+\DoxyCodeLine{\Hypertarget{ApplicationLauncher_8java_source_l00042}00042\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ApplicationLauncher_8java_source_l00043}00043\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,32 @@
+\doxysection{Auth\+Service.\+java}
+\hypertarget{AuthService_8java_source}{}\label{AuthService_8java_source}\index{AuthService.java@{AuthService.java}}
+\mbox{\hyperlink{AuthService_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{AuthService_8java_source_l00001}\mbox{\hyperlink{namespacees_1_1ull_1_1esit_1_1app_1_1middleware_1_1service}{00001}}\ \textcolor{keyword}{package\ }es.ull.esit.app.middleware.service;}
+\DoxyCodeLine{\Hypertarget{AuthService_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{AuthService_8java_source_l00003}00003\ \textcolor{keyword}{import}\ es.ull.esit.app.middleware.ApiClient;}
+\DoxyCodeLine{\Hypertarget{AuthService_8java_source_l00004}00004\ \textcolor{keyword}{import}\ es.ull.esit.app.middleware.model.User;}
+\DoxyCodeLine{\Hypertarget{AuthService_8java_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{AuthService_8java_source_l00012}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1AuthService}{00012}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1AuthService_ad0929f3c7755847b8da6531c20cf683e}{AuthService}}\ \{}
+\DoxyCodeLine{\Hypertarget{AuthService_8java_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{AuthService_8java_source_l00015}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1AuthService_a5f8c4d7884ca1dad59c49fa01752dc1b}{00015}}\ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{final}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient}{ApiClient}}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1AuthService_a5f8c4d7884ca1dad59c49fa01752dc1b}{client}};}
+\DoxyCodeLine{\Hypertarget{AuthService_8java_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{AuthService_8java_source_l00022}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1AuthService_ad0929f3c7755847b8da6531c20cf683e}{00022}}\ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1AuthService_ad0929f3c7755847b8da6531c20cf683e}{AuthService}}(\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient}{ApiClient}}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1AuthService_a5f8c4d7884ca1dad59c49fa01752dc1b}{client}})\ \{}
+\DoxyCodeLine{\Hypertarget{AuthService_8java_source_l00023}00023\ \ \ \ \ this.client\ =\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1AuthService_a5f8c4d7884ca1dad59c49fa01752dc1b}{client}};}
+\DoxyCodeLine{\Hypertarget{AuthService_8java_source_l00024}00024\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AuthService_8java_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{AuthService_8java_source_l00037}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1AuthService_a209d7332f625de6f8bc885407f3498a1}{00037}}\ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User}{User}}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1AuthService_a209d7332f625de6f8bc885407f3498a1}{authenticate}}(String\ username,\ String\ password)\ \{}
+\DoxyCodeLine{\Hypertarget{AuthService_8java_source_l00038}00038\ \ \ \ \ \textcolor{comment}{//\ 1.\ Local\ Validation.}}
+\DoxyCodeLine{\Hypertarget{AuthService_8java_source_l00039}00039\ \ \ \ \ \textcolor{keywordflow}{if}\ (username\ ==\ \textcolor{keyword}{null}\ ||\ username.trim().isEmpty())\ \{}
+\DoxyCodeLine{\Hypertarget{AuthService_8java_source_l00040}00040\ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ IllegalArgumentException(\textcolor{stringliteral}{"{}Username\ cannot\ be\ empty."{}});}
+\DoxyCodeLine{\Hypertarget{AuthService_8java_source_l00041}00041\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AuthService_8java_source_l00042}00042\ \ \ \ \ \textcolor{keywordflow}{if}\ (password\ ==\ \textcolor{keyword}{null}\ ||\ password.isEmpty())\ \{}
+\DoxyCodeLine{\Hypertarget{AuthService_8java_source_l00043}00043\ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ IllegalArgumentException(\textcolor{stringliteral}{"{}Password\ cannot\ be\ empty."{}});}
+\DoxyCodeLine{\Hypertarget{AuthService_8java_source_l00044}00044\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AuthService_8java_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{AuthService_8java_source_l00046}00046\ \ \ \ \ \textcolor{comment}{//\ 2.\ Call\ API.}}
+\DoxyCodeLine{\Hypertarget{AuthService_8java_source_l00047}00047\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1AuthService_a5f8c4d7884ca1dad59c49fa01752dc1b}{client}}.login(username,\ password);}
+\DoxyCodeLine{\Hypertarget{AuthService_8java_source_l00048}00048\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AuthService_8java_source_l00049}00049\ \}}
+
+\end{DoxyCode}

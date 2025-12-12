@@ -1,0 +1,243 @@
+\doxysection{es.\+ull.\+esit.\+app.\+middleware.\+model.\+Bill\+Result Class Reference}
+\hypertarget{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1BillResult}{}\label{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1BillResult}\index{es.ull.esit.app.middleware.model.BillResult@{es.ull.esit.app.middleware.model.BillResult}}
+
+
+Data Transfer Object representing the result of a bill calculation.  
+
+
+
+
+Collaboration diagram for es.\+ull.\+esit.\+app.\+middleware.\+model.\+Bill\+Result\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1BillResult__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1BillResult_a0a56b6058ab76e08024f5e782f478393}{Bill\+Result}} (double \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1BillResult_a53f0e4cc6a86d66acd9c79207072f095}{sub\+Total}}, double \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1BillResult_a57d046ab769085a281d59e0fa9342d64}{vat}}, double \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1BillResult_a8b441ceca015429437b59c5a5ff48746}{total}})
+\begin{DoxyCompactList}\small\item\em Constructs a bill result with the given amounts. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1BillResult_a5078da82bf06f4b563e889fe1d83677e}{get\+Sub\+Total}} ()
+\begin{DoxyCompactList}\small\item\em Gets the subtotal amount. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1BillResult_a80bcccdb19bd60a1f800225cb6f429f7}{get\+Vat}} ()
+\begin{DoxyCompactList}\small\item\em Gets the VAT amount. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1BillResult_aeb40b3c61c9afd165e7abbc05aa521f7}{get\+Total}} ()
+\begin{DoxyCompactList}\small\item\em Gets the total amount. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+final double \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1BillResult_a53f0e4cc6a86d66acd9c79207072f095}{sub\+Total}}
+\begin{DoxyCompactList}\small\item\em Calculated subtotal amount before VAT. \end{DoxyCompactList}\item 
+final double \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1BillResult_a57d046ab769085a281d59e0fa9342d64}{vat}}
+\begin{DoxyCompactList}\small\item\em Calculated VAT amount. \end{DoxyCompactList}\item 
+final double \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1BillResult_a8b441ceca015429437b59c5a5ff48746}{total}}
+\begin{DoxyCompactList}\small\item\em Final total amount including VAT. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Data Transfer Object representing the result of a bill calculation. 
+
+\begin{DoxyVerb}   It stores subtotal, VAT and total and is used exclusively on the client
+   side by the OrderService.
+\end{DoxyVerb}
+ 
+
+Definition at line \mbox{\hyperlink{BillResult_8java_source_l00009}{9}} of file \mbox{\hyperlink{BillResult_8java_source}{Bill\+Result.\+java}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1BillResult_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1BillResult_a0a56b6058ab76e08024f5e782f478393}\index{es.ull.esit.app.middleware.model.BillResult@{es.ull.esit.app.middleware.model.BillResult}!BillResult@{BillResult}}
+\index{BillResult@{BillResult}!es.ull.esit.app.middleware.model.BillResult@{es.ull.esit.app.middleware.model.BillResult}}
+\doxysubsubsection{\texorpdfstring{BillResult()}{BillResult()}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1BillResult_a0a56b6058ab76e08024f5e782f478393} 
+es.\+ull.\+esit.\+app.\+middleware.\+model.\+Bill\+Result.\+Bill\+Result (\begin{DoxyParamCaption}\item[{double}]{sub\+Total}{, }\item[{double}]{vat}{, }\item[{double}]{total}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a bill result with the given amounts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sub\+Total} & \mbox{[}double\mbox{]} Subtotal amount before VAT. \\
+\hline
+{\em vat} & \mbox{[}double\mbox{]} VAT amount. \\
+\hline
+{\em total} & \mbox{[}double\mbox{]} Final total amount including VAT. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{BillResult_8java_source_l00027}{27}} of file \mbox{\hyperlink{BillResult_8java_source}{Bill\+Result.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00028\ \ \ \ \ this.subTotal\ =\ subTotal;}
+\DoxyCodeLine{00029\ \ \ \ \ this.vat\ =\ vat;}
+\DoxyCodeLine{00030\ \ \ \ \ this.total\ =\ total;}
+\DoxyCodeLine{00031\ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{BillResult_8java_source_l00012}{sub\+Total}}, \mbox{\hyperlink{BillResult_8java_source_l00018}{total}}, and \mbox{\hyperlink{BillResult_8java_source_l00015}{vat}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1BillResult_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1BillResult_a5078da82bf06f4b563e889fe1d83677e}\index{es.ull.esit.app.middleware.model.BillResult@{es.ull.esit.app.middleware.model.BillResult}!getSubTotal@{getSubTotal}}
+\index{getSubTotal@{getSubTotal}!es.ull.esit.app.middleware.model.BillResult@{es.ull.esit.app.middleware.model.BillResult}}
+\doxysubsubsection{\texorpdfstring{getSubTotal()}{getSubTotal()}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1BillResult_a5078da82bf06f4b563e889fe1d83677e} 
+double es.\+ull.\+esit.\+app.\+middleware.\+model.\+Bill\+Result.\+get\+Sub\+Total (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the subtotal amount. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{[}double\mbox{]} Subtotal amount before VAT. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{BillResult_8java_source_l00038}{38}} of file \mbox{\hyperlink{BillResult_8java_source}{Bill\+Result.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordflow}{return}\ subTotal;}
+\DoxyCodeLine{00040\ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{BillResult_8java_source_l00012}{sub\+Total}}.
+
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1BillResult_aeb40b3c61c9afd165e7abbc05aa521f7}\index{es.ull.esit.app.middleware.model.BillResult@{es.ull.esit.app.middleware.model.BillResult}!getTotal@{getTotal}}
+\index{getTotal@{getTotal}!es.ull.esit.app.middleware.model.BillResult@{es.ull.esit.app.middleware.model.BillResult}}
+\doxysubsubsection{\texorpdfstring{getTotal()}{getTotal()}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1BillResult_aeb40b3c61c9afd165e7abbc05aa521f7} 
+double es.\+ull.\+esit.\+app.\+middleware.\+model.\+Bill\+Result.\+get\+Total (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the total amount. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{[}double\mbox{]} Final total amount including VAT. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{BillResult_8java_source_l00056}{56}} of file \mbox{\hyperlink{BillResult_8java_source}{Bill\+Result.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordflow}{return}\ total;}
+\DoxyCodeLine{00058\ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{BillResult_8java_source_l00018}{total}}.
+
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1BillResult_a80bcccdb19bd60a1f800225cb6f429f7}\index{es.ull.esit.app.middleware.model.BillResult@{es.ull.esit.app.middleware.model.BillResult}!getVat@{getVat}}
+\index{getVat@{getVat}!es.ull.esit.app.middleware.model.BillResult@{es.ull.esit.app.middleware.model.BillResult}}
+\doxysubsubsection{\texorpdfstring{getVat()}{getVat()}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1BillResult_a80bcccdb19bd60a1f800225cb6f429f7} 
+double es.\+ull.\+esit.\+app.\+middleware.\+model.\+Bill\+Result.\+get\+Vat (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the VAT amount. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{[}double\mbox{]} VAT amount. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{BillResult_8java_source_l00047}{47}} of file \mbox{\hyperlink{BillResult_8java_source}{Bill\+Result.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordflow}{return}\ vat;}
+\DoxyCodeLine{00049\ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{BillResult_8java_source_l00015}{vat}}.
+
+
+
+\label{doc-variable-members}
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1BillResult_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1BillResult_a53f0e4cc6a86d66acd9c79207072f095}\index{es.ull.esit.app.middleware.model.BillResult@{es.ull.esit.app.middleware.model.BillResult}!subTotal@{subTotal}}
+\index{subTotal@{subTotal}!es.ull.esit.app.middleware.model.BillResult@{es.ull.esit.app.middleware.model.BillResult}}
+\doxysubsubsection{\texorpdfstring{subTotal}{subTotal}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1BillResult_a53f0e4cc6a86d66acd9c79207072f095} 
+final double es.\+ull.\+esit.\+app.\+middleware.\+model.\+Bill\+Result.\+sub\+Total\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Calculated subtotal amount before VAT. 
+
+
+
+Definition at line \mbox{\hyperlink{BillResult_8java_source_l00012}{12}} of file \mbox{\hyperlink{BillResult_8java_source}{Bill\+Result.\+java}}.
+
+
+
+Referenced by \mbox{\hyperlink{BillResult_8java_source_l00027}{Bill\+Result()}}, and \mbox{\hyperlink{BillResult_8java_source_l00038}{get\+Sub\+Total()}}.
+
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1BillResult_a8b441ceca015429437b59c5a5ff48746}\index{es.ull.esit.app.middleware.model.BillResult@{es.ull.esit.app.middleware.model.BillResult}!total@{total}}
+\index{total@{total}!es.ull.esit.app.middleware.model.BillResult@{es.ull.esit.app.middleware.model.BillResult}}
+\doxysubsubsection{\texorpdfstring{total}{total}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1BillResult_a8b441ceca015429437b59c5a5ff48746} 
+final double es.\+ull.\+esit.\+app.\+middleware.\+model.\+Bill\+Result.\+total\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Final total amount including VAT. 
+
+
+
+Definition at line \mbox{\hyperlink{BillResult_8java_source_l00018}{18}} of file \mbox{\hyperlink{BillResult_8java_source}{Bill\+Result.\+java}}.
+
+
+
+Referenced by \mbox{\hyperlink{BillResult_8java_source_l00027}{Bill\+Result()}}, and \mbox{\hyperlink{BillResult_8java_source_l00056}{get\+Total()}}.
+
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1BillResult_a57d046ab769085a281d59e0fa9342d64}\index{es.ull.esit.app.middleware.model.BillResult@{es.ull.esit.app.middleware.model.BillResult}!vat@{vat}}
+\index{vat@{vat}!es.ull.esit.app.middleware.model.BillResult@{es.ull.esit.app.middleware.model.BillResult}}
+\doxysubsubsection{\texorpdfstring{vat}{vat}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1BillResult_a57d046ab769085a281d59e0fa9342d64} 
+final double es.\+ull.\+esit.\+app.\+middleware.\+model.\+Bill\+Result.\+vat\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Calculated VAT amount. 
+
+
+
+Definition at line \mbox{\hyperlink{BillResult_8java_source_l00015}{15}} of file \mbox{\hyperlink{BillResult_8java_source}{Bill\+Result.\+java}}.
+
+
+
+Referenced by \mbox{\hyperlink{BillResult_8java_source_l00027}{Bill\+Result()}}, and \mbox{\hyperlink{BillResult_8java_source_l00047}{get\+Vat()}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{BillResult_8java}{Bill\+Result.\+java}}\end{DoxyCompactItemize}

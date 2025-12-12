@@ -1,0 +1,238 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController" kind="class" language="Java" prot="public">
+    <compoundname>es::ull::esit::server::controller::AppetizerController</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_1a9c135b625cb475a18f381e7822636382" prot="private" static="no" mutable="no">
+        <type><ref refid="interfacees_1_1ull_1_1esit_1_1server_1_1repo_1_1AppetizerRepository" kindref="compound">AppetizerRepository</ref></type>
+        <definition>AppetizerRepository es.ull.esit.server.controller.AppetizerController.appetizerRepository</definition>
+        <argsstring></argsstring>
+        <name>appetizerRepository</name>
+        <qualifiedname>es.ull.esit.server.controller.AppetizerController.appetizerRepository</qualifiedname>
+        <briefdescription>
+<para>Repository used to perform database operations on appetizers. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="server/src/main/java/es/ull/esit/server/controller/AppetizerController.java" line="25" column="31" bodyfile="server/src/main/java/es/ull/esit/server/controller/AppetizerController.java" bodystart="25" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_1a21b90d00b077d84499bef439aef79eee" compoundref="AppetizerController_8java" startline="65" endline="68">es.ull.esit.server.controller.AppetizerController.createAppetizer</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_1a35376156c81c1244c8241750356c303b" compoundref="AppetizerController_8java" startline="99" endline="105">es.ull.esit.server.controller.AppetizerController.deleteAppetizer</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_1a2e88771342595fe571334958d6366868" compoundref="AppetizerController_8java" startline="35" endline="38">es.ull.esit.server.controller.AppetizerController.getAllAppetizers</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_1a7f897f113a1b92ae64836bf69351afb5" compoundref="AppetizerController_8java" startline="49" endline="54">es.ull.esit.server.controller.AppetizerController.getAppetizerById</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_1a4fda9154efccb8e38dfc22dcaa8b1aa0" compoundref="AppetizerController_8java" startline="80" endline="88">es.ull.esit.server.controller.AppetizerController.updateAppetizer</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_1a2e88771342595fe571334958d6366868" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ResponseEntity&lt; List&lt; <ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer" kindref="compound">Appetizer</ref> &gt; &gt;</type>
+        <definition>ResponseEntity&lt; List&lt; Appetizer &gt; &gt; es.ull.esit.server.controller.AppetizerController.getAllAppetizers</definition>
+        <argsstring>()</argsstring>
+        <name>getAllAppetizers</name>
+        <qualifiedname>es.ull.esit.server.controller.AppetizerController.getAllAppetizers</qualifiedname>
+        <briefdescription>
+<para>Returns the complete list of appetizers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>   HTTP GET /api/appetizers
+</verbatim></para>
+<para><simplesect kind="return"><para>[ResponseEntity&lt;List&lt;Appetizer&gt;&gt;] List of appetizers with status 200. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="server/src/main/java/es/ull/esit/server/controller/AppetizerController.java" line="35" column="25" bodyfile="server/src/main/java/es/ull/esit/server/controller/AppetizerController.java" bodystart="35" bodyend="38"/>
+        <references refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_1a9c135b625cb475a18f381e7822636382" compoundref="AppetizerController_8java" startline="25">es.ull.esit.server.controller.AppetizerController.appetizerRepository</references>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_1a7f897f113a1b92ae64836bf69351afb5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ResponseEntity&lt; <ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer" kindref="compound">Appetizer</ref> &gt;</type>
+        <definition>ResponseEntity&lt; Appetizer &gt; es.ull.esit.server.controller.AppetizerController.getAppetizerById</definition>
+        <argsstring>(@PathVariable Long id)</argsstring>
+        <name>getAppetizerById</name>
+        <qualifiedname>es.ull.esit.server.controller.AppetizerController.getAppetizerById</qualifiedname>
+        <param>
+          <type>@PathVariable Long</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Returns a single appetizer by its id. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>   HTTP GET /api/appetizers/{id}
+</verbatim></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[Long] Identifier of the appetizer. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>[ResponseEntity&lt;Appetizer&gt;] The appetizer if found or 404 otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="server/src/main/java/es/ull/esit/server/controller/AppetizerController.java" line="49" column="25" bodyfile="server/src/main/java/es/ull/esit/server/controller/AppetizerController.java" bodystart="49" bodyend="54"/>
+        <references refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_1a9c135b625cb475a18f381e7822636382" compoundref="AppetizerController_8java" startline="25">es.ull.esit.server.controller.AppetizerController.appetizerRepository</references>
+        <references refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_1a7f897f113a1b92ae64836bf69351afb5" compoundref="AppetizerController_8java" startline="49" endline="54">es.ull.esit.server.controller.AppetizerController.getAppetizerById</references>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_1a7f897f113a1b92ae64836bf69351afb5" compoundref="AppetizerController_8java" startline="49" endline="54">es.ull.esit.server.controller.AppetizerController.getAppetizerById</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_1a21b90d00b077d84499bef439aef79eee" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ResponseEntity&lt; <ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer" kindref="compound">Appetizer</ref> &gt;</type>
+        <definition>ResponseEntity&lt; Appetizer &gt; es.ull.esit.server.controller.AppetizerController.createAppetizer</definition>
+        <argsstring>(@RequestBody Appetizer appetizer)</argsstring>
+        <name>createAppetizer</name>
+        <qualifiedname>es.ull.esit.server.controller.AppetizerController.createAppetizer</qualifiedname>
+        <param>
+          <type>@RequestBody <ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer" kindref="compound">Appetizer</ref></type>
+          <declname>appetizer</declname>
+        </param>
+        <briefdescription>
+<para>Creates a new appetizer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>   HTTP POST /api/appetizers
+</verbatim></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>appetizer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[<ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer" kindref="compound">Appetizer</ref>] <ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer" kindref="compound">Appetizer</ref> to create. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>[ResponseEntity&lt;Appetizer&gt;] The created appetizer with status 201. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="server/src/main/java/es/ull/esit/server/controller/AppetizerController.java" line="65" column="25" bodyfile="server/src/main/java/es/ull/esit/server/controller/AppetizerController.java" bodystart="65" bodyend="68"/>
+        <references refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_1a9c135b625cb475a18f381e7822636382" compoundref="AppetizerController_8java" startline="25">es.ull.esit.server.controller.AppetizerController.appetizerRepository</references>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_1a4fda9154efccb8e38dfc22dcaa8b1aa0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ResponseEntity&lt; <ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer" kindref="compound">Appetizer</ref> &gt;</type>
+        <definition>ResponseEntity&lt; Appetizer &gt; es.ull.esit.server.controller.AppetizerController.updateAppetizer</definition>
+        <argsstring>(@PathVariable Long id, @RequestBody Appetizer appetizer)</argsstring>
+        <name>updateAppetizer</name>
+        <qualifiedname>es.ull.esit.server.controller.AppetizerController.updateAppetizer</qualifiedname>
+        <param>
+          <type>@PathVariable Long</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>@RequestBody <ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer" kindref="compound">Appetizer</ref></type>
+          <declname>appetizer</declname>
+        </param>
+        <briefdescription>
+<para>Updates an existing appetizer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>   HTTP PUT /api/appetizers/{id}
+</verbatim></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[Long] Identifier of the appetizer to update. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>appetizer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[<ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer" kindref="compound">Appetizer</ref>] Updated appetizer data. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>[ResponseEntity&lt;Appetizer&gt;] The updated appetizer or 404 if not found. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="server/src/main/java/es/ull/esit/server/controller/AppetizerController.java" line="80" column="25" bodyfile="server/src/main/java/es/ull/esit/server/controller/AppetizerController.java" bodystart="80" bodyend="88"/>
+        <references refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_1a9c135b625cb475a18f381e7822636382" compoundref="AppetizerController_8java" startline="25">es.ull.esit.server.controller.AppetizerController.appetizerRepository</references>
+        <references refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_1a4fda9154efccb8e38dfc22dcaa8b1aa0" compoundref="AppetizerController_8java" startline="80" endline="88">es.ull.esit.server.controller.AppetizerController.updateAppetizer</references>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_1a4fda9154efccb8e38dfc22dcaa8b1aa0" compoundref="AppetizerController_8java" startline="80" endline="88">es.ull.esit.server.controller.AppetizerController.updateAppetizer</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_1a35376156c81c1244c8241750356c303b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ResponseEntity&lt; Void &gt;</type>
+        <definition>ResponseEntity&lt; Void &gt; es.ull.esit.server.controller.AppetizerController.deleteAppetizer</definition>
+        <argsstring>(@PathVariable Long id)</argsstring>
+        <name>deleteAppetizer</name>
+        <qualifiedname>es.ull.esit.server.controller.AppetizerController.deleteAppetizer</qualifiedname>
+        <param>
+          <type>@PathVariable Long</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Deletes an appetizer by its id. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>   HTTP DELETE /api/appetizers/{id}
+</verbatim></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[Long] Identifier of the appetizer to delete. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>[ResponseEntity&lt;Void&gt;] 204 if deleted or 404 if not found. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="server/src/main/java/es/ull/esit/server/controller/AppetizerController.java" line="99" column="25" bodyfile="server/src/main/java/es/ull/esit/server/controller/AppetizerController.java" bodystart="99" bodyend="105"/>
+        <references refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_1a9c135b625cb475a18f381e7822636382" compoundref="AppetizerController_8java" startline="25">es.ull.esit.server.controller.AppetizerController.appetizerRepository</references>
+        <references refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_1a35376156c81c1244c8241750356c303b" compoundref="AppetizerController_8java" startline="99" endline="105">es.ull.esit.server.controller.AppetizerController.deleteAppetizer</references>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_1a35376156c81c1244c8241750356c303b" compoundref="AppetizerController_8java" startline="99" endline="105">es.ull.esit.server.controller.AppetizerController.deleteAppetizer</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>REST controller for managing appetizers. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Rovides CRUD operations for <ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer" kindref="compound">Appetizer</ref> entities using the path &quot;/api/appetizers&quot;. These endpoints are used by the Swing client to load and modify appetizer information. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>JpaRepository&lt; Appetizer, Long &gt;</label>
+      </node>
+      <node id="1">
+        <label>es.ull.esit.server.controller.AppetizerController</label>
+        <link refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-appetizerRepository</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>es.ull.esit.server.repo.AppetizerRepository</label>
+        <link refid="interfacees_1_1ull_1_1esit_1_1server_1_1repo_1_1AppetizerRepository"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="server/src/main/java/es/ull/esit/server/controller/AppetizerController.java" line="21" column="7" bodyfile="server/src/main/java/es/ull/esit/server/controller/AppetizerController.java" bodystart="21" bodyend="106"/>
+    <listofallmembers>
+      <member refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_1a9c135b625cb475a18f381e7822636382" prot="private" virt="non-virtual"><scope>es::ull::esit::server::controller::AppetizerController</scope><name>appetizerRepository</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_1a21b90d00b077d84499bef439aef79eee" prot="public" virt="non-virtual"><scope>es::ull::esit::server::controller::AppetizerController</scope><name>createAppetizer</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_1a35376156c81c1244c8241750356c303b" prot="public" virt="non-virtual"><scope>es::ull::esit::server::controller::AppetizerController</scope><name>deleteAppetizer</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_1a2e88771342595fe571334958d6366868" prot="public" virt="non-virtual"><scope>es::ull::esit::server::controller::AppetizerController</scope><name>getAllAppetizers</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_1a7f897f113a1b92ae64836bf69351afb5" prot="public" virt="non-virtual"><scope>es::ull::esit::server::controller::AppetizerController</scope><name>getAppetizerById</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_1a4fda9154efccb8e38dfc22dcaa8b1aa0" prot="public" virt="non-virtual"><scope>es::ull::esit::server::controller::AppetizerController</scope><name>updateAppetizer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

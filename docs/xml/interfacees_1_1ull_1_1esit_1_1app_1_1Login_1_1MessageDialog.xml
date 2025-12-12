@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="interfacees_1_1ull_1_1esit_1_1app_1_1Login_1_1MessageDialog" kind="interface" language="Java" prot="public">
+    <compoundname>es::ull::esit::app::Login::MessageDialog</compoundname>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="interfacees_1_1ull_1_1esit_1_1app_1_1Login_1_1MessageDialog_1af4a2c52e41df62157ede78a8bf5956fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void es.ull.esit.app.Login.MessageDialog.showMessage</definition>
+        <argsstring>(java.awt.Component parent, Object message)</argsstring>
+        <name>showMessage</name>
+        <qualifiedname>es.ull.esit.app.Login.MessageDialog.showMessage</qualifiedname>
+        <param>
+          <type>java.awt.Component</type>
+          <declname>parent</declname>
+        </param>
+        <param>
+          <type>Object</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/Login.java" line="34" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interfacees_1_1ull_1_1esit_1_1app_1_1Login_1_1MessageDialog_1a88ccc8459395792f1a8a514cc957b537" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void es.ull.esit.app.Login.MessageDialog.showMessage</definition>
+        <argsstring>(java.awt.Component parent, Object message, String title, int messageType)</argsstring>
+        <name>showMessage</name>
+        <qualifiedname>es.ull.esit.app.Login.MessageDialog.showMessage</qualifiedname>
+        <param>
+          <type>java.awt.Component</type>
+          <declname>parent</declname>
+        </param>
+        <param>
+          <type>Object</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>title</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>messageType</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/Login.java" line="36" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>es.ull.esit.app.Login.MessageDialog</label>
+        <link refid="interfacees_1_1ull_1_1esit_1_1app_1_1Login_1_1MessageDialog"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/main/java/es/ull/esit/app/Login.java" line="33" column="13" bodyfile="src/main/java/es/ull/esit/app/Login.java" bodystart="33" bodyend="37"/>
+    <listofallmembers>
+      <member refid="interfacees_1_1ull_1_1esit_1_1app_1_1Login_1_1MessageDialog_1af4a2c52e41df62157ede78a8bf5956fc" prot="public" virt="non-virtual"><scope>es::ull::esit::app::Login::MessageDialog</scope><name>showMessage</name></member>
+      <member refid="interfacees_1_1ull_1_1esit_1_1app_1_1Login_1_1MessageDialog_1a88ccc8459395792f1a8a514cc957b537" prot="public" virt="non-virtual"><scope>es::ull::esit::app::Login::MessageDialog</scope><name>showMessage</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

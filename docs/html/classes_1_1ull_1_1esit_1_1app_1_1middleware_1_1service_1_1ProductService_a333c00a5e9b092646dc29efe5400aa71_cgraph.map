@@ -1,0 +1,7 @@
+<map id="es.ull.esit.app.middleware.service.ProductService.updateDrink" name="es.ull.esit.app.middleware.service.ProductService.updateDrink">
+<area shape="rect" id="Node000001" title="Updates an existing drink in the backend menu." alt="" coords="5,37,255,77"/>
+<area shape="rect" id="Node000002" href="$classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService.html#a1de5f344755fa2d4857ff831c0e7f251" title="Validates and parses the price from string to integer." alt="" coords="303,5,571,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="255,42,289,38,289,43,255,47"/>
+<area shape="rect" id="Node000003" href="$classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ProductService.html#a37e994d91713930101c873838145f607" title="Validates that the item name is not null or empty." alt="" coords="312,69,561,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="255,68,298,72,298,78,255,73"/>
+</map>

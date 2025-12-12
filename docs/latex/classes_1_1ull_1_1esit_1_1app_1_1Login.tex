@@ -1,0 +1,675 @@
+\doxysection{es.\+ull.\+esit.\+app.\+Login Class Reference}
+\hypertarget{classes_1_1ull_1_1esit_1_1app_1_1Login}{}\label{classes_1_1ull_1_1esit_1_1app_1_1Login}\index{es.ull.esit.app.Login@{es.ull.esit.app.Login}}
+
+
+\doxylink{classes_1_1ull_1_1esit_1_1app_1_1Login}{Login} window for the Restaurant System.  
+
+
+
+
+Inheritance diagram for es.\+ull.\+esit.\+app.\+Login\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{classes_1_1ull_1_1esit_1_1app_1_1Login__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for es.\+ull.\+esit.\+app.\+Login\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classes_1_1ull_1_1esit_1_1app_1_1Login__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+interface \mbox{\hyperlink{interfacees_1_1ull_1_1esit_1_1app_1_1Login_1_1MessageDialog}{Message\+Dialog}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1Login_a4991bf057499a53e77492291ee9ec66a}{Login}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1Login_a93bb7387e558ed643d7f04a09d1d53d2}{main}} (String\mbox{[}$\,$\mbox{]} args)
+\begin{DoxyCompactList}\small\item\em Main entry point to start the login window application. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1Login_ae61fa95fab1880d2e48d4b52948f51f6}{init\+Components}} ()
+\begin{DoxyCompactList}\small\item\em Initializes GUI components. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1Login_a4466f2f88c125b3f609314a421381778}{j\+Button1\+Action\+Performed}} (java.\+awt.\+event.\+Action\+Event evt)
+\begin{DoxyCompactList}\small\item\em Action handler for the "{}\+Log In"{} button. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1Login_aca803b0cc42ac57cac851a869f6b129c}{usertypecmbo\+Action\+Performed}} (java.\+awt.\+event.\+Action\+Event evt)
+\begin{DoxyCompactList}\small\item\em Action handler for the user type combo box. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+final transient \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1AuthService}{Auth\+Service}} \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1Login_afc6207f5ad5979a829642c9f410856aa}{auth\+Service}}
+\begin{DoxyCompactList}\small\item\em Service to handle authentication logic. \end{DoxyCompactList}\item 
+javax.\+swing.\+JButton \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1Login_a7b0063f113a10a332dc9961392fd0628}{j\+Button1}}
+\begin{DoxyCompactList}\small\item\em Button to perform login ("{}\+Log In"{}). \end{DoxyCompactList}\item 
+javax.\+swing.\+JLabel \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1Login_a822fa6426790c6c44c7fad789bddfcfa}{j\+Label1}}
+\begin{DoxyCompactList}\small\item\em Label for the image/logo. \end{DoxyCompactList}\item 
+javax.\+swing.\+JLabel \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1Login_a9225931135e2f0f0c6488d3fc204ad4c}{j\+Label3}}
+\begin{DoxyCompactList}\small\item\em Label for the title ("{}\+User Login"{}). \end{DoxyCompactList}\item 
+javax.\+swing.\+JPanel \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1Login_a30279203310c1bc8fcc9e6d15edeac13}{j\+Panel1}}
+\begin{DoxyCompactList}\small\item\em Main panel container. \end{DoxyCompactList}\item 
+javax.\+swing.\+JPassword\+Field \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1Login_a6709769133ef85f8201d86e6e436338a}{j\+Password\+Field1}}
+\begin{DoxyCompactList}\small\item\em Input field for the password. \end{DoxyCompactList}\item 
+javax.\+swing.\+JText\+Field \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1Login_a36e0d5c6df8e50615b96fbb67f855c8c}{usernametxt}}
+\begin{DoxyCompactList}\small\item\em Input field for the username. \end{DoxyCompactList}\item 
+javax.\+swing.\+JCombo\+Box$<$ String $>$ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1Login_a981cc276ccd95ea19d12d7ad8c2d57cc}{usertypecmbo}}
+\begin{DoxyCompactList}\small\item\em Combo box for user type (admin/cashier). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1Login_aeea494ca67f42033f3d3b287c2f297bf}{PRIMARY\+\_\+\+FONT}} = "{}Yu Gothic UI"{}
+\begin{DoxyCompactList}\small\item\em Primary font used in the GUI. \end{DoxyCompactList}\item 
+static final String \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1Login_afb300864f2c33b902ab656d46fd71575}{LOGIN\+\_\+\+STRING}} = "{}Log in"{}
+\begin{DoxyCompactList}\small\item\em String constant for "{}\+Log in"{} button text. \end{DoxyCompactList}\item 
+static java.\+util.\+function.\+Supplier$<$ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1Login_a4991bf057499a53e77492291ee9ec66a}{Login}} $>$ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1Login_af2da55421ea492860e61bf95c2711cd5}{login\+Factory}} = Login\+::new
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{classes_1_1ull_1_1esit_1_1app_1_1Login}{Login} window for the Restaurant System. 
+
+\begin{DoxyVerb}   Shows a Swing form that lets the user:
+   - enter his/her/their username.
+   - enter his/her/their password.
+   - select user type (admin or cashier) from a combo box.
+   - click the "Log In" button to authenticate.
+
+   The credentials are sent to the backend through AuthService and
+   ApiClient.
+   According to the role returned by the server (ADMIN or CASHIER), the
+   application opens the corresponding window: AdminLogin or Cashier.
+\end{DoxyVerb}
+ 
+
+Definition at line \mbox{\hyperlink{Login_8java_source_l00023}{23}} of file \mbox{\hyperlink{Login_8java_source}{Login.\+java}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1Login_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1Login_a4991bf057499a53e77492291ee9ec66a}\index{es.ull.esit.app.Login@{es.ull.esit.app.Login}!Login@{Login}}
+\index{Login@{Login}!es.ull.esit.app.Login@{es.ull.esit.app.Login}}
+\doxysubsubsection{\texorpdfstring{Login()}{Login()}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1app_1_1Login_a4991bf057499a53e77492291ee9ec66a} 
+es.\+ull.\+esit.\+app.\+Login.\+Login (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor. 
+
+Creates the login window, initializes the \doxylink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1AuthService}{Auth\+Service} and GUI components.
+
+The \doxylink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient}{Api\+Client} is configured to connect to the backend at "{}http\+://localhost\+:8080"{}, which must match the URL of the Spring Boot backend server. 
+
+Definition at line \mbox{\hyperlink{Login_8java_source_l00078}{78}} of file \mbox{\hyperlink{Login_8java_source}{Login.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00079\ \ \ \ \ initComponents();}
+\DoxyCodeLine{00080\ \ \ \ \ ApiClient\ client\ =\ \textcolor{keyword}{new}\ ApiClient(\textcolor{stringliteral}{"{}http://localhost:8080"{}});}
+\DoxyCodeLine{00081\ \ \ \ \ this.authService\ =\ \textcolor{keyword}{new}\ AuthService(client);}
+\DoxyCodeLine{00082\ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{Login_8java_source_l00092}{init\+Components()}}.
+
+
+
+Referenced by \mbox{\hyperlink{Login_8java_source_l00273}{main()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classes_1_1ull_1_1esit_1_1app_1_1Login_a4991bf057499a53e77492291ee9ec66a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classes_1_1ull_1_1esit_1_1app_1_1Login_a4991bf057499a53e77492291ee9ec66a_icgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-func-members}
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1Login_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1Login_ae61fa95fab1880d2e48d4b52948f51f6}\index{es.ull.esit.app.Login@{es.ull.esit.app.Login}!initComponents@{initComponents}}
+\index{initComponents@{initComponents}!es.ull.esit.app.Login@{es.ull.esit.app.Login}}
+\doxysubsubsection{\texorpdfstring{initComponents()}{initComponents()}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1app_1_1Login_ae61fa95fab1880d2e48d4b52948f51f6} 
+void es.\+ull.\+esit.\+app.\+Login.\+init\+Components (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Initializes GUI components. 
+
+\begin{DoxyVerb}   Generated by the Form Editor: do not modify.
+   Sets up logo image, main label, input fields for username and password, combo box for user type, and button for "Log In", along with the layout and configuration of the window.
+\end{DoxyVerb}
+ 
+
+Definition at line \mbox{\hyperlink{Login_8java_source_l00092}{92}} of file \mbox{\hyperlink{Login_8java_source}{Login.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \ \ \ \ jPanel1\ =\ \textcolor{keyword}{new}\ javax.swing.JPanel();}
+\DoxyCodeLine{00095\ \ \ \ \ jLabel1\ =\ \textcolor{keyword}{new}\ javax.swing.JLabel();}
+\DoxyCodeLine{00096\ \ \ \ \ jLabel3\ =\ \textcolor{keyword}{new}\ javax.swing.JLabel();}
+\DoxyCodeLine{00097\ \ \ \ \ usernametxt\ =\ \textcolor{keyword}{new}\ javax.swing.JTextField();}
+\DoxyCodeLine{00098\ \ \ \ \ usertypecmbo\ =\ \textcolor{keyword}{new}\ javax.swing.JComboBox<>();}
+\DoxyCodeLine{00099\ \ \ \ \ jButton1\ =\ \textcolor{keyword}{new}\ javax.swing.JButton();}
+\DoxyCodeLine{00100\ \ \ \ \ jPasswordField1\ =\ \textcolor{keyword}{new}\ javax.swing.JPasswordField();}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \ \ \ \ setDefaultCloseOperation(javax.swing.WindowConstants.EXIT\_ON\_CLOSE);}
+\DoxyCodeLine{00103\ \ \ \ \ setTitle(\textcolor{stringliteral}{"{}Login"{}});}
+\DoxyCodeLine{00104\ \ \ \ \ setResizable(\textcolor{keyword}{false});}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \ \ \ \ jPanel1.setBackground(\textcolor{keyword}{new}\ java.awt.Color(248,\ 244,\ 230));}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \ \ \ \ jLabel1.setIcon(\textcolor{keyword}{new}\ javax.swing.ImageIcon(getClass().getResource(\textcolor{stringliteral}{"{}/ui/screenshot.png"{}})));\ \textcolor{comment}{//\ NOI18N}}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \ \ \ \ jLabel3.setFont(\textcolor{keyword}{new}\ java.awt.Font(PRIMARY\_FONT,\ 1,\ 24));\ \textcolor{comment}{//\ NOI18N}}
+\DoxyCodeLine{00111\ \ \ \ \ jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);}
+\DoxyCodeLine{00112\ \ \ \ \ jLabel3.setText(\textcolor{stringliteral}{"{}User\ Login\ "{}});}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \ \ \ \ usernametxt.setFont(\textcolor{keyword}{new}\ java.awt.Font(PRIMARY\_FONT,\ 0,\ 18));\ \textcolor{comment}{//\ NOI18N}}
+\DoxyCodeLine{00115\ \ \ \ \ usernametxt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);}
+\DoxyCodeLine{00116\ \ \ \ \ usernametxt.setBorder(javax.swing.BorderFactory.createTitledBorder(}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ javax.swing.border.LineBorder(\textcolor{keyword}{new}\ java.awt.Color(0,\ 0,\ 0),\ 1,\ \textcolor{keyword}{true}),\ \textcolor{stringliteral}{"{}Username"{}},}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ javax.swing.border.TitledBorder.LEFT,\ javax.swing.border.TitledBorder.TOP,}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ java.awt.Font(PRIMARY\_FONT,\ 0,\ 18)));\ \textcolor{comment}{//\ NOI18N}}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ \ \ \ \ usertypecmbo.setEditable(\textcolor{keyword}{true});}
+\DoxyCodeLine{00122\ \ \ \ \ usertypecmbo.setFont(\textcolor{keyword}{new}\ java.awt.Font(PRIMARY\_FONT,\ 0,\ 18));\ \textcolor{comment}{//\ NOI18N}}
+\DoxyCodeLine{00123\ \ \ \ \ usertypecmbo.setModel(\textcolor{keyword}{new}\ javax.swing.DefaultComboBoxModel<>(\textcolor{keyword}{new}\ String[]\ \{\ \textcolor{stringliteral}{"{}admin"{}},\ \textcolor{stringliteral}{"{}cashier"{}}\ \}));}
+\DoxyCodeLine{00124\ \ \ \ \ usertypecmbo.addActionListener(this::usertypecmboActionPerformed);}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ \ \ \ \ jButton1.setFont(\textcolor{keyword}{new}\ java.awt.Font(PRIMARY\_FONT,\ 1,\ 18));\ \textcolor{comment}{//\ NOI18N}}
+\DoxyCodeLine{00127\ \ \ \ \ jButton1.setText(LOGIN\_STRING);}
+\DoxyCodeLine{00128\ \ \ \ \ jButton1.addActionListener(this::jButton1ActionPerformed);}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00130\ \ \ \ \ jPasswordField1.setFont(\textcolor{keyword}{new}\ java.awt.Font(\textcolor{stringliteral}{"{}Thonburi"{}},\ 0,\ 18));\ \textcolor{comment}{//\ NOI18N}}
+\DoxyCodeLine{00131\ \ \ \ \ jPasswordField1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);}
+\DoxyCodeLine{00132\ \ \ \ \ jPasswordField1.setBorder(javax.swing.BorderFactory.createTitledBorder(}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ javax.swing.BorderFactory.createLineBorder(\textcolor{keyword}{new}\ java.awt.Color(0,\ 0,\ 0)),\ \textcolor{stringliteral}{"{}Password"{}},}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ javax.swing.border.TitledBorder.LEFT,\ javax.swing.border.TitledBorder.TOP,}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ java.awt.Font(\textcolor{stringliteral}{"{}Lucida\ Grande"{}},\ 0,\ 18)));\ \textcolor{comment}{//\ NOI18N}}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \ \ \ \ javax.swing.GroupLayout\ jPanel1Layout\ =\ \textcolor{keyword}{new}\ javax.swing.GroupLayout(jPanel1);}
+\DoxyCodeLine{00138\ \ \ \ \ jPanel1.setLayout(jPanel1Layout);}
+\DoxyCodeLine{00139\ \ \ \ \ jPanel1Layout.setHorizontalGroup(}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ .addGroup(jPanel1Layout.createSequentialGroup()}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .addGroup(jPanel1Layout.createSequentialGroup()}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .addGap(132,\ 132,\ 132)}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .addComponent(jLabel1))}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .addGroup(jPanel1Layout.createSequentialGroup()}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .addGap(61,\ 61,\ 61)}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .addComponent(jLabel3,\ javax.swing.GroupLayout.PREFERRED\_SIZE,\ 309,}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ javax.swing.GroupLayout.PREFERRED\_SIZE))}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .addGroup(jPanel1Layout.createSequentialGroup()}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .addGap(74,\ 74,\ 74)}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .addComponent(jPasswordField1,\ javax.swing.GroupLayout.PREFERRED\_SIZE,\ 311,}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ javax.swing.GroupLayout.PREFERRED\_SIZE)}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .addComponent(usernametxt,\ javax.swing.GroupLayout.PREFERRED\_SIZE,\ 311,}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ javax.swing.GroupLayout.PREFERRED\_SIZE)}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .addComponent(usertypecmbo,\ javax.swing.GroupLayout.PREFERRED\_SIZE,\ 311,}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ javax.swing.GroupLayout.PREFERRED\_SIZE)))}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .addGroup(jPanel1Layout.createSequentialGroup()}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .addGap(146,\ 146,\ 146)}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .addComponent(jButton1,\ javax.swing.GroupLayout.PREFERRED\_SIZE,\ 141,}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ javax.swing.GroupLayout.PREFERRED\_SIZE)))}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .addContainerGap(86,\ Short.MAX\_VALUE)));}
+\DoxyCodeLine{00164\ \ \ \ \ jPanel1Layout.setVerticalGroup(}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \ \ .addGroup(jPanel1Layout.createSequentialGroup()}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .addGap(39,\ 39,\ 39)}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .addComponent(jLabel1)}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .addComponent(jLabel3,\ javax.swing.GroupLayout.PREFERRED\_SIZE,\ 44,}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ javax.swing.GroupLayout.PREFERRED\_SIZE)}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .addComponent(usernametxt,\ javax.swing.GroupLayout.PREFERRED\_SIZE,\ 59,}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ javax.swing.GroupLayout.PREFERRED\_SIZE)}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .addGap(18,\ 18,\ 18)}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .addComponent(jPasswordField1,\ javax.swing.GroupLayout.PREFERRED\_SIZE,\ 59,}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ javax.swing.GroupLayout.PREFERRED\_SIZE)}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .addGap(18,\ 18,\ 18)}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .addComponent(usertypecmbo,\ javax.swing.GroupLayout.PREFERRED\_SIZE,\ 46,}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ javax.swing.GroupLayout.PREFERRED\_SIZE)}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .addGap(18,\ 18,\ 18)}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .addComponent(jButton1,\ javax.swing.GroupLayout.PREFERRED\_SIZE,\ 49,}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ javax.swing.GroupLayout.PREFERRED\_SIZE)}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .addContainerGap(39,\ Short.MAX\_VALUE)));}
+\DoxyCodeLine{00185\ }
+\DoxyCodeLine{00186\ \ \ \ \ javax.swing.GroupLayout\ layout\ =\ \textcolor{keyword}{new}\ javax.swing.GroupLayout(getContentPane());}
+\DoxyCodeLine{00187\ \ \ \ \ getContentPane().setLayout(layout);}
+\DoxyCodeLine{00188\ \ \ \ \ layout.setHorizontalGroup(}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ .addComponent(jPanel1,\ javax.swing.GroupLayout.PREFERRED\_SIZE,\ javax.swing.GroupLayout.DEFAULT\_SIZE,}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ javax.swing.GroupLayout.PREFERRED\_SIZE));}
+\DoxyCodeLine{00192\ \ \ \ \ layout.setVerticalGroup(}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ .addComponent(jPanel1,\ javax.swing.GroupLayout.DEFAULT\_SIZE,\ javax.swing.GroupLayout.DEFAULT\_SIZE,}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Short.MAX\_VALUE));}
+\DoxyCodeLine{00196\ }
+\DoxyCodeLine{00197\ \ \ \ \ pack();}
+\DoxyCodeLine{00198\ \ \ \ \ setLocationRelativeTo(\textcolor{keyword}{null});}
+\DoxyCodeLine{00199\ \ \ \}\textcolor{comment}{//\ </editor-\/fold>//GEN-\/END:initComponents}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{Login_8java_source_l00092}{init\+Components()}}, \mbox{\hyperlink{Login_8java_source_l00304}{j\+Button1}}, \mbox{\hyperlink{Login_8java_source_l00306}{j\+Label1}}, \mbox{\hyperlink{Login_8java_source_l00308}{j\+Label3}}, \mbox{\hyperlink{Login_8java_source_l00310}{j\+Panel1}}, \mbox{\hyperlink{Login_8java_source_l00312}{j\+Password\+Field1}}, \mbox{\hyperlink{Login_8java_source_l00067}{LOGIN\+\_\+\+STRING}}, \mbox{\hyperlink{Login_8java_source_l00064}{PRIMARY\+\_\+\+FONT}}, \mbox{\hyperlink{Login_8java_source_l00314}{usernametxt}}, and \mbox{\hyperlink{Login_8java_source_l00319}{usertypecmbo}}.
+
+
+
+Referenced by \mbox{\hyperlink{Login_8java_source_l00092}{init\+Components()}}, and \mbox{\hyperlink{Login_8java_source_l00078}{Login()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{classes_1_1ull_1_1esit_1_1app_1_1Login_ae61fa95fab1880d2e48d4b52948f51f6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classes_1_1ull_1_1esit_1_1app_1_1Login_ae61fa95fab1880d2e48d4b52948f51f6_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1Login_a4466f2f88c125b3f609314a421381778}\index{es.ull.esit.app.Login@{es.ull.esit.app.Login}!jButton1ActionPerformed@{jButton1ActionPerformed}}
+\index{jButton1ActionPerformed@{jButton1ActionPerformed}!es.ull.esit.app.Login@{es.ull.esit.app.Login}}
+\doxysubsubsection{\texorpdfstring{jButton1ActionPerformed()}{jButton1ActionPerformed()}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1app_1_1Login_a4466f2f88c125b3f609314a421381778} 
+void es.\+ull.\+esit.\+app.\+Login.\+j\+Button1\+Action\+Performed (\begin{DoxyParamCaption}\item[{java.\+awt.\+event.\+Action\+Event}]{evt}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Action handler for the "{}\+Log In"{} button. 
+
+\begin{DoxyVerb}   Action steps:
+   1. Read username and password from the fields.
+   2. Disable the button and show "Loading..." to avoid double clicks.
+   3. Run authentication in a background thread.
+   4. On success, open the admin or cashier window depending on the role.
+   5. On error, show a dialog and re-enable the button.
+\end{DoxyVerb}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em evt} & \mbox{[}java.\+awt.\+event.\+Action\+Event\mbox{]} Action event triggered by button click. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{Login_8java_source_l00214}{214}} of file \mbox{\hyperlink{Login_8java_source}{Login.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\textcolor{comment}{//\ GEN-\/FIRST:event\_jButton1ActionPerformed}}
+\DoxyCodeLine{00215\ \ \ \ \ \textcolor{comment}{//\ Get\ username\ and\ password\ from\ input\ fields.}}
+\DoxyCodeLine{00216\ \ \ \ \ String\ usernameInput\ =\ usernametxt.getText();}
+\DoxyCodeLine{00217\ \ \ \ \ String\ passwordInput\ =\ \textcolor{keyword}{new}\ String(jPasswordField1.getPassword());}
+\DoxyCodeLine{00218\ }
+\DoxyCodeLine{00219\ \ \ \ \ jButton1.setEnabled(\textcolor{keyword}{false});}
+\DoxyCodeLine{00220\ \ \ \ \ jButton1.setText(\textcolor{stringliteral}{"{}Loading..."{}});}
+\DoxyCodeLine{00221\ }
+\DoxyCodeLine{00222\ \ \ \ \ \textcolor{keyword}{new}\ Thread(()\ -\/>\ \{}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Authenticate\ user\ through\ AuthService.}}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ User\ loggedInUser\ =\ authService.authenticate(usernameInput,\ passwordInput);}
+\DoxyCodeLine{00226\ }
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ SwingUtilities.invokeLater(()\ -\/>\ \{}
+\DoxyCodeLine{00228\ }
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Open\ the\ corresponding\ window\ based\ on\ user\ role.\ Use\ the}}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ injectable\ factories\ so\ tests\ can\ substitute\ frames.}}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{stringliteral}{"{}ADMIN"{}}.equalsIgnoreCase(loggedInUser.getRole()))\ \{}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \ \ \ \ adminSupplier.get().setVisible(\textcolor{keyword}{true});}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\textcolor{stringliteral}{"{}CASHIER"{}}.equalsIgnoreCase(loggedInUser.getRole()))\ \{}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \ \ \ \ cashierFactory.apply(loggedInUser.getUsername()).setVisible(\textcolor{keyword}{true});}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \ \ \ \ messageDialog.showMessage(\textcolor{keyword}{this},\ \textcolor{stringliteral}{"{}Unknown\ Role:\ "{}}\ +\ loggedInUser.getRole());}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \ \ \ \ jButton1.setEnabled(\textcolor{keyword}{true});}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \ \ \ \ jButton1.setText(LOGIN\_STRING);}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00241\ }
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \ \ this.dispose();}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00244\ }
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (Exception\ e)\ \{}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ SwingUtilities.invokeLater(()\ -\/>\ \{}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \ \ messageDialog.showMessage(\textcolor{keyword}{this},\ \textcolor{stringliteral}{"{}Login\ failed:\ "{}}\ +\ e.getMessage(),\ \textcolor{stringliteral}{"{}Login\ Error"{}},\ JOptionPane.ERROR\_MESSAGE);}
+\DoxyCodeLine{00248\ }
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \ \ jButton1.setEnabled(\textcolor{keyword}{true});}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \ \ jButton1.setText(LOGIN\_STRING);}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00253\ \ \ \ \ \}).start();}
+\DoxyCodeLine{00254\ \ \ \}\textcolor{comment}{//\ GEN-\/LAST:event\_jButton1ActionPerformed}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{Login_8java_source_l00026}{auth\+Service}}, \mbox{\hyperlink{src_2main_2java_2es_2ull_2esit_2app_2middleware_2model_2User_8java_source_l00063}{es.\+ull.\+esit.\+app.\+middleware.\+model.\+User.\+get\+Role()}}, \mbox{\hyperlink{src_2main_2java_2es_2ull_2esit_2app_2middleware_2model_2User_8java_source_l00045}{es.\+ull.\+esit.\+app.\+middleware.\+model.\+User.\+get\+Username()}}, \mbox{\hyperlink{Login_8java_source_l00304}{j\+Button1}}, \mbox{\hyperlink{Login_8java_source_l00312}{j\+Password\+Field1}}, \mbox{\hyperlink{Login_8java_source_l00067}{LOGIN\+\_\+\+STRING}}, and \mbox{\hyperlink{Login_8java_source_l00314}{usernametxt}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classes_1_1ull_1_1esit_1_1app_1_1Login_a4466f2f88c125b3f609314a421381778_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1Login_a93bb7387e558ed643d7f04a09d1d53d2}\index{es.ull.esit.app.Login@{es.ull.esit.app.Login}!main@{main}}
+\index{main@{main}!es.ull.esit.app.Login@{es.ull.esit.app.Login}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1app_1_1Login_a93bb7387e558ed643d7f04a09d1d53d2} 
+void es.\+ull.\+esit.\+app.\+Login.\+main (\begin{DoxyParamCaption}\item[{String\mbox{[}$\,$\mbox{]}}]{args}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Main entry point to start the login window application. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & \mbox{[}String\mbox{[}\mbox{]}\mbox{]} Command line arguments (not used). \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{Login_8java_source_l00273}{273}} of file \mbox{\hyperlink{Login_8java_source}{Login.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00274\ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{00275\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (javax.swing.UIManager.LookAndFeelInfo\ info\ :\ javax.swing.UIManager.getInstalledLookAndFeels())\ \{}
+\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{stringliteral}{"{}Nimbus"{}}.equals(info.getName()))\ \{}
+\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ \ \ javax.swing.UIManager.setLookAndFeel(info.getClassName());}
+\DoxyCodeLine{00278\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00281\ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (ClassNotFoundException\ |\ InstantiationException\ |\ IllegalAccessException}
+\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ |\ javax.swing.UnsupportedLookAndFeelException\ ex)\ \{}
+\DoxyCodeLine{00283\ \ \ \ \ \ \ java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE,\ \textcolor{keyword}{null},\ ex);}
+\DoxyCodeLine{00284\ \ \ \ \ \}}
+\DoxyCodeLine{00285\ }
+\DoxyCodeLine{00286\ \ \ \ \ java.awt.EventQueue.invokeLater(()\ -\/>\ getLoginFactory().\textcolor{keyword}{get}().setVisible(\textcolor{keyword}{true}));}
+\DoxyCodeLine{00287\ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{Login_8java_source_l00078}{Login()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classes_1_1ull_1_1esit_1_1app_1_1Login_a93bb7387e558ed643d7f04a09d1d53d2_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1Login_aca803b0cc42ac57cac851a869f6b129c}\index{es.ull.esit.app.Login@{es.ull.esit.app.Login}!usertypecmboActionPerformed@{usertypecmboActionPerformed}}
+\index{usertypecmboActionPerformed@{usertypecmboActionPerformed}!es.ull.esit.app.Login@{es.ull.esit.app.Login}}
+\doxysubsubsection{\texorpdfstring{usertypecmboActionPerformed()}{usertypecmboActionPerformed()}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1app_1_1Login_aca803b0cc42ac57cac851a869f6b129c} 
+void es.\+ull.\+esit.\+app.\+Login.\+usertypecmbo\+Action\+Performed (\begin{DoxyParamCaption}\item[{java.\+awt.\+event.\+Action\+Event}]{evt}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Action handler for the user type combo box. 
+
+\begin{DoxyVerb}   The selection is not used in this implementation, as the role is
+   determined by the server.
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em evt} & \mbox{[}java.\+awt.\+event.\+Action\+Event\mbox{]} Action event triggered by combo box selection. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{Login_8java_source_l00264}{264}} of file \mbox{\hyperlink{Login_8java_source}{Login.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\textcolor{comment}{//\ GEN-\/FIRST:event\_usertypecmboActionPerformed}}
+\DoxyCodeLine{00265\ \ \ \ \ \textcolor{comment}{//\ No\ action\ needed\ here.}}
+\DoxyCodeLine{00266\ \ \ \}\textcolor{comment}{//\ GEN-\/LAST:event\_usertypecmboActionPerformed}}
+
+\end{DoxyCode}
+
+
+\label{doc-variable-members}
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1Login_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1Login_afc6207f5ad5979a829642c9f410856aa}\index{es.ull.esit.app.Login@{es.ull.esit.app.Login}!authService@{authService}}
+\index{authService@{authService}!es.ull.esit.app.Login@{es.ull.esit.app.Login}}
+\doxysubsubsection{\texorpdfstring{authService}{authService}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1app_1_1Login_afc6207f5ad5979a829642c9f410856aa} 
+final transient \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1AuthService}{Auth\+Service}} es.\+ull.\+esit.\+app.\+Login.\+auth\+Service\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Service to handle authentication logic. 
+
+
+
+Definition at line \mbox{\hyperlink{Login_8java_source_l00026}{26}} of file \mbox{\hyperlink{Login_8java_source}{Login.\+java}}.
+
+
+
+Referenced by \mbox{\hyperlink{Login_8java_source_l00214}{j\+Button1\+Action\+Performed()}}.
+
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1Login_a7b0063f113a10a332dc9961392fd0628}\index{es.ull.esit.app.Login@{es.ull.esit.app.Login}!jButton1@{jButton1}}
+\index{jButton1@{jButton1}!es.ull.esit.app.Login@{es.ull.esit.app.Login}}
+\doxysubsubsection{\texorpdfstring{jButton1}{jButton1}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1app_1_1Login_a7b0063f113a10a332dc9961392fd0628} 
+javax.\+swing.\+JButton es.\+ull.\+esit.\+app.\+Login.\+j\+Button1\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Button to perform login ("{}\+Log In"{}). 
+
+
+
+Definition at line \mbox{\hyperlink{Login_8java_source_l00304}{304}} of file \mbox{\hyperlink{Login_8java_source}{Login.\+java}}.
+
+
+
+Referenced by \mbox{\hyperlink{Login_8java_source_l00092}{init\+Components()}}, and \mbox{\hyperlink{Login_8java_source_l00214}{j\+Button1\+Action\+Performed()}}.
+
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1Login_a822fa6426790c6c44c7fad789bddfcfa}\index{es.ull.esit.app.Login@{es.ull.esit.app.Login}!jLabel1@{jLabel1}}
+\index{jLabel1@{jLabel1}!es.ull.esit.app.Login@{es.ull.esit.app.Login}}
+\doxysubsubsection{\texorpdfstring{jLabel1}{jLabel1}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1app_1_1Login_a822fa6426790c6c44c7fad789bddfcfa} 
+javax.\+swing.\+JLabel es.\+ull.\+esit.\+app.\+Login.\+j\+Label1\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Label for the image/logo. 
+
+
+
+Definition at line \mbox{\hyperlink{Login_8java_source_l00306}{306}} of file \mbox{\hyperlink{Login_8java_source}{Login.\+java}}.
+
+
+
+Referenced by \mbox{\hyperlink{Login_8java_source_l00092}{init\+Components()}}.
+
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1Login_a9225931135e2f0f0c6488d3fc204ad4c}\index{es.ull.esit.app.Login@{es.ull.esit.app.Login}!jLabel3@{jLabel3}}
+\index{jLabel3@{jLabel3}!es.ull.esit.app.Login@{es.ull.esit.app.Login}}
+\doxysubsubsection{\texorpdfstring{jLabel3}{jLabel3}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1app_1_1Login_a9225931135e2f0f0c6488d3fc204ad4c} 
+javax.\+swing.\+JLabel es.\+ull.\+esit.\+app.\+Login.\+j\+Label3\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Label for the title ("{}\+User Login"{}). 
+
+
+
+Definition at line \mbox{\hyperlink{Login_8java_source_l00308}{308}} of file \mbox{\hyperlink{Login_8java_source}{Login.\+java}}.
+
+
+
+Referenced by \mbox{\hyperlink{Login_8java_source_l00092}{init\+Components()}}.
+
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1Login_a30279203310c1bc8fcc9e6d15edeac13}\index{es.ull.esit.app.Login@{es.ull.esit.app.Login}!jPanel1@{jPanel1}}
+\index{jPanel1@{jPanel1}!es.ull.esit.app.Login@{es.ull.esit.app.Login}}
+\doxysubsubsection{\texorpdfstring{jPanel1}{jPanel1}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1app_1_1Login_a30279203310c1bc8fcc9e6d15edeac13} 
+javax.\+swing.\+JPanel es.\+ull.\+esit.\+app.\+Login.\+j\+Panel1\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Main panel container. 
+
+
+
+Definition at line \mbox{\hyperlink{Login_8java_source_l00310}{310}} of file \mbox{\hyperlink{Login_8java_source}{Login.\+java}}.
+
+
+
+Referenced by \mbox{\hyperlink{Login_8java_source_l00092}{init\+Components()}}.
+
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1Login_a6709769133ef85f8201d86e6e436338a}\index{es.ull.esit.app.Login@{es.ull.esit.app.Login}!jPasswordField1@{jPasswordField1}}
+\index{jPasswordField1@{jPasswordField1}!es.ull.esit.app.Login@{es.ull.esit.app.Login}}
+\doxysubsubsection{\texorpdfstring{jPasswordField1}{jPasswordField1}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1app_1_1Login_a6709769133ef85f8201d86e6e436338a} 
+javax.\+swing.\+JPassword\+Field es.\+ull.\+esit.\+app.\+Login.\+j\+Password\+Field1\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Input field for the password. 
+
+
+
+Definition at line \mbox{\hyperlink{Login_8java_source_l00312}{312}} of file \mbox{\hyperlink{Login_8java_source}{Login.\+java}}.
+
+
+
+Referenced by \mbox{\hyperlink{Login_8java_source_l00092}{init\+Components()}}, and \mbox{\hyperlink{Login_8java_source_l00214}{j\+Button1\+Action\+Performed()}}.
+
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1Login_afb300864f2c33b902ab656d46fd71575}\index{es.ull.esit.app.Login@{es.ull.esit.app.Login}!LOGIN\_STRING@{LOGIN\_STRING}}
+\index{LOGIN\_STRING@{LOGIN\_STRING}!es.ull.esit.app.Login@{es.ull.esit.app.Login}}
+\doxysubsubsection{\texorpdfstring{LOGIN\_STRING}{LOGIN\_STRING}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1app_1_1Login_afb300864f2c33b902ab656d46fd71575} 
+final String es.\+ull.\+esit.\+app.\+Login.\+LOGIN\+\_\+\+STRING = "{}Log in"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+String constant for "{}\+Log in"{} button text. 
+
+
+
+Definition at line \mbox{\hyperlink{Login_8java_source_l00067}{67}} of file \mbox{\hyperlink{Login_8java_source}{Login.\+java}}.
+
+
+
+Referenced by \mbox{\hyperlink{Login_8java_source_l00092}{init\+Components()}}, and \mbox{\hyperlink{Login_8java_source_l00214}{j\+Button1\+Action\+Performed()}}.
+
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1Login_af2da55421ea492860e61bf95c2711cd5}\index{es.ull.esit.app.Login@{es.ull.esit.app.Login}!loginFactory@{loginFactory}}
+\index{loginFactory@{loginFactory}!es.ull.esit.app.Login@{es.ull.esit.app.Login}}
+\doxysubsubsection{\texorpdfstring{loginFactory}{loginFactory}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1app_1_1Login_af2da55421ea492860e61bf95c2711cd5} 
+java.\+util.\+function.\+Supplier$<$\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1Login_a4991bf057499a53e77492291ee9ec66a}{Login}}$>$ es.\+ull.\+esit.\+app.\+Login.\+login\+Factory = Login\+::new\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{Login_8java_source_l00290}{290}} of file \mbox{\hyperlink{Login_8java_source}{Login.\+java}}.
+
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1Login_aeea494ca67f42033f3d3b287c2f297bf}\index{es.ull.esit.app.Login@{es.ull.esit.app.Login}!PRIMARY\_FONT@{PRIMARY\_FONT}}
+\index{PRIMARY\_FONT@{PRIMARY\_FONT}!es.ull.esit.app.Login@{es.ull.esit.app.Login}}
+\doxysubsubsection{\texorpdfstring{PRIMARY\_FONT}{PRIMARY\_FONT}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1app_1_1Login_aeea494ca67f42033f3d3b287c2f297bf} 
+final String es.\+ull.\+esit.\+app.\+Login.\+PRIMARY\+\_\+\+FONT = "{}Yu Gothic UI"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Primary font used in the GUI. 
+
+
+
+Definition at line \mbox{\hyperlink{Login_8java_source_l00064}{64}} of file \mbox{\hyperlink{Login_8java_source}{Login.\+java}}.
+
+
+
+Referenced by \mbox{\hyperlink{Login_8java_source_l00092}{init\+Components()}}.
+
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1Login_a36e0d5c6df8e50615b96fbb67f855c8c}\index{es.ull.esit.app.Login@{es.ull.esit.app.Login}!usernametxt@{usernametxt}}
+\index{usernametxt@{usernametxt}!es.ull.esit.app.Login@{es.ull.esit.app.Login}}
+\doxysubsubsection{\texorpdfstring{usernametxt}{usernametxt}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1app_1_1Login_a36e0d5c6df8e50615b96fbb67f855c8c} 
+javax.\+swing.\+JText\+Field es.\+ull.\+esit.\+app.\+Login.\+usernametxt\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Input field for the username. 
+
+
+
+Definition at line \mbox{\hyperlink{Login_8java_source_l00314}{314}} of file \mbox{\hyperlink{Login_8java_source}{Login.\+java}}.
+
+
+
+Referenced by \mbox{\hyperlink{Login_8java_source_l00092}{init\+Components()}}, and \mbox{\hyperlink{Login_8java_source_l00214}{j\+Button1\+Action\+Performed()}}.
+
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1Login_a981cc276ccd95ea19d12d7ad8c2d57cc}\index{es.ull.esit.app.Login@{es.ull.esit.app.Login}!usertypecmbo@{usertypecmbo}}
+\index{usertypecmbo@{usertypecmbo}!es.ull.esit.app.Login@{es.ull.esit.app.Login}}
+\doxysubsubsection{\texorpdfstring{usertypecmbo}{usertypecmbo}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1app_1_1Login_a981cc276ccd95ea19d12d7ad8c2d57cc} 
+javax.\+swing.\+JCombo\+Box$<$String$>$ es.\+ull.\+esit.\+app.\+Login.\+usertypecmbo\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Combo box for user type (admin/cashier). 
+
+Currently not trusted for security decisions. 
+
+Definition at line \mbox{\hyperlink{Login_8java_source_l00319}{319}} of file \mbox{\hyperlink{Login_8java_source}{Login.\+java}}.
+
+
+
+Referenced by \mbox{\hyperlink{Login_8java_source_l00092}{init\+Components()}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Login_8java}{Login.\+java}}\end{DoxyCompactItemize}

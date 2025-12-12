@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="AppetizerController_8java" kind="file" language="Java">
+    <compoundname>AppetizerController.java</compoundname>
+    <includes local="no">es.ull.esit.server.middleware.model.Appetizer</includes>
+    <includes local="no">es.ull.esit.server.repo.AppetizerRepository</includes>
+    <includes local="no">org.springframework.beans.factory.annotation.Autowired</includes>
+    <includes local="no">org.springframework.http.*</includes>
+    <includes local="no">org.springframework.web.bind.annotation.*</includes>
+    <includes local="no">java.util.List</includes>
+    <includes local="no">java.util.Optional</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>AppetizerController.java</label>
+        <link refid="AppetizerController_8java"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>es.ull.esit.server.middleware.model.Appetizer</label>
+      </node>
+      <node id="3">
+        <label>es.ull.esit.server.repo.AppetizerRepository</label>
+      </node>
+      <node id="7">
+        <label>java.util.List</label>
+      </node>
+      <node id="8">
+        <label>java.util.Optional</label>
+      </node>
+      <node id="4">
+        <label>org.springframework.beans.factory.annotation.Autowired</label>
+      </node>
+      <node id="5">
+        <label>org.springframework.http.*</label>
+      </node>
+      <node id="6">
+        <label>org.springframework.web.bind.annotation.*</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController" prot="public">es::ull::esit::server::controller::AppetizerController</innerclass>
+    <innernamespace refid="namespacees_1_1ull_1_1esit_1_1server_1_1controller">es::ull::esit::server::controller</innernamespace>
+    <innernamespace refid="namespaceorg_1_1springframework_1_1http">org::springframework::http</innernamespace>
+    <innernamespace refid="namespaceorg_1_1springframework_1_1web_1_1bind_1_1annotation">org::springframework::web::bind::annotation</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="namespacees_1_1ull_1_1esit_1_1server_1_1controller" refkind="compound"><highlight class="keyword">package<sp/></highlight><highlight class="normal">es.ull.esit.server.controller;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>es.ull.esit.server.middleware.model.Appetizer;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>es.ull.esit.server.repo.AppetizerRepository;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>org.springframework.beans.factory.annotation.Autowired;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>org.springframework.http.*;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>org.springframework.web.bind.annotation.*;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>java.util.List;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>java.util.Optional;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal">@RestController</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">@RequestMapping(</highlight><highlight class="stringliteral">&quot;/api/appetizers&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="21" refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController" refkind="compound"><highlight class="normal">public<sp/>class<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController" kindref="compound">AppetizerController</ref><sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/>@Autowired</highlight></codeline>
+<codeline lineno="25" refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_1a9c135b625cb475a18f381e7822636382" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/><ref refid="interfacees_1_1ull_1_1esit_1_1server_1_1repo_1_1AppetizerRepository" kindref="compound">AppetizerRepository</ref><sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_1a9c135b625cb475a18f381e7822636382" kindref="member">appetizerRepository</ref>;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/>@GetMapping</highlight></codeline>
+<codeline lineno="35" refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_1a2e88771342595fe571334958d6366868" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>ResponseEntity&lt;List&lt;Appetizer&gt;&gt;<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_1a2e88771342595fe571334958d6366868" kindref="member">getAllAppetizers</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>List&lt;Appetizer&gt;<sp/>appetizers<sp/>=<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_1a9c135b625cb475a18f381e7822636382" kindref="member">appetizerRepository</ref>.findAll();</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ResponseEntity.ok(appetizers);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>@GetMapping(</highlight><highlight class="stringliteral">&quot;/{id}&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="49" refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_1a7f897f113a1b92ae64836bf69351afb5" refkind="member"><highlight class="normal"><sp/><sp/>public<sp/>ResponseEntity&lt;<ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer" kindref="compound">Appetizer</ref>&gt;<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_1a7f897f113a1b92ae64836bf69351afb5" kindref="member">getAppetizerById</ref>(@PathVariable<sp/>Long<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>Optional&lt;Appetizer&gt;<sp/>appetizer<sp/>=<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_1a9c135b625cb475a18f381e7822636382" kindref="member">appetizerRepository</ref>.findById(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>appetizer</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.map(ResponseEntity::ok)</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.orElseGet(()<sp/>-&gt;<sp/>ResponseEntity.notFound().build());</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/>@PostMapping</highlight></codeline>
+<codeline lineno="65" refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_1a21b90d00b077d84499bef439aef79eee" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>ResponseEntity&lt;Appetizer&gt;<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_1a21b90d00b077d84499bef439aef79eee" kindref="member">createAppetizer</ref>(@RequestBody<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer" kindref="compound">Appetizer</ref><sp/>appetizer)<sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer" kindref="compound">Appetizer</ref><sp/>saved<sp/>=<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_1a9c135b625cb475a18f381e7822636382" kindref="member">appetizerRepository</ref>.save(appetizer);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ResponseEntity.status(HttpStatus.CREATED).body(saved);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/>@PutMapping(</highlight><highlight class="stringliteral">&quot;/{id}&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="80" refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_1a4fda9154efccb8e38dfc22dcaa8b1aa0" refkind="member"><highlight class="normal"><sp/><sp/>public<sp/>ResponseEntity&lt;<ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer" kindref="compound">Appetizer</ref>&gt;<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_1a4fda9154efccb8e38dfc22dcaa8b1aa0" kindref="member">updateAppetizer</ref>(@PathVariable<sp/>Long<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>@RequestBody<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer" kindref="compound">Appetizer</ref><sp/>appetizer)<sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_1a9c135b625cb475a18f381e7822636382" kindref="member">appetizerRepository</ref>.existsById(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>ResponseEntity.notFound().build();</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>appetizer.setAppetizersId(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Appetizer" kindref="compound">Appetizer</ref><sp/>updated<sp/>=<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_1a9c135b625cb475a18f381e7822636382" kindref="member">appetizerRepository</ref>.save(appetizer);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ResponseEntity.ok(updated);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/>@DeleteMapping(</highlight><highlight class="stringliteral">&quot;/{id}&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="99" refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_1a35376156c81c1244c8241750356c303b" refkind="member"><highlight class="normal"><sp/><sp/>public<sp/>ResponseEntity&lt;Void&gt;<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_1a35376156c81c1244c8241750356c303b" kindref="member">deleteAppetizer</ref>(@PathVariable<sp/>Long<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_1a9c135b625cb475a18f381e7822636382" kindref="member">appetizerRepository</ref>.existsById(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>ResponseEntity.notFound().build();</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AppetizerController_1a9c135b625cb475a18f381e7822636382" kindref="member">appetizerRepository</ref>.deleteById(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ResponseEntity.noContent().build();</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="server/src/main/java/es/ull/esit/server/controller/AppetizerController.java"/>
+  </compounddef>
+</doxygen>

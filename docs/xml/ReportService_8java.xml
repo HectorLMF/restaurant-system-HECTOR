@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="ReportService_8java" kind="file" language="Java">
+    <compoundname>ReportService.java</compoundname>
+    <includes local="no">es.ull.esit.app.middleware.ApiClient</includes>
+    <includes local="no">es.ull.esit.app.middleware.model.Appetizer</includes>
+    <includes local="no">es.ull.esit.app.middleware.model.Cashier</includes>
+    <includes local="no">es.ull.esit.app.middleware.model.Drink</includes>
+    <includes local="no">es.ull.esit.app.middleware.model.MainCourse</includes>
+    <includes local="no">java.util.List</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>ReportService.java</label>
+        <link refid="ReportService_8java"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>es.ull.esit.app.middleware.ApiClient</label>
+      </node>
+      <node id="3">
+        <label>es.ull.esit.app.middleware.model.Appetizer</label>
+      </node>
+      <node id="4">
+        <label>es.ull.esit.app.middleware.model.Cashier</label>
+      </node>
+      <node id="5">
+        <label>es.ull.esit.app.middleware.model.Drink</label>
+      </node>
+      <node id="6">
+        <label>es.ull.esit.app.middleware.model.MainCourse</label>
+      </node>
+      <node id="7">
+        <label>java.util.List</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ReportService" prot="public">es::ull::esit::app::middleware::service::ReportService</innerclass>
+    <innernamespace refid="namespacees_1_1ull_1_1esit_1_1app_1_1middleware_1_1service">es::ull::esit::app::middleware::service</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">package<sp/></highlight><highlight class="normal">es.ull.esit.app.middleware.service;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>es.ull.esit.app.middleware.ApiClient;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>es.ull.esit.app.middleware.model.Appetizer;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>es.ull.esit.app.middleware.model.Cashier;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>es.ull.esit.app.middleware.model.Drink;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>es.ull.esit.app.middleware.model.MainCourse;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>java.util.List;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ReportService" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ReportService_1a1c8e6ee876d9c50702ee10a6fe4beb92" kindref="member">ReportService</ref><sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ReportService_1ad5ba1496e984fa2db224764cf4f21747" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">final</highlight><highlight class="normal"><sp/><ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient" kindref="compound">ApiClient</ref><sp/><ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ReportService_1ad5ba1496e984fa2db224764cf4f21747" kindref="member">client</ref>;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ReportService_1a1c8e6ee876d9c50702ee10a6fe4beb92" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ReportService_1a1c8e6ee876d9c50702ee10a6fe4beb92" kindref="member">ReportService</ref>(<ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient" kindref="compound">ApiClient</ref><sp/><ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ReportService_1ad5ba1496e984fa2db224764cf4f21747" kindref="member">client</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>this.client<sp/>=<sp/><ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ReportService_1ad5ba1496e984fa2db224764cf4f21747" kindref="member">client</ref>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ReportService_1aca3b9e34ecdb98209f034cdabf5722aa" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>List&lt;Cashier&gt;<sp/><ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ReportService_1aca3b9e34ecdb98209f034cdabf5722aa" kindref="member">getCashierInfo</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ReportService_1ad5ba1496e984fa2db224764cf4f21747" kindref="member">client</ref>.getAllCashiers();</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ReportService_1a2314b27508949bbc494f3b6209fb866a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>String<sp/><ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ReportService_1a2314b27508949bbc494f3b6209fb866a" kindref="member">checkMenuStatus</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Fetch<sp/>lists<sp/>to<sp/>verify<sp/>connectivity.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>List&lt;Appetizer&gt;<sp/>appetizers<sp/>=<sp/><ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ReportService_1ad5ba1496e984fa2db224764cf4f21747" kindref="member">client</ref>.getAllAppetizers();</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>List&lt;Drink&gt;<sp/>drinks<sp/>=<sp/><ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ReportService_1ad5ba1496e984fa2db224764cf4f21747" kindref="member">client</ref>.getAllDrinks();</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>List&lt;MainCourse&gt;<sp/>mainCourses<sp/>=<sp/><ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ReportService_1ad5ba1496e984fa2db224764cf4f21747" kindref="member">client</ref>.getAllMainCourses();</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>String.format(</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Menu<sp/>System<sp/>Online:<sp/>%d<sp/>appetizers,<sp/>%d<sp/>drinks,<sp/>%d<sp/>main<sp/>courses<sp/>available.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>appetizers.size(),<sp/>drinks.size(),<sp/>mainCourses.size());</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/main/java/es/ull/esit/app/middleware/service/ReportService.java"/>
+  </compounddef>
+</doxygen>

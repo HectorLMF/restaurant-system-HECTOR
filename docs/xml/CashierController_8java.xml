@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="CashierController_8java" kind="file" language="Java">
+    <compoundname>CashierController.java</compoundname>
+    <includes local="no">es.ull.esit.server.middleware.model.Cashier</includes>
+    <includes local="no">es.ull.esit.server.repo.CashierRepository</includes>
+    <includes local="no">org.springframework.beans.factory.annotation.Autowired</includes>
+    <includes local="no">org.springframework.http.HttpStatus</includes>
+    <includes local="no">org.springframework.http.ResponseEntity</includes>
+    <includes local="no">org.springframework.web.bind.annotation.*</includes>
+    <includes local="no">java.util.List</includes>
+    <includes local="no">java.util.Optional</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>CashierController.java</label>
+        <link refid="CashierController_8java"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>es.ull.esit.server.middleware.model.Cashier</label>
+      </node>
+      <node id="3">
+        <label>es.ull.esit.server.repo.CashierRepository</label>
+      </node>
+      <node id="8">
+        <label>java.util.List</label>
+      </node>
+      <node id="9">
+        <label>java.util.Optional</label>
+      </node>
+      <node id="4">
+        <label>org.springframework.beans.factory.annotation.Autowired</label>
+      </node>
+      <node id="5">
+        <label>org.springframework.http.HttpStatus</label>
+      </node>
+      <node id="6">
+        <label>org.springframework.http.ResponseEntity</label>
+      </node>
+      <node id="7">
+        <label>org.springframework.web.bind.annotation.*</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1CashierController" prot="public">es::ull::esit::server::controller::CashierController</innerclass>
+    <innernamespace refid="namespacees_1_1ull_1_1esit_1_1server_1_1controller">es::ull::esit::server::controller</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">package<sp/></highlight><highlight class="normal">es.ull.esit.server.controller;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>es.ull.esit.server.middleware.model.Cashier;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>es.ull.esit.server.repo.CashierRepository;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>org.springframework.beans.factory.annotation.Autowired;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>org.springframework.http.HttpStatus;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>org.springframework.http.ResponseEntity;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>org.springframework.web.bind.annotation.*;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>java.util.List;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>java.util.Optional;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal">@RestController</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">@RequestMapping(</highlight><highlight class="stringliteral">&quot;/api/cashiers&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="25" refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1CashierController" refkind="compound"><highlight class="normal">public<sp/>class<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1CashierController" kindref="compound">CashierController</ref><sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>Repository<sp/>used<sp/>to<sp/>perform<sp/>database<sp/>operations<sp/>for<sp/>Cashier<sp/>entities.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/>@Autowired</highlight></codeline>
+<codeline lineno="29" refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1CashierController_1a4e24e687959591b8d26323d5f0b27de7" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/><ref refid="interfacees_1_1ull_1_1esit_1_1server_1_1repo_1_1CashierRepository" kindref="compound">CashierRepository</ref><sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1CashierController_1a4e24e687959591b8d26323d5f0b27de7" kindref="member">cashierRepository</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/>@GetMapping</highlight></codeline>
+<codeline lineno="40" refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1CashierController_1afac839f447fa6c259d0314c775fc7057" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>ResponseEntity&lt;List&lt;Cashier&gt;&gt;<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1CashierController_1afac839f447fa6c259d0314c775fc7057" kindref="member">getAllCashiers</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>List&lt;Cashier&gt;<sp/>cashiers<sp/>=<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1CashierController_1a4e24e687959591b8d26323d5f0b27de7" kindref="member">cashierRepository</ref>.findAll();</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ResponseEntity.ok(cashiers);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/>@GetMapping(</highlight><highlight class="stringliteral">&quot;/{id}&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="55" refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1CashierController_1afcc0672b6896503836e0340ba95a80c6" refkind="member"><highlight class="normal"><sp/><sp/>public<sp/>ResponseEntity&lt;<ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier" kindref="compound">Cashier</ref>&gt;<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1CashierController_1afcc0672b6896503836e0340ba95a80c6" kindref="member">getCashierById</ref>(@PathVariable<sp/>Long<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>Optional&lt;Cashier&gt;<sp/>cashier<sp/>=<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1CashierController_1a4e24e687959591b8d26323d5f0b27de7" kindref="member">cashierRepository</ref>.findById(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>cashier</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.map(ResponseEntity::ok)</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.orElseGet(()<sp/>-&gt;<sp/>ResponseEntity.notFound().build());</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/>@GetMapping(</highlight><highlight class="stringliteral">&quot;/name/{name}&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="72" refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1CashierController_1ac811ef1ea914eceeb7f8d34ccca0808f" refkind="member"><highlight class="normal"><sp/><sp/>public<sp/>ResponseEntity&lt;<ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier" kindref="compound">Cashier</ref>&gt;<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1CashierController_1ac811ef1ea914eceeb7f8d34ccca0808f" kindref="member">getCashierByName</ref>(@PathVariable<sp/>String<sp/>name)<sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>Optional&lt;Cashier&gt;<sp/>cashier<sp/>=<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1CashierController_1a4e24e687959591b8d26323d5f0b27de7" kindref="member">cashierRepository</ref>.findByName(name);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>cashier</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.map(ResponseEntity::ok)</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.orElseGet(()<sp/>-&gt;<sp/>ResponseEntity.notFound().build());</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/>@PutMapping(</highlight><highlight class="stringliteral">&quot;/{id}&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="90" refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1CashierController_1aff895cd279d7ddb64f87e997a92c5329" refkind="member"><highlight class="normal"><sp/><sp/>public<sp/>ResponseEntity&lt;<ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier" kindref="compound">Cashier</ref>&gt;<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1CashierController_1aff895cd279d7ddb64f87e997a92c5329" kindref="member">updateCashier</ref>(@PathVariable<sp/>Long<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>@RequestBody<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier" kindref="compound">Cashier</ref><sp/>cashier)<sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>Optional&lt;Cashier&gt;<sp/>existingOpt<sp/>=<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1CashierController_1a4e24e687959591b8d26323d5f0b27de7" kindref="member">cashierRepository</ref>.findById(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!existingOpt.isPresent())<sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>ResponseEntity.notFound().build();</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier" kindref="compound">Cashier</ref><sp/>existing<sp/>=<sp/>existingOpt.get();</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>existing.<ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier_1ab83aab1e779908032b21099c409d449f" kindref="member">setName</ref>(cashier.getName());</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>existing.setSalary(cashier.getSalary());</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier" kindref="compound">Cashier</ref><sp/>updated<sp/>=<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1controller_1_1CashierController_1a4e24e687959591b8d26323d5f0b27de7" kindref="member">cashierRepository</ref>.save(existing);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ResponseEntity.ok(updated);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="server/src/main/java/es/ull/esit/server/controller/CashierController.java"/>
+  </compounddef>
+</doxygen>

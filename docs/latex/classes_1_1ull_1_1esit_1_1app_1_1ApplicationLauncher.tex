@@ -1,0 +1,96 @@
+\doxysection{es.\+ull.\+esit.\+app.\+Application\+Launcher Class Reference}
+\hypertarget{classes_1_1ull_1_1esit_1_1app_1_1ApplicationLauncher}{}\label{classes_1_1ull_1_1esit_1_1app_1_1ApplicationLauncher}\index{es.ull.esit.app.ApplicationLauncher@{es.ull.esit.app.ApplicationLauncher}}
+
+
+Auxiliary entry point used to start the application\textquotesingle{}s UI.  
+
+
+
+
+Collaboration diagram for es.\+ull.\+esit.\+app.\+Application\+Launcher\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{classes_1_1ull_1_1esit_1_1app_1_1ApplicationLauncher__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1ApplicationLauncher_a69f7fc1a952cb3626a8bea2dbb660e78}{main}} (String\mbox{[}$\,$\mbox{]} args)
+\begin{DoxyCompactList}\small\item\em Alternate entry point used to launch the \doxylink{classes_1_1ull_1_1esit_1_1app_1_1Login}{Login} window. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static java.\+util.\+function.\+Supplier$<$ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1Login}{Login}} $>$ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1ApplicationLauncher_ac11bd2b1d30228fb403aaf2e3ea5cf41}{login\+Factory}} = Login\+::new
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Auxiliary entry point used to start the application\textquotesingle{}s UI. 
+
+\begin{DoxyVerb}   Serves as a simple launcher responsible for opening
+   the Login window when the program is executed directly.
+\end{DoxyVerb}
+ 
+
+Definition at line \mbox{\hyperlink{ApplicationLauncher_8java_source_l00010}{10}} of file \mbox{\hyperlink{ApplicationLauncher_8java_source}{Application\+Launcher.\+java}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1ApplicationLauncher_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1ApplicationLauncher_a69f7fc1a952cb3626a8bea2dbb660e78}\index{es.ull.esit.app.ApplicationLauncher@{es.ull.esit.app.ApplicationLauncher}!main@{main}}
+\index{main@{main}!es.ull.esit.app.ApplicationLauncher@{es.ull.esit.app.ApplicationLauncher}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1app_1_1ApplicationLauncher_a69f7fc1a952cb3626a8bea2dbb660e78} 
+void es.\+ull.\+esit.\+app.\+Application\+Launcher.\+main (\begin{DoxyParamCaption}\item[{String\mbox{[}$\,$\mbox{]}}]{args}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Alternate entry point used to launch the \doxylink{classes_1_1ull_1_1esit_1_1app_1_1Login}{Login} window. 
+
+\begin{DoxyVerb}   Creates and displays the application's Login screen.
+\end{DoxyVerb}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & \mbox{[}String\mbox{[}\mbox{]}\mbox{]} Command-\/line arguments (unused). \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{ApplicationLauncher_8java_source_l00019}{19}} of file \mbox{\hyperlink{ApplicationLauncher_8java_source}{Application\+Launcher.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{comment}{//\ Use\ a\ factory\ so\ tests\ can\ inject\ a\ mock\ Login\ instance\ and\ avoid}}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{comment}{//\ creating\ real\ GUI\ components\ (which\ can\ fail\ in\ headless\ CI).}}
+\DoxyCodeLine{00022\ \ \ \ \ java.awt.EventQueue.invokeLater(()\ -\/>\ getLoginFactory().\textcolor{keyword}{get}().setVisible(\textcolor{keyword}{true}));}
+\DoxyCodeLine{00023\ \ \ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-variable-members}
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1ApplicationLauncher_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1ApplicationLauncher_ac11bd2b1d30228fb403aaf2e3ea5cf41}\index{es.ull.esit.app.ApplicationLauncher@{es.ull.esit.app.ApplicationLauncher}!loginFactory@{loginFactory}}
+\index{loginFactory@{loginFactory}!es.ull.esit.app.ApplicationLauncher@{es.ull.esit.app.ApplicationLauncher}}
+\doxysubsubsection{\texorpdfstring{loginFactory}{loginFactory}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1app_1_1ApplicationLauncher_ac11bd2b1d30228fb403aaf2e3ea5cf41} 
+java.\+util.\+function.\+Supplier$<$\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1Login}{Login}}$>$ es.\+ull.\+esit.\+app.\+Application\+Launcher.\+login\+Factory = Login\+::new\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{ApplicationLauncher_8java_source_l00030}{30}} of file \mbox{\hyperlink{ApplicationLauncher_8java_source}{Application\+Launcher.\+java}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{ApplicationLauncher_8java}{Application\+Launcher.\+java}}\end{DoxyCompactItemize}

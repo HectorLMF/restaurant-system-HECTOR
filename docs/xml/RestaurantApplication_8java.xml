@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="RestaurantApplication_8java" kind="file" language="Java">
+    <compoundname>RestaurantApplication.java</compoundname>
+    <includes local="no">org.springframework.boot.SpringApplication</includes>
+    <includes local="no">org.springframework.boot.autoconfigure.SpringBootApplication</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>RestaurantApplication.java</label>
+        <link refid="RestaurantApplication_8java"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>org.springframework.boot.SpringApplication</label>
+      </node>
+      <node id="3">
+        <label>org.springframework.boot.autoconfigure.SpringBootApplication</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classes_1_1ull_1_1esit_1_1server_1_1RestaurantApplication" prot="public">es::ull::esit::server::RestaurantApplication</innerclass>
+    <innernamespace refid="namespacees_1_1ull_1_1esit_1_1server">es::ull::esit::server</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">package<sp/></highlight><highlight class="normal">es.ull.esit.server;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>org.springframework.boot.SpringApplication;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>org.springframework.boot.autoconfigure.SpringBootApplication;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal">@SpringBootApplication</highlight></codeline>
+<codeline lineno="20" refid="classes_1_1ull_1_1esit_1_1server_1_1RestaurantApplication" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classes_1_1ull_1_1esit_1_1server_1_1RestaurantApplication" kindref="compound">RestaurantApplication</ref><sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="classes_1_1ull_1_1esit_1_1server_1_1RestaurantApplication_1a9223a1f3736e80dbb4f8dd3cbd795866" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1RestaurantApplication_1a9223a1f3736e80dbb4f8dd3cbd795866" kindref="member">main</ref>(String[]<sp/>args)<sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>SpringApplication.run(<ref refid="classes_1_1ull_1_1esit_1_1server_1_1RestaurantApplication" kindref="compound">RestaurantApplication</ref>.class,<sp/>args);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="server/src/main/java/es/ull/esit/server/RestaurantApplication.java"/>
+  </compounddef>
+</doxygen>

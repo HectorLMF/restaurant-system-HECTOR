@@ -1,0 +1,313 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse" kind="class" language="Java" prot="public">
+    <compoundname>es::ull::esit::server::middleware::model::MainCourse</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1a66a45a781526226f4244f35f7a48f49c" prot="private" static="no" mutable="no">
+        <type>Long</type>
+        <definition>Long es.ull.esit.server.middleware.model.MainCourse.foodId</definition>
+        <argsstring></argsstring>
+        <name>foodId</name>
+        <qualifiedname>es.ull.esit.server.middleware.model.MainCourse.foodId</qualifiedname>
+        <briefdescription>
+<para>Primary key of the main course (column &quot;id&quot;). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="server/src/main/java/es/ull/esit/server/middleware/model/MainCourse.java" line="21" column="16" bodyfile="server/src/main/java/es/ull/esit/server/middleware/model/MainCourse.java" bodystart="21" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1a4e0c21da0e3baa05c401bad95f439197" compoundref="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2MainCourse_8java" startline="55" endline="57">es.ull.esit.server.middleware.model.MainCourse.getFoodId</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1a6ccf9f6275cb929225e1222e0a817106" compoundref="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2MainCourse_8java" startline="44" endline="48">es.ull.esit.server.middleware.model.MainCourse.MainCourse</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1ad4e2c0c7c6069e306aa838928a9d85c3" compoundref="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2MainCourse_8java" startline="66" endline="68">es.ull.esit.server.middleware.model.MainCourse.setFoodId</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1ae55c46c9a2c4d71ad11eec397c0affab" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String es.ull.esit.server.middleware.model.MainCourse.itemFood</definition>
+        <argsstring></argsstring>
+        <name>itemFood</name>
+        <qualifiedname>es.ull.esit.server.middleware.model.MainCourse.itemFood</qualifiedname>
+        <briefdescription>
+<para>Name of the main course (column &quot;name&quot;). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="server/src/main/java/es/ull/esit/server/middleware/model/MainCourse.java" line="25" column="18" bodyfile="server/src/main/java/es/ull/esit/server/middleware/model/MainCourse.java" bodystart="25" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1a097ad464e15a192bf94e5fd1d3d999e4" compoundref="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2MainCourse_8java" startline="75" endline="77">es.ull.esit.server.middleware.model.MainCourse.getItemFood</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1a6ccf9f6275cb929225e1222e0a817106" compoundref="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2MainCourse_8java" startline="44" endline="48">es.ull.esit.server.middleware.model.MainCourse.MainCourse</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1adda126d191139416358ea4eec76a216f" compoundref="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2MainCourse_8java" startline="84" endline="86">es.ull.esit.server.middleware.model.MainCourse.setItemFood</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1a6f3f51836fd4a618f7beca4766c1fd4a" prot="private" static="no" mutable="no">
+        <type>Integer</type>
+        <definition>Integer es.ull.esit.server.middleware.model.MainCourse.foodPrice</definition>
+        <argsstring></argsstring>
+        <name>foodPrice</name>
+        <qualifiedname>es.ull.esit.server.middleware.model.MainCourse.foodPrice</qualifiedname>
+        <briefdescription>
+<para>Price of the main course (column &quot;price&quot;). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="server/src/main/java/es/ull/esit/server/middleware/model/MainCourse.java" line="29" column="19" bodyfile="server/src/main/java/es/ull/esit/server/middleware/model/MainCourse.java" bodystart="29" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1abc5f7f66d161cb636a82153f596a3bfc" compoundref="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2MainCourse_8java" startline="93" endline="95">es.ull.esit.server.middleware.model.MainCourse.getFoodPrice</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1a6ccf9f6275cb929225e1222e0a817106" compoundref="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2MainCourse_8java" startline="44" endline="48">es.ull.esit.server.middleware.model.MainCourse.MainCourse</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1aed64442d866a7615a883b83aa72f2cd5" compoundref="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2MainCourse_8java" startline="102" endline="104">es.ull.esit.server.middleware.model.MainCourse.setFoodPrice</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1a1230c3d5f6ab71169ba3eda9389c3d3f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>es.ull.esit.server.middleware.model.MainCourse.MainCourse</definition>
+        <argsstring>()</argsstring>
+        <name>MainCourse</name>
+        <qualifiedname>es.ull.esit.server.middleware.model.MainCourse.MainCourse</qualifiedname>
+        <briefdescription>
+<para>Default constructor required by JPA. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="server/src/main/java/es/ull/esit/server/middleware/model/MainCourse.java" line="34" column="10" bodyfile="server/src/main/java/es/ull/esit/server/middleware/model/MainCourse.java" bodystart="34" bodyend="35"/>
+        <references refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1a1230c3d5f6ab71169ba3eda9389c3d3f" compoundref="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2MainCourse_8java" startline="34" endline="35">es.ull.esit.server.middleware.model.MainCourse.MainCourse</references>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1a1230c3d5f6ab71169ba3eda9389c3d3f" compoundref="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2MainCourse_8java" startline="34" endline="35">es.ull.esit.server.middleware.model.MainCourse.MainCourse</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1a6ccf9f6275cb929225e1222e0a817106" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>es.ull.esit.server.middleware.model.MainCourse.MainCourse</definition>
+        <argsstring>(Long foodId, String itemFood, Integer foodPrice)</argsstring>
+        <name>MainCourse</name>
+        <qualifiedname>es.ull.esit.server.middleware.model.MainCourse.MainCourse</qualifiedname>
+        <param>
+          <type>Long</type>
+          <declname>foodId</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>itemFood</declname>
+        </param>
+        <param>
+          <type>Integer</type>
+          <declname>foodPrice</declname>
+        </param>
+        <briefdescription>
+<para>Full constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>foodId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[Long] Identifier of the main course. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>itemFood</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[String] Name of the main course. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>foodPrice</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[Integer] Price of the main course. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="server/src/main/java/es/ull/esit/server/middleware/model/MainCourse.java" line="44" column="10" bodyfile="server/src/main/java/es/ull/esit/server/middleware/model/MainCourse.java" bodystart="44" bodyend="48"/>
+        <references refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1a66a45a781526226f4244f35f7a48f49c" compoundref="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2MainCourse_8java" startline="21">es.ull.esit.server.middleware.model.MainCourse.foodId</references>
+        <references refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1a6f3f51836fd4a618f7beca4766c1fd4a" compoundref="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2MainCourse_8java" startline="29">es.ull.esit.server.middleware.model.MainCourse.foodPrice</references>
+        <references refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1ae55c46c9a2c4d71ad11eec397c0affab" compoundref="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2MainCourse_8java" startline="25">es.ull.esit.server.middleware.model.MainCourse.itemFood</references>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1a4e0c21da0e3baa05c401bad95f439197" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Long</type>
+        <definition>Long es.ull.esit.server.middleware.model.MainCourse.getFoodId</definition>
+        <argsstring>()</argsstring>
+        <name>getFoodId</name>
+        <qualifiedname>es.ull.esit.server.middleware.model.MainCourse.getFoodId</qualifiedname>
+        <briefdescription>
+<para>Gets the main course ID. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>   * @return [Long] Main course id.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="server/src/main/java/es/ull/esit/server/middleware/model/MainCourse.java" line="55" column="15" bodyfile="server/src/main/java/es/ull/esit/server/middleware/model/MainCourse.java" bodystart="55" bodyend="57"/>
+        <references refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1a66a45a781526226f4244f35f7a48f49c" compoundref="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2MainCourse_8java" startline="21">es.ull.esit.server.middleware.model.MainCourse.foodId</references>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1ad4e2c0c7c6069e306aa838928a9d85c3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void es.ull.esit.server.middleware.model.MainCourse.setFoodId</definition>
+        <argsstring>(Long foodId)</argsstring>
+        <name>setFoodId</name>
+        <qualifiedname>es.ull.esit.server.middleware.model.MainCourse.setFoodId</qualifiedname>
+        <param>
+          <type>Long</type>
+          <declname>foodId</declname>
+        </param>
+        <briefdescription>
+<para>Sets the main course ID. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>   Generated by the database.
+</verbatim></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>foodId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[Long] Main course id. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="server/src/main/java/es/ull/esit/server/middleware/model/MainCourse.java" line="66" column="15" bodyfile="server/src/main/java/es/ull/esit/server/middleware/model/MainCourse.java" bodystart="66" bodyend="68"/>
+        <references refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1a66a45a781526226f4244f35f7a48f49c" compoundref="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2MainCourse_8java" startline="21">es.ull.esit.server.middleware.model.MainCourse.foodId</references>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1a097ad464e15a192bf94e5fd1d3d999e4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String es.ull.esit.server.middleware.model.MainCourse.getItemFood</definition>
+        <argsstring>()</argsstring>
+        <name>getItemFood</name>
+        <qualifiedname>es.ull.esit.server.middleware.model.MainCourse.getItemFood</qualifiedname>
+        <briefdescription>
+<para>Gets the main course name. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>[String] Main course name. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="server/src/main/java/es/ull/esit/server/middleware/model/MainCourse.java" line="75" column="17" bodyfile="server/src/main/java/es/ull/esit/server/middleware/model/MainCourse.java" bodystart="75" bodyend="77"/>
+        <references refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1ae55c46c9a2c4d71ad11eec397c0affab" compoundref="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2MainCourse_8java" startline="25">es.ull.esit.server.middleware.model.MainCourse.itemFood</references>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1adda126d191139416358ea4eec76a216f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void es.ull.esit.server.middleware.model.MainCourse.setItemFood</definition>
+        <argsstring>(String itemFood)</argsstring>
+        <name>setItemFood</name>
+        <qualifiedname>es.ull.esit.server.middleware.model.MainCourse.setItemFood</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>itemFood</declname>
+        </param>
+        <briefdescription>
+<para>Sets the main course name. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>itemFood</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[String] Main course name. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="server/src/main/java/es/ull/esit/server/middleware/model/MainCourse.java" line="84" column="15" bodyfile="server/src/main/java/es/ull/esit/server/middleware/model/MainCourse.java" bodystart="84" bodyend="86"/>
+        <references refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1ae55c46c9a2c4d71ad11eec397c0affab" compoundref="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2MainCourse_8java" startline="25">es.ull.esit.server.middleware.model.MainCourse.itemFood</references>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1abc5f7f66d161cb636a82153f596a3bfc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Integer</type>
+        <definition>Integer es.ull.esit.server.middleware.model.MainCourse.getFoodPrice</definition>
+        <argsstring>()</argsstring>
+        <name>getFoodPrice</name>
+        <qualifiedname>es.ull.esit.server.middleware.model.MainCourse.getFoodPrice</qualifiedname>
+        <briefdescription>
+<para>Gets the main course price. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>[Integer] Main course price. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="server/src/main/java/es/ull/esit/server/middleware/model/MainCourse.java" line="93" column="18" bodyfile="server/src/main/java/es/ull/esit/server/middleware/model/MainCourse.java" bodystart="93" bodyend="95"/>
+        <references refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1a6f3f51836fd4a618f7beca4766c1fd4a" compoundref="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2MainCourse_8java" startline="29">es.ull.esit.server.middleware.model.MainCourse.foodPrice</references>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1aed64442d866a7615a883b83aa72f2cd5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void es.ull.esit.server.middleware.model.MainCourse.setFoodPrice</definition>
+        <argsstring>(Integer foodPrice)</argsstring>
+        <name>setFoodPrice</name>
+        <qualifiedname>es.ull.esit.server.middleware.model.MainCourse.setFoodPrice</qualifiedname>
+        <param>
+          <type>Integer</type>
+          <declname>foodPrice</declname>
+        </param>
+        <briefdescription>
+<para>Sets the main course price. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>foodPrice</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[Integer] Main course price. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="server/src/main/java/es/ull/esit/server/middleware/model/MainCourse.java" line="102" column="15" bodyfile="server/src/main/java/es/ull/esit/server/middleware/model/MainCourse.java" bodystart="102" bodyend="104"/>
+        <references refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1a6f3f51836fd4a618f7beca4766c1fd4a" compoundref="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2MainCourse_8java" startline="29">es.ull.esit.server.middleware.model.MainCourse.foodPrice</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>JPA entity that represents a main course in the menu. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>   It is mapped to the &quot;maincourse&quot; table used by the REST API.
+   Each record has an auto-increment ID, a name and a price.
+</verbatim> </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>es.ull.esit.server.middleware.model.MainCourse</label>
+        <link refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse"/>
+      </node>
+    </collaborationgraph>
+    <location file="server/src/main/java/es/ull/esit/server/middleware/model/MainCourse.java" line="15" column="7" bodyfile="server/src/main/java/es/ull/esit/server/middleware/model/MainCourse.java" bodystart="15" bodyend="105"/>
+    <listofallmembers>
+      <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1a66a45a781526226f4244f35f7a48f49c" prot="private" virt="non-virtual"><scope>es::ull::esit::server::middleware::model::MainCourse</scope><name>foodId</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1a6f3f51836fd4a618f7beca4766c1fd4a" prot="private" virt="non-virtual"><scope>es::ull::esit::server::middleware::model::MainCourse</scope><name>foodPrice</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1a4e0c21da0e3baa05c401bad95f439197" prot="public" virt="non-virtual"><scope>es::ull::esit::server::middleware::model::MainCourse</scope><name>getFoodId</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1abc5f7f66d161cb636a82153f596a3bfc" prot="public" virt="non-virtual"><scope>es::ull::esit::server::middleware::model::MainCourse</scope><name>getFoodPrice</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1a097ad464e15a192bf94e5fd1d3d999e4" prot="public" virt="non-virtual"><scope>es::ull::esit::server::middleware::model::MainCourse</scope><name>getItemFood</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1ae55c46c9a2c4d71ad11eec397c0affab" prot="private" virt="non-virtual"><scope>es::ull::esit::server::middleware::model::MainCourse</scope><name>itemFood</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1a1230c3d5f6ab71169ba3eda9389c3d3f" prot="public" virt="non-virtual"><scope>es::ull::esit::server::middleware::model::MainCourse</scope><name>MainCourse</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1a6ccf9f6275cb929225e1222e0a817106" prot="public" virt="non-virtual"><scope>es::ull::esit::server::middleware::model::MainCourse</scope><name>MainCourse</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1ad4e2c0c7c6069e306aa838928a9d85c3" prot="public" virt="non-virtual"><scope>es::ull::esit::server::middleware::model::MainCourse</scope><name>setFoodId</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1aed64442d866a7615a883b83aa72f2cd5" prot="public" virt="non-virtual"><scope>es::ull::esit::server::middleware::model::MainCourse</scope><name>setFoodPrice</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1MainCourse_1adda126d191139416358ea4eec76a216f" prot="public" virt="non-virtual"><scope>es::ull::esit::server::middleware::model::MainCourse</scope><name>setItemFood</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

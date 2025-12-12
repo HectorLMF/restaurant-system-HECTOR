@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="interfacees_1_1ull_1_1esit_1_1server_1_1repo_1_1UserRepository" kind="interface" language="Java" prot="public">
+    <compoundname>es::ull::esit::server::repo::UserRepository</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">JpaRepository&lt; User, Long &gt;</basecompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="interfacees_1_1ull_1_1esit_1_1server_1_1repo_1_1UserRepository_1a26b4f2d46c2dce8ea51eab2c459a5d69" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Optional&lt; <ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User" kindref="compound">User</ref> &gt;</type>
+        <definition>Optional&lt; User &gt; es.ull.esit.server.repo.UserRepository.findByUsername</definition>
+        <argsstring>(String username)</argsstring>
+        <name>findByUsername</name>
+        <qualifiedname>es.ull.esit.server.repo.UserRepository.findByUsername</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>username</declname>
+        </param>
+        <briefdescription>
+<para>Finds a user by their unique username. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>username</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[String] The unique username of the user to find. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>[Optional&lt;User&gt;] An Optional containing the <ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User" kindref="compound">User</ref> if found, or empty if not found. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="server/src/main/java/es/ull/esit/server/repo/UserRepository.java" line="20" column="12"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Repository interface for accessing users in the database. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Extends JpaRepository to provide standard CRUD operations on the &quot;users&quot; table and defines an extra method to find a user by username. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>JpaRepository&lt; User, Long &gt;</label>
+      </node>
+      <node id="1">
+        <label>es.ull.esit.server.repo.UserRepository</label>
+        <link refid="interfacees_1_1ull_1_1esit_1_1server_1_1repo_1_1UserRepository"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>JpaRepository&lt; User, Long &gt;</label>
+      </node>
+      <node id="1">
+        <label>es.ull.esit.server.repo.UserRepository</label>
+        <link refid="interfacees_1_1ull_1_1esit_1_1server_1_1repo_1_1UserRepository"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="server/src/main/java/es/ull/esit/server/repo/UserRepository.java" line="13" column="18" bodyfile="server/src/main/java/es/ull/esit/server/repo/UserRepository.java" bodystart="13" bodyend="21"/>
+    <listofallmembers>
+      <member refid="interfacees_1_1ull_1_1esit_1_1server_1_1repo_1_1UserRepository_1a26b4f2d46c2dce8ea51eab2c459a5d69" prot="public" virt="non-virtual"><scope>es::ull::esit::server::repo::UserRepository</scope><name>findByUsername</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

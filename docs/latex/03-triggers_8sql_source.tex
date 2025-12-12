@@ -1,0 +1,47 @@
+\doxysection{03-\/triggers.\+sql}
+\hypertarget{03-triggers_8sql_source}{}\label{03-triggers_8sql_source}\index{03-\/triggers.sql@{03-\/triggers.sql}}
+\mbox{\hyperlink{03-triggers_8sql}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{03-triggers_8sql_source_l00001}00001\ \textcolor{comment}{-\/-\/\ 03-\/triggers.sql}}
+\DoxyCodeLine{\Hypertarget{03-triggers_8sql_source_l00002}00002\ \textcolor{comment}{-\/-\/\ Añade\ triggers\ a\ la\ base\ de\ datos.}}
+\DoxyCodeLine{\Hypertarget{03-triggers_8sql_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{03-triggers_8sql_source_l00004}00004\ USE\ project3;}
+\DoxyCodeLine{\Hypertarget{03-triggers_8sql_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{03-triggers_8sql_source_l00006}00006\ \textcolor{comment}{-\/-\/\ ======================================}}
+\DoxyCodeLine{\Hypertarget{03-triggers_8sql_source_l00007}00007\ \textcolor{comment}{-\/-\/\ Trigger:\ nombres\ de\ manager\ en\ mayúsculas}}
+\DoxyCodeLine{\Hypertarget{03-triggers_8sql_source_l00008}00008\ \textcolor{comment}{-\/-\/\ ======================================}}
+\DoxyCodeLine{\Hypertarget{03-triggers_8sql_source_l00009}00009\ \textcolor{keyword}{DROP}\ \textcolor{keyword}{TRIGGER}\ \textcolor{keywordflow}{IF}\ \textcolor{keyword}{EXISTS}\ trg\_uppercase\_manager\_fname;}
+\DoxyCodeLine{\Hypertarget{03-triggers_8sql_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{03-triggers_8sql_source_l00011}00011\ DELIMITER\ \$\$}
+\DoxyCodeLine{\Hypertarget{03-triggers_8sql_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{03-triggers_8sql_source_l00013}00013\ \textcolor{keyword}{CREATE}\ \textcolor{keyword}{TRIGGER}\ trg\_uppercase\_manager\_fname}
+\DoxyCodeLine{\Hypertarget{03-triggers_8sql_source_l00014}00014\ BEFORE\ \textcolor{keyword}{INSERT}\ \textcolor{keyword}{ON}\ manager}
+\DoxyCodeLine{\Hypertarget{03-triggers_8sql_source_l00015}00015\ \textcolor{keyword}{FOR}\ \textcolor{keyword}{EACH}\ \textcolor{keyword}{ROW}}
+\DoxyCodeLine{\Hypertarget{03-triggers_8sql_source_l00016}00016\ \textcolor{keywordflow}{BEGIN}}
+\DoxyCodeLine{\Hypertarget{03-triggers_8sql_source_l00017}00017\ \ \ \textcolor{keyword}{SET}\ \textcolor{keyword}{NEW}.manager\_fname\ =\ \textcolor{keyword}{UPPER}(\textcolor{keyword}{NEW}.manager\_fname);}
+\DoxyCodeLine{\Hypertarget{03-triggers_8sql_source_l00018}00018\ \textcolor{keywordflow}{END}\ \$\$}
+\DoxyCodeLine{\Hypertarget{03-triggers_8sql_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{03-triggers_8sql_source_l00020}00020\ DELIMITER\ ;}
+\DoxyCodeLine{\Hypertarget{03-triggers_8sql_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{03-triggers_8sql_source_l00022}00022\ \textcolor{comment}{-\/-\/\ ======================================}}
+\DoxyCodeLine{\Hypertarget{03-triggers_8sql_source_l00023}00023\ \textcolor{comment}{-\/-\/\ Trigger:\ crear\ cashier\ automáticamente\ al\ insertar\ un\ usuario\ CASHIER}}
+\DoxyCodeLine{\Hypertarget{03-triggers_8sql_source_l00024}00024\ \textcolor{comment}{-\/-\/\ Asigna\ salario\ base\ =\ 1500\ €}}
+\DoxyCodeLine{\Hypertarget{03-triggers_8sql_source_l00025}00025\ \textcolor{comment}{-\/-\/\ ======================================}}
+\DoxyCodeLine{\Hypertarget{03-triggers_8sql_source_l00026}00026\ \textcolor{keyword}{DROP}\ \textcolor{keyword}{TRIGGER}\ \textcolor{keywordflow}{IF}\ \textcolor{keyword}{EXISTS}\ trg\_create\_cashier\_from\_user;}
+\DoxyCodeLine{\Hypertarget{03-triggers_8sql_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{03-triggers_8sql_source_l00028}00028\ DELIMITER\ \$\$}
+\DoxyCodeLine{\Hypertarget{03-triggers_8sql_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{03-triggers_8sql_source_l00030}00030\ \textcolor{keyword}{CREATE}\ \textcolor{keyword}{TRIGGER}\ trg\_create\_cashier\_from\_user}
+\DoxyCodeLine{\Hypertarget{03-triggers_8sql_source_l00031}00031\ AFTER\ \textcolor{keyword}{INSERT}\ \textcolor{keyword}{ON}\ users}
+\DoxyCodeLine{\Hypertarget{03-triggers_8sql_source_l00032}00032\ \textcolor{keyword}{FOR}\ \textcolor{keyword}{EACH}\ \textcolor{keyword}{ROW}}
+\DoxyCodeLine{\Hypertarget{03-triggers_8sql_source_l00033}00033\ \textcolor{keywordflow}{BEGIN}}
+\DoxyCodeLine{\Hypertarget{03-triggers_8sql_source_l00034}00034\ \ \ \textcolor{keywordflow}{IF}\ \textcolor{keyword}{NEW}.role\ =\ \textcolor{stringliteral}{'CASHIER'}\ \textcolor{keyword}{THEN}}
+\DoxyCodeLine{\Hypertarget{03-triggers_8sql_source_l00035}00035\ \ \ \ \ \textcolor{keyword}{INSERT}\ \textcolor{keyword}{INTO}\ cashier\ (cashier\_id,\ cashier\_name,\ cashier\_salary)}
+\DoxyCodeLine{\Hypertarget{03-triggers_8sql_source_l00036}00036\ \ \ \ \ \textcolor{keyword}{VALUES}\ (\textcolor{keyword}{NEW}.id,\ \textcolor{keyword}{NEW}.username,\ \textcolor{stringliteral}{1500});}
+\DoxyCodeLine{\Hypertarget{03-triggers_8sql_source_l00037}00037\ \ \ \textcolor{keywordflow}{END}\ \textcolor{keywordflow}{IF};}
+\DoxyCodeLine{\Hypertarget{03-triggers_8sql_source_l00038}00038\ \textcolor{keywordflow}{END}\ \$\$}
+\DoxyCodeLine{\Hypertarget{03-triggers_8sql_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{03-triggers_8sql_source_l00040}00040\ DELIMITER\ ;}
+\DoxyCodeLine{\Hypertarget{03-triggers_8sql_source_l00041}00041\ }
+
+\end{DoxyCode}

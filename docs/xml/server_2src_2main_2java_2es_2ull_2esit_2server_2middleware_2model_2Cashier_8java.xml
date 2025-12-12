@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2Cashier_8java" kind="file" language="Java">
+    <compoundname>server/src/main/java/es/ull/esit/server/middleware/model/Cashier.java</compoundname>
+    <includes local="no">javax.persistence.*</includes>
+    <includes local="no">com.fasterxml.jackson.annotation.JsonIgnoreProperties</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>Cashier.java</label>
+        <link refid="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2Cashier_8java"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>com.fasterxml.jackson.annotation.JsonIgnoreProperties</label>
+      </node>
+      <node id="2">
+        <label>javax.persistence.*</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier" prot="public">es::ull::esit::server::middleware::model::Cashier</innerclass>
+    <innernamespace refid="namespacees_1_1ull_1_1esit_1_1server_1_1middleware_1_1model">es::ull::esit::server::middleware::model</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">package<sp/></highlight><highlight class="normal">es.ull.esit.server.middleware.model;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>javax.persistence.*;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>com.fasterxml.jackson.annotation.JsonIgnoreProperties;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal">@Entity</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">@Table(name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;cashier&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">@JsonIgnoreProperties({</highlight><highlight class="stringliteral">&quot;hibernateLazyInitializer&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;handler&quot;</highlight><highlight class="normal">})</highlight></codeline>
+<codeline lineno="15" refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier_1acdd8e7255200c772867cc8b0e4863ca9" kindref="member">Cashier</ref><sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/>@Id</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/>@Column(<ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier_1aef214257060c170cd78033ce0cca89f1" kindref="member">name</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;cashier_id&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="20" refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier_1aced59d25bd8a1d66ae8063ee7b77ce42" refkind="member"><highlight class="normal"><sp/><sp/>private<sp/>Long<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/>@Column(<ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier_1aef214257060c170cd78033ce0cca89f1" kindref="member">name</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;cashier_name&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="24" refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier_1aef214257060c170cd78033ce0cca89f1" refkind="member"><highlight class="normal"><sp/><sp/>private<sp/>String<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier_1aef214257060c170cd78033ce0cca89f1" kindref="member">name</ref>;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/>@Column(<ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier_1aef214257060c170cd78033ce0cca89f1" kindref="member">name</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;cashier_salary&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="28" refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier_1af41cd69714054c2e286192dfca7cfa07" refkind="member"><highlight class="normal"><sp/><sp/>private<sp/>Integer<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier_1af41cd69714054c2e286192dfca7cfa07" kindref="member">salary</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier_1acdd8e7255200c772867cc8b0e4863ca9" refkind="member"><highlight class="normal"><sp/><sp/>public<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier_1acdd8e7255200c772867cc8b0e4863ca9" kindref="member">Cashier</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier_1ae2bececc5b0f96a09085e2ac49853f76" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier_1ae2bececc5b0f96a09085e2ac49853f76" kindref="member">Cashier</ref>(Long<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/>String<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier_1aef214257060c170cd78033ce0cca89f1" kindref="member">name</ref>,<sp/>Integer<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier_1af41cd69714054c2e286192dfca7cfa07" kindref="member">salary</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>this.id<sp/>=<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier_1aced59d25bd8a1d66ae8063ee7b77ce42" kindref="member">id</ref>;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>this.name<sp/>=<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier_1aef214257060c170cd78033ce0cca89f1" kindref="member">name</ref>;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>this.salary<sp/>=<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier_1af41cd69714054c2e286192dfca7cfa07" kindref="member">salary</ref>;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier_1ad5a6e1bdd9c920ee479013716855bbb0" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>Long<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier_1ad5a6e1bdd9c920ee479013716855bbb0" kindref="member">getId</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier_1aced59d25bd8a1d66ae8063ee7b77ce42" kindref="member">id</ref>;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier_1a7f47c247e0fef13a4ee415294eb253b5" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier_1a7f47c247e0fef13a4ee415294eb253b5" kindref="member">setId</ref>(Long<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>this.id<sp/>=<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier_1aced59d25bd8a1d66ae8063ee7b77ce42" kindref="member">id</ref>;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier_1a8566a66d2640325d819c18e9173af32c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>String<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier_1a8566a66d2640325d819c18e9173af32c" kindref="member">getName</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier_1aef214257060c170cd78033ce0cca89f1" kindref="member">name</ref>;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier_1ab83aab1e779908032b21099c409d449f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier_1ab83aab1e779908032b21099c409d449f" kindref="member">setName</ref>(String<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier_1aef214257060c170cd78033ce0cca89f1" kindref="member">name</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>this.name<sp/>=<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier_1aef214257060c170cd78033ce0cca89f1" kindref="member">name</ref>;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier_1af20a3f1edf22e2e484bc6f61a38c30c7" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>Integer<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier_1af20a3f1edf22e2e484bc6f61a38c30c7" kindref="member">getSalary</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier_1af41cd69714054c2e286192dfca7cfa07" kindref="member">salary</ref>;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier_1afe9a53a365d048c34e399d93531acff5" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier_1afe9a53a365d048c34e399d93531acff5" kindref="member">setSalary</ref>(Integer<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier_1af41cd69714054c2e286192dfca7cfa07" kindref="member">salary</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>this.salary<sp/>=<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier_1af41cd69714054c2e286192dfca7cfa07" kindref="member">salary</ref>;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="server/src/main/java/es/ull/esit/server/middleware/model/Cashier.java"/>
+  </compounddef>
+</doxygen>

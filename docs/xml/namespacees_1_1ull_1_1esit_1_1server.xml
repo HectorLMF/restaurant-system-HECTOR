@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="namespacees_1_1ull_1_1esit_1_1server" kind="namespace" language="Java">
+    <compoundname>es::ull::esit::server</compoundname>
+    <innerclass refid="classes_1_1ull_1_1esit_1_1server_1_1RestaurantApplication" prot="public">es::ull::esit::server::RestaurantApplication</innerclass>
+    <innernamespace refid="namespacees_1_1ull_1_1esit_1_1server_1_1config">es::ull::esit::server::config</innernamespace>
+    <innernamespace refid="namespacees_1_1ull_1_1esit_1_1server_1_1controller">es::ull::esit::server::controller</innernamespace>
+    <innernamespace refid="namespacees_1_1ull_1_1esit_1_1server_1_1middleware">es::ull::esit::server::middleware</innernamespace>
+    <innernamespace refid="namespacees_1_1ull_1_1esit_1_1server_1_1repo">es::ull::esit::server::repo</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="server/src/main/java/es/ull/esit/server/RestaurantApplication.java" line="1" column="15"/>
+  </compounddef>
+</doxygen>

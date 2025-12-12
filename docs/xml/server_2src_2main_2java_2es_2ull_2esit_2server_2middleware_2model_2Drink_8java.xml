@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2Drink_8java" kind="file" language="Java">
+    <compoundname>server/src/main/java/es/ull/esit/server/middleware/model/Drink.java</compoundname>
+    <includes local="no">javax.persistence.*</includes>
+    <includes local="no">com.fasterxml.jackson.annotation.JsonIgnoreProperties</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>Drink.java</label>
+        <link refid="server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2Drink_8java"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>com.fasterxml.jackson.annotation.JsonIgnoreProperties</label>
+      </node>
+      <node id="2">
+        <label>javax.persistence.*</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Drink" prot="public">es::ull::esit::server::middleware::model::Drink</innerclass>
+    <innernamespace refid="namespacees_1_1ull_1_1esit_1_1server_1_1middleware_1_1model">es::ull::esit::server::middleware::model</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">package<sp/></highlight><highlight class="normal">es.ull.esit.server.middleware.model;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>javax.persistence.*;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>com.fasterxml.jackson.annotation.JsonIgnoreProperties;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal">@Entity</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">@Table(name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;drinks&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">@JsonIgnoreProperties({<sp/></highlight><highlight class="stringliteral">&quot;hibernateLazyInitializer&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;handler&quot;</highlight><highlight class="normal"><sp/>})</highlight></codeline>
+<codeline lineno="15" refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Drink" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Drink_1a277a4508b490a409c6fef895d7279539" kindref="member">Drink</ref><sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/>@Id</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/>@GeneratedValue(strategy<sp/>=<sp/>GenerationType.IDENTITY)</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/>@Column(name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;id&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="21" refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Drink_1ae6cf13edb1b653a1e77d59c67f8cb098" refkind="member"><highlight class="normal"><sp/><sp/>private<sp/>Long<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Drink_1ae6cf13edb1b653a1e77d59c67f8cb098" kindref="member">drinksId</ref>;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/>@Column(name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;name&quot;</highlight><highlight class="normal">,<sp/>nullable<sp/>=<sp/>false)</highlight></codeline>
+<codeline lineno="25" refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Drink_1a3bb8e334ecd3b86e22b47575aadff2ee" refkind="member"><highlight class="normal"><sp/><sp/>private<sp/>String<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Drink_1a3bb8e334ecd3b86e22b47575aadff2ee" kindref="member">itemDrinks</ref>;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/>@Column(name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;price&quot;</highlight><highlight class="normal">,<sp/>nullable<sp/>=<sp/>false)</highlight></codeline>
+<codeline lineno="29" refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Drink_1a06b645f1f8cf762eb1ada5f17155f281" refkind="member"><highlight class="normal"><sp/><sp/>private<sp/>Integer<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Drink_1a06b645f1f8cf762eb1ada5f17155f281" kindref="member">drinksPrice</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Drink_1a277a4508b490a409c6fef895d7279539" refkind="member"><highlight class="normal"><sp/><sp/>public<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Drink_1a277a4508b490a409c6fef895d7279539" kindref="member">Drink</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Drink_1af2fa5b23b4a77789ba23eec3b3d55194" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Drink_1af2fa5b23b4a77789ba23eec3b3d55194" kindref="member">Drink</ref>(Long<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Drink_1ae6cf13edb1b653a1e77d59c67f8cb098" kindref="member">drinksId</ref>,<sp/>String<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Drink_1a3bb8e334ecd3b86e22b47575aadff2ee" kindref="member">itemDrinks</ref>,<sp/>Integer<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Drink_1a06b645f1f8cf762eb1ada5f17155f281" kindref="member">drinksPrice</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>this.drinksId<sp/>=<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Drink_1ae6cf13edb1b653a1e77d59c67f8cb098" kindref="member">drinksId</ref>;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>this.itemDrinks<sp/>=<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Drink_1a3bb8e334ecd3b86e22b47575aadff2ee" kindref="member">itemDrinks</ref>;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>this.drinksPrice<sp/>=<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Drink_1a06b645f1f8cf762eb1ada5f17155f281" kindref="member">drinksPrice</ref>;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Drink_1a5212667f39afd71b4c403c10048ad2e6" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>Long<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Drink_1a5212667f39afd71b4c403c10048ad2e6" kindref="member">getDrinksId</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Drink_1ae6cf13edb1b653a1e77d59c67f8cb098" kindref="member">drinksId</ref>;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Drink_1a8c60b8313e5c0b52880c868fe0dd2a17" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Drink_1a8c60b8313e5c0b52880c868fe0dd2a17" kindref="member">setDrinksId</ref>(Long<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Drink_1ae6cf13edb1b653a1e77d59c67f8cb098" kindref="member">drinksId</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>this.drinksId<sp/>=<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Drink_1ae6cf13edb1b653a1e77d59c67f8cb098" kindref="member">drinksId</ref>;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Drink_1aae2688c552ff33fd362d0425293acbf2" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>String<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Drink_1aae2688c552ff33fd362d0425293acbf2" kindref="member">getItemDrinks</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Drink_1a3bb8e334ecd3b86e22b47575aadff2ee" kindref="member">itemDrinks</ref>;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Drink_1aec7845bcd41e350202b4d1e5c14a1f30" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Drink_1aec7845bcd41e350202b4d1e5c14a1f30" kindref="member">setItemDrinks</ref>(String<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Drink_1a3bb8e334ecd3b86e22b47575aadff2ee" kindref="member">itemDrinks</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>this.itemDrinks<sp/>=<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Drink_1a3bb8e334ecd3b86e22b47575aadff2ee" kindref="member">itemDrinks</ref>;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Drink_1a985ed59b35395474f1d38aa385487ce3" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>Integer<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Drink_1a985ed59b35395474f1d38aa385487ce3" kindref="member">getDrinksPrice</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Drink_1a06b645f1f8cf762eb1ada5f17155f281" kindref="member">drinksPrice</ref>;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Drink_1af1b38c06a04ca80efbe53429a2e9354f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Drink_1af1b38c06a04ca80efbe53429a2e9354f" kindref="member">setDrinksPrice</ref>(Integer<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Drink_1a06b645f1f8cf762eb1ada5f17155f281" kindref="member">drinksPrice</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>this.drinksPrice<sp/>=<sp/><ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Drink_1a06b645f1f8cf762eb1ada5f17155f281" kindref="member">drinksPrice</ref>;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="server/src/main/java/es/ull/esit/server/middleware/model/Drink.java"/>
+  </compounddef>
+</doxygen>

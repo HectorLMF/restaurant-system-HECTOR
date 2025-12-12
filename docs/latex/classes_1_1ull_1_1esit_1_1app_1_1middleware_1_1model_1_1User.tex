@@ -1,0 +1,354 @@
+\doxysection{es.\+ull.\+esit.\+app.\+middleware.\+model.\+User Class Reference}
+\hypertarget{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User}{}\label{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User}\index{es.ull.esit.app.middleware.model.User@{es.ull.esit.app.middleware.model.User}}
+
+
+Client-\/side model representing an authenticated user.  
+
+
+
+
+Collaboration diagram for es.\+ull.\+esit.\+app.\+middleware.\+model.\+User\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=279pt]{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_a9aac576243c1bf70e1c9e53ff2ed8cca}{User}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor required for JSON deserialization. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_aa1afd39c936cfd6ebcb045cfb47d3da2}{User}} (String \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_a8455499295fb3e1af2b30f64368c5fdd}{username}}, String \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_a08dbf1a0e8830e994a8d9a9a4261de6d}{role}})
+\begin{DoxyCompactList}\small\item\em Constructs a user with the given username and role. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_a03d8ef6d8d413254f340dbd38ba07511}{get\+Username}} ()
+\begin{DoxyCompactList}\small\item\em Gets the username. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_a6621261cbc2a9ce672fd5f135bd79e5b}{set\+Username}} (String \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_a8455499295fb3e1af2b30f64368c5fdd}{username}})
+\begin{DoxyCompactList}\small\item\em Sets the username. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_a3993d820e89ba713a594980a06a97fde}{get\+Role}} ()
+\begin{DoxyCompactList}\small\item\em Gets the user role. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_a89f926a000e02f1f7cbdecd04979a778}{set\+Role}} (String \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_a08dbf1a0e8830e994a8d9a9a4261de6d}{role}})
+\begin{DoxyCompactList}\small\item\em Sets the user role. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_a4f1c85f290f8a053b755f55c25d98f49}{is\+Admin}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the user has the ADMIN role. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+String \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_a8455499295fb3e1af2b30f64368c5fdd}{username}}
+\begin{DoxyCompactList}\small\item\em Username of the authenticated user (JSON property "{}username"{}). \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_a08dbf1a0e8830e994a8d9a9a4261de6d}{role}}
+\begin{DoxyCompactList}\small\item\em Role of the user (JSON property "{}role"{}), e.\+g., ADMIN or CASHIER. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Client-\/side model representing an authenticated user. 
+
+\begin{DoxyVerb}   It maps the JSON returned by the "/api/login" endpoint and contains
+   only the fields needed by the Swing application: username and role.
+\end{DoxyVerb}
+ 
+
+Definition at line \mbox{\hyperlink{src_2main_2java_2es_2ull_2esit_2app_2middleware_2model_2User_8java_source_l00013}{13}} of file \mbox{\hyperlink{src_2main_2java_2es_2ull_2esit_2app_2middleware_2model_2User_8java_source}{src/main/java/es/ull/esit/app/middleware/model/\+User.\+java}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_a9aac576243c1bf70e1c9e53ff2ed8cca}\index{es.ull.esit.app.middleware.model.User@{es.ull.esit.app.middleware.model.User}!User@{User}}
+\index{User@{User}!es.ull.esit.app.middleware.model.User@{es.ull.esit.app.middleware.model.User}}
+\doxysubsubsection{\texorpdfstring{User()}{User()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_a9aac576243c1bf70e1c9e53ff2ed8cca} 
+es.\+ull.\+esit.\+app.\+middleware.\+model.\+User.\+User (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Default constructor required for JSON deserialization. 
+
+
+
+Definition at line \mbox{\hyperlink{src_2main_2java_2es_2ull_2esit_2app_2middleware_2model_2User_8java_source_l00026}{26}} of file \mbox{\hyperlink{src_2main_2java_2es_2ull_2esit_2app_2middleware_2model_2User_8java_source}{src/main/java/es/ull/esit/app/middleware/model/\+User.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00027\ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{src_2main_2java_2es_2ull_2esit_2app_2middleware_2model_2User_8java_source_l00026}{User()}}.
+
+
+
+Referenced by \mbox{\hyperlink{src_2main_2java_2es_2ull_2esit_2app_2middleware_2model_2User_8java_source_l00026}{User()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_a9aac576243c1bf70e1c9e53ff2ed8cca_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_a9aac576243c1bf70e1c9e53ff2ed8cca_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_aa1afd39c936cfd6ebcb045cfb47d3da2}\index{es.ull.esit.app.middleware.model.User@{es.ull.esit.app.middleware.model.User}!User@{User}}
+\index{User@{User}!es.ull.esit.app.middleware.model.User@{es.ull.esit.app.middleware.model.User}}
+\doxysubsubsection{\texorpdfstring{User()}{User()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_aa1afd39c936cfd6ebcb045cfb47d3da2} 
+es.\+ull.\+esit.\+app.\+middleware.\+model.\+User.\+User (\begin{DoxyParamCaption}\item[{String}]{username}{, }\item[{String}]{role}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a user with the given username and role. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & \mbox{[}String\mbox{]} Username of the user. \\
+\hline
+{\em role} & \mbox{[}String\mbox{]} Role of the user. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{src_2main_2java_2es_2ull_2esit_2app_2middleware_2model_2User_8java_source_l00035}{35}} of file \mbox{\hyperlink{src_2main_2java_2es_2ull_2esit_2app_2middleware_2model_2User_8java_source}{src/main/java/es/ull/esit/app/middleware/model/\+User.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00036\ \ \ \ \ this.username\ =\ username;}
+\DoxyCodeLine{00037\ \ \ \ \ this.role\ =\ role;}
+\DoxyCodeLine{00038\ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{src_2main_2java_2es_2ull_2esit_2app_2middleware_2model_2User_8java_source_l00021}{role}}, and \mbox{\hyperlink{src_2main_2java_2es_2ull_2esit_2app_2middleware_2model_2User_8java_source_l00017}{username}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_a3993d820e89ba713a594980a06a97fde}\index{es.ull.esit.app.middleware.model.User@{es.ull.esit.app.middleware.model.User}!getRole@{getRole}}
+\index{getRole@{getRole}!es.ull.esit.app.middleware.model.User@{es.ull.esit.app.middleware.model.User}}
+\doxysubsubsection{\texorpdfstring{getRole()}{getRole()}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_a3993d820e89ba713a594980a06a97fde} 
+String es.\+ull.\+esit.\+app.\+middleware.\+model.\+User.\+get\+Role (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the user role. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{[}String\mbox{]} Role of the user. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{src_2main_2java_2es_2ull_2esit_2app_2middleware_2model_2User_8java_source_l00063}{63}} of file \mbox{\hyperlink{src_2main_2java_2es_2ull_2esit_2app_2middleware_2model_2User_8java_source}{src/main/java/es/ull/esit/app/middleware/model/\+User.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordflow}{return}\ role;}
+\DoxyCodeLine{00065\ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{src_2main_2java_2es_2ull_2esit_2app_2middleware_2model_2User_8java_source_l00021}{role}}.
+
+
+
+Referenced by \mbox{\hyperlink{Login_8java_source_l00214}{es.\+ull.\+esit.\+app.\+Login.\+j\+Button1\+Action\+Performed()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_a3993d820e89ba713a594980a06a97fde_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_a03d8ef6d8d413254f340dbd38ba07511}\index{es.ull.esit.app.middleware.model.User@{es.ull.esit.app.middleware.model.User}!getUsername@{getUsername}}
+\index{getUsername@{getUsername}!es.ull.esit.app.middleware.model.User@{es.ull.esit.app.middleware.model.User}}
+\doxysubsubsection{\texorpdfstring{getUsername()}{getUsername()}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_a03d8ef6d8d413254f340dbd38ba07511} 
+String es.\+ull.\+esit.\+app.\+middleware.\+model.\+User.\+get\+Username (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the username. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{[}String\mbox{]} Username of the user. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{src_2main_2java_2es_2ull_2esit_2app_2middleware_2model_2User_8java_source_l00045}{45}} of file \mbox{\hyperlink{src_2main_2java_2es_2ull_2esit_2app_2middleware_2model_2User_8java_source}{src/main/java/es/ull/esit/app/middleware/model/\+User.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordflow}{return}\ username;}
+\DoxyCodeLine{00047\ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{src_2main_2java_2es_2ull_2esit_2app_2middleware_2model_2User_8java_source_l00017}{username}}.
+
+
+
+Referenced by \mbox{\hyperlink{Login_8java_source_l00214}{es.\+ull.\+esit.\+app.\+Login.\+j\+Button1\+Action\+Performed()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_a03d8ef6d8d413254f340dbd38ba07511_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_a4f1c85f290f8a053b755f55c25d98f49}\index{es.ull.esit.app.middleware.model.User@{es.ull.esit.app.middleware.model.User}!isAdmin@{isAdmin}}
+\index{isAdmin@{isAdmin}!es.ull.esit.app.middleware.model.User@{es.ull.esit.app.middleware.model.User}}
+\doxysubsubsection{\texorpdfstring{isAdmin()}{isAdmin()}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_a4f1c85f290f8a053b755f55c25d98f49} 
+boolean es.\+ull.\+esit.\+app.\+middleware.\+model.\+User.\+is\+Admin (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if the user has the ADMIN role. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{[}boolean\mbox{]} True if the user role is ADMIN (case-\/insensitive), false otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{src_2main_2java_2es_2ull_2esit_2app_2middleware_2model_2User_8java_source_l00081}{81}} of file \mbox{\hyperlink{src_2main_2java_2es_2ull_2esit_2app_2middleware_2model_2User_8java_source}{src/main/java/es/ull/esit/app/middleware/model/\+User.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}ADMIN"{}}.equalsIgnoreCase(this.role);}
+\DoxyCodeLine{00083\ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{src_2main_2java_2es_2ull_2esit_2app_2middleware_2model_2User_8java_source_l00021}{role}}.
+
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_a89f926a000e02f1f7cbdecd04979a778}\index{es.ull.esit.app.middleware.model.User@{es.ull.esit.app.middleware.model.User}!setRole@{setRole}}
+\index{setRole@{setRole}!es.ull.esit.app.middleware.model.User@{es.ull.esit.app.middleware.model.User}}
+\doxysubsubsection{\texorpdfstring{setRole()}{setRole()}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_a89f926a000e02f1f7cbdecd04979a778} 
+void es.\+ull.\+esit.\+app.\+middleware.\+model.\+User.\+set\+Role (\begin{DoxyParamCaption}\item[{String}]{role}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the user role. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em role} & \mbox{[}String\mbox{]} Role of the user. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{src_2main_2java_2es_2ull_2esit_2app_2middleware_2model_2User_8java_source_l00072}{72}} of file \mbox{\hyperlink{src_2main_2java_2es_2ull_2esit_2app_2middleware_2model_2User_8java_source}{src/main/java/es/ull/esit/app/middleware/model/\+User.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00073\ \ \ \ \ this.role\ =\ role;}
+\DoxyCodeLine{00074\ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{src_2main_2java_2es_2ull_2esit_2app_2middleware_2model_2User_8java_source_l00021}{role}}.
+
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_a6621261cbc2a9ce672fd5f135bd79e5b}\index{es.ull.esit.app.middleware.model.User@{es.ull.esit.app.middleware.model.User}!setUsername@{setUsername}}
+\index{setUsername@{setUsername}!es.ull.esit.app.middleware.model.User@{es.ull.esit.app.middleware.model.User}}
+\doxysubsubsection{\texorpdfstring{setUsername()}{setUsername()}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_a6621261cbc2a9ce672fd5f135bd79e5b} 
+void es.\+ull.\+esit.\+app.\+middleware.\+model.\+User.\+set\+Username (\begin{DoxyParamCaption}\item[{String}]{username}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the username. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & \mbox{[}String\mbox{]} Username of the user. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{src_2main_2java_2es_2ull_2esit_2app_2middleware_2model_2User_8java_source_l00054}{54}} of file \mbox{\hyperlink{src_2main_2java_2es_2ull_2esit_2app_2middleware_2model_2User_8java_source}{src/main/java/es/ull/esit/app/middleware/model/\+User.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00055\ \ \ \ \ this.username\ =\ username;}
+\DoxyCodeLine{00056\ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{src_2main_2java_2es_2ull_2esit_2app_2middleware_2model_2User_8java_source_l00017}{username}}.
+
+
+
+\label{doc-variable-members}
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_a08dbf1a0e8830e994a8d9a9a4261de6d}\index{es.ull.esit.app.middleware.model.User@{es.ull.esit.app.middleware.model.User}!role@{role}}
+\index{role@{role}!es.ull.esit.app.middleware.model.User@{es.ull.esit.app.middleware.model.User}}
+\doxysubsubsection{\texorpdfstring{role}{role}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_a08dbf1a0e8830e994a8d9a9a4261de6d} 
+String es.\+ull.\+esit.\+app.\+middleware.\+model.\+User.\+role\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Role of the user (JSON property "{}role"{}), e.\+g., ADMIN or CASHIER. 
+
+
+
+Definition at line \mbox{\hyperlink{src_2main_2java_2es_2ull_2esit_2app_2middleware_2model_2User_8java_source_l00021}{21}} of file \mbox{\hyperlink{src_2main_2java_2es_2ull_2esit_2app_2middleware_2model_2User_8java_source}{src/main/java/es/ull/esit/app/middleware/model/\+User.\+java}}.
+
+
+
+Referenced by \mbox{\hyperlink{src_2main_2java_2es_2ull_2esit_2app_2middleware_2model_2User_8java_source_l00063}{get\+Role()}}, \mbox{\hyperlink{src_2main_2java_2es_2ull_2esit_2app_2middleware_2model_2User_8java_source_l00081}{is\+Admin()}}, \mbox{\hyperlink{src_2main_2java_2es_2ull_2esit_2app_2middleware_2model_2User_8java_source_l00072}{set\+Role()}}, and \mbox{\hyperlink{src_2main_2java_2es_2ull_2esit_2app_2middleware_2model_2User_8java_source_l00035}{User()}}.
+
+\Hypertarget{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_a8455499295fb3e1af2b30f64368c5fdd}\index{es.ull.esit.app.middleware.model.User@{es.ull.esit.app.middleware.model.User}!username@{username}}
+\index{username@{username}!es.ull.esit.app.middleware.model.User@{es.ull.esit.app.middleware.model.User}}
+\doxysubsubsection{\texorpdfstring{username}{username}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1User_a8455499295fb3e1af2b30f64368c5fdd} 
+String es.\+ull.\+esit.\+app.\+middleware.\+model.\+User.\+username\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Username of the authenticated user (JSON property "{}username"{}). 
+
+
+
+Definition at line \mbox{\hyperlink{src_2main_2java_2es_2ull_2esit_2app_2middleware_2model_2User_8java_source_l00017}{17}} of file \mbox{\hyperlink{src_2main_2java_2es_2ull_2esit_2app_2middleware_2model_2User_8java_source}{src/main/java/es/ull/esit/app/middleware/model/\+User.\+java}}.
+
+
+
+Referenced by \mbox{\hyperlink{src_2main_2java_2es_2ull_2esit_2app_2middleware_2model_2User_8java_source_l00045}{get\+Username()}}, \mbox{\hyperlink{src_2main_2java_2es_2ull_2esit_2app_2middleware_2model_2User_8java_source_l00054}{set\+Username()}}, and \mbox{\hyperlink{src_2main_2java_2es_2ull_2esit_2app_2middleware_2model_2User_8java_source_l00035}{User()}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{src_2main_2java_2es_2ull_2esit_2app_2middleware_2model_2User_8java}{src/main/java/es/ull/esit/app/middleware/model/\+User.\+java}}\end{DoxyCompactItemize}

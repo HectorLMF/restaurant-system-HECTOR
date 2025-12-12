@@ -1,0 +1,204 @@
+\doxysection{es.\+ull.\+esit.\+server.\+controller.\+Auth\+Controller Class Reference}
+\hypertarget{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController}{}\label{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController}\index{es.ull.esit.server.controller.AuthController@{es.ull.esit.server.controller.AuthController}}
+
+
+Rest controller for handling authentication-\/related requests.  
+
+
+
+
+Collaboration diagram for es.\+ull.\+esit.\+server.\+controller.\+Auth\+Controller\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController_1_1LoginRequest}{Login\+Request}}
+\begin{DoxyCompactList}\small\item\em Simple DTO (Data Transfer Object) for login requests payload. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Response\+Entity$<$?$>$ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController_a919ce10a0f6571fb57721cb881642acb}{login}} (@Request\+Body \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController_1_1LoginRequest}{Login\+Request}} request)
+\begin{DoxyCompactList}\small\item\em Endpoint for handling user login requests\+: \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interfacees_1_1ull_1_1esit_1_1server_1_1repo_1_1UserRepository}{User\+Repository}} \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController_a5c6a5097e0a0f7b4e6c7a8207958181c}{user\+Repository}}
+\begin{DoxyCompactList}\small\item\em Repository for accessing user data. \end{DoxyCompactList}\item 
+Password\+Encoder \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController_aa0f66d158454fa38f4ef0384a719d61f}{password\+Encoder}}
+\begin{DoxyCompactList}\small\item\em Component used to verify raw passwords against stored hashes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final Logger \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController_a32c81663938eea468a456780b9163b0a}{LOG}} = Logger\+Factory.\+get\+Logger(Auth\+Controller.\+class)
+\begin{DoxyCompactList}\small\item\em Logger for logging authentication events. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Rest controller for handling authentication-\/related requests. 
+
+\begin{DoxyVerb}   Exposes an HTTP endpoint that allows clients to log in by sending
+   a username and password. The credentials are validated against the
+   users stored in the database.
+\end{DoxyVerb}
+ 
+
+Definition at line \mbox{\hyperlink{AuthController_8java_source_l00023}{23}} of file \mbox{\hyperlink{AuthController_8java_source}{Auth\+Controller.\+java}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController_a919ce10a0f6571fb57721cb881642acb}\index{es.ull.esit.server.controller.AuthController@{es.ull.esit.server.controller.AuthController}!login@{login}}
+\index{login@{login}!es.ull.esit.server.controller.AuthController@{es.ull.esit.server.controller.AuthController}}
+\doxysubsubsection{\texorpdfstring{login()}{login()}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController_a919ce10a0f6571fb57721cb881642acb} 
+Response\+Entity$<$?$>$ es.\+ull.\+esit.\+server.\+controller.\+Auth\+Controller.\+login (\begin{DoxyParamCaption}\item[{@Request\+Body \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController_1_1LoginRequest}{Login\+Request}}}]{request}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Endpoint for handling user login requests\+: 
+
+
+\begin{DoxyItemize}
+\item receives a username and password in the request body.
+\item searches for the user in the database.
+\item compares the provided password with the stored password hash.
+\item return 200 OK with user data if credentials are valid.
+\item return 401 Unauthorized if credentials are invalid.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em request} & \mbox{[}\doxylink{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController_1_1LoginRequest}{Login\+Request}\mbox{]} Login request payload containing username and password. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{[}Response\+Entity\mbox{]} HTTP response indicating success or failure of authentication. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{AuthController_8java_source_l00061}{61}} of file \mbox{\hyperlink{AuthController_8java_source}{Auth\+Controller.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ LOG.info(\textcolor{stringliteral}{"{}Login\ attempt\ for\ user:\ \{\}"{}},\ request.username);}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ Optional<User>\ userOpt\ =\ userRepository.findByUsername(request.username);}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordflow}{if}\ (!userOpt.isPresent())\ \{}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ LOG.warn(\textcolor{stringliteral}{"{}User\ not\ found\ in\ DB:\ \{\}"{}},\ request.username);}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ResponseEntity.status(401).body(\textcolor{stringliteral}{"{}Invalid\ credentials"{}});}
+\DoxyCodeLine{00070\ \ \ \ \ \}}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ User\ user\ =\ userOpt.get();}
+\DoxyCodeLine{00073\ \ \ \ \ LOG.debug(\textcolor{stringliteral}{"{}User\ found.\ Stored\ hash\ =\ \{\}"{}},\ user.getPasswordHash());\ \textcolor{comment}{//\ Mejor\ debug,\ no\ info}}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordflow}{if}\ (!passwordEncoder.matches(request.password,\ user.getPasswordHash()))\ \{}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ LOG.warn(\textcolor{stringliteral}{"{}Password\ mismatch\ for\ user:\ \{\}"{}},\ request.username);}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ResponseEntity.status(401).body(\textcolor{stringliteral}{"{}Invalid\ credentials"{}});}
+\DoxyCodeLine{00078\ \ \ \ \ \}}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ LOG.info(\textcolor{stringliteral}{"{}Login\ OK\ for\ user:\ \{\}"{}},\ request.username);}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordflow}{return}\ ResponseEntity.ok(user);}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{AuthController_8java_source_l00026}{LOG}}, \mbox{\hyperlink{AuthController_8java_source_l00061}{login()}}, \mbox{\hyperlink{AuthController_8java_source_l00034}{password\+Encoder}}, and \mbox{\hyperlink{AuthController_8java_source_l00030}{user\+Repository}}.
+
+
+
+Referenced by \mbox{\hyperlink{AuthController_8java_source_l00061}{login()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController_a919ce10a0f6571fb57721cb881642acb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController_a919ce10a0f6571fb57721cb881642acb_icgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-variable-members}
+\Hypertarget{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController_a32c81663938eea468a456780b9163b0a}\index{es.ull.esit.server.controller.AuthController@{es.ull.esit.server.controller.AuthController}!LOG@{LOG}}
+\index{LOG@{LOG}!es.ull.esit.server.controller.AuthController@{es.ull.esit.server.controller.AuthController}}
+\doxysubsubsection{\texorpdfstring{LOG}{LOG}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController_a32c81663938eea468a456780b9163b0a} 
+final Logger es.\+ull.\+esit.\+server.\+controller.\+Auth\+Controller.\+LOG = Logger\+Factory.\+get\+Logger(Auth\+Controller.\+class)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Logger for logging authentication events. 
+
+
+
+Definition at line \mbox{\hyperlink{AuthController_8java_source_l00026}{26}} of file \mbox{\hyperlink{AuthController_8java_source}{Auth\+Controller.\+java}}.
+
+
+
+Referenced by \mbox{\hyperlink{AuthController_8java_source_l00061}{login()}}.
+
+\Hypertarget{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController_aa0f66d158454fa38f4ef0384a719d61f}\index{es.ull.esit.server.controller.AuthController@{es.ull.esit.server.controller.AuthController}!passwordEncoder@{passwordEncoder}}
+\index{passwordEncoder@{passwordEncoder}!es.ull.esit.server.controller.AuthController@{es.ull.esit.server.controller.AuthController}}
+\doxysubsubsection{\texorpdfstring{passwordEncoder}{passwordEncoder}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController_aa0f66d158454fa38f4ef0384a719d61f} 
+Password\+Encoder es.\+ull.\+esit.\+server.\+controller.\+Auth\+Controller.\+password\+Encoder\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Component used to verify raw passwords against stored hashes. 
+
+
+
+Definition at line \mbox{\hyperlink{AuthController_8java_source_l00034}{34}} of file \mbox{\hyperlink{AuthController_8java_source}{Auth\+Controller.\+java}}.
+
+
+
+Referenced by \mbox{\hyperlink{AuthController_8java_source_l00061}{login()}}.
+
+\Hypertarget{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController_a5c6a5097e0a0f7b4e6c7a8207958181c}\index{es.ull.esit.server.controller.AuthController@{es.ull.esit.server.controller.AuthController}!userRepository@{userRepository}}
+\index{userRepository@{userRepository}!es.ull.esit.server.controller.AuthController@{es.ull.esit.server.controller.AuthController}}
+\doxysubsubsection{\texorpdfstring{userRepository}{userRepository}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1server_1_1controller_1_1AuthController_a5c6a5097e0a0f7b4e6c7a8207958181c} 
+\mbox{\hyperlink{interfacees_1_1ull_1_1esit_1_1server_1_1repo_1_1UserRepository}{User\+Repository}} es.\+ull.\+esit.\+server.\+controller.\+Auth\+Controller.\+user\+Repository\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Repository for accessing user data. 
+
+
+
+Definition at line \mbox{\hyperlink{AuthController_8java_source_l00030}{30}} of file \mbox{\hyperlink{AuthController_8java_source}{Auth\+Controller.\+java}}.
+
+
+
+Referenced by \mbox{\hyperlink{AuthController_8java_source_l00061}{login()}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{AuthController_8java}{Auth\+Controller.\+java}}\end{DoxyCompactItemize}

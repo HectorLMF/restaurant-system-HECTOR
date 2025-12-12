@@ -1,0 +1,9 @@
+<map id="es.ull.esit.app.CashierLogin" name="es.ull.esit.app.CashierLogin">
+<area shape="rect" id="Node000001" title="Login window for authenticating cashiers." alt="" coords="5,847,208,1552"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="15,683,156,749"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="90,762,94,846,88,846,85,763"/>
+<area shape="rect" id="Node000003" href="$classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1service_1_1ReportService.html" title="Service providing reporting and system status operations." alt="" coords="181,656,422,776"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="280,777,217,933,212,931,275,775"/>
+<area shape="rect" id="Node000004" href="$classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient.html" title="API client for interacting with the backend REST API." alt="" coords="206,5,397,585"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="304,586,304,639,299,639,299,586"/>
+</map>

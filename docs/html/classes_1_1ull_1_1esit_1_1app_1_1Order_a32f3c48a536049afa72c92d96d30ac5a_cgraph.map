@@ -1,0 +1,18 @@
+<map id="es.ull.esit.app.Order.main" name="es.ull.esit.app.Order.main">
+<area shape="rect" id="Node000001" title="Standalone entry point for testing the Order window." alt="" coords="5,101,195,126"/>
+<area shape="rect" id="Node000002" href="$classes_1_1ull_1_1esit_1_1app_1_1Order.html#a5d15e3c212a05a3aef8b70c8897d450c" title="Constructor." alt="" coords="243,101,435,126"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="195,111,229,111,229,116,195,116"/>
+<area shape="rect" id="Node000003" href="$classes_1_1ull_1_1esit_1_1app_1_1Order.html#aaf71aeca492daeae200fbc3f3ba63b47" title="Initializes GUI components." alt="" coords="490,29,667,69"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="387,98,489,70,490,76,388,103"/>
+<area shape="rect" id="Node000004" href="$classes_1_1ull_1_1esit_1_1app_1_1Order.html#a0d38304f01bcbaaed9d78c79a95208be" title="Loads menu data (drinks, appetizers, main courses) from the backend in a background thread." alt="" coords="487,93,671,133"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="435,111,473,111,473,116,435,116"/>
+<area shape="rect" id="Node000008" href="$classes_1_1ull_1_1esit_1_1app_1_1Order.html#aeb315ef4ce91decf490c41b50ccf8abb" title="Configures the three tables (Drinks, Appetizers, Main Course)." alt="" coords="483,157,675,197"/>
+<area shape="poly" id="edge8_Node000002_Node000008" title=" " alt="" coords="388,124,490,151,489,156,387,129"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="536,30,533,20,540,10,555,5,579,3,605,6,620,13,618,18,604,11,579,8,557,10,543,15,538,21,541,28"/>
+<area shape="rect" id="Node000005" href="$classes_1_1ull_1_1esit_1_1app_1_1Order.html#a11ff5cc29833a1aca07313674af0ae81" title="Fills the appetizers table model with data from the backend." alt="" coords="723,29,895,69"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="651,91,723,70,724,76,652,96"/>
+<area shape="rect" id="Node000006" href="$classes_1_1ull_1_1esit_1_1app_1_1Order.html#a805b1d4302daee8a489334a04102ed80" title="Fills the drinks table model with data from the backend." alt="" coords="723,93,895,133"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="671,111,709,111,709,116,671,116"/>
+<area shape="rect" id="Node000007" href="$classes_1_1ull_1_1esit_1_1app_1_1Order.html#a2bad57aa736eed5a2d560b89a1432f3a" title="Fills the main courses table model with data from the backend." alt="" coords="723,157,895,197"/>
+<area shape="poly" id="edge7_Node000004_Node000007" title=" " alt="" coords="652,131,724,151,723,156,651,136"/>
+</map>

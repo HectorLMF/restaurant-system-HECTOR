@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="03-triggers_8sql" kind="file" language="C++">
+    <compoundname>03-triggers.sql</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">--<sp/>03-triggers.sql</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">--<sp/>Añade<sp/>triggers<sp/>a<sp/>la<sp/>base<sp/>de<sp/>datos.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal">USE<sp/>project3;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">--<sp/>======================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">--<sp/>Trigger:<sp/>nombres<sp/>de<sp/>manager<sp/>en<sp/>mayúsculas</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">--<sp/>======================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">DROP</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">TRIGGER</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">IF</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">EXISTS</highlight><highlight class="normal"><sp/>trg_uppercase_manager_fname;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">DELIMITER<sp/>$$</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">CREATE</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">TRIGGER</highlight><highlight class="normal"><sp/>trg_uppercase_manager_fname</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">BEFORE<sp/></highlight><highlight class="keyword">INSERT</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">ON</highlight><highlight class="normal"><sp/>manager</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">FOR</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">EACH</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">ROW</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keywordflow">BEGIN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">SET</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">NEW</highlight><highlight class="normal">.manager_fname<sp/>=<sp/></highlight><highlight class="keyword">UPPER</highlight><highlight class="normal">(</highlight><highlight class="keyword">NEW</highlight><highlight class="normal">.manager_fname);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keywordflow">END</highlight><highlight class="normal"><sp/>$$</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal">DELIMITER<sp/>;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">--<sp/>======================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">--<sp/>Trigger:<sp/>crear<sp/>cashier<sp/>automáticamente<sp/>al<sp/>insertar<sp/>un<sp/>usuario<sp/>CASHIER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">--<sp/>Asigna<sp/>salario<sp/>base<sp/>=<sp/>1500<sp/>€</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">--<sp/>======================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">DROP</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">TRIGGER</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">IF</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">EXISTS</highlight><highlight class="normal"><sp/>trg_create_cashier_from_user;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal">DELIMITER<sp/>$$</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">CREATE</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">TRIGGER</highlight><highlight class="normal"><sp/>trg_create_cashier_from_user</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">AFTER<sp/></highlight><highlight class="keyword">INSERT</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">ON</highlight><highlight class="normal"><sp/>users</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">FOR</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">EACH</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">ROW</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keywordflow">BEGIN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">IF</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">NEW</highlight><highlight class="normal">.role<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;CASHIER&apos;</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">THEN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">INSERT</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">INTO</highlight><highlight class="normal"><sp/>cashier<sp/>(cashier_id,<sp/>cashier_name,<sp/>cashier_salary)</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">VALUES</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">NEW</highlight><highlight class="normal">.id,<sp/></highlight><highlight class="keyword">NEW</highlight><highlight class="normal">.username,<sp/></highlight><highlight class="stringliteral">1500</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">END</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">IF</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keywordflow">END</highlight><highlight class="normal"><sp/>$$</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">DELIMITER<sp/>;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="db/03-triggers.sql"/>
+  </compounddef>
+</doxygen>

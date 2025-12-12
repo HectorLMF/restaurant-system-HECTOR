@@ -1,0 +1,398 @@
+\doxysection{es.\+ull.\+esit.\+server.\+middleware.\+model.\+User Class Reference}
+\hypertarget{classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User}{}\label{classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User}\index{es.ull.esit.server.middleware.model.User@{es.ull.esit.server.middleware.model.User}}
+
+
+JPA entity that represents a user in the system.  
+
+
+
+
+Collaboration diagram for es.\+ull.\+esit.\+server.\+middleware.\+model.\+User\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Long \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_a165e07b1e414532af4b5c792954c716b}{get\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Gets the database identifier of the user. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_a4b08406ec0f7ff574b3ce5be1fe3d710}{set\+Id}} (Long \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_aa7361b7bfd86f5528f02dcdcb0b88be1}{id}})
+\begin{DoxyCompactList}\small\item\em Sets the database identifier of the user. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_ae41a4e87d686097f9296035f6086fc29}{get\+Username}} ()
+\begin{DoxyCompactList}\small\item\em Gets the user\textquotesingle{}s username. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_a73f5c6db524d273a4cada8eb09404bcf}{set\+Username}} (String \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_afd5c2f6462448a471fe7a52edde3cf05}{username}})
+\begin{DoxyCompactList}\small\item\em Sets the user\textquotesingle{}s username. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_aadcf4f78bfe6d35ac2c5813714923cd2}{get\+Password\+Hash}} ()
+\begin{DoxyCompactList}\small\item\em Gets the BCrypt hashed password of the user. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_a59850783b933c5d878f25bdbb8f241fd}{set\+Password\+Hash}} (String \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_a80e2f0beb27886da83fd1b91cad262e7}{password\+Hash}})
+\begin{DoxyCompactList}\small\item\em Sets the BCrypt hashed password of the user. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_a9469eeb791e8d25c7e7f7fa7b2f33720}{get\+Role}} ()
+\begin{DoxyCompactList}\small\item\em Gets the role of the user. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_a4cba805e4b0eac401f1a997244d4f507}{set\+Role}} (String \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_ac4ef0766126b302cd226caa24f22be55}{role}})
+\begin{DoxyCompactList}\small\item\em Sets the role of the user. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Long \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_aa7361b7bfd86f5528f02dcdcb0b88be1}{id}}
+\begin{DoxyCompactList}\small\item\em Unique identifier for the user (primary key). \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_afd5c2f6462448a471fe7a52edde3cf05}{username}}
+\begin{DoxyCompactList}\small\item\em Unique username for the user. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_a80e2f0beb27886da83fd1b91cad262e7}{password\+Hash}}
+\begin{DoxyCompactList}\small\item\em BCrypt hashed password for the user. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_ac4ef0766126b302cd226caa24f22be55}{role}}
+\begin{DoxyCompactList}\small\item\em Role of the user\+: ADMIN or CASHIER. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+JPA entity that represents a user in the system. 
+
+\begin{DoxyVerb}   It is mapped to the "users" table in the database.
+   Stores user information such as username, password hash, and role.
+\end{DoxyVerb}
+ 
+
+Definition at line \mbox{\hyperlink{server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2User_8java_source_l00022}{22}} of file \mbox{\hyperlink{server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2User_8java_source}{server/src/main/java/es/ull/esit/server/middleware/model/\+User.\+java}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_a165e07b1e414532af4b5c792954c716b}\index{es.ull.esit.server.middleware.model.User@{es.ull.esit.server.middleware.model.User}!getId@{getId}}
+\index{getId@{getId}!es.ull.esit.server.middleware.model.User@{es.ull.esit.server.middleware.model.User}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_a165e07b1e414532af4b5c792954c716b} 
+Long es.\+ull.\+esit.\+server.\+middleware.\+model.\+User.\+get\+Id (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the database identifier of the user. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{[}Long\mbox{]} The user\textquotesingle{}s ID. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2User_8java_source_l00046}{46}} of file \mbox{\hyperlink{server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2User_8java_source}{server/src/main/java/es/ull/esit/server/middleware/model/\+User.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordflow}{return}\ id;}
+\DoxyCodeLine{00048\ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2User_8java_source_l00046}{get\+Id()}}, and \mbox{\hyperlink{server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2User_8java_source_l00027}{id}}.
+
+
+
+Referenced by \mbox{\hyperlink{server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2User_8java_source_l00046}{get\+Id()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_a165e07b1e414532af4b5c792954c716b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_a165e07b1e414532af4b5c792954c716b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_aadcf4f78bfe6d35ac2c5813714923cd2}\index{es.ull.esit.server.middleware.model.User@{es.ull.esit.server.middleware.model.User}!getPasswordHash@{getPasswordHash}}
+\index{getPasswordHash@{getPasswordHash}!es.ull.esit.server.middleware.model.User@{es.ull.esit.server.middleware.model.User}}
+\doxysubsubsection{\texorpdfstring{getPasswordHash()}{getPasswordHash()}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_aadcf4f78bfe6d35ac2c5813714923cd2} 
+String es.\+ull.\+esit.\+server.\+middleware.\+model.\+User.\+get\+Password\+Hash (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the BCrypt hashed password of the user. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{[}String\mbox{]} The user\textquotesingle{}s BCrypt hashed password. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2User_8java_source_l00082}{82}} of file \mbox{\hyperlink{server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2User_8java_source}{server/src/main/java/es/ull/esit/server/middleware/model/\+User.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordflow}{return}\ passwordHash;}
+\DoxyCodeLine{00084\ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2User_8java_source_l00036}{password\+Hash}}.
+
+\Hypertarget{classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_a9469eeb791e8d25c7e7f7fa7b2f33720}\index{es.ull.esit.server.middleware.model.User@{es.ull.esit.server.middleware.model.User}!getRole@{getRole}}
+\index{getRole@{getRole}!es.ull.esit.server.middleware.model.User@{es.ull.esit.server.middleware.model.User}}
+\doxysubsubsection{\texorpdfstring{getRole()}{getRole()}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_a9469eeb791e8d25c7e7f7fa7b2f33720} 
+String es.\+ull.\+esit.\+server.\+middleware.\+model.\+User.\+get\+Role (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the role of the user. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{[}String\mbox{]} The user\textquotesingle{}s role. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2User_8java_source_l00100}{100}} of file \mbox{\hyperlink{server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2User_8java_source}{server/src/main/java/es/ull/esit/server/middleware/model/\+User.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordflow}{return}\ role;}
+\DoxyCodeLine{00102\ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2User_8java_source_l00039}{role}}.
+
+\Hypertarget{classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_ae41a4e87d686097f9296035f6086fc29}\index{es.ull.esit.server.middleware.model.User@{es.ull.esit.server.middleware.model.User}!getUsername@{getUsername}}
+\index{getUsername@{getUsername}!es.ull.esit.server.middleware.model.User@{es.ull.esit.server.middleware.model.User}}
+\doxysubsubsection{\texorpdfstring{getUsername()}{getUsername()}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_ae41a4e87d686097f9296035f6086fc29} 
+String es.\+ull.\+esit.\+server.\+middleware.\+model.\+User.\+get\+Username (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the user\textquotesingle{}s username. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{[}String\mbox{]} The user\textquotesingle{}s username. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2User_8java_source_l00064}{64}} of file \mbox{\hyperlink{server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2User_8java_source}{server/src/main/java/es/ull/esit/server/middleware/model/\+User.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordflow}{return}\ username;}
+\DoxyCodeLine{00066\ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2User_8java_source_l00031}{username}}.
+
+\Hypertarget{classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_a4b08406ec0f7ff574b3ce5be1fe3d710}\index{es.ull.esit.server.middleware.model.User@{es.ull.esit.server.middleware.model.User}!setId@{setId}}
+\index{setId@{setId}!es.ull.esit.server.middleware.model.User@{es.ull.esit.server.middleware.model.User}}
+\doxysubsubsection{\texorpdfstring{setId()}{setId()}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_a4b08406ec0f7ff574b3ce5be1fe3d710} 
+void es.\+ull.\+esit.\+server.\+middleware.\+model.\+User.\+set\+Id (\begin{DoxyParamCaption}\item[{Long}]{id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the database identifier of the user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \mbox{[}Long\mbox{]} The user\textquotesingle{}s ID. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2User_8java_source_l00055}{55}} of file \mbox{\hyperlink{server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2User_8java_source}{server/src/main/java/es/ull/esit/server/middleware/model/\+User.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00056\ \ \ \ \ this.id\ =\ id;}
+\DoxyCodeLine{00057\ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2User_8java_source_l00027}{id}}.
+
+\Hypertarget{classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_a59850783b933c5d878f25bdbb8f241fd}\index{es.ull.esit.server.middleware.model.User@{es.ull.esit.server.middleware.model.User}!setPasswordHash@{setPasswordHash}}
+\index{setPasswordHash@{setPasswordHash}!es.ull.esit.server.middleware.model.User@{es.ull.esit.server.middleware.model.User}}
+\doxysubsubsection{\texorpdfstring{setPasswordHash()}{setPasswordHash()}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_a59850783b933c5d878f25bdbb8f241fd} 
+void es.\+ull.\+esit.\+server.\+middleware.\+model.\+User.\+set\+Password\+Hash (\begin{DoxyParamCaption}\item[{String}]{password\+Hash}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the BCrypt hashed password of the user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em password\+Hash} & \mbox{[}String\mbox{]} The user\textquotesingle{}s BCrypt hashed password. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2User_8java_source_l00091}{91}} of file \mbox{\hyperlink{server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2User_8java_source}{server/src/main/java/es/ull/esit/server/middleware/model/\+User.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00092\ \ \ \ \ this.passwordHash\ =\ passwordHash;}
+\DoxyCodeLine{00093\ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2User_8java_source_l00036}{password\+Hash}}.
+
+\Hypertarget{classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_a4cba805e4b0eac401f1a997244d4f507}\index{es.ull.esit.server.middleware.model.User@{es.ull.esit.server.middleware.model.User}!setRole@{setRole}}
+\index{setRole@{setRole}!es.ull.esit.server.middleware.model.User@{es.ull.esit.server.middleware.model.User}}
+\doxysubsubsection{\texorpdfstring{setRole()}{setRole()}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_a4cba805e4b0eac401f1a997244d4f507} 
+void es.\+ull.\+esit.\+server.\+middleware.\+model.\+User.\+set\+Role (\begin{DoxyParamCaption}\item[{String}]{role}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the role of the user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em role} & \mbox{[}String\mbox{]} The user\textquotesingle{}s role. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2User_8java_source_l00109}{109}} of file \mbox{\hyperlink{server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2User_8java_source}{server/src/main/java/es/ull/esit/server/middleware/model/\+User.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00110\ \ \ \ \ this.role\ =\ role;}
+\DoxyCodeLine{00111\ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2User_8java_source_l00039}{role}}.
+
+\Hypertarget{classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_a73f5c6db524d273a4cada8eb09404bcf}\index{es.ull.esit.server.middleware.model.User@{es.ull.esit.server.middleware.model.User}!setUsername@{setUsername}}
+\index{setUsername@{setUsername}!es.ull.esit.server.middleware.model.User@{es.ull.esit.server.middleware.model.User}}
+\doxysubsubsection{\texorpdfstring{setUsername()}{setUsername()}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_a73f5c6db524d273a4cada8eb09404bcf} 
+void es.\+ull.\+esit.\+server.\+middleware.\+model.\+User.\+set\+Username (\begin{DoxyParamCaption}\item[{String}]{username}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the user\textquotesingle{}s username. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & \mbox{[}String\mbox{]} The user\textquotesingle{}s username. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2User_8java_source_l00073}{73}} of file \mbox{\hyperlink{server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2User_8java_source}{server/src/main/java/es/ull/esit/server/middleware/model/\+User.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00074\ \ \ \ \ this.username\ =\ username;}
+\DoxyCodeLine{00075\ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2User_8java_source_l00031}{username}}.
+
+
+
+\label{doc-variable-members}
+\Hypertarget{classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_aa7361b7bfd86f5528f02dcdcb0b88be1}\index{es.ull.esit.server.middleware.model.User@{es.ull.esit.server.middleware.model.User}!id@{id}}
+\index{id@{id}!es.ull.esit.server.middleware.model.User@{es.ull.esit.server.middleware.model.User}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_aa7361b7bfd86f5528f02dcdcb0b88be1} 
+Long es.\+ull.\+esit.\+server.\+middleware.\+model.\+User.\+id\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Unique identifier for the user (primary key). 
+
+
+
+Definition at line \mbox{\hyperlink{server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2User_8java_source_l00027}{27}} of file \mbox{\hyperlink{server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2User_8java_source}{server/src/main/java/es/ull/esit/server/middleware/model/\+User.\+java}}.
+
+
+
+Referenced by \mbox{\hyperlink{server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2User_8java_source_l00046}{get\+Id()}}, and \mbox{\hyperlink{server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2User_8java_source_l00055}{set\+Id()}}.
+
+\Hypertarget{classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_a80e2f0beb27886da83fd1b91cad262e7}\index{es.ull.esit.server.middleware.model.User@{es.ull.esit.server.middleware.model.User}!passwordHash@{passwordHash}}
+\index{passwordHash@{passwordHash}!es.ull.esit.server.middleware.model.User@{es.ull.esit.server.middleware.model.User}}
+\doxysubsubsection{\texorpdfstring{passwordHash}{passwordHash}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_a80e2f0beb27886da83fd1b91cad262e7} 
+String es.\+ull.\+esit.\+server.\+middleware.\+model.\+User.\+password\+Hash\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+BCrypt hashed password for the user. 
+
+
+
+Definition at line \mbox{\hyperlink{server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2User_8java_source_l00036}{36}} of file \mbox{\hyperlink{server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2User_8java_source}{server/src/main/java/es/ull/esit/server/middleware/model/\+User.\+java}}.
+
+
+
+Referenced by \mbox{\hyperlink{server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2User_8java_source_l00082}{get\+Password\+Hash()}}, and \mbox{\hyperlink{server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2User_8java_source_l00091}{set\+Password\+Hash()}}.
+
+\Hypertarget{classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_ac4ef0766126b302cd226caa24f22be55}\index{es.ull.esit.server.middleware.model.User@{es.ull.esit.server.middleware.model.User}!role@{role}}
+\index{role@{role}!es.ull.esit.server.middleware.model.User@{es.ull.esit.server.middleware.model.User}}
+\doxysubsubsection{\texorpdfstring{role}{role}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_ac4ef0766126b302cd226caa24f22be55} 
+String es.\+ull.\+esit.\+server.\+middleware.\+model.\+User.\+role\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Role of the user\+: ADMIN or CASHIER. 
+
+
+
+Definition at line \mbox{\hyperlink{server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2User_8java_source_l00039}{39}} of file \mbox{\hyperlink{server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2User_8java_source}{server/src/main/java/es/ull/esit/server/middleware/model/\+User.\+java}}.
+
+
+
+Referenced by \mbox{\hyperlink{server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2User_8java_source_l00100}{get\+Role()}}, and \mbox{\hyperlink{server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2User_8java_source_l00109}{set\+Role()}}.
+
+\Hypertarget{classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_afd5c2f6462448a471fe7a52edde3cf05}\index{es.ull.esit.server.middleware.model.User@{es.ull.esit.server.middleware.model.User}!username@{username}}
+\index{username@{username}!es.ull.esit.server.middleware.model.User@{es.ull.esit.server.middleware.model.User}}
+\doxysubsubsection{\texorpdfstring{username}{username}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1User_afd5c2f6462448a471fe7a52edde3cf05} 
+String es.\+ull.\+esit.\+server.\+middleware.\+model.\+User.\+username\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Unique username for the user. 
+
+
+
+Definition at line \mbox{\hyperlink{server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2User_8java_source_l00031}{31}} of file \mbox{\hyperlink{server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2User_8java_source}{server/src/main/java/es/ull/esit/server/middleware/model/\+User.\+java}}.
+
+
+
+Referenced by \mbox{\hyperlink{server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2User_8java_source_l00064}{get\+Username()}}, and \mbox{\hyperlink{server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2User_8java_source_l00073}{set\+Username()}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{server_2src_2main_2java_2es_2ull_2esit_2server_2middleware_2model_2User_8java}{server/src/main/java/es/ull/esit/server/middleware/model/\+User.\+java}}\end{DoxyCompactItemize}

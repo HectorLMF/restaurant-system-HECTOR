@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClientException" kind="class" language="Java" prot="public">
+    <compoundname>es::ull::esit::app::middleware::ApiClientException</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">RuntimeException</basecompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClientException_1ac45b204afa4f0882c2518988f4583293" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>es.ull.esit.app.middleware.ApiClientException.ApiClientException</definition>
+        <argsstring>(String message)</argsstring>
+        <name>ApiClientException</name>
+        <qualifiedname>es.ull.esit.app.middleware.ApiClientException.ApiClientException</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+<para>Constructs a new <ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClientException" kindref="compound">ApiClientException</ref> with the specified detail message. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[String] Detail message for the exception. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/middleware/ApiClientException.java" line="16" column="10" bodyfile="src/main/java/es/ull/esit/app/middleware/ApiClientException.java" bodystart="16" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClientException_1a80b3591890716a1420e380fe648a0d68" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>es.ull.esit.app.middleware.ApiClientException.ApiClientException</definition>
+        <argsstring>(String message, Throwable cause)</argsstring>
+        <name>ApiClientException</name>
+        <qualifiedname>es.ull.esit.app.middleware.ApiClientException.ApiClientException</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>Throwable</type>
+          <declname>cause</declname>
+        </param>
+        <briefdescription>
+<para>Constructs a new <ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClientException" kindref="compound">ApiClientException</ref> with the specified detail message and cause. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[String] Detail message for the exception. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cause</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[Throwable] The cause of the exception. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/esit/app/middleware/ApiClientException.java" line="26" column="10" bodyfile="src/main/java/es/ull/esit/app/middleware/ApiClientException.java" bodystart="26" bodyend="28"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Custom exception class for API client errors. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Inherits from RuntimeException to represent exceptions that occur during API client operations. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>RuntimeException</label>
+      </node>
+      <node id="1">
+        <label>es.ull.esit.app.middleware.ApiClientException</label>
+        <link refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClientException"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>RuntimeException</label>
+      </node>
+      <node id="1">
+        <label>es.ull.esit.app.middleware.ApiClientException</label>
+        <link refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClientException"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/main/java/es/ull/esit/app/middleware/ApiClientException.java" line="9" column="7" bodyfile="src/main/java/es/ull/esit/app/middleware/ApiClientException.java" bodystart="9" bodyend="29"/>
+    <listofallmembers>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClientException_1ac45b204afa4f0882c2518988f4583293" prot="public" virt="non-virtual"><scope>es::ull::esit::app::middleware::ApiClientException</scope><name>ApiClientException</name></member>
+      <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClientException_1a80b3591890716a1420e380fe648a0d68" prot="public" virt="non-virtual"><scope>es::ull::esit::app::middleware::ApiClientException</scope><name>ApiClientException</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,17 @@
+<map id="MainCourseController.java" name="MainCourseController.java">
+<area shape="rect" id="Node000001" title=" " alt="" coords="835,5,1029,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,264,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="835,30,587,51,278,81,277,76,586,45,834,24"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="289,79,458,119"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="835,33,669,53,472,81,471,76,668,48,834,27"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="482,79,809,119"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="891,33,728,78,726,73,890,28"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="833,86,1031,111"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="935,31,935,72,929,72,929,31"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="1055,86,1361,111"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="973,28,1156,80,1154,85,971,33"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="1386,86,1489,111"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="1030,26,1192,45,1374,76,1389,80,1388,85,1373,81,1191,50,1029,31"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="1513,86,1647,111"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="1030,23,1247,42,1375,57,1502,76,1524,80,1523,86,1501,81,1374,62,1246,47,1030,28"/>
+</map>

@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="interfacees_1_1ull_1_1esit_1_1server_1_1repo_1_1CashierRepository" kind="interface" language="Java" prot="public">
+    <compoundname>es::ull::esit::server::repo::CashierRepository</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">JpaRepository&lt; Cashier, Long &gt;</basecompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="interfacees_1_1ull_1_1esit_1_1server_1_1repo_1_1CashierRepository_1a2c79609677b849928d1a5bf5b32e61b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Optional&lt; <ref refid="classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier" kindref="compound">Cashier</ref> &gt;</type>
+        <definition>Optional&lt; Cashier &gt; es.ull.esit.server.repo.CashierRepository.findByName</definition>
+        <argsstring>(String name)</argsstring>
+        <name>findByName</name>
+        <qualifiedname>es.ull.esit.server.repo.CashierRepository.findByName</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Finds a cashier by their name. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[String] Name of the cashier. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>[Optional&lt;Cashier&gt;] The cashier if found, or empty if not found. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="server/src/main/java/es/ull/esit/server/repo/CashierRepository.java" line="22" column="12"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Repository interface for managing cashiers in the database. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>   Extends JpaRepository to provide basic CRUD operations on the
+   &quot;Cashier&quot; table, such as findAll, findById, save and delete.
+</verbatim> </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>JpaRepository&lt; Cashier, Long &gt;</label>
+      </node>
+      <node id="1">
+        <label>es.ull.esit.server.repo.CashierRepository</label>
+        <link refid="interfacees_1_1ull_1_1esit_1_1server_1_1repo_1_1CashierRepository"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>JpaRepository&lt; Cashier, Long &gt;</label>
+      </node>
+      <node id="1">
+        <label>es.ull.esit.server.repo.CashierRepository</label>
+        <link refid="interfacees_1_1ull_1_1esit_1_1server_1_1repo_1_1CashierRepository"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="server/src/main/java/es/ull/esit/server/repo/CashierRepository.java" line="14" column="18" bodyfile="server/src/main/java/es/ull/esit/server/repo/CashierRepository.java" bodystart="14" bodyend="23"/>
+    <listofallmembers>
+      <member refid="interfacees_1_1ull_1_1esit_1_1server_1_1repo_1_1CashierRepository_1a2c79609677b849928d1a5bf5b32e61b3" prot="public" virt="non-virtual"><scope>es::ull::esit::server::repo::CashierRepository</scope><name>findByName</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
