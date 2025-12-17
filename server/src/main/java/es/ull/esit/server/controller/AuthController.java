@@ -70,7 +70,7 @@ public class AuthController {
     }
 
     User user = userOpt.get();
-    LOG.debug("User found. Stored hash = {}", user.getPasswordHash()); // Mejor debug, no info
+    LOG.debug("User found. Stored hash = {}", user.getPasswordHash()); 
 
     if (!passwordEncoder.matches(request.password, user.getPasswordHash())) {
       LOG.warn("Password mismatch for user: {}", request.username);
