@@ -2,6 +2,13 @@ package es.ull.esit.app.middleware.service;
 
 import es.ull.esit.app.middleware.model.BillResult;
 
+import java.io.FileNotFoundException;          
+import java.io.IOException;                    
+import java.io.PrintWriter;                   
+import java.nio.charset.StandardCharsets;      
+import java.nio.file.Files;                    
+import java.nio.file.Path;                     
+
 /**
  * @brief Service that handles order-related calculations and receipt generation.
  *
@@ -13,14 +20,6 @@ public class OrderService {
   /** VAT rate applied to the subtotal (15%). */
   private static final double VAT_RATE = 0.15;
 
-  /**
-   * @brief Calculates subtotal, VAT and total for a given items sum.
-   *
-   *        The values are rounded to two decimal places.
-   *
-   * @param itemsTotalSum [double] Sum of item prices before VAT.
-   * @return [BillResult] Container holding subtotal, VAT and total amounts.
-   */
   public BillResult calculateBill(double itemsTotalSum) {
     double vat = itemsTotalSum * VAT_RATE;
     double total = itemsTotalSum + vat;
@@ -34,26 +33,34 @@ public class OrderService {
   /**
    * @brief Generates a local text file representing a receipt.
    *
-   *        The file is stored under a "receipts" directory created in the
-   *        working folder. File name format is "billNo.<receiptNo>.txt".
-   *
    * @param receiptNo [int] Numeric identifier of the receipt.
    * @param bill      [BillResult] Calculated bill result to print.
-   * @throws java.io.FileNotFoundException If the receipt file cannot be created or opened.
+   * @throws FileNotFoundException If the receipt file cannot be created or opened.
    */
-  public void generateReceiptFile(int receiptNo, BillResult bill) throws java.io.FileNotFoundException {
-    // Ensure the directory exists.
-    new java.io.File("receipts").mkdirs();
+  public void generateReceiptFile(int receiptNo, BillResult bill) throws FileNotFoundException {
 
-    try (java.io.PrintWriter output = new java.io.PrintWriter("receipts/billNo." + receiptNo + ".txt")) {
-      output.println(" Bill number is: " + receiptNo);
-      output.println("==============");
-      output.println("--------------");
-      output.println("Subtotal is: " + bill.getSubTotal() + " SR");
-      output.println("vat: " + bill.getVat() + " SR");
-      output.println("Total is: " + bill.getTotal() + " SR");
-      output.println();
-      output.println("THANK YOU FOR ORDERING");
+    try {
+      Files.createDirectories(Path.of("receipts"));
+
+      Path file = Path.of("receipts", "billNo." + receiptNo + ".txt");
+      try (PrintWriter output =
+          new PrintWriter(Files.newBufferedWriter(file, StandardCharsets.UTF_8))) {
+
+        output.println(" Bill number is: " + receiptNo);
+        output.println("==============");
+        output.println("--------------");
+        output.println("Subtotal is: " + bill.getSubTotal() + " SR");
+        output.println("vat: " + bill.getVat() + " SR");
+        output.println("Total is: " + bill.getTotal() + " SR");
+        output.println();
+        output.println("THANK YOU FOR ORDERING");
+      }
+
+    } catch (IOException e) {
+      FileNotFoundException fnfe = new FileNotFoundException(
+          "Could not create/write receipt file for receiptNo=" + receiptNo);
+      fnfe.initCause(e);
+      throw fnfe;
     }
   }
 }

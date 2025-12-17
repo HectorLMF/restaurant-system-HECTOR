@@ -57,6 +57,21 @@
 
     <!-- Integración de JaCoCo con Surefire -->
     <surefireArgLine></surefireArgLine>
+
+    <!-- Configuración de SonarCloud -->
+    <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+    <sonar.organization>alu0101132617</sonar.organization>
+    <sonar.projectKey>alu0101132617_restaurant-system</sonar.projectKey>
+
+    <!-- Informes -->
+    <sonar.coverage.jacoco.xmlReportPaths>
+      ${project.build.directory}/jacoco-report/jacoco.xml
+    </sonar.coverage.jacoco.xmlReportPaths>
+
+    <sonar.junit.reportPaths>
+      ${project.build.directory}/surefire-reports
+    </sonar.junit.reportPaths>
+
   </properties>
 
   <!-- ================== GESTIÓN DE DEPENDENCIAS ================== -->
@@ -195,7 +210,8 @@
           <reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>
 
           <!-- Integra JaCoCo con Surefire para cobertura de código -->
-          <argLine>${surefireArgLine}</argLine>
+          <argLine>@{surefireArgLine}</argLine>
+
         </configuration>
       </plugin>
 
@@ -225,7 +241,7 @@
           <!-- Especifica el archivo de configuración de reglas de estilo: Google Java Style -->
           <configLocation>google_checks.xml</configLocation>
           <!-- Muestra la salida en consola -->
-          <consoleOutput>true</consoleOutput>
+          <consoleOutput>false</consoleOutput>
           <!-- No detiene el build si hay errores de estilo -->
           <failsOnError>false</failsOnError>
 

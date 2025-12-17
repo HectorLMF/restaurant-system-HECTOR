@@ -1,8 +1,0 @@
- Bill number is: 1
-==============
---------------
-Subtotal is: 64.0 SR
-vat: 9.6 SR
-Total is: 73.6 SR
-
-THANK YOU FOR ORDERING

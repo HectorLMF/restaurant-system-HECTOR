@@ -8,7 +8,6 @@ import javax.swing.SwingUtilities;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-
 /**
  * @brief Login window for authenticating cashiers.
  * 
@@ -29,11 +28,18 @@ public class CashierLogin extends javax.swing.JFrame {
   /** Service used to retrieve reports and basic status from the backend. */
   private final transient ReportService reportService;
 
+  /** Primary font used in the UI components. */
   private static final String PRIMARY_FONT = "Yu Gothic UI";
+
+  /** Log message used when fetching cashier stats fails. */
+  private static final String WARN_FETCH_CASHIER_STATS = "Warning: Could not fetch cashier stats: {}";
+
+  /** Log message used when checking menu status fails. */
+  private static final String ERROR_CHECK_MENU_STATUS = "Error checking menu status: {}";
 
   /** Logger instance for logging events and errors. */
   private static final Logger LOGGER = LoggerFactory.getLogger(CashierLogin.class);
-  
+
   /**
    * @brief Default constructor.
    *
@@ -65,12 +71,18 @@ public class CashierLogin extends javax.swing.JFrame {
   }
 
   /**
-   * Package-private constructor used in tests to inject a stubbed
-   * ReportService and optionally avoid starting background threads.
+   * @brief Test seam constructor: injects a custom ReportService.
    *
-   * @param reportService injected ReportService (stub)
-   * @param name          cashier name to show in the welcome label
-   * @param startBackground if true, behaviour mirrors default constructor
+   *        Intended for tests to inject a stub/mock service and keep execution
+   *        deterministic. This constructor currently does not start any
+   *        background
+   *        tasks by itself.
+   *
+   * @param reportService   [ReportService] Injected service instance (may be a
+   *                        test double).
+   * @param name            [String] Cashier name to show in the welcome label.
+   * @param startBackground [boolean] Reserved for future use (currently no
+   *                        effect).
    */
   CashierLogin(ReportService reportService, String name, boolean startBackground) {
     initComponents();
@@ -80,54 +92,122 @@ public class CashierLogin extends javax.swing.JFrame {
     // manually invoke the async handlers or startBackground could be used
     // in future to mimic the default constructor behaviour.
     if (startBackground) {
-      // no-op for now; left intentionally minimal to avoid side-effects in tests
+      // no-op for now; left intentionally minimal to avoid side-effects in tests.
     }
   }
 
-  /*
-   * Suppliers for windows created by the action handlers. These allow tests
-   * to inject no-op or stub frames so the asynchronous handlers don't open
-   * real GUI windows during unit tests.
+  /**
+   * @brief Factory (test seam) to create the AboutUs window.
+   *
+   *        Tests can override this supplier to inject a lightweight stub frame
+   *        and avoid opening real UI windows.
    */
-  Supplier<? extends javax.swing.JFrame> aboutUsSupplier = () -> new AboutUs();
-  Supplier<? extends javax.swing.JFrame> orderSupplier = () -> new Order();
-  Supplier<? extends javax.swing.JFrame> loginSupplier = () -> new Login();
+  transient Supplier<? extends javax.swing.JFrame> aboutUsSupplier = AboutUs::new;
 
-  /** Supplier for the top-level cashier window used by main(); tests can override it. */
-  private static Supplier<? extends javax.swing.JFrame> cashierSupplier = () -> new CashierLogin();
+  /**
+   * @brief Factory (test seam) used to create the Order window.
+   *
+   *        Tests can override this supplier to inject a stub implementation
+   *        and avoid opening real UI components.
+   */
+  transient Supplier<? extends javax.swing.JFrame> orderSupplier = Order::new;
 
+  /**
+   * @brief Factory (test seam) used to create the Login window.
+   *
+   *        Tests can override this supplier to inject a stub frame and
+   *        prevent real navigation during unit tests.
+   */
+  transient Supplier<? extends javax.swing.JFrame> loginSupplier = Login::new;
+
+  /**
+   * @brief Factory (test seam) used by main() to create instances of
+   *        the top-level CashierLogin window.
+   *
+   *        Tests can override this supplier to avoid creating real Swing
+   *        components (e.g., in headless CI environments).
+   */
+  private static Supplier<? extends javax.swing.JFrame> cashierSupplier = CashierLogin::new;
+
+  /**
+   * @brief Sets the supplier used by main() to create the cashier window (test
+   *        seam).
+   * 
+   *        Intended for tests to inject stub implementations.
+   * 
+   * @param s [Supplier<? extends javax.swing.JFrame>] Supplier that creates the
+   *          cashier window.
+   */
   static void setCashierSupplier(Supplier<? extends javax.swing.JFrame> s) {
     cashierSupplier = s;
   }
 
+  /**
+   * @brief Gets the supplier used by main() to create the cashier window (test
+   *        seam).
+   * 
+   *        Allows tests to verify which supplier is currently set, or to use it
+   *        directly.
+   * 
+   * @return [Supplier<javax.swing.JFrame>] Supplier that creates the
+   *         cashier window.
+   */
   static Supplier<? extends javax.swing.JFrame> getCashierSupplier() {
     return cashierSupplier;
   }
 
-  /** Package-private setters used by tests to inject stub frames. */
+  /**
+   * @brief Sets the supplier used to create the AboutUs window (test seam).
+   * 
+   *        Intended for tests to inject stub frames.
+   * 
+   * @param s [Supplier<? extends javax.swing.JFrame>] Supplier that creates the
+   *          AboutUs window.
+   */
   void setAboutUsSupplier(Supplier<? extends javax.swing.JFrame> s) {
     this.aboutUsSupplier = s;
   }
 
+  /**
+   * @brief Sets the supplier used to create the general menu/order window (test
+   *        seam).
+   * 
+   *        Intended for tests to inject stub implementations.
+   * 
+   * @param s [Supplier<? extends javax.swing.JFrame>] Supplier that creates the
+   *          Order window.
+   */
   void setOrderSupplier(Supplier<? extends javax.swing.JFrame> s) {
     this.orderSupplier = s;
   }
 
+  /**
+   * @brief Sets the supplier used to create the login window (test seam).
+   * 
+   *        Intended for tests to inject stub and avoid real navigation.
+   * 
+   * @param s [Supplier<? extends javax.swing.JFrame>] Supplier that creates the
+   *          Login window.
+   */
   void setLoginSupplier(Supplier<? extends javax.swing.JFrame> s) {
     this.loginSupplier = s;
   }
 
   /**
-   * Synchronous variant used by tests that performs the same operations as the
-   * background runnable in jButton1ActionPerformed but executes in the current
-   * thread and uses the injected supplier for the AboutUs frame.
+   * @brief Runs the full "About us" action synchronously (test seam).
+   *
+   *        Performs the same logical steps as jButton1ActionPerformed but without
+   *        spawning background threads.
+   *
+   *        Uses the injected aboutUsSupplier to create the target window so tests
+   *        can inject a stub frame and avoid opening real UI components.
    */
   void aboutUsActionRun() {
     try {
       List<es.ull.esit.app.middleware.model.Cashier> cashiers = reportService.getCashierInfo();
       LOGGER.info("Found {} cashiers in DB.", cashiers == null ? 0 : cashiers.size());
     } catch (Exception ex) {
-      LOGGER.warn("Warning: Could not fetch cashier stats: {}", ex.getMessage());
+      LOGGER.warn(WARN_FETCH_CASHIER_STATS, ex.getMessage());
     }
     // Use supplier so tests can inject a no-op frame
     javax.swing.JFrame f = aboutUsSupplier.get();
@@ -136,15 +216,20 @@ public class CashierLogin extends javax.swing.JFrame {
   }
 
   /**
-   * Synchronous variant used by tests that mirrors the background runnable in
-   * jButton2ActionPerformed and uses the injected supplier for the Order frame.
+   * @brief Runs the full "Menu" action synchronously (test seam).
+   *
+   *        Performs the same logical steps as jButton2ActionPerformed but without
+   *        spawning background threads.
+   *
+   *        Uses the injected orderSupplier to create the target window so tests
+   *        can inject a stub frame and avoid opening real UI components.
    */
   void menuActionRun() {
     try {
       String status = reportService.checkMenuStatus();
       LOGGER.info("Menu status: {}", status);
     } catch (Exception ex) {
-      LOGGER.error("Error checking menu status: {}", ex.getMessage());
+      LOGGER.error(ERROR_CHECK_MENU_STATUS, ex.getMessage());
     }
     javax.swing.JFrame f = orderSupplier.get();
     f.setVisible(true);
@@ -152,8 +237,14 @@ public class CashierLogin extends javax.swing.JFrame {
   }
 
   /**
-   * Synchronous variant used by tests that mirrors jButton3ActionPerformed and
-   * uses the injected supplier for the Login frame.
+   * @brief Runs the full "LogOut" action synchronously (test seam).
+   *
+   *        Performs the same navigation logic as jButton3ActionPerformed without
+   *        starting background threads.
+   *
+   *        Uses the injected loginSupplier to create the Login window so tests
+   *        can
+   *        inject a stub frame and avoid opening real UI components.
    */
   void logoutActionRun() {
     javax.swing.JFrame f = loginSupplier.get();
@@ -162,29 +253,23 @@ public class CashierLogin extends javax.swing.JFrame {
   }
 
   /**
-   * Small helper method that exercises a few simple branches and statements.
-   * This method is intentionally package-private and kept minimal; it exists
-   * to help unit tests cover trivial lines in this class (no production logic
-   * is changed).
+   * @brief Helper to exercise trivial branches for coverage purposes (test seam).
+   *
+   *        This method has no production meaning and should only be called from
+   *        tests.
+   *        It intentionally performs simple branching and logs a debug message.
    */
   void testOnlyCoverageHelper() {
-    // Initialize 'a' from a runtime-varying value so the condition below
-    // does not always evaluate to true (avoids a constant-condition
-    // reliability issue reported by Sonar). Using currentTimeMillis() % 2
-    // is lightweight and deterministic enough for test coverage purposes
-    // while preventing a constant-true branch.
     int a = (int) (System.currentTimeMillis() % 2);
     if (a == 0) {
       a = 1;
     } else {
       a = -1;
     }
-    switch (a) {
-      case 1:
-        a++;
-        break;
-      default:
-        a--;
+    if (a == 1) {
+      a++;
+    } else {
+      a--;
     }
     String tmp = "ok" + a;
     LOGGER.debug("coverage helper: {}", tmp);
@@ -229,7 +314,7 @@ public class CashierLogin extends javax.swing.JFrame {
         LOGGER.info("Found {} cashiers in DB.", cashiers.size());
 
       } catch (Exception ex) {
-        LOGGER.warn("Warning: Could not fetch cashier stats: {}", ex.getMessage());
+        LOGGER.warn(WARN_FETCH_CASHIER_STATS, ex.getMessage());
       }
       SwingUtilities.invokeLater(() -> {
         aboutUsSupplier.get().setVisible(true);
@@ -239,15 +324,24 @@ public class CashierLogin extends javax.swing.JFrame {
   }
 
   /**
-   * Synchronous variant used by tests: calls ReportService.getCashierInfo()
-   * and returns the number of cashiers, or -1 if an exception occurs.
+   * @brief Synchronous data-fetch helper for the "About us" action (test seam).
+   *
+   *        Calls ReportService.getCashierInfo() and returns the number of
+   *        cashiers retrieved.
+   *
+   *        This method does not perform navigation, does not open windows and
+   *        does
+   *        not dispose the current frame.
+   *
+   * @return [int] Number of cashiers retrieved, 0 if none, or -1 if an error
+   *         occurred.
    */
   int aboutUsActionSync() {
     try {
       List<es.ull.esit.app.middleware.model.Cashier> cashiers = reportService.getCashierInfo();
       return cashiers == null ? 0 : cashiers.size();
     } catch (Exception ex) {
-      LOGGER.warn("Warning: Could not fetch cashier stats: {}", ex.getMessage());
+      LOGGER.warn(WARN_FETCH_CASHIER_STATS, ex.getMessage());
       return -1;
     }
   }
@@ -276,7 +370,7 @@ public class CashierLogin extends javax.swing.JFrame {
         LOGGER.info("Menu status: {}", status);
 
       } catch (Exception ex) {
-        LOGGER.error("Error checking menu status: {}", ex.getMessage());
+        LOGGER.error(ERROR_CHECK_MENU_STATUS, ex.getMessage());
       }
 
       SwingUtilities.invokeLater(() -> {
@@ -287,14 +381,21 @@ public class CashierLogin extends javax.swing.JFrame {
   }
 
   /**
-   * Synchronous variant used by tests: calls ReportService.checkMenuStatus()
-   * and returns the status string, or null if an exception occurs.
+   * @brief Synchronous data-fetch helper for the "Menu" action (test seam).
+   *
+   *        Calls ReportService.checkMenuStatus() and returns the value
+   *        provided by the backend.
+   *
+   *        This method does not perform navigation and does not open windows.
+   *
+   * @return [String] Menu status returned by the backend, or null if an error
+   *         occurred.
    */
   String menuActionSync() {
     try {
       return reportService.checkMenuStatus();
     } catch (Exception ex) {
-      LOGGER.error("Error checking menu status: {}", ex.getMessage());
+      LOGGER.error(ERROR_CHECK_MENU_STATUS, ex.getMessage());
       return null;
     }
   }
@@ -318,8 +419,15 @@ public class CashierLogin extends javax.swing.JFrame {
   }
 
   /**
-   * Synchronous logout action for tests. Does not open windows; returns true
-   * to indicate the logout flow would proceed.
+   * @brief Lightweight helper indicating that the logout action was triggered
+   *        (test seam).
+   *
+   *        This method does not open windows and does not dispose the current
+   *        frame.
+   *        Tests that need full navigation behaviour should call logoutActionRun
+   *        instead.
+   *
+   * @return [boolean] Always true to indicate the helper was executed.
    */
   boolean logoutActionSync() {
     // In production this would open the Login window and dispose(). For tests
@@ -327,7 +435,13 @@ public class CashierLogin extends javax.swing.JFrame {
     return true;
   }
 
-  /** Package-private getter for tests to read the welcome label text. */
+  /**
+   * @brief Gets the current welcome message text shown in the UI.
+   * 
+   *        Helper for tests to verify the welcome label content.
+   * 
+   * @return [String] Text currently shown in the welcome label.
+   */
   String getWelcomeText() {
     return welcomeTxt.getText();
   }

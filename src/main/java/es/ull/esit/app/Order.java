@@ -33,7 +33,23 @@ public class Order extends javax.swing.JFrame {
   /** Primary font used in the GUI. */
   private static final String PRIMARY_FONT = "Yu Gothic UI";
 
+  /** Lighter variant of the primary font. */
   private static final String PRIMARY_FONT_LIGHT = "Yu Gothic UI Light";
+
+  /** Prefix used for the receipt number label to avoid duplicated literals. */
+  private static final String RECEIPT_NO_PREFIX = "Receipt No. : ";
+
+  /** Column header used for ID across tables. */
+  private static final String ID_COLUMN_HEADER = "ID";
+
+  /** Column header used for item name across tables. */
+  private static final String ITEM_COLUMN_HEADER = "Item";
+
+  /** Column header used for price across tables. */
+  private static final String PRICE_COLUMN_HEADER = "Price (SR)";
+
+  /** Column header used for quantity across tables. */
+  private static final String QUANTITY_COLUMN_HEADER = "Qty";
 
   /** Service used to load products from the backend. */
   private final transient ProductService productService;
@@ -44,9 +60,11 @@ public class Order extends javax.swing.JFrame {
   /** Logger for this class. Replaces printStackTrace() debug output. */
   private static final Logger LOGGER = LoggerFactory.getLogger(Order.class);
 
-  /** Table models for the three product categories. */
+  /** Table model for the category drinks of the menu. */
   private DefaultTableModel drinksModel;
+  /** Table model for the category appetizers of the menu. */
   private DefaultTableModel appetizersModel;
+  /** Table model for the category main courses of the menu. */
   private DefaultTableModel mainsModel;
 
   /** Last calculated bill (after pressing Pay). */
@@ -82,7 +100,7 @@ public class Order extends javax.swing.JFrame {
     this.productService = new ProductService(client);
 
     // Initialize receipt number label.
-    receiptNoLbl.setText("Receipt No. : " + receiptNo);
+    receiptNoLbl.setText(RECEIPT_NO_PREFIX + receiptNo);
 
     // Configure tables and models.
     setupTables();
@@ -92,18 +110,24 @@ public class Order extends javax.swing.JFrame {
   }
 
   /**
-   * Package-private constructor used by tests to inject a fake ProductService
-   * and optionally skip the asynchronous loading of the menu.
+   * @brief Test seam constructor: allows injecting a custom ProductService.
    *
-   * @param productService ProductService instance to use (may be a stub in tests)
-   * @param loadMenu whether to invoke loadMenuFromDatabase() (tests may pass false)
+   *        Intended for unit/integration tests to:
+   *        - inject a stub/mock/fake ProductService instance.
+   *        - optionally skip loadMenuFromDatabase() to avoid:
+   *        background threads, network calls, and asynchronous UI updates.
+   *
+   * @param productService [ProductService] Service instance to use (may be a test
+   *                       double).
+   * @param loadMenu       [boolean] If true, loads menu data from backend; tests
+   *                       may pass false.
    */
   Order(es.ull.esit.app.middleware.service.ProductService productService, boolean loadMenu) {
     initComponents();
     this.productService = productService;
 
     // Initialize receipt number label.
-    receiptNoLbl.setText("Receipt No. : " + receiptNo);
+    receiptNoLbl.setText(RECEIPT_NO_PREFIX + receiptNo);
 
     // Configure tables and models.
     setupTables();
@@ -114,8 +138,15 @@ public class Order extends javax.swing.JFrame {
   }
 
   /**
-   * Package-private convenience constructor for tests that inject a ProductService
-   * and perform the normal menu loading.
+   * @brief Test seam convenience constructor: injects a ProductService and loads
+   *        the menu.
+   *
+   *        Equivalent to calling Order(productService, true).
+   *        Useful for tests that want dependency injection but keep normal
+   *        behavior.
+   *
+   * @param productService [ProductService] Service instance to use (may be a test
+   *                       double).
    */
   Order(es.ull.esit.app.middleware.service.ProductService productService) {
     this(productService, true);
@@ -133,7 +164,7 @@ public class Order extends javax.swing.JFrame {
   private void setupTables() {
     // DRINKS
     drinksModel = new DefaultTableModel(
-        new Object[] { "ID", "Item", "Price (SR)", "Qty" }, 0) {
+        new Object[] { ID_COLUMN_HEADER, ITEM_COLUMN_HEADER, PRICE_COLUMN_HEADER, QUANTITY_COLUMN_HEADER }, 0) {
       @Override
       public boolean isCellEditable(int row, int column) {
         // Only Qty column is editable
@@ -153,7 +184,7 @@ public class Order extends javax.swing.JFrame {
 
     // APPETIZERS
     appetizersModel = new DefaultTableModel(
-        new Object[] { "ID", "Item", "Price (SR)", "Qty" }, 0) {
+        new Object[] { ID_COLUMN_HEADER, ITEM_COLUMN_HEADER, PRICE_COLUMN_HEADER, QUANTITY_COLUMN_HEADER }, 0) {
       @Override
       public boolean isCellEditable(int row, int column) {
         return column == 3;
@@ -172,7 +203,7 @@ public class Order extends javax.swing.JFrame {
 
     // MAIN COURSES
     mainsModel = new DefaultTableModel(
-        new Object[] { "ID", "Item", "Price (SR)", "Qty" }, 0) {
+        new Object[] { ID_COLUMN_HEADER, ITEM_COLUMN_HEADER, PRICE_COLUMN_HEADER, QUANTITY_COLUMN_HEADER }, 0) {
       @Override
       public boolean isCellEditable(int row, int column) {
         return column == 3;
@@ -207,21 +238,22 @@ public class Order extends javax.swing.JFrame {
           fillMains(mains);
         });
 
-  } catch (Exception ex) {
-    LOGGER.error("Error loading menu from backend", ex);
-    SwingUtilities.invokeLater(() -> JOptionPane.showMessageDialog(
-    this,
-    "Error loading menu from backend:\n" + ex.getMessage(),
-    "Menu loading error",
-    JOptionPane.ERROR_MESSAGE));
-  }
+      } catch (Exception ex) {
+        LOGGER.error("Error loading menu from backend", ex);
+        SwingUtilities.invokeLater(() -> JOptionPane.showMessageDialog(
+            this,
+            "Error loading menu from backend:\n" + ex.getMessage(),
+            "Menu loading error",
+            JOptionPane.ERROR_MESSAGE));
+      }
     }).start();
   }
 
   /**
    * @brief Fills the drinks table model with data from the backend.
    * 
-   * @param drinks [java.util.List<Drink>] List of drinks retrieved from the backend.
+   * @param drinks [java.util.List<Drink>] List of drinks retrieved from the
+   *               backend.
    */
   private void fillDrinks(java.util.List<Drink> drinks) {
     drinksModel.setRowCount(0);
@@ -238,7 +270,8 @@ public class Order extends javax.swing.JFrame {
   /**
    * @brief Fills the appetizers table model with data from the backend.
    * 
-   * @param appetizers [java.util.List<Appetizer>] List of appetizers retrieved from the backend.
+   * @param appetizers [java.util.List<Appetizer>] List of appetizers retrieved
+   *                   from the backend.
    */
   private void fillAppetizers(java.util.List<Appetizer> appetizers) {
     appetizersModel.setRowCount(0);
@@ -255,7 +288,8 @@ public class Order extends javax.swing.JFrame {
   /**
    * @brief Fills the main courses table model with data from the backend.
    * 
-   * @param mains [java.util.List<MainCourse>] List of main courses retrieved from the backend.
+   * @param mains [java.util.List<MainCourse>] List of main courses retrieved from
+   *              the backend.
    */
   private void fillMains(java.util.List<MainCourse> mains) {
     mainsModel.setRowCount(0);
@@ -276,7 +310,8 @@ public class Order extends javax.swing.JFrame {
    *        - reads Price (column 2) and Qty (column 3),
    *        - if Qty > 0, accumulates (Qty * Price).
    *
-   * @param model [javax.swing.table.DefaultTableModel] Table model (drinksModel, appetizersModel or mainsModel).
+   * @param model [javax.swing.table.DefaultTableModel] Table model (drinksModel,
+   *              appetizersModel or mainsModel).
    * @return [double] Sum of the line totals in that model.
    */
   private double sumFromModel(DefaultTableModel model) {
@@ -482,7 +517,7 @@ public class Order extends javax.swing.JFrame {
     totalLbl.setText("Total: 0.0 SR");
 
     receiptNoLbl.setFont(new java.awt.Font(PRIMARY_FONT_LIGHT, 0, 14)); // NOI18N
-    receiptNoLbl.setText("Receipt No. : 0");
+    receiptNoLbl.setText(RECEIPT_NO_PREFIX + "0");
 
     javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
     jPanel1.setLayout(jPanel1Layout);
@@ -734,7 +769,7 @@ public class Order extends javax.swing.JFrame {
     totalLbl.setText("Total: 0.0 SR");
 
     receiptNo++;
-    receiptNoLbl.setText("Receipt No. : " + receiptNo);
+    receiptNoLbl.setText(RECEIPT_NO_PREFIX + receiptNo);
   }// GEN-LAST:event_newReceiptBtnActionPerformed
 
   /**
@@ -777,10 +812,10 @@ public class Order extends javax.swing.JFrame {
           break;
         }
       }
-    } catch (ClassNotFoundException | javax.swing.UnsupportedLookAndFeelException |
-        InstantiationException | IllegalAccessException ex) {
+    } catch (ClassNotFoundException | javax.swing.UnsupportedLookAndFeelException | InstantiationException
+        | IllegalAccessException ex) {
       java.util.logging.Logger.getLogger(Order.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-    } 
+    }
     // </editor-fold>
 
     /* Create and display the form */

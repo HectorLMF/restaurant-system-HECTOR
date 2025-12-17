@@ -12,7 +12,6 @@ import javax.swing.table.DefaultTableModel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-
 /**
  * @brief Administrative window for managing products and prices.
  *
@@ -94,13 +93,19 @@ public class AdminProducts extends javax.swing.JFrame {
     // Load initial data from backend.
     refreshAllTables();
   }
-  
+
   /**
-   * Package-private constructor used for tests to inject a stubbed
-   * ProductService and optionally avoid starting the asynchronous loaders.
+   * @brief Test seam constructor: allows injecting a custom ProductService.
    *
-   * @param productService [ProductService] injected service (test stub)
-   * @param startLoading   [boolean] if true, triggers refreshAllTables()
+   *        Intended for unit/integration tests to:
+   *        - inject a stub/mock/fake ProductService,
+   *        - optionally skip refreshAllTables() to avoid background threads,
+   *        asynchronous Swing updates and network calls.
+   *
+   * @param productService [ProductService] Service instance to use (may be a test
+   *                       double).
+   * @param startLoading   [boolean] If true, triggers initial data loading; tests
+   *                       may pass false.
    */
   AdminProducts(ProductService productService, boolean startLoading) {
     initComponents();
@@ -167,9 +172,13 @@ public class AdminProducts extends javax.swing.JFrame {
   }
 
   /**
-   * Synchronous variant of loadDrinks used by tests. Does not spawn new
-   * threads or use SwingUtilities; fills the model directly from the
-   * ProductService.
+   * @brief Test seam: synchronous variant of loadDrinks().
+   *
+   *        Loads drinks without spawning threads or using SwingUtilities.
+   *        This method is intended for tests that need deterministic execution
+   *        and direct access to the populated table model.
+   *
+   * @throws IllegalStateException If the backend/service call fails.
    */
   void loadDrinksSync() {
     try {
@@ -179,8 +188,7 @@ public class AdminProducts extends javax.swing.JFrame {
         modelDrink.addRow(new Object[] { drink.getDrinksId(), drink.getItemDrinks(), drink.getDrinksPrice() });
       }
     } catch (Exception ex) {
-      // In tests we prefer to propagate exceptions; keep same behaviour as async but avoid dialogs.
-      throw new RuntimeException(ex);
+      throw new IllegalStateException("Failed to load drinks", ex);
     }
   }
 
@@ -212,17 +220,23 @@ public class AdminProducts extends javax.swing.JFrame {
   }
 
   /**
-   * Synchronous variant of loadAppetizer used by tests.
+   * @brief Test seam: synchronous variant of loadAppetizer().
+   *
+   *        Loads appetizers without spawning threads or using SwingUtilities.
+   *        Intended for deterministic tests that verify table content.
+   *
+   * @throws IllegalStateException If the backend/service call fails.
    */
   void loadAppetizerSync() {
     try {
       List<Appetizer> appetizers = productService.getAllAppetizers();
       modelappetizers.setRowCount(0);
       for (Appetizer appetizer : appetizers) {
-        modelappetizers.addRow(new Object[] { appetizer.getAppetizersId(), appetizer.getItemAppetizers(), appetizer.getAppetizersPrice() });
+        modelappetizers.addRow(new Object[] { appetizer.getAppetizersId(), appetizer.getItemAppetizers(),
+            appetizer.getAppetizersPrice() });
       }
     } catch (Exception ex) {
-      throw new RuntimeException(ex);
+      throw new IllegalStateException("Failed to load appetizers", ex);
     }
   }
 
@@ -254,25 +268,34 @@ public class AdminProducts extends javax.swing.JFrame {
   }
 
   /**
-   * Synchronous variant of loadmainCourse used by tests.
+   * @brief Test seam: synchronous variant of loadmainCourse().
+   *
+   *        Loads main courses without spawning threads or using SwingUtilities.
+   *        Intended for deterministic tests that verify table content.
+   *
+   * @throws IllegalStateException If the backend/service call fails.
    */
   void loadmainCourseSync() {
     try {
       List<MainCourse> mainCourses = productService.getAllMainCourses();
       modelmaincourse.setRowCount(0);
       for (MainCourse mainCourse : mainCourses) {
-        modelmaincourse.addRow(new Object[] { mainCourse.getFoodId(), mainCourse.getItemFood(), mainCourse.getFoodPrice() });
+        modelmaincourse
+            .addRow(new Object[] { mainCourse.getFoodId(), mainCourse.getItemFood(), mainCourse.getFoodPrice() });
       }
     } catch (Exception ex) {
-      throw new RuntimeException(ex);
+      throw new IllegalStateException("Failed to load main courses", ex);
     }
   }
 
   /**
-   * Helper used in tests to synchronously select a drink row and populate
-   * the editable fields without spawning background threads.
+   * @brief Test seam: selects a drink row synchronously and populates editable
+   *        fields.
    *
-   * @param row index in the table model to select
+   *        Reads the drink ID from modelDrink, queries the ProductService
+   *        directly and updates the name/price fields without background threads.
+   *
+   * @param row [int] Row index in modelDrink to select.
    */
   void selectDrinkByRowSync(int row) {
     if (row < 0 || row >= modelDrink.getRowCount())
@@ -284,6 +307,16 @@ public class AdminProducts extends javax.swing.JFrame {
     itemprice.setText(String.valueOf(drink.getDrinksPrice()));
   }
 
+  /**
+   * @brief Test seam: selects an appetizer row synchronously and populates
+   *        editable fields.
+   *
+   *        Reads the appetizer ID from modelappetizers, queries the
+   *        ProductService
+   *        directly and updates the name/price fields without background threads.
+   *
+   * @param row [int] Row index in modelappetizers to select.
+   */
   void selectAppetizerByRowSync(int row) {
     if (row < 0 || row >= modelappetizers.getRowCount())
       return;
@@ -294,6 +327,16 @@ public class AdminProducts extends javax.swing.JFrame {
     itemprice1.setText(String.valueOf(appetizer.getAppetizersPrice()));
   }
 
+  /**
+   * @brief Test seam: selects a main course row synchronously and populates
+   *        editable fields.
+   *
+   *        Reads the main course ID from modelmaincourse, queries the
+   *        ProductService
+   *        directly and updates the name/price fields without background threads.
+   *
+   * @param row [int] Row index in modelmaincourse to select.
+   */
   void selectMainCourseByRowSync(int row) {
     if (row < 0 || row >= modelmaincourse.getRowCount())
       return;
@@ -313,7 +356,8 @@ public class AdminProducts extends javax.swing.JFrame {
    *        navigation button "Go Back".
    */
   @SuppressWarnings("unchecked")
-  // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+  // <editor-fold defaultstate="collapsed" desc="Generated
+  // Code">//GEN-BEGIN:initComponents
   private void initComponents() {
 
     jPanel1 = new javax.swing.JPanel();
@@ -1101,9 +1145,10 @@ public class AdminProducts extends javax.swing.JFrame {
           break;
         }
       }
-    } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
+    } catch (ClassNotFoundException | InstantiationException | IllegalAccessException
+        | javax.swing.UnsupportedLookAndFeelException ex) {
       java.util.logging.Logger.getLogger(AdminProducts.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-    } 
+    }
     // </editor-fold>
 
     /* Create and display the form */

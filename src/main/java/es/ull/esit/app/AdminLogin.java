@@ -18,17 +18,31 @@ public class AdminLogin extends javax.swing.JFrame {
   /** Primary font used in the UI components. */
   private static final String PRIMARY_FONT = "Yu Gothic UI";
 
-  /** Logger for the class. Replaces use of printStackTrace for production-safe logging. */
+  /** Logger for logging events and errors. */
   private static final Logger LOGGER = LoggerFactory.getLogger(AdminLogin.class);
 
-    /*
-     * Package-private suppliers used to create dependent windows. Tests may
-     * override these to inject lightweight stubs without needing to shadow
-     * the production classes. They default to creating the real windows.
-     */
-    static Supplier<java.awt.Window> adminProductsSupplier = AdminProducts::new;
-    static Supplier<java.awt.Window> orderSupplier = Order::new;
-    static Supplier<java.awt.Window> loginSupplier = Login::new;
+  /**
+   * @brief Factory (test seam) to create the product administration window.
+   *
+   *        Tests can override this supplier to inject a lightweight stub window
+   *        and avoid opening real UI frames.
+   */
+  static Supplier<java.awt.Window> adminProductsSupplier = AdminProducts::new;
+
+  /**
+   * @brief Factory (test seam) to create the order/menu window.
+   *
+   *        Tests can override this supplier to avoid triggering real UI
+   *        initialization or background loading.
+   */
+  static Supplier<java.awt.Window> orderSupplier = Order::new;
+
+  /**
+   * @brief Factory (test seam) to create the login window shown after logout.
+   *
+   *        Tests can override this supplier to prevent opening real UI windows.
+   */
+  static Supplier<java.awt.Window> loginSupplier = Login::new;
 
   /**
    * @brief Constructor.
@@ -151,17 +165,16 @@ public class AdminLogin extends javax.swing.JFrame {
    *            click.
    */
   private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jButton2ActionPerformed
-  try {
-    adminProductsSupplier.get().setVisible(true);
-    this.dispose();
-  } catch (Exception ex) {
-        LOGGER.error("Error opening product admin window", ex);
-        javax.swing.JOptionPane.showMessageDialog(
-            this,
-            "Error opening product admin window:\n" + ex.getMessage(),
-            "Error",
-            javax.swing.JOptionPane.ERROR_MESSAGE
-        );
+    try {
+      adminProductsSupplier.get().setVisible(true);
+      this.dispose();
+    } catch (Exception ex) {
+      LOGGER.error("Error opening product admin window", ex);
+      javax.swing.JOptionPane.showMessageDialog(
+          this,
+          "Error opening product admin window:\n" + ex.getMessage(),
+          "Error",
+          javax.swing.JOptionPane.ERROR_MESSAGE);
     }
   }// GEN-LAST:event_jButton2ActionPerformed
 
@@ -174,17 +187,16 @@ public class AdminLogin extends javax.swing.JFrame {
    *            click.
    */
   private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jButton1ActionPerformed
-  try {
-    orderSupplier.get().setVisible(true);
-    this.dispose();
-  } catch (Exception ex) {
-        LOGGER.error("Error opening menu window", ex);
-        javax.swing.JOptionPane.showMessageDialog(
-            this,
-            "Error opening menu window:\n" + ex.getMessage(),
-            "Error",
-            javax.swing.JOptionPane.ERROR_MESSAGE
-        );
+    try {
+      orderSupplier.get().setVisible(true);
+      this.dispose();
+    } catch (Exception ex) {
+      LOGGER.error("Error opening menu window", ex);
+      javax.swing.JOptionPane.showMessageDialog(
+          this,
+          "Error opening menu window:\n" + ex.getMessage(),
+          "Error",
+          javax.swing.JOptionPane.ERROR_MESSAGE);
     }
   }// GEN-LAST:event_jButton1ActionPerformed
 
@@ -197,8 +209,8 @@ public class AdminLogin extends javax.swing.JFrame {
    *            click.
    */
   private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jButton3ActionPerformed
-  loginSupplier.get().setVisible(true);
-  this.dispose();
+    loginSupplier.get().setVisible(true);
+    this.dispose();
   }// GEN-LAST:event_jButton3ActionPerformed
 
   /**
