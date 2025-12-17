@@ -13,46 +13,51 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class AboutUsTest {
 
-    @Test
-    void testInitComponents_textAndButton() throws Exception {
-        AboutUs about = new AboutUs();
+  @Test
+  void testInitComponents_textAndButton() throws Exception {
+    AboutUs about = new AboutUs();
+    try {
+      Field txtField = AboutUs.class.getDeclaredField("ourStory");
+      txtField.setAccessible(true);
+      JTextArea ourStory = (JTextArea) txtField.get(about);
 
-        Field txtField = AboutUs.class.getDeclaredField("ourStory");
-        txtField.setAccessible(true);
-        JTextArea ourStory = (JTextArea) txtField.get(about);
+      Field btnField = AboutUs.class.getDeclaredField("jButton3");
+      btnField.setAccessible(true);
+      JButton btn = (JButton) btnField.get(about);
 
-        Field btnField = AboutUs.class.getDeclaredField("jButton3");
-        btnField.setAccessible(true);
-        JButton btn = (JButton) btnField.get(about);
+      // Basic checks
+      assertEquals("Info", about.getTitle());
+      assertEquals("Go Back", btn.getText());
+      assertNotNull(ourStory);
+      assertFalse(ourStory.isEditable());
 
-        // Basic checks
-        assertEquals("Info", about.getTitle());
-        assertEquals("Go Back", btn.getText());
-        assertFalse(ourStory.isEditable());
+      String txt = ourStory.getText();
+      assertNotNull(txt);
 
-        String txt = ourStory.getText();
-        assertNotNull(txt);
-        assertTrue(txt.startsWith("<html>"));
-        assertTrue(txt.contains("Our Story"));
-
-        about.dispose();
+      // JTextArea does not render HTML; content is plain text.
+      String normalized = txt.trim();
+      assertFalse(normalized.isEmpty());
+      assertTrue(normalized.startsWith("Our Story"));
+      assertTrue(normalized.contains("Our Story"));
+    } finally {
+      about.dispose();
     }
+  }
 
-    @Test
-    void testGoBack_disposesWindow() throws Exception {
-        AboutUs about = new AboutUs();
+  @Test
+  void testGoBack_disposesWindow() throws Exception {
+    AboutUs about = new AboutUs();
+    try {
+      Method m = AboutUs.class.getDeclaredMethod("jButton3ActionPerformed", java.awt.event.ActionEvent.class);
+      m.setAccessible(true);
 
-        Field btnField = AboutUs.class.getDeclaredField("jButton3");
-        btnField.setAccessible(true);
-        JButton btn = (JButton) btnField.get(about);
+      m.invoke(about, (Object) null);
 
-        // The handler is private; invoke via reflection
-        Method m = AboutUs.class.getDeclaredMethod("jButton3ActionPerformed", java.awt.event.ActionEvent.class);
-        m.setAccessible(true);
-
-        m.invoke(about, (Object) null);
-
-        // After action, the AboutUs frame should be disposed
-        assertFalse(about.isDisplayable());
+      // After action, the AboutUs frame should be disposed
+      assertFalse(about.isDisplayable());
+    } finally {
+      // Safe even if already disposed
+      about.dispose();
     }
+  }
 }

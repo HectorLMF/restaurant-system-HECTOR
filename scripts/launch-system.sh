@@ -201,7 +201,7 @@ echo "[launch] Preparado para lanzar front."
 if check_cmd mvn; then
   echo ""
   echo "[info] Para arrancar el front manualmente:"
-  echo "       mvn -Dexec.mainClass=es.ull.esit.app.JavaApplication2 exec:java"
+  echo "       mvn -Dexec.mainClass=es.ull.esit.app.ApplicationLauncher exec:java"
   echo ""
 
   if ask_yes_no "¿Quieres lanzar el front ahora (en background)?"; then
@@ -209,7 +209,7 @@ if check_cmd mvn; then
       cd "$REPO_ROOT"
       # Compila el front y luego lo ejecuta
       nohup mvn -DskipTests compile exec:java \
-           -Dexec.mainClass=es.ull.esit.app.JavaApplication2 \
+           -Dexec.mainClass=es.ull.esit.app.ApplicationLauncher \
            > "$REPO_ROOT/front.log" 2>&1 &
     )
     echo "[launch] Front arrancado. Log: front.log"

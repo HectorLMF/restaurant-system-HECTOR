@@ -15,17 +15,12 @@ public class AboutUs extends javax.swing.JFrame {
 
   /** @brief Static HTML content for the "Our Story" section. */
   private String textBlock = """
-      <html>
-          <body>
-              <tag>
-                  <h1>Our Story</h1>
-                  <p>Collecting flavors from all over the world to give everyone a taste of what they love.</p>
-                  <p>Black Plate came in with this vision in mind, to be more of a home rather than an establishment.</p>
-                  <p>2021 marked the beginning of the journey of Black Plate, starting from Al Khobar.</p>
-                  <p>Because your visit means a lot to us, we would love to hear your suggestions and concerns so we can improve!</p>
-              </tag>
-          </body>
-      </html>""";
+                  Our Story
+                  Collecting flavors from all over the world to give everyone a taste of what they love.
+                  Black Plate came in with this vision in mind, to be more of a home rather than an establishment.
+                  2021 marked the beginning of the journey of Black Plate, starting from Al Khobar.
+                  Because your visit means a lot to us, we would love to hear your suggestions and concerns so we can improve!
+            """;
 
   /**
    * @brief Default constructor.

@@ -1,7 +1,0 @@
-<map id="es.ull.esit.server.controller.AuthController" name="es.ull.esit.server.controller.AuthController">
-<area shape="rect" id="Node000001" title="Rest controller for handling authentication&#45;related requests." alt="" coords="5,285,196,385"/>
-<area shape="rect" id="Node000002" href="$interfacees_1_1ull_1_1esit_1_1server_1_1repo_1_1UserRepository.html" title="Repository interface for accessing users in the database." alt="" coords="21,135,180,215"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="103,215,103,269,98,269,98,215"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="24,5,177,85"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="103,99,103,134,98,134,98,99"/>
-</map>

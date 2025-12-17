@@ -1,9 +1,0 @@
-<map id="es.ull.esit.app.Order.loadMenuFromDatabase" name="es.ull.esit.app.Order.loadMenuFromDatabase">
-<area shape="rect" id="Node000001" title="Loads menu data (drinks, appetizers, main courses) from the backend in a background thread." alt="" coords="5,69,189,109"/>
-<area shape="rect" id="Node000002" href="$classes_1_1ull_1_1esit_1_1app_1_1Order.html#a11ff5cc29833a1aca07313674af0ae81" title="Fills the appetizers table model with data from the backend." alt="" coords="237,5,409,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="168,67,238,47,240,52,169,72"/>
-<area shape="rect" id="Node000003" href="$classes_1_1ull_1_1esit_1_1app_1_1Order.html#a805b1d4302daee8a489334a04102ed80" title="Fills the drinks table model with data from the backend." alt="" coords="237,69,409,109"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="190,87,223,87,223,92,190,92"/>
-<area shape="rect" id="Node000004" href="$classes_1_1ull_1_1esit_1_1app_1_1Order.html#a2bad57aa736eed5a2d560b89a1432f3a" title="Fills the main courses table model with data from the backend." alt="" coords="237,133,409,173"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="169,107,240,127,238,132,168,112"/>
-</map>

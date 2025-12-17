@@ -1,8 +1,0 @@
-<map id="es.ull.esit.app.Order.initComponents" name="es.ull.esit.app.Order.initComponents">
-<area shape="rect" id="Node000001" title="Initializes GUI components." alt="" coords="483,29,660,69"/>
-<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="611,18,597,11,571,8,549,10,536,15,531,21,533,28,528,30,525,20,532,10,548,5,571,3,598,6,613,13"/>
-<area shape="rect" id="Node000002" href="$classes_1_1ull_1_1esit_1_1app_1_1Order.html#a5d15e3c212a05a3aef8b70c8897d450c" title="Constructor." alt="" coords="243,37,435,62"/>
-<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="469,52,435,52,435,47,469,47"/>
-<area shape="rect" id="Node000003" href="$classes_1_1ull_1_1esit_1_1app_1_1Order.html#a32f3c48a536049afa72c92d96d30ac5a" title="Standalone entry point for testing the Order window." alt="" coords="5,37,195,62"/>
-<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="229,52,195,52,195,47,229,47"/>
-</map>

@@ -1,6 +1,0 @@
-<map id="es.ull.esit.server.controller.CashierController.updateCashier" name="es.ull.esit.server.controller.CashierController.updateCashier">
-<area shape="rect" id="Node000001" title="Updates an existing cashier, but only the name and salary fields." alt="" coords="5,29,237,69"/>
-<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="67,30,64,20,73,10,92,5,121,3,155,5,174,13,172,18,154,11,121,8,93,10,75,15,69,21,72,28"/>
-<area shape="rect" id="Node000002" href="$classes_1_1ull_1_1esit_1_1server_1_1middleware_1_1model_1_1Cashier.html#ab83aab1e779908032b21099c409d449f" title="Sets the cashier name (username)." alt="" coords="285,29,544,69"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="238,47,272,47,272,52,238,52"/>
-</map>
