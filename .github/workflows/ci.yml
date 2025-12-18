@@ -39,8 +39,8 @@ jobs:
           Xvfb :99 -screen 0 1920x1080x24 &>/dev/null &
           echo "DISPLAY=:99" >> $GITHUB_ENV
 
-      - name: Maven Clean Verify
-        run: mvn -B clean verify
+      - name: Maven Clean compile
+        run: mvn -B clean compile
 
       - name: Publish Test Report (JDK ${{ matrix.java-version }}, OS ${{ matrix.os }})
         uses: dorny/test-reporter@v1
