@@ -51,13 +51,13 @@ jobs:
       #     path: target/surefire-reports/*.xml
       #     reporter: java-junit
 
-      - name: SonarCloud Scan
-        if: matrix.java-version == '17' && matrix.os == 'ubuntu-latest'
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: >
-          mvn -B sonar:sonar
-          -Dsonar.projectKey=luciasoyyoo_lab-dht-bicam-cabrera
-          -Dsonar.organization=luciasoyyoo
-          -Dsonar.host.url=https://sonarcloud.io
-          -Dsonar.coverage.jacoco.xmlReportPaths=target/site/jacoco/jacoco.xml
+      # - name: SonarCloud Scan
+      #   if: matrix.java-version == '17' && matrix.os == 'ubuntu-latest'
+      #   env:
+      #     SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      #   run: >
+      #     mvn -B sonar:sonar
+      #     -Dsonar.projectKey=luciasoyyoo_lab-dht-bicam-cabrera
+      #     -Dsonar.organization=luciasoyyoo
+      #     -Dsonar.host.url=https://sonarcloud.io
+      #     -Dsonar.coverage.jacoco.xmlReportPaths=target/site/jacoco/jacoco.xml
