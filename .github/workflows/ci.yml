@@ -42,6 +42,13 @@ jobs:
       - name: Maven Clean compile
         run: mvn -B clean compile
 
+      - name: Publish Test Report (JDK ${{ matrix.java-version }}, OS ${{ matrix.os }})
+        uses: dorny/test-reporter@v1
+        if: always()
+        with:
+          name: Maven Surefire Tests (JDK ${{ matrix.java-version }}, OS ${{ matrix.os }})
+          path: target/surefire-reports/*.xml
+          reporter: java-junit
     
       # - name: Publish Test Report (JDK ${{ matrix.java-version }}, OS ${{ matrix.os }})
       #   uses: dorny/test-reporter@v1
