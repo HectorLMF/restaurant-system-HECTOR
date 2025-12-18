@@ -13,6 +13,7 @@ permissions:
 
 jobs:
   build-and-analyze:
+    timeout-minutes: 20
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
@@ -39,8 +40,8 @@ jobs:
           Xvfb :99 -screen 0 1920x1080x24 &>/dev/null &
           echo "DISPLAY=:99" >> $GITHUB_ENV
 
-      - name: Maven clean verify
-        run: mvn -B clean verify
+      - name: Maven clean verify (con timeout)
+        run: mvn -B clean verify -Dsurefire.timeout=60
 
       - name: Publish Test Report (JDK ${{ matrix.java-version }}, OS ${{ matrix.os }})
         uses: dorny/test-reporter@v1
