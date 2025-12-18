@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        java-version: [17, 21]  #comentario para justificar un nuevo push. FODASE PA.
+        java-version: [17 - 21]  #comentario para justificar un nuevo push. FODASE PA 2.
       
 
     steps:
